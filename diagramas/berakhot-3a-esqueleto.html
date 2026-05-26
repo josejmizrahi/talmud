@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esqueleto de sugyá · Berakhot 3a · Codex Talmudicus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pergamino: #f4ede0;
+    --pergamino-osc: #e8dcc4;
+    --pergamino-sombra: #d4c4a3;
+    --tinta: #1a1410;
+    --tinta-suave: #3d2f23;
+    --sepia: #6b4423;
+    --sepia-claro: #8b6635;
+    --dorado: #b8860b;
+    --rojo: #8b1a1a;
+    --azul: #1e3a5f;
+    --verde: #1e6b5a;
+    --violeta: #5a3a8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+    background: var(--pergamino);
+    color: var(--tinta);
+    padding: 2rem 1.5rem 4rem;
+    max-width: 980px;
+    margin-inline: auto;
+    line-height: 1.65;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-bottom: 0.25rem;
+  }
+  .subtitle {
+    color: var(--sepia);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .esqueleto-leyenda {
+    display: flex;
+    gap: 0.9rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--sepia);
+    align-items: center;
+  }
+  .esqueleto-leyenda .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.15rem 0.55rem 0.15rem 0.15rem;
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.5);
+  }
+  .esqueleto-leyenda .glyph {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .esqueleto-diagrama svg { width: 100%; height: auto; display: block; }
+  .nodo { cursor: pointer; transition: opacity 0.2s; }
+  .nodo:hover .nodo-fondo { stroke-width: 2 !important; }
+  .nodo.activa .nodo-fondo { stroke-width: 2.6 !important; }
+  .nodo.dim { opacity: 0.32; }
+  .esqueleto-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 140px;
+  }
+  .esqueleto-panel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .esqueleto-panel-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 0.25rem;
+  }
+  .esqueleto-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--tinta);
+  }
+  .esqueleto-panel-hebreo {
+    direction: rtl;
+    font-size: 1.08rem;
+    color: var(--sepia);
+    text-align: right;
+    flex: 1;
+    min-width: 220px;
+  }
+  .esqueleto-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.98rem;
+    margin: 0.5rem 0 0.75rem;
+  }
+  .esqueleto-panel-explicacion {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--tinta);
+  }
+  .esqueleto-vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  .nota-prototipo {
+    margin-top: 2.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--sepia);
+    background: rgba(107,68,35,0.04);
+    font-size: 0.88rem;
+    color: var(--tinta-suave);
+  }
+  .nota-prototipo code {
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(0,0,0,0.06);
+    padding: 0.05rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Esqueleto de sugyá · Berajot 3a</h1>
+<p class="subtitle">Prototipo del arquetipo "sugya skeleton" — ver la dialéctica de la guemará como flujo argumentativo navegable</p>
+
+<div class="esqueleto-interactivo">
+
+<div class="esqueleto-leyenda">
+  <span style="font-weight: 500; color: var(--tinta);">Click en cualquier nodo:</span>
+  <span class="chip"><span class="glyph" style="background:var(--dorado)">מ</span>memrá / mishná</span>
+  <span class="chip"><span class="glyph" style="background:var(--rojo)">?</span>kushyá · objeción</span>
+  <span class="chip"><span class="glyph" style="background:var(--azul)">→</span>teruts · resolución</span>
+  <span class="chip"><span class="glyph" style="background:var(--sepia)">ב</span>baraita (תניא · ת"ר)</span>
+  <span class="chip"><span class="glyph" style="background:var(--verde)">⌖</span>nafka mina</span>
+  <span class="chip"><span class="glyph" style="background:var(--violeta)">✦</span>aggadá · narrativa</span>
+</div>
+
+<div class="esqueleto-diagrama">
+<svg viewBox="0 0 720 1340" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Esqueleto dialéctico de la sugyá Berajot 3a: 15 movidas argumentativas conectadas</title>
+
+<defs>
+  <marker id="flecha-tinta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- ====================================================================== -->
+<!-- Encabezado contextual                                                  -->
+<!-- ====================================================================== -->
+<text x="360" y="28" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">BERAJOT 3A · 15 MOVIDAS · DE LA MISHNÁ AL T"R</text>
+<line x1="80" y1="42" x2="640" y2="42" stroke="#d4c4a3" stroke-width="0.6"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 1 · Memrá inicial (referencia a la mishná de 2a)                  -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="memra-1">
+  <rect class="nodo-fondo" x="120" y="62" width="520" height="62" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="80" y="62" width="36" height="62" rx="6" fill="#b8860b"/>
+  <text x="98" y="100" text-anchor="middle" font-size="16" fill="#fff">מ</text>
+  <text x="135" y="82" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">MEMRÁ · CITA DE LA MISHNÁ 2A</text>
+  <text x="630" y="82" text-anchor="end" font-size="13" direction="rtl" fill="#1a1410" font-weight="500">עַד סוֹף הָאַשְׁמוּרָה</text>
+  <text x="135" y="105" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"...hasta el fin de la (primera) vigilia" — R. Eliezer en la mishná</text>
+  <text x="135" y="120" font-size="9.5" fill="#6b4423">posición inicial · la guemará la interroga</text>
+</g>
+
+<line x1="380" y1="124" x2="380" y2="158" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 2 · Kushyá principal                                              -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="kushya-1">
+  <rect class="nodo-fondo" x="120" y="164" width="520" height="62" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <rect x="80" y="164" width="36" height="62" rx="6" fill="#8b1a1a"/>
+  <text x="98" y="202" text-anchor="middle" font-size="18" fill="#fff" font-weight="500">?</text>
+  <text x="135" y="184" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">KUSHYÁ · ¿CUÁNTAS VIGILIAS SUPONE R. ELIEZER?</text>
+  <text x="630" y="184" text-anchor="end" font-size="13" direction="rtl" fill="#1a1410" font-weight="500">מַאי קָסָבַר רַבִּי אֱלִיעֶזֶר?</text>
+  <text x="135" y="207" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"¿qué sostiene R. Eliezer?" — la sugyá explota en dos hipótesis</text>
+  <text x="135" y="221" font-size="9.5" fill="#6b4423">tensión: el fraseo de la mishná no especifica horas</text>
+</g>
+
+<!-- Dos lineas que se bifurcan hacia las dos hipótesis -->
+<path d="M250 226 Q 200 250, 200 268" fill="none" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+<path d="M510 226 Q 560 250, 560 268" fill="none" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODOS 2A/2B · Hava amina (dos hipótesis en paralelo)                   -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="hava-3">
+  <rect class="nodo-fondo" x="80" y="272" width="260" height="58" rx="6" fill="rgba(139,26,26,0.04)" stroke="#8b1a1a" stroke-width="0.9" stroke-dasharray="4 2"/>
+  <text x="92" y="290" font-size="8.5" font-family="'JetBrains Mono', monospace" letter-spacing="1.2" fill="#8b1a1a">HAVÁ AMINÁ A</text>
+  <text x="328" y="290" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410">אִי ג׳ מִשְׁמָרוֹת</text>
+  <text x="210" y="310" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"si son 3 vigilias..."</text>
+  <text x="210" y="323" text-anchor="middle" font-size="10" fill="#6b4423">debería decir "hasta 4 horas"</text>
+</g>
+
+<g class="nodo" data-id="hava-4">
+  <rect class="nodo-fondo" x="420" y="272" width="260" height="58" rx="6" fill="rgba(139,26,26,0.04)" stroke="#8b1a1a" stroke-width="0.9" stroke-dasharray="4 2"/>
+  <text x="432" y="290" font-size="8.5" font-family="'JetBrains Mono', monospace" letter-spacing="1.2" fill="#8b1a1a">HAVÁ AMINÁ B</text>
+  <text x="668" y="290" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410">אִי ד׳ מִשְׁמָרוֹת</text>
+  <text x="550" y="310" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"si son 4 vigilias..."</text>
+  <text x="550" y="323" text-anchor="middle" font-size="10" fill="#6b4423">debería decir "hasta 3 horas"</text>
+</g>
+
+<!-- Las dos hipótesis convergen hacia el teruts -->
+<path d="M200 330 Q 290 350, 360 364" fill="none" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+<path d="M560 330 Q 470 350, 400 364" fill="none" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 3 · Teruts principal                                              -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="teruts-1">
+  <rect class="nodo-fondo" x="120" y="368" width="520" height="72" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="80" y="368" width="36" height="72" rx="6" fill="#1e3a5f"/>
+  <text x="98" y="411" text-anchor="middle" font-size="18" fill="#fff" font-weight="500">→</text>
+  <text x="135" y="388" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">TERUTS · DOS NIVELES DE VIGILIAS</text>
+  <text x="630" y="388" text-anchor="end" font-size="13" direction="rtl" fill="#1a1410" font-weight="500">לְעוֹלָם ג׳ מִשְׁמָרוֹת · בָּרָקִיעַ וּבְאַרְעָא</text>
+  <text x="135" y="411" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"en verdad sostiene tres — y nos enseña que hay vigilias en el cielo Y en la tierra"</text>
+  <text x="135" y="426" font-size="9.5" fill="#6b4423">la enseñanza no es la cuenta · es que ambos planos se duplican</text>
+  <text x="630" y="434" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">resuelve la kushyá 1</text>
+</g>
+
+<line x1="380" y1="440" x2="380" y2="468" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 4 · Baraita de R. Eliezer (apoyo escriturario)                    -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="baraita-eliezer">
+  <rect class="nodo-fondo" x="120" y="472" width="520" height="78" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1" stroke-dasharray="5 3"/>
+  <rect x="80" y="472" width="36" height="78" rx="6" fill="#6b4423"/>
+  <text x="98" y="517" text-anchor="middle" font-size="16" fill="#fff">ב</text>
+  <text x="135" y="492" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">BARAITA · R. ELIEZER · YIRMIYAHU 25:30</text>
+  <text x="630" y="492" text-anchor="end" font-size="12" direction="rtl" fill="#1a1410" font-weight="500">ג׳ מִשְׁמָרוֹת · יוֹשֵׁב הקב״ה וְשׁוֹאֵג כָּאֲרִי</text>
+  <text x="135" y="513" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"tres vigilias hay la noche · sobre cada una HKBH se sienta y ruge como león"</text>
+  <text x="135" y="528" font-size="10" direction="ltr" fill="#3d2f23" font-style="italic">prueba: ה׳ מִמָּרוֹם יִשְׁאַג / שָׁאֹג / יִשְׁאַג — la raíz "rugir" aparece 3 veces</text>
+  <text x="630" y="544" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">apoya el teruts</text>
+</g>
+
+<line x1="380" y1="550" x2="380" y2="578" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 5 · Siman (signos terrestres de la baraita)                       -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="siman">
+  <rect class="nodo-fondo" x="120" y="582" width="520" height="72" rx="6" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1" stroke-dasharray="5 3"/>
+  <rect x="80" y="582" width="36" height="72" rx="6" fill="#6b4423"/>
+  <text x="98" y="624" text-anchor="middle" font-size="16" fill="#fff">ב</text>
+  <text x="135" y="602" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">CONTINUACIÓN BARAITA · SIGNOS EN LA TIERRA</text>
+  <text x="630" y="602" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410">סִימָן לַדָּבָר: חֲמוֹר · כְּלָבִים · תִּינוֹק וְאִשָּׁה</text>
+  <text x="135" y="623" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">vigilia I: el burro rebuzna · II: los perros aúllan · III: niño mama / mujer habla con esposo</text>
+  <text x="135" y="640" font-size="10" fill="#3d2f23">la baraita nombra tres signos — uno por vigilia</text>
+</g>
+
+<line x1="380" y1="654" x2="380" y2="682" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 6 · Segunda kushyá (¿qué momento marca cada signo?)               -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="kushya-2">
+  <rect class="nodo-fondo" x="120" y="686" width="520" height="62" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <rect x="80" y="686" width="36" height="62" rx="6" fill="#8b1a1a"/>
+  <text x="98" y="724" text-anchor="middle" font-size="18" fill="#fff" font-weight="500">?</text>
+  <text x="135" y="706" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">KUSHYÁ · ¿QUÉ MOMENTO MARCA CADA SIGNO?</text>
+  <text x="630" y="706" text-anchor="end" font-size="13" direction="rtl" fill="#1a1410" font-weight="500">מַאי קָא חָשֵׁיב רַבִּי אֱלִיעֶזֶר?</text>
+  <text x="135" y="729" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"¿qué cuenta R. Eliezer al dar los signos — inicios o finales de vigilia?"</text>
+  <text x="135" y="743" font-size="9.5" fill="#6b4423">inicio de la 1ª = anochecer obvio · fin de la 3ª = amanecer obvio · ¿por qué hacen falta signos?</text>
+</g>
+
+<line x1="380" y1="748" x2="380" y2="776" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 7 · Teruts: fin/inicio/medio                                       -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="teruts-2">
+  <rect class="nodo-fondo" x="120" y="780" width="520" height="62" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="80" y="780" width="36" height="62" rx="6" fill="#1e3a5f"/>
+  <text x="98" y="818" text-anchor="middle" font-size="18" fill="#fff" font-weight="500">→</text>
+  <text x="135" y="800" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">TERUTS · TRES PUNTOS DISTINTOS</text>
+  <text x="630" y="800" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410" font-weight="500">סוֹף א׳ · תְּחִלַּת אַחֲרוֹנָה · אֶמְצָעִית דְּאֶמְצָעִיתָא</text>
+  <text x="135" y="822" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">cuenta: fin de la primera (burro) · centro de la intermedia (perros) · inicio de la última (niño / mujer)</text>
+  <text x="135" y="836" font-size="9.5" fill="#6b4423">cada signo marca un instante distinto — no son redundantes</text>
+</g>
+
+<line x1="380" y1="842" x2="380" y2="870" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 8 · Nafka mina                                                    -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="nafka-mina">
+  <rect class="nodo-fondo" x="120" y="874" width="520" height="62" rx="6" fill="rgba(30,107,90,0.07)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <rect x="80" y="874" width="36" height="62" rx="6" fill="#1e6b5a"/>
+  <text x="98" y="912" text-anchor="middle" font-size="16" fill="#fff">⌖</text>
+  <text x="135" y="894" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">NAFKA MINA · IMPLICACIÓN PRÁCTICA</text>
+  <text x="630" y="894" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410" font-weight="500">לְמַאן דְּגָנֵי בְּבַיִת אָפֵל</text>
+  <text x="135" y="916" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"para quien duerme en habitación oscura y no sabe qué hora es"</text>
+  <text x="135" y="930" font-size="9.5" fill="#6b4423">si oye al niño mamando, sabe que ya es la última vigilia · debe levantarse y recitar shema</text>
+</g>
+
+<!-- Transición a la sección aggádica -->
+<line x1="380" y1="936" x2="380" y2="968" stroke="#3d2f23" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#flecha-tinta)"/>
+<text x="395" y="956" font-size="9" fill="#6b4423" font-style="italic">[la sugyá pivota: del análisis halájico al material aggádico]</text>
+
+<!-- ====================================================================== -->
+<!-- NODO 9 · Memrá de Rav Yitzjak bar Shmuel                               -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="memra-rav-yitzchak">
+  <rect class="nodo-fondo" x="120" y="972" width="520" height="62" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="80" y="972" width="36" height="62" rx="6" fill="#b8860b"/>
+  <text x="98" y="1010" text-anchor="middle" font-size="16" fill="#fff">מ</text>
+  <text x="135" y="992" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">MEMRÁ · RAV YITZJAK BAR SHMUEL MISHEMEI DERAV</text>
+  <text x="630" y="992" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410" font-weight="500">אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי</text>
+  <text x="135" y="1014" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"3 vigilias hay la noche · HKBH se sienta, ruge, y dice: 'ay, pues destruí mi casa...'"</text>
+  <text x="135" y="1029" font-size="9.5" fill="#6b4423">reformula la baraita de R. Eliezer dándole CONTENIDO al rugido divino</text>
+</g>
+
+<line x1="380" y1="1034" x2="380" y2="1062" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 10 · Baraita de R. Yose (aggadá)                                  -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="baraita-yose">
+  <rect class="nodo-fondo" x="120" y="1066" width="520" height="72" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <rect x="80" y="1066" width="36" height="72" rx="6" fill="#5a3a8a"/>
+  <text x="98" y="1108" text-anchor="middle" font-size="16" fill="#fff">✦</text>
+  <text x="135" y="1086" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">BARAITA AGGÁDICA · R. YOSE EN LA RUINA</text>
+  <text x="630" y="1086" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410" font-weight="500">תַּנְיָא, אָמַר ר׳ יוֹסֵי</text>
+  <text x="135" y="1107" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"una vez iba por el camino y entré a una de las ruinas de Yerushalayim a orar..."</text>
+  <text x="135" y="1122" font-size="10" fill="#3d2f23">Eliyahu HaNavi monta guardia · le pregunta · le revela</text>
+  <text x="630" y="1135" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">expande el grito del nodo 9</text>
+</g>
+
+<!-- Bifurcación en tres sub-nodos para las preguntas de Eliyahu -->
+<path d="M200 1138 Q 200 1158, 200 1168" fill="none" stroke="#5a3a8a" stroke-width="1" marker-end="url(#flecha-rojo)"/>
+<path d="M380 1138 Q 380 1158, 380 1168" fill="none" stroke="#5a3a8a" stroke-width="1" marker-end="url(#flecha-rojo)"/>
+<path d="M560 1138 Q 560 1158, 560 1168" fill="none" stroke="#5a3a8a" stroke-width="1" marker-end="url(#flecha-rojo)"/>
+
+<!-- Tres sub-nodos -->
+<g class="nodo" data-id="yose-q1">
+  <rect class="nodo-fondo" x="100" y="1172" width="200" height="56" rx="6" fill="rgba(90,58,138,0.05)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="200" y="1190" text-anchor="middle" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.2" fill="#5a3a8a">PREGUNTA 1</text>
+  <text x="200" y="1208" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">מִפְּנֵי מָה נִכְנַסְתָּ?</text>
+  <text x="200" y="1222" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"¿por qué entraste?"</text>
+</g>
+
+<g class="nodo" data-id="yose-q2">
+  <rect class="nodo-fondo" x="320" y="1172" width="120" height="56" rx="6" fill="rgba(90,58,138,0.05)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="380" y="1190" text-anchor="middle" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.2" fill="#5a3a8a">PREGUNTA 2</text>
+  <text x="380" y="1208" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">מָה קוֹל שָׁמַעְתָּ?</text>
+  <text x="380" y="1222" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"¿qué voz oíste?"</text>
+</g>
+
+<g class="nodo" data-id="yose-rev">
+  <rect class="nodo-fondo" x="460" y="1172" width="200" height="56" rx="6" fill="rgba(90,58,138,0.05)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="560" y="1190" text-anchor="middle" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.2" fill="#5a3a8a">REVELACIÓN</text>
+  <text x="560" y="1208" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">ג׳ פְּעָמִים בְּכָל יוֹם</text>
+  <text x="560" y="1222" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"tres veces al día"</text>
+</g>
+
+<!-- Líneas de los sub-nodos al T"R -->
+<path d="M200 1228 Q 200 1240, 280 1252" fill="none" stroke="#3d2f23" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M380 1228 Q 380 1240, 380 1252" fill="none" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tinta)"/>
+<path d="M560 1228 Q 560 1240, 480 1252" fill="none" stroke="#3d2f23" stroke-width="0.7" stroke-dasharray="2 3"/>
+
+<!-- ====================================================================== -->
+<!-- NODO 11 · T"R (3 razones para no entrar a una ruina)                   -->
+<!-- ====================================================================== -->
+<g class="nodo" data-id="tanu-rabanan">
+  <rect class="nodo-fondo" x="120" y="1256" width="520" height="64" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1" stroke-dasharray="5 3"/>
+  <rect x="80" y="1256" width="36" height="64" rx="6" fill="#6b4423"/>
+  <text x="98" y="1294" text-anchor="middle" font-size="14" fill="#fff" letter-spacing="0.5">ת״ר</text>
+  <text x="135" y="1276" font-size="9" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" fill="#6b4423">TANU RABANAN · TRES RAZONES PARA NO ENTRAR A UNA RUINA</text>
+  <text x="630" y="1276" text-anchor="end" font-size="11" direction="rtl" fill="#1a1410" font-weight="500">חֲשָׁד · מַפּוֹלֶת · מַזִּיקִין</text>
+  <text x="135" y="1297" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">sospecha de inmoralidad · derrumbe del edificio · demonios</text>
+  <text x="135" y="1311" font-size="9.5" fill="#6b4423">expande la primera lección de R. Yose: ¿por qué exactamente no se entra a una ruina?</text>
+</g>
+
+<!-- Pie -->
+<text x="360" y="1336" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">la guemará seguirá analizando cada una de las tres razones en 3b · este diagrama corta al final de 3a</text>
+
+</svg>
+</div>
+
+<div class="esqueleto-panel" id="esqueleto-panel">
+  <p class="esqueleto-vacio">Selecciona cualquier nodo del esqueleto arriba para ver la cita exacta, su traducción y por qué la sugyá hace esa movida.</p>
+</div>
+
+</div>
+
+<div class="nota-prototipo">
+  <strong>Nota de prototipo.</strong> Este archivo es un <em>standalone</em> (con <code>&lt;html&gt;</code> propio) para que puedas previsualizarlo abriendo la URL directa.
+  Para integrarlo al sistema de embed de <code>daf.js</code>, basta con extraer el contenido del <code>div.esqueleto-interactivo</code> (es la misma convención que ya usan <code>berakhot-2a.html</code> y <code>berakhot-3a.html</code>).
+  La idea más amplia: este arquetipo "esqueleto de sugyá" debería poder aplicarse a cualquier daf del Bavlí — los datos (movidas y citas) cambian, la plantilla visual y la lógica de click se mantienen.
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'memra-1': {
+      tag: 'MEMRÁ · LÍNEA 3 DEL DAF',
+      titulo: 'La mishná de 2a vuelve a sonar',
+      hebreo: 'עַד סוֹף הָאַשְׁמוּרָה',
+      traduccion: '"hasta el fin de la (primera) vigilia"',
+      explicacion: 'La sugyá no abre con texto propio sino reanudando la opinión de R. Eliezer en la mishná de 2a: el zman de kriat shema de la noche dura "hasta el fin de la primera vigilia". Es la posición que la guemará va a auscultar durante todo 3a. La cita es breve a propósito — funciona como mojón al que se vuelve para problematizar.'
+    },
+    'kushya-1': {
+      tag: 'KUSHYÁ · LÍNEA 4',
+      titulo: 'La sugyá interroga el supuesto numérico',
+      hebreo: 'מַאי קָסָבַר רַבִּי אֱלִיעֶזֶר?',
+      traduccion: '"¿qué sostiene R. Eliezer (sobre cuántas vigilias tiene la noche)?"',
+      explicacion: 'Movida clásica de la guemará: detectar un implícito y forzarlo a manifestarse. Si la noche tiene 3 vigilias, cada una dura 4 horas (12/3); si tiene 4, dura 3 horas (12/4). R. Eliezer dijo "hasta el fin de la primera vigilia" sin especificar horas — la kushyá lo obliga a definirse. Es una pregunta retórica que abre dos hipótesis simultáneas.'
+    },
+    'hava-3': {
+      tag: 'HAVÁ AMINÁ A',
+      titulo: 'Hipótesis: tres vigilias',
+      hebreo: 'אִי קָסָבַר שָׁלֹשׁ מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, לֵימָא ״עַד אַרְבַּע שָׁעוֹת״',
+      traduccion: '"si sostiene que la noche tiene tres vigilias, debería decir: hasta cuatro horas"',
+      explicacion: 'Primera rama de la kushyá. La aritmética halájica: 12 horas de noche divididas en 3 = 4 horas por vigilia. R. Eliezer debió haber dado este número exacto. El silencio sobre la cifra es el síntoma que la sugyá explota.'
+    },
+    'hava-4': {
+      tag: 'HAVÁ AMINÁ B',
+      titulo: 'Hipótesis: cuatro vigilias',
+      hebreo: 'וְאִי קָסָבַר אַרְבַּע מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, לֵימָא ״עַד שָׁלֹשׁ שָׁעוֹת״',
+      traduccion: '"y si sostiene cuatro vigilias, debería decir: hasta tres horas"',
+      explicacion: 'Segunda rama. 12 / 4 = 3 horas. Cualquiera que sea la cuenta de R. Eliezer, debió haber sido explícito con horas — y no lo fue. La doble hipótesis fuerza el teruts a explicar el silencio.'
+    },
+    'teruts-1': {
+      tag: 'TERUTS · RESPUESTA EN DOS NIVELES',
+      titulo: 'Vigilias en el cielo y en la tierra',
+      hebreo: 'לְעוֹלָם קָסָבַר שָׁלֹשׁ מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, וְהָא קָמַשְׁמַע לָן: דְּאִיכָּא מִשְׁמָרוֹת בָּרָקִיעַ וְאִיכָּא מִשְׁמָרוֹת בְּאַרְעָא',
+      traduccion: '"en verdad sostiene tres vigilias — y lo que nos enseña es: que hay vigilias en el cielo y vigilias en la tierra"',
+      explicacion: 'La resolución es elegante: R. Eliezer NO está dando una unidad horaria sino una unidad cósmica. Las "vigilias" no son solo divisiones humanas del tiempo nocturno sino estructuras paralelas — los ángeles que se relevan en el cielo y los humanos que duermen en la tierra siguen la misma cadencia. Por eso usa la palabra "ashmurah" en vez de "shaot". El silencio numérico era una pista.'
+    },
+    'baraita-eliezer': {
+      tag: 'BARAITA · APOYO ESCRITURARIO',
+      titulo: 'La baraita anida la doctrina en el verso',
+      hebreo: 'דְּתַנְיָא, רַבִּי אֱלִיעֶזֶר אוֹמֵר: שָׁלֹשׁ מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, וְעַל כָּל מִשְׁמָר וּמִשְׁמָר יוֹשֵׁב הַקָּדוֹשׁ בָּרוּךְ הוּא וְשׁוֹאֵג כָּאֲרִי, שֶׁנֶּאֱמַר: ״ה׳ מִמָּרוֹם יִשְׁאָג״',
+      traduccion: '"se enseñó: R. Eliezer dice: tres vigilias tiene la noche, y sobre cada vigilia HaKadosh Baruj Hu se sienta y ruge como león, como está dicho: \'Adonai desde lo alto rugirá\'" (Yirmiyahu 25:30)',
+      explicacion: 'La baraita aporta dos cosas. Primero, una imagen teológica fuerte: el rugido divino sobre las ruinas. Segundo, una derivación textual: en Yirmiyahu 25:30 la raíz שאג ("rugir") aparece tres veces en el verso (יִשְׁאַג, שָׁאֹג, יִשְׁאַג) — exactamente una por vigilia. La cuenta no es arbitraria.'
+    },
+    'siman': {
+      tag: 'BARAITA · SIGNOS TERRESTRES',
+      titulo: 'Los tres signos en el plano humano',
+      hebreo: 'וְסִימָן לַדָּבָר: מִשְׁמָרָה רִאשׁוֹנָה חֲמוֹר נוֹעֵר, שְׁנִיָּה כְּלָבִים צוֹעֲקִים, שְׁלִישִׁית, תִּינוֹק יוֹנֵק מִשְּׁדֵי אִמּוֹ וְאִשָּׁה מְסַפֶּרֶת עִם בַּעֲלָהּ',
+      traduccion: '"y como signo del asunto: en la primera vigilia el burro rebuzna, en la segunda los perros aúllan, en la tercera el bebé mama del pecho de su madre y la mujer conversa con su esposo"',
+      explicacion: 'La continuación de la baraita aterriza la teología en el cuerpo de los animales y los humanos. Es la "vigilia terrestre" del teruts anterior: hay tres signos perceptibles. La elección de criaturas baja en escala (de la noche del animal al amanecer del niño humano) y prepara la siguiente kushyá: ¿qué momento exacto marca cada signo?'
+    },
+    'kushya-2': {
+      tag: 'KUSHYÁ · ¿INICIO O FIN?',
+      titulo: 'Una segunda interrogación al patrón',
+      hebreo: 'מַאי קָא חָשֵׁיב רַבִּי אֱלִיעֶזֶר?',
+      traduccion: '"¿qué (momento) cuenta R. Eliezer?"',
+      explicacion: 'La sugyá vuelve a presionar: si los signos marcan inicios, ¿para qué un signo del comienzo de la primera vigilia (es obvio: anochece)? Si marcan finales, ¿para qué un signo del fin de la última (también obvio: amanece)? Hay una redundancia aparente — y la guemará no acepta redundancias.'
+    },
+    'teruts-2': {
+      tag: 'TERUTS · TRES MOMENTOS DIFERENTES',
+      titulo: 'Cada signo marca un instante propio',
+      hebreo: 'חָשֵׁיב סוֹף מִשְׁמָרָה רִאשׁוֹנָה, וּתְחִלַּת מִשְׁמָרָה אַחֲרוֹנָה, וְאֶמְצָעִית דְּאֶמְצָעִיתָא',
+      traduccion: '"cuenta: el fin de la primera vigilia, el inicio de la última, y la mitad de la intermedia"',
+      explicacion: 'Resolución brillante: los tres signos no son ni todos finales ni todos inicios. Burro = fin de la primera. Perros = mitad de la intermedia ("emtza\'ita de\'emtza\'ita"). Niño / mujer = inicio de la última. Así cada signo gana una función única en el reloj nocturno y no hay redundancia. La sugyá ofrece también una versión alternativa ("איבעית אימא — כולהו סוף משמרות"), pero esta es la primaria.'
+    },
+    'nafka-mina': {
+      tag: 'NAFKA MINA · CONSECUENCIA HALÁJICA',
+      titulo: 'Para quien duerme en una habitación oscura',
+      hebreo: 'לְמַאי נָפְקָא מִינַּהּ — לְמִיקְרֵי קְרִיאַת שְׁמַע לְמַאן דְּגָנֵי בְּבַיִת אָפֵל וְלָא יָדַע זְמַן קְרִיאַת שְׁמַע אֵימַת',
+      traduccion: '"¿qué surge de esto en la práctica? — para el recitado de shema de quien duerme en una casa oscura y no sabe cuándo es el tiempo de shema"',
+      explicacion: 'Por primera vez en la sugyá aparece el "para qué" práctico. Toda la disección de signos no es ornamental: si te despiertas a oscuras y oyes a un bebé mamando o a una mujer conversar con su esposo, sabes que ya empezó la última vigilia y aún estás a tiempo de cumplir kriat shema. La halajá emerge del paisaje sonoro nocturno.'
+    },
+    'memra-rav-yitzchak': {
+      tag: 'MEMRÁ · RAV YITZJAK BAR SHMUEL EN NOMBRE DE RAV',
+      titulo: 'El rugido cobra texto',
+      hebreo: 'אָמַר רַב יִצְחָק בַּר שְׁמוּאֵל מִשְּׁמֵיהּ דְּרַב: שָׁלֹשׁ מִשְׁמָרוֹת הָוֵי הַלַּיְלָה... וְאוֹמֵר: ״אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי לְבֵין אוּמּוֹת הָעוֹלָם״',
+      traduccion: '"dijo Rav Yitzjak bar Shmuel en nombre de Rav: tres vigilias tiene la noche... y dice: \'ay, pues destruí mi casa, quemé mi santuario y exilié a mis hijos entre las naciones del mundo\'"',
+      explicacion: 'Movida clave: la memrá amoraica reformula la baraita tanaítica añadiéndole el texto del rugido. Donde antes había imagen ("ruge como león") ahora hay palabras concretas — y son palabras de duelo, no de poder. Esta memrá es el puente entre la sección halájica y la sección aggádica que viene a continuación: convierte el ciclo nocturno en liturgia de aflicción.'
+    },
+    'baraita-yose': {
+      tag: 'BARAITA · NARRATIVA DE R. YOSE',
+      titulo: 'Encuentro con Eliyahu en la ruina',
+      hebreo: 'תַּנְיָא, אָמַר רַבִּי יוֹסֵי: פַּעַם אַחַת הָיִיתִי מְהַלֵּךְ בַּדֶּרֶךְ וְנִכְנַסְתִּי לְחוּרְבָּה אַחַת מֵחוּרְבוֹת יְרוּשָׁלַיִם לְהִתְפַּלֵּל',
+      traduccion: '"se enseñó: dijo R. Yose: una vez iba yo por el camino y entré a una de las ruinas de Yerushalayim para orar"',
+      explicacion: 'La baraita aggádica que ilustra la memrá anterior. Eliyahu HaNavi monta guardia en la puerta mientras R. Yose ora; cuando termina lo interpela con dos preguntas y le revela algo. Es un dispositivo narrativo característico del Talmud: una memrá abstracta se concreta en una escena. La estructura tripartita de la escena (pregunta-pregunta-revelación) reproduce simbólicamente las tres vigilias.'
+    },
+    'yose-q1': {
+      tag: 'PREGUNTA 1 DE ELIYAHU',
+      titulo: '¿Por qué entraste a la ruina?',
+      hebreo: 'בְּנִי, מִפְּנֵי מָה נִכְנַסְתָּ לְחוּרְבָּה זוֹ?',
+      traduccion: '"Hijo mío, ¿por qué entraste a esta ruina?"',
+      explicacion: 'R. Yose responde "a orar". Eliyahu le critica: pudo haber orado en el camino, y pudo haber rezado una tefilá ketzará. R. Yose concluye que aprendió tres cosas: no entrar a una ruina, se reza en el camino, se reza una oración breve. Esta primera pregunta genera halajá; la siguiente generará teología.'
+    },
+    'yose-q2': {
+      tag: 'PREGUNTA 2 DE ELIYAHU',
+      titulo: '¿Qué voz oíste?',
+      hebreo: 'בְּנִי, מָה קוֹל שָׁמַעְתָּ בְּחוּרְבָּה זוֹ?',
+      traduccion: '"Hijo mío, ¿qué voz oíste en esta ruina?"',
+      explicacion: 'R. Yose oyó una bat kol "que gemía como paloma" (שֶׁמְּנַהֶמֶת כְּיוֹנָה) y decía la misma fórmula de la memrá del nodo 9: "ay, pues destruí mi casa, quemé mi santuario y exilié a mis hijos entre las naciones". La paloma gimiente es la otra cara del león que ruge — misma Shejiná, dos registros de duelo.'
+    },
+    'yose-rev': {
+      tag: 'REVELACIÓN DE ELIYAHU',
+      titulo: '¿Cuándo se oye esa voz?',
+      hebreo: 'לֹא שָׁעָה זוֹ בִּלְבַד אוֹמֶרֶת כָּךְ, אֶלָּא בְּכָל יוֹם וָיוֹם, שָׁלֹשׁ פְּעָמִים אוֹמֶרֶת כָּךְ',
+      traduccion: '"no solo en esta hora dice así, sino que cada día, tres veces, dice así"',
+      explicacion: 'Aquí la sugyá cierra el círculo: las TRES VECES diarias del lamento divino son las tres vigilias del nodo 4. La aggadá ratifica numéricamente la doctrina halájica. Eliyahu añade un consuelo: cuando Israel responde "yehei shmei rabba mevorakh" en sinagogas y casas de estudio, HKBH mueve la cabeza y dice "feliz el rey al que así alaban en su casa; ¡pobre del padre que exilió a sus hijos!".'
+    },
+    'tanu-rabanan': {
+      tag: 'TANU RABANAN · TRES RAZONES',
+      titulo: 'La halajá detrás de la primera lección',
+      hebreo: 'תָּנוּ רַבָּנָן, מִפְּנֵי שְׁלֹשָׁה דְּבָרִים אֵין נִכְנָסִין לְחוּרְבָּה: מִפְּנֵי חֲשָׁד, מִפְּנֵי הַמַּפּוֹלֶת, וּמִפְּנֵי הַמַּזִּיקִין',
+      traduccion: '"enseñaron los rabinos: por tres cosas no se entra a una ruina: por sospecha (de inmoralidad), por (peligro de) derrumbe, y por (peligro de) demonios"',
+      explicacion: 'El cierre de 3a vuelve a la halajá: la primera lección aprendida por R. Yose ("no se entra a una ruina") tiene tres razones distintas que la guemará examinará una a una en 3b (¿por qué hace falta cada razón si las otras dos ya bastarían?). El número tres vuelve a aparecer — tres vigilias, tres signos, tres preguntas, tres lecciones, tres razones. El daf entero está hilado por esa tríada.'
+    }
+  };
+
+  const panel = document.getElementById('esqueleto-panel');
+  const nodos = document.querySelectorAll('.nodo');
+
+  nodos.forEach(n => {
+    n.addEventListener('click', () => {
+      const id = n.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      nodos.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== n) o.classList.add('dim');
+      });
+      n.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="esqueleto-panel-tag">${d.tag}</div>
+        <div class="esqueleto-panel-header">
+          <div class="esqueleto-panel-titulo">${d.titulo}</div>
+          <div class="esqueleto-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <div class="esqueleto-panel-traduccion">${d.traduccion}</div>
+        <div class="esqueleto-panel-explicacion">${d.explicacion}</div>
+      `;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
