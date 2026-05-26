@@ -38,7 +38,7 @@ const AnalisisDaf = (function() {
   }
 
   function render(contenedor, datos) {
-    const { ref, textoCompleto, links, terminologia, rabbanim, disputas } = datos;
+    const { ref, textoCompleto, links, terminologia, rabbanim, disputas, sugyot } = datos;
     const linksCat = categorizarLinks(links);
     const palabrasTotal = textoCompleto.split(/\s+/).length;
 
@@ -48,13 +48,14 @@ const AnalisisDaf = (function() {
         <h2 class="analisis-titulo">El daf, por dentro</h2>
 
         <div class="stats-row">
+          <div class="stat"><div class="num">${sugyot ? sugyot.length : '—'}</div><div class="label">Sugiot</div></div>
           <div class="stat"><div class="num">${palabrasTotal}</div><div class="label">Palabras</div></div>
           <div class="stat"><div class="num">${linksCat.pesukim.length}</div><div class="label">Pesukim</div></div>
-          <div class="stat"><div class="num">${linksCat.paralelos.length}</div><div class="label">Paralelos</div></div>
           <div class="stat"><div class="num">${rabbanim.length}</div><div class="label">Sabios</div></div>
           <div class="stat"><div class="num">${disputas.length}</div><div class="label">Disputas</div></div>
         </div>
 
+        ${renderSugyot(sugyot, ref)}
         ${renderMapaVoces(terminologia)}
         ${renderRabbanim(rabbanim)}
         ${renderDisputas(disputas)}
@@ -63,6 +64,84 @@ const AnalisisDaf = (function() {
         ${renderParalelos(linksCat.paralelos)}
         ${renderOtros(linksCat)}
       </div>
+    `;
+  }
+
+  /* ----- Sección: Sugiot detectadas (mapeo de Mishnah Map de Sefaria) ----- */
+  function renderSugyot(sugyot, refActual) {
+    if (!sugyot || sugyot.length === 0) {
+      return `
+        <details class="analisis-section">
+          <summary><span class="chev">▸</span> Sugiot — sin mapeo</summary>
+          <div class="section-body">
+            <p class="section-lead">El Mishnah Map de Sefaria no tiene mishnayot mapeadas a este daf. Algunos dapim son enteramente aggadá o continúan una sugiá que empezó antes.</p>
+          </div>
+        </details>
+      `;
+    }
+
+    const m = refActual.match(/^(.+?)\.(\d+[ab])$/);
+    const libro = m ? m[1] : '';
+    const dafActual = m ? m[2] : '';
+
+    const cards = sugyot.map((s, i) => {
+      const mishnaRangoHe = s.endMishnah > s.startMishnah
+        ? `${s.capitulo}:${s.startMishnah}–${s.endMishnah}`
+        : `${s.capitulo}:${s.startMishnah}`;
+      const mishnaUrl = `https://www.sefaria.org/${encodeURIComponent(`Mishnah ${libro} ${s.capitulo}.${s.startMishnah}`)}`;
+
+      let estado = '';
+      if (s.empiezaEnEsteDaf && s.terminaEnEsteDaf)
+        estado = `<span class="sugya-estado completa">Empieza y termina en este daf</span>`;
+      else if (s.empiezaEnEsteDaf)
+        estado = `<span class="sugya-estado empieza">Empieza aquí · continúa en ${s.endDaf}</span>`;
+      else if (s.terminaEnEsteDaf)
+        estado = `<span class="sugya-estado termina">Empezó en ${s.startDaf} · termina aquí</span>`;
+      else if (s.cubreCompletamenteEsteDaf)
+        estado = `<span class="sugya-estado atraviesa">Atraviesa este daf · ${s.startDaf}→${s.endDaf}</span>`;
+
+      // Posición dentro del daf
+      let posicion = '';
+      if (s.empiezaEnEsteDaf && s.terminaEnEsteDaf) {
+        posicion = `Segmentos ${s.startLine} – ${s.endLine}`;
+      } else if (s.empiezaEnEsteDaf) {
+        posicion = `Desde segmento ${s.startLine}`;
+      } else if (s.terminaEnEsteDaf) {
+        posicion = `Hasta segmento ${s.endLine}`;
+      } else {
+        posicion = 'Atraviesa el daf completo';
+      }
+
+      // Próximo daf de la sugiá
+      const continuaLink = s.terminaEnEsteDaf
+        ? ''
+        : `<a href="daf.html?ref=${encodeURIComponent(libro + '.' + s.endDaf)}" class="sugya-continua">Ver final en ${s.endDaf} →</a>`;
+
+      return `
+        <div class="sugya-card">
+          <div class="sugya-num">#${i + 1}</div>
+          <div class="sugya-body">
+            <div class="sugya-titulo">
+              <a href="${mishnaUrl}" target="_blank" rel="noopener">Mishná ${libro} ${mishnaRangoHe}</a>
+            </div>
+            <div class="sugya-meta">
+              ${estado}
+              <span class="sugya-pos">${posicion}</span>
+            </div>
+            ${continuaLink}
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <details class="analisis-section" open>
+        <summary><span class="chev">▾</span> Sugiot en este daf (${sugyot.length})</summary>
+        <div class="section-body">
+          <p class="section-lead">El Bavli organiza su discusión alrededor de mishnayot. Cada bloque de texto entre dos mishnayot es una sugiá — la unidad real del Talmud. Mapeo según el <a href="https://github.com/Sefaria/Sefaria-Project/blob/master/data/Mishnah%20Map.csv" target="_blank" rel="noopener" style="color:var(--dorado)">Mishnah Map oficial de Sefaria</a> (523 mishnayot mapeadas a posición exacta).</p>
+          <div class="sugyot-list">${cards}</div>
+        </div>
+      </details>
     `;
   }
 
@@ -286,7 +365,18 @@ const AnalisisDaf = (function() {
     contenedor.innerHTML = '<div class="loading">Analizando estructura del daf...</div>';
 
     try {
-      const links = await SefariaClient.links(ref);
+      // Parsear ref → libro y daf
+      const refMatch = ref.match(/^(.+?)\.(\d+[ab])$/);
+      const libro = refMatch ? refMatch[1] : null;
+      const dafLetra = refMatch ? refMatch[2] : null;
+
+      // Cargar links y sugiot en paralelo (las sugiot pueden fallar sin romper el resto)
+      const [links, sugyot] = await Promise.all([
+        SefariaClient.links(ref),
+        (libro && dafLetra && typeof Sugyot !== 'undefined')
+          ? Sugyot.deDaf(libro, dafLetra).catch(err => { console.warn('Sugyot no disponibles:', err); return []; })
+          : Promise.resolve([])
+      ]);
 
       const detecciones = TalmudTerminology.detectarEnTexto(textoCompleto);
       const terminologia = {
@@ -298,7 +388,7 @@ const AnalisisDaf = (function() {
       const rabbanim = Rabbanim.detectarEnTexto(textoCompleto);
       const disputas = DetectorDisputas.detectar(textoCompleto);
 
-      render(contenedor, { ref, textoCompleto, links, terminologia, rabbanim, disputas });
+      render(contenedor, { ref, textoCompleto, links, terminologia, rabbanim, disputas, sugyot });
     } catch (err) {
       console.error('Error en análisis:', err);
       contenedor.innerHTML = `<div class="error-box">No se pudo generar el análisis: ${err.message}</div>`;

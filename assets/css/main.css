@@ -1432,3 +1432,113 @@ footer {
   line-height: 1.6;
   color: var(--tinta);
 }
+
+/* ============================================================================
+   Sugiot — tarjetas de mapeo de mishnayot
+   ============================================================================ */
+.sugyot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sugya-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--pergamino-sombra);
+  border-left: 3px solid var(--rojo);
+  padding: 1rem 1.25rem;
+  align-items: start;
+}
+
+.sugya-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--dorado);
+  line-height: 1;
+  padding-top: 0.1rem;
+  min-width: 32px;
+}
+
+.sugya-body {
+  flex: 1;
+}
+
+.sugya-titulo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.sugya-titulo a {
+  color: var(--tinta);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--sepia);
+}
+.sugya-titulo a:hover {
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+.sugya-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.sugya-estado {
+  display: inline-block;
+  padding: 2px 9px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(184, 134, 11, 0.1);
+  border: 1px solid var(--dorado);
+  color: var(--sepia);
+}
+.sugya-estado.completa {
+  background: rgba(30, 107, 90, 0.08);
+  border-color: var(--verde);
+  color: var(--verde);
+}
+.sugya-estado.empieza {
+  background: rgba(30, 58, 95, 0.08);
+  border-color: var(--azul);
+  color: var(--azul);
+}
+.sugya-estado.termina {
+  background: rgba(139, 26, 26, 0.06);
+  border-color: var(--rojo);
+  color: var(--rojo);
+}
+.sugya-estado.atraviesa {
+  background: rgba(90, 58, 138, 0.08);
+  border-color: var(--violeta);
+  color: var(--violeta);
+}
+
+.sugya-pos {
+  color: var(--tinta-suave);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.sugya-continua {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--sepia);
+  text-decoration: none;
+}
+.sugya-continua:hover {
+  color: var(--rojo);
+}
