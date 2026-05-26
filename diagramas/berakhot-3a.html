@@ -1,0 +1,338 @@
+<div class="vigilias-interactivo">
+<style>
+  .vigilias-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .vigilias-leyenda {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .vigilias-leyenda .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .vigilias-leyenda .azul  { background: rgba(30,58,95,0.15);  border-color: var(--azul);  }
+  .vigilias-leyenda .verde { background: rgba(30,107,90,0.15); border-color: var(--verde); }
+  .vigilias-leyenda .rojo  { background: rgba(139,26,26,0.12); border-color: var(--rojo);  }
+  .vigilias-diagrama svg { width: 100%; height: auto; display: block; }
+  .vigilias-opinion { cursor: pointer; transition: opacity 0.2s; }
+  .vigilias-opinion:hover rect,
+  .vigilias-opinion:hover circle { stroke-width: 2 !important; }
+  .vigilias-opinion.activa rect,
+  .vigilias-opinion.activa circle { stroke-width: 2.5 !important; }
+  .vigilias-opinion.dim { opacity: 0.3; }
+  .vigilias-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 120px;
+  }
+  .vigilias-panel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .vigilias-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .vigilias-panel-hebreo {
+    direction: rtl;
+    font-size: 1.05rem;
+    color: var(--sepia);
+  }
+  .vigilias-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .vigilias-panel-explicacion {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin-bottom: 0;
+  }
+  .vigilias-vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+<div class="vigilias-leyenda">
+  <span style="font-weight: 500;">Click en cualquier elemento:</span>
+  <span><span class="swatch azul"></span>3 vigilias (R. Eliezer · R. Natan)</span>
+  <span><span class="swatch verde"></span>4 vigilias (Rabbi)</span>
+  <span><span class="swatch rojo"></span>R. Yose en la ruina</span>
+</div>
+
+<div class="vigilias-diagrama">
+<svg viewBox="0 0 680 820" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 3a: las vigilias de la noche y la narrativa de R. Yose en la ruina</title>
+
+<!-- Definiciones de flechas -->
+<defs>
+  <marker id="flecha-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- Titulo principal -->
+<text x="340" y="26" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Berajot 3a · Las vigilias de la noche · R. Yose en la ruina</text>
+<text x="340" y="46" text-anchor="middle" font-size="12" fill="#6b4423">tres bloques argumentativos · click para abrir cada panel</text>
+
+<!-- =================================================================== -->
+<!-- SECCION 1: VIGILIAS                                                  -->
+<!-- =================================================================== -->
+
+<text x="60" y="80" font-size="11" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VIGILIAS · משמרות</text>
+<text x="620" y="80" text-anchor="end" font-size="11" fill="#6b4423" font-style="italic">¿tres o cuatro?</text>
+
+<!-- Etiquetas del eje temporal -->
+<text x="60"  y="100" text-anchor="middle" font-size="10" fill="#6b4423">anochecer</text>
+<text x="340" y="100" text-anchor="middle" font-size="10" fill="#6b4423">medianoche</text>
+<text x="620" y="100" text-anchor="middle" font-size="10" fill="#6b4423">amanecer</text>
+
+<!-- Linea del tiempo nocturno -->
+<line x1="60" y1="113" x2="620" y2="113" stroke="#3d2f23" stroke-width="1"/>
+<line x1="60" y1="108" x2="60" y2="118" stroke="#3d2f23" stroke-width="1"/>
+<line x1="340" y1="108" x2="340" y2="118" stroke="#3d2f23" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="620" y1="108" x2="620" y2="118" stroke="#3d2f23" stroke-width="1"/>
+
+<!-- Etiqueta opinion: 3 vigilias -->
+<text x="60"  y="138" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f">R. Eliezer · R. Natan — 3 vigilias</text>
+<text x="620" y="138" text-anchor="end" font-size="10" font-family="'JetBrains Mono', monospace" fill="#1e3a5f">Yirmiyahu 25:30</text>
+
+<!-- 3 VIGILIAS · bloques clickeables. Ancho disponible: 60..620 = 560. cada bloque ≈ 186.67 -->
+<g class="vigilias-opinion" data-id="eliezer-1">
+  <rect x="60" y="148" width="186" height="68" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="153" y="170" text-anchor="middle" font-size="11" fill="#1e3a5f" direction="rtl">משמרה ראשונה</text>
+  <text x="153" y="187" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">vigilia I</text>
+  <text x="153" y="205" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">חמור נוער · burro rebuzna</text>
+</g>
+
+<g class="vigilias-opinion" data-id="eliezer-2">
+  <rect x="247" y="148" width="186" height="68" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="340" y="170" text-anchor="middle" font-size="11" fill="#1e3a5f" direction="rtl">משמרה שניה</text>
+  <text x="340" y="187" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">vigilia II · intermedia</text>
+  <text x="340" y="205" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">כלבים צועקים · perros aúllan</text>
+</g>
+
+<g class="vigilias-opinion" data-id="eliezer-3">
+  <rect x="434" y="148" width="186" height="68" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="527" y="170" text-anchor="middle" font-size="11" fill="#1e3a5f" direction="rtl">משמרה שלישית</text>
+  <text x="527" y="187" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">vigilia III</text>
+  <text x="527" y="205" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">תינוק יונק · niño mama</text>
+</g>
+
+<!-- Etiqueta opinion: 4 vigilias -->
+<text x="60"  y="245" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a">Rabbi · Yehuda HaNasi — 4 vigilias</text>
+<text x="620" y="245" text-anchor="end" font-size="10" font-family="'JetBrains Mono', monospace" fill="#1e6b5a">Shoftim 7:19</text>
+
+<!-- 4 VIGILIAS · 560/4 = 140 cada bloque -->
+<g class="vigilias-opinion" data-id="rabbi-1">
+  <rect x="60" y="255" width="140" height="68" rx="6" fill="rgba(30,107,90,0.10)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="130" y="277" text-anchor="middle" font-size="11" fill="#1e6b5a" direction="rtl">ראשונה</text>
+  <text x="130" y="294" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">primera</text>
+  <text x="130" y="311" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">21:00 – 0:00 ≈</text>
+</g>
+
+<g class="vigilias-opinion" data-id="rabbi-2">
+  <rect x="200" y="255" width="140" height="68" rx="6" fill="rgba(30,107,90,0.10)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="270" y="277" text-anchor="middle" font-size="11" fill="#1e6b5a" direction="rtl">תיכונה</text>
+  <text x="270" y="294" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">intermedia · Gideón</text>
+  <text x="270" y="311" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">tiene antes y después</text>
+</g>
+
+<g class="vigilias-opinion" data-id="rabbi-3">
+  <rect x="340" y="255" width="140" height="68" rx="6" fill="rgba(30,107,90,0.10)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="410" y="277" text-anchor="middle" font-size="11" fill="#1e6b5a" direction="rtl">שלישית</text>
+  <text x="410" y="294" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">tercera</text>
+  <text x="410" y="311" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">3:00 – 6:00 ≈</text>
+</g>
+
+<g class="vigilias-opinion" data-id="rabbi-4">
+  <rect x="480" y="255" width="140" height="68" rx="6" fill="rgba(30,107,90,0.10)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="550" y="277" text-anchor="middle" font-size="11" fill="#1e6b5a" direction="rtl">אחרונה</text>
+  <text x="550" y="294" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">última</text>
+  <text x="550" y="311" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">pre-amanecer</text>
+</g>
+
+<!-- Frase central: el león ruge -->
+<rect x="60" y="345" width="560" height="40" rx="4" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="340" y="365" text-anchor="middle" font-size="11" direction="rtl" fill="#8b6635">וְעַל כָּל מִשְׁמָר וּמִשְׁמָר יוֹשֵׁב הַקָּדוֹשׁ בָּרוּךְ הוּא וְשׁוֹאֵג כַּאֲרִי</text>
+<text x="340" y="380" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423">"sobre cada vigilia, el Santo Bendito se sienta y ruge como león" (por la destrucción del Templo)</text>
+
+<!-- =================================================================== -->
+<!-- SECCION 2: R. YOSE EN LA RUINA                                       -->
+<!-- =================================================================== -->
+
+<!-- Linea separadora -->
+<line x1="60" y1="415" x2="620" y2="415" stroke="#6b4423" stroke-width="0.4" stroke-dasharray="2 4"/>
+
+<text x="60"  y="438" font-size="11" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RUINA · חורבה</text>
+<text x="620" y="438" text-anchor="end" font-size="11" fill="#6b4423" font-style="italic">la baraita de R. Yose</text>
+
+<text x="340" y="462" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">פַּעַם אַחַת הָיִיתִי מְהַלֵּךְ בַּדֶּרֶךְ וְנִכְנַסְתִּי לְחוּרְבָּה אַחַת מֵחוּרְבוֹת יְרוּשָׁלַיִם לְהִתְפַּלֵּל</text>
+<text x="340" y="478" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423">"Una vez iba por el camino y entré a una de las ruinas de Yerushalayim para orar..."</text>
+
+<!-- Tres nodos clickeables: preguntas de Eliyahu -->
+<!-- nodos centrados verticalmente en y=600, radio 70, cx en 130, 340, 550 -->
+<g class="vigilias-opinion" data-id="yose-1">
+  <circle cx="130" cy="600" r="70" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <text x="130" y="572" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a">PREGUNTA 1</text>
+  <text x="130" y="598" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">¿Por qué</text>
+  <text x="130" y="615" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">entraste?</text>
+  <text x="130" y="638" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">tres peligros</text>
+</g>
+
+<g class="vigilias-opinion" data-id="yose-2">
+  <circle cx="340" cy="600" r="70" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <text x="340" y="572" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a">PREGUNTA 2</text>
+  <text x="340" y="598" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">¿Qué voz</text>
+  <text x="340" y="615" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">oíste?</text>
+  <text x="340" y="638" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">bat kol · paloma</text>
+</g>
+
+<g class="vigilias-opinion" data-id="yose-3">
+  <circle cx="550" cy="600" r="70" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <text x="550" y="572" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a">REVELACIÓN</text>
+  <text x="550" y="598" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">¿Cuándo</text>
+  <text x="550" y="615" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">se oye?</text>
+  <text x="550" y="638" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">tres veces al día</text>
+</g>
+
+<!-- Flechas entre los nodos -->
+<path d="M205 600 Q 235 590, 265 600" fill="none" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-rojo)"/>
+<path d="M415 600 Q 445 590, 475 600" fill="none" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-rojo)"/>
+
+<!-- Conexion implicita al primer bloque: las tres vigilias -->
+<text x="340" y="720" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423">la voz que gime como paloma se oye una vez en cada vigilia ↑</text>
+
+<!-- Cita final -->
+<rect x="60" y="745" width="560" height="42" rx="4" fill="rgba(139,26,26,0.04)" stroke="#8b1a1a" stroke-width="0.4" stroke-dasharray="3 3"/>
+<text x="340" y="765" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי לְבֵין אוּמּוֹת הָעוֹלָם</text>
+<text x="340" y="780" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423">"ay, pues destruí mi casa, quemé mi santuario y exilié a mis hijos entre las naciones"</text>
+
+<text x="60" y="810" font-size="10" fill="#6b4423" font-style="italic">Halajá derivada: no se entra a una ruina (חשד · מפולת · מזיקין) · se reza en el camino · se reza tefilá ketzará</text>
+
+</svg>
+</div>
+
+<div class="vigilias-panel" id="vigilias-panel">
+  <p class="vigilias-vacio">Selecciona cualquier vigilia o pregunta arriba para ver su detalle.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'eliezer-1': {
+      titulo: 'R. Eliezer · primera vigilia',
+      hebreo: 'מִשְׁמָרָה רִאשׁוֹנָה — חֲמוֹר נוֹעֵר',
+      traduccion: 'Primera vigilia — el burro rebuzna',
+      explicacion: 'R. Eliezer enseña en una baraita que la noche tiene tres vigilias y sobre cada una HaKadosh Baruch Hu se sienta y ruge como león por la destrucción del Templo. El versículo es Yirmiyahu 25:30: "ה׳ מִמָּרוֹם יִשְׁאָג, וּמִמְּעוֹן קָדְשׁוֹ יִתֵּן קוֹלוֹ שָׁאֹג יִשְׁאַג עַל נָוֵהוּ" — donde la raíz "rugir" aparece tres veces, una por vigilia. La señal terrena del FIN de la primera vigilia: los burros rebuznan en sus establos.'
+    },
+    'eliezer-2': {
+      titulo: 'R. Eliezer · vigilia intermedia',
+      hebreo: 'מִשְׁמָרָה שְׁנִיָּה — כְּלָבִים צוֹעֲקִים',
+      traduccion: 'Segunda vigilia — los perros aúllan',
+      explicacion: 'La señal aparece "אֶמְצָעִית דְּאֶמְצָעִיתָא" — en la mitad de la vigilia intermedia. La guemará pregunta por qué se necesita un signo para el medio (si el inicio es el anochecer y el fin es el amanecer, ambos son obvios). Respuesta: para quien duerme en una habitación oscura (גָּנֵי בְּבַיִת אָפֵל) y no sabe en qué hora está; si oye perros aullando, sabe que es plena noche y no es aún hora de levantarse para shema.'
+    },
+    'eliezer-3': {
+      titulo: 'R. Eliezer · última vigilia',
+      hebreo: 'מִשְׁמָרָה שְׁלִישִׁית — תִּינוֹק יוֹנֵק מִשְּׁדֵי אִמּוֹ וְאִשָּׁה מְסַפֶּרֶת עִם בַּעֲלָהּ',
+      traduccion: 'Tercera vigilia — el niño mama del pecho de su madre, la mujer conversa con su esposo',
+      explicacion: 'Signos del INICIO de la última vigilia, cerca del amanecer. La utilidad práctica que da la guemará: quien duerme en una habitación oscura, al oír a un bebé mamando o a una mujer hablando con su esposo, sabe que ya empezó la tercera vigilia (כֵּיוָן דְּאִשָּׁה מְסַפֶּרֶת עִם בַּעֲלָהּ וְתִינוֹק יוֹנֵק... לִיקוּם וְלִיקְרֵי) y debe levantarse a recitar shema antes de amud hashajar.'
+    },
+    'rabbi-1': {
+      titulo: 'Rabbi · primera vigilia (de cuatro)',
+      hebreo: 'אַרְבַּע מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, דִּבְרֵי רַבִּי',
+      traduccion: '"La noche tiene cuatro vigilias — palabras de Rabbi"',
+      explicacion: 'En la baraita "תָּנוּ רַבָּנַן", Rabbi (Yehuda HaNasi) sostiene que la noche se divide en cuatro vigilias y no tres. Si la noche dura ≈12 horas, cada vigilia es de tres horas. La primera va del anochecer hasta tres horas dentro de la noche, antes de medianoche.'
+    },
+    'rabbi-2': {
+      titulo: 'Rabbi · la vigilia intermedia (תיכונה)',
+      hebreo: 'וַיָּבֹא גִדְעוֹן... רֹאשׁ הָאַשְׁמֹרֶת הַתִּיכוֹנָה',
+      traduccion: '"Y vino Gideón... al comienzo de la vigilia intermedia" (Shoftim 7:19)',
+      explicacion: 'La prueba escrituraria de Rabbi: el versículo de Gideón habla de una vigilia "תיכונה" (intermedia). Una baraita explica: "no se dice intermedia sino cuando hay antes de ella y después de ella" — es decir, debe haber una vigilia antes Y una después de la intermedia, lo que solo es posible si hay cuatro en total (la intermedia ocupa la 2.ª o 3.ª posición y queda flanqueada).'
+    },
+    'rabbi-3': {
+      titulo: 'Rabbi · tercera vigilia',
+      hebreo: 'אִי קָסָבַר אַרְבַּע מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, לֵימָא "עַד שָׁלֹשׁ שָׁעוֹת"',
+      traduccion: 'Si sostiene cuatro vigilias, debería decir "hasta tres horas"',
+      explicacion: 'La guemará usa esta aritmética para sondear las opiniones: si la noche tiene cuatro vigilias de 3 horas cada una, la primera vigilia termina a las 3 horas; si tiene tres vigilias de 4 horas, termina a las 4 horas. Es la pregunta que pone a R. Eliezer en tensión consigo mismo cuando dice "hasta el fin de la primera vigilia" sin especificar horas.'
+    },
+    'rabbi-4': {
+      titulo: 'Rabbi · última vigilia',
+      hebreo: 'אַשְׁמוֹרֶת אַחֲרוֹנָה',
+      traduccion: 'La vigilia final, antes del amanecer',
+      explicacion: 'Las últimas tres horas de la noche según la cuenta de cuatro vigilias. R. Natan responde a Rabbi: el versículo de Gideón habla de la תיכונה sin más, no de "la intermedia de las intermedias" — bastaría con tres vigilias para tener una en el medio. La halajá no cierra el debate aquí; ambas posiciones quedan vivas en la tradición.'
+    },
+    'yose-1': {
+      titulo: 'Pregunta 1 · ¿Por qué entraste?',
+      hebreo: 'בְּנִי, מִפְּנֵי מָה נִכְנַסְתָּ לְחוּרְבָּה זוֹ?',
+      traduccion: '"Hijo mío, ¿por qué entraste a esta ruina?"',
+      explicacion: 'Eliyahu HaNavi montó guardia en la puerta mientras R. Yose oraba. Cuando terminó lo saludó "shalom alejá rabí" y le hizo la pregunta. R. Yose respondió: "para orar". Eliyahu replicó que debió rezar en el camino, y rezar una tefilá ketzará. R. Yose concluye: "en esa hora aprendí de él tres cosas — שֶׁאֵין נִכְנָסִין לְחוּרְבָּה · שֶׁמִּתְפַּלְּלִין בַּדֶּרֶךְ · שֶׁהַמִּתְפַּלֵּל בְּדֶרֶךְ מִתְפַּלֵּל תְּפִלָּה קְצָרָה". La baraita posterior da los tres peligros de la ruina: חֲשָׁד (sospecha de inmoralidad), מַפּוֹלֶת (derrumbe) y מַזִּיקִין (demonios).'
+    },
+    'yose-2': {
+      titulo: 'Pregunta 2 · ¿Qué oíste?',
+      hebreo: 'בְּנִי, מָה קוֹל שָׁמַעְתָּ בְּחוּרְבָּה זוֹ?',
+      traduccion: '"Hijo mío, ¿qué voz oíste en esta ruina?"',
+      explicacion: 'R. Yose respondió: "oí una bat kol que gemía como paloma (שֶׁמְּנַהֶמֶת כְּיוֹנָה) y decía: ay, pues destruí mi casa, quemé mi santuario y exilié a mis hijos entre las naciones del mundo". La imagen de la paloma gimiente es central: la Shejiná misma llora por la destrucción del Bet HaMikdash. Es la misma fórmula que Rav Yitzjak bar Shmuel atribuye al rugido divino sobre cada vigilia.'
+    },
+    'yose-3': {
+      titulo: 'Revelación · ¿Cuándo se oye?',
+      hebreo: 'לֹא שָׁעָה זוֹ בִּלְבַד... אֶלָּא בְּכָל יוֹם וָיוֹם, שָׁלֹשׁ פְּעָמִים אוֹמֶרֶת כָּךְ',
+      traduccion: '"No solo en esta hora — sino cada día, tres veces dice así"',
+      explicacion: 'Eliyahu cierra el círculo del daf: la voz de la paloma se oye tres veces al día, una por cada vigilia. Esto une la baraita de R. Yose con la enseñanza de R. Eliezer sobre las tres vigilias y el rugido del león. Y añade un consuelo: cuando Israel responde "יְהֵא שְׁמֵיהּ הַגָּדוֹל מְבֹורָךְ" en batei knesiot y batei midrashot, HaKadosh Baruch Hu mueve la cabeza y dice "אַשְׁרֵי הַמֶּלֶךְ שֶׁמְּקַלְּסִין אוֹתוֹ בְּבֵיתוֹ כָּךְ — מַה לּוֹ לָאָב שֶׁהִגְלָה אֶת בָּנָיו, וְאוֹי לָהֶם לַבָּנִים שֶׁגָּלוּ מֵעַל שׁוּלְחַן אֲבִיהֶם".'
+    }
+  };
+
+  const panel = document.getElementById('vigilias-panel');
+  const opciones = document.querySelectorAll('.vigilias-opinion');
+
+  opciones.forEach(op => {
+    op.addEventListener('click', () => {
+      const id = op.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      opciones.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== op) o.classList.add('dim');
+      });
+      op.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="vigilias-panel-header">
+          <h4 class="vigilias-panel-titulo">${d.titulo}</h4>
+          <div class="vigilias-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="vigilias-panel-traduccion">${d.traduccion}</p>
+        <p class="vigilias-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>
