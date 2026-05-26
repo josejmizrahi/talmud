@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masejet · Codex Talmudicus</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="../index.html" class="brand">Codex Talmudicus</a>
+  <ul class="nav-links">
+    <li><a href="cosmos.html">Cosmos</a></li>
+    <li><a href="grafo.html">Grafo</a></li>
+    <li><a href="calendario.html">Daf Yomí</a></li>
+    <li><a href="buscar.html">Buscar</a></li>
+    <li><a href="progreso.html">Mi estudio</a></li>
+  </ul>
+</nav>
+
+<div class="codex">
+
+  <header class="folio-header" id="folio-header">
+    <div class="meta">...</div>
+    <div class="title"><h1>...</h1><div class="subtitle">...</div></div>
+    <div class="meta">...</div>
+  </header>
+
+  <p id="descripcion" style="max-width: 70ch; color: var(--tinta-suave); margin-bottom: 2rem;">Cargando información de Sefaria...</p>
+
+  <h2 style="font-style: italic; margin-bottom: 1rem;">Todos los dapim</h2>
+  <div class="dapim-grid" id="dapim-grid"></div>
+
+</div>
+
+<footer>
+  <p>הפוך בה והפוך בה דכולא בה</p>
+</footer>
+
+<script src="../assets/js/shas.js"></script>
+<script src="../assets/js/sefaria-client.js"></script>
+<script>
+(async function init() {
+  const params = new URLSearchParams(location.search);
+  const ref = params.get('ref');
+  if (!ref) {
+    document.querySelector('.codex').innerHTML = '<div class="error-box">Falta el parámetro ref.</div>';
+    return;
+  }
+
+  const masejet = buscarMasejet(ref);
+  if (!masejet) {
+    document.querySelector('.codex').innerHTML = `<div class="error-box">No se encontró la masejet "${ref}".</div>`;
+    return;
+  }
+
+  // Header
+  const estudiados = new Set(JSON.parse(localStorage.getItem('codex-estudiados') || '[]'));
+  const dapim = generarDapim(masejet);
+  const estudiadosM = dapim.filter(d => estudiados.has(d.ref)).length;
+
+  document.title = `${masejet.es} · Codex Talmudicus`;
+
+  const folio = document.getElementById('folio-header');
+  folio.innerHTML = `
+    <div class="meta">${masejet.seder}</div>
+    <div class="title">
+      <h1>${masejet.es}</h1>
+      <div class="subtitle">${masejet.he} · ${masejet.dapim} dapim</div>
+    </div>
+    <div class="meta">${estudiadosM}/${dapim.length} estudiados</div>
+  `;
+
+  // Descripción - cargar metadata desde Sefaria
+  try {
+    const data = await SefariaClient.texto(`${ref}.2a`);
+    // El índice raíz tiene 'heDesc' o description
+    const desc = data?.book?.enDesc || data?.indexTitle?.enDesc || '';
+    if (desc) {
+      document.getElementById('descripcion').textContent = desc;
+    } else {
+      document.getElementById('descripcion').textContent =
+        `${masejet.es} es una de las masejtot del orden ${masejet.seder}. Contiene ${masejet.dapim} dapim.`;
+    }
+  } catch (e) {
+    document.getElementById('descripcion').textContent =
+      `${masejet.es} contiene ${masejet.dapim} dapim del orden ${masejet.seder}.`;
+  }
+
+  // Daf de hoy
+  let dafHoy = null;
+  try {
+    const cal = await SefariaClient.calendario();
+    const d = (cal.calendar_items || []).find(i => i.title?.en?.toLowerCase().includes('daf yomi'));
+    if (d) dafHoy = d.ref.replace(/\s+/g, '.');
+  } catch (e) {}
+
+  // Grid de dapim
+  const grid = document.getElementById('dapim-grid');
+  grid.innerHTML = '';
+  dapim.forEach(d => {
+    const a = document.createElement('a');
+    const clases = ['daf-cell'];
+    if (estudiados.has(d.ref)) clases.push('estudiado');
+    if (d.ref === dafHoy) clases.push('hoy');
+    a.className = clases.join(' ');
+    a.href = `../daf.html?ref=${encodeURIComponent(d.ref)}`;
+    a.title = d.ref;
+    a.innerHTML = `<div class="num">${d.amud}</div>`;
+    grid.appendChild(a);
+  });
+})();
+</script>
+
+</body>
+</html>

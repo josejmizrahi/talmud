@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daf Yomí · Codex Talmudicus</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="../index.html" class="brand">Codex Talmudicus</a>
+  <ul class="nav-links">
+    <li><a href="cosmos.html">Cosmos</a></li>
+    <li><a href="grafo.html">Grafo</a></li>
+    <li><a href="calendario.html">Daf Yomí</a></li>
+    <li><a href="buscar.html">Buscar</a></li>
+    <li><a href="progreso.html">Mi estudio</a></li>
+  </ul>
+</nav>
+
+<div class="codex">
+
+  <header class="folio-header">
+    <div class="meta">Calendario</div>
+    <div class="title">
+      <h1>Daf Yomí</h1>
+      <div class="subtitle">דף יומי · El ciclo diario</div>
+    </div>
+    <div class="meta" id="cycle-info">...</div>
+  </header>
+
+  <p style="max-width: 70ch; color: var(--tinta-suave); margin-bottom: 2rem;">El ciclo del Daf Yomí cubre los 2,711 amudim del Talmud Bavli a razón de uno por día. El ciclo actual (el 14º desde su instauración por Rabbi Meir Shapiro en 1923) comenzó el 7 de Enero de 2020 y termina el 7 de Junio de 2027.</p>
+
+  <div id="cal-content">
+    <div class="loading">Cargando calendario desde Sefaria...</div>
+  </div>
+
+</div>
+
+<footer>
+  <p>הפוך בה והפוך בה דכולא בה</p>
+</footer>
+
+<script src="../assets/js/sefaria-client.js"></script>
+<script>
+function formatearFecha(fecha) {
+  return fecha.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+}
+
+async function cargar() {
+  const cont = document.getElementById('cal-content');
+  const hoy = new Date();
+
+  // Cargar 7 días: 3 anteriores, hoy, 3 posteriores
+  const dias = [];
+  for (let i = -3; i <= 3; i++) {
+    const fecha = new Date(hoy);
+    fecha.setDate(hoy.getDate() + i);
+    dias.push(fecha);
+  }
+
+  try {
+    const resultados = await Promise.all(dias.map(d => SefariaClient.calendario(d)));
+
+    cont.innerHTML = '';
+
+    resultados.forEach((cal, i) => {
+      const fecha = dias[i];
+      const esHoy = i === 3;
+      const daf = (cal.calendar_items || []).find(item =>
+        item.title?.en === 'Daf Yomi' || item.title?.en?.toLowerCase().includes('daf yomi')
+      );
+
+      if (!daf) return;
+
+      const refLimpio = daf.ref.replace(/\s+/g, '.');
+      const card = document.createElement('div');
+      card.className = 'today-daf';
+      card.style.opacity = esHoy ? '1' : '0.75';
+      card.style.borderColor = esHoy ? 'var(--dorado)' : 'var(--pergamino-sombra)';
+      card.style.background = esHoy ? 'rgba(184, 134, 11, 0.06)' : 'rgba(255,255,255,0.4)';
+      card.style.borderLeftWidth = esHoy ? '4px' : '1px';
+      card.innerHTML = `
+        <div>
+          <div class="label" style="${esHoy ? 'color: var(--rojo);' : ''}">${esHoy ? 'Hoy' : formatearFecha(fecha)}</div>
+          ${esHoy ? `<div style="font-family: var(--font-display); font-style: italic; color: var(--sepia); font-size: 0.9rem; margin-top: 0.25rem;">${formatearFecha(fecha)}</div>` : ''}
+        </div>
+        <div>
+          <div class="ref">${daf.displayValue?.en || daf.ref}</div>
+          <div class="ref-he">${daf.displayValue?.he || ''}</div>
+        </div>
+        <div>
+          <a href="../daf.html?ref=${encodeURIComponent(refLimpio)}" class="btn ${esHoy ? 'btn-gold' : ''}">Estudiar →</a>
+        </div>
+      `;
+      cont.appendChild(card);
+    });
+
+    // Calcular días restantes del ciclo
+    const finCiclo = new Date('2027-06-07');
+    const diasRestantes = Math.ceil((finCiclo - hoy) / (1000 * 60 * 60 * 24));
+    document.getElementById('cycle-info').innerHTML =
+      `Ciclo 14 · ${diasRestantes} días restantes`;
+
+  } catch (err) {
+    cont.innerHTML = `<div class="error-box">No se pudo cargar el calendario: ${err.message}</div>`;
+  }
+}
+
+cargar();
+</script>
+
+</body>
+</html>

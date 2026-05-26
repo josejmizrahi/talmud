@@ -1,0 +1,278 @@
+<div class="zman-interactivo">
+<style>
+  .zman-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .zman-leyenda {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .zman-leyenda .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .zman-leyenda .azul { background: rgba(30,58,95,0.15); border-color: var(--azul); }
+  .zman-leyenda .rojo { background: rgba(139,26,26,0.12); border-color: var(--rojo); }
+  .zman-diagrama svg { width: 100%; height: auto; display: block; }
+  .zman-opinion { cursor: pointer; transition: opacity 0.2s; }
+  .zman-opinion:hover rect { stroke-width: 1.8 !important; }
+  .zman-opinion.activa rect { stroke-width: 2.5 !important; }
+  .zman-opinion.dim { opacity: 0.3; }
+  .zman-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 120px;
+  }
+  .zman-panel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .zman-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .zman-panel-hebreo {
+    direction: rtl;
+    font-size: 1.05rem;
+    color: var(--sepia);
+  }
+  .zman-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .zman-panel-explicacion {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin-bottom: 0;
+  }
+  .zman-vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+<div class="zman-leyenda">
+  <span style="font-weight: 500;">Click en cualquier opinión:</span>
+  <span><span class="swatch azul"></span>inicio del zman (braita 2b)</span>
+  <span><span class="swatch rojo"></span>fin del zman (mishná 2a)</span>
+</div>
+
+<div class="zman-diagrama">
+<svg viewBox="0 0 680 540" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 2a-2b: cinco opiniones de inicio y tres de fin del zman de kriat shma de arvit</title>
+
+<text x="340" y="28" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Zman de kriat shma de arvit · vista completa</text>
+<text x="340" y="48" text-anchor="middle" font-size="12" fill="#6b4423">2b establece cuándo empieza · 2a establece cuándo termina</text>
+
+<text x="60" y="75" font-size="11" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">INICIO · 2b</text>
+<text x="620" y="75" text-anchor="end" font-size="11" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">FIN · 2a</text>
+
+<line x1="60" y1="290" x2="620" y2="290" stroke="#3d2f23" stroke-width="1"/>
+<line x1="60" y1="284" x2="60" y2="296" stroke="#3d2f23" stroke-width="1"/>
+<line x1="620" y1="284" x2="620" y2="296" stroke="#3d2f23" stroke-width="1"/>
+
+<text x="60" y="313" text-anchor="middle" font-size="11" fill="#6b4423">víspera</text>
+<text x="200" y="313" text-anchor="middle" font-size="11" fill="#6b4423">anochecer</text>
+<text x="430" y="313" text-anchor="middle" font-size="11" fill="#6b4423">media noche</text>
+<text x="620" y="313" text-anchor="middle" font-size="11" fill="#6b4423">amanecer</text>
+
+<rect x="170" y="275" width="80" height="30" fill="#b8860b" opacity="0.18"/>
+<text x="210" y="270" text-anchor="middle" font-size="10" fill="#8b6635" font-style="italic">bein hashmashot</text>
+
+<g class="zman-opinion" data-id="eliezer-inicio">
+<line x1="95" y1="180" x2="95" y2="290" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="95" cy="290" r="5" fill="#1e3a5f"/>
+<rect x="60" y="100" width="100" height="80" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+<text x="110" y="120" text-anchor="middle" font-size="11" fill="#1e3a5f">משעה ש</text>
+<text x="110" y="140" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Eliezer</text>
+<text x="110" y="158" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">קדש היום</text>
+<text x="110" y="172" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">víspera Shabat</text>
+</g>
+
+<g class="zman-opinion" data-id="yehoshua">
+<line x1="195" y1="180" x2="195" y2="290" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="195" cy="290" r="5" fill="#1e3a5f"/>
+<rect x="170" y="100" width="120" height="80" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+<text x="230" y="120" text-anchor="middle" font-size="11" fill="#1e3a5f">משעה ש</text>
+<text x="230" y="140" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yehoshua</text>
+<text x="230" y="158" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">cohanim ya pueden</text>
+<text x="230" y="172" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">comer terumá</text>
+</g>
+
+<g class="zman-opinion" data-id="meir">
+<line x1="225" y1="232" x2="225" y2="290" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="225" cy="290" r="5" fill="#1e3a5f"/>
+<rect x="300" y="190" width="120" height="80" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+<text x="360" y="210" text-anchor="middle" font-size="11" fill="#1e3a5f">משעה ש</text>
+<text x="360" y="230" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Meir</text>
+<text x="360" y="248" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">cohanim se sumergen</text>
+<text x="360" y="262" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">para terumá</text>
+<line x1="298" y1="230" x2="227" y2="232" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+</g>
+
+<g class="zman-opinion" data-id="janina">
+<line x1="275" y1="180" x2="275" y2="290" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="275" cy="290" r="5" fill="#1e3a5f"/>
+<rect x="430" y="100" width="120" height="80" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+<text x="490" y="120" text-anchor="middle" font-size="11" fill="#1e3a5f">משעה ש</text>
+<text x="490" y="140" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Janina</text>
+<text x="490" y="158" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">pobre come</text>
+<text x="490" y="172" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">pan con sal</text>
+<line x1="430" y1="160" x2="277" y2="200" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+</g>
+
+<g class="zman-opinion" data-id="ajai">
+<line x1="330" y1="232" x2="330" y2="290" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="330" cy="290" r="5" fill="#1e3a5f"/>
+<rect x="560" y="190" width="90" height="80" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="0.8"/>
+<text x="605" y="210" text-anchor="middle" font-size="11" fill="#1e3a5f">משעה ש</text>
+<text x="605" y="230" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Ajai</text>
+<text x="605" y="248" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">recostarse</text>
+<text x="605" y="262" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">para comer</text>
+<line x1="560" y1="240" x2="332" y2="232" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="3 3"/>
+</g>
+
+<g class="zman-opinion" data-id="eliezer-fin">
+<line x1="290" y1="290" x2="290" y2="400" stroke="#8b1a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="290" cy="290" r="5" fill="#8b1a1a"/>
+<rect x="225" y="400" width="130" height="80" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="0.8"/>
+<text x="290" y="420" text-anchor="middle" font-size="11" fill="#8b1a1a">עד</text>
+<text x="290" y="440" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Eliezer</text>
+<text x="290" y="458" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">סוף אשמורה</text>
+<text x="290" y="472" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">ראשונה</text>
+</g>
+
+<g class="zman-opinion" data-id="jajamim">
+<line x1="430" y1="290" x2="430" y2="400" stroke="#8b1a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="430" cy="290" r="5" fill="#8b1a1a"/>
+<rect x="370" y="400" width="120" height="80" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="0.8"/>
+<text x="430" y="420" text-anchor="middle" font-size="11" fill="#8b1a1a">עד</text>
+<text x="430" y="440" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Jajamim</text>
+<text x="430" y="458" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">חצות</text>
+<text x="430" y="472" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">media noche</text>
+</g>
+
+<g class="zman-opinion" data-id="gamliel">
+<line x1="600" y1="290" x2="600" y2="400" stroke="#8b1a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="600" cy="290" r="5" fill="#8b1a1a"/>
+<rect x="510" y="400" width="140" height="80" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="0.8"/>
+<text x="580" y="420" text-anchor="middle" font-size="11" fill="#8b1a1a">עד</text>
+<text x="580" y="440" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Gamliel</text>
+<text x="580" y="458" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">עמוד השחר</text>
+<text x="580" y="472" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">amanecer</text>
+</g>
+
+<text x="60" y="515" font-size="11" fill="#6b4423" font-style="italic">Halajá: deOraita hasta amud hashajar · derabanan hasta jatzot · כדי להרחיק אדם מן העבירה</text>
+</svg>
+</div>
+
+<div class="zman-panel" id="zman-panel">
+  <p class="zman-vacio">Selecciona cualquier opinión arriba para ver su detalle.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'eliezer-inicio': {
+      titulo: 'Rabí Eliezer · inicio',
+      hebreo: 'משעה שקדש היום בערבי שבתות',
+      traduccion: 'Desde la hora en que se santifica el día en víspera de Shabat',
+      explicacion: 'R. Eliezer adopta el marcador más temprano posible: cuando se entra al Shabat por aceptación voluntaria, antes incluso de que oscurezca completamente. Refleja su estricta interpretación de cuándo comienza la noche halájica.'
+    },
+    'yehoshua': {
+      titulo: 'Rabí Yehoshua · inicio',
+      hebreo: 'משעה שהכהנים מטוהרים לאכול בתרומתן',
+      traduccion: 'Desde la hora en que los cohanim ya están purificados para comer terumá',
+      explicacion: 'Esta es la opinión de la mishná de 2a. Marca la noche por el momento en que los cohanim impuros, tras sumergirse y esperar al anochecer, pueden comer terumá. Es el indicador estándar del anochecer halájico (tzet hakojavim).'
+    },
+    'meir': {
+      titulo: 'Rabí Meir · inicio',
+      hebreo: 'משעה שהכהנים טובלין לאכול בתרומתן',
+      traduccion: 'Desde la hora en que los cohanim se sumergen para comer terumá',
+      explicacion: 'R. Meir marca un punto anterior: el momento de la inmersión misma, no del comer. R. Yehudá objeta que los cohanim se sumergen aún de día. R. Meir responde que se refiere al bein hashmashot de R. Yosi: un instante imperceptible como un parpadeo (כהרף עין), donde "uno entra y otro sale" y nadie puede determinar exactamente cuándo es.'
+    },
+    'janina': {
+      titulo: 'Rabí Janina · inicio',
+      hebreo: 'משעה שעני נכנס לאכול פתו במלח',
+      traduccion: 'Desde la hora en que el pobre entra a comer su pan con sal',
+      explicacion: 'Marcador del anochecer basado en la rutina del más humilde, que come temprano por necesidad. La guemará usa esta opinión para demostrar que el shiur del pobre es posterior al del cohén: si fueran iguales, R. Janina sería redundante con R. Yehoshua.'
+    },
+    'ajai': {
+      titulo: 'Rabí Ajai · inicio',
+      hebreo: 'משעה שרוב בני אדם נכנסין להסב',
+      traduccion: 'Desde la hora en que la mayoría de las personas se recuestan para comer',
+      explicacion: 'El marcador más tardío. Se refiere a la cena formal, cuando la mayoría ya terminó sus labores y se reclina para la comida nocturna. Es notablemente después del anochecer, ya en plena noche.'
+    },
+    'eliezer-fin': {
+      titulo: 'Rabí Eliezer · fin',
+      hebreo: 'עד סוף האשמורה הראשונה',
+      traduccion: 'Hasta el final de la primera vigilia de la noche',
+      explicacion: 'La opinión más restrictiva sobre el final del zman, dividiendo la noche en tres vigilias (ashmurot). Da apenas las primeras horas de la noche para recitar shma. Es coherente con su posición temprana sobre el inicio: define el zman en su forma más estrecha.'
+    },
+    'jajamim': {
+      titulo: 'Jajamim · fin',
+      hebreo: 'עד חצות',
+      traduccion: 'Hasta la medianoche halájica',
+      explicacion: 'Opinión de los sabios, intermedia. La halajá final adopta una posición compleja: deOraita el zman se extiende hasta el amanecer (como R. Gamliel), pero derabanan los rabinos lo limitan a jatzot para alejar al ser humano de la transgresión (כדי להרחיק אדם מן העבירה).'
+    },
+    'gamliel': {
+      titulo: 'Rabán Gamliel · fin',
+      hebreo: 'עד שיעלה עמוד השחר',
+      traduccion: 'Hasta que sube la columna del amanecer',
+      explicacion: 'La opinión más permisiva. Toda la noche es potencialmente zman de kriat shma. Esta es la posición que la halajá acepta deOraita: el límite bíblico real es el amanecer. La restricción a jatzot es una valla rabínica posterior.'
+    }
+  };
+
+  const panel = document.getElementById('zman-panel');
+  const opiniones = document.querySelectorAll('.zman-opinion');
+
+  opiniones.forEach(op => {
+    op.addEventListener('click', () => {
+      const id = op.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      opiniones.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== op) o.classList.add('dim');
+      });
+      op.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="zman-panel-header">
+          <h4 class="zman-panel-titulo">${d.titulo}</h4>
+          <div class="zman-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="zman-panel-traduccion">${d.traduccion}</p>
+        <p class="zman-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>

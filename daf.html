@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daf · Codex Talmudicus</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html" class="brand">Codex Talmudicus</a>
+  <ul class="nav-links">
+    <li><a href="vistas/cosmos.html">Cosmos</a></li>
+    <li><a href="vistas/grafo.html">Grafo</a></li>
+    <li><a href="vistas/calendario.html">Daf Yomí</a></li>
+    <li><a href="vistas/buscar.html">Buscar</a></li>
+    <li><a href="vistas/progreso.html">Mi estudio</a></li>
+  </ul>
+  <div class="topbar-right">
+    <div class="search-box">
+      <input type="text" id="quick-search" placeholder="Buscar en Sefaria...">
+    </div>
+  </div>
+</nav>
+
+<div class="codex">
+
+  <header class="folio-header">
+    <div class="meta">Masejet ...</div>
+    <div class="title">
+      <h1>...</h1>
+      <div class="subtitle">...</div>
+    </div>
+    <div class="meta">...</div>
+  </header>
+
+  <div class="status-line">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">Inicializando...</span>
+    <span style="margin-left: auto; opacity: 0.7;" id="cache-info"></span>
+  </div>
+
+  <div class="daf-layout">
+
+    <main class="daf-main">
+
+      <!-- Diagrama personalizado (si existe) -->
+      <div id="diagrama-frame"></div>
+
+      <!-- Texto del daf (Hebreo + Inglés desde Sefaria) -->
+      <section id="texto-daf">
+        <div class="loading">Cargando texto desde Sefaria...</div>
+      </section>
+
+      <!-- Navegación -->
+      <div class="daf-nav">
+        <a id="nav-anterior" href="#">← Anterior</a>
+        <div class="center">
+          <button id="mark-done" class="mark-done">Marcar estudiado</button>
+        </div>
+        <a id="nav-siguiente" href="#">Siguiente →</a>
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+
+      <!-- Topics conectados -->
+      <div class="panel">
+        <div class="panel-eyebrow">Conexiones · Sefaria</div>
+        <h3>Topics</h3>
+        <div id="topics-list">
+          <div class="loading">Cargando...</div>
+        </div>
+      </div>
+
+      <!-- Rashi, Tosafot y comentarios -->
+      <div class="panel">
+        <div class="panel-eyebrow">Comentarios clásicos</div>
+        <h3>Rashi · Tosafot · y otros</h3>
+        <div id="comentarios-list">
+          <div class="loading">Cargando...</div>
+        </div>
+      </div>
+
+      <!-- Paralelos en el Shas -->
+      <div class="panel">
+        <div class="panel-eyebrow">Paralelos talmúdicos</div>
+        <h3>En otras masejtot</h3>
+        <div id="paralelos-list">
+          <div class="loading">Cargando...</div>
+        </div>
+      </div>
+
+      <!-- Notas personales -->
+      <div class="panel">
+        <div class="panel-eyebrow">Tu valor agregado</div>
+        <h3>Mis notas</h3>
+        <textarea
+          id="notes-input"
+          class="notes-area"
+          placeholder="Tus reflexiones, dudas, conexiones personales con este daf..."></textarea>
+        <div class="notes-saved" id="notes-saved">✓ Guardado</div>
+      </div>
+
+    </aside>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>הפוך בה והפוך בה דכולא בה</p>
+  <p style="margin-top: 0.5rem; font-size: 0.8rem;">Codex Talmudicus · Textos de <a href="https://www.sefaria.org" style="color: var(--sepia);" target="_blank">Sefaria</a></p>
+</footer>
+
+<script>
+  // Quick search → ir a buscar
+  document.getElementById('quick-search').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const q = e.target.value.trim();
+      if (q) window.location.href = `vistas/buscar.html?q=${encodeURIComponent(q)}`;
+    }
+  });
+</script>
+<script src="assets/js/sefaria-client.js"></script>
+<script src="assets/js/daf.js"></script>
+
+</body>
+</html>
