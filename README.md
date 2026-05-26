@@ -7,19 +7,18 @@ Un mapa visual e interactivo del Talmud Bavli que se construye sobre la API de S
 
 ## La idea fundamental
 
-El Talmud ya es un grafo hipertextual escrito 1500 años antes del hipertexto. Sefaria ya digitalizó ese grafo: textos, traducciones, comentarios, paralelos, topics. Este códice **es una interfaz visual sobre ese grafo**, no un duplicado de él.
+El Talmud ya es un grafo hipertextual escrito 1500 años antes del hipertexto. Sefaria ya digitalizó ese grafo. Este códice es una interfaz visual sobre ese grafo con **dos capas**:
 
-**Lo que el sitio NO tiene que mantener:**
-- Texto de los dapim → viene de Sefaria
-- Rashi, Tosafot, Rashbam, Maharsha, etc. → viene de Sefaria
-- Topics asociados → viene de Sefaria
-- Paralelos en el Shas → viene de Sefaria
-- Calendario del Daf Yomí → viene de Sefaria
+**Capa automática (escalable a 2,711 dapim, cero trabajo):**
+- Texto hebreo + traducción al inglés desde Sefaria
+- Análisis estructural: pesukim citados, paralelos en el Bavli, comentarios (Rashi, Tosafot...), distribución de voces talmúdicas (תנא, אמר, ורמינהו, שמע מינה...)
+- Topics, mishnayot relacionadas, halajá, midrash
+- Calendario Daf Yomí
 
-**Lo que el sitio sí mantiene (mínimo y opcional):**
-- Tu progreso (qué dapim has marcado como estudiados) — vive en tu navegador
-- Tus notas personales por daf — vive en tu navegador
-- Diagramas SVG personalizados — opcionales, pídelos a Claude cuando quieras
+**Capa curada (a demanda, profunda):**
+- Diagramas interactivos del flujo argumentativo de sugiot específicas
+- Cuando me pidas un diagrama profundo de un daf, te lo genero
+- Se guarda como `diagramas/{slug}.html` y aparece automáticamente la próxima vez
 
 ## Las cinco vistas del códice
 

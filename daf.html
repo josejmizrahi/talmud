@@ -45,8 +45,13 @@
 
     <main class="daf-main">
 
-      <!-- Diagrama personalizado (si existe) -->
+      <!-- Diagrama curado (si existe) -->
       <div id="diagrama-frame"></div>
+
+      <!-- Análisis automático del daf (siempre presente) -->
+      <div id="analisis-frame">
+        <div class="loading">Esperando texto del daf para analizar...</div>
+      </div>
 
       <!-- Texto del daf (Hebreo + Inglés desde Sefaria) -->
       <section id="texto-daf">
@@ -125,6 +130,10 @@
   });
 </script>
 <script src="assets/js/sefaria-client.js"></script>
+<script src="assets/js/talmud-terminology.js"></script>
+<script src="assets/js/rabbanim.js"></script>
+<script src="assets/js/detector-disputas.js"></script>
+<script src="assets/js/analisis-daf.js"></script>
 <script src="assets/js/daf.js"></script>
 
 </body>

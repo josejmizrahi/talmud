@@ -146,6 +146,12 @@ const Daf = (function() {
       });
 
       ponerStatus(`Texto cargado · ${segHe.length} segmentos`, 'ok');
+
+      // Disparar análisis automático con el texto completo
+      const textoCompleto = segHe.join(' ');
+      if (typeof AnalisisDaf !== 'undefined') {
+        AnalisisDaf.generar(ref, textoCompleto);
+      }
     } catch (err) {
       console.error(err);
       cont.innerHTML = `<div class="error-box">No se pudo cargar el texto: ${err.message}</div>`;
