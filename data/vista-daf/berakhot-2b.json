@@ -230,6 +230,10 @@
       "tipo": "baraita",
       "etiqueta": "Baraita · las cinco opiniones",
       "lineas": [11],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "titulo": "Las cinco opiniones del inicio del zman shema"
+      },
       "titulo": "El catálogo completo de opiniones tanaíticas",
       "resumen": "La gran baraita del catálogo: cinco opiniones nombradas sobre el inicio del zman shema, ordenadas de la más temprana (R. Eliezer: víspera de Shabat se santifica) a la más tardía (R. Ajai: cuando la mayoría se reclina). Es la fuente del DIAGRAMA temático de 2a — los cinco marcadores del anochecer.",
       "dialogo": [
@@ -246,6 +250,11 @@
       "tipo": "nafka-mina",
       "etiqueta": "Conclusión · pobre ≠ cohén",
       "lineas": [12, 13],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "janina",
+        "titulo": "R. Janina (pobre) en su propio shi'ur"
+      },
       "titulo": "La misma técnica, repetida, fija la regla",
       "resumen": "La guemará repite el argumento por identidad con la nueva baraita: si pobre = cohén, entonces R. Janina = R. Yehoshua — pero la baraita los distingue. Conclusión definitiva: pobre y cohén son shi'urim DISTINTOS. La sugyá ha establecido una verdad estructural: cada marcador es independiente.",
       "dialogo": [
@@ -260,6 +269,11 @@
       "tipo": "nafka-mina",
       "etiqueta": "Nafka mina · pobre vs cohén — orden",
       "lineas": [14],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "janina",
+        "titulo": "El pobre — más tarde que el cohén en la línea del tiempo"
+      },
       "titulo": "El pobre come MÁS TARDE que el cohén",
       "resumen": "Última deducción: ¿pobre o cohén — cuál marca el tiempo más tarde? Si el pobre fuera más temprano, R. Janina (pobre) coincidiría con R. Eliezer (víspera Shabat). Como esa identificación destruye la disputa, el pobre debe venir más tarde. Esto establece el orden en el reloj nocturno: cohén → pobre, no al revés.",
       "dialogo": [
@@ -287,6 +301,11 @@
       "tipo": "teruts",
       "etiqueta": "Teruts · R. Meir cita a R. Yose",
       "lineas": [17],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "meir",
+        "titulo": "R. Meir y el bein hashmashot de R. Yose"
+      },
       "titulo": "El instante imperceptible: \"como un parpadeo\"",
       "resumen": "Movida brillante de R. Meir: \"¿crees que hablo de TU bein hashmashot? Yo hablo del de R. Yose — que es כְּהֶרֶף עַיִן, como un parpadeo, donde uno entra y otro sale\". El bein hashmashot de R. Yose es un instante imperceptible — los cohanim se sumergen JUSTO en ese parpadeo, donde el día se vuelve noche. Es a la vez tarde-del-día y temprano-de-la-noche. R. Meir esquiva la objeción con un concepto físico-halájico que disuelve la frontera.",
       "dialogo": [

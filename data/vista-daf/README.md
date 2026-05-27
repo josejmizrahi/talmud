@@ -48,7 +48,20 @@ Regla: minúsculas, espacios y puntos a guiones, sin guiones al inicio/final.
         { "voz": "tana", "etiqueta": "tana", "texto": "…" },
         { "voz": "chavruta", "etiqueta": "estudiante", "texto": "…" }
         // …
-      ]
+      ],
+
+      // OPCIONAL: si esta unidad tiene un diagrama curado asociado,
+      // aparecerá un botón "Ver diagrama" en el panel jevruta, y al
+      // clickearlo el diagrama se abre debajo del texto del daf.
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",   // ruta al fragmento HTML
+        "highlight": "eliezer-fin",             // opcional: data-id a auto-activar
+        "titulo": "R. Eliezer en el zman shema" // opcional: encabezado del diagrama
+      }
+
+      // FUTURO: alternativamente, un diagrama auto-generado a partir
+      // de datos estructurados (todavía no implementado):
+      // "diagrama": { "tipo": "comparacion-opiniones", "datos": [...] }
     }
     // …
   ]

@@ -143,6 +143,11 @@
       "etiqueta": "Mishná · fin: R. Eliezer",
       "lineas": [1],
       "match": "עַד סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה, דִּבְרֵי רַבִּי אֱלִיעֶזֶר",
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "eliezer-fin",
+        "titulo": "R. Eliezer en el mapa del zman shema"
+      },
       "titulo": "R. Eliezer — la opinión más restrictiva",
       "resumen": "R. Eliezer marca el FIN del zman shema en \"el final de la primera vigilia\". La ambigüedad del término \"ashmurah\" (¿de tres o cuatro vigilias hay?) será explotada en 3a. Es la posición más estrecha de las tres opiniones.",
       "dialogo": [
@@ -156,6 +161,11 @@
       "tipo": "mishna",
       "etiqueta": "Mishná · fin: Jajamim",
       "lineas": [2],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "jajamim",
+        "titulo": "Jajamim — el corte rabínico a medianoche"
+      },
       "titulo": "Jajamim — opinión intermedia: hasta medianoche",
       "resumen": "La opinión \"oficial\" de los rabinos: hasta jatzot, medianoche halájica. La guemará revelará al final del mishná que esta no es la posición original sino una valla rabínica — el zman bíblico real es hasta el amanecer (como Gamliel), y los Jajamim solo lo acortaron para alejar al hombre del riesgo de transgresión.",
       "dialogo": [
@@ -169,6 +179,11 @@
       "tipo": "mishna",
       "etiqueta": "Mishná · fin: Rabán Gamliel",
       "lineas": [3],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "gamliel",
+        "titulo": "Rabán Gamliel — el zman bíblico hasta el amanecer"
+      },
       "titulo": "Rabán Gamliel — toda la noche",
       "resumen": "La posición más permisiva: hasta amud hashajar, el amanecer real. Esta es la opinión que el final del mishná identifica con el zman bíblico de'oraita: toda la noche es shema-time. La medianoche de los Jajamim es solo una precaución pedagógica.",
       "dialogo": [

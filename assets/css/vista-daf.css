@@ -455,6 +455,100 @@
 .toc-unidades li[data-tipo="nafka-mina"] .toc-tipo { background: var(--verde); }
 .toc-unidades li[data-tipo="maase"]      .toc-tipo { background: var(--violeta); }
 
+/* ---------- Diagrama relacionado (sección plena, debajo del cuerpo) ---------- */
+.vista-daf-diagrama {
+  max-width: 1280px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+  animation: slide-in 0.25s ease-out;
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.diagrama-relacionado-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--pergamino-sombra);
+}
+.diagrama-relacionado-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--dorado);
+  margin-bottom: 0.25rem;
+}
+#diagrama-relacionado-titulo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--tinta);
+  margin: 0;
+}
+#diagrama-cerrar {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  color: var(--sepia);
+  border: 1px solid var(--sepia);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#diagrama-cerrar:hover {
+  background: var(--sepia);
+  color: var(--pergamino);
+}
+.diagrama-relacionado-frame {
+  background: rgba(255,255,255,0.45);
+  border: 1px solid var(--pergamino-sombra);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+.diagrama-relacionado-frame > div { max-width: 800px; margin: 0 auto; }
+
+/* Botón "ver diagrama" dentro del panel jevruta */
+.jevruta-diagrama-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: rgba(184,134,11,0.08);
+  border: 1px solid var(--dorado);
+  border-left-width: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--tinta);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  transition: background 0.15s;
+}
+.jevruta-diagrama-btn:hover {
+  background: rgba(184,134,11,0.15);
+}
+.jevruta-diagrama-btn .icono {
+  color: var(--dorado);
+  font-size: 1.05rem;
+}
+.jevruta-diagrama-btn .flecha {
+  color: var(--sepia);
+  margin-left: auto;
+}
+.jevruta-diagrama-btn[aria-pressed="true"] {
+  background: rgba(184,134,11,0.18);
+}
+
 /* footer info */
 .vista-daf-footer {
   max-width: 1280px;

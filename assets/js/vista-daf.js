@@ -179,6 +179,14 @@ function renderPanel(unidad) {
   const prev = idx > 0 ? SPEC.unidades[idx - 1] : null;
   const next = idx < SPEC.unidades.length - 1 ? SPEC.unidades[idx + 1] : null;
 
+  const botonDiagrama = unidad.diagrama ? `
+    <button class="jevruta-diagrama-btn" id="jev-ver-diagrama" aria-pressed="false">
+      <span class="icono">◈</span>
+      <span>${escapeHtml(unidad.diagrama.titulo || 'Ver diagrama relacionado')}</span>
+      <span class="flecha">↓</span>
+    </button>
+  ` : '';
+
   panel.innerHTML = `
     <div class="jevruta-tag">${escapeHtml(tipo.etiqueta)} · línea${unidad.lineas.length > 1 ? 's' : ''} ${unidad.lineas.join(', ')}</div>
     <h3 class="jevruta-titulo">${escapeHtml(unidad.titulo)}</h3>
@@ -186,6 +194,7 @@ function renderPanel(unidad) {
     <div class="jevruta-dialogo">
       ${(unidad.dialogo || []).map(renderTurno).join('')}
     </div>
+    ${botonDiagrama}
     <div class="jevruta-nav">
       <button id="jev-prev" ${!prev ? 'disabled' : ''}>← anterior</button>
       <button id="jev-next" ${!next ? 'disabled' : ''}>siguiente →</button>
@@ -193,6 +202,80 @@ function renderPanel(unidad) {
   `;
   if (prev) document.getElementById('jev-prev').addEventListener('click', () => abrirUnidad(prev.id, true));
   if (next) document.getElementById('jev-next').addEventListener('click', () => abrirUnidad(next.id, true));
+
+  if (unidad.diagrama) {
+    const btn = document.getElementById('jev-ver-diagrama');
+    btn.addEventListener('click', () => mostrarDiagrama(unidad.diagrama, btn));
+    // si el diagrama ya está abierto, actualízalo automáticamente al cambiar de unidad
+    if (document.getElementById('diagrama-relacionado').hidden === false) {
+      mostrarDiagrama(unidad.diagrama, btn);
+    }
+  } else {
+    // si no hay diagrama para esta unidad, ocultamos el que esté abierto
+    ocultarDiagrama();
+  }
+}
+
+/* ----- diagrama relacionado (embed o auto-gen) ----- */
+
+let DIAGRAMA_SRC_ACTUAL = null;  // cache: si el src no cambió, solo re-trigger highlight
+
+async function mostrarDiagrama(diagrama, btnSrc) {
+  const sec = document.getElementById('diagrama-relacionado');
+  const titulo = document.getElementById('diagrama-relacionado-titulo');
+  const frame = document.getElementById('diagrama-relacionado-frame');
+  sec.hidden = false;
+  titulo.textContent = diagrama.titulo || 'Diagrama relacionado';
+  if (btnSrc) btnSrc.setAttribute('aria-pressed', 'true');
+
+  if (diagrama.src) {
+    if (diagrama.src !== DIAGRAMA_SRC_ACTUAL) {
+      try {
+        const resp = await fetch(diagrama.src);
+        if (!resp.ok) throw new Error('no encontrado: ' + diagrama.src);
+        const html = await resp.text();
+        frame.innerHTML = html;
+        ejecutarScripts(frame);
+        DIAGRAMA_SRC_ACTUAL = diagrama.src;
+      } catch (e) {
+        frame.innerHTML = `<p style="color:var(--rojo);font-style:italic;">No se pudo cargar el diagrama (${escapeHtml(e.message)}).</p>`;
+        DIAGRAMA_SRC_ACTUAL = null;
+        return;
+      }
+    }
+    if (diagrama.highlight) {
+      requestAnimationFrame(() => {
+        const target = frame.querySelector(`[data-id="${CSS.escape(diagrama.highlight)}"]`);
+        if (target && typeof target.click === 'function') target.click();
+      });
+    }
+  } else if (diagrama.tipo) {
+    // gancho para auto-generación futura (tipo + datos). Por ahora, placeholder.
+    frame.innerHTML = `<p style="color:var(--sepia);font-style:italic;">Auto-generación de diagramas tipo "${escapeHtml(diagrama.tipo)}" todavía no implementada.</p>`;
+    DIAGRAMA_SRC_ACTUAL = null;
+  }
+
+  sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function ocultarDiagrama() {
+  const sec = document.getElementById('diagrama-relacionado');
+  sec.hidden = true;
+  // marcar botón como no-presionado (si existe)
+  const btn = document.getElementById('jev-ver-diagrama');
+  if (btn) btn.setAttribute('aria-pressed', 'false');
+}
+
+/* Ejecuta los <script> embebidos en un fragmento HTML cargado con innerHTML.
+   innerHTML no ejecuta scripts por seguridad; los re-creamos y reemplazamos. */
+function ejecutarScripts(contenedor) {
+  const scripts = contenedor.querySelectorAll('script');
+  scripts.forEach(viejo => {
+    const nuevo = document.createElement('script');
+    Array.from(viejo.attributes).forEach(attr => nuevo.setAttribute(attr.name, attr.value));
+    nuevo.textContent = viejo.textContent;
+    viejo.parentNode.replaceChild(nuevo, viejo);
+  });
 }
 
 function abrirUnidad(id, scroll) {
@@ -242,6 +325,12 @@ function wireControles() {
   });
   document.getElementById('selector-daf').addEventListener('change', e => {
     location.search = '?ref=' + encodeURIComponent(e.target.value);
+  });
+  document.getElementById('diagrama-cerrar').addEventListener('click', ocultarDiagrama);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !document.getElementById('diagrama-relacionado').hidden) {
+      ocultarDiagrama();
+    }
   });
 }
 

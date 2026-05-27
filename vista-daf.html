@@ -42,6 +42,20 @@
     </aside>
   </div>
 
+  <!-- Diagrama relacionado: aparece debajo del cuerpo cuando una unidad tiene
+       un diagrama asociado. Embebe el HTML curado (o, en el futuro, una
+       visualización auto-generada) y opcionalmente activa un elemento. -->
+  <section class="vista-daf-diagrama" id="diagrama-relacionado" hidden>
+    <header class="diagrama-relacionado-header">
+      <div>
+        <span class="diagrama-relacionado-tag">DIAGRAMA RELACIONADO</span>
+        <h3 id="diagrama-relacionado-titulo"></h3>
+      </div>
+      <button id="diagrama-cerrar" title="ocultar diagrama">cerrar ✕</button>
+    </header>
+    <div class="diagrama-relacionado-frame" id="diagrama-relacionado-frame"></div>
+  </section>
+
   <div class="vista-daf-footer">
     sistema escalable · agrega <code>data/vista-daf/{slug}.json</code> para cubrir cualquier daf · texto base: Sefaria (William Davidson Edition)
   </div>
