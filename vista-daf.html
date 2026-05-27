@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vista jevruta · Codex Talmudicus</title>
+<meta name="description" content="Sistema visual para estudiar guemará: texto del daf, anotaciones analíticas y diálogo jevruta sobre cada movida.">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/vista-daf.css">
+</head>
+<body>
+<div class="vista-daf-shell modo-analisis">
+
+  <div class="vista-daf-top">
+    <h1 id="vista-daf-titulo">Vista jevruta</h1>
+    <div class="breadcrumb" id="vista-daf-breadcrumb"></div>
+  </div>
+
+  <div class="vista-daf-controles">
+    <label>
+      <span style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--sepia);">daf</span>
+      <select id="selector-daf"></select>
+    </label>
+
+    <span style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--sepia);">modo</span>
+    <div class="modo-grupo">
+      <button data-modo="texto" title="solo el daf, sin anotaciones">texto</button>
+      <button data-modo="analisis" class="activo" title="texto con cajas analíticas">análisis</button>
+      <button data-modo="jevruta" title="diálogo jevruta abierto">jevruta</button>
+    </div>
+
+    <div class="navegacion-daf" id="navegacion-daf"></div>
+  </div>
+
+  <div class="vista-daf-intro" id="vista-daf-intro"></div>
+
+  <div class="vista-daf-cuerpo">
+    <div class="vista-daf-texto" id="vista-daf-texto"></div>
+    <aside class="vista-daf-aside">
+      <div class="jevruta-panel vacia" id="jevruta-panel"></div>
+      <div class="toc-unidades" id="toc-unidades"></div>
+    </aside>
+  </div>
+
+  <div class="vista-daf-footer">
+    sistema escalable · agrega <code>data/vista-daf/{slug}.json</code> para cubrir cualquier daf · texto base: Sefaria (William Davidson Edition)
+  </div>
+
+</div>
+<script src="assets/js/vista-daf.js"></script>
+</body>
+</html>

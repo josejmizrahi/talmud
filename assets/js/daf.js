@@ -488,6 +488,24 @@ const Daf = (function() {
     cargarComentarios(ref);
     cargarParalelos(ref);
     cargarDiagrama(ref);
+    cargarVistaJevruta(ref);
+  }
+
+  /* ----- Vista jevruta (si existe spec) -----
+     Verifica si data/vista-daf/{slug}.json existe y, si sí, revela el link
+     en daf.html que lleva a la vista jevruta para este daf. */
+  async function cargarVistaJevruta(ref) {
+    const slug = ref.toLowerCase().replace(/\./g, '-').replace(/\s+/g, '-');
+    try {
+      const resp = await fetch(`data/vista-daf/${slug}.json`, { method: 'HEAD' });
+      if (!resp.ok) return;
+      const link = document.getElementById('vista-jevruta-link');
+      const anchor = document.getElementById('vista-jevruta-anchor');
+      if (link && anchor) {
+        anchor.href = `vista-daf.html?ref=${encodeURIComponent(ref)}`;
+        link.style.display = 'block';
+      }
+    } catch (e) { /* silencio */ }
   }
 
   return {

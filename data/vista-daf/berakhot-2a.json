@@ -1,0 +1,332 @@
+{
+  "ref": "Berakhot 2a",
+  "titulo": "Berajot 2a — apertura del Talmud Bavlí",
+  "anterior": null,
+  "siguiente": "Berakhot 2b",
+  "introduccion": "El Bavlí abre con la palabra מאימתי — \"¿desde cuándo?\". No es accidente: antes de responder cualquier cosa, la guemará interroga la PROPIA pregunta de la mishná. La primera sugyá del Talmud es metalingüística — pregunta cómo preguntar.",
+
+  "lineas": [
+    {
+      "n": 1,
+      "tag": "mishná · 1.1",
+      "he": "מֵאֵימָתַי קוֹרִין אֶת שְׁמַע בָּעֲרָבִין? מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִים לֶאֱכוֹל בִּתְרוּמָתָן. עַד סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה, דִּבְרֵי רַבִּי אֱלִיעֶזֶר.",
+      "es": "¿Desde cuándo se recita el shema en (las oraciones de) la noche? Desde la hora en que los cohanim entran a comer su terumá. Hasta el final de la primera vigilia, palabras de Rabí Eliezer.",
+      "anota": ["m-pregunta", "m-cohanim", "m-r-eliezer"]
+    },
+    {
+      "n": 2,
+      "tag": "mishná",
+      "he": "וַחֲכָמִים אוֹמְרִים: עַד חֲצוֹת.",
+      "es": "Y los Jajamim dicen: hasta la medianoche.",
+      "anota": ["m-jajamim"]
+    },
+    {
+      "n": 3,
+      "tag": "mishná",
+      "he": "רַבָּן גַּמְלִיאֵל אוֹמֵר: עַד שֶׁיַּעֲלֶה עַמּוּד הַשַּׁחַר.",
+      "es": "Rabán Gamliel dice: hasta que suba la columna del amanecer.",
+      "anota": ["m-gamliel"]
+    },
+    {
+      "n": 4,
+      "tag": "mishná",
+      "he": "מַעֲשֶׂה וּבָאוּ בָנָיו מִבֵּית הַמִּשְׁתֶּה, אָמְרוּ לוֹ: לֹא קָרִינוּ אֶת שְׁמַע, אָמַר לָהֶם: אִם לֹא עָלָה עַמּוּד הַשַּׁחַר חַיָּיבִין אַתֶּם לִקְרוֹת.",
+      "es": "Sucedió que sus hijos volvieron de la casa del banquete y le dijeron: no recitamos el shema. Les dijo: si aún no subió la columna del amanecer, están obligados a recitarlo.",
+      "anota": ["m-maase"]
+    },
+    {
+      "n": 5,
+      "tag": "mishná (cierre)",
+      "he": "וְלֹא זוֹ בִּלְבַד אָמְרוּ, אֶלָּא כָּל מַה שֶּׁאָמְרוּ חֲכָמִים עַד חֲצוֹת, מִצְוָתָן עַד שֶׁיַּעֲלֶה עַמּוּד הַשַּׁחַר. הֶקְטֵר חֲלָבִים וְאֵבָרִים, מִצְוָתָן עַד שֶׁיַּעֲלֶה עַמּוּד הַשַּׁחַר. אִם כֵּן, לָמָה אָמְרוּ חֲכָמִים ״עַד חֲצוֹת״ — כְּדֵי לְהַרְחִיק אֶת הָאָדָם מִן הָעֲבֵרָה.",
+      "es": "Y no solo esto dijeron, sino que toda mitzvá cuyo tiempo dijeron los Jajamim \"hasta medianoche\", su tiempo (real) es hasta que sube el amanecer. La quema de grasas y miembros — hasta el amanecer. Si es así, ¿por qué dijeron los Jajamim \"hasta medianoche\"? Para alejar al hombre de la transgresión.",
+      "anota": ["m-cierre"]
+    },
+    {
+      "n": 6,
+      "tag": "guemará · abre",
+      "he": "גְּמָ׳ תַּנָּא הֵיכָא קָאֵי דְּקָתָנֵי ״מֵאֵימָתַי״?",
+      "es": "Guemará. ¿Dónde está parado el tana cuando enseña \"מאימתי\" (desde cuándo)?",
+      "anota": ["g-heicha-kaei"]
+    },
+    {
+      "n": 7,
+      "tag": "guemará",
+      "he": "וְתוּ: מַאי שְׁנָא דְּתָנֵי בְּעַרְבִית בְּרֵישָׁא? לִתְנֵי דְּשַׁחֲרִית בְּרֵישָׁא!",
+      "es": "Y además: ¿qué hay de distinto, que enseña la noche primero? ¡Debería enseñar la mañana primero!",
+      "anota": ["g-shna-arvit"]
+    },
+    {
+      "n": 8,
+      "tag": "guemará · primer teruts",
+      "he": "תַּנָּא אַקְּרָא קָאֵי, דִּכְתִיב: ״בְּשָׁכְבְּךָ וּבְקוּמֶךָ״. וְהָכִי קָתָנֵי: זְמַן קְרִיאַת שְׁמַע דִּשְׁכִיבָה אֵימַת — מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִין לֶאֱכוֹל בִּתְרוּמָתָן.",
+      "es": "El tana está parado sobre un verso, como está escrito: \"בשכבך ובקומך\" (cuando te acuestes y cuando te levantes). Y enseña así: el tiempo del shema del acostarse, ¿cuándo es? Desde la hora en que los cohanim entran a comer su terumá.",
+      "anota": ["g-teruts-akra"]
+    },
+    {
+      "n": 9,
+      "tag": "guemará · segundo teruts",
+      "he": "וְאִי בָּעֵית אֵימָא: יָלֵיף מִבְּרִיָּיתוֹ שֶׁל עוֹלָם, דִּכְתִיב: ״וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם אֶחָד״.",
+      "es": "Y si quieres di: lo aprende del orden de la creación del mundo, como está escrito: \"y fue tarde y fue mañana, un día\".",
+      "anota": ["g-teruts-bri-a"]
+    },
+    {
+      "n": 10,
+      "tag": "guemará · kushyá",
+      "he": "אִי הָכִי, סֵיפָא דְּקָתָנֵי ״בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת לְאַחֲרֶיהָ, בָּעֶרֶב מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם לְאַחֲרֶיהָ״, לִתְנֵי דְּעַרְבִית בְּרֵישָׁא!",
+      "es": "Si es así, ¡el seifa que enseña \"de mañana bendice dos antes y una después, de noche dos antes y dos después\" debería enseñar la noche primero!",
+      "anota": ["g-kushya-sefa"]
+    },
+    {
+      "n": 11,
+      "tag": "guemará · resolución",
+      "he": "תַּנָּא פָּתַח בְּעַרְבִית, וַהֲדַר תָּנֵי בְּשַׁחֲרִית, עַד דְּקָאֵי בְּשַׁחֲרִית, פָּרֵישׁ מִילֵּי דְשַׁחֲרִית, וַהֲדַר פָּרֵישׁ מִילֵּי דְעַרְבִית.",
+      "es": "El tana abrió con la noche y después enseñó la mañana; estando ya en la mañana, expone los detalles de la mañana; y después expone los detalles de la noche.",
+      "anota": ["g-teruts-pesher"]
+    },
+    {
+      "n": 12,
+      "tag": "guemará · kushyá",
+      "he": "אָמַר מָר ״מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִים לֶאֱכוֹל בִּתְרוּמָתָן״. מִכְּדִי, כֹּהֲנִים אֵימַת קָא אָכְלִי תְּרוּמָה — מִשְּׁעַת צֵאת הַכּוֹכָבִים, לִתְנֵי: ״מִשְּׁעַת צֵאת הַכּוֹכָבִים״!",
+      "es": "Dijo el Maestro: \"desde que los cohanim entran a comer su terumá\". Pues bien, ¿cuándo comen los cohanim terumá? Desde la salida de las estrellas. ¡Que enseñe directamente \"desde la salida de las estrellas\"!",
+      "anota": ["g-kushya-cohanim"]
+    },
+    {
+      "n": 13,
+      "tag": "guemará · doble enseñanza",
+      "he": "מִלְּתָא אַגַּב אוֹרְחֵיהּ קָמַשְׁמַע לַן — כֹּהֲנִים אֵימַת קָא אָכְלִי בִּתְרוּמָה — מִשְּׁעַת צֵאת הַכּוֹכָבִים. וְהָא קָמַשְׁמַע לַן דְּכַפָּרָה לָא מְעַכְּבָא.",
+      "es": "Algo nos enseña de pasada (en su camino): ¿cuándo comen los cohanim terumá? Desde la salida de las estrellas. Y también nos enseña que la kaparah (ofrenda de purificación) no impide (comer terumá).",
+      "anota": ["g-teruts-aggav"]
+    },
+    {
+      "n": 14,
+      "tag": "guemará · análisis del verso",
+      "he": "כִּדְתַנְיָא: ״וּבָא הַשֶּׁמֶשׁ וְטָהֵר״ — בִּיאַת שִׁמְשׁוֹ מְעַכַּבְתּוֹ מִלֶּאֱכוֹל בִּתְרוּמָה, וְאֵין כַּפָּרָתוֹ מְעַכַּבְתּוֹ מִלֶּאֱכוֹל בִּתְרוּמָה.",
+      "es": "Como se enseñó: \"y se puso el sol y se purificó\" — el ocaso del sol le impide comer terumá, pero su kaparah NO le impide comer terumá.",
+      "anota": ["g-baraita-uva"]
+    }
+  ],
+
+  "unidades": [
+    {
+      "id": "m-pregunta",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · ¿desde cuándo?",
+      "lineas": [1],
+      "match": "מֵאֵימָתַי קוֹרִין אֶת שְׁמַע בָּעֲרָבִין?",
+      "titulo": "La primera palabra del Talmud Bavlí",
+      "resumen": "El Bavlí entero abre con מאימתי — \"¿desde cuándo?\". La pregunta presupone que sabemos QUÉ se hace; solo interroga el CUÁNDO. Esa asunción tácita será el blanco de la primera kushyá de la guemará.",
+      "dialogo": [
+        { "voz": "tana", "texto": "¿Desde cuándo se recita el shema en (las oraciones de) la noche?" },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "El tana asume que sí lo recitamos — solo quiere saber a qué hora. Pero, ¿de dónde sale la obligación misma?" },
+        { "voz": "stam", "texto": "Esa pregunta es exactamente la que el editor del Bavlí va a plantear en seguida. Antes de responder \"cuándo\", la guemará interroga la propia legitimidad de la pregunta." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Entonces el Talmud abre con un acto reflexivo: no responde antes de cuestionar la pregunta. Esa es la postura intelectual que define toda la tradición." }
+      ]
+    },
+    {
+      "id": "m-cohanim",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · inicio = cohanim",
+      "lineas": [1],
+      "match": "מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִים לֶאֱכוֹל בִּתְרוּמָתָן",
+      "titulo": "Cuando los cohanim entran a comer terumá",
+      "resumen": "El tana define el momento de inicio del zman shema no por una hora astronómica sino por una práctica social: cuando los cohanim impuros, ya purificados por inmersión, entran a comer terumá. Es el indicador halájico estándar del anochecer (tzet hakojavim).",
+      "dialogo": [
+        { "voz": "tana", "texto": "Desde la hora en que los cohanim entran a comer su terumá..." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "¿Por qué describir el tiempo por una práctica sacerdotal en vez de decir simplemente \"al anochecer\"?" },
+        { "voz": "stam", "texto": "Buena pregunta. La guemará exactamente eso preguntará en la línea 12: \"¡que diga 'desde la salida de las estrellas' directamente!\"" },
+        { "voz": "chavruta", "etiqueta": "respuesta-anticipada", "texto": "La pista está en que el tana enseña DOS cosas a la vez: cuándo es el shema Y cuándo comen los cohanim. Economía pedagógica." }
+      ]
+    },
+    {
+      "id": "m-r-eliezer",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · fin: R. Eliezer",
+      "lineas": [1],
+      "match": "עַד סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה, דִּבְרֵי רַבִּי אֱלִיעֶזֶר",
+      "titulo": "R. Eliezer — la opinión más restrictiva",
+      "resumen": "R. Eliezer marca el FIN del zman shema en \"el final de la primera vigilia\". La ambigüedad del término \"ashmurah\" (¿de tres o cuatro vigilias hay?) será explotada en 3a. Es la posición más estrecha de las tres opiniones.",
+      "dialogo": [
+        { "voz": "r-eliezer", "texto": "Hasta el final de la primera vigilia." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Si la noche tiene tres vigilias, eso son apenas las primeras 4 horas. Es una ventana muy corta para el shema nocturno." },
+        { "voz": "stam", "texto": "Coherente con la postura de R. Eliezer: define cada zman en su forma más estrecha. En 3a la guemará explotará la ambigüedad de la palabra 'ashmurah'." }
+      ]
+    },
+    {
+      "id": "m-jajamim",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · fin: Jajamim",
+      "lineas": [2],
+      "titulo": "Jajamim — opinión intermedia: hasta medianoche",
+      "resumen": "La opinión \"oficial\" de los rabinos: hasta jatzot, medianoche halájica. La guemará revelará al final del mishná que esta no es la posición original sino una valla rabínica — el zman bíblico real es hasta el amanecer (como Gamliel), y los Jajamim solo lo acortaron para alejar al hombre del riesgo de transgresión.",
+      "dialogo": [
+        { "voz": "chachamim", "etiqueta": "Jajamim", "texto": "Hasta medianoche." },
+        { "voz": "stam", "texto": "Esta es la posición que la halajá adopta — pero atención: como se verá al final del propio mishná, no es la regla bíblica original sino una valla rabínica." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Entonces la opinión 'media' es en realidad una opinión 'práctica' impuesta sobre la opinión más permisiva. Es derabanan, no de'oraita." }
+      ]
+    },
+    {
+      "id": "m-gamliel",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · fin: Rabán Gamliel",
+      "lineas": [3],
+      "titulo": "Rabán Gamliel — toda la noche",
+      "resumen": "La posición más permisiva: hasta amud hashajar, el amanecer real. Esta es la opinión que el final del mishná identifica con el zman bíblico de'oraita: toda la noche es shema-time. La medianoche de los Jajamim es solo una precaución pedagógica.",
+      "dialogo": [
+        { "voz": "r-gamliel", "etiqueta": "Rabán Gamliel", "texto": "Hasta que sube la columna del amanecer." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Esta es la noche entera. ¿No es demasiado permisivo?" },
+        { "voz": "stam", "texto": "El final del mishná explicará: bíblicamente esta es la regla. Lo de medianoche es una valla. R. Gamliel está enseñando el zman real, no el preventivo." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Tres opiniones, tres registros: R. Eliezer = más estricto. Jajamim = halajá práctica. Gamliel = ley bíblica. La mishná los ordena del más al menos restrictivo." }
+      ]
+    },
+    {
+      "id": "m-maase",
+      "tipo": "maase",
+      "etiqueta": "Maasé · los hijos de Gamliel",
+      "lineas": [4],
+      "titulo": "La historia que confirma la halajá",
+      "resumen": "Los hijos de Rabán Gamliel vuelven tarde del banquete; no recitaron shema. Él les dice: si aún no amaneció, están obligados. Es una pieza narrativa típica de la mishná: la halajá se demuestra en la vida real. Si Gamliel dice \"hasta el amanecer\" Y SUS HIJOS son corregidos según esa regla, queda claro que para él no es teórico.",
+      "dialogo": [
+        { "voz": "tana", "texto": "Sucedió que (los hijos de Gamliel) volvieron del banquete y le dijeron: no recitamos el shema." },
+        { "voz": "r-gamliel", "etiqueta": "Rabán Gamliel", "texto": "Si aún no subió la columna del amanecer, están obligados a recitarlo." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "El maasé es una prueba viva: Gamliel no solo OPINA hasta el amanecer; obliga a sus hijos en la práctica. La halajá pasa por la familia." },
+        { "voz": "stam", "texto": "Esta es una técnica recurrente de la mishná: una historia documenta la postura. Lo que en la línea anterior es una opinión, aquí es un dictamen aplicado." }
+      ]
+    },
+    {
+      "id": "m-cierre",
+      "tipo": "mishna",
+      "etiqueta": "Mishná · la valla rabínica",
+      "lineas": [5],
+      "titulo": "¿Por qué medianoche si bíblicamente es amanecer?",
+      "resumen": "El cierre del mishná es la clave halájica: tanto el shema como otras mitzvot (quema de grasas, ofrendas comidas en un día) tienen tiempo bíblico hasta el amanecer. Los Jajamim adelantaron el límite a medianoche \"להרחיק את האדם מן העברה\" — para alejar al hombre del riesgo. La halajá vive en dos planos: de'oraita y derabanan.",
+      "dialogo": [
+        { "voz": "tana", "texto": "Toda mitzvá cuyo tiempo dijeron los Jajamim \"hasta medianoche\", su tiempo (real) es hasta el amanecer." },
+        { "voz": "tana", "texto": "Si es así, ¿por qué dijeron los Jajamim \"hasta medianoche\"?" },
+        { "voz": "tana", "texto": "Para alejar al hombre de la transgresión." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Aquí la mishná misma desnuda la lógica halájica: las vallas rabínicas no son la regla — son protección contra olvido. El estudiante ahora ve por qué la respuesta de Gamliel está al final: él enuncia el zman bíblico real." }
+      ]
+    },
+    {
+      "id": "g-heicha-kaei",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿dónde está parado?",
+      "lineas": [6],
+      "titulo": "La primera kushyá del Talmud entero",
+      "resumen": "La guemará no responde la pregunta del mishná. La INTERROGA. \"¿Dónde está parado el tana cuando enseña 'desde cuándo'?\" — es decir, ¿qué da por supuesto? Toda enseñanza descansa sobre asunciones; antes de avanzar, hay que hacerlas explícitas. Esta es la postura intelectual fundacional del Bavlí.",
+      "dialogo": [
+        { "voz": "stam", "texto": "תַּנָּא הֵיכָא קָאֵי דְּקָתָנֵי ״מֵאֵימָתַי״? — ¿dónde está parado el tana, que comienza con 'desde cuándo'?" },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Está preguntando: ¿de dónde sale la obligación? Porque preguntar 'cuándo' presupone 'qué'." },
+        { "voz": "stam", "texto": "Exactamente. La guemará no admite premisas no declaradas. Antes de responder, debe identificar la base — el verso, la práctica, la tradición — sobre la que el tana se apoya." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Es el método del Talmud condensado en una línea: nada se acepta sin saber sobre qué se acepta." }
+      ]
+    },
+    {
+      "id": "g-shna-arvit",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿por qué la noche primero?",
+      "lineas": [7],
+      "titulo": "Una segunda interrogación al orden",
+      "resumen": "La guemará agrega una segunda objeción: aun aceptando la pregunta, ¿por qué tratar la noche ANTES de la mañana? El orden natural es el día (mañana, luego noche). Esta kushyá será resuelta junto con la primera: el verso \"בשכבך ובקומך\" pone el acostarse antes del levantarse.",
+      "dialogo": [
+        { "voz": "stam", "texto": "וְתוּ — y además: ¿qué tiene de distinto, que enseña la noche primero? ¡Que enseñe la mañana primero!" },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "La guemará está apilando objeciones antes de resolver. Dos kushyot al hilo, un solo teruts las resolverá a ambas." },
+        { "voz": "stam", "texto": "Esa es la economía del Bavlí: agrupar las preguntas y resolverlas con una sola movida cuando es posible." }
+      ]
+    },
+    {
+      "id": "g-teruts-akra",
+      "tipo": "teruts",
+      "etiqueta": "Teruts · sobre el verso",
+      "lineas": [8],
+      "titulo": "El tana descansa en Devarim 6:7",
+      "resumen": "La resolución doble: el tana se apoya en \"בְּשָׁכְבְּךָ וּבְקוּמֶךָ\" (cuando te acuestes y cuando te levantes — Devarim 6:7). Esto resuelve AMBAS kushyot a la vez: (1) la obligación existe porque el verso lo dice, (2) la noche viene primero porque el verso menciona \"acostarse\" antes que \"levantarse\".",
+      "dialogo": [
+        { "voz": "stam", "texto": "תַּנָּא אַקְּרָא קָאֵי — el tana está parado sobre un verso. כְּדִכְתִיב: ״בְּשָׁכְבְּךָ וּבְקוּמֶךָ״." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Hermoso: una sola cita resuelve dos kushyot. El verso fija la obligación Y dicta el orden. La elegancia de la guemará está en ese tipo de movimientos." },
+        { "voz": "stam", "texto": "Y reformula lo que enseña el tana: \"el tiempo del shema del acostarse, ¿cuándo es? Desde que los cohanim comen terumá\". La pregunta del mishná queda anclada al verso." }
+      ]
+    },
+    {
+      "id": "g-teruts-bri-a",
+      "tipo": "teruts",
+      "etiqueta": "Teruts alternativo · creación",
+      "lineas": [9],
+      "titulo": "Si quieres, di: del orden de la creación",
+      "resumen": "Una alternativa explicativa: el tana podría apoyarse en Bereshit 1:5 — \"ויהי ערב ויהי בקר יום אחד\" (y fue tarde y fue mañana, un día). En la cuenta judía el día empieza con la noche, no con la mañana. Por eso primero noche, después mañana. \"וְאִי בָּעֵית אֵימָא\" es la frase técnica para introducir un teruts alternativo.",
+      "dialogo": [
+        { "voz": "stam", "texto": "וְאִי בָּעֵית אֵימָא — y si quieres di otra cosa: lo aprende del orden de la creación del mundo." },
+        { "voz": "stam", "texto": "Como está escrito: \"ויהי ערב ויהי בקר יום אחד\" — primero la tarde, luego la mañana." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "El Bavlí ofrece DOS resoluciones para la misma kushyá. ¿Por qué? Una se apoya en el verso del shema, otra en el verso de la creación. La guemará no elige — deja ambas en pie." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Esto es típico: una sugyá puede tener múltiples respuestas válidas, y el estudiante carga con todas. La halajá no siempre exige unicidad." }
+      ]
+    },
+    {
+      "id": "g-kushya-sefa",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿y el seifa?",
+      "lineas": [10],
+      "titulo": "Si el orden es noche-mañana, ¿por qué el seifa lo invierte?",
+      "resumen": "El estudiante atento pregunta: si \"בשכבך ובקומך\" o la creación justifican empezar por la noche, ¿por qué el SEIFA del mismo mishná (no transcrito aquí en su totalidad) habla de las bendiciones de la mañana ANTES de las de la noche? La sugyá se vuelve recursiva: la propia mishná parece contradecirse.",
+      "dialogo": [
+        { "voz": "stam", "texto": "אִי הָכִי — si es así, ¡el seifa, que enseña \"de mañana bendice dos antes y una después, de noche dos antes y dos después\", debería enseñar la noche primero!" },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "El editor del Bavlí no deja pasar la inconsistencia. Resolvió las dos primeras kushyot pero ahora descubre una tercera adentro de la propia mishná." },
+        { "voz": "stam", "texto": "Esta es la metódica gemarática: cada respuesta abre una nueva pregunta. La sugyá avanza por capas." }
+      ]
+    },
+    {
+      "id": "g-teruts-pesher",
+      "tipo": "teruts",
+      "etiqueta": "Teruts · pedagogía del tana",
+      "lineas": [11],
+      "titulo": "El tana usa la noche para abrir, la mañana para desarrollar",
+      "resumen": "Resolución elegante: el tana abre con la noche (porque así dicta el verso), pero una vez metido en el contenido, expone primero los detalles de la mañana (porque es lo más reciente en su discusión) y vuelve después a la noche. Es decisión PEDAGÓGICA, no un orden estricto.",
+      "dialogo": [
+        { "voz": "stam", "texto": "תַּנָּא פָּתַח בְּעַרְבִית — el tana abrió con la noche, וַהֲדַר תָּנֵי בְּשַׁחֲרִית — y después enseñó la mañana." },
+        { "voz": "stam", "texto": "עַד דְּקָאֵי בְּשַׁחֲרִית, פָּרֵישׁ מִילֵּי דְשַׁחֲרִית — estando ya en la mañana, expone los detalles de la mañana." },
+        { "voz": "stam", "texto": "וַהֲדַר פָּרֵישׁ מִילֵּי דְעַרְבִית — y después expone los detalles de la noche." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Es una respuesta sutil: el tana sigue dos lógicas a la vez. La estructural (noche-mañana, según el verso) y la pedagógica (terminar lo iniciado antes de cambiar de tema). Ambas conviven sin contradicción." }
+      ]
+    },
+    {
+      "id": "g-kushya-cohanim",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿por qué cohanim?",
+      "lineas": [12],
+      "titulo": "Si es solo \"tzet hakojavim\", ¿para qué hablar de cohanim?",
+      "resumen": "Vuelve la guemará al texto literal del mishná. \"Desde que los cohanim entran a comer terumá\" es una forma indirecta de decir \"desde la salida de las estrellas\". ¿Por qué la mishná no usa la fórmula directa? La sugyá obliga al tana a justificar cada palabra.",
+      "dialogo": [
+        { "voz": "stam", "texto": "אָמַר מָר — dijo el Maestro: \"desde que los cohanim entran a comer su terumá\"." },
+        { "voz": "stam", "texto": "מִכְּדִי — pues bien, ¿cuándo comen los cohanim terumá? Desde la salida de las estrellas. ¡Que enseñe directamente \"desde la salida de las estrellas\"!" },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "El stam exige máxima economía verbal del tana. Si dos formulaciones equivalen, ¿por qué la más larga?" },
+        { "voz": "stam", "texto": "La respuesta vendrá: porque la formulación 'cohanim' enseña MÁS que la formulación 'tzet hakojavim'. Es densidad pedagógica." }
+      ]
+    },
+    {
+      "id": "g-teruts-aggav",
+      "tipo": "teruts",
+      "etiqueta": "Teruts · doble enseñanza",
+      "lineas": [13],
+      "titulo": "Una sola frase, dos enseñanzas",
+      "resumen": "Resolución con elegancia: la fórmula \"desde que los cohanim comen terumá\" nos enseña DOS cosas simultáneamente. (1) que el shema empieza al anochecer = tzet hakojavim, (2) que la kaparah (ofrenda de purificación de un tamé que el día siguiente come terumá) NO es requisito para que el cohén ya pueda comer terumá tras la inmersión y la espera. Economía gemarática.",
+      "dialogo": [
+        { "voz": "stam", "texto": "מִלְּתָא אַגַּב אוֹרְחֵיהּ קָמַשְׁמַע לַן — algo nos enseña 'de pasada': cuándo comen los cohanim. Y también nos enseña que la kaparah no impide." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Una sola fórmula con doble función. Define el zman shema Y aclara una ley sacerdotal. La economía del tana no es brevedad — es densidad." },
+        { "voz": "stam", "texto": "El método se llama 'אַגַּב אוֹרְחֵיהּ' — 'en su camino'. Una doctrina que viaja como pasajero de otra. La guemará usa esta categoría muchas veces." }
+      ]
+    },
+    {
+      "id": "g-baraita-uva",
+      "tipo": "baraita",
+      "etiqueta": "Baraita · ובא השמש וטהר",
+      "lineas": [14],
+      "titulo": "La baraita de Vayikra 22:7 ancla la lectura",
+      "resumen": "La guemará introduce una baraita que cita Vayikra 22:7 (\"ובא השמש וטהר\" — y se puso el sol y se purificó). La interpretación: el OCASO impide al cohén impuro comer terumá; la KAPARAH no. Esta es la prueba textual del teruts anterior. La sugyá ahora se enfocará (en 2b) en qué significa exactamente \"ובא השמש\".",
+      "dialogo": [
+        { "voz": "stam", "texto": "כִּדְתַנְיָא — como se enseñó: ״וּבָא הַשֶּׁמֶשׁ וְטָהֵר״." },
+        { "voz": "stam", "texto": "El ocaso del sol impide (al cohén impuro) comer terumá. Su kaparah, en cambio, no le impide." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "La baraita ancla la regla bíblicamente. Y ahora el seguir de la sugyá se vuelve filológico: ¿qué significa exactamente 'y se puso el sol'?" },
+        { "voz": "stam", "texto": "Esa pregunta abre 2b. El daf entero pivota sobre la frase del verso. Cuando termina 2a, ya hemos visto: mishná, dos teruts, tres kushyot, una baraita. Y la mayor pregunta queda abierta." }
+      ]
+    }
+  ]
+}

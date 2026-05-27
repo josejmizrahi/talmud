@@ -1,0 +1,300 @@
+{
+  "ref": "Berakhot 2b",
+  "titulo": "Berajot 2b — qué significa \"ובא השמש\", y cinco marcadores del anochecer",
+  "anterior": "Berakhot 2a",
+  "siguiente": "Berakhot 3a",
+  "introduccion": "2b retoma exactamente donde quedó 2a: ¿qué significa \"וּבָא הַשֶּׁמֶשׁ\" en Vayikra 22:7? ¿El sol que se pone, o su luz que aparece? Resolverlo determina cuándo empieza la noche halájica. Después la sugyá pivota a comparar tres baraitot sobre el inicio del zman shema, construyendo las cinco opiniones tanaíticas que el diagrama de 2a ya visualiza.",
+
+  "lineas": [
+    {
+      "n": 1,
+      "tag": "guemará · havayya",
+      "he": "דִּילְמָא בִּיאַת אוֹרוֹ הוּא, וּמַאי ״וְטָהֵר״ — טְהַר גַּבְרָא?!",
+      "es": "¿Quizás (\"ובא השמש\" significa) el VENIR de su luz, y el \"וטהר\" significa: el hombre se purificó (con su inmersión)?",
+      "anota": ["g-havayya-oro"]
+    },
+    {
+      "n": 2,
+      "tag": "guemará · resolución",
+      "he": "אָמַר רַבָּהּ בַּר רַב שֵׁילָא: אִם כֵּן, לֵימָא קְרָא: ״וְיִטְהָר״, מַאי ״וְטָהֵר״ — טְהַר יוֹמָא, כִּדְאָמְרִי אִינָשֵׁי: ״אִיעֲרַב שִׁמְשָׁא וְאִדַּכִּי יוֹמָא״.",
+      "es": "Dijo Rabbá bar Rav Sheila: si así fuera, el verso debería decir \"ויטהר\" (\"se purificará\"). El \"וטהר\" (en pasado, \"se purificó\") indica: \"se purificó el día\" — como dice la gente: \"se ocultó el sol y se purificó el día\".",
+      "anota": ["g-rabbah-sheila"]
+    },
+    {
+      "n": 3,
+      "tag": "guemará · paralelo en Eretz Yisrael",
+      "he": "בְּמַעֲרָבָא, הָא דְּרַבָּהּ בַּר רַב שֵׁילָא לָא שְׁמִיעַ לְהוּ, וּבְעוֹ לַהּ מִיבַּעְיָא: הַאי ״וּבָא הַשֶּׁמֶשׁ״ בִּיאַת שִׁמְשׁוֹ הוּא וּמַאי ״וְטָהֵר״ — טְהַר יוֹמָא, אוֹ דִילְמָא בִּיאַת אוֹרוֹ הוּא וּמַאי ״וְטָהֵר״ — טְהַר גַּבְרָא?",
+      "es": "En Maarava (Eretz Yisrael) no oyeron lo de Rabbá bar Rav Sheila, y lo plantearon como problema abierto: ¿el \"ובא השמש\" es la puesta del sol y \"וטהר\" = \"se purificó el día\", o quizás es el venir de su luz y \"וטהר\" = \"se purificó el hombre\"?",
+      "anota": ["g-maarava"]
+    },
+    {
+      "n": 4,
+      "tag": "guemará · resuelto por baraita",
+      "he": "וַהֲדַר פָּשְׁטוּ לַהּ מִבָּרַיְיתָא. מִדְּקָתָנֵי בְּבָרַיְיתָא, סִימָן לַדָּבָר — צֵאת הַכּוֹכָבִים. שְׁמַע מִינַּהּ — בִּיאַת שִׁמְשׁוֹ הוּא, וּמַאי ״וְטָהֵר״ — טְהַר יוֹמָא.",
+      "es": "Y después lo resolvieron de una baraita. Como la baraita enseña: \"señal del asunto — la salida de las estrellas\", aprende de aquí que es la puesta del sol, y \"וטהר\" = \"se purificó el día\".",
+      "anota": ["g-maarava"]
+    },
+    {
+      "n": 5,
+      "tag": "guemará · reminhu",
+      "he": "אָמַר מָר ״מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִין לֶאֱכוֹל בִּתְרוּמָתָן״. וּרְמִינְהוּ: מֵאֵימָתַי קוֹרִין אֶת שְׁמַע בָּעֲרָבִין — מִשֶּׁהֶעָנִי נִכְנָס לֶאֱכוֹל פִּתּוֹ בְּמֶלַח, עַד שָׁעָה שֶׁעוֹמֵד לִיפָּטֵר מִתּוֹךְ סְעוּדָתוֹ.",
+      "es": "Dijo el Maestro: \"desde que los cohanim entran a comer su terumá\". Y se objeta (contraponiendo otra fuente): ¿desde cuándo se recita el shema de noche? Desde que el POBRE entra a comer su pan con sal, hasta que se levanta de su comida.",
+      "anota": ["g-reminhu-ani"]
+    },
+    {
+      "n": 6,
+      "tag": "guemará · seifa pligei",
+      "he": "סֵיפָא, וַדַּאי פְּלִיגָא אַמַּתְנִיתִין. רֵישָׁא, מִי לֵימָא פְּלִיגִי אַמַּתְנִיתִין?",
+      "es": "El SEIFA (de la baraita, \"hasta que se levanta\") ciertamente conflictúa con el mishná. Pero el REISHA (\"desde que el pobre entra\") — ¿también conflictúa con el mishná?",
+      "anota": ["g-ani-cohen-1"]
+    },
+    {
+      "n": 7,
+      "tag": "guemará · primer intento de unión",
+      "he": "לָא, עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא.",
+      "es": "No: el POBRE y el COHÉN son el mismo shi'ur (el mismo tiempo).",
+      "anota": ["g-ani-cohen-1"]
+    },
+    {
+      "n": 8,
+      "tag": "guemará · nueva baraita",
+      "he": "וּרְמִינְהוּ: מֵאֵימָתַי מַתְחִילִין לִקְרוֹת קְרִיאַת שְׁמַע בְּעַרְבִית — מִשָּׁעָה שֶׁבְּנֵי אָדָם נִכְנָסִין לֶאֱכוֹל פִּתָּן בְּעַרְבֵי שַׁבָּתוֹת, דִּבְרֵי רַבִּי מֵאִיר. וַחֲכָמִים אוֹמְרִים: מִשָּׁעָה שֶׁהַכֹּהֲנִים זַכָּאִין לֶאֱכוֹל בִּתְרוּמָתָן. סִימָן לַדָּבָר — צֵאת הַכּוֹכָבִים.",
+      "es": "Y se objeta: ¿desde cuándo se comienza a recitar shema de noche? Desde la hora en que la gente entra a comer su pan en víspera de Shabat, palabras de Rabí Meir. Y los Jajamim dicen: desde la hora en que los cohanim son aptos para comer su terumá. Señal del asunto: la salida de las estrellas.",
+      "anota": ["g-reminhu-bnei-adam"]
+    },
+    {
+      "n": 9,
+      "tag": "guemará · análisis lógico",
+      "he": "קָא סָלְקָא דַּעְתָּךְ דְּעָנִי וּבְנֵי אָדָם חַד שִׁעוּרָא הוּא. וְאִי אָמְרַתְּ עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא — חֲכָמִים הַיְינוּ רַבִּי מֵאִיר!",
+      "es": "Supongamos por un momento que pobre y \"gente\" son el mismo shi'ur. Y si dices (como antes) que pobre y cohén también son el mismo shi'ur — ¡entonces los Jajamim son lo mismo que R. Meir!",
+      "anota": ["g-deduccion-distintos"]
+    },
+    {
+      "n": 10,
+      "tag": "guemará · primera conclusión",
+      "he": "אֶלָּא, שְׁמַע מִינַּהּ עָנִי שִׁעוּרָא לְחוּד וְכֹהֵן שִׁעוּרָא לְחוּד. לָא, עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא, וְעָנִי וּבְנֵי אָדָם לָאו חַד שִׁעוּרָא הוּא.",
+      "es": "Aprende de aquí: el pobre es un shi'ur, y el cohén otro shi'ur (distintos). O bien: no — pobre y cohén son uno mismo, pero pobre y \"gente\" no son uno mismo.",
+      "anota": ["g-deduccion-distintos"]
+    },
+    {
+      "n": 11,
+      "tag": "guemará · nueva baraita",
+      "he": "וְעָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא? וּרְמִינְהוּ: מֵאֵימָתַי מַתְחִילִין לִקְרוֹת שְׁמַע בָּעֲרָבִין — מִשָּׁעָה שֶׁקָּדַשׁ הַיּוֹם בְּעַרְבֵי שַׁבָּתוֹת, דִּבְרֵי רַבִּי אֱלִיעֶזֶר. רַבִּי יְהוֹשֻׁעַ אוֹמֵר: מִשָּׁעָה שֶׁהַכֹּהֲנִים מְטוֹהָרִים לֶאֱכוֹל בִּתְרוּמָתָן. רַבִּי מֵאִיר אוֹמֵר: מִשָּׁעָה שֶׁהַכֹּהֲנִים טוֹבְלִין לֶאֱכוֹל בִּתְרוּמָתָן. רַבִּי חֲנִינָא אוֹמֵר: מִשָּׁעָה שֶׁעָנִי נִכְנָס לֶאֱכוֹל פִּתּוֹ בְּמֶלַח. רַבִּי אַחַאי וְאָמְרִי לָהּ רַבִּי אַחָא אוֹמֵר: מִשָּׁעָה שֶׁרוֹב בְּנֵי אָדָם נִכְנָסִין לְהָסֵב.",
+      "es": "¿Y pobre y cohén son el mismo shi'ur? Se objeta otra baraita: ¿desde cuándo se empieza a recitar shema de noche? Desde que se santifica el día en víspera de Shabat — R. Eliezer. R. Yehoshua: desde que los cohanim están purificados para comer terumá. R. Meir: desde que los cohanim se sumergen para comer terumá. R. Janina: desde que el pobre entra a comer su pan con sal. R. Ajai (o R. Aja): desde que la mayoría se reclina para cenar.",
+      "anota": ["g-baraita-cinco"]
+    },
+    {
+      "n": 12,
+      "tag": "guemará · misma deducción",
+      "he": "וְאִי אָמְרַתְּ עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא — רַבִּי חֲנִינָא הַיְינוּ רַבִּי יְהוֹשֻׁעַ!",
+      "es": "Y si dices que pobre y cohén son un mismo shi'ur — ¡entonces R. Janina es lo mismo que R. Yehoshua!",
+      "anota": ["g-shma-mina-distintos"]
+    },
+    {
+      "n": 13,
+      "tag": "guemará · conclusión definitiva",
+      "he": "אֶלָּא לָאו שְׁמַע מִינַּהּ שִׁעוּרָא דְּעָנִי לְחוּד וְשִׁעוּרָא דְּכֹהֵן לְחוּד. שְׁמַע מִינַּהּ.",
+      "es": "Sino: aprende de aquí que el shi'ur del pobre es por sí mismo y el del cohén por sí mismo. Aprende de aquí.",
+      "anota": ["g-shma-mina-distintos"]
+    },
+    {
+      "n": 14,
+      "tag": "guemará · ¿cuál es más tarde?",
+      "he": "הֵי מִינַּיְיהוּ מְאוּחָר? מִסְתַּבְּרָא דְּעָנִי מְאוּחָר, דְּאִי אָמְרַתְּ דְּעָנִי מוּקְדָּם, רַבִּי חֲנִינָא הַיְינוּ רַבִּי אֱלִיעֶזֶר. אֶלָּא לָאו שְׁמַע מִינַּהּ דְּעָנִי מְאוּחָר. שְׁמַע מִינַּהּ.",
+      "es": "¿Cuál de los dos viene más tarde? Tiene sentido que el pobre venga más tarde, pues si dices que el pobre viene primero — ¡R. Janina sería lo mismo que R. Eliezer! Sino: aprende que el pobre viene más tarde. Aprende de aquí.",
+      "anota": ["g-hei-meuchar"]
+    },
+    {
+      "n": 15,
+      "tag": "guemará · R. Yehuda objeta a R. Meir",
+      "he": "אָמַר מָר. אֲמַר לֵיהּ רַבִּי יְהוּדָה: וַהֲלֹא כֹּהֲנִים מִבְּעוֹד יוֹם הֵם טוֹבְלִים!",
+      "es": "Dijo el Maestro (citando otra fuente). R. Yehuda le dijo (a R. Meir): ¡pero los cohanim se sumergen aún de día!",
+      "anota": ["g-r-yehuda-objeta"]
+    },
+    {
+      "n": 16,
+      "tag": "guemará · ¿la objeción es buena?",
+      "he": "שַׁפִּיר קָאָמַר לֵיהּ רַבִּי יְהוּדָה לְרַבִּי מֵאִיר?",
+      "es": "¿Le dijo R. Yehuda bien (la objeción) a R. Meir? (es decir, ¿es una objeción válida?)",
+      "anota": ["g-r-yehuda-objeta"]
+    },
+    {
+      "n": 17,
+      "tag": "guemará · R. Meir responde",
+      "he": "וְרַבִּי מֵאִיר הָכִי קָאָמַר לֵיהּ: מִי סָבְרַתְּ דַּאֲנָא אַבֵּין הַשְּׁמָשׁוֹת דִּידָךְ קָא אָמֵינָא? אֲנָא אַבֵּין הַשְּׁמָשׁוֹת דְּרַבִּי יוֹסֵי קָא אָמֵינָא, דְּאָמַר רַבִּי יוֹסֵי בֵּין הַשְּׁמָשׁוֹת כְּהֶרֶף עַיִן — זֶה נִכְנָס וְזֶה יוֹצֵא.",
+      "es": "Y R. Meir le respondió así: ¿crees que yo hablaba del bein hashmashot QUE TÚ entiendes? ¡Hablaba del bein hashmashot DE R. YOSE! Pues dijo R. Yose: bein hashmashot es como el parpadear del ojo — éste entra y aquél sale.",
+      "anota": ["g-r-meir-bein-hashmashot"]
+    }
+  ],
+
+  "unidades": [
+    {
+      "id": "g-havayya-oro",
+      "tipo": "havayya",
+      "etiqueta": "Havayya · ¿ובא es ponerse o aparecer?",
+      "lineas": [1],
+      "titulo": "Una hipótesis alternativa: la luz que viene",
+      "resumen": "La guemará no aceptó la lectura del cierre de 2a sin más. Plantea una alternativa: \"ובא השמש\" puede leerse como el VENIR del sol — es decir, su luz apareciendo al día siguiente. Y \"וטהר\" como \"el hombre (cohén impuro) se purificó\". Sería entonces: no puede comer terumá hasta el día siguiente. Esta hipótesis cambia toda la cronología del cohén.",
+      "dialogo": [
+        { "voz": "stam", "texto": "דִּילְמָא בִּיאַת אוֹרוֹ הוּא — ¿quizás \"ובא השמש\" significa el venir de su luz (el amanecer del día siguiente)?" },
+        { "voz": "stam", "texto": "וּמַאי ״וְטָהֵר״ — y entonces \"וטהר\" significaría: el HOMBRE se purificó (con su inmersión)." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Esta lectura desplaza el zman: el cohén comería terumá solo desde el amanecer siguiente, no desde la noche. Cambiaría la regla del zman shema." },
+        { "voz": "stam", "texto": "Exacto. Por eso la sugyá tiene que resolverlo. La filología de un verso decide la halajá." }
+      ]
+    },
+    {
+      "id": "g-rabbah-sheila",
+      "tipo": "memra",
+      "etiqueta": "Memrá · Rabbá bar Rav Sheila",
+      "lineas": [2],
+      "titulo": "La gramática zanja la cuestión",
+      "resumen": "Rabbá bar Rav Sheila (amorá) resuelve con un argumento gramatical: si la lectura fuera \"el hombre se purificará\" (futuro), el verso usaría וְיִטְהָר (yiftol — futuro/imperfecto). Como dice וְטָהֵר (pasado — \"se purificó\"), el sujeto debe ser \"el día\" — el día se cierra al ocaso. Refuerzo: dicho popular arameo \"se ocultó el sol y se purificó el día\".",
+      "dialogo": [
+        { "voz": "rabbah-sheila", "etiqueta": "Rabbá bar Rav Sheila", "texto": "Si fuera así, el verso diría \"וְיִטְהָר\" (en futuro, \"se purificará\"). El uso de \"וְטָהֵר\" (pasado) indica: \"se purificó EL DÍA\"." },
+        { "voz": "rabbah-sheila", "etiqueta": "Rabbá bar Rav Sheila", "texto": "Como dice la gente en arameo: אִיעֲרַב שִׁמְשָׁא וְאִדַּכִּי יוֹמָא — \"se ocultó el sol y se purificó el día\"." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "La memrá usa dos pruebas: una gramatical (tiempo verbal) y una sociolingüística (un dicho cotidiano). La halajá descansa sobre cómo habla la gente." },
+        { "voz": "stam", "texto": "Esta es una técnica frecuente del Bavlí: cuando la gramática y el lenguaje cotidiano apuntan al mismo lado, la lectura queda fijada." }
+      ]
+    },
+    {
+      "id": "g-maarava",
+      "tipo": "memra",
+      "etiqueta": "Memrá · Eretz Yisrael",
+      "lineas": [3, 4],
+      "titulo": "Dos centros de aprendizaje, dos vías",
+      "resumen": "La guemará revela algo histórico: en Eretz Yisrael (\"בְּמַעֲרָבָא\" — el oeste, desde la perspectiva de Babilonia) no conocían la memrá de Rabbá bar Rav Sheila. Tuvieron que resolver la misma pregunta independientemente. Lo hicieron con una baraita: \"señal del asunto: la salida de las estrellas\". Misma conclusión, distinta ruta. La Torá oral tiene rutas paralelas.",
+      "dialogo": [
+        { "voz": "stam", "texto": "בְּמַעֲרָבָא — en Eretz Yisrael, la memrá de Rabbá bar Rav Sheila no había llegado. Plantearon el problema desde cero." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Esto es histórico: el Bavlí reconoce que el Yerushalmí (la academia palestinense) y el Bavlí avanzan en paralelo, sin contacto pleno. A veces convergen, a veces divergen." },
+        { "voz": "stam", "texto": "וַהֲדַר פָּשְׁטוּ לַהּ מִבָּרַיְיתָא — y después lo resolvieron desde una baraita. La baraita dice: \"siman ladavar: tzet hakojavim\" — \"señal del asunto: la salida de las estrellas\"." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Las dos academias llegaron a la misma respuesta por caminos distintos. El Bavlí valora consignar ambas rutas — el conocimiento no es único." }
+      ]
+    },
+    {
+      "id": "g-reminhu-ani",
+      "tipo": "kushya",
+      "etiqueta": "Reminhu · pobre vs cohén",
+      "lineas": [5],
+      "titulo": "Una contradicción entre fuentes",
+      "resumen": "El término técnico וּרְמִינְהוּ — \"y se lanza (una baraita contra otra)\" — abre una nueva fase. La mishná dice \"desde que los cohanim comen terumá\". Pero hay una baraita que dice \"desde que el POBRE entra a comer su pan con sal, hasta que se levanta\". Dos enunciados, mismos marcadores temporales, pero distintos sujetos. ¿Cuál vale?",
+      "dialogo": [
+        { "voz": "stam", "texto": "אָמַר מָר — dijo el Maestro: \"desde que los cohanim entran a comer su terumá\"." },
+        { "voz": "stam", "texto": "וּרְמִינְהוּ — y se objeta (lanzando una baraita en contra): ¿desde cuándo se recita el shema? Desde que el POBRE entra a comer su pan con sal, hasta que se levanta de su comida." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "La palabra clave es \"רמינהו\". El Bavlí amontona fuentes que se contradicen y exige conciliarlas. La halajá no admite contradicción no resuelta." },
+        { "voz": "stam", "texto": "Note el lector: el seifa de esta baraita (\"hasta que se levanta\") claramente contradice los tres tiempos del mishná (vigilia / medianoche / amanecer). Pero el reisha (\"desde que el pobre entra\") — ¿también contradice?" }
+      ]
+    },
+    {
+      "id": "g-ani-cohen-1",
+      "tipo": "teruts",
+      "etiqueta": "Teruts · pobre = cohén",
+      "lineas": [6, 7],
+      "titulo": "Primer intento: son el mismo tiempo",
+      "resumen": "La guemará propone: el reisha de la baraita no contradice al mishná porque pobre y cohén comen aproximadamente al mismo tiempo (anochecer). Es la misma hora descrita con vocabulario distinto. Una solución simple — que la sugyá va a poner a prueba en seguida.",
+      "dialogo": [
+        { "voz": "stam", "texto": "סֵיפָא, וַדַּאי פְּלִיגָא — el seifa (sobre el FIN del zman) ciertamente conflictúa con el mishná." },
+        { "voz": "stam", "texto": "Pero el reisha (sobre el INICIO): ¿también conflictúa? — לָא, עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא. No: pobre y cohén son el mismo shi'ur." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Solución elegante: dos formulaciones, mismo tiempo. Pero ahora la guemará probará esa hipótesis cruzándola con OTRAS baraitot." },
+        { "voz": "stam", "texto": "Por eso esta teruts es solo \"provisional\". El método del Bavlí: una respuesta es válida hasta que otra fuente la desestabilice." }
+      ]
+    },
+    {
+      "id": "g-reminhu-bnei-adam",
+      "tipo": "kushya",
+      "etiqueta": "Reminhu · gente en víspera de Shabat",
+      "lineas": [8],
+      "titulo": "Otra baraita, otro marcador",
+      "resumen": "Nueva baraita: \"desde la hora en que la gente entra a comer su pan en víspera de Shabat — R. Meir\". Los Jajamim ahí dicen: \"desde que los cohanim son aptos para comer terumá\". Esto crea un sistema de TRES marcadores en pie: pobre, gente (víspera Shabat), cohén. ¿Cómo se relacionan?",
+      "dialogo": [
+        { "voz": "stam", "texto": "Otra baraita: \"desde la hora en que la gente entra a comer su pan en víspera de Shabat\" — דברי רבי מאיר." },
+        { "voz": "stam", "texto": "Los Jajamim: \"desde que los cohanim son aptos para comer terumá\". Señal del asunto — salida de las estrellas." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Ahora tenemos TRES posibles marcadores del inicio: pobre, gente-de-Shabat, cohén. La guemará los va a comparar entre sí con un argumento de identidad." }
+      ]
+    },
+    {
+      "id": "g-deduccion-distintos",
+      "tipo": "teruts",
+      "etiqueta": "Lógica · si todos iguales, Jajamim = R. Meir",
+      "lineas": [9, 10],
+      "titulo": "Argumento por identidad: dos posiciones no pueden ser idénticas",
+      "resumen": "Movida clave del Bavlí. Si pobre y cohén son el mismo tiempo (como dijimos), Y pobre y gente-de-Shabat son el mismo tiempo (asumiendo lo similar), entonces Jajamim (que dicen \"cohén\") y R. Meir (que dice \"gente\") serían idénticos. Pero la baraita los presenta como DISPUTANDO — no pueden ser lo mismo. Conclusión: hay que distinguir.",
+      "dialogo": [
+        { "voz": "stam", "texto": "קָא סָלְקָא דַּעְתָּךְ — supongamos por un momento: pobre y gente son el mismo shi'ur." },
+        { "voz": "stam", "texto": "Y si dices que pobre y cohén también son el mismo — entonces Jajamim (\"cohén\") = R. Meir (\"gente\")! Pero ellos disputan. Imposible." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Esta es una técnica favorita del Bavlí: si dos tanaim disputan, sus posiciones deben ser realmente distintas. La identidad oculta es contradictoria con la disputa explícita." },
+        { "voz": "stam", "texto": "Conclusión doble: o (a) pobre ≠ cohén, o (b) pobre ≠ gente. La sugyá explorará ambas alternativas." }
+      ]
+    },
+    {
+      "id": "g-baraita-cinco",
+      "tipo": "baraita",
+      "etiqueta": "Baraita · las cinco opiniones",
+      "lineas": [11],
+      "titulo": "El catálogo completo de opiniones tanaíticas",
+      "resumen": "La gran baraita del catálogo: cinco opiniones nombradas sobre el inicio del zman shema, ordenadas de la más temprana (R. Eliezer: víspera de Shabat se santifica) a la más tardía (R. Ajai: cuando la mayoría se reclina). Es la fuente del DIAGRAMA temático de 2a — los cinco marcadores del anochecer.",
+      "dialogo": [
+        { "voz": "stam", "texto": "Catálogo completo. R. Eliezer: cuando se santifica el día en víspera de Shabat." },
+        { "voz": "r-yehoshua", "etiqueta": "R. Yehoshua", "texto": "Desde que los cohanim están purificados para comer terumá." },
+        { "voz": "r-meir", "etiqueta": "R. Meir", "texto": "Desde que los cohanim se sumergen para comer terumá." },
+        { "voz": "r-chanina", "etiqueta": "R. Janina", "texto": "Desde que el pobre entra a comer su pan con sal." },
+        { "voz": "stam", "texto": "R. Ajai (o R. Aja): desde que la mayoría se reclina para cenar." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Es la baraita que organiza el plano halájico. Cada nombre marca un instante distinto en la curva del crepúsculo. La discusión que sigue determinará cuál antecede a cuál." }
+      ]
+    },
+    {
+      "id": "g-shma-mina-distintos",
+      "tipo": "nafka-mina",
+      "etiqueta": "Conclusión · pobre ≠ cohén",
+      "lineas": [12, 13],
+      "titulo": "La misma técnica, repetida, fija la regla",
+      "resumen": "La guemará repite el argumento por identidad con la nueva baraita: si pobre = cohén, entonces R. Janina = R. Yehoshua — pero la baraita los distingue. Conclusión definitiva: pobre y cohén son shi'urim DISTINTOS. La sugyá ha establecido una verdad estructural: cada marcador es independiente.",
+      "dialogo": [
+        { "voz": "stam", "texto": "וְאִי אָמְרַתְּ עָנִי וְכֹהֵן חַד שִׁעוּרָא הוּא — y si dices que pobre y cohén son el mismo, ¡entonces R. Janina (pobre) = R. Yehoshua (cohén)!" },
+        { "voz": "stam", "texto": "אֶלָּא לָאו שְׁמַע מִינַּהּ — sino, aprende de aquí: el shi'ur del pobre es por sí mismo y el del cohén por sí mismo. שמע מינה." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Cierre rotundo. Cinco opiniones, cinco tiempos distintos. La guemará ha demostrado que ningún par puede colapsarse en uno sin destruir la disputa tanaítica." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Y esa demostración valida el diagrama: en la línea de la noche, cada marcador ocupa su propio punto. Pobre antes del cohén, gente antes de la mayoría reclinada, R. Eliezer el más temprano de todos." }
+      ]
+    },
+    {
+      "id": "g-hei-meuchar",
+      "tipo": "nafka-mina",
+      "etiqueta": "Nafka mina · pobre vs cohén — orden",
+      "lineas": [14],
+      "titulo": "El pobre come MÁS TARDE que el cohén",
+      "resumen": "Última deducción: ¿pobre o cohén — cuál marca el tiempo más tarde? Si el pobre fuera más temprano, R. Janina (pobre) coincidiría con R. Eliezer (víspera Shabat). Como esa identificación destruye la disputa, el pobre debe venir más tarde. Esto establece el orden en el reloj nocturno: cohén → pobre, no al revés.",
+      "dialogo": [
+        { "voz": "stam", "texto": "הֵי מִינַּיְיהוּ מְאוּחָר? — ¿cuál de los dos viene más tarde?" },
+        { "voz": "stam", "texto": "מִסְתַּבְּרָא דְּעָנִי מְאוּחָר — tiene sentido que el pobre venga después. Pues si dices que el pobre viene primero, entonces R. Janina = R. Eliezer (víspera Shabat). Imposible." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Argumento por identidad de nuevo. Cada vez que dos opiniones tanaíticas coincidirían en hora, hay que descartar esa lectura. La estructura disputativa es prueba." },
+        { "voz": "stam", "texto": "Resultado: el shi'ur del pobre es POSTERIOR al del cohén. El crepúsculo tiene un orden interno fijo: cohén primero, pobre después, mayoría reclinada al final." }
+      ]
+    },
+    {
+      "id": "g-r-yehuda-objeta",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · R. Yehuda contra R. Meir",
+      "lineas": [15, 16],
+      "titulo": "Un cohén se sumerge antes del anochecer",
+      "resumen": "Nuevo frente: R. Meir había dicho que el zman empieza \"cuando los cohanim se sumergen para terumá\". R. Yehuda objeta: ¡los cohanim se sumergen aún DE DÍA, antes del anochecer! Entonces R. Meir estaría adelantando el zman shema al día — imposible. La objeción parece devastadora.",
+      "dialogo": [
+        { "voz": "r-yehuda", "etiqueta": "R. Yehuda", "texto": "¡Pero los cohanim se sumergen aún de día (antes del anochecer)!" },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "R. Yehuda ataca el realismo de R. Meir. La inmersión sucede mientras todavía hay luz; el zman shema empieza recién con tzet hakojavim. R. Meir parece estar fuera de tiempo." },
+        { "voz": "stam", "texto": "Y la guemará lo nota: שַׁפִּיר קָאָמַר לֵיהּ רַבִּי יְהוּדָה לְרַבִּי מֵאִיר? — ¿le dijo bien R. Yehuda a R. Meir? La objeción parece sólida." }
+      ]
+    },
+    {
+      "id": "g-r-meir-bein-hashmashot",
+      "tipo": "teruts",
+      "etiqueta": "Teruts · R. Meir cita a R. Yose",
+      "lineas": [17],
+      "titulo": "El instante imperceptible: \"como un parpadeo\"",
+      "resumen": "Movida brillante de R. Meir: \"¿crees que hablo de TU bein hashmashot? Yo hablo del de R. Yose — que es כְּהֶרֶף עַיִן, como un parpadeo, donde uno entra y otro sale\". El bein hashmashot de R. Yose es un instante imperceptible — los cohanim se sumergen JUSTO en ese parpadeo, donde el día se vuelve noche. Es a la vez tarde-del-día y temprano-de-la-noche. R. Meir esquiva la objeción con un concepto físico-halájico que disuelve la frontera.",
+      "dialogo": [
+        { "voz": "r-meir", "etiqueta": "R. Meir", "texto": "¿Crees que yo hablaba del bein hashmashot QUE TÚ entiendes? ¡Hablaba del bein hashmashot DE R. YOSE!" },
+        { "voz": "r-yose", "etiqueta": "R. Yose (citado)", "texto": "Bein hashmashot es כְּהֶרֶף עַיִן — como el parpadear del ojo: éste entra (la noche) y aquél sale (el día)." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Genial. El bein hashmashot de R. Yose es un instante PUNTUAL, sin duración. Los cohanim se sumergen JUSTO en ese parpadeo. Es a la vez todavía-día y ya-noche. La objeción de R. Yehuda asume un bein hashmashot extendido — pero R. Meir trabaja con uno instantáneo." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Aquí la halajá se vuelve metafísica del tiempo: el día y la noche no se solapan, pero la transición no tiene duración. R. Meir aprovecha esa fisura conceptual para sostener su shi'ur. La sugyá termina dejándonos con cinco tiempos del crepúsculo, ordenados, y abre 3a con la pregunta sobre las vigilias." }
+      ]
+    }
+  ]
+}
