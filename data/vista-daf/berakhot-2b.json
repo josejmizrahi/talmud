@@ -175,6 +175,11 @@
       "tipo": "kushya",
       "etiqueta": "Reminhu · pobre vs cohén",
       "lineas": [5],
+      "diagrama": {
+        "src": "diagramas/berakhot-2a.html",
+        "highlight": "ani-fin",
+        "titulo": "La baraita del pobre — un cuarto fin del zman"
+      },
       "titulo": "Una contradicción entre fuentes",
       "resumen": "El término técnico וּרְמִינְהוּ — \"y se lanza (una baraita contra otra)\" — abre una nueva fase. La mishná dice \"desde que los cohanim comen terumá\". Pero hay una baraita que dice \"desde que el POBRE entra a comer su pan con sal, hasta que se levanta\". Dos enunciados, mismos marcadores temporales, pero distintos sujetos. ¿Cuál vale?",
       "dialogo": [
