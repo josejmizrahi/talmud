@@ -3,235 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Codex Talmudicus · Estudio visual del Talmud</title>
+<title>Codex Talmudicus · Diagramas interactivos del Bavlí</title>
 <link rel="stylesheet" href="assets/css/main.css">
+<style>
+  body {
+    background: var(--pergamino);
+    background-image: var(--noise),
+      radial-gradient(ellipse at top left, rgba(184,134,11,0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(139,26,26,0.03), transparent 50%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--tinta);
+  }
+
+  .codex-shell {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .codex-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--pergamino-sombra);
+  }
+  .codex-header .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.75rem;
+  }
+  .codex-header h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--tinta);
+    margin: 0 0 0.75rem;
+  }
+  .codex-header .lede {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--tinta-suave);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .codex-toc {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.75rem auto 0;
+    flex-wrap: wrap;
+  }
+  .codex-toc a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    color: var(--sepia);
+    border: 1px solid var(--sepia);
+    border-radius: 999px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .codex-toc a:hover {
+    background: var(--sepia);
+    color: var(--pergamino);
+  }
+
+  .diagrama-bloque {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    scroll-margin-top: 1rem;
+  }
+  .diagrama-bloque:first-of-type { margin-top: 1rem; }
+
+  .diagrama-cabecera {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    border-radius: 4px;
+  }
+  .diagrama-cabecera .ref-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.4rem;
+  }
+  .diagrama-cabecera h2 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--tinta);
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+  .diagrama-cabecera .descripcion {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--tinta-suave);
+    margin: 0;
+  }
+
+  .diagrama-frame {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.35);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    min-height: 200px;
+  }
+  .diagrama-frame .cargando {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .diagrama-frame .error {
+    color: var(--rojo);
+    font-style: italic;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .codex-footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--pergamino-sombra);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--sepia);
+    font-style: italic;
+  }
+  .codex-footer a {
+    color: var(--sepia);
+    border-bottom: 1px dotted var(--sepia);
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
 
-<nav class="topbar">
-  <a href="index.html" class="brand">Codex Talmudicus</a>
-  <ul class="nav-links">
-    <li><a href="vistas/cosmos.html">Cosmos</a></li>
-    <li><a href="vistas/grafo.html">Grafo</a></li>
-    <li><a href="vistas/calendario.html">Daf Yomí</a></li>
-    <li><a href="vistas/buscar.html">Buscar</a></li>
-    <li><a href="vistas/progreso.html">Mi estudio</a></li>
-  </ul>
-  <div class="topbar-right">
-    <div class="search-box">
-      <input type="text" id="quick-search" placeholder="Buscar en Sefaria...">
+<div class="codex-shell">
+
+  <header class="codex-header">
+    <div class="eyebrow">Codex Talmudicus</div>
+    <h1>Diagramas interactivos del Talmud Bavlí</h1>
+    <p class="lede">cada elemento es clickeable · cada cita viene de Sefaria</p>
+    <nav class="codex-toc">
+      <a href="#berakhot-2a">Berajot 2a–2b</a>
+      <a href="#berakhot-3a">Berajot 3a</a>
+      <a href="#berakhot-3b">Berajot 3b</a>
+    </nav>
+  </header>
+
+  <article class="diagrama-bloque" id="berakhot-2a">
+    <div class="diagrama-cabecera">
+      <div class="ref-tag">Berajot 2a – 2b · multi-daf</div>
+      <h2>El zman de kriat shma de arvit</h2>
+      <p class="descripcion">Línea de tiempo nocturna con las cinco opiniones tanaíticas del INICIO (baraita de 2b: R. Eliezer, R. Meir, R. Yehoshua, R. Janina, R. Ajai) y las cuatro opiniones del FIN (mishná de 2a: R. Eliezer, Jajamim, Rabán Gamliel + baraita de 2b: el pobre termina su comida). Cada opinión clickeable revela su cita, su autor y su lógica halájica.</p>
     </div>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-eyebrow fade-in">Daf Yomí · Mapa visual del Talmud Bavli</div>
-    <h1 class="fade-in">Cada daf, una constelación. <span class="accent">Todo el Shas, una galaxia.</span></h1>
-    <div class="hero-hebrew fade-in">הפוך בה והפוך בה דכולא בה</div>
-    <p class="hero-lead fade-in">Un mapa interactivo del Talmud Bavli construido sobre Sefaria. Texto, comentarios clásicos, paralelos y topics conectados automáticamente. Tu progreso de estudio se vuelve un mapa personal del Shas.</p>
-    <div class="fade-in" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="#" id="btn-daf-hoy" class="btn btn-gold">Daf de hoy →</a>
-      <a href="vistas/cosmos.html" class="btn">Explorar el Shas</a>
+    <div class="diagrama-frame" data-src="diagramas/berakhot-2a.html?v=20260528">
+      <p class="cargando">Cargando diagrama…</p>
     </div>
-  </div>
-</section>
+  </article>
 
-<div class="codex">
-
-  <!-- Daf de hoy del Daf Yomí -->
-  <section id="today-section">
-    <div class="loading">Cargando el daf de hoy desde Sefaria...</div>
-  </section>
-
-  <div class="ornament">✦ ✦ ✦</div>
-
-  <!-- Estadísticas de progreso -->
-  <section>
-    <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.5rem;">Tu progreso</div>
-    <h2 style="margin-bottom: 1rem;">Construyendo tu mapa</h2>
-    <p style="max-width: 65ch; color: var(--tinta-suave); margin-bottom: 1.5rem;">Cada daf que estudias se marca como visitado, alimenta tu grafo personal de conceptos y se acumula como progreso visible. El ciclo Daf Yomí completo son 2,711 amudim — siete años y medio de estudio diario.</p>
-    <div class="stats-row" id="stats-row">
-      <div class="loading">Calculando...</div>
+  <article class="diagrama-bloque" id="berakhot-3a">
+    <div class="diagrama-cabecera">
+      <div class="ref-tag">Berajot 3a</div>
+      <h2>Las vigilias de la noche y R. Yose en la ruina</h2>
+      <p class="descripcion">Dos bloques argumentativos. ARRIBA: el debate sobre cuántas vigilias tiene la noche — R. Eliezer y R. Natán sostienen tres; Rabbi (Yehuda HaNasi) sostiene cuatro. Cada vigilia muestra su signo terrestre (חמור נוער · כלבים צועקים · תינוק יונק). ABAJO: la narrativa de R. Yose entrando a una ruina de Yerushalayim, Eliyahu HaNavi en la puerta, sus tres preguntas educativas y la voz de la paloma gimiente.</p>
     </div>
-  </section>
-
-  <div class="ornament">✦</div>
-
-  <!-- Los seis sedarim -->
-  <section>
-    <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.5rem;">Estructura del Bavli</div>
-    <h2>Los seis sedarim</h2>
-    <p style="max-width: 65ch; color: var(--tinta-suave); margin-bottom: 1.5rem;">El Talmud Bavli se organiza en seis órdenes (sedarim) que cubren todo el Derecho judío. Cada uno agrupa masejtot por tema. Haz click en cualquier seder para ver sus masejtot.</p>
-    <div class="sedarim-grid" id="sedarim-grid"></div>
-  </section>
-
-  <div class="ornament">✦</div>
-
-  <!-- Capacidades del códice -->
-  <section style="margin-bottom: 4rem;">
-    <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.5rem;">Capacidades</div>
-    <h2>Lo que hace este códice</h2>
-    <div class="sedarim-grid">
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">i</div>
-        <h3>Texto vivo de Sefaria</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">Cualquier daf del Bavli se carga directamente desde la API de Sefaria — hebreo original + traducción al inglés (Steinsaltz). Cero archivos que mantener.</p>
-      </div>
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">ii</div>
-        <h3>Rashi, Tosafot y más</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">El panel lateral muestra los comentarios clásicos sobre cada daf — Rashi y Tosafot primero, después Rashbam, Ritva, Maharsha y todo lo que tiene Sefaria.</p>
-      </div>
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">iii</div>
-        <h3>Paralelos automáticos</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">Cuando un mismo tema reaparece en otra masejet, el link aparece automáticamente. Sefaria ya tiene mapeadas las decenas de miles de conexiones internas.</p>
-      </div>
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">iv</div>
-        <h3>Topics y grafo emergente</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">Cada daf trae sus topics asociados. Conforme estudias, el grafo de conceptos se densifica — los nodos centrales emergen del propio estudio.</p>
-      </div>
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">v</div>
-        <h3>Tus notas, tu progreso</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">Cada daf tiene un campo de notas que se guarda automáticamente. Tu progreso del ciclo se contabiliza solo y se visualiza en tu mapa personal del Shas.</p>
-      </div>
-      <div class="seder-card" style="cursor: default;">
-        <div class="num">vi</div>
-        <h3>Diagramas visuales opcionales</h3>
-        <p style="color: var(--tinta-suave); font-size: 0.95rem; margin-top: 0.5rem;">Cuando un daf merece un esquema visual de su estructura argumentativa, lo pides a Claude y lo guardas como SVG. La página del daf lo detecta y muestra automáticamente.</p>
-      </div>
+    <div class="diagrama-frame" data-src="diagramas/berakhot-3a.html?v=20260528">
+      <p class="cargando">Cargando diagrama…</p>
     </div>
-  </section>
+  </article>
+
+  <article class="diagrama-bloque" id="berakhot-3b">
+    <div class="diagrama-cabecera">
+      <div class="ref-tag">Berajot 3b</div>
+      <h2>La noche del rey David — la arpa, el viento del norte</h2>
+      <p class="descripcion">Línea cronológica vertical desde נשף (atardecer) hasta amud hashachar (amanecer). Centro: la arpa estilizada sobre la cama del rey, con flechas del viento del norte que la hacían tocar sola al filo de medianoche. Tres voces amoraicas describen la transición a chatzot (caballo → león; Torá → cánticos; nunca pasó dormido). Cierra con la vigilancia política: los sabios al amanecer, la parnasá, las tres consultas constitucionales (Ajitofel, Sanedrín, Urim ve-Tumim).</p>
+    </div>
+    <div class="diagrama-frame" data-src="diagramas/berakhot-3b.html?v=20260528">
+      <p class="cargando">Cargando diagrama…</p>
+    </div>
+  </article>
+
+  <footer class="codex-footer">
+    Texto base: Sefaria · William Davidson Edition · <a href="https://github.com/josejmizrahi/talmud" target="_blank" rel="noopener">código fuente</a>
+  </footer>
 
 </div>
 
-<footer>
-  <p>הפוך בה והפוך בה דכולא בה</p>
-  <p style="margin-top: 0.5rem; font-size: 0.8rem;">Codex Talmudicus · Textos de <a href="https://www.sefaria.org" style="color: var(--sepia);" target="_blank">Sefaria</a></p>
-</footer>
-
-<script src="assets/js/shas.js"></script>
-<script src="assets/js/sefaria-client.js"></script>
 <script>
-// ------------------------------------------------------------
-// Quick search
-// ------------------------------------------------------------
-document.getElementById('quick-search').addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    const q = e.target.value.trim();
-    if (q) window.location.href = `vistas/buscar.html?q=${encodeURIComponent(q)}`;
-  }
-});
-
-// ------------------------------------------------------------
-// Daf de hoy desde Sefaria Calendar API
-// ------------------------------------------------------------
-async function cargarDafDeHoy() {
-  const cont = document.getElementById('today-section');
-  try {
-    const cal = await SefariaClient.calendario();
-    const daf = (cal.calendar_items || []).find(item =>
-      item.title?.en === 'Daf Yomi' || item.title?.en?.toLowerCase().includes('daf yomi')
-    );
-
-    if (!daf) {
-      cont.innerHTML = '<div class="empty-state">No se pudo determinar el daf de hoy.</div>';
-      return;
+/* Carga cada fragmento diagramas/*.html en su frame.
+   innerHTML no ejecuta los <script> embebidos, así que los reemplazamos
+   manualmente para que el código IIFE de cada diagrama se ejecute. */
+(async function() {
+  const bloques = document.querySelectorAll('.diagrama-frame[data-src]');
+  for (const frame of bloques) {
+    const src = frame.dataset.src;
+    try {
+      const resp = await fetch(src);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const html = await resp.text();
+      frame.innerHTML = html;
+      frame.querySelectorAll('script').forEach(viejo => {
+        const nuevo = document.createElement('script');
+        Array.from(viejo.attributes).forEach(a => nuevo.setAttribute(a.name, a.value));
+        nuevo.textContent = viejo.textContent;
+        viejo.parentNode.replaceChild(nuevo, viejo);
+      });
+    } catch (err) {
+      frame.innerHTML = '<p class="error">No se pudo cargar ' + src + ' (' + err.message + ')</p>';
     }
-
-    const refLimpio = daf.ref.replace(/\s+/g, '.');
-    cont.innerHTML = `
-      <div class="today-daf">
-        <div>
-          <div class="label">El daf de hoy</div>
-        </div>
-        <div>
-          <div class="ref">${daf.displayValue?.en || daf.ref}</div>
-          <div class="ref-he">${daf.displayValue?.he || ''}</div>
-        </div>
-        <div>
-          <a href="daf.html?ref=${encodeURIComponent(refLimpio)}" class="btn btn-gold">Estudiar →</a>
-        </div>
-      </div>
-    `;
-
-    document.getElementById('btn-daf-hoy').href = `daf.html?ref=${encodeURIComponent(refLimpio)}`;
-  } catch (err) {
-    console.error(err);
-    cont.innerHTML = `<div class="error-box">No se pudo cargar el calendario de Sefaria.</div>`;
   }
-}
-
-// ------------------------------------------------------------
-// Estadísticas de progreso
-// ------------------------------------------------------------
-function renderStats() {
-  const cont = document.getElementById('stats-row');
-  const estudiados = JSON.parse(localStorage.getItem('codex-estudiados') || '[]');
-  const total = totalAmudimShas();
-  const porcentaje = (estudiados.length / total * 100).toFixed(2);
-
-  // Calcular masejtot completas / en progreso
-  const porMasejet = {};
-  estudiados.forEach(ref => {
-    const m = ref.match(/^(.+?)\.\d+[ab]$/);
-    if (m) porMasejet[m[1]] = (porMasejet[m[1]] || 0) + 1;
-  });
-  const masejtotIniciadas = Object.keys(porMasejet).length;
-
-  cont.innerHTML = `
-    <div class="stat">
-      <div class="num">${estudiados.length}</div>
-      <div class="label">Dapim estudiados</div>
-    </div>
-    <div class="stat">
-      <div class="num">${total - estudiados.length}</div>
-      <div class="label">Por estudiar</div>
-    </div>
-    <div class="stat">
-      <div class="num">${masejtotIniciadas}</div>
-      <div class="label">Masejtot iniciadas</div>
-    </div>
-    <div class="stat">
-      <div class="num">${porcentaje}%</div>
-      <div class="label">Del Shas</div>
-    </div>
-  `;
-}
-
-// ------------------------------------------------------------
-// Grid de sedarim
-// ------------------------------------------------------------
-function renderSedarim() {
-  const cont = document.getElementById('sedarim-grid');
-  const romanos = ['i', 'ii', 'iii', 'iv', 'v', 'vi'];
-  let i = 0;
-  cont.innerHTML = '';
-  Object.entries(SHAS).forEach(([key, seder]) => {
-    const card = document.createElement('a');
-    card.href = `vistas/seder.html?seder=${encodeURIComponent(key)}`;
-    card.className = 'seder-card fade-in';
-    card.innerHTML = `
-      <div class="num">${romanos[i] || ''}</div>
-      <h3>${seder.nombre_es}</h3>
-      <div class="he">${seder.nombre_he}</div>
-      <div class="masejtot-count">${seder.masejtot.length} masejtot · ${seder.masejtot.reduce((a, m) => a + m.dapim, 0)} dapim</div>
-    `;
-    cont.appendChild(card);
-    i++;
-  });
-}
-
-// ------------------------------------------------------------
-// Init
-// ------------------------------------------------------------
-(async function init() {
-  renderSedarim();
-  renderStats();
-  await cargarDafDeHoy();
 })();
 </script>
 
