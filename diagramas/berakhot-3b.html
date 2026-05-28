@@ -1,0 +1,370 @@
+<div class="noche-david-interactivo">
+<style>
+  .noche-david-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .noche-david-leyenda {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .noche-david-leyenda .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .noche-david-leyenda .azul    { background: rgba(30,58,95,0.12);  border-color: var(--azul); }
+  .noche-david-leyenda .dorado  { background: rgba(184,134,11,0.18); border-color: var(--dorado); }
+  .noche-david-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .noche-david-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .noche-david-diagrama svg { width: 100%; height: auto; display: block; }
+  .noche-david-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .noche-david-nodo:hover rect,
+  .noche-david-nodo:hover path.borde { stroke-width: 2 !important; }
+  .noche-david-nodo.activa rect,
+  .noche-david-nodo.activa path.borde { stroke-width: 2.5 !important; }
+  .noche-david-nodo.dim { opacity: 0.3; }
+  .noche-david-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .noche-david-panel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .noche-david-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .noche-david-panel-hebreo {
+    direction: rtl;
+    font-size: 1.05rem;
+    color: var(--sepia);
+  }
+  .noche-david-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .noche-david-panel-explicacion {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin-bottom: 0;
+  }
+  .noche-david-vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+<div class="noche-david-leyenda">
+  <span style="font-weight: 500;">Click en cualquier momento:</span>
+  <span><span class="swatch azul"></span>antes de חצות</span>
+  <span><span class="swatch dorado"></span>la arpa · חצות</span>
+  <span><span class="swatch rojo"></span>después de חצות</span>
+  <span><span class="swatch verde"></span>al amanecer · gobierno</span>
+</div>
+
+<div class="noche-david-diagrama">
+<svg viewBox="0 0 720 920" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 3b: la noche del rey David, la arpa al filo de medianoche y la vigilancia política al amanecer</title>
+
+<defs>
+  <marker id="viento-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#6b4423"/>
+  </marker>
+  <marker id="tinta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <linearGradient id="cuerda-arpa" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#b8860b" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#b8860b" stop-opacity="0.3"/>
+  </linearGradient>
+</defs>
+
+<!-- ====================================================================== -->
+<!-- TÍTULO                                                                 -->
+<!-- ====================================================================== -->
+<text x="360" y="28" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La noche del rey David · Berajot 3b</text>
+<text x="360" y="48" text-anchor="middle" font-size="12" fill="#6b4423">de נשף al amud hashajar — vigilia, arpa, sanedrín al amanecer</text>
+
+<!-- Línea cronológica vertical -->
+<line x1="100" y1="90" x2="100" y2="850" stroke="#6b4423" stroke-width="1.2" opacity="0.45"/>
+<!-- Etiquetas del eje -->
+<text x="85" y="100" text-anchor="end" font-size="10" font-family="'JetBrains Mono', monospace" fill="#6b4423" letter-spacing="1">נשף</text>
+<text x="85" y="105" text-anchor="end" font-size="9" fill="#8b6635">atardecer</text>
+<text x="85" y="430" text-anchor="end" font-size="13" font-family="'JetBrains Mono', monospace" fill="#b8860b" letter-spacing="1.5">חצות</text>
+<text x="85" y="442" text-anchor="end" font-size="9" fill="#8b6635">medianoche</text>
+<text x="85" y="800" text-anchor="end" font-size="10" font-family="'JetBrains Mono', monospace" fill="#6b4423" letter-spacing="1">עמוד השחר</text>
+<text x="85" y="812" text-anchor="end" font-size="9" fill="#8b6635">amanecer</text>
+
+<!-- Marcadores en el eje -->
+<circle cx="100" cy="100" r="4" fill="#6b4423"/>
+<circle cx="100" cy="430" r="6" fill="#b8860b"/>
+<circle cx="100" cy="800" r="4" fill="#6b4423"/>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN 1 · ATARDECER · נשף                                             -->
+<!-- ====================================================================== -->
+<text x="140" y="100" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ATARDECER · TEHILIM 119:147</text>
+
+<g class="noche-david-nodo" data-id="nshef">
+  <rect x="140" y="115" width="540" height="78" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="160" y="138" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"Me adelanté en el נשף y clamé"</text>
+  <text x="660" y="138" text-anchor="end" font-size="12" direction="rtl" fill="#1e3a5f" font-weight="500">קִדַּמְתִּי בַנֶּשֶׁף וָאֲשַׁוֵּעָה</text>
+  <text x="160" y="160" font-size="11" fill="#3d2f23">¿נשף es la tarde o la mañana? — la sugyá lo investigará</text>
+  <text x="660" y="160" text-anchor="end" font-size="10" direction="rtl" fill="#6b4423" font-style="italic">תהילים קיט:קמז</text>
+  <text x="160" y="182" font-size="10" fill="#6b4423" font-style="italic">Ravá resolverá: hay DOS נשפים (uno al amanecer, otro al atardecer)</text>
+</g>
+
+<!-- Conector al siguiente bloque -->
+<line x1="370" y1="195" x2="370" y2="218" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN 2 · PRE-CHATZOT                                                -->
+<!-- ====================================================================== -->
+<text x="140" y="230" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DE LA TARDE A CHATZOT · ¿QUÉ HACE DAVID?</text>
+
+<g class="noche-david-nodo" data-id="caballo">
+  <rect x="140" y="248" width="170" height="92" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="225" y="270" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Zeira</text>
+  <text x="225" y="290" text-anchor="middle" font-size="13" direction="rtl" fill="#1e3a5f" font-weight="500">מִתְנַמְנֵם כְּסוּס</text>
+  <text x="225" y="310" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">dormita como caballo</text>
+  <text x="225" y="328" text-anchor="middle" font-size="9" fill="#6b4423">sueño superficial</text>
+</g>
+
+<g class="noche-david-nodo" data-id="tora-pre">
+  <rect x="325" y="248" width="170" height="92" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="410" y="270" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Rav Ashi</text>
+  <text x="410" y="290" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f" font-weight="500">עוֹסֵק בְּדִבְרֵי תוֹרָה</text>
+  <text x="410" y="310" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">se ocupa en palabras de Torá</text>
+  <text x="410" y="328" text-anchor="middle" font-size="9" fill="#6b4423">estudio nocturno</text>
+</g>
+
+<g class="noche-david-nodo" data-id="oshaya">
+  <rect x="510" y="248" width="170" height="92" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="595" y="270" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Rav Oshaya · R. Aja</text>
+  <text x="595" y="290" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">לא עבר עליי חצות</text>
+  <text x="595" y="305" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">לילה בשינה</text>
+  <text x="595" y="325" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">nunca durmió pasada chatzot</text>
+</g>
+
+<!-- Líneas convergentes hacia chatzot -->
+<line x1="225" y1="340" x2="370" y2="385" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="410" y1="340" x2="370" y2="385" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="595" y1="340" x2="370" y2="385" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN 3 · CHATZOT · LA ARPA (centerpiece)                            -->
+<!-- ====================================================================== -->
+
+<!-- Banda dorada de chatzot -->
+<rect x="120" y="395" width="580" height="2" fill="#b8860b" opacity="0.6"/>
+<text x="360" y="415" text-anchor="middle" font-size="22" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" letter-spacing="3">חצות</text>
+<text x="360" y="432" text-anchor="middle" font-size="11" fill="#6b4423" font-style="italic">y entonces — la transición</text>
+
+<!-- KUSHYÁ Moshé/David a la izquierda -->
+<g class="noche-david-nodo" data-id="moshe-david">
+  <rect x="140" y="455" width="170" height="120" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <text x="225" y="475" text-anchor="middle" font-size="9" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">KUSHYÁ</text>
+  <text x="225" y="494" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">si Moshé no sabía</text>
+  <text x="225" y="510" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">la hora exacta...</text>
+  <text x="225" y="532" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">כַּחֲצוֹת הַלַּיְלָה</text>
+  <text x="225" y="552" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">¿cómo iba a saberlo</text>
+  <text x="225" y="568" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">David? — שמות יא:ד</text>
+</g>
+
+<!-- LA ARPA · centerpiece -->
+<g class="noche-david-nodo" data-id="arpa">
+  <!-- caja contenedora discreta -->
+  <rect class="borde" x="335" y="455" width="350" height="180" rx="8" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="510" y="476" text-anchor="middle" font-size="10" font-family="'JetBrains Mono', monospace" fill="#b8860b" letter-spacing="2">לא היה ספק · LA RESPUESTA</text>
+
+  <!-- viento del norte: flechas curvas entrando desde la derecha -->
+  <path d="M660 488 Q 600 478 565 510" fill="none" stroke="#6b4423" stroke-width="1.1" opacity="0.7" stroke-dasharray="3 3" marker-end="url(#viento-flecha)"/>
+  <path d="M670 510 Q 615 505 580 535" fill="none" stroke="#6b4423" stroke-width="0.9" opacity="0.5" stroke-dasharray="3 3"/>
+  <text x="670" y="478" text-anchor="end" font-size="10" direction="rtl" fill="#6b4423" font-style="italic">רוח צפונית</text>
+  <text x="670" y="491" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">viento del norte</text>
+
+  <!-- ARPA estilizada (centrada x=440-500, y=490-580) -->
+  <!-- marco curvo del arpa -->
+  <path d="M450 500 Q425 510 425 555 L425 575 Q425 585 435 585 L495 585 Q505 585 505 575 L505 555 Q505 510 480 500 Z"
+        fill="rgba(184,134,11,0.18)" stroke="#b8860b" stroke-width="1.6"/>
+  <!-- detalle superior -->
+  <ellipse cx="465" cy="503" rx="22" ry="3" fill="none" stroke="#b8860b" stroke-width="1"/>
+  <!-- cuerdas -->
+  <line x1="438" y1="510" x2="438" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="446" y1="505" x2="446" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="454" y1="503" x2="454" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="462" y1="502" x2="462" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="470" y1="502" x2="470" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="478" y1="503" x2="478" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="486" y1="505" x2="486" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <line x1="494" y1="510" x2="494" y2="580" stroke="url(#cuerda-arpa)" stroke-width="0.7"/>
+  <!-- base · "cama del rey" -->
+  <line x1="380" y1="600" x2="540" y2="600" stroke="#6b4423" stroke-width="2"/>
+  <text x="460" y="615" text-anchor="middle" font-size="9" font-family="'JetBrains Mono', monospace" fill="#8b6635" letter-spacing="1">מטתו של דוד</text>
+
+  <!-- cita central -->
+  <text x="510" y="625" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b" font-weight="500">כִּנּוֹר תָּלוּי · רוּחַ צְפוֹנִית · מְנַגֵּן מֵאֵלָיו</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN 4 · POST-CHATZOT                                               -->
+<!-- ====================================================================== -->
+<text x="140" y="668" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DE CHATZOT AL AMANECER · DAVID DESPIERTO</text>
+
+<g class="noche-david-nodo" data-id="leon">
+  <rect x="140" y="688" width="260" height="78" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="270" y="710" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Zeira</text>
+  <text x="270" y="731" text-anchor="middle" font-size="13" direction="rtl" fill="#8b1a1a" font-weight="500">מִתְגַּבֵּר כַּאֲרִי</text>
+  <text x="270" y="751" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">se fortalece como león</text>
+</g>
+
+<g class="noche-david-nodo" data-id="shirot">
+  <rect x="415" y="688" width="265" height="78" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="547" y="710" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Rav Ashi</text>
+  <text x="547" y="731" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a" font-weight="500">שִׁירוֹת וְתִשְׁבָּחוֹת</text>
+  <text x="547" y="751" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">cánticos y alabanzas</text>
+</g>
+
+<!-- Convergencia al amanecer -->
+<line x1="270" y1="766" x2="370" y2="788" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="547" y1="766" x2="370" y2="788" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3"/>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN 5 · AMUD HASHACHAR · GOBIERNO                                  -->
+<!-- ====================================================================== -->
+<text x="140" y="810" font-size="10" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">AMANECER · LOS SABIOS ENTRAN</text>
+
+<g class="noche-david-nodo" data-id="sabios">
+  <rect x="140" y="822" width="540" height="68" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.1"/>
+  <text x="160" y="843" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"Tu pueblo Israel necesita parnasá"</text>
+  <text x="660" y="843" text-anchor="end" font-size="11" direction="rtl" fill="#1e6b5a" font-weight="500">עַמְּךָ יִשְׂרָאֵל צְרִיכִין פַּרְנָסָה</text>
+  <text x="160" y="864" font-size="10" fill="#3d2f23">consultas a tres niveles: Ajitofel (consejero) · Sanedrín (colectivo legal) · Urim ve-Tumim (oráculo)</text>
+  <text x="660" y="864" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">divrei hayamim א כז:לד</text>
+  <text x="160" y="880" font-size="9" fill="#6b4423" font-style="italic">tres planos de decisión — nadie decide solo</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- Pie                                                                    -->
+<!-- ====================================================================== -->
+<text x="360" y="912" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">Berajot 3b cierra: el daf que abrió con vigilias nocturnas culmina con la vigilancia política del rey al amanecer</text>
+
+</svg>
+</div>
+
+<div class="noche-david-panel" id="noche-david-panel">
+  <p class="noche-david-vacio">Selecciona cualquier momento del recorrido nocturno para leer su cita exacta, el sabio que la formuló y su función en la sugyá.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'nshef': {
+      titulo: '¿David desde la tarde? · קדמתי בנשף',
+      hebreo: 'קִדַּמְתִּי בַנֶּשֶׁף וָאֲשַׁוֵּעָה · תהילים קיט:קמז',
+      traduccion: '"Me adelanté en el נשף y clamé" — Tehilim 119:147',
+      explicacion: 'La sugyá presenta una aparente contradicción: la prueba de Rabbi (línea 14 del daf) usó Tehilim 119:62 ("חצות לילה אקום" — a la medianoche me levanto). Pero este otro verso de Tehilim dice que David se levantaba ya en el נשף, que según Mishlei 7:9 es la TARDE. Entonces, ¿David se levantaba a medianoche o desde la tarde? Tres amoraim ofrecen tres lecturas (R. Zeira / Rav Ashi / Rav Oshaya). Y Ravá resuelve el problema filológico aparte: hay dos נשפים — uno al amanecer (cuando la noche "se va" y llega el día) y otro al atardecer (cuando el día "se va" y llega la noche). La raíz נשף = irse, deslizarse — la palabra del umbral.'
+    },
+    'caballo': {
+      titulo: 'R. Zeira · dormita como caballo',
+      hebreo: 'עַד חֲצוֹת לַיְלָה הָיָה מִתְנַמְנֵם כְּסוּס',
+      traduccion: '"Hasta la medianoche dormitaba como un caballo"',
+      explicacion: 'R. Zeira propone una imagen orgánica para resolver la contradicción: David SÍ dormía antes de chatzot, pero solo a medias — como un caballo, que duerme de pie con sueño superficial. Su "levantarse desde la tarde" (Tehilim 119:147) significa que nunca cayó en sueño profundo. La imagen del caballo nocturno también prefigura la transición animal hacia el león que vendrá tras la medianoche.'
+    },
+    'tora-pre': {
+      titulo: 'Rav Ashi · estudia Torá',
+      hebreo: 'עַד חֲצוֹת לַיְלָה הָיָה עוֹסֵק בְּדִבְרֵי תוֹרָה',
+      traduccion: '"Hasta la medianoche se ocupaba en palabras de Torá"',
+      explicacion: 'Rav Ashi (el redactor del Bavlí) lee literalmente: David nunca durmió ni un instante. Desde la tarde hasta chatzot dedicaba la noche al ESTUDIO. La diferencia con R. Zeira es de altitud: R. Zeira admite sueño superficial; Rav Ashi no admite ninguno. La elección entre las dos lecturas tiene consecuencias para el modelo del estudio nocturno.'
+    },
+    'oshaya': {
+      titulo: 'Rav Oshaya · nunca pasó chatzot durmiendo',
+      hebreo: 'מֵעוֹלָם לֹא עָבַר עָלַי חֲצוֹת לַיְלָה בְּשֵׁינָה',
+      traduccion: '"Nunca pasó sobre mí la medianoche durmiendo" — palabras de David',
+      explicacion: 'Rav Oshaya en nombre de R. Aja: David mismo declaró que nunca DURMIÓ pasada la medianoche. Esta es la lectura más restrictiva — David admite haber dormido, pero solo en la primera mitad de la noche. Las tres opiniones (caballo / Torá / oshaya) coexisten en la sugyá sin que una venza a las otras. El Bavlí valida múltiples modelos del estudio nocturno.'
+    },
+    'moshe-david': {
+      titulo: 'Kushyá · ¿cómo sabía David la hora?',
+      hebreo: 'הַשְׁתָּא מֹשֶׁה רַבֵּינוּ לָא הֲוָה יָדַע',
+      traduccion: '"Si Moshé Rabeinu no sabía (la hora exacta de medianoche)..."',
+      explicacion: 'Una pregunta teológicamente provocadora. Moshé en Shemot 11:4 dice "כַּחֲצוֹת הַלַּיְלָה" — CERCA de la medianoche, con la preposición de aproximación. La guemará deduce: HKBH le dijo "בחצות" (exacto), Moshé reportó "כחצות" porque ÉL tenía duda. Pero entonces — ¿cómo iba David a tener una precisión que ni el profeta supremo tuvo? La respuesta NO es que David fuera más profeta que Moshé. La respuesta es la ARPA — David no SABÍA chatzot, la arpa lo sabía. David solo escuchaba.'
+    },
+    'arpa': {
+      titulo: 'La arpa · sobre la cama de David',
+      hebreo: 'כִּנּוֹר הָיָה תָּלוּי לְמַעְלָה מִמִּטָּתוֹ שֶׁל דָּוִד · בָּא רוּחַ צְפוֹנִית וְנוֹשֶׁבֶת בּוֹ וּמְנַגֵּן מֵאֵלָיו',
+      traduccion: '"Una arpa colgaba sobre la cama de David. Al llegar la medianoche venía un viento del norte y soplaba en ella, y tocaba sola."',
+      explicacion: 'La fuente es Rav Aja bar Bizna en nombre de R. Shimón Jasidá. Tres elementos forman la escena: (1) KINOR — la arpa, instrumento del joven pastor, ahora colgada sobre la cama del rey. (2) RUACH TZFONIT — el viento del norte, que en el mundo bíblico marca cambios estacionales y atmosféricos; aquí marca el filo temporal. (3) MENAGEN ME-ELAV — "toca sola": el milagro silencioso, ni anuncio ni voz, solo música. David se levantaba al sonar la primera nota y se ocupaba de Torá hasta que subía la columna del amanecer. La arpa responde la kushyá Moshé/David: el conocimiento de la hora no era propio de David — era cósmico, transmitido por el viento. David solo necesitaba estar atento. Es una teología del oído.'
+    },
+    'leon': {
+      titulo: 'R. Zeira · se fortalece como león',
+      hebreo: 'מִכָּאן וְאֵילָךְ הָיָה מִתְגַּבֵּר כַּאֲרִי',
+      traduccion: '"De allí en adelante (tras chatzot) se fortalecía como un león"',
+      explicacion: 'La transición animal de R. Zeira: caballo → león. El caballo de la primera mitad dormita por necesidad biológica; el león de la segunda mitad gobierna por elección espiritual. La imagen pasará a la liturgia del Modé Ani matutino y a innumerables comentarios. El león es el rey de los animales — David, rey de Israel, despierta como su contraparte animal. Hay una completa monarquía nocturna en miniatura: la arpa anuncia la hora, el rey-león despierta, la Torá se estudia hasta el amanecer.'
+    },
+    'shirot': {
+      titulo: 'Rav Ashi · cánticos y alabanzas',
+      hebreo: 'מִכָּאן וְאֵילָךְ בְּשִׁירוֹת וְתִשְׁבָּחוֹת',
+      traduccion: '"De allí en adelante (tras chatzot), en cánticos y alabanzas"',
+      explicacion: 'Rav Ashi distingue dos modos de la noche de David: hasta chatzot, ESTUDIO (דברי תורה). Desde chatzot, LITURGIA (שירות ותשבחות). La transición no es de sueño a despertar — es de un modo religioso a otro. La diferencia con R. Zeira: R. Zeira describe un cambio de INTENSIDAD (somnoliento → enérgico); Rav Ashi describe un cambio de CONTENIDO (estudio → canto). La distinción remite a la doble función real-sacerdotal de David: pastor-poeta antes, rey-cantor después.'
+    },
+    'sabios': {
+      titulo: 'Al amanecer · los sabios y la parnasá',
+      hebreo: 'נִכְנְסוּ חַכְמֵי יִשְׂרָאֵל אֶצְלוֹ · יוֹעֲצִים בַּאֲחִיתֹפֶל · נִמְלָכִין בְּסַנְהֶדְרִין · שׁוֹאֲלִין בְּאוּרִים וְתוּמִּים',
+      traduccion: '"Entraron los sabios de Israel ante él... consultan con Ajitofel, se aconsejan con el Sanedrín, inquieren con los Urim ve-Tumim"',
+      explicacion: 'El cierre político del daf. Al subir el amud hashajar termina la vigilia personal de David y comienza el gobierno del reino. Los sabios traen una emergencia: el pueblo necesita parnasá (sustento). David responde primero con autosuficiencia ("sosténganse unos a otros"); ellos refutan con un dicho ("el puñado no sacia al león" — la imagen del león vuelve aquí). David autoriza entonces una expedición de saqueo militar legítimo, pero NO solo: el proceso constitucional requiere TRES INSTANCIAS — Ajitofel (consejero personal experto), Sanedrín (cuerpo colectivo halájico), Urim ve-Tumim (oráculo divino). Berajot 3b enseña que la decisión real, incluso autorizada por el rey, jamás procede sin esta triple consulta. El daf que abrió con la geografía de las vigilias nocturnas cierra con la arquitectura del gobierno justo.'
+    }
+  };
+
+  const panel = document.getElementById('noche-david-panel');
+  const nodos = document.querySelectorAll('.noche-david-nodo');
+
+  nodos.forEach(n => {
+    n.addEventListener('click', () => {
+      const id = n.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      nodos.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== n) o.classList.add('dim');
+      });
+      n.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="noche-david-panel-header">
+          <h4 class="noche-david-panel-titulo">${d.titulo}</h4>
+          <div class="noche-david-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="noche-david-panel-traduccion">${d.traduccion}</p>
+        <p class="noche-david-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>
