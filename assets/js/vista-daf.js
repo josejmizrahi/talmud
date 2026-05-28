@@ -24,6 +24,12 @@ const VOCES = {
   'rav':          { etiqueta: 'Rav',              color: '#1e6b5a', sigilo: 'ר', lado: 'der' },
   'shmuel':       { etiqueta: 'Shmuel',           color: '#1e6b5a', sigilo: 'ש', lado: 'der' },
   'rabbah-sheila':{ etiqueta: 'Rabbá b. Sheila', color: '#1e6b5a', sigilo: 'ר', lado: 'der' },
+  'r-natan':      { etiqueta: 'R. Natán',         color: '#1e3a5f', sigilo: 'נ', lado: 'der' },
+  'rav-oshaya':   { etiqueta: 'Rav Oshaya',       color: '#1e6b5a', sigilo: 'ר', lado: 'der' },
+  'r-zeira':      { etiqueta: 'R. Zeira',         color: '#1e6b5a', sigilo: 'ז', lado: 'der' },
+  'rav-ashi':     { etiqueta: 'Rav Ashi',         color: '#1e6b5a', sigilo: 'א', lado: 'der' },
+  'rava':         { etiqueta: 'Ravá',             color: '#1e6b5a', sigilo: 'ר', lado: 'der' },
+  'rav-aja':      { etiqueta: 'Rav Aja b. Bizna', color: '#1e6b5a', sigilo: 'א', lado: 'der' },
   'mar':          { etiqueta: 'amar mar',         color: '#8b6635', sigilo: '⋯', lado: 'izq' },
   'chavruta':     { etiqueta: 'jevruta',          color: '#8b1a1a', sigilo: '✦', lado: 'centro' },
   'eliyahu':      { etiqueta: 'Eliyahu',          color: '#b8860b', sigilo: 'א', lado: 'der' }
@@ -359,7 +365,7 @@ function renderTop(spec) {
   }
   // selector
   const sel = document.getElementById('selector-daf');
-  const opciones = ['Berakhot 2a', 'Berakhot 2b']; // expandible cuando haya más specs
+  const opciones = ['Berakhot 2a', 'Berakhot 2b', 'Berakhot 3b']; // expandible cuando haya más specs
   sel.innerHTML = opciones.map(o => `<option value="${o}" ${o === spec.ref ? 'selected' : ''}>${o}</option>`).join('');
 }
 

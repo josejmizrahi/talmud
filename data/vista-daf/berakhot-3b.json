@@ -1,0 +1,492 @@
+{
+  "ref": "Berakhot 3b",
+  "titulo": "Berajot 3b — el debate de las vigilias y la arpa de David",
+  "anterior": "Berakhot 3a",
+  "siguiente": "Berakhot 4a",
+  "introduccion": "3b cierra el análisis de las tres razones para no entrar a una ruina, abre el GRAN debate entre Rabbi (4 vigilias) y R. Natan (3 vigilias) con tres rondas de pruebas escriturarias, y desemboca en una de las escenas más memorables del Bavlí: la arpa de David sobre su cama, que el viento del norte hacía sonar sola a medianoche para despertarlo a estudiar Torá hasta el amanecer.",
+
+  "lineas": [
+    {
+      "n": 1,
+      "tag": "guemará · cierre 3 razones",
+      "he": "בְּחַדְתִּי.",
+      "es": "(Respuesta a la kushyá del fin de 3a) — (se trata de) una ruina nueva.",
+      "anota": ["g3b-chashad-needed"]
+    },
+    {
+      "n": 2,
+      "tag": "guemará",
+      "he": "וְתִיפּוֹק לֵיהּ מִשּׁוּם מַזִּיקִין? בִּתְרֵי.",
+      "es": "¿Y por qué no derivarlo solo de los \"demonios\"? Cuando son dos.",
+      "anota": ["g3b-chashad-needed"]
+    },
+    {
+      "n": 3,
+      "tag": "guemará",
+      "he": "אִי בִּתְרֵי — חֲשָׁד נָמֵי לֵיכָּא! בִּתְרֵי וּפְרִיצִי.",
+      "es": "Si son dos, ¡tampoco hay sospecha! Cuando son dos pero (de los) פריצים (inmorales).",
+      "anota": ["g3b-chashad-needed"]
+    },
+    {
+      "n": 4,
+      "tag": "guemará · ¿por qué \"derrumbe\"?",
+      "he": "״מִפְּנֵי הַמַּפּוֹלֶת״, וְתִיפּוֹק לֵיהּ מִשּׁוּם חֲשָׁד וּמַזִּיקִין!",
+      "es": "Por \"el derrumbe\". ¡Pero podría derivarse de sospecha y demonios!",
+      "anota": ["g3b-mafolet-needed"]
+    },
+    {
+      "n": 5,
+      "tag": "guemará",
+      "he": "בִּתְרֵי וּכְשֵׁרֵי.",
+      "es": "Cuando son dos y kesherim (íntegros — no aplica la sospecha; pero hay derrumbe).",
+      "anota": ["g3b-mafolet-needed"]
+    },
+    {
+      "n": 6,
+      "tag": "guemará · ¿por qué \"demonios\"?",
+      "he": "״מִפְּנֵי הַמַּזִּיקִין״, וְתִיפּוֹק לֵיהּ מִפְּנֵי חֲשָׁד וּמַפּוֹלֶת!",
+      "es": "Por \"los demonios\". ¡Pero podría derivarse de sospecha y derrumbe!",
+      "anota": ["g3b-mazikin-needed"]
+    },
+    {
+      "n": 7,
+      "tag": "guemará",
+      "he": "בְּחוּרְבָּה חַדְתִּי, וּבִתְרֵי וּכְשֵׁרֵי.",
+      "es": "En ruina nueva (no derrumbe), y dos kesherim (no sospecha) — pero hay demonios.",
+      "anota": ["g3b-mazikin-needed"]
+    },
+    {
+      "n": 8,
+      "tag": "guemará",
+      "he": "אִי בִּתְרֵי, מַזִּיקִין נָמֵי לֵיכָּא!",
+      "es": "Si son dos, ¡tampoco hay demonios!",
+      "anota": ["g3b-mazikin-needed"]
+    },
+    {
+      "n": 9,
+      "tag": "guemará · solución final",
+      "he": "בִּמְקוֹמָן חָיְישִׁינַן. וְאִיבָּעֵית אֵימָא: לְעוֹלָם בְּחַד, וּבְחוּרְבָּה חַדְתִּי דְּקָאֵי בְּדַבְרָא, דְּהָתָם מִשּׁוּם חֲשָׁד לֵיכָּא דְּהָא אִשָּׁה בְּדַבְרָא לָא שְׁכִיחָא, וּמִשּׁוּם מַזִּיקִין אִיכָּא.",
+      "es": "En su lugar (de los demonios) sí nos preocupamos. O bien: siempre uno (solo), en ruina nueva en descampado, donde no hay sospecha (la mujer no frecuenta el campo) ni derrumbe (es nueva), pero sí hay demonios.",
+      "anota": ["g3b-mazikin-needed"]
+    },
+    {
+      "n": 10,
+      "tag": "guemará · BARAITA",
+      "he": "תָּנוּ רַבָּנַן: אַרְבַּע מִשְׁמָרוֹת הָוֵי הַלַּיְלָה, דִּבְרֵי רַבִּי. רַבִּי נָתָן אוֹמֵר: שָׁלֹשׁ.",
+      "es": "Enseñaron los rabinos (baraita): cuatro vigilias tiene la noche — palabras de Rabbi (Yehuda HaNasi). Rabí Natán dice: tres.",
+      "anota": ["g3b-baraita-vigilias"]
+    },
+    {
+      "n": 11,
+      "tag": "guemará · R. Natán prueba",
+      "he": "מַאי טַעְמֵיהּ דְּרַבִּי נָתָן — דִּכְתִיב: ״וַיָּבֹא גִדְעוֹן וּמֵאָה אִישׁ אֲשֶׁר אִתּוֹ בִּקְצֵה הַמַּחֲנֶה רֹאשׁ הָאַשְׁמֹרֶת הַתִּיכוֹנָה״, תָּנָא: אֵין ״תִּיכוֹנָה״ אֶלָּא שֶׁיֵּשׁ לְפָנֶיהָ וּלְאַחֲרֶיהָ.",
+      "es": "¿Cuál es el razonamiento de R. Natán? Está escrito (Shoftim 7:19): \"Y vino Gideón y los cien hombres con él al borde del campamento al comienzo de la vigilia intermedia\". Se enseñó: no se dice \"intermedia\" sino cuando hay algo antes y algo después.",
+      "anota": ["g3b-natan-gidon"]
+    },
+    {
+      "n": 12,
+      "tag": "guemará · Rabbi responde",
+      "he": "וְרַבִּי, מַאי ״תִּיכוֹנָה״ — אַחַת מִן הַתִּיכוֹנָה שֶׁבַּתִּיכוֹנוֹת.",
+      "es": "Y Rabbi, ¿qué (entiende por) \"intermedia\"? Una de las intermedias entre las intermedias (es decir: el verso describe una de las dos vigilias centrales en un sistema de cuatro).",
+      "anota": ["g3b-rabbi-tichona"]
+    },
+    {
+      "n": 13,
+      "tag": "guemará · R. Natán contraataca",
+      "he": "וְרַבִּי נָתָן מִי כְּתִיב ״תִּיכוֹנָה שֶׁבַּתִּיכוֹנוֹת״? ״תִּיכוֹנָה״ כְּתִיב!",
+      "es": "Y R. Natán: ¿acaso está escrito \"intermedia entre las intermedias\"? ¡Solo dice \"intermedia\"!",
+      "anota": ["g3b-rabbi-tichona"]
+    },
+    {
+      "n": 14,
+      "tag": "guemará · Rabbi prueba",
+      "he": "מַאי טַעְמֵיהּ דְּרַבִּי? אָמַר רַבִּי זְרִיקָא, אָמַר רַבִּי אַמֵּי, אָמַר רַבִּי יְהוֹשֻׁעַ בֶּן לֵוִי: כָּתוּב אֶחָד אוֹמֵר: ״חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לָךְ עַל מִשְׁפְּטֵי צִדְקֶךָ״, וְכָתוּב אֶחָד אוֹמֵר: ״קִדְּמוּ עֵינַי אַשְׁמוּרוֹת״ הָא כֵּיצַד, אַרְבַּע מִשְׁמָרוֹת הָוֵי הַלַּיְלָה.",
+      "es": "¿Cuál es el razonamiento de Rabbi? Dijo R. Zerika, en nombre de R. Ami, en nombre de R. Yehoshua ben Levi: un verso (Tehilim 119:62) dice \"a la medianoche me levanto para alabarte por tus juicios justos\", y otro verso (119:148) dice \"mis ojos se adelantaron a las vigilias\". ¿Cómo (se concilian)? Cuatro vigilias tiene la noche.",
+      "anota": ["g3b-rabbi-tehilim"]
+    },
+    {
+      "n": 15,
+      "tag": "guemará · R. Natán reconcilia",
+      "he": "וְרַבִּי נָתָן, סָבַר לַהּ כְּרַבִּי יְהוֹשֻׁעַ. דִּתְנַן, רַבִּי יְהוֹשֻׁעַ אוֹמֵר: עַד שָׁלֹשׁ שָׁעוֹת, שֶׁכֵּן דֶּרֶךְ מְלָכִים לַעֲמֹוד בְּשָׁלֹשׁ שָׁעוֹת. שֵׁית דְּלֵילְיָא, וְתַרְתֵּי דִּימָמָא, הָווּ לְהוּ שְׁתֵּי מִשְׁמָרוֹת.",
+      "es": "Y R. Natán sostiene como R. Yehoshua, que enseñó: \"(se recita shema) hasta las tres horas (del día), pues los reyes acostumbran levantarse a las tres horas\". Seis (horas) de noche + dos de día = dos vigilias (en un sistema de cuatro horas por vigilia — pero R. Natán prefiere tres vigilias).",
+      "anota": ["g3b-natan-yehoshua"]
+    },
+    {
+      "n": 16,
+      "tag": "guemará · Rav Ashi",
+      "he": "רַב אָשֵׁי אָמַר: מִשְׁמָרָה וּפַלְגָא נָמֵי ״מִשְׁמָרוֹת״ קָרוּ לְהוּ.",
+      "es": "Rav Ashi dijo: una vigilia y media también se llama \"vigilias\" (en plural — resolviendo la tensión).",
+      "anota": ["g3b-rav-ashi-vigilia"]
+    },
+    {
+      "n": 17,
+      "tag": "guemará · aforismo del muerto",
+      "he": "וְאָמַר רַבִּי זְרִיקָא, אָמַר רַבִּי אַמֵּי, אָמַר רַבִּי יְהוֹשֻׁעַ בֶּן לֵוִי: אֵין אוֹמְרִין בִּפְנֵי הַמֵּת אֶלָּא דְּבָרָיו שֶׁל מֵת.",
+      "es": "Y dijo R. Zerika en nombre de R. Ami en nombre de R. Yehoshua ben Levi: no se dice frente al muerto sino las palabras del muerto (es decir: las palabras que le corresponden a él / sobre él).",
+      "anota": ["g3b-bifne-hamet"]
+    },
+    {
+      "n": 18,
+      "tag": "guemará · matiz",
+      "he": "אָמַר רַבִּי אַבָּא בַּר כָּהֲנָא: לָא אֲמַרַן אֶלָּא בְּדִבְרֵי תוֹרָה, אֲבָל מִילֵּי דְעָלְמָא לֵית לָן בַּהּ.",
+      "es": "Dijo R. Abba bar Kahaná: no lo dijimos sino respecto a palabras de Torá (las cuales el muerto ya no puede estudiar). Pero asuntos cotidianos, no nos importa.",
+      "anota": ["g3b-bifne-hamet"]
+    },
+    {
+      "n": 19,
+      "tag": "guemará · versión alternativa",
+      "he": "וְאִיכָּא דְאָמְרִי: אָמַר רַבִּי אַבָּא בַּר כָּהֲנָא לָא אֲמַרַן אֶלָּא [אֲפִילּוּ] בְּדִבְרֵי תוֹרָה וְכָל שֶׁכֵּן מִילֵּי דְעָלְמָא.",
+      "es": "Y hay quienes dicen: R. Abba bar Kahaná dijo: no lo dijimos sino [aún] respecto a palabras de Torá, y cuanto más para asuntos cotidianos (en esta lectura, NINGUNA charla es apropiada).",
+      "anota": ["g3b-bifne-hamet"]
+    },
+    {
+      "n": 20,
+      "tag": "guemará · pivota a David",
+      "he": "וְדָוִד בְּפַלְגָא דְלֵילְיָא הֲוָה קָאֵי? מֵאוּרְתָּא הֲוָה קָאֵי! דִּכְתִיב: ״קִדַּמְתִּי בַנֶּשֶׁף וָאֲשַׁוֵּעָה״, וּמִמַּאי דְּהַאי ״נֶשֶׁף״ אוּרְתָּא הוּא? — דִּכְתִיב: ״בְּנֶשֶׁף בְּעֶרֶב יוֹם בְּאִישׁוֹן לַיְלָה וַאֲפֵלָה״!",
+      "es": "Y David (¿realmente) se levantaba a la medianoche? ¡Se levantaba desde la TARDE! Pues está escrito (Tehilim 119:147): \"me adelanté en el נשף y clamé\". Y ¿de dónde que este נשף sea la tarde? — Pues está escrito (Mishlei 7:9): \"en el נשף, al atardecer del día, en la oscuridad de la noche y la tiniebla\".",
+      "anota": ["g3b-david-nshef"]
+    },
+    {
+      "n": 21,
+      "tag": "guemará · Rav Oshaya",
+      "he": "אָמַר רַב אוֹשַׁעְיָא, אָמַר רַבִּי אַחָא: הָכִי קָאָמַר (דָּוִד): מֵעוֹלָם לֹא עָבַר עָלַי חֲצוֹת לַיְלָה בְּשֵׁינָה.",
+      "es": "Dijo Rav Oshaya en nombre de R. Aja: así dijo (David) — nunca pasó sobre mí la medianoche durmiendo.",
+      "anota": ["g3b-david-suso-arye"]
+    },
+    {
+      "n": 22,
+      "tag": "guemará · R. Zeira / Rav Ashi",
+      "he": "רַבִּי זֵירָא אָמַר: עַד חֲצוֹת לַיְלָה הָיָה מִתְנַמְנֵם כְּסוּס, מִכָּאן וְאֵילָךְ הָיָה מִתְגַּבֵּר כַּאֲרִי. רַב אָשֵׁי אָמַר: עַד חֲצוֹת לַיְלָה הָיָה עוֹסֵק בְּדִבְרֵי תוֹרָה, מִכָּאן וְאֵילָךְ בְּשִׁירוֹת וְתִשְׁבָּחוֹת.",
+      "es": "R. Zeira dijo: hasta la medianoche dormitaba como un caballo, de allí en adelante se fortalecía como un león. Rav Ashi dijo: hasta la medianoche se ocupaba en palabras de Torá, de allí en adelante en cánticos y alabanzas.",
+      "anota": ["g3b-david-suso-arye"]
+    },
+    {
+      "n": 23,
+      "tag": "guemará · filología נשף",
+      "he": "וְ״נֶשֶׁף״ אוּרְתָּא הוּא? הָא ״נֶשֶׁף״ צַפְרָא הוּא! דִּכְתִיב: ״וַיַּכֵּם דָּוִד מֵהַנֶּשֶׁף וְעַד הָעֶרֶב לְמָחֳרָתָם״. מַאי לָאו — מִצַּפְרָא וְעַד לֵילְיָא?",
+      "es": "¿Y נשף es la tarde? ¡Pero נשף es la mañana! Pues está escrito (Shmuel I 30:17): \"y los golpeó David desde el נשף hasta la tarde del día siguiente\". ¿No es acaso desde la mañana hasta la noche?",
+      "anota": ["g3b-nshef-doble"]
+    },
+    {
+      "n": 24,
+      "tag": "guemará · contraargumento",
+      "he": "לָא, מֵאוּרְתָּא וְעַד אוּרְתָּא.",
+      "es": "No: desde una tarde hasta la siguiente tarde.",
+      "anota": ["g3b-nshef-doble"]
+    },
+    {
+      "n": 25,
+      "tag": "guemará · objeción",
+      "he": "אִי הָכִי, לִכְתּוֹב ״מֵהַנֶּשֶׁף וְעַד הַנֶּשֶׁף״ אוֹ ״מֵהָעֶרֶב וְעַד הָעֶרֶב״!",
+      "es": "Si así fuera, ¡debería estar escrito \"desde נשף hasta נשף\" o \"desde la tarde hasta la tarde\"! (no \"desde נשף hasta la tarde\").",
+      "anota": ["g3b-nshef-doble"]
+    },
+    {
+      "n": 26,
+      "tag": "guemará · Rava resuelve",
+      "he": "אֶלָּא אָמַר רָבָא: תְּרֵי נִשְׁפֵי הָווּ — נְשַׁף לֵילְיָא וְאָתֵי יְמָמָא, נְשַׁף יְמָמָא וְאָתֵי לֵילְיָא.",
+      "es": "Sino que dijo Ravá: hay dos נשפים — נשף cuando la noche \"se va\" (se aleja) y llega el día (= amanecer); y נשף cuando el día \"se va\" y llega la noche (= atardecer).",
+      "anota": ["g3b-nshef-doble"]
+    },
+    {
+      "n": 27,
+      "tag": "guemará · ¿cómo sabía David?",
+      "he": "וְדָוִד מִי הֲוָה יָדַע פַּלְגָא דְּלֵילְיָא אֵימַת? הַשְׁתָּא מֹשֶׁה רַבֵּינוּ לָא הֲוָה יָדַע, דִּכְתִיב ״כַּחֲצוֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם״.",
+      "es": "¿Y David sabía cuándo era exactamente la medianoche? ¡Si Moshé Rabeinu no lo sabía, pues está escrito (Shemot 11:4) \"CERCA de la medianoche saldré en medio de Egipto\"!",
+      "anota": ["g3b-moshe-david"]
+    },
+    {
+      "n": 28,
+      "tag": "guemará · resolución sobre Moshé",
+      "he": "מַאי ״כַּחֲצוֹת״. אִילֵימָא דַּאֲמַר לֵיהּ קוּדְשָׁא בְּרִיךְ הוּא ״כַּחֲצוֹת״ — מִי אִיכָּא סְפֵיקָא קַמֵּי שְׁמַיָּא?! אֶלָּא: דַּאֲמַר לֵיהּ (לִמְחַר) ״בַּחֲצוֹת״ (כִּי הַשְׁתָּא), וַאֲתָא אִיהוּ וַאֲמַר ״כַּחֲצוֹת״, אַלְמָא: מְסַפְּקָא לֵיהּ, וְדָוִד הֲוָה יָדַע?!",
+      "es": "¿Qué significa \"cerca de la medianoche\"? Si dices que HKBH le dijo \"cerca de\" — ¡¿acaso hay duda ante el Cielo?! Sino que (HKBH) le dijo \"a la medianoche\" (exactamente), y vino él (Moshé) y dijo \"cerca de la medianoche\". Por lo tanto: Moshé estaba en duda. ¡¿Y David sí sabía?!",
+      "anota": ["g3b-moshe-david"]
+    },
+    {
+      "n": 29,
+      "tag": "guemará · LA ARPA DE DAVID",
+      "he": "דָּוִד, סִימָנָא הֲוָה לֵיהּ, דְּאָמַר רַב אַחָא בַּר בִּיזְנָא, אָמַר רַבִּי שִׁמְעוֹן חֲסִידָא: כִּנּוֹר הָיָה תָּלוּי לְמַעְלָה מִמִּטָּתוֹ שֶׁל דָּוִד, וְכֵיוָן שֶׁהִגִּיעַ חֲצוֹת לַיְלָה, בָּא רוּחַ צְפוֹנִית וְנוֹשֶׁבֶת בּוֹ וּמְנַגֵּן מֵאֵלָיו, מִיָּד הָיָה עוֹמֵד וְעוֹסֵק בַּתּוֹרָה עַד שֶׁעָלָה עַמּוּד הַשַּׁחַר.",
+      "es": "David tenía una señal — pues dijo Rav Aja bar Bizna en nombre de R. Shimón Jasidá: una arpa (kinor) colgaba encima de la cama de David, y al llegar la medianoche, venía un viento del norte y soplaba en ella y la hacía tocar sola. Inmediatamente David se levantaba y se ocupaba de la Torá hasta que subía la columna del amanecer.",
+      "anota": ["g3b-kinor"]
+    },
+    {
+      "n": 30,
+      "tag": "guemará · al amanecer · sanedrín",
+      "he": "כֵּיוָן שֶׁעָלָה עַמּוּד הַשַּׁחַר נִכְנְסוּ חַכְמֵי יִשְׂרָאֵל אֶצְלוֹ. אָמְרוּ לוֹ: אֲדוֹנֵינוּ הַמֶּלֶךְ, עַמְּךָ יִשְׂרָאֵל צְרִיכִין פַּרְנָסָה. אָמַר לָהֶם: לְכוּ וְהִתְפַּרְנְסוּ זֶה מִזֶּה. אָמְרוּ לוֹ: אֵין הַקּוֹמֶץ מַשְׂבִּיעַ אֶת הָאֲרִי, וְאֵין הַבּוֹר מִתְמַלֵּא מֵחוּלְיָתוֹ. אָמַר לָהֶם: לְכוּ וּפִשְׁטוּ יְדֵיכֶם בִּגְדוּד.",
+      "es": "Al subir la columna del amanecer entraron los sabios de Israel ante él. Le dijeron: nuestro amo el rey, tu pueblo Israel necesita sustento (parnasá). Les dijo: vayan y sosténganse unos a otros. Le dijeron: el puñado no sacia al león, y el pozo no se llena de su propio cavado. Les dijo: vayan y extiendan las manos en una tropa (= expedición de saqueo militar legítimo).",
+      "anota": ["g3b-ajitofel"]
+    },
+    {
+      "n": 31,
+      "tag": "guemará · el proceso de gobierno",
+      "he": "מִיָּד יוֹעֲצִים בַּאֲחִיתוֹפֶל, וְנִמְלָכִין בְּסַנְהֶדְרִין, וְשׁוֹאֲלִין בְּאוּרִים וְתוּמִּים.",
+      "es": "Inmediatamente consultan con Ajitofel (el consejero), se aconsejan con el Sanhedrín, e inquieren con los Urim ve-Tumim.",
+      "anota": ["g3b-ajitofel"]
+    },
+    {
+      "n": 32,
+      "tag": "guemará · prueba escrituraria",
+      "he": "אָמַר רַב יוֹסֵף: מַאי קְרָא? דִּכְתִיב ״וְאַחֲרֵי אֲחִיתֹפֶל בְּנָיָהוּ בֶּן יְהוֹיָדָע וְאֶבְיָתָר וְשַׂר צָבָא לַמֶּלֶךְ יוֹאָב״. אֲחִיתוֹפֶל — זֶה יוֹעֵץ, וְכֵן הוּא אוֹמֵר: ״וַעֲצַת אֲחִיתֹפֶל אֲשֶׁר יָעַץ בַּיָּמִים הָהֵם כַּאֲשֶׁר יִשְׁאַל אִישׁ בִּדְבַר הָאֱלֹהִים״.",
+      "es": "Dijo Rav Yosef: ¿cuál es el verso? Está escrito (Divrei HaYamim I 27:34): \"y después de Ajitofel, Benayahu hijo de Yehoyadá y Evyatar y el ministro del ejército del rey, Yoav\". Ajitofel — este es el CONSEJERO; y así dice: \"y el consejo de Ajitofel que aconsejaba en aquellos días era como cuando un hombre consulta la palabra de Dios\" (Shmuel II 16:23).",
+      "anota": ["g3b-ajitofel"]
+    }
+  ],
+
+  "unidades": [
+    {
+      "id": "g3b-chashad-needed",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿por qué CHASHAD?",
+      "lineas": [1, 2, 3],
+      "titulo": "¿Por qué hace falta la razón \"sospecha\"?",
+      "resumen": "La guemará pregunta: si \"derrumbe\" y \"demonios\" ya cubren los peligros, ¿para qué agregar \"sospecha\" (de inmoralidad)? La respuesta llega por capas: chashad cubre el caso de ruina NUEVA (donde no hay derrumbe) Y de DOS personas juntas (donde los demonios pierden poder) PERO uno de los dos es פריץ (inmoral), de modo que la sospecha social sigue importando. Cada razón cubre un caso límite donde las otras dos fallan.",
+      "dialogo": [
+        { "voz": "stam", "texto": "Cierre de la baraita de 3a: hay tres razones para no entrar a una ruina — sospecha, derrumbe, demonios. Pero la guemará pregunta: ¿por qué necesitamos las tres? ¿No bastan dos?" },
+        { "voz": "stam", "texto": "Sospecha podría derivarse de derrumbe (no entres por el riesgo físico)... pero בְּחַדְתִּי — en una ruina NUEVA no hay riesgo de derrumbe. Entonces chashad es la única razón que aplica." },
+        { "voz": "stam", "texto": "Sospecha podría derivarse de demonios (no entres porque hay riesgo espiritual)... pero בִּתְרֵי — cuando son DOS personas, los demonios no atacan. Entonces chashad es la única razón." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "¡Pero si son dos personas tampoco hay sospecha (un hombre no se sospecha solo de otros dos)! La guemará responde: בִּתְרֵי וּפְרִיצִי — cuando son dos pero conocidos como inmorales. La sospecha social aún pesa." },
+        { "voz": "stam", "texto": "El patrón se repetirá para mafolet y mazikin. Cada razón cubre un caso límite donde las otras dos no aplican. La halajá NO tolera redundancias." }
+      ]
+    },
+    {
+      "id": "g3b-mafolet-needed",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿por qué MAFOLET?",
+      "lineas": [4, 5],
+      "titulo": "¿Por qué hace falta la razón \"derrumbe\"?",
+      "resumen": "La guemará repite el patrón con derrumbe (mafolet). ¿No bastan chashad + mazikin? Respuesta: בִּתְרֵי וּכְשֵׁרֵי — cuando son dos íntegros (no aplica chashad, no aplica mazikin porque son dos), pero la ruina puede derrumbarse sobre sus cabezas. Mafolet aporta una protección física que las otras razones no ofrecen.",
+      "dialogo": [
+        { "voz": "stam", "texto": "Misma pregunta sobre el derrumbe: ¿no podríamos derivarlo de sospecha y demonios?" },
+        { "voz": "stam", "texto": "Respuesta: בִּתְרֵי וּכְשֵׁרֵי — dos personas íntegras. No hay chashad (son honestos), no hay mazikin (son dos), PERO la ruina antigua puede caerse sobre ellos." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Cada razón cubre exactamente un escenario único. La halajá teje una malla — y el tejido necesita las tres hebras." }
+      ]
+    },
+    {
+      "id": "g3b-mazikin-needed",
+      "tipo": "kushya",
+      "etiqueta": "Kushyá · ¿por qué MAZIKIN?",
+      "lineas": [6, 7, 8, 9],
+      "titulo": "¿Por qué hace falta la razón \"demonios\"?",
+      "resumen": "El último escalón del análisis. ¿No bastan chashad + mafolet? Caso límite: בְּחוּרְבָּה חַדְתִּי וּבִתְרֵי וּכְשֵׁרֵי — ruina nueva (no mafolet), dos íntegros (no chashad), pero demonios sí. Pero — objeta el stam — ¡si son dos tampoco hay demonios! Respuesta final con dos rutas: בִּמְקוֹמָן (\"en el lugar (frecuentado) de los demonios sí nos preocupamos\"), o (alternativamente) un caso de UNA sola persona en ruina nueva descampada donde la mujer no llega (no chashad), no hay derrumbe (es nueva) — pero hay demonios.",
+      "dialogo": [
+        { "voz": "stam", "texto": "Ahora la pregunta sobre demonios. ¿No basta con chashad + mafolet? Sí, pero hay un caso límite: בְּחוּרְבָּה חַדְתִּי וּבִתְרֵי וּכְשֵׁרֵי — ruina NUEVA, dos personas ÍNTEGRAS." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "¡Pero si son dos, tampoco aplican los demonios!" },
+        { "voz": "stam", "texto": "Dos respuestas. (a) בִּמְקוֹמָן חָיְישִׁינַן — en el lugar mismo de los demonios sí nos cuidamos, aun siendo dos. (b) Alternativa: hablamos de UN solo individuo en una ruina nueva DESCAMPADA — la mujer no frecuenta el campo (sin chashad), es nueva (sin mafolet), pero los demonios sí actúan." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "La sugyá termina con TRES escenarios distintos, uno para cada razón. La economía halájica del Bavlí: ningún elemento sobra, cada elemento tiene su nicho exacto." }
+      ]
+    },
+    {
+      "id": "g3b-baraita-vigilias",
+      "tipo": "baraita",
+      "etiqueta": "Baraita · ¿3 o 4 vigilias?",
+      "lineas": [10],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "titulo": "El debate completo Rabbi vs R. Natán sobre las vigilias"
+      },
+      "titulo": "La baraita que enuncia el debate",
+      "resumen": "Una sola línea fundadora: \"ארבע משמרות הוי הלילה דברי רבי. רבי נתן אומר שלש\" — \"cuatro vigilias tiene la noche, palabras de Rabbi; R. Natán dice: tres\". La guemará dedicará seis líneas siguientes a las pruebas escriturarias de cada uno. Es el debate halájico-cósmico central de Berajot 3.",
+      "dialogo": [
+        { "voz": "tana", "texto": "Cuatro vigilias tiene la noche — palabras de Rabbi." },
+        { "voz": "tana", "etiqueta": "R. Natán", "texto": "Tres." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "Una línea, dos sabios, una división del tiempo. La aritmética: si la noche dura 12 horas, 4 vigilias = 3 horas cada una; 3 vigilias = 4 horas. La diferencia no es solo numérica — toca la posición de los versos bíblicos sobre חצות (\"medianoche\") y sobre las אשמורות (\"vigilias\")." },
+        { "voz": "stam", "texto": "Las siguientes seis líneas son un duelo de versos: cada sabio aporta una prueba escrituraria, el otro la reinterpreta, hasta que Rav Ashi (línea 16) reconcilia los dos sistemas. Esta sugyá enseña una lección epistemológica: a veces los versos no \"deciden\" — coexisten." }
+      ]
+    },
+    {
+      "id": "g3b-natan-gidon",
+      "tipo": "memra",
+      "etiqueta": "R. Natán · prueba (Gideon)",
+      "lineas": [11],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "highlight": "eliezer-2",
+        "titulo": "R. Natán: la vigilia intermedia (3 vigilias)"
+      },
+      "titulo": "\"Intermedia\" implica una sola en el medio",
+      "resumen": "R. Natán cita Shoftim 7:19: \"Y vino Gideón... al comienzo de la vigilia INTERMEDIA (התיכונה)\". Una baraita interpreta: \"intermedia\" significa que hay algo antes y algo después. Conclusión natural: 3 vigilias, la intermedia rodeada por una a cada lado.",
+      "dialogo": [
+        { "voz": "r-natan", "etiqueta": "R. Natán", "texto": "Está escrito de Gideón: \"al comienzo de la vigilia התיכונה\" — la intermedia. Una baraita aclara: no se dice 'intermedia' sino cuando hay algo antes y algo después." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Si hay UNA intermedia con UNA antes y UNA después = TRES vigilias total." },
+        { "voz": "stam", "texto": "Es un argumento aritmético desde el lenguaje del verso. La estructura simétrica que tichona implica solo puede tener un centro — y eso requiere número impar." }
+      ]
+    },
+    {
+      "id": "g3b-rabbi-tichona",
+      "tipo": "teruts",
+      "etiqueta": "Rabbi reinterpreta · R. Natán refuta",
+      "lineas": [12, 13],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "highlight": "rabbi-2",
+        "titulo": "Rabbi: \"intermedia entre las intermedias\""
+      },
+      "titulo": "Lectura forzada vs lectura llana",
+      "resumen": "Rabbi defiende su lectura: תִּיכוֹנָה puede ser una DE LAS dos intermedias en un sistema de cuatro (la 2da o la 3ra, ambas son \"intermedias\"). R. Natán refuta tajante: ¿acaso el verso dice \"intermedia entre las intermedias\"? ¡Solo dice \"intermedia\"! La lectura llana (peshat) sostiene a R. Natán; la lectura forzada (de Rabbi) requiere mucho contexto adicional. La sugyá no resuelve aquí — cada uno mantiene su posición.",
+      "dialogo": [
+        { "voz": "r-meir", "etiqueta": "Rabbi", "texto": "Acepto el verso, pero \"intermedia\" no exige exactamente una. Puede significar una de las intermedias — en un sistema de cuatro, hay DOS centrales (la 2da y la 3ra), ambas son \"intermedias\"." },
+        { "voz": "r-natan", "etiqueta": "R. Natán", "texto": "¿Acaso está escrito \"intermedia DE LAS intermedias\"? Solo dice תיכונה — una intermedia. Tu lectura agrega palabras al verso." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Es una pelea de hermenéutica. R. Natán defiende la lectura literal del verso; Rabbi defiende una lectura más amplia que permite reconciliar con otras fuentes." },
+        { "voz": "stam", "texto": "Esta sub-sugyá demuestra que un mismo verso admite múltiples lecturas legítimas — y la halajá requiere CRITERIOS EXTERNOS al verso para decidir. Por eso vendrán pruebas adicionales en la línea 14." }
+      ]
+    },
+    {
+      "id": "g3b-rabbi-tehilim",
+      "tipo": "memra",
+      "etiqueta": "Rabbi · prueba (Tehilim)",
+      "lineas": [14],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "highlight": "rabbi-2",
+        "titulo": "Rabbi: el sistema de 4 vigilias"
+      },
+      "titulo": "Dos versos de David, una sola conclusión",
+      "resumen": "R. Zerika en cadena (R. Ami, R. Yehoshua ben Levi) da el razonamiento de Rabbi: David dice en Tehilim 119:62 \"חֲצוֹת לַיְלָה אָקוּם\" — me levanto A LA MEDIANOCHE. Y en 119:148 dice \"קִדְּמוּ עֵינַי אַשְׁמוּרוֹת\" — mis ojos se adelantaron a las VIGILIAS (plural). Si David se levanta exactamente a chatzot Y se adelanta a las vigilias, entonces una vigilia termina EXACTAMENTE a chatzot. Eso solo funciona en un sistema de 4 vigilias (la 2da termina a chatzot). En 3 vigilias, chatzot cae a la mitad de la 2da — no en un límite.",
+      "dialogo": [
+        { "voz": "stam", "texto": "¿Cuál es la prueba de Rabbi? La cadena: R. Zerika → R. Ami → R. Yehoshua ben Levi. Dos versos de David:" },
+        { "voz": "stam", "texto": "Tehilim 119:62 — \"חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לָךְ\" — \"a la medianoche me levanto a alabarte\"." },
+        { "voz": "stam", "texto": "Tehilim 119:148 — \"קִדְּמוּ עֵינַי אַשְׁמוּרוֹת\" — \"mis ojos se adelantaron a las vigilias\" (en plural)." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Si David se levanta a chatzot Y eso es \"adelantarse a las vigilias\", entonces una vigilia DEBE empezar EN chatzot. En 4 vigilias de 3 horas, sí (la 3ra empieza a chatzot). En 3 vigilias de 4 horas, chatzot cae a la mitad de la 2da — no en un límite. Quod erat demonstrandum: 4 vigilias." }
+      ]
+    },
+    {
+      "id": "g3b-natan-yehoshua",
+      "tipo": "teruts",
+      "etiqueta": "R. Natán · alianza con R. Yehoshua",
+      "lineas": [15],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "highlight": "eliezer-2",
+        "titulo": "R. Natán defiende las 3 vigilias"
+      },
+      "titulo": "R. Natán prefiere 3 vigilias, redondea hacia abajo",
+      "resumen": "R. Natán toma la mishná de Berajot que cita la opinión de R. Yehoshua: \"hasta tres horas del día — porque los reyes acostumbran levantarse a las tres\". Cálculo: 6 horas de noche + 2 horas de día desde el amanecer hasta las 8 (las 3 contadas desde el alba) = 8 horas. En 3 vigilias de 4 horas, son DOS vigilias completas. En 4 vigilias de 3 horas, esto sería 2 + 2/3, raro. Por eso R. Natán prefiere 3.",
+      "dialogo": [
+        { "voz": "r-natan", "etiqueta": "R. Natán", "texto": "Sostengo como R. Yehoshua, que dice en la mishná: hasta las tres horas, pues los reyes se levantan a las tres horas." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Las 3 horas se cuentan desde el amanecer. La noche dura 6 horas (hasta el amanecer), las 3 horas de mañana son adicionales — total 8 horas. En 3 vigilias de 4 horas, eso es exactamente 2 vigilias. Es un sistema limpio. En 4 vigilias de 3 horas, da 2.67 vigilias — feo." },
+        { "voz": "stam", "texto": "R. Natán argumenta por LIMPIEZA ARITMÉTICA: la cifra de R. Yehoshua \"cuadra\" mejor en 3 vigilias. Rabbi responderá (a través de Rav Ashi) que cuadra igual en 4." }
+      ]
+    },
+    {
+      "id": "g3b-rav-ashi-vigilia",
+      "tipo": "teruts",
+      "etiqueta": "Rav Ashi reconcilia",
+      "lineas": [16],
+      "diagrama": {
+        "src": "diagramas/berakhot-3a.html",
+        "highlight": "rabbi-2",
+        "titulo": "Rav Ashi defiende el sistema de 4"
+      },
+      "titulo": "Una vigilia y media también es \"vigilias\"",
+      "resumen": "Rav Ashi (amorá tardío, redactor del Bavlí) salva el sistema de 4 vigilias: aún en el cálculo de R. Yehoshua, las 8 horas resultantes en 4 vigilias de 3 horas dan 2.67 — es decir, 2 vigilias y media (más una pizca). Y \"una vigilia y media\" se sigue llamando, en plural, אַשְׁמוּרוֹת. La línea de R. Natán pierde el argumento aritmético.",
+      "dialogo": [
+        { "voz": "rav-ashi", "etiqueta": "Rav Ashi", "texto": "Una vigilia y media también se llaman 'משמרות' (en plural, vigilias). El razonamiento de R. Natán no es decisivo." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Rav Ashi rescata la posición de Rabbi sin invalidar a R. Natán: cada uno tiene una lectura coherente del cosmos nocturno. La sugyá no \"decide\"." },
+        { "voz": "stam", "texto": "Para la halajá práctica, esta indecisión importa: el ritmo de la noche puede ser tripartito o tetrapartito según el sabio. La mishná y los autores posteriores conservan ambas tradiciones." }
+      ]
+    },
+    {
+      "id": "g3b-bifne-hamet",
+      "tipo": "memra",
+      "etiqueta": "Aforismo · frente al muerto",
+      "lineas": [17, 18, 19],
+      "titulo": "Una memrá tangencial — y su doble lectura",
+      "resumen": "R. Yehoshua ben Levi (vía la misma cadena R. Zerika → R. Ami): \"no se dice frente al muerto sino sus palabras\". La idea: hablar de cosas que el difunto ya no puede experimentar es una crueldad sutil. R. Abba bar Kahaná lo matiza en dos versiones opuestas: (a) solo aplica a palabras de Torá (porque el muerto no podrá ya estudiar); asuntos cotidianos son OK. (b) APENAS aplica a palabras de Torá, y CUANTO MÁS a asuntos cotidianos. El stam preserva ambas tradiciones — es una memrá compleja sobre la presencia del muerto.",
+      "dialogo": [
+        { "voz": "r-yehoshua", "etiqueta": "R. Yehoshua ben Levi", "texto": "אֵין אוֹמְרִין בִּפְנֵי הַמֵּת אֶלָּא דְּבָרָיו שֶׁל מֵת — no se dice frente al muerto sino las palabras que le corresponden a él." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "¿Por qué la guemará trae este aforismo aquí, en medio del debate sobre vigilias? Parece desconectado." },
+        { "voz": "stam", "texto": "La conexión es asociativa: la memrá viene de la MISMA cadena (Zerika → Ami → Yehoshua ben Levi) que la prueba de Rabbi en la línea 14. El editor del Bavlí agrupa por TRANSMISOR, no solo por tema. Y luego se conectará temáticamente con David — la próxima sección." },
+        { "voz": "stam", "texto": "Las dos versiones (אִיכָּא דְאָמְרִי) muestran: la prudencia ante un muerto puede prohibir solo Torá (cuya pérdida le duele al difunto) o TODO (toda charla es indecente). La halajá deja ambas pies." }
+      ]
+    },
+    {
+      "id": "g3b-david-nshef",
+      "tipo": "kushya",
+      "etiqueta": "¿David a chatzot o desde נשף?",
+      "lineas": [20],
+      "titulo": "David se levantaba ANTES de la medianoche",
+      "resumen": "Pivote dramático. La sugyá pasa de la teología abstracta a la vida del rey David. Aparente contradicción: la prueba de Rabbi (línea 14) usó Tehilim 119:62 — David se levanta A LA MEDIANOCHE. Pero el verso 119:147 dice \"קִדַּמְתִּי בַנֶּשֶׁף\" — David se adelanta al נשף. Y נשף, según Mishlei 7:9, es la TARDE. Entonces David se levanta desde la tarde, no de medianoche. ¿Cómo se compagina?",
+      "dialogo": [
+        { "voz": "stam", "texto": "¿Y David se levantaba a la medianoche? ¡Se levantaba desde la TARDE!" },
+        { "voz": "stam", "texto": "Pues Tehilim 119:147: 'קִדַּמְתִּי בַנֶּשֶׁף וָאֲשַׁוֵּעָה' — me adelanté en el נשף y clamé." },
+        { "voz": "stam", "texto": "Y ¿de dónde que נשף sea la tarde? Mishlei 7:9: 'בְּנֶשֶׁף בְּעֶרֶב יוֹם בְּאִישׁוֹן לַיְלָה וַאֲפֵלָה' — en el נשף, al atardecer del día, en la oscuridad de la noche..." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Tehilim 119:147 + Mishlei 7:9 = David se levanta desde la TARDE. Pero la prueba de Rabbi usó 119:62: David se levanta A LA MEDIANOCHE. Dos versos de David, dos horarios distintos." }
+      ]
+    },
+    {
+      "id": "g3b-david-suso-arye",
+      "tipo": "teruts",
+      "etiqueta": "Caballo somnoliento → león",
+      "lineas": [21, 22],
+      "titulo": "Hasta chatzot dormita; después se vuelve león",
+      "resumen": "Triple resolución. (1) Rav Oshaya en nombre de R. Aja: David quiso decir que NUNCA durmió pasada la medianoche — la \"levantada\" desde la tarde era contemplativa, parcial. (2) R. Zeira: hasta chatzot David מִתְנַמְנֵם כְּסוּס (\"dormitaba como un caballo\" — sueño superficial, los caballos duermen de pie); desde chatzot, מִתְגַּבֵּר כַּאֲרִי (\"se fortalecía como león\"). (3) Rav Ashi: hasta chatzot estudiaba Torá, después cantaba alabanzas. La imagen del caballo y león se vuelve icónica.",
+      "dialogo": [
+        { "voz": "rav-oshaya", "etiqueta": "Rav Oshaya / R. Aja", "texto": "Lo que David quiso decir: nunca pasó sobre mí la medianoche durmiendo. Desde la tarde estaba ya despierto en algún sentido." },
+        { "voz": "r-zeira", "etiqueta": "R. Zeira", "texto": "Hasta chatzot מִתְנַמְנֵם כְּסוּס — dormitaba como un caballo. Desde chatzot מִתְגַּבֵּר כַּאֲרִי — se fortalecía como león." },
+        { "voz": "rav-ashi", "etiqueta": "Rav Ashi", "texto": "Hasta chatzot se ocupaba en palabras de Torá. Desde chatzot, en cánticos y alabanzas." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Tres lecturas complementarias, ninguna excluyente. Hay una transición REAL a chatzot — pero qué cambia varía según el sabio. La imagen \"caballo → león\" pasa a la liturgia y al imaginario judío." }
+      ]
+    },
+    {
+      "id": "g3b-nshef-doble",
+      "tipo": "kushya",
+      "etiqueta": "Filología · ¿נשף = tarde o mañana?",
+      "lineas": [23, 24, 25, 26],
+      "titulo": "Ravá resuelve: hay DOS נשפים",
+      "resumen": "Sub-sugyá filológica. La guemará objeta: ¿נשף es realmente la tarde? Shmuel I 30:17 dice \"וַיַּכֵּם דָּוִד מֵהַנֶּשֶׁף וְעַד הָעֶרֶב לְמָחֳרָתָם\" — David golpeó (a los amalekim) desde נשף hasta el atardecer del día siguiente. Si נשף = tarde, no tiene sentido (¿de tarde a tarde por qué decirlo así?). Si נשף = mañana, sí tiene sentido. Ravá resuelve: hay DOS נשפים — uno cuando la noche \"se va\" (= amanecer) y otro cuando el día \"se va\" (= atardecer). La palabra es ambigua por diseño — capta el momento de TRANSICIÓN, no una hora específica.",
+      "dialogo": [
+        { "voz": "stam", "texto": "¿Y נשף es realmente la tarde? Hay un verso de Shmuel donde נשף parece ser la MAÑANA: 'David los golpeó מהנשף hasta la tarde del día siguiente'." },
+        { "voz": "stam", "texto": "Pregunta: ¿no significa eso \"desde la mañana hasta la noche\"? Si así fuera, נשף = mañana, no tarde." },
+        { "voz": "stam", "texto": "Respuesta: no, significa \"desde una tarde hasta otra tarde\"." },
+        { "voz": "stam", "texto": "Pero entonces el verso debería decir 'מהנשף ועד הנשף' o 'מהערב ועד הערב'. ¿Por qué mezclar términos?" },
+        { "voz": "rava", "etiqueta": "Ravá", "texto": "Hay DOS נשפים: נְשַׁף לֵילְיָא וְאָתֵי יְמָמָא (la noche \"se va\" y llega el día = amanecer); נְשַׁף יְמָמָא וְאָתֵי לֵילְיָא (el día \"se va\" y llega la noche = atardecer). La raíz נשף = irse, deslizarse." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Brillante. La palabra no nombra UN momento sino una ESTRUCTURA — la transición. Hay dos transiciones diarias. נשף es la palabra del umbral." }
+      ]
+    },
+    {
+      "id": "g3b-moshe-david",
+      "tipo": "kushya",
+      "etiqueta": "¿Cómo sabía David la hora?",
+      "lineas": [27, 28],
+      "titulo": "Si Moshé no sabía chatzot, ¿David sí?",
+      "resumen": "Provocación teológica. Moshé en Shemot 11:4 dijo a Faraón \"כַּחֲצוֹת הַלַּיְלָה\" — CERCA de la medianoche — sugiriendo que él no estaba 100% seguro de la hora exacta. Si Moshé Rabeinu (el profeta supremo) tenía duda, ¿cómo iba a saberlo David? La guemará responde primero descartando que HKBH le haya dicho \"כחצות\" (porque ante el Cielo no hay duda) — el problema fue que Moshé reportó con incertidumbre lo que HKBH le dijo \"בחצות\" exacto. Pero la pregunta sigue: ¿cómo lo sabe David?",
+      "dialogo": [
+        { "voz": "stam", "texto": "¿Y David sabía cuándo era exactamente chatzot? ¡Si Moshé Rabeinu no lo sabía!" },
+        { "voz": "stam", "texto": "Está escrito: \"כַּחֲצוֹת הַלַּיְלָה אֲנִי יוֹצֵא\" — CERCA de la medianoche. La preposición כ implica aproximación." },
+        { "voz": "stam", "texto": "¿Qué significa כחצות? Si HKBH le dijo כ a Moshé — ¡¿hay duda ante el Cielo?! Imposible. Sino: HKBH dijo בחצות (exacto), y Moshé reportó como כחצות (aproximación). El problema fue de Moshé." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Moshé tuvo duda. Pero David... ¿cómo iba a saber? La respuesta viene en la siguiente sección — la arpa, el viento, el milagro." }
+      ]
+    },
+    {
+      "id": "g3b-kinor",
+      "tipo": "maase",
+      "etiqueta": "La arpa de David",
+      "lineas": [29],
+      "titulo": "El viento del norte y la arpa que sonaba sola",
+      "resumen": "Una de las imágenes más memorables del Bavlí. Rav Aja bar Bizna en nombre de R. Shimón Jasidá: una kinor (arpa) colgaba sobre la cama de David. Al llegar chatzot, EL VIENTO DEL NORTE soplaba sobre las cuerdas y la arpa tocaba SOLA. Era la SEÑAL de David — el milagro que respondía a la pregunta de cómo conocía la hora. Se levantaba inmediatamente y se ocupaba de la Torá hasta el amanecer. La imagen une cosmología (la dirección del viento), música y vigilancia espiritual en un solo símbolo.",
+      "dialogo": [
+        { "voz": "rav-aja", "etiqueta": "Rav Aja bar Bizna / R. Shimón Jasidá", "texto": "David tenía una señal. Una arpa estaba colgada por encima de su cama. Cuando llegaba la medianoche venía un viento del norte y soplaba sobre las cuerdas, y la arpa tocaba SOLA." },
+        { "voz": "rav-aja", "etiqueta": "Rav Aja bar Bizna", "texto": "Inmediatamente David se levantaba y se ocupaba de la Torá hasta que subía la columna del amanecer." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Es una imagen extraordinaria. La arpa-reloj-del-rey. El viento del norte como mensajero. Y David — pastor convertido en monarca — sigue siendo el sirviente que se levanta a estudiar al sonido del instrumento que él mismo dominaba en juventud." },
+        { "voz": "chavruta", "etiqueta": "lector", "texto": "El milagro responde la kushyá de Moshé/David: David no SABÍA chatzot — la ARPA lo sabía. Y David solo necesitaba estar atento. Es una teología del oído." }
+      ]
+    },
+    {
+      "id": "g3b-ajitofel",
+      "tipo": "maase",
+      "etiqueta": "Sanedrín, Urim ve-Tumim",
+      "lineas": [30, 31, 32],
+      "titulo": "El rey al amanecer: parnasá, sanedrín, oráculo",
+      "resumen": "Al amanecer (cuando termina el estudio nocturno de David) entran los sabios y le plantean: \"el pueblo necesita parnasá (sustento)\". David responde primero: \"sosténganse unos a otros\". Ellos: \"el puñado no sacia al león\". David autoriza una expedición de saqueo militar — y se inicia el proceso constitucional: consultar con Ajitofel (consejero), aconsejar con el Sanedrín, inquerir con los Urim ve-Tumim. Tres niveles de decisión: humano experto, colectivo legal, oráculo divino. Rav Yosef prueba con Divrei HaYamim 27:34. Berajot 3b cierra el daf revelando cómo se gobierna un reino con sabiduría: NUNCA SOLO.",
+      "dialogo": [
+        { "voz": "stam", "texto": "Al subir la columna del amanecer entraron los sabios de Israel ante David." },
+        { "voz": "chachamim", "etiqueta": "Sabios de Israel", "texto": "Nuestro amo el rey, tu pueblo Israel necesita sustento." },
+        { "voz": "stam", "etiqueta": "David", "texto": "Vayan y sosténganse unos a otros." },
+        { "voz": "chachamim", "etiqueta": "Sabios", "texto": "El puñado no sacia al león, y el pozo no se llena de su propio cavado (= no se puede generar riqueza de la nada)." },
+        { "voz": "stam", "etiqueta": "David", "texto": "Vayan y extiendan las manos en una tropa (autoriza expedición militar legítima)." },
+        { "voz": "stam", "texto": "Inmediatamente: consultan con Ajitofel (consejero), se aconsejan con el Sanedrín, inquieren con los Urim ve-Tumim. Tres instancias para una sola decisión." },
+        { "voz": "chavruta", "etiqueta": "estudiante", "texto": "Berajot 3b termina con un retrato del gobierno justo: nadie decide solo. El rey escucha el sufrimiento del pueblo. Los sabios cuestionan la respuesta inicial. Cuando la decisión es difícil, hay tres niveles de consulta: humano-experto, colectivo, divino. El daf que abrió con vigilias nocturnas cierra con la vigilancia política del rey al amanecer." }
+      ]
+    }
+  ]
+}
