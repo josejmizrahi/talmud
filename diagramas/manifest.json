@@ -9,7 +9,8 @@
       "subtitulo": "cinco opiniones del inicio, cuatro del fin",
       "dapim": ["2a", "2b"],
       "grupo": "La gran sugyá del shema",
-      "estado": "listo"
+      "estado": "listo",
+      "puente_desde": "Apertura del Talmud Bavli — primera mishná, primera palabra: מאימתי (\"¿desde cuándo?\"). El editor no encontró un puente porque no hay tema previo."
     },
     {
       "slug": "vigilias-noche",
@@ -18,7 +19,8 @@
       "subtitulo": "Rabbi vs R. Natán · los signos terrestres",
       "dapim": ["3a", "3b"],
       "grupo": "La noche cósmica",
-      "estado": "listo"
+      "estado": "listo",
+      "puente_desde": "TÉCNICA: continuación halájica directa. La mishná dice que R. Eliezer marca el fin del zman shema en \"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA). La guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre cuántas vigilias tiene la noche en total? Se necesita esa aritmética para saber a qué hora termina exactamente el zman. La palabra אשמורה de la mishná dispara la sugyá entera sobre las vigilias."
     },
     {
       "slug": "r-yose-ruina",
@@ -27,7 +29,8 @@
       "subtitulo": "tres preguntas, la voz de la paloma",
       "dapim": ["3a"],
       "grupo": "La noche cósmica",
-      "estado": "pendiente"
+      "estado": "listo",
+      "puente_desde": "TÉCNICA: cadena por fórmula compartida. La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel: \"sobre cada vigilia HKBH se sienta y ruge como león y dice: אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca después \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que R. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS. Las dos piezas se unen por el texto compartido del lamento. Esta es la técnica más visible del editor: cuando dos pasajes comparten una fórmula, los pone adyacentes."
     },
     {
       "slug": "tres-razones-ruina",

@@ -1,0 +1,283 @@
+<div class="yose-interactivo">
+<style>
+  .yose-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .yose-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .yose-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .yose-leyenda .sepia  { background: rgba(107,68,35,0.10); border-color: var(--sepia); }
+  .yose-leyenda .azul   { background: rgba(30,58,95,0.10);  border-color: var(--azul); }
+  .yose-leyenda .rojo   { background: rgba(139,26,26,0.10); border-color: var(--rojo); }
+  .yose-leyenda .dorado { background: rgba(184,134,11,0.14); border-color: var(--dorado); }
+  .yose-diagrama svg { width: 100%; height: auto; display: block; }
+  .yose-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .yose-nodo:hover rect { stroke-width: 2 !important; }
+  .yose-nodo.activa rect { stroke-width: 2.5 !important; }
+  .yose-nodo.dim { opacity: 0.32; }
+  .yose-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .yose-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .yose-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .yose-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .yose-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .yose-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .yose-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="yose-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>la escena · Eliyahu</span>
+  <span><span class="swatch azul"></span>pregunta 1 · halajá del rezo</span>
+  <span><span class="swatch rojo"></span>pregunta 2 · la bat kol</span>
+  <span><span class="swatch dorado"></span>la consolación</span>
+</div>
+
+<div class="yose-diagrama">
+<svg viewBox="0 0 720 880" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 3a: R. Yose en la ruina con Eliyahu HaNavi · dos preguntas, la bat kol que gime como paloma, la consolación del Yehei shmei rabba</title>
+
+<defs>
+  <marker id="flecha-y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yose en la ruina · el encuentro con Eliyahu HaNavi</text>
+<text x="360" y="48" text-anchor="middle" font-size="12" fill="#6b4423">Berajot 3a · dos preguntas, la voz de la paloma, la consolación del Yehei shmei rabba</text>
+
+<!-- ====================================================================== -->
+<!-- ESCENA · PRÓLOGO                                                        -->
+<!-- ====================================================================== -->
+<text x="60" y="82" font-size="10" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PRÓLOGO · LA ESCENA</text>
+
+<g class="yose-nodo" data-id="setting">
+  <rect x="60" y="94" width="640" height="78" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="78" y="116" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"Una vez iba yo por el camino y entré a una de las ruinas de Yerushalayim para orar"</text>
+  <text x="682" y="116" text-anchor="end" font-size="11" direction="rtl" fill="#6b4423" font-weight="500">פַּעַם אַחַת הָיִיתִי מְהַלֵּךְ בַּדֶּרֶךְ</text>
+  <text x="78" y="138" font-size="10" fill="#3d2f23">R. Yose elige las RUINAS post-destrucción del Bet HaMikdash como lugar de oración. Memoria viva del Templo perdido.</text>
+  <text x="78" y="156" font-size="9" fill="#6b4423" font-style="italic">cada acción del relato será luego corregida o iluminada por Eliyahu</text>
+</g>
+
+<g class="yose-nodo" data-id="eliyahu-guarda">
+  <rect x="60" y="184" width="640" height="60" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="78" y="206" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Eliyahu HaNavi VINO y MONTÓ GUARDIA en la puerta — esperó a que R. Yose terminara</text>
+  <text x="682" y="206" text-anchor="end" font-size="11" direction="rtl" fill="#6b4423" font-weight="500">בָּא אֵלִיָּהוּ זָכוּר לַטּוֹב וְשָׁמַר לִי</text>
+  <text x="78" y="226" font-size="9" fill="#6b4423" font-style="italic">Eliyahu cumple TRES funciones: protector físico (no hay peligro), garante teológico (la oración no se invalida), pedagogo</text>
+</g>
+
+<g class="yose-nodo" data-id="saludo">
+  <rect x="60" y="256" width="640" height="48" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="78" y="280" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Eliyahu: "שָׁלוֹם עָלֶיךָ, רַבִּי" · R. Yose: "שָׁלוֹם עָלֶיךָ, רַבִּי וּמוֹרִי"</text>
+  <text x="682" y="280" text-anchor="end" font-size="10" direction="rtl" fill="#6b4423">דוקא — לא "מורי" אלא "רבי ומורי"</text>
+  <text x="78" y="297" font-size="9" fill="#6b4423" font-style="italic">R. Yose reconoce a Eliyahu como rabí Y maestro (rabbi vs rabbi-u-mori) — humildad ante el profeta inmortal</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- PRIMERA PREGUNTA · HALAJÁ DEL REZO                                      -->
+<!-- ====================================================================== -->
+<text x="60" y="332" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PRIMERA PREGUNTA · HALAJÁ DEL REZO EN EL CAMINO</text>
+
+<g class="yose-nodo" data-id="pregunta-1">
+  <rect x="60" y="344" width="640" height="120" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="78" y="366" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Eliyahu: "Hijo mío, ¿POR QUÉ entraste a esta ruina?"</text>
+  <text x="682" y="366" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">מִפְּנֵי מָה נִכְנַסְתָּ לְחוּרְבָּה זוֹ?</text>
+  <text x="78" y="388" font-size="11" fill="#3d2f23">  · R. Yose: "para orar"</text>
+  <text x="78" y="406" font-size="11" fill="#3d2f23">  · Eliyahu: "deberías haber orado EN EL CAMINO"</text>
+  <text x="78" y="424" font-size="11" fill="#3d2f23">  · R. Yose: "tenía miedo de que me interrumpieran los pasantes"</text>
+  <text x="78" y="442" font-size="11" fill="#3d2f23">  · Eliyahu: "deberías haber orado una TEFILÁ KETZARÁ (oración breve)"</text>
+  <text x="78" y="459" font-size="9" fill="#6b4423" font-style="italic">DIÁLOGO ESCALONADO: cada respuesta de R. Yose es legítima, pero Eliyahu siempre ofrece una mejor opción halájica</text>
+</g>
+
+<g class="yose-nodo" data-id="tres-lecciones">
+  <rect x="60" y="476" width="640" height="116" rx="6" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="78" y="498" font-size="10" font-family="'JetBrains Mono', monospace" fill="#1e3a5f" letter-spacing="1.5">TRES COSAS QUE R. YOSE APRENDIÓ EN ESA HORA</text>
+  <text x="682" y="498" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">שְׁלֹשָׁה דְּבָרִים לָמַדְתִּי</text>
+  <!-- Tres lecciones en cajas internas -->
+  <g transform="translate(78,508)">
+    <rect x="0" y="0" width="195" height="76" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.8"/>
+    <text x="97" y="22" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">1.</text>
+    <text x="97" y="42" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">אֵין נִכְנָסִין לְחוּרְבָּה</text>
+    <text x="97" y="60" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">no se entra a ruinas</text>
+
+    <rect x="205" y="0" width="195" height="76" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.8"/>
+    <text x="302" y="22" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">2.</text>
+    <text x="302" y="42" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">מִתְפַּלְּלִין בַּדֶּרֶךְ</text>
+    <text x="302" y="60" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">se reza en el camino</text>
+
+    <rect x="410" y="0" width="195" height="76" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.8"/>
+    <text x="507" y="22" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">3.</text>
+    <text x="507" y="42" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">תְּפִלָּה קְצָרָה</text>
+    <text x="507" y="60" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">en el camino · tefilá breve</text>
+  </g>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SEGUNDA PREGUNTA · LA BAT KOL                                           -->
+<!-- ====================================================================== -->
+<text x="60" y="622" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SEGUNDA PREGUNTA · LA VOZ DE LA RUINA</text>
+
+<g class="yose-nodo" data-id="pregunta-2">
+  <rect x="60" y="634" width="640" height="50" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="78" y="658" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Eliyahu: "Hijo mío, ¿QUÉ VOZ oíste en esta ruina?"</text>
+  <text x="682" y="658" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="500">מָה קוֹל שָׁמַעְתָּ בְּחוּרְבָּה זוֹ?</text>
+  <text x="78" y="676" font-size="9" fill="#6b4423" font-style="italic">Eliyahu sabe la respuesta — pero quiere que R. Yose la diga, porque solo así la noticia adquiere autoridad rabínica</text>
+</g>
+
+<g class="yose-nodo" data-id="bat-kol-paloma">
+  <rect x="60" y="696" width="640" height="98" rx="6" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="717" font-size="10" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">LA BAT KOL · GIME COMO PALOMA</text>
+  <text x="78" y="737" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"oí una bat kol que GIME COMO PALOMA y dice:"</text>
+  <text x="682" y="737" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="500">בַּת קוֹל שֶׁמְּנַהֶמֶת כְּיוֹנָה</text>
+  <text x="78" y="758" font-size="11" direction="ltr" fill="#3d2f23">  · אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי</text>
+  <text x="78" y="773" font-size="11" direction="ltr" fill="#3d2f23">  · וְשָׂרַפְתִּי אֶת הֵיכָלִי</text>
+  <text x="78" y="788" font-size="11" direction="ltr" fill="#3d2f23">  · וְהִגְלֵיתִי אֶת בָּנַי לְבֵין אוּמּוֹת הָעוֹלָם</text>
+</g>
+
+<g class="yose-nodo" data-id="tres-veces-dia">
+  <rect x="60" y="806" width="640" height="32" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="78" y="827" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Eliyahu: "no solo en esta hora — sino CADA DÍA, TRES VECES dice así" — coincide con las 3 vigilias</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- CONSOLACIÓN                                                             -->
+<!-- ====================================================================== -->
+
+<g class="yose-nodo" data-id="yehei-shmeh">
+  <rect x="60" y="850" width="640" height="22" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="78" y="866" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Y cuando Israel responde "יְהֵא שְׁמֵיהּ הַגָּדוֹל מְבֹורָךְ" en batei knesiot — HKBH mueve la cabeza con esperanza</text>
+</g>
+
+</svg>
+</div>
+
+<div class="yose-panel" id="yose-panel">
+  <p class="yose-vacio">Selecciona cualquier nodo para ver la cita exacta y su función en la narrativa.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'setting': {
+      titulo: 'La escena · una ruina de Yerushalayim',
+      hebreo: 'פַּעַם אַחַת הָיִיתִי מְהַלֵּךְ בַּדֶּרֶךְ וְנִכְנַסְתִּי לְחוּרְבָּה אַחַת מֵחוּרְבוֹת יְרוּשָׁלַיִם לְהִתְפַּלֵּל',
+      traduccion: '"Una vez iba yo por el camino y entré a una de las ruinas de Yerushalayim para orar"',
+      explicacion: 'R. Yose (tana de segunda/tercera generación, post-destrucción) elige las RUINAS POST-DESTRUCCIÓN del Bet HaMikdash como lugar de oración. Es una elección cargada: en lugar de buscar un beit knesset, busca el lugar de la pérdida. Hay aquí una teología tácita — orar entre los escombros para que la oración alcance la dimensión del duelo. La narrativa entera del encuentro con Eliyahu girará en torno a esa decisión: cada respuesta de R. Yose será examinada por Eliyahu, y cada lección dejará claro que el lugar del rezo importa.'
+    },
+    'eliyahu-guarda': {
+      titulo: 'Eliyahu llega y guarda la puerta',
+      hebreo: 'בָּא אֵלִיָּהוּ זָכוּר לַטּוֹב וְשָׁמַר לִי עַל הַפֶּתַח, וְהִמְתִּין לִי עַד שֶׁסִּייַּמְתִּי תְּפִלָּתִי',
+      traduccion: '"Vino Eliyahu — bendito sea su nombre — y guardó (la puerta) por mí, y me esperó hasta que terminé mi oración"',
+      explicacion: 'Eliyahu HaNavi (el profeta que nunca murió, según Melajim II 2:11) aparece con tres funciones simultáneas: (1) PROTECTOR FÍSICO — monta guardia para que R. Yose pueda terminar el rezo sin amenazas; (2) GARANTE TEOLÓGICO — su presencia confirma que el rezo en las ruinas no era infantilismo; (3) PEDAGOGO — esperará el final para enseñar las correcciones, no interrumpe. El epíteto "זכור לטוב" (bendito sea su recuerdo) marca a Eliyahu como el guardián post-mortem del pueblo de Israel. Su presencia en una ruina dice tácitamente: hay un sentido en estar entre los escombros.'
+    },
+    'saludo': {
+      titulo: 'El saludo · rabi vs rabi-u-mori',
+      hebreo: 'אָמַר לִי: "שָׁלוֹם עָלֶיךָ, רַבִּי" · וְאָמַרְתִּי לוֹ: "שָׁלוֹם עָלֶיךָ, רַבִּי וּמוֹרִי"',
+      traduccion: '"Me dijo: \'Shalom alecha, rabí\'. Y le dije: \'Shalom alecha, rabí Y MAESTRO\'"',
+      explicacion: 'Detalle minúsculo pero cargado de halajá. Eliyahu lo saluda como "rabí" (igual a igual entre sabios). R. Yose RESPONDE con "rabi-u-mori" — agrega la palabra "maestro". Es una microgramática del kavod halájico: cuando un alumno saluda a un maestro, no devuelve el mismo título — agrega uno más alto. Aquí R. Yose reconoce a Eliyahu no solo como colega sino como mentor. La tradición rabínica conserva este intercambio como modelo del trato entre talmid y rav. El que está ENSEÑADO añade kavod; el que está ENSEÑANDO solo iguala.'
+    },
+    'pregunta-1': {
+      titulo: 'Pregunta 1 · ¿por qué entraste? · diálogo escalonado',
+      hebreo: 'בְּנִי, מִפְּנֵי מָה נִכְנַסְתָּ לְחוּרְבָּה זוֹ? · "לְהִתְפַּלֵּל" · הָיָה לְךָ לְהִתְפַּלֵּל בַּדֶּרֶךְ · "מִתְיָרֵא הָיִיתִי שֶׁמָּא יַפְסִיקוּ" · הָיָה לְךָ לְהִתְפַּלֵּל תְּפִלָּה קְצָרָה',
+      traduccion: '"Hijo mío, ¿por qué entraste a esta ruina?" — la cadena de preguntas y respuestas',
+      explicacion: 'Eliyahu no critica frontalmente — usa la técnica del DIÁLOGO ESCALONADO. Cada respuesta de R. Yose es razonable; Eliyahu responde con una mejor opción halájica. (1) R. Yose: "para orar". Eliyahu: deberías haberlo hecho en el camino — no era necesario entrar a la ruina. (2) R. Yose: tenía miedo de que los pasantes me interrumpieran. Eliyahu: podías haber rezado una TEFILÁ KETZARÁ — la oración breve permitida en situaciones de premura o peligro. La técnica revela: hay siempre una opción que evita el riesgo. R. Yose había elegido el riesgo (entrar a la ruina) porque pensaba que era la única forma de orar concentrado. Eliyahu le muestra que existen TRES caminos halájicos alternativos.'
+    },
+    'tres-lecciones': {
+      titulo: 'Las tres lecciones que R. Yose aprendió',
+      hebreo: 'בְּאוֹתָהּ שָׁעָה לָמַדְתִּי מִמֶּנּוּ שְׁלֹשָׁה דְּבָרִים: (1) אֵין נִכְנָסִין לְחוּרְבָּה (2) מִתְפַּלְּלִין בַּדֶּרֶךְ (3) הַמִּתְפַּלֵּל בְּדֶרֶךְ מִתְפַּלֵּל תְּפִלָּה קְצָרָה',
+      traduccion: '"En esa hora aprendí de él tres cosas: (1) no se entra a una ruina (2) se reza en el camino (3) quien reza en el camino reza una tefilá breve"',
+      explicacion: 'R. Yose extrae TRES halajot del encuentro, una por cada paso del diálogo escalonado. NOTA IMPORTANTE: estas son las TRES LECCIONES HALÁJICAS de R. Yose mismo — distintas de las TRES RAZONES contra entrar a una ruina que la guemará desarrollará después (en la baraita "תנו רבנן: מפני שלושה דברים אין נכנסין לחורבה"). El editor del Bavli ENCADENA aquí: la primera lección de R. Yose ("no se entra a una ruina") dispara la pregunta "¿pero POR QUÉ exactamente?" — y eso lanza la sugyá de las tres razones (chashad / mafolet / mazikin), que es el siguiente diagrama (#4). La narrativa de R. Yose no es solo aggadá; es la PUERTA halájica al análisis de la siguiente sección.'
+    },
+    'pregunta-2': {
+      titulo: 'Pregunta 2 · ¿qué voz oíste?',
+      hebreo: 'בְּנִי, מָה קוֹל שָׁמַעְתָּ בְּחוּרְבָּה זוֹ?',
+      traduccion: '"Hijo mío, ¿qué voz oíste en esta ruina?"',
+      explicacion: 'La segunda pregunta marca un giro tonal. La primera era HALÁJICA (qué hiciste, qué deberías haber hecho). La segunda es TEOLÓGICA-MÍSTICA: ¿qué voz oíste en esa ruina? Eliyahu sabe que las ruinas del Templo no son lugares vacíos — algo se oye allí. Pero quiere que R. YOSE lo diga, porque solo así la noticia entra en el corpus rabínico con autoridad de testigo. Es la técnica del maestro que extrae el conocimiento del discípulo: yo no te digo lo que oíste — TÚ me dices lo que oíste, y yo te confirmo. La narrativa cambia de plano: pasamos de la halajá del rezo a la fenomenología del lamento divino.'
+    },
+    'bat-kol-paloma': {
+      titulo: 'La bat kol · gime como paloma · "Oy shehecharavti"',
+      hebreo: 'שָׁמַעְתִּי בַּת קוֹל שֶׁמְּנַהֶמֶת כְּיוֹנָה וְאוֹמֶרֶת: אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי לְבֵין אוּמּוֹת הָעוֹלָם',
+      traduccion: '"Oí una bat kol que GIME COMO PALOMA y dice: \'Ay, pues destruí mi casa, quemé mi santuario y exilié a mis hijos entre las naciones del mundo\'"',
+      explicacion: 'El núcleo teológico de toda la narrativa — y el PUENTE EDITORIAL con la sección anterior. La bat kol (voz celestial) GIME COMO PALOMA — מנהמת כיונה. La paloma en la tradición bíblica simboliza tanto a Israel ("yonati", Shir HaShirim) como al duelo. Y dice EXACTAMENTE las mismas palabras que Rav Yitzjak bar Shmuel había atribuido al "rugido del león" en la sección de vigilias (#2): "אוי שהחרבתי את ביתי...". El editor del Bavli pone esta narrativa AQUÍ precisamente porque la bat kol REPITE LA FÓRMULA. La doctrina cósmica: la misma Shejiná tiene DOS REGISTROS — el león que ruge sobre las vigilias y la paloma que gime en las ruinas. Misma pena, dos imágenes. La fuerza de la frase: HKBH habla en PRIMERA PERSONA del SUJETO de la destrucción ("YO destruí mi casa") — no es la destrucción enemiga, es la auto-tragedia divina.'
+    },
+    'tres-veces-dia': {
+      titulo: 'Revelación · cada día, tres veces',
+      hebreo: 'חַיֶּיךָ וְחַיֵּי רֹאשְׁךָ, לֹא שָׁעָה זוֹ בִּלְבַד אוֹמֶרֶת כָּךְ, אֶלָּא בְּכָל יוֹם וָיוֹם, שָׁלֹשׁ פְּעָמִים אוֹמֶרֶת כָּךְ',
+      traduccion: '"Por tu vida y la vida de tu cabeza — no solo en esta hora dice así, sino cada día, TRES VECES dice así"',
+      explicacion: 'Eliyahu jura con una fórmula intensa — "חייך וחיי ראשך" (por tu vida y la vida de tu cabeza) — y revela: la bat kol no es un evento único de esta ruina; es una LITURGIA CÓSMICA DIARIA. Tres veces al día HKBH lamenta así. El número "tres" no es accidental — conecta con las TRES VIGILIAS del diagrama anterior (#2) donde Rav Yitzjak bar Shmuel ya había dicho que HKBH ruge tres veces por noche. La voz/rugido/gemido es UN MISMO CICLO LITÚRGICO de tres tiempos. R. Yose obtiene una visión cosmológica completa: el cosmos tiene una banda sonora de duelo divino, tres veces por ciclo. La halajá del rezo humano (las tres tefilot diarias: shajarit, minjá, arvit) entra en resonancia con el ritmo del lamento divino. Rezamos cuando Hashem también gime.'
+    },
+    'yehei-shmeh': {
+      titulo: 'La consolación · cuando Israel dice "Yehei shmei rabba"',
+      hebreo: 'בְּשָׁעָה שֶׁיִּשְׂרָאֵל נִכְנָסִין לְבָתֵּי כְּנֵסִיּוֹת וּלְבָתֵּי מִדְרָשׁוֹת וְעוֹנִין "יְהֵא שְׁמֵיהּ הַגָּדוֹל מְבֹורָךְ" — הַקָּדוֹשׁ בָּרוּךְ הוּא מְנַעְנֵעַ רֹאשׁוֹ, וְאוֹמֵר: אַשְׁרֵי הַמֶּלֶךְ שֶׁמְּקַלְּסִין אוֹתוֹ בְּבֵיתוֹ כָּךְ',
+      traduccion: '"Cuando Israel entra a batei knesiot y batei midrashot y responde \'Yehei Shmei haGadol mevorach\' — HKBH mueve la cabeza y dice: \'Bendito el rey al que así alaban en Su casa\'"',
+      explicacion: 'Eliyahu cierra la narrativa con LA CONSOLACIÓN. La doctrina del lamento divino podría dejar al lector en la desesperación; Eliyahu agrega que existe una RESPUESTA HUMANA que mueve a HKBH a la esperanza. Cuando los hijos de Israel — los mismos que HKBH dijo haber exiliado — entran a las casas de oración y estudio y responden el "Yehei Shmei rabba" del Kaddish ("Sea su Gran Nombre bendito"), HKBH MUEVE LA CABEZA (gesto de afirmación/esperanza, "מנענע ראשו") y dice una doble frase: feliz (אשרי) el rey alabado así Y QUÉ TIENE (מה לו) el padre que exilió a sus hijos. La frase doble captura la complejidad: el alabado y el doloroso conviven. Por eso esta enseñanza es la fuente halájica de la importancia suprema del KADDISH y de la respuesta "Yehei shmei rabba" — son la liturgia que CONSUELA A HKBH MISMO de su propia decisión de exilio. La acción humana puede mover al cielo.'
+    }
+  };
+
+  const panel = document.getElementById('yose-panel');
+  const nodos = document.querySelectorAll('.yose-nodo');
+
+  nodos.forEach(n => {
+    n.addEventListener('click', () => {
+      const id = n.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      nodos.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== n) o.classList.add('dim');
+      });
+      n.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="yose-panel-header">
+          <h4 class="yose-panel-titulo">${d.titulo}</h4>
+          <div class="yose-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="yose-panel-traduccion">${d.traduccion}</p>
+        <p class="yose-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>
