@@ -143,10 +143,35 @@
         "4a"
       ],
       "grupo": "El rey David",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/noche-de-david.html",
+      "sabios": [
+        "rav-oshaya",
+        "r-zeira",
+        "rav-ashi",
+        "rava",
+        "rav-aja-bar-bizna",
+        "r-shimon-jasida",
+        "rav-yitzjak-bar-adda"
+      ],
+      "pesukim": [
+        "tehilim-119-62",
+        "tehilim-119-147",
+        "mishlei-7-9",
+        "tehilim-57-9",
+        "shemot-11-4"
+      ],
+      "conceptos": [
+        "chatzot",
+        "arpa-de-david",
+        "viento-del-norte",
+        "nshef",
+        "knor-shel-david"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "La sugyá anterior estableció que R. Eliezer fija el inicio del zman shema\nen \"tzeit hakojavim\" y el límite máximo en \"ad chatzot\" (hasta la medianoche).\nLa palabra חֲצוֹת (medianoche) dispara la guemará: ¿cómo sabía el rey David\nexactamente a qué hora era la medianoche? La pregunta conecta la halajá\npráctica del zman shema con la vida nocturna del rey-poeta.\n"
+      }
     },
     {
       "slug": "gobierno-tripartito",
@@ -480,6 +505,34 @@
       ]
     },
     {
+      "slug": "rav-oshaya",
+      "nombre": "Rav Oshaya"
+    },
+    {
+      "slug": "r-zeira",
+      "nombre": "R Zeira"
+    },
+    {
+      "slug": "rav-ashi",
+      "nombre": "Rav Ashi"
+    },
+    {
+      "slug": "rava",
+      "nombre": "Rava"
+    },
+    {
+      "slug": "rav-aja-bar-bizna",
+      "nombre": "Rav Aja Bar Bizna"
+    },
+    {
+      "slug": "r-shimon-jasida",
+      "nombre": "R Shimon Jasida"
+    },
+    {
+      "slug": "rav-yitzjak-bar-adda",
+      "nombre": "Rav Yitzjak Bar Adda"
+    },
+    {
       "slug": "tanu-rabanan",
       "nombre": "Tanu Rabanan"
     },
@@ -490,10 +543,6 @@
     {
       "slug": "rav-yitzjak-bar-shmuel",
       "nombre": "Rav Yitzjak Bar Shmuel"
-    },
-    {
-      "slug": "rav-ashi",
-      "nombre": "Rav Ashi"
     },
     {
       "slug": "r-yehoshua",
@@ -544,6 +593,22 @@
       "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
     },
     {
+      "slug": "tehilim-119-147",
+      "nombre": "Tehilim 119 147"
+    },
+    {
+      "slug": "mishlei-7-9",
+      "nombre": "Mishlei 7 9"
+    },
+    {
+      "slug": "tehilim-57-9",
+      "nombre": "Tehilim 57 9"
+    },
+    {
+      "slug": "shemot-11-4",
+      "nombre": "Shemot 11 4"
+    },
+    {
       "slug": "shoftim-7-19",
       "nombre": "Shoftim 7 19"
     },
@@ -571,6 +636,26 @@
       "slug": "mazikin",
       "nombre": "Mazikin (demonios)",
       "hebreo": "מַזִּיקִין"
+    },
+    {
+      "slug": "chatzot",
+      "nombre": "Chatzot"
+    },
+    {
+      "slug": "arpa-de-david",
+      "nombre": "Arpa De David"
+    },
+    {
+      "slug": "viento-del-norte",
+      "nombre": "Viento Del Norte"
+    },
+    {
+      "slug": "nshef",
+      "nombre": "Nshef"
+    },
+    {
+      "slug": "knor-shel-david",
+      "nombre": "Knor Shel David"
     },
     {
       "slug": "ruina-yerushalayim",
@@ -655,6 +740,14 @@
       "peso": 3
     },
     {
+      "from": "tres-razones-ruina",
+      "to": "noche-de-david",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "La sugyá anterior estableció que R. Eliezer fija el inicio del zman shema\nen \"tzeit hakojavim\" y el límite máximo en \"ad chatzot\" (hasta la medianoche).\nLa palabra חֲצוֹת (medianoche) dispara la guemará: ¿cómo sabía el rey David\nexactamente a qué hora era la medianoche? La pregunta conecta la halajá\npráctica del zman shema con la vida nocturna del rey-poeta.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -692,6 +785,22 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "lamento-bet-hamikdash",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "noche-de-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "noche-de-david",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
       "peso": 1
     },
     {
