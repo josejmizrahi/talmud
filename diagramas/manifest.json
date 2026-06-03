@@ -103,6 +103,341 @@
         "tipo": "cadena-formula",
         "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n"
       }
+    },
+    {
+      "slug": "tres-razones-ruina",
+      "orden": 4,
+      "titulo": "Las tres razones contra la ruina",
+      "subtitulo": "chashad · mafolet · mazikin · la dialéctica de la cobertura mínima",
+      "dapim": [
+        "3a",
+        "3b"
+      ],
+      "grupo": "La noche cósmica",
+      "estado": "listo",
+      "diagrama": "diagramas/tres-razones-ruina.html",
+      "sabios": [
+        "tanu-rabanan"
+      ],
+      "pesukim": [],
+      "conceptos": [
+        "chashad",
+        "mafolet",
+        "mazikin",
+        "ruina-yerushalayim",
+        "dialectica-talmudica",
+        "syag-rabínico"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "R. Yose en la narrativa anterior dice que aprendió tres cosas, y la\nPRIMERA es \"אֵין נִכְנָסִין לְחוּרְבָּה\" — no se entra a una ruina.\nLa guemará inmediatamente pregunta: ¿pero POR QUÉ exactamente?\nEsa pregunta lanza la sugyá completa de las tres razones\n(chashad, mafolet, mazikin). El editor une las dos piezas por la\nAGENDA HALÁJICA que la narrativa abre pero no cierra: R. Yose dio\nla conclusión halájica; el stam haShas la fundamenta dialécticamente\ncon la baraita tanu rabanan que viene a continuación.\n"
+      }
+    },
+    {
+      "slug": "noche-de-david",
+      "orden": 5,
+      "titulo": "La noche del rey David",
+      "subtitulo": "נשף · la arpa · el viento del norte",
+      "dapim": [
+        "3b",
+        "4a"
+      ],
+      "grupo": "El rey David",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "gobierno-tripartito",
+      "orden": 6,
+      "titulo": "El gobierno tripartito de David",
+      "subtitulo": "Ajitofel · Sanedrín · Urim ve-Tumim",
+      "dapim": [
+        "3b",
+        "4a",
+        "7b"
+      ],
+      "grupo": "El rey David",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "david-chasid",
+      "orden": 7,
+      "titulo": "David chasid · dos lecturas",
+      "subtitulo": "el madrugador y las manos manchadas · Mefivoshet",
+      "dapim": [
+        "4a"
+      ],
+      "grupo": "El rey David",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "miedo-al-pecado",
+      "orden": 8,
+      "titulo": "El miedo al pecado",
+      "subtitulo": "Lulei he'emanti · Yaakov · Ezra",
+      "dapim": [
+        "4a"
+      ],
+      "grupo": "El rey David",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "cerca-y-trabajador",
+      "orden": 9,
+      "titulo": "La cerca rabínica y el trabajador del campo",
+      "subtitulo": "ad chatzot como sayag · la baraita",
+      "dapim": [
+        "4b"
+      ],
+      "grupo": "La halajá del zman",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "semijat-geula-tefila",
+      "orden": 10,
+      "titulo": "Semijat geulá le-tefilá",
+      "subtitulo": "el pasaporte al olam ha-ba · Hashkiveinu",
+      "dapim": [
+        "4b",
+        "6b",
+        "9b"
+      ],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "ashrei-olam-haba",
+      "orden": 11,
+      "titulo": "Ashrei y el olam ha-ba",
+      "subtitulo": "tres veces al día · por qué falta la nun",
+      "dapim": [
+        "4b"
+      ],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "escala-angeles",
+      "orden": 12,
+      "titulo": "La escala de los ángeles",
+      "subtitulo": "Mikhael 1 · Gabriel 2 · Eliyahu 4 · Mal. HaMavet 8",
+      "dapim": [
+        "4b"
+      ],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "escalera-yetzer",
+      "orden": 13,
+      "titulo": "La escalera contra el yetzer hará",
+      "subtitulo": "enfurece → Torá → shema → muerte",
+      "dapim": [
+        "5a"
+      ],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "yisurim-shel-ahava",
+      "orden": 14,
+      "titulo": "Yisurim shel ahavá · doctrina completa",
+      "subtitulo": "diagnóstico, aceptación, las tres escenas médicas",
+      "dapim": [
+        "5a",
+        "5b"
+      ],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "tres-regalos",
+      "orden": 15,
+      "titulo": "Los tres regalos por sufrimiento",
+      "subtitulo": "Torá · Eretz Yisrael · Olam Ha-Ba (RaShBÍ)",
+      "dapim": [
+        "5a"
+      ],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "tefila-y-cama",
+      "orden": 16,
+      "titulo": "Tefilá y la posición de la cama",
+      "subtitulo": "Aba Binyamin · dos cosas que le preocuparon",
+      "dapim": [
+        "5b"
+      ],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "mazikin-invisibles",
+      "orden": 17,
+      "titulo": "Los mazikin invisibles",
+      "subtitulo": "si el ojo pudiera ver, nadie podría estar de pie",
+      "dapim": [
+        "6a"
+      ],
+      "grupo": "El espacio sagrado",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "beit-knesset",
+      "orden": 18,
+      "titulo": "El beit knesset como lugar privilegiado",
+      "subtitulo": "HKBH busca 10 · fijar lugar · shajen ra",
+      "dapim": [
+        "6a",
+        "6b",
+        "7b",
+        "8a",
+        "8b"
+      ],
+      "grupo": "El espacio sagrado",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "hkbh-reza-tefilin",
+      "orden": 19,
+      "titulo": "HKBH reza, se enoja, usa tefilín",
+      "subtitulo": "R. Yishmael ben Elisha · el rega del enojo",
+      "dapim": [
+        "6a",
+        "7a"
+      ],
+      "grupo": "Teología refinada",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "moshe-tres-cosas",
+      "orden": 20,
+      "titulo": "Moshé pide tres cosas",
+      "subtitulo": "y HKBH se las da",
+      "dapim": [
+        "7a"
+      ],
+      "grupo": "Teología refinada",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "david-y-avshalom",
+      "orden": 21,
+      "titulo": "David y Avshalom",
+      "subtitulo": "tarbut ra'á peor que Gog y Magog",
+      "dapim": [
+        "7b"
+      ],
+      "grupo": "El rey David",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "provocar-rashaim",
+      "orden": 22,
+      "titulo": "Provocar a los rashaim",
+      "subtitulo": "permitido en este mundo · fijar lugar",
+      "dapim": [
+        "7b"
+      ],
+      "grupo": "Halajá personal",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "akiva-medos-gamliel-persas",
+      "orden": 23,
+      "titulo": "R. Akiva los Medos · R. Gamliel los Persas",
+      "subtitulo": "tres cosas de cada cultura",
+      "dapim": [
+        "8b"
+      ],
+      "grupo": "Halajá personal",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "shema-dos-veces",
+      "orden": 24,
+      "titulo": "R. Shimon bar Yojai · shema dos veces",
+      "subtitulo": "antes y después del amud hashachar",
+      "dapim": [
+        "8b",
+        "9a"
+      ],
+      "grupo": "La gran sugyá del shema",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
+    },
+    {
+      "slug": "pesaj-y-zman-shema",
+      "orden": 25,
+      "titulo": "Pesaj y el zman shema",
+      "subtitulo": "R. Elazar ben Azaria vs R. Akiva",
+      "dapim": [
+        "9a"
+      ],
+      "grupo": "La gran sugyá del shema",
+      "estado": "pendiente",
+      "sabios": [],
+      "pesukim": [],
+      "conceptos": []
     }
   ],
   "sabios": [
@@ -143,6 +478,10 @@
         "Rabbi",
         "Rabbeinu HaKadosh"
       ]
+    },
+    {
+      "slug": "tanu-rabanan",
+      "nombre": "Tanu Rabanan"
     },
     {
       "slug": "r-natan",
@@ -215,8 +554,23 @@
   ],
   "conceptos": [
     {
+      "slug": "chashad",
+      "nombre": "Chashad (sospecha)",
+      "hebreo": "חֲשָׁד"
+    },
+    {
       "slug": "lamento-bet-hamikdash",
       "nombre": "Lamento por el Bet HaMikdash"
+    },
+    {
+      "slug": "mafolet",
+      "nombre": "Mafolet (derrumbe)",
+      "hebreo": "מַפּוֹלֶת"
+    },
+    {
+      "slug": "mazikin",
+      "nombre": "Mazikin (demonios)",
+      "hebreo": "מַזִּיקִין"
     },
     {
       "slug": "ruina-yerushalayim",
@@ -237,6 +591,14 @@
     {
       "slug": "tefilá-ketzará",
       "nombre": "Tefilá Ketzará"
+    },
+    {
+      "slug": "dialectica-talmudica",
+      "nombre": "Dialectica Talmudica"
+    },
+    {
+      "slug": "syag-rabínico",
+      "nombre": "Syag RabíNico"
     },
     {
       "slug": "vigilias",
@@ -265,10 +627,6 @@
     {
       "slug": "kohanim-terumá",
       "nombre": "Kohanim Terumá"
-    },
-    {
-      "slug": "syag-rabínico",
-      "nombre": "Syag RabíNico"
     }
   ],
   "conexiones": [
@@ -286,6 +644,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n",
+      "peso": 3
+    },
+    {
+      "from": "r-yose-ruina",
+      "to": "tres-razones-ruina",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "R. Yose en la narrativa anterior dice que aprendió tres cosas, y la\nPRIMERA es \"אֵין נִכְנָסִין לְחוּרְבָּה\" — no se entra a una ruina.\nLa guemará inmediatamente pregunta: ¿pero POR QUÉ exactamente?\nEsa pregunta lanza la sugyá completa de las tres razones\n(chashad, mafolet, mazikin). El editor une las dos piezas por la\nAGENDA HALÁJICA que la narrativa abre pero no cierra: R. Yose dio\nla conclusión halájica; el stam haShas la fundamenta dialécticamente\ncon la baraita tanu rabanan que viene a continuación.\n",
       "peso": 3
     },
     {
@@ -313,11 +679,27 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-arvit",
+      "to": "tres-razones-ruina",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "syag-rabínico",
+      "peso": 1
+    },
+    {
       "from": "vigilias-noche",
       "to": "r-yose-ruina",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "lamento-bet-hamikdash",
+      "peso": 1
+    },
+    {
+      "from": "r-yose-ruina",
+      "to": "tres-razones-ruina",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ruina-yerushalayim",
       "peso": 1
     }
   ]

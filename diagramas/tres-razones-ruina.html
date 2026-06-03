@@ -1,0 +1,345 @@
+<div class="ruina-interactivo">
+<style>
+  .ruina-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .ruina-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .ruina-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .ruina-leyenda .sepia { background: rgba(107,68,35,0.10); border-color: var(--sepia); }
+  .ruina-leyenda .rojo  { background: rgba(139,26,26,0.10); border-color: var(--rojo); }
+  .ruina-leyenda .azul  { background: rgba(30,58,95,0.10);  border-color: var(--azul); }
+  .ruina-leyenda .verde { background: rgba(30,107,90,0.10); border-color: var(--verde); }
+  .ruina-diagrama svg { width: 100%; height: auto; display: block; }
+  .ruina-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .ruina-nodo:hover rect { stroke-width: 2 !important; }
+  .ruina-nodo.activa rect { stroke-width: 2.5 !important; }
+  .ruina-nodo.dim { opacity: 0.32; }
+  .ruina-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .ruina-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .ruina-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .ruina-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .ruina-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .ruina-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .ruina-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="ruina-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>baraita · texto base</span>
+  <span><span class="swatch rojo"></span>kushyá del stam</span>
+  <span><span class="swatch azul"></span>teruts · caso límite</span>
+  <span><span class="swatch verde"></span>escenarios finales</span>
+</div>
+
+<div class="ruina-diagrama">
+<svg viewBox="0 0 720 900" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 3a-3b: las tres razones para no entrar a una ruina · la dialéctica de la cobertura mínima</title>
+
+<defs>
+  <marker id="flecha-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Las tres razones contra la ruina</text>
+<text x="360" y="48" text-anchor="middle" font-size="12" fill="#6b4423">Berajot 3a-3b · chashad · mafolet · mazikin · la dialéctica de la cobertura mínima</text>
+
+<!-- ====================================================================== -->
+<!-- BARAITA · 3a L14                                                        -->
+<!-- ====================================================================== -->
+<text x="60" y="82" font-size="10" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">TANU RABANAN · LA BARAITA DE LAS TRES RAZONES · 3A</text>
+
+<g class="ruina-nodo" data-id="baraita">
+  <rect x="60" y="94" width="640" height="78" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.2"/>
+  <text x="78" y="116" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"Por tres razones no se entra a una ruina: por sospecha, por derrumbe, y por demonios"</text>
+  <text x="682" y="116" text-anchor="end" font-size="11" direction="rtl" fill="#6b4423" font-weight="500">חֲשָׁד · מַפּוֹלֶת · מַזִּיקִין</text>
+  <text x="78" y="138" font-size="10" fill="#3d2f23">La primera lección de R. Yose ("no se entra a una ruina") dispara la pregunta "¿pero POR QUÉ exactamente?"</text>
+  <text x="78" y="156" font-size="9" fill="#6b4423" font-style="italic">y la guemará no acepta redundancia: cada una de las tres razones debe tener un caso límite donde solo ella aplica</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- TRES COLUMNAS: ¿POR QUÉ CADA RAZÓN?                                     -->
+<!-- ====================================================================== -->
+
+<!-- Headers de columna -->
+<text x="170" y="206" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">¿POR QUÉ CHASHAD?</text>
+<text x="360" y="206" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">¿POR QUÉ MAFOLET?</text>
+<text x="550" y="206" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">¿POR QUÉ MAZIKIN?</text>
+
+<!-- COLUMNA 1 · CHASHAD -->
+<g class="ruina-nodo" data-id="chashad-pregunta">
+  <rect x="60" y="220" width="220" height="74" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="170" y="242" text-anchor="middle" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">KUSHYA DOBLE</text>
+  <text x="170" y="261" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">¿no basta con mafolet?</text>
+  <text x="170" y="277" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">¿no basta con mazikin?</text>
+  <text x="170" y="290" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el stam ataca por dos flancos</text>
+</g>
+
+<g class="ruina-nodo" data-id="chashad-respuesta">
+  <rect x="60" y="304" width="220" height="116" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="170" y="326" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">TERUTS · DOS CASOS LÍMITE</text>
+  <text x="170" y="348" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">בְּחַדְתִּי</text>
+  <text x="170" y="364" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">ruina nueva — sin mafolet</text>
+  <text x="170" y="388" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">בִּתְרֵי וּפְרִיצֵי</text>
+  <text x="170" y="404" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">dos pero inmorales</text>
+  <text x="170" y="416" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">(sin mazikin pero con sospecha)</text>
+</g>
+
+<!-- COLUMNA 2 · MAFOLET -->
+<g class="ruina-nodo" data-id="mafolet-pregunta">
+  <rect x="250" y="220" width="220" height="74" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="360" y="242" text-anchor="middle" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">KUSHYA</text>
+  <text x="360" y="262" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">¿no basta con</text>
+  <text x="360" y="277" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">chashad y mazikin?</text>
+</g>
+
+<g class="ruina-nodo" data-id="mafolet-respuesta">
+  <rect x="250" y="304" width="220" height="116" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="360" y="326" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">TERUTS · UN CASO</text>
+  <text x="360" y="354" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">בִּתְרֵי וּכְשֵׁרֵי</text>
+  <text x="360" y="372" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">dos personas piadosas</text>
+  <text x="360" y="390" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin chashad (kesherim)</text>
+  <text x="360" y="403" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin mazikin (dos)</text>
+  <text x="360" y="416" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">pero el derrumbe físico sigue</text>
+</g>
+
+<!-- COLUMNA 3 · MAZIKIN -->
+<g class="ruina-nodo" data-id="mazikin-pregunta">
+  <rect x="440" y="220" width="220" height="74" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="550" y="242" text-anchor="middle" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">KUSHYA</text>
+  <text x="550" y="262" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">¿no basta con</text>
+  <text x="550" y="277" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">chashad y mafolet?</text>
+</g>
+
+<g class="ruina-nodo" data-id="mazikin-respuesta">
+  <rect x="440" y="304" width="220" height="116" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="550" y="326" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">TERUTS · CON ALTERNATIVA</text>
+  <text x="550" y="348" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">חַדְתִּי + בִּתְרֵי וּכְשֵׁרֵי</text>
+  <text x="550" y="364" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">nueva + dos piadosos</text>
+  <text x="550" y="388" text-anchor="middle" font-size="9" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a">pero si son dos, ¡mazikin tampoco aplica!</text>
+  <text x="550" y="404" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">בִּמְקוֹמָן חָיְישִׁינַן</text>
+  <text x="550" y="417" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">o: uno solo en ruina nueva en campo</text>
+</g>
+
+<!-- Líneas que conectan baraita → preguntas → respuestas -->
+<line x1="170" y1="172" x2="170" y2="218" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3" marker-end="url(#flecha-r)"/>
+<line x1="360" y1="172" x2="360" y2="218" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3" marker-end="url(#flecha-r)"/>
+<line x1="550" y1="172" x2="550" y2="218" stroke="#3d2f23" stroke-width="0.8" stroke-dasharray="2 3" marker-end="url(#flecha-r)"/>
+
+<line x1="170" y1="294" x2="170" y2="302" stroke="#3d2f23" stroke-width="0.8"/>
+<line x1="360" y1="294" x2="360" y2="302" stroke="#3d2f23" stroke-width="0.8"/>
+<line x1="550" y1="294" x2="550" y2="302" stroke="#3d2f23" stroke-width="0.8"/>
+
+<!-- ====================================================================== -->
+<!-- ESCENARIOS FINALES                                                      -->
+<!-- ====================================================================== -->
+<text x="60" y="466" font-size="10" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RESULTADO · TRES ESCENARIOS, CADA UNO CON SU RAZÓN ÚNICA</text>
+
+<g class="ruina-nodo" data-id="escenario-chashad">
+  <rect x="60" y="478" width="220" height="100" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="170" y="500" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Solo CHASHAD aplica</text>
+  <text x="170" y="522" text-anchor="middle" font-size="10" fill="#3d2f23">Ruina nueva</text>
+  <text x="170" y="538" text-anchor="middle" font-size="10" fill="#3d2f23">+ 2 personas פרוצים</text>
+  <text x="170" y="558" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin mafolet (nueva)</text>
+  <text x="170" y="572" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin mazikin (dos)</text>
+</g>
+
+<g class="ruina-nodo" data-id="escenario-mafolet">
+  <rect x="250" y="478" width="220" height="100" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="360" y="500" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Solo MAFOLET aplica</text>
+  <text x="360" y="522" text-anchor="middle" font-size="10" fill="#3d2f23">Ruina vieja</text>
+  <text x="360" y="538" text-anchor="middle" font-size="10" fill="#3d2f23">+ 2 personas כשרים</text>
+  <text x="360" y="558" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin chashad (kesherim)</text>
+  <text x="360" y="572" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin mazikin (dos)</text>
+</g>
+
+<g class="ruina-nodo" data-id="escenario-mazikin">
+  <rect x="440" y="478" width="220" height="100" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="550" y="500" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Solo MAZIKIN aplica</text>
+  <text x="550" y="522" text-anchor="middle" font-size="10" fill="#3d2f23">Ruina nueva en campo</text>
+  <text x="550" y="538" text-anchor="middle" font-size="10" fill="#3d2f23">+ 1 persona solo</text>
+  <text x="550" y="558" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin mafolet (nueva)</text>
+  <text x="550" y="572" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin chashad (mujer no frecuenta el campo)</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- META · LA DOCTRINA                                                      -->
+<!-- ====================================================================== -->
+<text x="60" y="618" font-size="10" fill="#3d2f23" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA DOCTRINA · ECONOMÍA HALÁJICA DEL BAVLÍ</text>
+
+<g class="ruina-nodo" data-id="doctrina">
+  <rect x="60" y="630" width="640" height="86" rx="6" fill="rgba(60,30,15,0.04)" stroke="#3d2f23" stroke-width="1"/>
+  <text x="78" y="651" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"Ningún elemento halájico es ornamental"</text>
+  <text x="682" y="651" text-anchor="end" font-size="11" direction="rtl" fill="#3d2f23">חכמים לא דברו דברים בעלמא</text>
+  <text x="78" y="671" font-size="10" fill="#3d2f23">Si la baraita lista TRES razones, hay tres escenarios donde cada una es la única que aplica.</text>
+  <text x="78" y="687" font-size="10" fill="#3d2f23">La dialéctica del stam aísla esos escenarios para mostrar que la baraita es minimalista, no redundante.</text>
+  <text x="78" y="707" font-size="9" fill="#6b4423" font-style="italic">esta misma técnica reaparecerá decenas de veces en el Bavlí: cada cláusula de una baraita tiene un nicho lógico exacto</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- PUENTE A R. YOSE                                                        -->
+<!-- ====================================================================== -->
+<text x="60" y="754" font-size="10" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CONEXIÓN CON LA NARRATIVA DE R. YOSE</text>
+
+<g class="ruina-nodo" data-id="puente-r-yose">
+  <rect x="60" y="766" width="640" height="116" rx="6" fill="rgba(90,58,138,0.06)" stroke="#5a3a8a" stroke-width="1.1"/>
+  <text x="78" y="787" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yose extrajo la conclusión halájica de su encuentro con Eliyahu:</text>
+  <text x="78" y="809" font-size="12" direction="rtl" fill="#5a3a8a" font-weight="500" text-anchor="start" transform="translate(360, 0)">לָמַדְתִּי שֶׁאֵין נִכְנָסִין לְחוּרְבָּה</text>
+  <text x="78" y="828" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"aprendí que no se entra a una ruina"</text>
+  <text x="78" y="850" font-size="10" fill="#3d2f23">El editor del Bavlí inmediatamente trae LA BARAITA TANU RABANAN que fundamenta dialécticamente esa lección.</text>
+  <text x="78" y="868" font-size="9" fill="#6b4423" font-style="italic">técnica: continuación halájica · la narrativa abre una halajá → el stam haShas la cierra con análisis</text>
+</g>
+
+</svg>
+</div>
+
+<div class="ruina-panel" id="ruina-panel">
+  <p class="ruina-vacio">Selecciona cualquier nodo para ver la cita exacta y su función dialéctica.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'baraita': {
+      titulo: 'La baraita · tanu rabanan',
+      hebreo: 'תָּנוּ רַבָּנָן: מִפְּנֵי שְׁלֹשָׁה דְּבָרִים אֵין נִכְנָסִין לְחוּרְבָּה: מִפְּנֵי חֲשָׁד, מִפְּנֵי הַמַּפּוֹלֶת, וּמִפְּנֵי הַמַּזִּיקִין',
+      traduccion: '"Enseñaron los rabinos: por tres razones no se entra a una ruina — por chashad (sospecha), por mafolet (derrumbe), y por mazikin (demonios)"',
+      explicacion: 'El final de 3a y comienzo de 3b. La narrativa de [[r-yose-ruina]] terminó con tres lecciones que R. Yose aprendió de Eliyahu. La primera era "אֵין נִכְנָסִין לְחוּרְבָּה" — pero R. Yose no explicó por qué. El editor del Bavlí inmediatamente trae esta baraita tanu rabanan que sí lo explica: hay TRES razones halájicas distintas, cada una operando en un plano diferente. CHASHAD opera en el plano social (sospecha de inmoralidad). MAFOLET en el plano físico (riesgo de derrumbe). MAZIKIN en el plano espiritual (demonios). El stam haShas inmediatamente empieza la dialéctica: ¿por qué necesitamos tres razones? ¿No bastaría con una sola que cubriera todas las situaciones?'
+    },
+    'chashad-pregunta': {
+      titulo: '¿Por qué CHASHAD? · doble kushyá',
+      hebreo: 'וְתִיפּוֹק לֵיהּ מִשּׁוּם מַפּוֹלֶת! · וְתִיפּוֹק לֵיהּ מִשּׁוּם מַזִּיקִין!',
+      traduccion: '"¡Que se derive del mafolet (derrumbe)! ¡Que se derive del mazikin (demonios)!"',
+      explicacion: 'El stam haShas ataca por DOS flancos a chashad. (1) Si entrar a una ruina ya está prohibido por mafolet (riesgo de derrumbe), ¿para qué agregar chashad? Bastaba decir "no entres por seguridad física". (2) Si entrar ya está prohibido por mazikin (peligro espiritual), ¿para qué agregar chashad? El argumento implícito es de PARSIMONIA HALÁJICA: la baraita debe ser minimalista. Si chashad no agrega valor único, está de más. La dialéctica obliga a encontrar un escenario donde SOLO chashad aplique.'
+    },
+    'chashad-respuesta': {
+      titulo: 'Respuesta · dos casos donde solo chashad aplica',
+      hebreo: 'בְּחַדְתִּי · בִּתְרֵי וּפְרִיצֵי',
+      traduccion: '"En una ruina nueva · cuando son dos pero inmorales"',
+      explicacion: 'Dos respuestas combinadas. (1) בְּחַדְתִּי — en una ruina NUEVA no hay riesgo de derrumbe (las estructuras conservan integridad). Por lo tanto mafolet no aplica, pero chashad SÍ (un sabio entrando solo a una ruina aislada genera sospecha). (2) בִּתְרֵי וּפְרִיצֵי — cuando son DOS personas pero ambos conocidos como inmorales (פרוצים). En este caso mazikin no aplica (son dos, los demonios pierden poder), pero chashad SÍ (su mala fama social sostiene la sospecha aunque sean dos). En ambos escenarios, chashad es la ÚNICA razón aplicable. La baraita queda validada en su tercera cláusula.'
+    },
+    'mafolet-pregunta': {
+      titulo: '¿Por qué MAFOLET? · kushyá del stam',
+      hebreo: 'וְתִיפּוֹק לֵיהּ מִשּׁוּם חֲשָׁד וּמַזִּיקִין!',
+      traduccion: '"¡Que se derive de chashad y mazikin!"',
+      explicacion: 'Mismo ataque dialéctico, ahora contra mafolet. Si entrar a una ruina ya está prohibido por chashad (sospecha) o mazikin (demonios), ¿qué agrega mafolet? El razonamiento es: la sospecha social y el peligro espiritual ya cubren todos los casos posibles. ¿Para qué una tercera razón física? La dialéctica obliga a encontrar el escenario donde SOLO mafolet aplica — donde chashad no opera (gente piadosa, sin sospecha) y mazikin tampoco (dos personas, neutralizan al demonio), pero el riesgo del derrumbe persiste.'
+    },
+    'mafolet-respuesta': {
+      titulo: 'Respuesta · dos kesherim',
+      hebreo: 'בִּתְרֵי וּכְשֵׁרֵי',
+      traduccion: '"Cuando son dos y piadosos"',
+      explicacion: 'Caso límite elegante. DOS personas, ambas KESHERIM (íntegros, conocidamente piadosos). En este escenario: (1) chashad no aplica — su reputación los protege de la sospecha. (2) mazikin no aplica — al ser DOS los demonios pierden poder. PERO el peligro físico del derrumbe es OBJETIVO. La piedad no protege de una pared que cae. Ni el número de personas reduce el riesgo estructural. Por lo tanto, en este escenario únicamente mafolet sostiene la prohibición de entrar. La baraita queda validada en su segunda cláusula.'
+    },
+    'mazikin-pregunta': {
+      titulo: '¿Por qué MAZIKIN? · kushyá del stam',
+      hebreo: 'וְתִיפּוֹק לֵיהּ מִפְּנֵי חֲשָׁד וּמַפּוֹלֶת!',
+      traduccion: '"¡Que se derive de chashad y mafolet!"',
+      explicacion: 'Última pregunta del trío. Si chashad cubre las situaciones sociales y mafolet cubre las situaciones físicas, ¿qué deja mazikin? ¿No es redundante? El stam exige encontrar un escenario donde el peligro espiritual sea la ÚNICA razón válida — donde no haya sospecha (gente piadosa) ni derrumbe (ruina nueva). El reto es mayor que en los casos anteriores porque mazikin es la categoría más "metafísica" — debe haber un nicho donde solo ella aplica para validar su inclusión en la baraita.'
+    },
+    'mazikin-respuesta': {
+      titulo: 'Respuesta · ruina nueva + dos kesherim · y la objeción final',
+      hebreo: 'בְּחוּרְבָּה חַדְתִּי וּבִתְרֵי וּכְשֵׁרֵי · אִי בִּתְרֵי, מַזִּיקִין נָמֵי לֵיכָּא! · בִּמְקוֹמָן חָיְישִׁינַן',
+      traduccion: '"En ruina nueva + dos piadosos · Si son dos, ¡tampoco hay mazikin! · En su lugar [conocido] seguimos preocupándonos"',
+      explicacion: 'La respuesta más COMPLEJA. Primer intento: בְּחוּרְבָּה חַדְתִּי (ruina nueva, sin mafolet) + בִּתְרֵי וּכְשֵׁרֵי (dos piadosos, sin chashad). Pero el stam objeta: ¡pero si son dos, los mazikin tampoco aplican! La regla anterior fue justamente que dos personas neutralizan al demonio. Doble respuesta posible: (1) בִּמְקוֹמָן חָיְישִׁינַן — en LUGARES CONOCIDOS por albergar mazikin (lugares marcados de la cosmología talmúdica), aun siendo dos seguimos preocupándonos. La regla "dos neutralizan" tiene su límite en zonas de alta concentración espiritual. (2) Alternativa: estamos hablando de UN solo individuo (no dos) en una ruina nueva DESCAMPADA — donde tampoco aplica chashad porque "אִשָּׁה בְּדַבְרָא לָא שְׁכִיחָא" (la mujer no frecuenta el campo). Así el sabio solo en una ruina nueva en el campo está solo bajo el riesgo de mazikin.'
+    },
+    'escenario-chashad': {
+      titulo: 'Escenario único de CHASHAD',
+      hebreo: 'בְּחוּרְבָּה חַדְתִּי · בִּתְרֵי וּפְרִיצֵי',
+      traduccion: 'Ruina nueva, dos personas pero inmorales',
+      explicacion: 'Síntesis del nicho halájico de chashad. Cuando una ruina es nueva (sin riesgo de derrumbe) y los dos individuos que entran son conocidos como inmorales (פרוצים — sin la presunción de integridad), la única razón halájica para prohibir la entrada es la sospecha social. Ni el peligro físico ni el espiritual aplican; pero la mala reputación de los individuos hace que aun siendo dos su entrada en un lugar aislado siga generando חשד. El escenario captura la verdad psicológica de la halajá: la integridad personal afecta qué prohibiciones aplican a un mismo acto.'
+    },
+    'escenario-mafolet': {
+      titulo: 'Escenario único de MAFOLET',
+      hebreo: 'בִּתְרֵי וּכְשֵׁרֵי',
+      traduccion: 'Dos personas piadosas en una ruina vieja',
+      explicacion: 'El nicho de mafolet es paradójicamente el MÁS SIMPLE. Dos individuos de impecable reputación entran a una ruina antigua. Su piedad les protege de la sospecha social (chashad neutralizado). Su número les protege del riesgo espiritual (mazikin neutralizado). Pero EL DERRUMBE ES INDIFERENTE A LA SANTIDAD. Las paredes pueden caer sobre cualquiera. Este escenario revela que mafolet es la razón más OBJETIVA de las tres — opera con independencia del estado moral o numérico de los individuos.'
+    },
+    'escenario-mazikin': {
+      titulo: 'Escenario único de MAZIKIN',
+      hebreo: 'בְּחוּרְבָּה חַדְתִּי דְּקָאֵי בְּדַבְרָא · בְּחַד וּכָשֵׁר',
+      traduccion: 'Un individuo piadoso solo en una ruina nueva en descampado',
+      explicacion: 'El nicho más específico de los tres. La ruina debe ser NUEVA (sin mafolet). DEBE ESTAR EN DESCAMPADO — porque solo así no aplica chashad (אִשָּׁה בְּדַבְרָא לָא שְׁכִיחָא, la mujer no frecuenta el campo). DEBE SER UN SOLO INDIVIDUO — porque si fueran dos los mazikin tampoco aplicarían. En esta intersección estrecha (nueva + campo + uno), solo el peligro espiritual queda en pie. Es el escenario más metafísico: un sabio solitario en un lugar aislado al atardecer, vulnerable solo a lo que no se ve. Y curiosamente — este es exactamente el escenario de [[r-yose-ruina|R. Yose en la ruina de Yerushalayim]], excepto que Eliyahu HaNavi montó guardia, neutralizando incluso el mazikin.'
+    },
+    'doctrina': {
+      titulo: 'La doctrina · economía halájica del Bavlí',
+      hebreo: 'חכמים לא דברו דברים בעלמא',
+      traduccion: '"Los Sabios no hablan palabras en vano"',
+      explicacion: 'La sugyá completa demuestra un principio meta-halájico del Bavlí: ningún elemento de una baraita es ornamental. Si la fuente lista TRES categorías, hay TRES escenarios distintos donde cada una es la única que aplica. Si la baraita listara solo dos razones, habría escenarios sin cobertura. Si listara cuatro, habría redundancia. La dialéctica del stam haShas aísla matemáticamente esos escenarios para mostrar que la baraita es minimalista pero suficiente — la cobertura mínima que cubre todos los casos. Esta misma técnica reaparecerá decenas de veces en el Bavlí: cada cláusula de una baraita tiene un nicho lógico exacto. La halajá es una geometría conceptual donde cada figura tiene su lugar único.'
+    },
+    'puente-r-yose': {
+      titulo: 'Conexión con R. Yose · técnica de continuación halájica',
+      hebreo: 'לָמַדְתִּי שֶׁאֵין נִכְנָסִין לְחוּרְבָּה',
+      traduccion: '"Aprendí que no se entra a una ruina"',
+      explicacion: 'R. Yose extrajo TRES LECCIONES de su encuentro con Eliyahu (ver [[r-yose-ruina]]). La primera fue "no se entra a una ruina" — pero NO EXPLICÓ por qué. El editor del Bavlí ve esa apertura halájica y, con perfecto sentido editorial, coloca inmediatamente después la baraita tanu rabanan que SÍ explica por qué. Es una de las técnicas más características del editor: una narrativa aggádica abre una halajá; el stam haShas la fundamenta dialécticamente con la baraita correspondiente. La conexión NO ES POR FÓRMULA COMPARTIDA (como en #2→#3) ni por palabra-puente — es por CONTINUACIÓN HALÁJICA. R. Yose dio la conclusión; el stam la deriva. Dos voces, un mismo tema halájico, juntas en la página.'
+    }
+  };
+
+  const panel = document.getElementById('ruina-panel');
+  const nodos = document.querySelectorAll('.ruina-nodo');
+
+  nodos.forEach(n => {
+    n.addEventListener('click', () => {
+      const id = n.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      nodos.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== n) o.classList.add('dim');
+      });
+      n.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="ruina-panel-header">
+          <h4 class="ruina-panel-titulo">${d.titulo}</h4>
+          <div class="ruina-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="ruina-panel-traduccion">${d.traduccion}</p>
+        <p class="ruina-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>
