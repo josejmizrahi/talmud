@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red de temas · Codex Talmudicus</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  body {
+    background: var(--pergamino);
+    background-image: var(--noise),
+      radial-gradient(ellipse at top left, rgba(184,134,11,0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(139,26,26,0.03), transparent 50%);
+    min-height: 100vh;
+    margin: 0; padding: 0;
+    font-family: var(--font-body);
+    color: var(--tinta);
+  }
+  .red-shell {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+  .red-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--pergamino-sombra);
+  }
+  .red-header .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.5rem;
+  }
+  .red-header h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    color: var(--tinta);
+    margin: 0 0 0.5rem;
+  }
+  .red-header .lede {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--tinta-suave);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .red-header .nav-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    color: var(--sepia);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--sepia);
+  }
+  .red-header .nav-link:hover { color: var(--rojo); border-bottom-color: var(--rojo); }
+
+  .red-controles {
+    margin: 0 0 1rem;
+    padding: 0.85rem 1.25rem;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+  }
+  .red-controles .grupo-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .red-controles label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+  }
+  .red-controles .toggle-group {
+    display: inline-flex;
+    border: 1px solid var(--sepia);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .red-controles .toggle-group button {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.7rem;
+    background: transparent;
+    border: none;
+    color: var(--sepia);
+    cursor: pointer;
+    border-right: 1px solid var(--sepia);
+  }
+  .red-controles .toggle-group button:last-child { border-right: none; }
+  .red-controles .toggle-group button.activo {
+    background: var(--sepia);
+    color: var(--pergamino);
+  }
+  .red-controles select, .red-controles input[type="text"] {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 0.3rem 0.6rem;
+    background: var(--pergamino);
+    border: 1px solid var(--sepia);
+    color: var(--tinta);
+    border-radius: 3px;
+    min-width: 180px;
+  }
+  .red-controles .reset {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.7rem;
+    background: transparent;
+    border: 1px solid var(--sepia);
+    color: var(--sepia);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .red-controles .reset:hover { background: var(--sepia); color: var(--pergamino); }
+
+  .red-cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1rem;
+    align-items: start;
+  }
+  @media (max-width: 980px) {
+    .red-cuerpo { grid-template-columns: 1fr; }
+  }
+
+  .red-grafo {
+    background: rgba(255,255,255,0.3);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    min-height: 640px;
+  }
+  .red-grafo svg {
+    display: block;
+    width: 100%;
+    height: 720px;
+    cursor: grab;
+  }
+  .red-grafo svg:active { cursor: grabbing; }
+
+  /* SVG styling */
+  .link {
+    fill: none;
+    stroke-opacity: 0.45;
+    transition: stroke-opacity 0.15s, stroke-width 0.15s;
+  }
+  .link.editorial   { stroke: #b8860b; stroke-opacity: 0.7; }
+  .link.co-sabio    { stroke: #1e3a5f; }
+  .link.co-pasuk    { stroke: #8b1a1a; }
+  .link.co-concepto { stroke: #1e6b5a; }
+  .link.hover, .link.activo {
+    stroke-opacity: 1 !important;
+    stroke-width: 3 !important;
+  }
+
+  .node circle {
+    stroke: rgba(60,30,15,0.6);
+    stroke-width: 1.2;
+    transition: r 0.15s, stroke-width 0.15s;
+    cursor: pointer;
+  }
+  .node:hover circle { stroke-width: 2.5; }
+  .node.activo circle { stroke-width: 3; stroke: #1a1410; }
+  .node.dim { opacity: 0.25; }
+  .node.dim circle { stroke-width: 0.6; }
+  .node.pendiente circle { fill: #f4ede0 !important; stroke-dasharray: 3 2; opacity: 0.5; }
+
+  .node text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 11px;
+    fill: var(--tinta);
+    pointer-events: none;
+    text-anchor: middle;
+    paint-order: stroke;
+    stroke: rgba(244,237,224,0.9);
+    stroke-width: 3;
+    stroke-linejoin: round;
+  }
+  .node.pendiente text { fill: var(--sepia-claro); }
+
+  .leyenda {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(244,237,224,0.92);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.72rem;
+    color: var(--sepia);
+    line-height: 1.65;
+    backdrop-filter: blur(4px);
+  }
+  .leyenda h4 {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin: 0 0 0.4rem;
+    font-weight: 500;
+  }
+  .leyenda .sw {
+    display: inline-block;
+    width: 14px;
+    height: 2px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .leyenda .sw.editorial   { background: #b8860b; height: 3px; }
+  .leyenda .sw.co-sabio    { background: #1e3a5f; }
+  .leyenda .sw.co-pasuk    { background: #8b1a1a; }
+  .leyenda .sw.co-concepto { background: #1e6b5a; }
+  .leyenda .sw.dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(60,30,15,0.6);
+  }
+
+  .info {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(244,237,224,0.92);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.72rem;
+    color: var(--sepia);
+    font-family: var(--font-mono);
+    letter-spacing: 0.5px;
+  }
+
+  /* Panel lateral */
+  .red-panel {
+    background: rgba(255,255,255,0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    border-radius: 4px;
+    padding: 1.25rem 1.4rem;
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+  .red-panel .vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .red-panel .tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.4rem;
+  }
+  .red-panel h3 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.35rem;
+    color: var(--tinta);
+    margin: 0 0 0.4rem;
+    line-height: 1.2;
+  }
+  .red-panel .subtitulo {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+  }
+  .red-panel .meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 0.75rem;
+    font-size: 0.83rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--pergamino-sombra);
+  }
+  .red-panel .meta-k {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    align-self: baseline;
+  }
+  .red-panel .meta-v { color: var(--tinta); }
+  .red-panel .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  .red-panel .chip {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    background: rgba(184,134,11,0.08);
+    border: 1px solid var(--dorado);
+    color: var(--sepia);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .red-panel .chip:hover { background: var(--dorado); color: var(--pergamino); }
+  .red-panel .conexiones-bloque {
+    margin-top: 1rem;
+  }
+  .red-panel .conexiones-bloque h4 {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin: 0 0 0.5rem;
+    font-weight: 500;
+  }
+  .red-panel .conexion {
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.4rem;
+    background: rgba(255,255,255,0.4);
+    border-left: 2px solid;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.83rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .red-panel .conexion:hover { background: rgba(255,255,255,0.7); }
+  .red-panel .conexion.editorial   { border-color: #b8860b; }
+  .red-panel .conexion.co-sabio    { border-color: #1e3a5f; }
+  .red-panel .conexion.co-pasuk    { border-color: #8b1a1a; }
+  .red-panel .conexion.co-concepto { border-color: #1e6b5a; }
+  .red-panel .conexion-tipo {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--sepia);
+    text-transform: uppercase;
+  }
+  .red-panel .ver-diagrama {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.5rem 0.85rem;
+    background: var(--dorado);
+    color: var(--pergamino);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  .red-panel .ver-diagrama:hover { background: var(--sepia); }
+</style>
+</head>
+<body>
+
+<div class="red-shell">
+
+  <header class="red-header">
+    <div class="eyebrow">Codex Talmudicus</div>
+    <h1>La red de temas del primer perek</h1>
+    <p class="lede">cada nodo es un tema · las líneas son conexiones editoriales fuertes (dorado) o co-referencias por sabios, pesukim y conceptos (colores tenues)</p>
+    <a href="./" class="nav-link">← volver al scroll de diagramas</a>
+  </header>
+
+  <nav class="red-controles">
+    <div class="grupo-control">
+      <label>Layout</label>
+      <div class="toggle-group">
+        <button data-layout="fuerza" class="activo">fuerza orgánica</button>
+        <button data-layout="cronologico">cronología daf</button>
+      </div>
+    </div>
+
+    <div class="grupo-control">
+      <label>Filtrar por grupo</label>
+      <select id="filtro-grupo">
+        <option value="">— todos —</option>
+      </select>
+    </div>
+
+    <div class="grupo-control">
+      <label>Sabio</label>
+      <select id="filtro-sabio">
+        <option value="">— todos —</option>
+      </select>
+    </div>
+
+    <div class="grupo-control">
+      <label>Concepto</label>
+      <select id="filtro-concepto">
+        <option value="">— todos —</option>
+      </select>
+    </div>
+
+    <button class="reset" id="reset-filtros">reset</button>
+  </nav>
+
+  <div class="red-cuerpo">
+    <div class="red-grafo">
+      <svg id="grafo"></svg>
+
+      <div class="leyenda">
+        <h4>Conexiones</h4>
+        <div><span class="sw editorial"></span>editorial (puente del autor)</div>
+        <div><span class="sw co-sabio"></span>co-sabio</div>
+        <div><span class="sw co-pasuk"></span>co-pasuk</div>
+        <div><span class="sw co-concepto"></span>co-concepto</div>
+        <h4 style="margin-top: 0.6rem;">Estados</h4>
+        <div><span class="sw dot" style="background: var(--dorado);"></span>listo</div>
+        <div><span class="sw dot" style="background: var(--pergamino); border-style: dashed;"></span>pendiente</div>
+      </div>
+
+      <div class="info" id="info-stats"></div>
+    </div>
+
+    <aside class="red-panel" id="panel">
+      <p class="vacio">
+        Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>
+        Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).
+      </p>
+    </aside>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script>
+(async function() {
+  // ----- Cargar manifest -----
+  const manifest = await fetch('diagramas/manifest.json?v=' + Date.now()).then(r => r.json());
+
+  // Color por grupo
+  const grupos = [...new Set(manifest.diagramas.map(d => d.grupo))];
+  const colores = ['#b8860b', '#1e3a5f', '#8b1a1a', '#1e6b5a', '#5a3a8a', '#6b4423', '#3d8baa', '#993366', '#4a5d30'];
+  const colorGrupo = d3.scaleOrdinal().domain(grupos).range(colores);
+
+  // Indexar
+  const temaPorSlug = Object.fromEntries(manifest.diagramas.map(d => [d.slug, d]));
+
+  // Nodos y links para D3
+  const nodes = manifest.diagramas.map(d => ({ ...d, id: d.slug }));
+  const links = manifest.conexiones.map(c => ({
+    source: c.from, target: c.to,
+    categoria: c.categoria, tipo: c.tipo, via: c.via, texto: c.texto,
+    peso: c.peso || 1
+  }));
+
+  // Stats info
+  document.getElementById('info-stats').textContent =
+    `${nodes.length} temas · ${links.length} conexiones · ${nodes.filter(n => n.estado === 'listo').length} listos`;
+
+  // Filtros poblar
+  const sabiosSet = new Set();
+  const conceptosSet = new Set();
+  nodes.forEach(n => {
+    (n.sabios || []).forEach(s => sabiosSet.add(s));
+    (n.conceptos || []).forEach(c => conceptosSet.add(c));
+  });
+
+  const selGrupo = document.getElementById('filtro-grupo');
+  grupos.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; selGrupo.appendChild(o); });
+
+  const selSabio = document.getElementById('filtro-sabio');
+  [...sabiosSet].sort().forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; selSabio.appendChild(o); });
+
+  const selConcepto = document.getElementById('filtro-concepto');
+  [...conceptosSet].sort().forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; selConcepto.appendChild(o); });
+
+  // ----- Setup SVG -----
+  const svgEl = document.getElementById('grafo');
+  const W = svgEl.clientWidth || 900;
+  const H = 720;
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const svg = d3.select(svgEl);
+
+  const g = svg.append('g'); // contenedor para zoom
+
+  const linkSel = g.append('g').attr('class', 'links').selectAll('line').data(links).join('line')
+    .attr('class', d => `link ${d.tipo}`)
+    .attr('stroke-width', d => 0.8 + d.peso * 0.7);
+
+  const nodeSel = g.append('g').attr('class', 'nodes').selectAll('g').data(nodes).join('g')
+    .attr('class', d => `node ${d.estado}`);
+
+  nodeSel.append('circle')
+    .attr('r', d => d.estado === 'listo' ? 14 : 9)
+    .attr('fill', d => colorGrupo(d.grupo));
+
+  nodeSel.append('text')
+    .attr('dy', d => (d.estado === 'listo' ? 28 : 22))
+    .text(d => d.titulo)
+    .each(function(d) {
+      const t = d3.select(this);
+      const max = 20;
+      if (d.titulo.length > max) {
+        const cut = d.titulo.slice(0, max).replace(/\s\S*$/, '') + '…';
+        t.text(cut);
+      }
+    });
+
+  // ----- Simulación -----
+  const simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d => d.id)
+      .distance(d => d.categoria === 'editorial' ? 90 : 130)
+      .strength(d => d.categoria === 'editorial' ? 0.8 : 0.15))
+    .force('charge', d3.forceManyBody().strength(-260))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .force('collision', d3.forceCollide().radius(35));
+
+  simulation.on('tick', () => {
+    linkSel
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  // ----- Drag -----
+  nodeSel.call(d3.drag()
+    .on('start', (event, d) => {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+    })
+    .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
+    .on('end', (event, d) => {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    }));
+
+  // ----- Zoom -----
+  svg.call(d3.zoom().scaleExtent([0.4, 3]).on('zoom', (event) => {
+    g.attr('transform', event.transform);
+  }));
+
+  // ----- Click en nodo -----
+  nodeSel.on('click', (event, d) => {
+    event.stopPropagation();
+    seleccionar(d);
+  });
+
+  // ----- Click en link -----
+  linkSel.on('click', (event, d) => {
+    event.stopPropagation();
+    mostrarConexion(d);
+  });
+
+  // ----- Click fondo: cierra panel -----
+  svg.on('click', () => limpiarPanel());
+
+  // ----- Layout toggle -----
+  let layoutActual = 'fuerza';
+  document.querySelectorAll('.toggle-group button[data-layout]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-group button[data-layout]').forEach(b => b.classList.remove('activo'));
+      btn.classList.add('activo');
+      layoutActual = btn.dataset.layout;
+      aplicarLayout();
+    });
+  });
+
+  function aplicarLayout() {
+    if (layoutActual === 'cronologico') {
+      const maxOrden = d3.max(nodes, d => d.orden);
+      const xScale = d3.scaleLinear().domain([1, maxOrden]).range([60, W - 60]);
+      simulation.force('x', d3.forceX(d => xScale(d.orden)).strength(0.95));
+      simulation.force('y', d3.forceY(H / 2).strength(0.05));
+      simulation.force('center', null);
+    } else {
+      simulation.force('x', null);
+      simulation.force('y', null);
+      simulation.force('center', d3.forceCenter(W / 2, H / 2));
+    }
+    simulation.alpha(0.8).restart();
+  }
+
+  // ----- Filtros -----
+  function aplicarFiltros() {
+    const grupo = selGrupo.value;
+    const sabio = selSabio.value;
+    const concepto = selConcepto.value;
+
+    nodeSel.classed('dim', d => {
+      if (grupo && d.grupo !== grupo) return true;
+      if (sabio && !(d.sabios || []).includes(sabio)) return true;
+      if (concepto && !(d.conceptos || []).includes(concepto)) return true;
+      return false;
+    });
+
+    linkSel.style('opacity', d => {
+      const src = nodeSel.filter(n => n.id === (d.source.id || d.source));
+      const tgt = nodeSel.filter(n => n.id === (d.target.id || d.target));
+      const srcDim = src.classed('dim');
+      const tgtDim = tgt.classed('dim');
+      if (srcDim || tgtDim) return 0.06;
+      return 1;
+    });
+  }
+
+  selGrupo.addEventListener('change', aplicarFiltros);
+  selSabio.addEventListener('change', aplicarFiltros);
+  selConcepto.addEventListener('change', aplicarFiltros);
+  document.getElementById('reset-filtros').addEventListener('click', () => {
+    selGrupo.value = ''; selSabio.value = ''; selConcepto.value = '';
+    aplicarFiltros();
+  });
+
+  // ----- Panel: seleccionar tema -----
+  const panel = document.getElementById('panel');
+  function seleccionar(tema) {
+    nodeSel.classed('activo', d => d.id === tema.id);
+    linkSel.classed('activo', d => (d.source.id || d.source) === tema.id || (d.target.id || d.target) === tema.id);
+
+    // Conexiones de este tema
+    const conexionesTema = links.filter(l => (l.source.id || l.source) === tema.id || (l.target.id || l.target) === tema.id);
+    const conexionesPorCategoria = {
+      editorial: conexionesTema.filter(c => c.categoria === 'editorial'),
+      'co-referencia': conexionesTema.filter(c => c.categoria === 'co-referencia'),
+    };
+
+    const sabiosChips = (tema.sabios || []).map(s =>
+      `<span class="chip" onclick="document.getElementById('filtro-sabio').value='${s}';document.getElementById('filtro-sabio').dispatchEvent(new Event('change'));">${s}</span>`
+    ).join('');
+    const conceptosChips = (tema.conceptos || []).map(c =>
+      `<span class="chip" onclick="document.getElementById('filtro-concepto').value='${c}';document.getElementById('filtro-concepto').dispatchEvent(new Event('change'));">${c}</span>`
+    ).join('');
+    const pesukimChips = (tema.pesukim || []).map(p => `<span class="chip">${p}</span>`).join('');
+
+    const renderConexion = (c) => {
+      const otherSlug = (c.source.id || c.source) === tema.id ? (c.target.id || c.target) : (c.source.id || c.source);
+      const otherTema = temaPorSlug[otherSlug];
+      const otherTitulo = otherTema ? otherTema.titulo : otherSlug;
+      const detalle = c.categoria === 'editorial'
+        ? `vía editorial: ${c.tipo}`
+        : `vía ${c.via}`;
+      return `<div class="conexion ${c.tipo}" onclick="(${onClickConexion.toString()})('${otherSlug}')">
+        <div class="conexion-tipo">${detalle}</div>
+        <div>${otherTitulo}</div>
+      </div>`;
+    };
+
+    const editorialHtml = conexionesPorCategoria.editorial.length
+      ? `<div class="conexiones-bloque"><h4>Conexiones editoriales fuertes</h4>${conexionesPorCategoria.editorial.map(renderConexion).join('')}</div>`
+      : '';
+    const coRefHtml = conexionesPorCategoria['co-referencia'].length
+      ? `<div class="conexiones-bloque"><h4>Co-referencias (sabios, pesukim, conceptos)</h4>${conexionesPorCategoria['co-referencia'].map(renderConexion).join('')}</div>`
+      : '';
+
+    panel.innerHTML = `
+      <div class="tag">${tema.grupo} · daf ${(tema.dapim || []).join(' · ')}</div>
+      <h3>${tema.titulo}</h3>
+      <p class="subtitulo">${tema.subtitulo || ''}</p>
+      <div class="meta">
+        ${tema.estado ? `<span class="meta-k">estado</span><span class="meta-v">${tema.estado}</span>` : ''}
+        ${tema.sabios && tema.sabios.length ? `<span class="meta-k">sabios</span><span class="meta-v"><div class="chips">${sabiosChips}</div></span>` : ''}
+        ${tema.pesukim && tema.pesukim.length ? `<span class="meta-k">pesukim</span><span class="meta-v"><div class="chips">${pesukimChips}</div></span>` : ''}
+        ${tema.conceptos && tema.conceptos.length ? `<span class="meta-k">conceptos</span><span class="meta-v"><div class="chips">${conceptosChips}</div></span>` : ''}
+      </div>
+      ${editorialHtml}
+      ${coRefHtml}
+      ${tema.estado === 'listo' ? `<a class="ver-diagrama" href="./#${tema.slug}">→ Ver diagrama interactivo</a>` : ''}
+    `;
+  }
+
+  // Funcion global para click en una conexion del panel
+  window.seleccionarPorSlug = (slug) => {
+    const tema = nodes.find(n => n.id === slug);
+    if (tema) seleccionar(tema);
+  };
+  const onClickConexion = function(slug) { window.seleccionarPorSlug(slug); };
+
+  function mostrarConexion(c) {
+    nodeSel.classed('activo', false);
+    linkSel.classed('activo', d => d === c);
+    const srcSlug = c.source.id || c.source;
+    const tgtSlug = c.target.id || c.target;
+    const src = temaPorSlug[srcSlug];
+    const tgt = temaPorSlug[tgtSlug];
+    const titulo = c.categoria === 'editorial' ? `Puente editorial: ${c.tipo}` : `Co-referencia: ${c.via}`;
+    panel.innerHTML = `
+      <div class="tag">${c.categoria === 'editorial' ? 'TÉCNICA EDITORIAL' : 'CO-REFERENCIA'}</div>
+      <h3>${titulo}</h3>
+      <p class="subtitulo">une <strong>${src.titulo}</strong> con <strong>${tgt.titulo}</strong></p>
+      ${c.texto ? `<p style="font-family: var(--font-display); font-style: italic; line-height: 1.6; font-size: 0.95rem;">${c.texto.replace(/\n/g, ' ')}</p>` : ''}
+      <div style="margin-top: 1rem;">
+        <span class="chip" onclick="seleccionarPorSlug('${srcSlug}')">← ${src.titulo}</span>
+        <span class="chip" onclick="seleccionarPorSlug('${tgtSlug}')">${tgt.titulo} →</span>
+      </div>
+    `;
+  }
+
+  function limpiarPanel() {
+    nodeSel.classed('activo', false);
+    linkSel.classed('activo', false);
+    panel.innerHTML = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).</p>`;
+  }
+
+})();
+</script>
+
+</body>
+</html>
