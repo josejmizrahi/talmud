@@ -174,15 +174,28 @@
     line-height: 1.55;
     color: var(--tinta-suave);
   }
+  .diagrama-puente .puente-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+  }
   .diagrama-puente .puente-tag {
-    display: inline-block;
     font-family: var(--font-mono);
     font-size: 0.68rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--dorado);
-    margin-right: 0.5rem;
-    margin-bottom: 0.4rem;
+  }
+  .diagrama-puente .puente-tipo {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--sepia);
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--sepia);
+    border-radius: 999px;
   }
   .diagrama-puente .puente-texto {
     font-family: var(--font-display);
@@ -300,12 +313,24 @@
     const article = document.createElement('article');
     article.className = 'diagrama-bloque';
     article.id = d.slug;
-    const puenteHtml = d.puente_desde ? `
-      <div class="diagrama-puente">
-        <span class="puente-tag">${prev ? 'Cómo el editor conectó ↩' : 'Apertura del tratado'}</span>
-        <span class="puente-texto">${d.puente_desde}</span>
-      </div>
-    ` : '';
+    const puente = d.puente_desde;
+    let puenteHtml = '';
+    if (puente) {
+      const texto = typeof puente === 'string' ? puente : (puente.texto || '');
+      const tipo = (typeof puente === 'object' && puente.tipo) ? puente.tipo : null;
+      const isApertura = tipo === 'apertura' || !prev;
+      const tagLabel = isApertura ? 'Apertura del tratado' : 'Cómo el editor conectó ↩';
+      const tipoBadge = (tipo && !isApertura) ? `<span class="puente-tipo">técnica: ${tipo}</span>` : '';
+      puenteHtml = `
+        <div class="diagrama-puente">
+          <div class="puente-meta">
+            <span class="puente-tag">${tagLabel}</span>
+            ${tipoBadge}
+          </div>
+          <span class="puente-texto">${texto.replace(/\n/g, ' ')}</span>
+        </div>
+      `;
+    }
     article.innerHTML = `
       <div class="diagrama-cabecera">
         <div class="ref-tag">

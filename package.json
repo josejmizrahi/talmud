@@ -1,0 +1,13 @@
+{
+  "name": "codex-talmudicus",
+  "version": "1.0.0",
+  "description": "Diagramas temáticos interactivos del Bavlí · vault Obsidian + sitio estático",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-manifest.js",
+    "manifest": "node scripts/generate-manifest.js"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

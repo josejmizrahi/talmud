@@ -1,234 +1,324 @@
 {
   "perek": "Berajot · perek 1 · mishná 1:1",
-  "descripcion": "Diagramas temáticos del primer perek de Berajot (mishná 1:1, sobre el zman shema de noche). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición en el daf.",
+  "descripcion": "Diagramas temáticos del primer perek de Berajot (mishná 1:1). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
   "diagramas": [
     {
       "slug": "zman-shema-arvit",
       "orden": 1,
       "titulo": "El zman de kriat shma de arvit",
       "subtitulo": "cinco opiniones del inicio, cuatro del fin",
-      "dapim": ["2a", "2b"],
+      "dapim": [
+        "2a",
+        "2b"
+      ],
       "grupo": "La gran sugyá del shema",
       "estado": "listo",
-      "puente_desde": "Apertura del Talmud Bavli — primera mishná, primera palabra: מאימתי (\"¿desde cuándo?\"). El editor no encontró un puente porque no hay tema previo."
+      "diagrama": "diagramas/zman-shema-arvit.html",
+      "sabios": [
+        "r-eliezer",
+        "r-meir",
+        "r-yehoshua",
+        "r-janina",
+        "r-ajai",
+        "jajamim",
+        "r-gamliel",
+        "r-yehuda",
+        "r-yose"
+      ],
+      "pesukim": [],
+      "conceptos": [
+        "zman-shema",
+        "tzet-hakojavim",
+        "bein-hashmashot",
+        "kohanim-terumá",
+        "syag-rabínico"
+      ],
+      "puente_desde": {
+        "tipo": "apertura",
+        "texto": "Apertura del Talmud Bavli — primera mishná, primera palabra: מאימתי\n(\"¿desde cuándo?\"). El editor no encontró un puente porque no hay\ntema previo.\n"
+      }
     },
     {
       "slug": "vigilias-noche",
       "orden": 2,
       "titulo": "Las vigilias de la noche",
       "subtitulo": "Rabbi vs R. Natán · los signos terrestres",
-      "dapim": ["3a", "3b"],
+      "dapim": [
+        "3a",
+        "3b"
+      ],
       "grupo": "La noche cósmica",
       "estado": "listo",
-      "puente_desde": "TÉCNICA: continuación halájica directa. La mishná dice que R. Eliezer marca el fin del zman shema en \"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA). La guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre cuántas vigilias tiene la noche en total? Se necesita esa aritmética para saber a qué hora termina exactamente el zman. La palabra אשמורה de la mishná dispara la sugyá entera sobre las vigilias."
+      "diagrama": "diagramas/vigilias-noche.html",
+      "sabios": [
+        "r-eliezer",
+        "r-natan",
+        "rabbi-yehuda-hanasi",
+        "rav-yitzjak-bar-shmuel",
+        "rav-ashi",
+        "r-yehoshua"
+      ],
+      "pesukim": [
+        "yirmiyahu-25-30",
+        "shoftim-7-19",
+        "tehilim-119-62",
+        "tehilim-119-148"
+      ],
+      "conceptos": [
+        "vigilias",
+        "rugido-divino",
+        "lamento-bet-hamikdash",
+        "signos-terrestres"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La mishná dice que R. Eliezer marca el fin del zman shema en\n\"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA).\nLa guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre\ncuántas vigilias tiene la noche en total? Se necesita esa\naritmética para saber a qué hora termina exactamente el zman.\nLa palabra אשמורה de la mishná dispara la sugyá entera.\n"
+      }
     },
     {
       "slug": "r-yose-ruina",
       "orden": 3,
       "titulo": "R. Yose en la ruina · Eliyahu HaNavi",
       "subtitulo": "tres preguntas, la voz de la paloma",
-      "dapim": ["3a"],
+      "dapim": [
+        "3a"
+      ],
       "grupo": "La noche cósmica",
       "estado": "listo",
-      "puente_desde": "TÉCNICA: cadena por fórmula compartida. La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel: \"sobre cada vigilia HKBH se sienta y ruge como león y dice: אוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי וְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca después \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que R. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS. Las dos piezas se unen por el texto compartido del lamento. Esta es la técnica más visible del editor: cuando dos pasajes comparten una fórmula, los pone adyacentes."
+      "diagrama": "diagramas/r-yose-ruina.html",
+      "sabios": [
+        "r-yose",
+        "eliyahu-hanavi"
+      ],
+      "pesukim": [],
+      "conceptos": [
+        "ruina-yerushalayim",
+        "bat-kol",
+        "paloma-gimiente",
+        "lamento-bet-hamikdash",
+        "yehei-shmei-rabba",
+        "tefilá-ketzará"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n"
+      }
+    }
+  ],
+  "sabios": [
+    {
+      "slug": "eliyahu-hanavi",
+      "nombre": "Eliyahu HaNavi",
+      "generacion": "profeta (sin generación rabínica)",
+      "lugar": "Reino de Israel (siglo IX a.e.c.)",
+      "alias": [
+        "Eliyahu HaTishbi",
+        "זכור לטוב"
+      ]
     },
     {
-      "slug": "tres-razones-ruina",
-      "orden": 4,
-      "titulo": "Las tres razones contra la ruina",
-      "subtitulo": "chashad · mafolet · mazikin",
-      "dapim": ["3a", "3b"],
-      "grupo": "La noche cósmica",
-      "estado": "pendiente"
+      "slug": "r-eliezer",
+      "nombre": "R. Eliezer ben Hyrcanus",
+      "generacion": "tana 2 (siglo I-II)",
+      "lugar": "Lod (Eretz Yisrael)",
+      "maestro": "rabban-yojanan-ben-zakai",
+      "alias": [
+        "R. Eliezer haGadol"
+      ]
     },
     {
-      "slug": "noche-de-david",
-      "orden": 5,
-      "titulo": "La noche del rey David",
-      "subtitulo": "נשף · la arpa · el viento del norte",
-      "dapim": ["3b", "4a"],
-      "grupo": "El rey David",
-      "estado": "pendiente"
+      "slug": "r-yose",
+      "nombre": "R. Yose ben Halafta",
+      "generacion": "tana 4 (post-destrucción)",
+      "lugar": "Tzippori (Galilea)",
+      "maestro": "r-akiva"
     },
     {
-      "slug": "gobierno-tripartito",
-      "orden": 6,
-      "titulo": "El gobierno tripartito de David",
-      "subtitulo": "Ajitofel · Sanedrín · Urim ve-Tumim",
-      "dapim": ["3b", "4a", "7b"],
-      "grupo": "El rey David",
-      "estado": "pendiente"
+      "slug": "rabbi-yehuda-hanasi",
+      "nombre": "Rabbi (Yehuda HaNasi)",
+      "generacion": "tana 6 (cierre del período tanaítico)",
+      "lugar": "Bet She'arim, Tzippori",
+      "maestro": "rabban-shimon-ben-gamliel",
+      "alias": [
+        "Rabbi",
+        "Rabbeinu HaKadosh"
+      ]
     },
     {
-      "slug": "david-chasid",
-      "orden": 7,
-      "titulo": "David chasid · dos lecturas",
-      "subtitulo": "el madrugador y las manos manchadas · Mefivoshet",
-      "dapim": ["4a"],
-      "grupo": "El rey David",
-      "estado": "pendiente"
+      "slug": "r-natan",
+      "nombre": "R Natan"
     },
     {
-      "slug": "miedo-al-pecado",
-      "orden": 8,
-      "titulo": "El miedo al pecado",
-      "subtitulo": "Lulei he'emanti · Yaakov · Ezra",
-      "dapim": ["4a"],
-      "grupo": "El rey David",
-      "estado": "pendiente"
+      "slug": "rav-yitzjak-bar-shmuel",
+      "nombre": "Rav Yitzjak Bar Shmuel"
     },
     {
-      "slug": "cerca-y-trabajador",
-      "orden": 9,
-      "titulo": "La cerca rabínica y el trabajador del campo",
-      "subtitulo": "ad chatzot como סייג · la baraita del que se duerme",
-      "dapim": ["4b"],
-      "grupo": "La halajá del zman",
-      "estado": "pendiente"
+      "slug": "rav-ashi",
+      "nombre": "Rav Ashi"
     },
     {
-      "slug": "semijat-geula-tefila",
-      "orden": 10,
-      "titulo": "Semijat geulá le-tefilá",
-      "subtitulo": "el pasaporte al olam ha-ba · Hashkiveinu como geulá arichta",
-      "dapim": ["4b", "6b", "9b"],
-      "grupo": "La técnica litúrgica",
-      "estado": "pendiente"
+      "slug": "r-yehoshua",
+      "nombre": "R Yehoshua"
     },
     {
-      "slug": "ashrei-olam-haba",
-      "orden": 11,
-      "titulo": "Ashrei y el olam ha-ba",
-      "subtitulo": "tres veces al día · por qué falta la nun",
-      "dapim": ["4b"],
-      "grupo": "La técnica litúrgica",
-      "estado": "pendiente"
+      "slug": "r-meir",
+      "nombre": "R Meir"
     },
     {
-      "slug": "escala-angeles",
-      "orden": 12,
-      "titulo": "La escala de los ángeles",
-      "subtitulo": "Mikhael 1 · Gabriel 2 · Eliyahu 4 · Malach HaMavet 8",
-      "dapim": ["4b"],
-      "grupo": "La técnica litúrgica",
-      "estado": "pendiente"
+      "slug": "r-janina",
+      "nombre": "R Janina"
     },
     {
-      "slug": "escalera-yetzer",
-      "orden": 13,
-      "titulo": "La escalera contra el yetzer hará",
-      "subtitulo": "enfurece → Torá → shema → muerte",
-      "dapim": ["5a"],
-      "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente"
+      "slug": "r-ajai",
+      "nombre": "R Ajai"
     },
     {
-      "slug": "yisurim-shel-ahava",
-      "orden": 14,
-      "titulo": "Yisurim shel ahavá · doctrina completa",
-      "subtitulo": "diagnóstico, aceptación, las tres escenas médicas",
-      "dapim": ["5a", "5b"],
-      "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente"
+      "slug": "jajamim",
+      "nombre": "Jajamim"
     },
     {
-      "slug": "tres-regalos",
-      "orden": 15,
-      "titulo": "Los tres regalos por sufrimiento",
-      "subtitulo": "Torá · Eretz Yisrael · Olam Ha-Ba (RaShBÍ)",
-      "dapim": ["5a"],
-      "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente"
+      "slug": "r-gamliel",
+      "nombre": "R Gamliel"
     },
     {
-      "slug": "tefila-y-cama",
-      "orden": 16,
-      "titulo": "Tefilá y la posición de la cama",
-      "subtitulo": "Aba Binyamin · dos cosas que le preocuparon",
-      "dapim": ["5b"],
-      "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente"
+      "slug": "r-yehuda",
+      "nombre": "R Yehuda"
+    }
+  ],
+  "pesukim": [
+    {
+      "slug": "tehilim-119-62",
+      "ref": "Tehilim 119:62",
+      "libro": "Tehilim",
+      "capitulo": 119,
+      "versiculo": 62,
+      "texto": "חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לְךָ עַל מִשְׁפְּטֵי צִדְקֶךָ",
+      "traduccion": "A la medianoche me levanto para alabarte por tus juicios justos"
     },
     {
-      "slug": "mazikin-invisibles",
-      "orden": 17,
-      "titulo": "Los mazikin invisibles",
-      "subtitulo": "si el ojo pudiera ver, nadie podría estar de pie",
-      "dapim": ["6a"],
-      "grupo": "El espacio sagrado",
-      "estado": "pendiente"
+      "slug": "yirmiyahu-25-30",
+      "ref": "Yirmiyahu 25:30",
+      "libro": "Yirmiyahu",
+      "capitulo": 25,
+      "versiculo": 30,
+      "texto": "ה׳ מִמָּרוֹם יִשְׁאַג וּמִמְּעוֹן קָדְשׁוֹ יִתֵּן קוֹלוֹ שָׁאֹג יִשְׁאַג עַל נָוֵהוּ",
+      "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
     },
     {
-      "slug": "beit-knesset",
-      "orden": 18,
-      "titulo": "El beit knesset como lugar privilegiado",
-      "subtitulo": "HKBH busca 10 · fijar lugar · shajen ra",
-      "dapim": ["6a", "6b", "7b", "8a", "8b"],
-      "grupo": "El espacio sagrado",
-      "estado": "pendiente"
+      "slug": "shoftim-7-19",
+      "nombre": "Shoftim 7 19"
     },
     {
-      "slug": "hkbh-reza-tefilin",
-      "orden": 19,
-      "titulo": "HKBH reza, se enoja, usa tefilín",
-      "subtitulo": "R. Yishmael ben Elisha · el רגע del enojo",
-      "dapim": ["6a", "7a"],
-      "grupo": "Teología refinada",
-      "estado": "pendiente"
+      "slug": "tehilim-119-148",
+      "nombre": "Tehilim 119 148"
+    }
+  ],
+  "conceptos": [
+    {
+      "slug": "lamento-bet-hamikdash",
+      "nombre": "Lamento por el Bet HaMikdash"
     },
     {
-      "slug": "moshe-tres-cosas",
-      "orden": 20,
-      "titulo": "Moshé pide tres cosas",
-      "subtitulo": "y HKBH se las da",
-      "dapim": ["7a"],
-      "grupo": "Teología refinada",
-      "estado": "pendiente"
+      "slug": "ruina-yerushalayim",
+      "nombre": "Ruina Yerushalayim"
     },
     {
-      "slug": "david-y-avshalom",
-      "orden": 21,
-      "titulo": "David y Avshalom",
-      "subtitulo": "tarbut ra'á peor que Gog y Magog",
-      "dapim": ["7b"],
-      "grupo": "El rey David",
-      "estado": "pendiente"
+      "slug": "bat-kol",
+      "nombre": "Bat Kol"
     },
     {
-      "slug": "provocar-rashaim",
-      "orden": 22,
-      "titulo": "Provocar a los rashaim",
-      "subtitulo": "permitido en este mundo · fijar lugar",
-      "dapim": ["7b"],
-      "grupo": "Halajá personal",
-      "estado": "pendiente"
+      "slug": "paloma-gimiente",
+      "nombre": "Paloma Gimiente"
     },
     {
-      "slug": "akiva-medos-gamliel-persas",
-      "orden": 23,
-      "titulo": "R. Akiva los Medos · R. Gamliel los Persas",
-      "subtitulo": "tres cosas de cada cultura",
-      "dapim": ["8b"],
-      "grupo": "Halajá personal",
-      "estado": "pendiente"
+      "slug": "yehei-shmei-rabba",
+      "nombre": "Yehei Shmei Rabba"
     },
     {
-      "slug": "shema-dos-veces",
-      "orden": 24,
-      "titulo": "R. Shimon bar Yojai · shema dos veces",
-      "subtitulo": "antes y después del amud hashachar",
-      "dapim": ["8b", "9a"],
-      "grupo": "La gran sugyá del shema",
-      "estado": "pendiente"
+      "slug": "tefilá-ketzará",
+      "nombre": "Tefilá Ketzará"
     },
     {
-      "slug": "pesaj-y-zman-shema",
-      "orden": 25,
-      "titulo": "Pesaj y el zman shema",
-      "subtitulo": "R. Elazar ben Azaria vs R. Akiva",
-      "dapim": ["9a"],
-      "grupo": "La gran sugyá del shema",
-      "estado": "pendiente"
+      "slug": "vigilias",
+      "nombre": "Vigilias"
+    },
+    {
+      "slug": "rugido-divino",
+      "nombre": "Rugido Divino"
+    },
+    {
+      "slug": "signos-terrestres",
+      "nombre": "Signos Terrestres"
+    },
+    {
+      "slug": "zman-shema",
+      "nombre": "Zman Shema"
+    },
+    {
+      "slug": "tzet-hakojavim",
+      "nombre": "Tzet Hakojavim"
+    },
+    {
+      "slug": "bein-hashmashot",
+      "nombre": "Bein Hashmashot"
+    },
+    {
+      "slug": "kohanim-terumá",
+      "nombre": "Kohanim Terumá"
+    },
+    {
+      "slug": "syag-rabínico",
+      "nombre": "Syag RabíNico"
+    }
+  ],
+  "conexiones": [
+    {
+      "from": "zman-shema-arvit",
+      "to": "vigilias-noche",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La mishná dice que R. Eliezer marca el fin del zman shema en\n\"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA).\nLa guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre\ncuántas vigilias tiene la noche en total? Se necesita esa\naritmética para saber a qué hora termina exactamente el zman.\nLa palabra אשמורה de la mishná dispara la sugyá entera.\n",
+      "peso": 3
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "r-yose-ruina",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n",
+      "peso": 3
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "vigilias-noche",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "vigilias-noche",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "r-yose-ruina",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "r-yose-ruina",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "lamento-bet-hamikdash",
+      "peso": 1
     }
   ]
 }
