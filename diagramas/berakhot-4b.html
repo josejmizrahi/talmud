@@ -1,0 +1,330 @@
+<div class="cerca-interactivo">
+<style>
+  .cerca-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .cerca-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .cerca-leyenda .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .cerca-leyenda .rojo    { background: rgba(139,26,26,0.12); border-color: var(--rojo); }
+  .cerca-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .cerca-leyenda .azul    { background: rgba(30,58,95,0.10);  border-color: var(--azul); }
+  .cerca-leyenda .violeta { background: rgba(90,58,138,0.10); border-color: var(--violeta); }
+  .cerca-leyenda .sepia   { background: rgba(107,68,35,0.10); border-color: var(--sepia); }
+  .cerca-diagrama svg { width: 100%; height: auto; display: block; }
+  .cerca-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .cerca-nodo:hover rect { stroke-width: 2 !important; }
+  .cerca-nodo.activa rect { stroke-width: 2.5 !important; }
+  .cerca-nodo.dim { opacity: 0.32; }
+  .cerca-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .cerca-panel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .cerca-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--tinta);
+    margin: 0;
+  }
+  .cerca-panel-hebreo {
+    direction: rtl;
+    font-size: 1.05rem;
+    color: var(--sepia);
+  }
+  .cerca-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .cerca-panel-explicacion {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--tinta);
+    margin-bottom: 0;
+  }
+  .cerca-vacio {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
+
+<div class="cerca-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>la cerca + severidad</span>
+  <span><span class="swatch dorado"></span>★ promesa de olam ha-ba</span>
+  <span><span class="swatch azul"></span>semijat geulah le-tefilah</span>
+  <span><span class="swatch violeta"></span>ángeles</span>
+  <span><span class="swatch sepia"></span>shema en la cama</span>
+</div>
+
+<div class="cerca-diagrama">
+<svg viewBox="0 0 720 1080" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4b: la cerca rabínica del trabajador del campo, el debate semijat geulah le-tefilah, Ashrei como pasaporte al olam ha-ba, la escala de los ángeles, y el shema antes de dormir</title>
+
+<defs>
+  <marker id="flecha-4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <symbol id="estrella" viewBox="-10 -10 20 20">
+    <path d="M0,-8 L2.4,-2.4 L8,-2.4 L3.6,1.2 L5.6,7.2 L0,3.6 L-5.6,7.2 L-3.6,1.2 L-8,-2.4 L-2.4,-2.4 Z" fill="#b8860b"/>
+  </symbol>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Berajot 4b · La cerca, el olam ha-ba y los ángeles</text>
+<text x="360" y="48" text-anchor="middle" font-size="12" fill="#6b4423">del trabajador que se duerme al ángel que vuela en un solo vuelo</text>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN A · LA CERCA RABÍNICA · L0-L4                                   -->
+<!-- ====================================================================== -->
+<text x="60" y="82" font-size="10" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RESOLUCIÓN DEL MISHNÁ · LA CERCA DEL "CHATZOT"</text>
+
+<g class="cerca-nodo" data-id="la-cerca">
+  <rect x="60" y="94" width="640" height="64" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="78" y="116" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Los Jajamim coinciden con R. Gamliel — el zman REAL es hasta el amanecer</text>
+  <text x="682" y="116" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="500">כְּדֵי לְהַרְחִיק אֶת הָאָדָם מִן הָעֲבֵירָה</text>
+  <text x="78" y="138" font-size="10" fill="#3d2f23">"hasta chatzot" es סְיָיג — una cerca rabínica para que la persona no se descuide y pierda el zman entero.</text>
+  <text x="78" y="153" font-size="9" fill="#6b4423" font-style="italic">la halajá derabanan limita la halajá de'oraita preventivamente</text>
+</g>
+
+<g class="cerca-nodo" data-id="trabajador">
+  <rect x="60" y="172" width="640" height="92" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="78" y="193" font-size="10" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">EL ESCENARIO · BARAITA DEL TRABAJADOR DEL CAMPO</text>
+  <text x="78" y="214" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">"comeré poco, beberé poco, dormiré poco, y después recitaré shema y rezaré"</text>
+  <text x="682" y="214" text-anchor="end" font-size="10" direction="rtl" fill="#8b1a1a">אוֹכַל קִימְעָא · אֶשְׁתֶּה · אִישַׁן</text>
+  <text x="78" y="234" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">…y el sueño lo atrapa, y queda durmiendo toda la noche.</text>
+  <text x="78" y="252" font-size="10" fill="#3d2f23">La solución: pasar por el beit knesset DIRECTO, recitar antes de comer. La cerca evita el desastre.</text>
+</g>
+
+<g class="cerca-nodo" data-id="chayav-mita">
+  <rect x="60" y="278" width="640" height="74" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.1"/>
+  <text x="78" y="299" font-size="10" font-family="'JetBrains Mono', monospace" fill="#8b1a1a" letter-spacing="1.5">LA FÓRMULA SEVERA · L2-L4</text>
+  <text x="682" y="299" text-anchor="end" font-size="12" direction="rtl" fill="#8b1a1a" font-weight="500">כָּל הָעוֹבֵר עַל דִּבְרֵי חֲכָמִים חַיָּיב מִיתָה</text>
+  <text x="78" y="321" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">"quien transgrede las palabras de los Sabios es reo de muerte"</text>
+  <text x="78" y="340" font-size="10" fill="#3d2f23">¿Por qué tan severa aquí? Dos razones: (a) hay אוֹנֶס שֵׁינָה — el peligro real del sueño; (b) para refutar a quien dice que ARVIT es opcional.</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN B · SEMIJAT GEULAH LE-TEFILAH · L5-L14                          -->
+<!-- ====================================================================== -->
+<text x="60" y="378" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SEMIJAT GEULAH LE-TEFILAH · UNA TÉCNICA QUE GARANTIZA OLAM HA-BA</text>
+
+<g class="cerca-nodo" data-id="r-yochanan-bonha">
+  <use href="#estrella" x="78" y="408" width="14" height="14"/>
+  <rect x="60" y="390" width="640" height="76" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="100" y="412" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yojanán · "¿quién es ben olam ha-ba? El que CONECTA geulá a tefilá en arvit"</text>
+  <text x="682" y="412" text-anchor="end" font-size="11" direction="rtl" fill="#b8860b" font-weight="500">הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה</text>
+  <text x="100" y="434" font-size="10" fill="#3d2f23">No interrumpir entre la berajá "גָּאַל יִשְׂרָאֵל" y la Amidá — gesto micro-litúrgico con valor escatológico.</text>
+  <text x="100" y="453" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">R. Yehoshua ben Levi disiente: "las tefilot fueron instituidas EN EL MEDIO" (geulá no requiere conexión inmediata).</text>
+</g>
+
+<g class="cerca-nodo" data-id="debate-svara-kra">
+  <rect x="60" y="478" width="640" height="86" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="78" y="499" font-size="10" font-family="'JetBrains Mono', monospace" fill="#1e3a5f" letter-spacing="1.5">¿EN QUÉ DIFIEREN? · SVARA O KRA</text>
+  <text x="78" y="521" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">SVARA · R. Yojanán: la "geulá" existe ya de noche aunque la geulá perfecta sea solo al amanecer (cuando se ve la luz).</text>
+  <text x="78" y="538" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">R. Yehoshua ben Levi: como la geulá perfecta es solo al amanecer, de noche NO hay obligación de conectar.</text>
+  <text x="78" y="557" font-size="10" fill="#3d2f23">KRA · ambos leen "בְּשָׁכְבְּךָ וּבְקוּמֶךָ". R. Yojanán hace hekesh: como en la mañana, en la noche también shema→tefilá. R. Yehoshua ben Levi: como en la mañana shema se dice "סמוך למטתו" (junto a la cama), en la noche también.</text>
+</g>
+
+<g class="cerca-nodo" data-id="hashkiveinu">
+  <rect x="60" y="578" width="640" height="74" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="78" y="599" font-size="10" font-family="'JetBrains Mono', monospace" fill="#1e3a5f" letter-spacing="1.5">LA OBJECIÓN Y LA SALIDA · "HASHKIVEINU" COMO GEULÁ EXTENDIDA</text>
+  <text x="682" y="599" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="500">כִּגְאוּלָּה אֲרִיכְתָּא דָּמְיָא</text>
+  <text x="78" y="621" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">Mar bar Ravina: ¡pero en arvit decimos "Hashkiveinu" ENTRE geulá y tefilá!</text>
+  <text x="78" y="640" font-size="10" fill="#3d2f23">Respuesta: Hashkiveinu es una "geulá extendida" — la berajá rabínica está pegada a la geulá, no la interrumpe.</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN C · ASHREI · L15-L21                                            -->
+<!-- ====================================================================== -->
+<text x="60" y="678" font-size="10" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">TEHILÁ LEDAVID · SEGUNDO PASAPORTE AL OLAM HA-BA</text>
+
+<g class="cerca-nodo" data-id="ashrei-promesa">
+  <use href="#estrella" x="78" y="708" width="14" height="14"/>
+  <rect x="60" y="690" width="640" height="92" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="100" y="712" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Elazar / R. Avina · quien recita "Tehilá leDavid" 3 veces al día — ben olam ha-ba</text>
+  <text x="682" y="712" text-anchor="end" font-size="11" direction="rtl" fill="#b8860b" font-weight="500">תְּהִלָּה לְדָוִד · ג׳ פְּעָמִים</text>
+  <text x="100" y="734" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">¿Por qué Ashrei? Tres razones examinadas y refutadas, hasta llegar a la verdadera:</text>
+  <text x="100" y="752" font-size="10" fill="#3d2f23">(1) ¿porque es alfabético? No — Tehilim 119 también lo es. (2) ¿porque tiene "פותח את ידך"? No — Halel HaGadol también.</text>
+  <text x="100" y="769" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">(3) Porque tiene LAS DOS COSAS — alfabeto + פותח את ידך. La densidad litúrgica garantiza el premio escatológico.</text>
+</g>
+
+<g class="cerca-nodo" data-id="nun-falta">
+  <rect x="60" y="794" width="640" height="76" rx="6" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="1"/>
+  <text x="78" y="816" font-size="10" font-family="'JetBrains Mono', monospace" fill="#b8860b" letter-spacing="1.5">¿POR QUÉ NO HAY נ EN ASHREI? · L20-L21</text>
+  <text x="78" y="838" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yojanán: la letra נ insinúa "נָפְלָה לא תוסיף קום" — la caída de Israel — y David la omite.</text>
+  <text x="78" y="856" font-size="10" fill="#3d2f23">En Eretz Yisrael leen: "נָפְלָה ולא תוסיף לִנְפּוֹל עוֹד · קוּם בְּתוּלַת יִשְׂרָאֵל" (cayó y no caerá más; ¡levántate, virgen de Israel!).</text>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN D · ESCALA DE LOS ÁNGELES · L22-L25                             -->
+<!-- ====================================================================== -->
+<text x="60" y="894" font-size="10" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALA DE LOS ÁNGELES · ¿CUÁNTOS VUELOS NECESITAN?</text>
+
+<g class="cerca-nodo" data-id="angeles">
+  <rect x="60" y="906" width="640" height="98" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.1"/>
+  <text x="78" y="928" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Elazar bar Avina: Mikhael &gt; Gabriel — un solo vuelo basta para Mikhael</text>
+  <!-- Escala visual: filas con barras de distinto largo -->
+  <g transform="translate(78,938)">
+    <text x="0" y="14" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">Mikhael</text>
+    <rect x="80" y="6" width="40" height="10" fill="#5a3a8a" opacity="0.7"/>
+    <text x="128" y="14" font-size="9" fill="#6b4423">1 vuelo (אחד)</text>
+
+    <text x="220" y="14" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">Gabriel</text>
+    <rect x="280" y="6" width="80" height="10" fill="#5a3a8a" opacity="0.6"/>
+    <text x="368" y="14" font-size="9" fill="#6b4423">2 vuelos (מועף ביעף)</text>
+
+    <text x="0" y="34" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">Eliyahu</text>
+    <rect x="80" y="26" width="160" height="10" fill="#5a3a8a" opacity="0.5"/>
+    <text x="248" y="34" font-size="9" fill="#6b4423">4 vuelos</text>
+
+    <text x="220" y="34" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">Malach HaMavet</text>
+    <rect x="335" y="26" width="200" height="10" fill="#5a3a8a" opacity="0.4"/>
+    <text x="543" y="34" font-size="9" fill="#6b4423">8 vuelos</text>
+
+    <text x="0" y="56" font-size="9" fill="#8b1a1a" font-style="italic">excepción: en tiempo de plaga, incluso el Malach HaMavet vuela en uno solo (instantáneo)</text>
+  </g>
+</g>
+
+<!-- ====================================================================== -->
+<!-- SECCIÓN E · KRIAT SHEMA EN LA CAMA · L26                                -->
+<!-- ====================================================================== -->
+<text x="60" y="1028" font-size="10" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SHEMA AL ACOSTARSE · MITZVÁ PERSONAL · L26</text>
+
+<g class="cerca-nodo" data-id="shema-mita">
+  <rect x="60" y="1040" width="640" height="34" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="78" y="1062" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Yehoshua ben Levi: aunque ya recitó shema en el beit knesset — מצוה לקרותו על מטתו</text>
+  <text x="682" y="1062" text-anchor="end" font-size="10" direction="rtl" fill="#6b4423">רִגְזוּ וְאַל תֶּחֱטָאוּ · תהילים ד:ה</text>
+</g>
+
+</svg>
+</div>
+
+<div class="cerca-panel" id="cerca-panel">
+  <p class="cerca-vacio">Selecciona cualquier elemento para ver la cita exacta, su autor y su función en la sugyá.</p>
+</div>
+
+<script>
+(function() {
+  const datos = {
+    'la-cerca': {
+      titulo: 'La cerca de los Jajamim · ¿como quién opinan?',
+      hebreo: 'לְעוֹלָם כְּרַבָּן גַּמְלִיאֵל סְבִירָא לְהוּ · "עַד חֲצוֹת" כְּדֵי לְהַרְחִיק אֶת הָאָדָם מִן הָעֲבֵירָה',
+      traduccion: '"En verdad opinan como Rabán Gamliel — y dicen \'hasta la medianoche\' como cerca, para alejar al hombre de la transgresión"',
+      explicacion: 'Resolución elegante de la mishná. El pivote de 4a (¿como quién opinan los Jajamim?) se resuelve: SÍ opinan como Rabán Gamliel — el zman REAL del shema nocturno es hasta el amud hashachar. Pero dijeron "ad chatzot" como SYAG (cerca preventiva). La halajá rabínica acorta voluntariamente el zman bíblico para proteger a la gente del olvido. Es la teoría general de las vallas rabínicas: la halajá de-oraita establece el límite real; los Sabios establecen un límite anterior por seguridad.'
+    },
+    'trabajador': {
+      titulo: 'El trabajador del campo · la escena que justifica la cerca',
+      hebreo: 'אֵלֵךְ לְבֵיתִי וְאוֹכַל קִימְעָא וְאֶשְׁתֶּה קִימְעָא וְאִישַׁן קִימְעָא, וְאַחַר כָּךְ אֶקְרָא קְרִיאַת שְׁמַע · וְחוֹטַפְתּוֹ שֵׁינָה',
+      traduccion: '"Iré a mi casa, comeré un poco, beberé un poco, dormiré un poco, y después recitaré shema… y el sueño lo atrapa"',
+      explicacion: 'Una de las escenas narrativas más vívidas del Bavlí, y la razón concreta del SYAG. El trabajador vuelve del campo al atardecer cansado; planea posponer el shema un poco para comer, beber, dormir "solo un rato" — y el sueño lo vence. Termina durmiendo toda la noche y pierde el zman. La solución que sí funciona: cuando vuelve del campo, ENTRA AL BEIT KNESSET DIRECTO. Si está acostumbrado a leer Tanaj — lee. Si a estudiar — estudia. Después recita shema, reza arvit, y solo entonces va a casa a comer. La cerca es psicológica: si los Sabios no hubieran dicho "ad chatzot", el trabajador habría dicho "tengo toda la noche" y caído en la trampa.'
+    },
+    'chayav-mita': {
+      titulo: 'Quien transgrede los Sabios — reo de muerte',
+      hebreo: 'כָּל הָעוֹבֵר עַל דִּבְרֵי חֲכָמִים חַיָּיב מִיתָה',
+      traduccion: '"Todo el que transgrede las palabras de los Sabios es reo de muerte"',
+      explicacion: 'Una de las fórmulas más severas del Talmud. La guemará pregunta: ¿por qué tan severa AQUÍ y no en otros casos rabínicos? Dos respuestas en paralelo (איבעית אימא): (a) Porque hay אוֹנֶס שֵׁינָה — el "peligro coercitivo del sueño". Quien decide posponer arvit corre el riesgo REAL de perder el zman entero, no solo desafía a los Sabios — pone su mitzvá en peligro letal. (b) Para refutar a quien dice "תפילת ערבית רשות" (arvit es opcional). La fórmula severa de los Sabios proclama: arvit ES obligatoria. La amenaza de muerte no es punitiva sino instructiva: marca el peso halájico real.'
+    },
+    'r-yochanan-bonha': {
+      titulo: 'R. Yojanán · semijat geulá le-tefilá garantiza olam ha-ba',
+      hebreo: 'אֵיזֶהוּ בֶּן הָעוֹלָם הַבָּא — זֶה הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה שֶׁל עַרְבִית',
+      traduccion: '"¿Quién es \'ben olam ha-ba\'? El que conecta la geulá con la tefilá en arvit"',
+      explicacion: 'Una de las declaraciones escatológicas más famosas del Bavlí. R. Yojanán afirma que el gesto micro-litúrgico — no interrumpir entre la berajá de "Ga\'al Yisrael" (que cierra la sección posterior a shema) y la Amidá — es el SELLO del "hijo del mundo venidero". El concepto: la geulá pasada (Egipto) prepara la geulá futura (mesiánica). Conectar las dos es proclamar la continuidad redentora. R. Yehoshua ben Levi disiente: "las tefilot fueron instituidas EN EL MEDIO" (entre las dos shemas, mañana y noche). Para él la conexión geulá-tefilá no es la clave escatológica. La sugyá analizará a continuación qué fundamenta cada posición.'
+    },
+    'debate-svara-kra': {
+      titulo: 'El debate · razonamiento (svara) o verso (kra)',
+      hebreo: 'אִי בָּעֵית אֵימָא קְרָא · אִי בָּעֵית אֵימָא סְבָרָא',
+      traduccion: '"Si quieres di: el verso. Si quieres di: el razonamiento" — dos rutas analíticas',
+      explicacion: 'La sugyá organiza el desacuerdo en dos planos. (1) SVARA · R. Yojanán sostiene que existe una "geulá nocturna" — aunque la geulá perfecta solo llega al amanecer (cuando se ve la luz, simbolizando la liberación), de noche ya hay anticipación geulática. Por eso vale la pena conectar geulá-tefilá. R. Yehoshua ben Levi: como la geulá PERFECTA es solo de día, no hay deuda obligatoria de conectarlas de noche. (2) KRA · ambos leen el mismo verso, "בְּשָׁכְבְּךָ וּבְקוּמֶךָ" (Devarim 6:7). R. Yojanán hace HEKESH (analogía): así como en la mañana shema → tefilá → conexión, en la noche también. R. Yehoshua ben Levi: así como en la mañana se dice shema "סמוך למטתו" (junto a su cama, antes de levantarse), en la noche también — la analogía no es con la conexión tefilá sino con la posición física del shema. El método del Bavlí: ofrecer DOS rutas a la misma conclusión.'
+    },
+    'hashkiveinu': {
+      titulo: 'Hashkiveinu · geulá extendida',
+      hebreo: 'כֵּיוָן דְּתַקִּינוּ רַבָּנַן ״הַשְׁכִּיבֵנוּ״ — כִּגְאוּלָּה אֲרִיכְתָּא דָּמְיָא',
+      traduccion: '"Como los Sabios instituyeron Hashkiveinu, se considera geulá extendida"',
+      explicacion: 'Mar bar Ravina objeta a R. Yojanán: ¡pero en arvit decimos shtayim lefaneha u-shtayim le\'achareha (dos berajot antes del shema y dos después)! La segunda berajá posterior es Hashkiveinu — Y ESTÁ ENTRE geulá y tefilá. ¿No interrumpe la conexión? La respuesta amoraica: Hashkiveinu cuenta como "גְּאוּלָּה אֲרִיכְתָּא" — una "geulá extendida". Como los Sabios la instituyeron como continuación temática y litúrgica de la geulá (pide protección nocturna, paz, redención), forma parte de la misma unidad. Paralelo: en shajarit decimos "ה׳ שְׂפָתַי תִּפְתָּח" ANTES de la Amidá. ¿Eso no es interrupción? No — es "תְּפִלָּה אֲרִיכְתָּא" (tefilá extendida). La técnica jurídica: cuando una práctica rabínica se adhiere a una unidad halájica, se asimila a ella en categoría.'
+    },
+    'ashrei-promesa': {
+      titulo: 'Tehilá leDavid · tres veces al día = olam ha-ba',
+      hebreo: 'כָּל הָאוֹמֵר "תְּהִלָּה לְדָוִד" בְּכָל יוֹם שָׁלֹשׁ פְּעָמִים — מוּבְטָח לוֹ שֶׁהוּא בֶּן הָעוֹלָם הַבָּא',
+      traduccion: '"Todo el que dice \'Tehilá leDavid\' tres veces al día — se le garantiza ser ben olam ha-ba"',
+      explicacion: 'R. Elazar en nombre de R. Avina: el segundo gran "pasaporte al olam ha-ba" del daf (el primero era la semijat geulá le-tefilá). Tehilim 145 (que comienza "אַשְׁרֵי") tiene una promesa escatológica explícita. La guemará pregunta: ¿qué hay de tan especial? Tres rondas dialécticas. (1) ¿Porque es ALFABÉTICO? No — Tehilim 119 también lo es (y de forma más elaborada, ocho versos por letra). (2) ¿Porque contiene "פּוֹתֵחַ אֶת יָדֶךָ" (abres tu mano y sacias a todo viviente)? No — el Halel HaGadol (Tehilim 136) también dice "נֹתֵן לֶחֶם לְכָל בָּשָׂר". (3) Porque tiene LAS DOS COSAS combinadas — alfabeto + פותח את ידך. La densidad litúrgica (estructura formal + teología providencial) garantiza el premio escatológico. Esta sugyá es la fuente halájica para recitar Ashrei tres veces diarias en la liturgia (mañana × 2 + minjá × 1).'
+    },
+    'nun-falta': {
+      titulo: '¿Por qué no hay נ en Ashrei?',
+      hebreo: 'מִפְּנֵי שֶׁיֵּשׁ בָּהּ מַפַּלְתָּן שֶׁל שׂוֹנְאֵי יִשְׂרָאֵל · נָפְלָה לֹא תוֹסִיף קוּם בְּתוּלַת יִשְׂרָאֵל',
+      traduccion: '"Porque hay en ella la caída de los enemigos de Israel — \'cayó, no volverá a levantarse, virgen de Israel\'" (Amos 5:2)',
+      explicacion: 'R. Yojanán nota un detalle textual: Ashrei es alfabético, pero le falta la letra נ. ¿Por qué? Porque la letra נ insinuaría el verso de Amos 5:2 — "נָפְלָה לֹא תוֹסִיף קוּם בְּתוּלַת יִשְׂרָאֵל" (cayó, no volverá a levantarse, virgen de Israel). David, escribiendo Ashrei, OMITE la letra que evoca la caída irreversible de Israel. En Maarava (Eretz Yisrael) leen el verso diferente, dividiéndolo: "נָפְלָה וְלֹא תוֹסִיף לִנְפּוֹל עוֹד · קוּם בְּתוּלַת יִשְׂרָאֵל" (cayó, pero no volverá a caer; ¡levántate, virgen de Israel!). Rav Najmán bar Yitzjak añade: aun así, David inmediatamente "restituye" la letra omitida — el verso siguiente al lugar de la נ ausente dice "סוֹמֵךְ ה׳ לְכָל הַנֹּפְלִים" (Hashem sostiene a todos los caídos). La ausencia de la נ se llena con la promesa de restauración divina.'
+    },
+    'angeles': {
+      titulo: 'La escala de los ángeles · 1, 2, 4, 8',
+      hebreo: 'מִיכָאֵל בְּאַחַת · גַּבְרִיאֵל בִּשְׁתַּיִם · אֵלִיָּהוּ בְּאַרְבַּע · וּמַלְאַךְ הַמָּוֶת בִּשְׁמֹנֶה',
+      traduccion: '"Mikhael en uno, Gabriel en dos, Eliyahu en cuatro, y el Malach HaMavet en ocho"',
+      explicacion: 'Midrash angelogía. R. Elazar bar Avina compara dos versos. Mikhael (en Yeshayahu 6:6 — "voló a mí uno de los serafines") cumple su misión en UN VUELO. Gabriel (Daniel 9:21 — "מוּעָף בִּיעָף" — volando en vuelo, plural) necesita DOS. La baraita amplía la escala: Mikhael 1, Gabriel 2, Eliyahu 4, Malach HaMavet 8 (el más distante, el que más lentamente llega — bendito sea). EXCEPCIÓN: en tiempo de plaga, incluso el Malach HaMavet vuela en uno solo (la muerte llega instantánea cuando el decreto es masivo). La gradación angelogía revela una jerarquía cósmica: cuanto más cercano a Hashem, menos esfuerzo necesita el ángel para llegar al humano. La identificación del "echad" en Yeshayahu 6:6 con Mikhael se hace por gezerá shavá con Daniel 10:13 ("Mikhael אֶחָד הַשָּׂרִים הָרִאשׁוֹנִים").'
+    },
+    'shema-mita': {
+      titulo: 'Shema al acostarse · mitzvá personal',
+      hebreo: 'אַף עַל פִּי שֶׁקָּרָא אָדָם קְרִיאַת שְׁמַע בְּבֵית הַכְּנֶסֶת — מִצְוָה לִקְרוֹתוֹ עַל מִטָּתוֹ',
+      traduccion: '"Aunque la persona ya recitó shema en el beit knesset — es mitzvá recitarlo en su cama"',
+      explicacion: 'R. Yehoshua ben Levi: el shema de la noche tiene una dimensión personal-íntima aparte de la pública. R. Yose aporta el verso: "רִגְזוּ וְאַל תֶּחֱטָאוּ אִמְרוּ בִלְבַבְכֶם עַל מִשְׁכַּבְכֶם וְדֹמּוּ סֶלָה" (Tehilim 4:5 — "temblad y no pequéis, hablad en vuestro corazón sobre vuestro lecho, y callad"). Esta es la fuente halájica del "Krias Shema she-al ha-mitá" — el rezo nocturno individual antes de dormir. Cierra el daf circularmente: 4b abrió con el trabajador que perdió shema por dormirse; cierra con el shema que se debe recitar JUSTO al ir a dormir. Lo que era amenaza (el sueño que atrapa) ahora se vuelve mitzvá (el sueño que se prepara con shema). La cama deja de ser enemiga y se vuelve altar.'
+    }
+  };
+
+  const panel = document.getElementById('cerca-panel');
+  const nodos = document.querySelectorAll('.cerca-nodo');
+
+  nodos.forEach(n => {
+    n.addEventListener('click', () => {
+      const id = n.getAttribute('data-id');
+      const d = datos[id];
+      if (!d) return;
+
+      nodos.forEach(o => {
+        o.classList.remove('activa', 'dim');
+        if (o !== n) o.classList.add('dim');
+      });
+      n.classList.add('activa');
+
+      panel.innerHTML = `
+        <div class="cerca-panel-header">
+          <h4 class="cerca-panel-titulo">${d.titulo}</h4>
+          <div class="cerca-panel-hebreo">${d.hebreo}</div>
+        </div>
+        <p class="cerca-panel-traduccion">${d.traduccion}</p>
+        <p class="cerca-panel-explicacion">${d.explicacion}</p>
+      `;
+    });
+  });
+})();
+</script>
+</div>
