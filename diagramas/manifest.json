@@ -1,0 +1,231 @@
+{
+  "perek": "Berajot · perek 1 · mishná 1:1",
+  "descripcion": "Diagramas temáticos del primer perek de Berajot (mishná 1:1, sobre el zman shema de noche). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición en el daf.",
+  "diagramas": [
+    {
+      "slug": "zman-shema-arvit",
+      "orden": 1,
+      "titulo": "El zman de kriat shma de arvit",
+      "subtitulo": "cinco opiniones del inicio, cuatro del fin",
+      "dapim": ["2a", "2b"],
+      "grupo": "La gran sugyá del shema",
+      "estado": "listo"
+    },
+    {
+      "slug": "vigilias-noche",
+      "orden": 2,
+      "titulo": "Las vigilias de la noche",
+      "subtitulo": "Rabbi vs R. Natán · los signos terrestres",
+      "dapim": ["3a", "3b"],
+      "grupo": "La noche cósmica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "r-yose-ruina",
+      "orden": 3,
+      "titulo": "R. Yose en la ruina · Eliyahu HaNavi",
+      "subtitulo": "tres preguntas, la voz de la paloma",
+      "dapim": ["3a"],
+      "grupo": "La noche cósmica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "tres-razones-ruina",
+      "orden": 4,
+      "titulo": "Las tres razones contra la ruina",
+      "subtitulo": "chashad · mafolet · mazikin",
+      "dapim": ["3a", "3b"],
+      "grupo": "La noche cósmica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "noche-de-david",
+      "orden": 5,
+      "titulo": "La noche del rey David",
+      "subtitulo": "נשף · la arpa · el viento del norte",
+      "dapim": ["3b", "4a"],
+      "grupo": "El rey David",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "gobierno-tripartito",
+      "orden": 6,
+      "titulo": "El gobierno tripartito de David",
+      "subtitulo": "Ajitofel · Sanedrín · Urim ve-Tumim",
+      "dapim": ["3b", "4a", "7b"],
+      "grupo": "El rey David",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "david-chasid",
+      "orden": 7,
+      "titulo": "David chasid · dos lecturas",
+      "subtitulo": "el madrugador y las manos manchadas · Mefivoshet",
+      "dapim": ["4a"],
+      "grupo": "El rey David",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "miedo-al-pecado",
+      "orden": 8,
+      "titulo": "El miedo al pecado",
+      "subtitulo": "Lulei he'emanti · Yaakov · Ezra",
+      "dapim": ["4a"],
+      "grupo": "El rey David",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "cerca-y-trabajador",
+      "orden": 9,
+      "titulo": "La cerca rabínica y el trabajador del campo",
+      "subtitulo": "ad chatzot como סייג · la baraita del que se duerme",
+      "dapim": ["4b"],
+      "grupo": "La halajá del zman",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "semijat-geula-tefila",
+      "orden": 10,
+      "titulo": "Semijat geulá le-tefilá",
+      "subtitulo": "el pasaporte al olam ha-ba · Hashkiveinu como geulá arichta",
+      "dapim": ["4b", "6b", "9b"],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "ashrei-olam-haba",
+      "orden": 11,
+      "titulo": "Ashrei y el olam ha-ba",
+      "subtitulo": "tres veces al día · por qué falta la nun",
+      "dapim": ["4b"],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "escala-angeles",
+      "orden": 12,
+      "titulo": "La escala de los ángeles",
+      "subtitulo": "Mikhael 1 · Gabriel 2 · Eliyahu 4 · Malach HaMavet 8",
+      "dapim": ["4b"],
+      "grupo": "La técnica litúrgica",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "escalera-yetzer",
+      "orden": 13,
+      "titulo": "La escalera contra el yetzer hará",
+      "subtitulo": "enfurece → Torá → shema → muerte",
+      "dapim": ["5a"],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "yisurim-shel-ahava",
+      "orden": 14,
+      "titulo": "Yisurim shel ahavá · doctrina completa",
+      "subtitulo": "diagnóstico, aceptación, las tres escenas médicas",
+      "dapim": ["5a", "5b"],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "tres-regalos",
+      "orden": 15,
+      "titulo": "Los tres regalos por sufrimiento",
+      "subtitulo": "Torá · Eretz Yisrael · Olam Ha-Ba (RaShBÍ)",
+      "dapim": ["5a"],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "tefila-y-cama",
+      "orden": 16,
+      "titulo": "Tefilá y la posición de la cama",
+      "subtitulo": "Aba Binyamin · dos cosas que le preocuparon",
+      "dapim": ["5b"],
+      "grupo": "El alma y el sufrimiento",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "mazikin-invisibles",
+      "orden": 17,
+      "titulo": "Los mazikin invisibles",
+      "subtitulo": "si el ojo pudiera ver, nadie podría estar de pie",
+      "dapim": ["6a"],
+      "grupo": "El espacio sagrado",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "beit-knesset",
+      "orden": 18,
+      "titulo": "El beit knesset como lugar privilegiado",
+      "subtitulo": "HKBH busca 10 · fijar lugar · shajen ra",
+      "dapim": ["6a", "6b", "7b", "8a", "8b"],
+      "grupo": "El espacio sagrado",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "hkbh-reza-tefilin",
+      "orden": 19,
+      "titulo": "HKBH reza, se enoja, usa tefilín",
+      "subtitulo": "R. Yishmael ben Elisha · el רגע del enojo",
+      "dapim": ["6a", "7a"],
+      "grupo": "Teología refinada",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "moshe-tres-cosas",
+      "orden": 20,
+      "titulo": "Moshé pide tres cosas",
+      "subtitulo": "y HKBH se las da",
+      "dapim": ["7a"],
+      "grupo": "Teología refinada",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "david-y-avshalom",
+      "orden": 21,
+      "titulo": "David y Avshalom",
+      "subtitulo": "tarbut ra'á peor que Gog y Magog",
+      "dapim": ["7b"],
+      "grupo": "El rey David",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "provocar-rashaim",
+      "orden": 22,
+      "titulo": "Provocar a los rashaim",
+      "subtitulo": "permitido en este mundo · fijar lugar",
+      "dapim": ["7b"],
+      "grupo": "Halajá personal",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "akiva-medos-gamliel-persas",
+      "orden": 23,
+      "titulo": "R. Akiva los Medos · R. Gamliel los Persas",
+      "subtitulo": "tres cosas de cada cultura",
+      "dapim": ["8b"],
+      "grupo": "Halajá personal",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "shema-dos-veces",
+      "orden": 24,
+      "titulo": "R. Shimon bar Yojai · shema dos veces",
+      "subtitulo": "antes y después del amud hashachar",
+      "dapim": ["8b", "9a"],
+      "grupo": "La gran sugyá del shema",
+      "estado": "pendiente"
+    },
+    {
+      "slug": "pesaj-y-zman-shema",
+      "orden": 25,
+      "titulo": "Pesaj y el zman shema",
+      "subtitulo": "R. Elazar ben Azaria vs R. Akiva",
+      "dapim": ["9a"],
+      "grupo": "La gran sugyá del shema",
+      "estado": "pendiente"
+    }
+  ]
+}

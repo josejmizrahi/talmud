@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Codex Talmudicus · Diagramas interactivos del Bavlí</title>
+<title>Codex Talmudicus · Diagramas temáticos del Bavlí</title>
 <link rel="stylesheet" href="assets/css/main.css">
 <style>
   body {
@@ -12,22 +12,19 @@
       radial-gradient(ellipse at top left, rgba(184,134,11,0.04), transparent 50%),
       radial-gradient(ellipse at bottom right, rgba(139,26,26,0.03), transparent 50%);
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     font-family: var(--font-body);
     color: var(--tinta);
   }
-
   .codex-shell {
     max-width: 1080px;
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;
   }
-
   .codex-header {
     text-align: center;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--pergamino-sombra);
   }
   .codex-header .eyebrow {
@@ -45,39 +42,78 @@
     font-size: clamp(2.2rem, 5vw, 3.6rem);
     line-height: 1.1;
     color: var(--tinta);
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
+  }
+  .codex-header .perek {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: var(--sepia);
   }
   .codex-header .lede {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--tinta-suave);
     max-width: 640px;
-    margin: 0 auto;
+    margin: 1rem auto 0;
     line-height: 1.5;
   }
 
+  /* Índice temático */
   .codex-toc {
+    margin: 2rem 0 3rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+  }
+  .codex-toc h3 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin: 0 0 0.75rem;
+    font-weight: 500;
+  }
+  .codex-toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.4rem;
+  }
+  .codex-toc li {
     display: flex;
-    justify-content: center;
+    align-items: baseline;
     gap: 0.5rem;
-    margin: 1.75rem auto 0;
-    flex-wrap: wrap;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+  .codex-toc .orden {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--sepia);
+    min-width: 22px;
+  }
+  .codex-toc .dap {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--sepia-claro);
+    margin-left: auto;
   }
   .codex-toc a {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 1px;
-    padding: 0.45rem 0.9rem;
+    color: var(--tinta);
     text-decoration: none;
-    color: var(--sepia);
-    border: 1px solid var(--sepia);
-    border-radius: 999px;
-    transition: background 0.15s, color 0.15s;
+    border-bottom: 1px dotted transparent;
   }
-  .codex-toc a:hover {
-    background: var(--sepia);
-    color: var(--pergamino);
+  .codex-toc a:hover { border-bottom-color: var(--rojo); color: var(--rojo); }
+  .codex-toc .pendiente {
+    color: var(--sepia-claro);
+    opacity: 0.55;
+    font-style: italic;
   }
 
   .diagrama-bloque {
@@ -102,6 +138,14 @@
     text-transform: uppercase;
     color: var(--dorado);
     margin-bottom: 0.4rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .diagrama-cabecera .ref-tag .orden-badge {
+    color: var(--sepia);
+    border-right: 1px solid var(--pergamino-sombra);
+    padding-right: 0.75rem;
   }
   .diagrama-cabecera h2 {
     font-family: var(--font-display);
@@ -109,13 +153,14 @@
     font-weight: 500;
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--tinta);
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.4rem;
     line-height: 1.2;
   }
-  .diagrama-cabecera .descripcion {
-    font-size: 0.98rem;
-    line-height: 1.6;
+  .diagrama-cabecera .subtitulo {
+    font-family: var(--font-display);
+    font-style: italic;
     color: var(--tinta-suave);
+    font-size: 1.02rem;
     margin: 0;
   }
 
@@ -126,20 +171,37 @@
     border-radius: 4px;
     min-height: 200px;
   }
-  .diagrama-frame .cargando {
+  .diagrama-frame .cargando,
+  .diagrama-frame .error {
     color: var(--sepia);
     font-style: italic;
     font-size: 0.95rem;
     text-align: center;
     padding: 2rem;
   }
-  .diagrama-frame .error {
-    color: var(--rojo);
-    font-style: italic;
-    font-size: 0.95rem;
-    text-align: center;
-    padding: 2rem;
+  .diagrama-frame .error { color: var(--rojo); }
+
+  /* Navegación inter-diagrama */
+  .diagrama-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
   }
+  .diagrama-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+    color: var(--sepia);
+    border: 1px solid var(--sepia);
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .diagrama-nav a:hover { background: var(--sepia); color: var(--pergamino); }
+  .diagrama-nav .vacio { visibility: hidden; }
 
   .codex-footer {
     margin-top: 4rem;
@@ -163,83 +225,17 @@
 
   <header class="codex-header">
     <div class="eyebrow">Codex Talmudicus</div>
-    <h1>Diagramas interactivos del Talmud Bavlí</h1>
-    <p class="lede">cada elemento es clickeable · cada cita viene de Sefaria</p>
-    <nav class="codex-toc">
-      <a href="#berakhot-2a">Berajot 2a–2b</a>
-      <a href="#berakhot-3a">Berajot 3a</a>
-      <a href="#berakhot-3b">Berajot 3b</a>
-      <a href="#berakhot-4a">Berajot 4a</a>
-      <a href="#berakhot-4b">Berajot 4b</a>
-      <a href="#berakhot-5a">Berajot 5a</a>
-    </nav>
+    <h1>Diagramas temáticos del Bavlí</h1>
+    <div class="perek" id="codex-perek">cargando…</div>
+    <p class="lede">cada diagrama cubre un tema completo, incluso si vuelve a aparecer en daf posteriores · orden cronológico de primera aparición</p>
   </header>
 
-  <article class="diagrama-bloque" id="berakhot-2a">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 2a – 2b · multi-daf</div>
-      <h2>El zman de kriat shma de arvit</h2>
-      <p class="descripcion">Línea de tiempo nocturna con las cinco opiniones tanaíticas del INICIO (baraita de 2b: R. Eliezer, R. Meir, R. Yehoshua, R. Janina, R. Ajai) y las cuatro opiniones del FIN (mishná de 2a: R. Eliezer, Jajamim, Rabán Gamliel + baraita de 2b: el pobre termina su comida). Cada opinión clickeable revela su cita, su autor y su lógica halájica.</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-2a.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
+  <nav class="codex-toc">
+    <h3>Índice · perek 1:1</h3>
+    <ol id="codex-toc-lista"></ol>
+  </nav>
 
-  <article class="diagrama-bloque" id="berakhot-3a">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 3a</div>
-      <h2>Las vigilias de la noche y R. Yose en la ruina</h2>
-      <p class="descripcion">Dos bloques argumentativos. ARRIBA: el debate sobre cuántas vigilias tiene la noche — R. Eliezer y R. Natán sostienen tres; Rabbi (Yehuda HaNasi) sostiene cuatro. Cada vigilia muestra su signo terrestre (חמור נוער · כלבים צועקים · תינוק יונק). ABAJO: la narrativa de R. Yose entrando a una ruina de Yerushalayim, Eliyahu HaNavi en la puerta, sus tres preguntas educativas y la voz de la paloma gimiente.</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-3a.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
-
-  <article class="diagrama-bloque" id="berakhot-3b">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 3b</div>
-      <h2>La noche del rey David — la arpa, el viento del norte</h2>
-      <p class="descripcion">Línea cronológica vertical desde נשף (atardecer) hasta amud hashachar (amanecer). Centro: la arpa estilizada sobre la cama del rey, con flechas del viento del norte que la hacían tocar sola al filo de medianoche. Tres voces amoraicas describen la transición a chatzot (caballo → león; Torá → cánticos; nunca pasó dormido). Cierra con la vigilancia política: los sabios al amanecer, la parnasá, las tres consultas constitucionales (Ajitofel, Sanedrín, Urim ve-Tumim).</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-3b.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
-
-  <article class="diagrama-bloque" id="berakhot-4a">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 4a</div>
-      <h2>¿Qué hace al rey humilde?</h2>
-      <p class="descripcion">Cierra el gobierno tripartito (sanedrín, urim ve-tumim, cretí-pletí), prueba la arpa de 3b con Tehilim 57:9, y resuelve el enigma Moshé/David — ambos sabían la hora; la arpa solo despertaba. Luego el retrato de David חסיד en DOS lecturas: el rey que madruga y el rey con manos manchadas que purifica nidá y consulta a Mefivoshet su maestro. Cadena pedagógica de la humildad (Mefivoshet → Kilav/Daniel). La sugyá se vuelve filosófica con "Lulei he'emanti" y el miedo al pecado (paralelo Yaakov / Ezra). Pivote final a la mishná: ¿como quién opinan los Jajamim?</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-4a.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
-
-  <article class="diagrama-bloque" id="berakhot-4b">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 4b</div>
-      <h2>La cerca, el olam ha-ba, los ángeles</h2>
-      <p class="descripcion">Resuelve el debate del fin del zman: los Jajamim sí opinan como Rabán Gamliel (hasta el amanecer), y "chatzot" es un סְיָיג para que el trabajador del campo no se duerma antes de recitar. Luego dos PASAPORTES al olam ha-ba — semijat geulá le-tefilá (R. Yojanán) con la objeción de Hashkiveinu como "geulá extendida", y Ashrei tres veces al día (alfabético + פותח את ידך). Análisis del por qué falta la נ en Ashrei. La escala de los ángeles (Mikhael 1, Gabriel 2, Eliyahu 4, Malach HaMavet 8). Cierre: el shema personal en la cama.</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-4b.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
-
-  <article class="diagrama-bloque" id="berakhot-5a">
-    <div class="diagrama-cabecera">
-      <div class="ref-tag">Berajot 5a</div>
-      <h2>La escalera del yetzer y los yisurim shel ahavá</h2>
-      <p class="descripcion">Uno de los daf más densos teológicamente del Bavlí. La escalera de Reish Lakish contra el yetzer hará (enfurece → estudia Torá → recita shema → recuerda la muerte). Los cinco niveles de Torá dados a Moshé en Sinaí. Shema en la cama como espada de dos filos que ahuyenta demonios. El núcleo: la doctrina de los YISURIM SHEL AHAVÁ — diagnóstico en tres pasos (pshpesh → bitul Torá → ahavá), debate sobre qué los define, kal vajómer del esclavo, gezerá shavá de la sal. Cierre con RaShBÍ: los tres regalos (Torá, Eretz Yisrael, Olam Ha-Ba) — todos dados solo a través del sufrimiento.</p>
-    </div>
-    <div class="diagrama-frame" data-src="diagramas/berakhot-5a.html?v=20260528">
-      <p class="cargando">Cargando diagrama…</p>
-    </div>
-  </article>
+  <main id="codex-bloques"></main>
 
   <footer class="codex-footer">
     Texto base: Sefaria · William Davidson Edition · <a href="https://github.com/josejmizrahi/talmud" target="_blank" rel="noopener">código fuente</a>
@@ -248,12 +244,60 @@
 </div>
 
 <script>
-/* Carga cada fragmento diagramas/*.html en su frame.
-   innerHTML no ejecuta los <script> embebidos, así que los reemplazamos
-   manualmente para que el código IIFE de cada diagrama se ejecute. */
+/* Lee diagramas/manifest.json y renderiza:
+   1. el índice (TOC) con TODOS los temas (listos y pendientes)
+   2. los bloques de diagramas LISTOS, embebiendo cada fragmento
+   Para agregar un diagrama: editar manifest.json (cambiar estado a "listo") +
+   crear diagramas/{slug}.html. El index se regenera solo. */
 (async function() {
-  const bloques = document.querySelectorAll('.diagrama-frame[data-src]');
-  for (const frame of bloques) {
+  const cacheVersion = 'v=' + Date.now();
+  const manifest = await fetch('diagramas/manifest.json?' + cacheVersion).then(r => r.json());
+  document.getElementById('codex-perek').textContent = manifest.perek;
+
+  // Render TOC
+  const toc = document.getElementById('codex-toc-lista');
+  toc.innerHTML = manifest.diagramas.map(d => {
+    const dap = d.dapim.join(' · ');
+    if (d.estado === 'listo') {
+      return `<li><span class="orden">${d.orden}.</span><a href="#${d.slug}">${d.titulo}</a><span class="dap">${dap}</span></li>`;
+    }
+    return `<li><span class="orden">${d.orden}.</span><span class="pendiente">${d.titulo}</span><span class="dap">${dap}</span></li>`;
+  }).join('');
+
+  // Render bloques listos
+  const main = document.getElementById('codex-bloques');
+  const listos = manifest.diagramas.filter(d => d.estado === 'listo');
+  for (let i = 0; i < listos.length; i++) {
+    const d = listos[i];
+    const prev = i > 0 ? listos[i - 1] : null;
+    const next = i < listos.length - 1 ? listos[i + 1] : null;
+    const dapim = d.dapim.map(x => 'Berajot ' + x).join(' · ');
+    const article = document.createElement('article');
+    article.className = 'diagrama-bloque';
+    article.id = d.slug;
+    article.innerHTML = `
+      <div class="diagrama-cabecera">
+        <div class="ref-tag">
+          <span class="orden-badge">${String(d.orden).padStart(2, '0')} de ${manifest.diagramas.length}</span>
+          <span>${dapim}</span>
+          <span>· ${d.grupo}</span>
+        </div>
+        <h2>${d.titulo}</h2>
+        <p class="subtitulo">${d.subtitulo}</p>
+      </div>
+      <div class="diagrama-frame" data-src="diagramas/${d.slug}.html?${cacheVersion}">
+        <p class="cargando">Cargando…</p>
+      </div>
+      <div class="diagrama-nav">
+        ${prev ? `<a href="#${prev.slug}">← ${prev.titulo}</a>` : '<span class="vacio"></span>'}
+        ${next ? `<a href="#${next.slug}">${next.titulo} →</a>` : '<span class="vacio"></span>'}
+      </div>
+    `;
+    main.appendChild(article);
+  }
+
+  // Cargar cada fragmento + re-ejecutar scripts inline
+  for (const frame of document.querySelectorAll('.diagrama-frame[data-src]')) {
     const src = frame.dataset.src;
     try {
       const resp = await fetch(src);
