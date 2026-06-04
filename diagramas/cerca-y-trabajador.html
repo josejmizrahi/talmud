@@ -1,0 +1,371 @@
+<div class="cerca-interactivo">
+<style>
+  .cerca-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .cerca-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .cerca-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .cerca-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .cerca-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .cerca-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .cerca-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .cerca-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .cerca-diagrama svg { width: 100%; height: auto; display: block; }
+  .cerca-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .cerca-nodo:hover rect { stroke-width: 2 !important; }
+  .cerca-nodo.activa rect { stroke-width: 2.5 !important; }
+  .cerca-nodo.dim { opacity: 0.32; }
+  .cerca-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .cerca-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .cerca-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .cerca-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .cerca-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .cerca-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .cerca-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="cerca-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>contradicción aparente</span>
+  <span><span class="swatch sepia"></span>baraita · narrativa</span>
+  <span><span class="swatch dorado"></span>la cerca · sayag</span>
+  <span><span class="swatch verde"></span>el trabajador · debate</span>
+  <span><span class="swatch azul"></span>doctrina meta</span>
+</div>
+
+<div class="cerca-diagrama">
+<svg viewBox="0 0 720 1080" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4b: ad chatzot como sayag rabínico · la baraita de los hijos de Rabban Gamliel · el trabajador del campo</title>
+
+<defs>
+  <marker id="flecha-fz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-fz-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- patrón de cerca -->
+  <pattern id="patron-cerca" patternUnits="userSpaceOnUse" width="14" height="14">
+    <path d="M 0,7 L 14,7" stroke="#b8860b" stroke-width="1" opacity="0.4"/>
+    <path d="M 7,0 L 7,14" stroke="#b8860b" stroke-width="1" opacity="0.4"/>
+  </pattern>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La cerca rabínica y el trabajador del campo</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4b · עַד חֲצוֹת como סְיָג · la baraita de los hijos de Rabban Gamliel</text>
+
+<!-- ============================================================ -->
+<!-- LA CONTRADICCIÓN APARENTE                                    -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CONTRADICCIÓN APARENTE</text>
+
+<g class="cerca-nodo" data-id="contradiccion">
+  <rect x="60" y="86" width="600" height="116" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="106" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Si la Torah dice עַד עַמּוּד הַשַּׁחַר, ¿por qué los chajamim dicen חֲצוֹת?</text>
+  <!-- Tres columnas -->
+  <text x="160" y="134" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-weight="600">Torah (פְּשַׁט)</text>
+  <text x="360" y="134" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">Chajamim de la mishná</text>
+  <text x="560" y="134" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-weight="600">Rabban Gamliel</text>
+  <text x="160" y="155" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">עַד עַמּוּד הַשַּׁחַר</text>
+  <text x="360" y="155" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">עַד חֲצוֹת</text>
+  <text x="560" y="155" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">עַד עַמּוּד הַשַּׁחַר</text>
+  <text x="160" y="172" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«hasta el amanecer»</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«hasta medianoche»</text>
+  <text x="560" y="172" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«hasta el amanecer»</text>
+  <text x="360" y="194" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">¿quién tiene razón?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA BARAITA — HIJOS DE RG VUELVEN DEL BANQUETE                -->
+<!-- ============================================================ -->
+<line x1="360" y1="202" x2="360" y2="220" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-fz)"/>
+
+<text x="60" y="232" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">TANU RABANAN · LA BARAITA DEL BANQUETE · 4B</text>
+
+<g class="cerca-nodo" data-id="baraita-banquete">
+  <rect x="60" y="242" width="600" height="118" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="78" y="262" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Los hijos de Rabban Gamliel vuelven del banquete</text>
+  <text x="78" y="282" font-size="10" fill="#3d2f23" font-style="italic">«padre, no hemos recitado el shema»</text>
+  <text x="360" y="304" text-anchor="middle" font-size="11.5" direction="rtl" fill="#6b4423">אִם לֹא עָלָה עַמּוּד הַשַּׁחַר — חַיָּיבִין אַתֶּם לִקְרוֹת</text>
+  <text x="360" y="322" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Si aún no salió el amud hashachar — están obligados a recitarlo»</text>
+  <text x="78" y="342" font-size="9.5" fill="#3d2f23">RG abre la pregunta: ¿es esto excepcional, o regla general?</text>
+  <text x="78" y="354" font-size="9" fill="#6b4423" font-style="italic">los hijos preguntan: «¿solo nosotros o todos pueden hasta amud hashachar?»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RG ACLARA: LOS TRES CASOS                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="360" x2="360" y2="378" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-fz)"/>
+
+<text x="60" y="390" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RG ACLARA · «EN TODOS LOS CASOS DE עַד חֲצוֹת»</text>
+
+<g class="cerca-nodo" data-id="rg-aclara">
+  <rect x="60" y="400" width="600" height="118" rx="6" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="422" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">RG: «en TODOS los casos de chatzot, su mitzvá es hasta amud hashachar»</text>
+  <!-- Tres recuadros chicos: los tres casos -->
+  <rect x="80" y="438" width="180" height="62" rx="3" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="170" y="454" text-anchor="middle" font-size="9" fill="#6b4423" font-weight="600">1 · korbanot</text>
+  <text x="170" y="470" text-anchor="middle" font-size="9" direction="rtl" fill="#1a1410">הֶקְטֵר חֲלָבִים</text>
+  <text x="170" y="486" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">quemar grasas y miembros</text>
+
+  <rect x="270" y="438" width="180" height="62" rx="3" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="360" y="454" text-anchor="middle" font-size="9" fill="#6b4423" font-weight="600">2 · kodashim</text>
+  <text x="360" y="470" text-anchor="middle" font-size="9" direction="rtl" fill="#1a1410">אֲכִילַת קָדָשִׁים</text>
+  <text x="360" y="486" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">comer korbanot del día</text>
+
+  <rect x="460" y="438" width="180" height="62" rx="3" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="550" y="454" text-anchor="middle" font-size="9" fill="#6b4423" font-weight="600">3 · shema arvit</text>
+  <text x="550" y="470" text-anchor="middle" font-size="9" direction="rtl" fill="#1a1410">קְרִיאַת שְׁמַע</text>
+  <text x="550" y="486" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">recitación de shema nocturno</text>
+  <text x="360" y="512" text-anchor="middle" font-size="9" fill="#6b4423">los tres comparten estructura: Torah = amanecer · chajamim = chatzot</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESPUESTA: SAYAG                                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="518" x2="360" y2="538" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-fz-gold)"/>
+
+<text x="60" y="550" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESPUESTA · עָשׂוּ סְיָג לַתּוֹרָה</text>
+
+<g class="cerca-nodo" data-id="sayag">
+  <!-- Fondo con patrón de cerca -->
+  <rect x="60" y="560" width="600" height="150" rx="6" fill="url(#patron-cerca)" opacity="0.55"/>
+  <rect x="60" y="560" width="600" height="150" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="586" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">לָמָּה אָמְרוּ חֲכָמִים עַד חֲצוֹת? כְּדֵי לְהַרְחִיק אֶת הָאָדָם מִן הָעֲבֵרָה</text>
+  <text x="360" y="606" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¿por qué los chajamim dijeron hasta chatzot? — para alejar al hombre de la transgresión»</text>
+  <!-- Visualización del mecanismo de la cerca -->
+  <text x="78" y="630" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="630" font-size="9.5" fill="#3d2f23">el hombre llega tarde a casa · está cansado</text>
+  <text x="78" y="648" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="648" font-size="9.5" fill="#3d2f23">si piensa «tengo hasta el amanecer» → puede quedarse dormido</text>
+  <text x="78" y="666" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="666" font-size="9.5" fill="#3d2f23">al dormirse pasa el amud hashachar → אִיסּוּר דְּאוֹרַיְתָא</text>
+  <text x="78" y="684" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="684" font-size="9.5" fill="#3d2f23">la cerca dice «no, hasta medianoche» · queda margen si la rompe</text>
+  <text x="360" y="704" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">la cerca rabínica NO niega la halajá de la Torah — la PROTEGE</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LÍNEA VISUAL · TORAH / CERCA / TRANSGRESIÓN                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="710" x2="360" y2="728" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-fz)"/>
+
+<g class="cerca-nodo" data-id="linea-visual">
+  <rect x="60" y="734" width="600" height="78" rx="5" fill="rgba(184,134,11,0.05)" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Línea de tiempo -->
+  <line x1="100" y1="772" x2="620" y2="772" stroke="#3d2f23" stroke-width="1.5"/>
+  <!-- Tick marks -->
+  <line x1="100" y1="766" x2="100" y2="778" stroke="#3d2f23" stroke-width="1.5"/>
+  <line x1="350" y1="766" x2="350" y2="778" stroke="#b8860b" stroke-width="2"/>
+  <line x1="620" y1="766" x2="620" y2="778" stroke="#3d2f23" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="100" y="758" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">שְׁקִיעָה</text>
+  <text x="100" y="794" text-anchor="middle" font-size="8" fill="#6b4423">noche empieza</text>
+  <text x="350" y="758" text-anchor="middle" font-size="9" fill="#b8860b" font-weight="700">חֲצוֹת ← cerca</text>
+  <text x="350" y="794" text-anchor="middle" font-size="8" fill="#b8860b">límite rabínico</text>
+  <text x="620" y="758" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">עַמּוּד הַשַּׁחַר</text>
+  <text x="620" y="794" text-anchor="middle" font-size="8" fill="#6b4423">límite Torah</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL TRABAJADOR DEL CAMPO                                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="812" x2="360" y2="832" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-fz)"/>
+
+<text x="60" y="844" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA SEGUNDA BARAITA · EL TRABAJADOR DEL CAMPO · 4B</text>
+
+<g class="cerca-nodo" data-id="trabajador">
+  <rect x="60" y="854" width="600" height="78" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="78" y="876" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">El que vuelve del campo por la noche · ¿comer o rezar primero?</text>
+  <text x="78" y="896" font-size="10" fill="#3d2f23">Llega cansado · tiene hambre · la halajá presenta dos opciones</text>
+  <text x="78" y="912" font-size="9.5" fill="#6b4423" font-style="italic">la disputa es práctica: ¿prioridad ritual o prioridad fisiológica?</text>
+  <text x="78" y="925" font-size="9" fill="#6b4423" font-style="italic">y depende exactamente de la cuestión de la cerca</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOS OPINIONES EN COLUMNAS                                    -->
+<!-- ============================================================ -->
+<line x1="160" y1="932" x2="160" y2="950" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-fz)"/>
+<line x1="560" y1="932" x2="560" y2="950" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-fz)"/>
+<line x1="160" y1="932" x2="560" y2="932" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="360" y1="932" x2="360" y2="928" stroke="#2d6b4e" stroke-width="1"/>
+
+<g class="cerca-nodo" data-id="rezar-primero">
+  <rect x="50" y="956" width="280" height="74" rx="5" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="190" y="976" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">Rezar primero (Chajamim)</text>
+  <text x="60" y="996" font-size="9.5" fill="#3d2f23">prioridad ritual: tefilá / shema → comida</text>
+  <text x="60" y="1010" font-size="9.5" fill="#3d2f23">razón: שֶׁמָּא יֵרָדֵם · «no sea que se duerma»</text>
+  <text x="60" y="1024" font-size="9" fill="#6b4423" font-style="italic">opera dentro de la cerca de chatzot</text>
+</g>
+
+<g class="cerca-nodo" data-id="comer-primero">
+  <rect x="390" y="956" width="280" height="74" rx="5" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="530" y="976" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">Comer primero (RG · R. Yehuda)</text>
+  <text x="400" y="996" font-size="9.5" fill="#3d2f23">prioridad fisiológica: comida → tefilá</text>
+  <text x="400" y="1010" font-size="9.5" fill="#3d2f23">razón: hay tiempo hasta amud hashachar</text>
+  <text x="400" y="1024" font-size="9" fill="#6b4423" font-style="italic">opera con la halajá real de la Torah</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="160" y1="1030" x2="160" y2="1046" stroke="#1e3a5f" stroke-width="1"/>
+<line x1="560" y1="1030" x2="560" y2="1046" stroke="#1e3a5f" stroke-width="1"/>
+<line x1="160" y1="1046" x2="560" y2="1046" stroke="#1e3a5f" stroke-width="1"/>
+<line x1="360" y1="1046" x2="360" y2="1060" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-fz)"/>
+
+<g class="cerca-nodo" data-id="doctrina">
+  <text x="360" y="1078" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">La estructura dual de la halajá: Torah real + cerca protectora</text>
+</g>
+
+</svg>
+</div>
+
+<div class="cerca-panel" id="cerca-panel">
+  <p class="cerca-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'contradiccion': {
+      titulo: 'La contradicción aparente · ¿quién tiene razón?',
+      hebreo: 'תּוֹרָה ⟷ חֲכָמִים',
+      traduccion: 'Torah vs. chajamim — ¿chatzot o amud hashachar?',
+      explicacion: 'La mishná dejó al lector con tres opiniones sobre el límite del shema de arvit: R. Eliezer (fin de primera vigilia), chajamim (chatzot), Rabban Gamliel (amanecer).\n\nLa guemará en 4b vuelve a esta pregunta con una observación incómoda: el pshat (sentido llano) del versículo «וּבְשָׁכְבְּךָ» (Devarim 6:7, «al acostarte») cubre TODA la noche — desde el atardecer hasta el amanecer. ¿Cómo entonces los chajamim restringen a medianoche?\n\nDos opciones:\n  1. Los chajamim DESACUERDAN con el pshat (problema teológico — ¿pueden los rabinos contradecir a la Torah?)\n  2. Los chajamim están haciendo OTRA COSA — no negando, sino protegiendo el pshat\n\nLa sugyá responde la segunda: los chajamim aceptan que la TORAH permite hasta el amanecer. Su «chatzot» es una TAKANÁ (decreto rabínico) con función protectora. La sugyá ahora despliega esta doctrina.'
+    },
+    'baraita-banquete': {
+      titulo: 'La baraita de los hijos de Rabban Gamliel',
+      hebreo: 'מַעֲשֶׂה וּבָאוּ בָּנָיו שֶׁל רַבָּן גַּמְלִיאֵל מִבֵּית הַמִּשְׁתֶּה',
+      traduccion: '«Una vez los hijos de Rabban Gamliel volvieron del banquete»',
+      explicacion: 'Una baraita narrativa que se convertirá en la prueba decisiva.\n\nEscena: los hijos de Rabban Gamliel — el patriarca, presidente del Sanedrín — volvieron tarde de un banquete de boda (בית המשתה). Estaban en una situación práctica común: cena pesada, vino, hora tardía, ¿alcanza para shema?\n\nSe lo plantean al padre con honestidad rabínica: «no hemos recitado el shema».\n\nLa respuesta de RG es decisiva: «אם לא עלה עמוד השחר — חייבין אתם לקרות» («si aún no salió el amud hashachar, están obligados a recitarlo»).\n\nNote dos cosas:\n  1. RG no dice «ya es tarde, sustituyen con la lectura de la mañana» — dice obligación todavía vigente.\n  2. RG fija la línea en amud hashachar — el verdadero límite de la Torah — NO en chatzot.\n\nLos hijos preguntan lo natural: ¿es esto especial para nosotros, o vale para todos?'
+    },
+    'rg-aclara': {
+      titulo: 'RG aclara: «en TODOS los casos de chatzot»',
+      hebreo: 'וְלֹא זוֹ בִּלְבַד · אֶלָּא כָּל מַה שֶּׁאָמְרוּ חֲכָמִים עַד חֲצוֹת מִצְוָתָן עַד שֶׁיַּעֲלֶה עַמּוּד הַשַּׁחַר',
+      traduccion: '«Y no solo este caso — sino TODO lo que los chajamim dijeron hasta chatzot, su mitzvá es hasta el amanecer»',
+      explicacion: 'RG generaliza el principio en tres categorías de halajá:\n\n  1. הֶקְטֵר חֲלָבִים וְאֵיבָרִים — quemar las grasas y los miembros de los korbanot. La mishná de Mejilta dice «hasta chatzot», pero la halajá real es toda la noche hasta el amanecer.\n\n  2. אֲכִילַת קָדָשִׁים הַנֶּאֱכָלִים לְיוֹם אֶחָד — comer korbanot que se permiten solo durante un día (shelamim, todá). Misma estructura: chajamim dicen chatzot, Torah dice toda la noche.\n\n  3. קְרִיאַת שְׁמַע שֶׁל עַרְבִית — el shema de arvit. Misma estructura.\n\nLa generalización transforma el caso particular en DOCTRINA: en TODA situación donde los chajamim aparezcan diciendo «chatzot», hay que entenderlo como CERCA, no como límite real.\n\nLa relevancia halájica es directa: en circunstancias urgentes (kushyot graves, betdiavad), se PUEDE actuar dentro de la halajá de la Torah, hasta el amanecer.'
+    },
+    'sayag': {
+      titulo: 'La respuesta: עָשׂוּ סְיָג לַתּוֹרָה (la cerca rabínica)',
+      hebreo: 'לָמָּה אָמְרוּ חֲכָמִים עַד חֲצוֹת? — כְּדֵי לְהַרְחִיק אֶת הָאָדָם מִן הָעֲבֵרָה',
+      traduccion: '«¿Por qué los chajamim dijeron chatzot? — para alejar al hombre de la transgresión»',
+      explicacion: 'La explicación funcional de la cerca:\n\nIMAGINE un hombre que sabe la halajá real (hasta amud hashachar). Vuelve a casa cansado. Piensa: «todavía me quedan 6 horas, descanso un rato y después rezo». Se acuesta. Se duerme. Pasan las horas. Despierta cuando el sol ya salió. Acaba de TRANSGREDIR una halajá de la Torah por confiar en el margen.\n\nLa cerca opera así:\n  1. Los chajamim DICEN: «la halajá es hasta chatzot»\n  2. El hombre internaliza: «debo recitar antes de medianoche»\n  3. Llega tarde, se siente cansado, recuerda «no puedo descansar todavía»\n  4. Si por accidente pasa chatzot — TODAVÍA tiene tiempo hasta amud hashachar para corregir (porque la halajá REAL sigue vigente)\n\nLa cerca tiene una propiedad asombrosa: NO impone obligación nueva. Solo MUEVE el límite percibido para crear margen de seguridad. Por eso, si alguien la rompe inadvertidamente, NO transgredió la Torah — solo la cerca, que es rabínica.\n\nEste es el genio del sayag: protege sin imponer.'
+    },
+    'linea-visual': {
+      titulo: 'Visualización: la línea del tiempo nocturno',
+      hebreo: 'שְׁקִיעָה ← חֲצוֹת ← עַמּוּד הַשַּׁחַר',
+      traduccion: 'Atardecer → medianoche → amanecer',
+      explicacion: 'La línea del tiempo nocturno muestra la estructura espacial de la cerca:\n\n  | atardecer | ......... | CHATZOT | ......... | AMUD HASHACHAR |\n  inicio      espacio       LÍMITE     ZONA            LÍMITE\n  obligación  ideal          RABÍNICO   DE              REAL\n                                       MARGEN          (Torah)\n\nObserve que el espacio entre chatzot y amud hashachar NO está vacío de halajá — es una «zona de margen». La halajá de la Torah sigue vigente ahí. Es legalmente permitido. Pero el rabino te dice: trate de no usar esa zona, porque entrar ahí significa que ya casi fallaste.\n\nEsta visualización ayuda a entender por qué el chasid davídico opera precisamente en el espacio ANTES de chatzot — David se levanta a chatzot, ya está rezando antes de que cualquier zona de margen sea necesaria.\n\nLa cerca rabínica es la encarnación de un principio espiritual: vivir con MARGEN. No vivir al filo del límite, sino dejar un colchón entre la práctica y el muro.'
+    },
+    'trabajador': {
+      titulo: 'La segunda baraita: el trabajador del campo',
+      hebreo: 'הַבָּא מִן הַשָּׂדֶה בָּעֶרֶב',
+      traduccion: '«El que viene del campo por la noche»',
+      explicacion: 'La sugyá pasa de la doctrina a un caso práctico: ¿qué hace el trabajador cuando vuelve agotado del campo de noche?\n\nEl trabajador rural representa la situación más común y más vulnerable: alguien que ha trabajado todo el día, vuelve a casa agotado, con hambre. La halajá tiene que decidir:\n\n  ¿REZA primero (cumplimiento ritual antes que necesidad)?\n  ¿COME primero (necesidad fisiológica para evitar desmayos / sueño)?\n\nEl conflicto es real. Si reza primero, el riesgo es desmayarse o tener concentración pobre. Si come primero, el riesgo es quedarse dormido y perder el shema.\n\nLa baraita trae el debate de tannaim — y depende exactamente de cómo se entiende la cerca de chatzot.'
+    },
+    'rezar-primero': {
+      titulo: 'Rezar primero · la posición de los chajamim',
+      hebreo: 'שֶׁמָּא יֵרָדֵם · יִקְרָא קְרִיאַת שְׁמַע תְּחִלָּה',
+      traduccion: '«No sea que se duerma — que recite shema primero»',
+      explicacion: 'Los chajamim privilegian el cumplimiento ritual. El argumento es psicológico-práctico: si el trabajador come primero, la combinación de cansancio + plenitud estomacal lo dormirá. Mejor cumplir la mitzvá ANTES de exponerse al sueño.\n\nEsta posición opera DENTRO de la cerca de chatzot. La lógica: si establecimos un límite rabínico anterior al de la Torah precisamente para PROTEGER al hombre del sueño, entonces tiene sentido ordenar las actividades nocturnas para minimizar el riesgo de quedarse dormido antes de chatzot.\n\nLa filosofía implícita: la mitzvá ritual TIENE PRIORIDAD sobre la conveniencia personal. Una pequeña incomodidad de hambre no justifica arriesgar la transgresión.\n\nEsta sería la práctica del chasid: ordenar la noche para que la mitzvá NO compita con el cansancio. Por eso David se levantaba a chatzot — pre-empacaba el ritual antes de que la fatiga pudiera bloquearlo.'
+    },
+    'comer-primero': {
+      titulo: 'Comer primero · la posición de RG / R. Yehuda',
+      hebreo: 'יֵשׁ זְמַן עַד עַמּוּד הַשַּׁחַר',
+      traduccion: '«Hay tiempo hasta el amanecer»',
+      explicacion: 'Rabban Gamliel y R. Yehuda operan con la halajá REAL de la Torah, no con la cerca.\n\nSu argumento: la mitzvá de shema se extiende legalmente hasta amud hashachar. Hay HORAS de margen para recitarlo después de cenar. ¿Por qué obligar al trabajador a rezar con hambre cuando hay tiempo de sobra?\n\nLa filosofía implícita es diferente: la cerca de chatzot es una recomendación general, no una ley absoluta. En casos de necesidad real (cansancio, hambre, riesgo de mala concentración), uno PUEDE operar con la halajá de la Torah hasta el amanecer.\n\nRG es coherente con su propia mishná: él dijo «hasta amud hashachar», entonces aplica la halajá literalmente.\n\nEsta posición protege la dignidad del trabajador: no se le pide que sufra hambre por una cerca rabínica protectora.\n\nLa halajá final (en codificaciones posteriores): se distinguen casos. Si la comida es ligera (snack), el trabajador puede comer primero. Si es comida pesada (סעודה קבועה), debe rezar primero — porque la cena formal seguramente lo dormirá.'
+    },
+    'doctrina': {
+      titulo: 'La estructura dual de la halajá: Torah real + cerca protectora',
+      hebreo: 'הָלָכָה דְּאוֹרַיְתָא + סְיָג דְּרַבָּנָן',
+      traduccion: 'Halajá de la Torah + cerca de los rabinos',
+      explicacion: 'La sugyá expone una doctrina central del sistema halájico:\n\nNIVEL 1 — TORAH (דְּאוֹרַיְתָא)\n  · el límite real, fijado por el texto bíblico\n  · su transgresión es אִיסּוּר דְּאוֹרַיְתָא\n  · ejemplo: shema hasta amud hashachar (Devarim 6:7)\n\nNIVEL 2 — CHAJAMIM (דְּרַבָּנָן)\n  · el límite protector, fijado por los rabinos\n  · su transgresión es אִיסּוּר דְּרַבָּנָן (más leve)\n  · ejemplo: shema hasta chatzot\n\nLa relación es JERÁRQUICA pero no opuesta:\n\n  · cumplir el límite rabínico → cumple TAMBIÉN el de la Torah (automáticamente, por estar antes)\n  · romper el límite rabínico (sin llegar al de la Torah) → falta rabínica, pero TODAVÍA halajá de Torah cumplida\n  · romper ambos límites → transgresión de Torah\n\nEsta estructura tiene tres consecuencias:\n\n  1. EL CHASID opera en el nivel rabínico — más estricto que la Torah\n  2. EL HOMBRE COMÚN tiene un nivel de respaldo si la cerca cae\n  3. LA HALAJÁ no es un solo muro sino dos — con espacio entre ellos\n\nEste principio — «עָשׂוּ סְיָג לַתּוֹרָה» (Avot 1:1) — se aplica a muchos otros dominios: shabbat, terumá, niddá, etc. Es uno de los principios estructurantes del sistema halájico entero.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.cerca-interactivo')
+    : document.querySelector('.cerca-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#cerca-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.cerca-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="cerca-panel-header">' +
+        '<p class="cerca-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="cerca-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="cerca-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="cerca-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.cerca-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.cerca-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="cerca-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

@@ -293,15 +293,33 @@
       "slug": "cerca-y-trabajador",
       "orden": 9,
       "titulo": "La cerca rabínica y el trabajador del campo",
-      "subtitulo": "ad chatzot como sayag · la baraita",
+      "subtitulo": "ad chatzot como sayag · la baraita de los hijos de Rabban Gamliel",
       "dapim": [
         "4b"
       ],
       "grupo": "La halajá del zman",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/cerca-y-trabajador.html",
+      "sabios": [
+        "rabban-gamliel",
+        "r-eliezer",
+        "r-yehoshua"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "devarim-6-7"
+      ],
+      "conceptos": [
+        "sayag",
+        "amud-hashachar",
+        "chatzot",
+        "zman-shema-arvit",
+        "takana"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Los diagramas #5-8 exploraron la dimensión INTERIOR de la noche\ndavídica (kinor · gobierno · chesed · temor al pecado). Ahora la\nsugyá vuelve al pshat de la mishná inicial: «¿hasta cuándo se\nrecita el shema de arvit?». El maestro nos lleva de la psicología\na la ESTRUCTURA halájica — ¿por qué los chajamim dijeron «ad\nchatzot» si la Torah permite «hasta amud hashachar»? La respuesta\nrevela el mecanismo de la SAYAG (cerca rabínica) y se ilustra con\nla baraita de los hijos de Rabban Gamliel.\n"
+      }
     },
     {
       "slug": "semijat-geula-tefila",
@@ -577,6 +595,14 @@
       ]
     },
     {
+      "slug": "rabban-gamliel",
+      "nombre": "Rabban Gamliel"
+    },
+    {
+      "slug": "r-yehoshua",
+      "nombre": "R Yehoshua"
+    },
+    {
       "slug": "r-yehoshua-ben-levi",
       "nombre": "R Yehoshua Ben Levi"
     },
@@ -645,10 +671,6 @@
       "nombre": "Rav Yitzjak Bar Shmuel"
     },
     {
-      "slug": "r-yehoshua",
-      "nombre": "R Yehoshua"
-    },
-    {
       "slug": "r-meir",
       "nombre": "R Meir"
     },
@@ -691,6 +713,10 @@
       "versiculo": 30,
       "texto": "ה׳ מִמָּרוֹם יִשְׁאַג וּמִמְּעוֹן קָדְשׁוֹ יִתֵּן קוֹלוֹ שָׁאֹג יִשְׁאַג עַל נָוֵהוּ",
       "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
+    },
+    {
+      "slug": "devarim-6-7",
+      "nombre": "Devarim 6 7"
     },
     {
       "slug": "tehilim-86-2",
@@ -762,6 +788,26 @@
       "hebreo": "מַזִּיקִין"
     },
     {
+      "slug": "sayag",
+      "nombre": "Sayag"
+    },
+    {
+      "slug": "amud-hashachar",
+      "nombre": "Amud Hashachar"
+    },
+    {
+      "slug": "chatzot",
+      "nombre": "Chatzot"
+    },
+    {
+      "slug": "zman-shema-arvit",
+      "nombre": "Zman Shema Arvit"
+    },
+    {
+      "slug": "takana",
+      "nombre": "Takana"
+    },
+    {
       "slug": "chasid",
       "nombre": "Chasid"
     },
@@ -816,10 +862,6 @@
     {
       "slug": "olam-haba",
       "nombre": "Olam Haba"
-    },
-    {
-      "slug": "chatzot",
-      "nombre": "Chatzot"
     },
     {
       "slug": "arpa-de-david",
@@ -952,6 +994,14 @@
       "peso": 3
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "cerca-y-trabajador",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Los diagramas #5-8 exploraron la dimensión INTERIOR de la noche\ndavídica (kinor · gobierno · chesed · temor al pecado). Ahora la\nsugyá vuelve al pshat de la mishná inicial: «¿hasta cuándo se\nrecita el shema de arvit?». El maestro nos lleva de la psicología\na la ESTRUCTURA halájica — ¿por qué los chajamim dijeron «ad\nchatzot» si la Torah permite «hasta amud hashachar»? La respuesta\nrevela el mecanismo de la SAYAG (cerca rabínica) y se ilustra con\nla baraita de los hijos de Rabban Gamliel.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -981,6 +1031,22 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "syag-rabínico",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "cerca-y-trabajador",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "cerca-y-trabajador",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
       "peso": 1
     },
     {
@@ -1024,6 +1090,22 @@
       "peso": 1
     },
     {
+      "from": "vigilias-noche",
+      "to": "cerca-y-trabajador",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "cerca-y-trabajador",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
       "from": "r-yose-ruina",
       "to": "tres-razones-ruina",
       "categoria": "co-referencia",
@@ -1061,6 +1143,14 @@
       "categoria": "co-referencia",
       "tipo": "co-pasuk",
       "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "cerca-y-trabajador",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "chatzot",
       "peso": 1
     },
     {
