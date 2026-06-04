@@ -253,15 +253,41 @@
       "slug": "miedo-al-pecado",
       "orden": 8,
       "titulo": "El miedo al pecado",
-      "subtitulo": "Lulei he'emanti · Yaakov · Ezra",
+      "subtitulo": "לוּלֵא הֶאֱמַנְתִּי · Yaakov · Ezra · שֶׁמָּא יִגְרֹם הַחֵטְא",
       "dapim": [
         "4a"
       ],
       "grupo": "El rey David",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/miedo-al-pecado.html",
+      "sabios": [
+        "r-yose-bar-zimra",
+        "r-yojanan",
+        "r-yose-baraita",
+        "tana-devei-r-yishmael"
+      ],
+      "sabios_biblicos": [
+        "david",
+        "yaakov",
+        "ezra",
+        "yehoshua-bin-nun"
+      ],
+      "pesukim": [
+        "tehilim-27-13",
+        "bereshit-32-8",
+        "bereshit-28-15",
+        "shemot-15-16"
+      ],
+      "conceptos": [
+        "shema-yigrom-hachet",
+        "puntos-masoreticos",
+        "lulei",
+        "olam-haba"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama anterior estableció que David se llamó חָסִיד apoyándose\nen su ministerio halájico. La guemará continúa explorando la\nPSICOLOGÍA INTERIOR del chasid davídico: a pesar de todos sus\nméritos (madrugar, examinar niddah, consultar a Mefivoshet), David\nSEGUÍA TEMIENDO no merecer el olam ha-ba. La fórmula לוּלֵא\n(«si no fuera que…») expresa ese pavor radical. La sugyá se\nextiende a Yaakov y a Ezra como paralelos del mismo principio.\n"
+      }
     },
     {
       "slug": "cerca-y-trabajador",
@@ -567,6 +593,22 @@
       "nombre": "R Yitzjak Bar Shmuel Bar Marta"
     },
     {
+      "slug": "r-yose-bar-zimra",
+      "nombre": "R Yose Bar Zimra"
+    },
+    {
+      "slug": "r-yojanan",
+      "nombre": "R Yojanan"
+    },
+    {
+      "slug": "r-yose-baraita",
+      "nombre": "R Yose Baraita"
+    },
+    {
+      "slug": "tana-devei-r-yishmael",
+      "nombre": "Tana Devei R Yishmael"
+    },
+    {
       "slug": "rav-oshaya",
       "nombre": "Rav Oshaya"
     },
@@ -663,6 +705,22 @@
       "nombre": "Tehilim 57 9"
     },
     {
+      "slug": "tehilim-27-13",
+      "nombre": "Tehilim 27 13"
+    },
+    {
+      "slug": "bereshit-32-8",
+      "nombre": "Bereshit 32 8"
+    },
+    {
+      "slug": "bereshit-28-15",
+      "nombre": "Bereshit 28 15"
+    },
+    {
+      "slug": "shemot-15-16",
+      "nombre": "Shemot 15 16"
+    },
+    {
       "slug": "tehilim-119-147",
       "nombre": "Tehilim 119 147"
     },
@@ -742,6 +800,22 @@
     {
       "slug": "consejo-tripartito",
       "nombre": "Consejo Tripartito"
+    },
+    {
+      "slug": "shema-yigrom-hachet",
+      "nombre": "Shema Yigrom Hachet"
+    },
+    {
+      "slug": "puntos-masoreticos",
+      "nombre": "Puntos Masoreticos"
+    },
+    {
+      "slug": "lulei",
+      "nombre": "Lulei"
+    },
+    {
+      "slug": "olam-haba",
+      "nombre": "Olam Haba"
     },
     {
       "slug": "chatzot",
@@ -867,6 +941,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "Los diagramas #5 y #6 establecieron a David como el rey-tzadik:\ndespertando a medianoche, consultando tres instituciones antes de\ncada guerra. Pero el siguiente verso de Tehilim 86:2 le pone título\npropio — חָסִיד אָנִי, «soy un chasid». La guemará pregunta: ¿cómo\nosa un REY llamarse chasid? La fórmula apologética «¿no soy chasid?»\nabre dos justificaciones — una nocturna (el madrugador) y otra\ndiurna (las manos manchadas). Misma fórmula, dos pruebas distintas.\n",
+      "peso": 3
+    },
+    {
+      "from": "david-chasid",
+      "to": "miedo-al-pecado",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama anterior estableció que David se llamó חָסִיד apoyándose\nen su ministerio halájico. La guemará continúa explorando la\nPSICOLOGÍA INTERIOR del chasid davídico: a pesar de todos sus\nméritos (madrugar, examinar niddah, consultar a Mefivoshet), David\nSEGUÍA TEMIENDO no merecer el olam ha-ba. La fórmula לוּלֵא\n(«si no fuera que…») expresa ese pavor radical. La sugyá se\nextiende a Yaakov y a Ezra como paralelos del mismo principio.\n",
       "peso": 3
     },
     {

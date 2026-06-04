@@ -1,0 +1,360 @@
+<div class="miedo-interactivo">
+<style>
+  .miedo-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .miedo-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .miedo-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .miedo-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .miedo-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .miedo-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .miedo-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .miedo-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .miedo-diagrama svg { width: 100%; height: auto; display: block; }
+  .miedo-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .miedo-nodo:hover rect { stroke-width: 2 !important; }
+  .miedo-nodo.activa rect { stroke-width: 2.5 !important; }
+  .miedo-nodo.dim { opacity: 0.32; }
+  .miedo-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .miedo-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .miedo-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .miedo-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .miedo-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .miedo-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .miedo-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+  .punto-masoretico { fill: #b8860b; }
+</style>
+
+<div class="miedo-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>versículo dotado · principio</span>
+  <span><span class="swatch azul"></span>David — duda íntima</span>
+  <span><span class="swatch verde"></span>Yaakov — promesa + miedo</span>
+  <span><span class="swatch rojo"></span>Ezra — historia confirmada</span>
+  <span><span class="swatch sepia"></span>máxima · doctrina</span>
+</div>
+
+<div class="miedo-diagrama">
+<svg viewBox="0 0 720 1060" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4a: el miedo al pecado · lulei dotado · David · Yaakov · Ezra · shema yigrom hachet</title>
+
+<defs>
+  <marker id="flecha-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-m-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El miedo al pecado · שֶׁמָּא יִגְרֹם הַחֵטְא</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4a · לוּלֵא dotado · tres figuras del temor justo</text>
+
+<!-- ============================================================ -->
+<!-- EL VERSÍCULO DOTADO                                          -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL VERSÍCULO DOTADO · TEHILIM 27:13</text>
+
+<g class="miedo-nodo" data-id="verso-lulei">
+  <rect x="60" y="86" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.5"/>
+  <!-- Los 7 puntos masoréticos sobre la palabra לולא -->
+  <circle class="punto-masoretico" cx="510" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="515" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="520" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="525" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="530" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="535" cy="113" r="2"/>
+  <circle class="punto-masoretico" cx="540" cy="113" r="2"/>
+  <text x="360" y="132" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">לוּלֵא הֶאֱמַנְתִּי לִרְאוֹת בְּטוּב יְהוָה בְּאֶרֶץ חַיִּים</text>
+  <text x="360" y="152" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¡Si no hubiera creído que vería el bien de HKBH en la tierra de los vivientes…!»</text>
+  <text x="360" y="170" text-anchor="middle" font-size="9.5" fill="#b8860b">↑ 7 puntos sobre לוּלֵא — marca masorética que dispara el midrash</text>
+  <text x="360" y="183" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la frase está rota en el medio · David no acaba la oración · pavor implícito</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA LECTURA TANNAÍTICA                                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="186" x2="360" y2="204" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-m-gold)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA LECTURA TANNAÍTICA · DAVID ANTE HKBH</text>
+
+<g class="miedo-nodo" data-id="lectura-tana">
+  <rect x="60" y="226" width="600" height="92" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="78" y="248" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">David dijo ante HKBH:</text>
+  <text x="78" y="270" font-size="10.5" fill="#3d2f23" font-style="italic">«Maestro del mundo: SÉ que pagas buena recompensa a los tzadikim en el olam ha-ba</text>
+  <text x="78" y="287" font-size="10.5" fill="#3d2f23" font-style="italic">  pero no sé si TENGO PARTE con ellos…»</text>
+  <text x="360" y="307" text-anchor="middle" font-size="11.5" direction="rtl" fill="#b8860b">שֶׁמָּא יִגְרֹם הַחֵטְא</text>
+  <text x="615" y="307" text-anchor="end" font-size="9" fill="#6b4423" font-style="italic">«quizá el pecado cause [la pérdida]»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS TRES FIGURAS — DISTRIBUCIÓN EN COLUMNAS                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="318" x2="360" y2="338" stroke="#3d2f23" stroke-width="1"/>
+<line x1="160" y1="338" x2="560" y2="338" stroke="#3d2f23" stroke-width="1"/>
+<line x1="160" y1="338" x2="160" y2="358" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+<line x1="360" y1="338" x2="360" y2="358" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+<line x1="560" y1="338" x2="560" y2="358" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+
+<text x="160" y="354" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">I · DAVID</text>
+<text x="360" y="354" text-anchor="middle" font-size="9" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1">II · YAAKOV</text>
+<text x="560" y="354" text-anchor="middle" font-size="9" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">III · EZRA</text>
+
+<!-- ============================================================ -->
+<!-- I · DAVID — duda íntima (sin promesa explícita)             -->
+<!-- ============================================================ -->
+<g class="miedo-nodo" data-id="david-duda">
+  <rect x="50" y="368" width="220" height="180" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="160" y="388" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">David — la duda íntima</text>
+  <text x="160" y="408" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">(sin promesa explícita)</text>
+  <line x1="80" y1="418" x2="240" y2="418" stroke="#1e3a5f" stroke-width="0.6" opacity="0.5"/>
+  <text x="60" y="436" font-size="9.5" fill="#3d2f23" font-weight="500">situación:</text>
+  <text x="60" y="450" font-size="9" fill="#3d2f23">rey ungido · tzadik confeso</text>
+  <text x="60" y="463" font-size="9" fill="#3d2f23">vida de Torah · ministerio halájico</text>
+  <text x="60" y="486" font-size="9.5" fill="#3d2f23" font-weight="500">temor:</text>
+  <text x="60" y="500" font-size="9" fill="#3d2f23">¿tengo parte en olam ha-ba?</text>
+  <text x="60" y="513" font-size="9" fill="#3d2f23">¿el pecado lo canceló?</text>
+  <text x="60" y="536" font-size="9" fill="#1e3a5f" font-style="italic">→ פִּחֵד מֵרְשָׁעִים — pavor</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- II · YAAKOV — promesa explícita pero miedo                   -->
+<!-- ============================================================ -->
+<g class="miedo-nodo" data-id="yaakov-vayira">
+  <rect x="280" y="368" width="160" height="180" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="360" y="388" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">Yaakov</text>
+  <text x="360" y="402" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">(promesa explícita)</text>
+  <line x1="295" y1="412" x2="425" y2="412" stroke="#2d6b4e" stroke-width="0.6" opacity="0.5"/>
+  <text x="290" y="428" font-size="9.5" fill="#3d2f23" font-weight="500">la promesa (28:15):</text>
+  <text x="360" y="446" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">וְהִנֵּה אָנֹכִי עִמָּךְ</text>
+  <text x="290" y="461" font-size="8.5" fill="#3d2f23" font-style="italic">«estoy contigo y te guardo»</text>
+  <text x="290" y="486" font-size="9.5" fill="#3d2f23" font-weight="500">y aún así (32:8):</text>
+  <text x="360" y="504" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">וַיִּירָא יַעֲקֹב מְאֹד</text>
+  <text x="290" y="519" font-size="8.5" fill="#3d2f23" font-style="italic">«temió mucho» ante Ésav</text>
+  <text x="290" y="538" font-size="9" fill="#2d6b4e" font-style="italic">→ שֶׁמָּא יִגְרֹם הַחֵטְא</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- III · EZRA — historia confirmada                             -->
+<!-- ============================================================ -->
+<g class="miedo-nodo" data-id="ezra-milagro">
+  <rect x="450" y="368" width="220" height="180" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="560" y="388" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">Ezra — la confirmación</text>
+  <text x="560" y="402" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">(historia confirmada)</text>
+  <line x1="470" y1="412" x2="650" y2="412" stroke="#8b1a1a" stroke-width="0.6" opacity="0.5"/>
+  <text x="460" y="428" font-size="9.5" fill="#3d2f23" font-weight="500">merecían milagro:</text>
+  <text x="460" y="442" font-size="9" fill="#3d2f23">como en días de Yehoshua bin Nun</text>
+  <text x="460" y="455" font-size="9" fill="#3d2f23">— cruce milagroso del río —</text>
+  <text x="460" y="468" font-size="9" direction="ltr" fill="#3d2f23">(Shemot 15:16: doble «יַעֲבֹר»)</text>
+  <text x="460" y="491" font-size="9.5" fill="#3d2f23" font-weight="500">pero no ocurrió:</text>
+  <text x="560" y="510" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">שֶׁגָּרַם הַחֵטְא</text>
+  <text x="460" y="525" font-size="8.5" fill="#3d2f23" font-style="italic">«porque causó el pecado»</text>
+  <text x="460" y="540" font-size="9" fill="#8b1a1a" font-style="italic">→ regreso mundano · sin milagro</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ESCALA DEL TEMOR — visualización del movimiento              -->
+<!-- ============================================================ -->
+<line x1="160" y1="548" x2="160" y2="572" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+<line x1="360" y1="548" x2="360" y2="572" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+<line x1="560" y1="548" x2="560" y2="572" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+
+<text x="360" y="586" text-anchor="middle" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1">LA ESCALA DEL TEMOR JUSTO</text>
+
+<g class="miedo-nodo" data-id="escala-temor">
+  <rect x="60" y="596" width="600" height="106" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="360" y="618" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Tres grados del mismo principio</text>
+  <!-- Tres niveles visualizados -->
+  <text x="160" y="642" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">subjetivo</text>
+  <text x="360" y="642" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">a pesar de promesa</text>
+  <text x="560" y="642" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">históricamente probado</text>
+  <text x="160" y="660" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«no sé si soy digno»</text>
+  <text x="360" y="660" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«aún temo»</text>
+  <text x="560" y="660" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«no ocurrió»</text>
+  <!-- Flecha de progresión -->
+  <line x1="100" y1="678" x2="620" y2="678" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-m)"/>
+  <text x="360" y="695" text-anchor="middle" font-size="9" fill="#6b4423">interioridad → vigilancia → confirmación · el chasid vive en los tres niveles a la vez</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA MÁXIMA META — al yiftach adam piv le-Satan                -->
+<!-- ============================================================ -->
+<line x1="360" y1="702" x2="360" y2="722" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+
+<text x="60" y="734" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MÁXIMA META · R. YOSE BAR ZIMRA · 4A</text>
+
+<g class="miedo-nodo" data-id="maxima-satan">
+  <rect x="60" y="744" width="600" height="98" rx="6" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="768" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">לְעוֹלָם אַל יִפְתַּח אָדָם פִּיו לְשָׂטָן</text>
+  <text x="360" y="788" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Que nunca el hombre abra su boca al Satán»</text>
+  <text x="78" y="808" font-size="9.5" fill="#3d2f23">El acusador celestial está atento — verbalizar una posibilidad negativa puede invitarla</text>
+  <text x="78" y="822" font-size="9.5" fill="#3d2f23">Por eso David usa לוּלֵא (frase truncada) y no completa la cláusula del pavor</text>
+  <text x="78" y="836" font-size="9" fill="#6b4423" font-style="italic">la palabra dotada es exactamente el lugar donde la frase se interrumpe — la marca masorética codifica el silencio</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="842" x2="360" y2="862" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-m)"/>
+
+<text x="60" y="874" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA PSICOLOGÍA DEL JUSTO</text>
+
+<g class="miedo-nodo" data-id="doctrina">
+  <rect x="60" y="884" width="600" height="160" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="908" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El tzadik vive en zozobra metódica</text>
+  <text x="360" y="930" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">aún con méritos · aún con promesa explícita · aún con derecho a milagro:</text>
+  <!-- Tres líneas -->
+  <text x="78" y="954" font-size="10" fill="#3d2f23">1.</text>
+  <text x="100" y="954" font-size="10" fill="#3d2f23">la propia justicia NO se cuenta por uno mismo · el cálculo es de HKBH</text>
+  <text x="78" y="974" font-size="10" fill="#3d2f23">2.</text>
+  <text x="100" y="974" font-size="10" fill="#3d2f23">la promesa divina es condicional al estado moral presente · puede caducar</text>
+  <text x="78" y="994" font-size="10" fill="#3d2f23">3.</text>
+  <text x="100" y="994" font-size="10" fill="#3d2f23">el pecado SÍ causa pérdida histórica · la teología no es solo subjetiva</text>
+  <text x="360" y="1024" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">esto distingue al chasid del «justo» complaciente · la vida espiritual es vigilancia continua</text>
+</g>
+
+</svg>
+</div>
+
+<div class="miedo-panel" id="miedo-panel">
+  <p class="miedo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'verso-lulei': {
+      titulo: 'Tehilim 27:13 — el versículo de la palabra dotada',
+      hebreo: 'לוּלֵא הֶאֱמַנְתִּי לִרְאוֹת בְּטוּב יְהוָה בְּאֶרֶץ חַיִּים',
+      traduccion: '«¡Si no hubiera creído que vería el bien de HKBH en la tierra de los vivientes…!»',
+      explicacion: 'Una de las frases más enigmáticas del Salterio. El verso es GRAMATICALMENTE INCOMPLETO — empieza con לוּלֵא («si no fuera que…») pero NUNCA completa la cláusula condicional. ¿Qué hubiera ocurrido si David NO hubiera creído? La frase se corta.\n\nLa masorá marca esto con 7 PUNTOS sobre la palabra לוּלֵא — uno de los pocos ejemplos de puntuación masorética que distingue palabras como «especiales». Los puntos son una señal hermenéutica: léelo de manera diferente, hay algo escondido aquí.\n\nLa lectura talmúdica: David se aterró tanto al imaginar lo opuesto (no tener parte en olam ha-ba) que NO PUDO terminar la frase. Los puntos sobre לוּלֵא marcan precisamente esa interrupción del habla por pavor.\n\nLa palabra dotada se convierte en monumento al silencio del tzadik ante el abismo.'
+    },
+    'lectura-tana': {
+      titulo: 'La lectura tannaítica — David ante HKBH',
+      hebreo: 'יָדַעְתִּי שֶׁאַתָּה נוֹתֵן שָׂכָר טוֹב לַצַּדִּיקִים לֶעָתִיד לָבוֹא · אֲבָל אֵינִי יוֹדֵעַ אִם יֵשׁ לִי חֵלֶק עִמָּהֶם',
+      traduccion: '«Sé que pagas buena recompensa a los justos en el futuro venidero — pero no sé si tengo parte con ellos»',
+      explicacion: 'La voz tannaítica reconstruye el diálogo interno de David al pronunciar la frase truncada.\n\nLa estructura del pavor es interesante: David NO duda de la teología (sí cree en olam ha-ba; sí cree que HKBH recompensa a los justos). Lo que le tortura es la APLICACIÓN PERSONAL: «¿estoy yo entre los que reciben recompensa?».\n\nEsta es la distinción crucial del chasid davídico: confianza ABSOLUTA en la justicia divina, e INCERTIDUMBRE radical sobre el propio mérito. Las dos coexisten sin contradicción.\n\nLa fórmula clave que aparece aquí: שֶׁמָּא יִגְרֹם הַחֵטְא — «quizá el pecado cause [que pierda]». Esta fórmula se convierte en el principio articulador de toda la sugyá, y se aplicará después a Yaakov y a Ezra.'
+    },
+    'david-duda': {
+      titulo: 'David — la duda íntima sin promesa explícita',
+      hebreo: 'אֵינִי יוֹדֵעַ אִם יֵשׁ לִי חֵלֶק',
+      traduccion: '«No sé si tengo parte»',
+      explicacion: 'El caso DAVID es el más íntimo y subjetivo. NO hay promesa explícita de HKBH sobre el olam ha-ba personal de David. La angustia procede enteramente del autoexamen.\n\nDavid era objetivamente extraordinario:\n  · Rey ungido\n  · Autor de Tehilim\n  · Madrugador (chatzot)\n  · Examinador de niddah (manos manchadas)\n  · Estudiante sometido a Mefivoshet\n\nY sin embargo: «no sé». La distancia entre los méritos objetivos y la confianza subjetiva en ellos es enorme.\n\nEste es el primer grado del temor justo: la INCERTIDUMBRE INTERIOR pese a todos los signos exteriores de virtud. El chasid NO se cuenta a sí mismo como justo — deja ese cómputo a HKBH y vive en el espacio del «no sé».'
+    },
+    'yaakov-vayira': {
+      titulo: 'Yaakov — promesa explícita pero miedo igual',
+      hebreo: 'וְהִנֵּה אָנֹכִי עִמָּךְ … וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר לוֹ',
+      traduccion: '«He aquí estoy contigo … Y temió Yaakov mucho y se angustió»',
+      explicacion: 'El caso YAAKOV intensifica el principio: aquí HAY promesa explícita, y aún así hay miedo.\n\nEn Bet-El (Bereshit 28:15), HKBH le promete a Yaakov: «He aquí estoy contigo y te GUARDARÉ dondequiera que vayas». Una promesa de protección categórica, sin condiciones aparentes.\n\nVeinte años después, al regreso de Lavan, Yaakov se entera de que Ésav viene con 400 hombres. Y lo que dice el texto es asombroso: «וַיִּירָא יַעֲקֹב מְאֹד» — temió MUCHO. Y «וַיֵּצֶר לוֹ» — se angustió.\n\nLa pregunta talmúdica: ¿por qué temer si la promesa fue explícita?\n\nLa respuesta: שֶׁמָּא יִגְרֹם הַחֵטְא — quizá los pecados acumulados en los 20 años entre Bet-El y este momento hayan CANCELADO la promesa. La promesa divina NO es un contrato firmado para siempre — es condicional al estado moral presente.\n\nEsta doctrina es teológicamente radical: ni siquiera una promesa directa de Dios garantiza la protección si el receptor se ha degradado moralmente.'
+    },
+    'ezra-milagro': {
+      titulo: 'Ezra — la historia confirmada (el pecado SÍ causó la pérdida)',
+      hebreo: 'רְאוּיִין הָיוּ יִשְׂרָאֵל לַעֲשׂוֹת לָהֶם נֵס בִּימֵי עֶזְרָא · אֶלָּא שֶׁגָּרַם הַחֵטְא',
+      traduccion: '«Israel merecía que se les hiciera milagro en los días de Ezra — pero causó el pecado»',
+      explicacion: 'El caso EZRA es el más decisivo: aquí ya no es subjetivo (David) ni hipotético (Yaakov) — es histórico, confirmado.\n\nTanna devei R. Yishmael lee la frase doble de Shemot 15:16 — עַד יַעֲבֹר עַמְּךָ ה\' עַד יַעֲבֹר עַם זוּ קָנִיתָ («hasta que pase tu pueblo HKBH, hasta que pase este pueblo que adquiriste») — como referencia a DOS cruces milagrosos: el primero ya ocurrido (Yehoshua bin Nun cruzando el Jordán para entrar a la Tierra), y el segundo prometido para el segundo regreso (Ezra y los exiliados de Bavel).\n\nIsrael MERECÍA en los días de Ezra el mismo milagro espectacular: la división de aguas, la aparición visible de la presencia divina, la conquista milagrosa.\n\nY sin embargo no ocurrió. El segundo regreso fue MUNDANO: caravanas comerciales, permiso del rey persa, ayuno por el camino. Ezra mismo dice que se avergonzó de pedir escolta porque había dicho al rey que HKBH les protegería (Ezra 8:22).\n\n¿Por qué se perdió el milagro merecido? שֶׁגָּרַם הַחֵטְא — el pecado lo causó. El nivel de la generación no estaba a la altura.\n\nEsto cierra el argumento: el temor de David y Yaakov NO eran exagerados. La historia DEMUESTRA que el pecado sí puede cancelar las promesas y los privilegios.'
+    },
+    'escala-temor': {
+      titulo: 'La escala del temor justo · tres grados',
+      hebreo: 'שָׁלוֹשׁ דַּרְגּוֹת',
+      traduccion: 'Tres grados del temor justo',
+      explicacion: 'La sugyá presenta los tres casos en orden creciente de evidencia:\n\n  1. SUBJETIVO (David) — solo el autoexamen revela el peligro. No hay evento externo. El temor es enteramente interior. Es el más íntimo y, paradójicamente, el más difícil de mantener.\n\n  2. A PESAR DE PROMESA (Yaakov) — hay un evento externo (la inminencia de Ésav) que provoca el temor, pero también hay una promesa explícita que parece volverlo innecesario. Yaakov elige temer ANTES que confiar en la promesa.\n\n  3. CONFIRMADO HISTÓRICAMENTE (Ezra) — la generación de Ezra es el ejemplo de lo que TEMÍAN David y Yaakov: la pérdida real de un privilegio merecido por causa del pecado.\n\nEl movimiento es del temor más sospechoso (¿exagerado?) al temor más fundado. Y el lector aprende: si la historia confirma que el pecado SÍ causa pérdida (Ezra), entonces el temor de Yaakov estaba justificado, y la duda de David no era neurótica.\n\nEl chasid vive en los tres niveles a la vez: autoexamen continuo + vigilancia sobre los privilegios recibidos + lectura sobria de la historia.'
+    },
+    'maxima-satan': {
+      titulo: 'La máxima de R. Yose bar Zimra — al yiftach adam piv le-Satan',
+      hebreo: 'לְעוֹלָם אַל יִפְתַּח אָדָם פִּיו לְשָׂטָן',
+      traduccion: '«Que nunca abra el hombre su boca al Satán»',
+      explicacion: 'R. Yose bar Zimra establece este principio en la misma sugyá: el hombre debe vigilar lo que verbaliza.\n\nEl Satán en el contexto rabínico es el ACUSADOR celestial (no el rebelde cristiano) — un agente cuya función es presentar contra el hombre las pruebas de su indignidad. El principio dice: NO le des material verbalizando posibilidades negativas.\n\nEjemplo aplicado: alguien dice por broma «ojalá no me enferme». Acaba de verbalizar «enfermedad». El Satán toma esa verbalización como prompt y va a presentar ante el tribunal celestial las razones por las que ese hombre merece enfermar. Mejor no haberlo dicho.\n\nEn la sugyá aplicado a David: por eso usa לוּלֵא (frase truncada) en lugar de «si no creyera, perdería el olam ha-ba». NO completa la oración para no formular en voz alta la pérdida potencial.\n\nY la marca masorética de los 7 puntos sobre לוּלֵא codifica precisamente esta práctica: la interrupción del habla en el momento crítico es la fortaleza espiritual del chasid.\n\nEsta máxima se cita en muchas otras sugyot (Ket 8b, Mo\'ed Katan 18a) como principio general de la halajá del habla.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta — la psicología del justo',
+      hebreo: 'הַצַּדִּיק חַי בִּזְהִירוּת מַתְמֶדֶת',
+      traduccion: 'El justo vive en vigilancia continua',
+      explicacion: 'La sugyá produce una teología práctica del temor:\n\n  1. LA AUTOEVALUACIÓN NO ES CONFIABLE — la propia justicia no se computa por uno mismo. El balance final es de HKBH. Cualquier confianza en el propio mérito es presunción.\n\n  2. LAS PROMESAS DIVINAS SON CONDICIONALES AL ESTADO MORAL PRESENTE — incluso una garantía explícita de HKBH puede caducar si el receptor se ha degradado. Esto se aplica al individuo (Yaakov) y a la generación entera (Ezra).\n\n  3. EL PECADO TIENE EFECTOS HISTÓRICOS REALES — no es solo categoría legal de mérito/demérito, sino fuerza que altera el curso de los eventos. La generación de Ezra perdió milagros reales por una degradación moral identificable.\n\nDe estas tres premisas surge la disposición práctica del chasid:\n\n  · NUNCA dar por sentada la salvación personal\n  · NUNCA presumir que un mérito presente protege automáticamente\n  · NUNCA verbalizar la pérdida potencial (al yiftach…)\n  · SIEMPRE actuar como si el pecado pudiera cancelar (zehirut)\n\nEsto distingue al chasid del «justo complaciente» (el que cuenta sus méritos y se siente seguro). La vida espiritual del chasid es vigilancia continua, no descanso conseguido.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.miedo-interactivo')
+    : document.querySelector('.miedo-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#miedo-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.miedo-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="miedo-panel-header">' +
+        '<p class="miedo-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="miedo-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="miedo-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="miedo-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.miedo-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.miedo-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="miedo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
