@@ -361,15 +361,38 @@
       "slug": "ashrei-olam-haba",
       "orden": 11,
       "titulo": "Ashrei y el olam ha-ba",
-      "subtitulo": "tres veces al día · por qué falta la nun",
+      "subtitulo": "tres veces al día · por qué falta la נ",
       "dapim": [
         "4b"
       ],
       "grupo": "La técnica litúrgica",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/ashrei-olam-haba.html",
+      "sabios": [
+        "r-eliezer-ben-avina",
+        "r-yojanan",
+        "rav-najman-bar-yitzjak"
+      ],
+      "sabios_biblicos": [
+        "david"
+      ],
+      "pesukim": [
+        "tehilim-145",
+        "tehilim-145-15",
+        "tehilim-145-16",
+        "amos-5-2"
+      ],
+      "conceptos": [
+        "tehila-ledavid",
+        "alef-bet",
+        "parnasa",
+        "olam-haba",
+        "mafolet-pueblo"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #10 estableció la fórmula de R. Yojanan: «¿quién es\nben olam ha-ba? — el que junta geulá a tefilá». Inmediatamente\ndespués, la guemará trae OTRA fórmula con la misma estructura, de\notro amora: R. Eliezer ben Avina dice «todo el que recita Tehilá\nle-David tres veces al día está seguro de ser ben olam ha-ba».\nMisma fórmula, otra técnica litúrgica. El editor agrupa por\ncadena-fórmula — el lector descubre que ASHREI es una segunda vía\nparalela a la semijá.\n"
+      }
     },
     {
       "slug": "escala-angeles",
@@ -615,6 +638,18 @@
       ]
     },
     {
+      "slug": "r-eliezer-ben-avina",
+      "nombre": "R Eliezer Ben Avina"
+    },
+    {
+      "slug": "r-yojanan",
+      "nombre": "R Yojanan"
+    },
+    {
+      "slug": "rav-najman-bar-yitzjak",
+      "nombre": "Rav Najman Bar Yitzjak"
+    },
+    {
       "slug": "rabban-gamliel",
       "nombre": "Rabban Gamliel"
     },
@@ -641,10 +676,6 @@
     {
       "slug": "r-yose-bar-zimra",
       "nombre": "R Yose Bar Zimra"
-    },
-    {
-      "slug": "r-yojanan",
-      "nombre": "R Yojanan"
     },
     {
       "slug": "r-yose-baraita",
@@ -747,6 +778,22 @@
       "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
     },
     {
+      "slug": "tehilim-145",
+      "nombre": "Tehilim 145"
+    },
+    {
+      "slug": "tehilim-145-15",
+      "nombre": "Tehilim 145 15"
+    },
+    {
+      "slug": "tehilim-145-16",
+      "nombre": "Tehilim 145 16"
+    },
+    {
+      "slug": "amos-5-2",
+      "nombre": "Amos 5 2"
+    },
+    {
       "slug": "devarim-6-7",
       "nombre": "Devarim 6 7"
     },
@@ -824,6 +871,26 @@
       "hebreo": "מַזִּיקִין"
     },
     {
+      "slug": "tehila-ledavid",
+      "nombre": "Tehila Ledavid"
+    },
+    {
+      "slug": "alef-bet",
+      "nombre": "Alef Bet"
+    },
+    {
+      "slug": "parnasa",
+      "nombre": "Parnasa"
+    },
+    {
+      "slug": "olam-haba",
+      "nombre": "Olam Haba"
+    },
+    {
+      "slug": "mafolet-pueblo",
+      "nombre": "Mafolet Pueblo"
+    },
+    {
       "slug": "sayag",
       "nombre": "Sayag"
     },
@@ -894,10 +961,6 @@
     {
       "slug": "lulei",
       "nombre": "Lulei"
-    },
-    {
-      "slug": "olam-haba",
-      "nombre": "Olam Haba"
     },
     {
       "slug": "arpa-de-david",
@@ -1059,6 +1122,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "El diagrama #9 trató la ESTRUCTURA EXTERNA de la noche litúrgica\n(cuándo recitar shema — la cerca de chatzot). Ahora la sugyá se\nmueve a la ESTRUCTURA INTERNA del rezo: el orden y la conexión\nentre brachot. La pregunta es ya no «¿hasta cuándo?» sino «¿en\nqué orden?». La fórmula R. Yojanan «¿quién es ben olam ha-ba?» se\nconvierte en clave: pegar la bracha de geulá con la amidá tiene\nvalor cósmico. Y esta enseñanza VUELVE en 6b y en 9b — es uno de\nlos temas que el editor recorre tres veces.\n",
+      "peso": 3
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "ashrei-olam-haba",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #10 estableció la fórmula de R. Yojanan: «¿quién es\nben olam ha-ba? — el que junta geulá a tefilá». Inmediatamente\ndespués, la guemará trae OTRA fórmula con la misma estructura, de\notro amora: R. Eliezer ben Avina dice «todo el que recita Tehilá\nle-David tres veces al día está seguro de ser ben olam ha-ba».\nMisma fórmula, otra técnica litúrgica. El editor agrupa por\ncadena-fórmula — el lector descubre que ASHREI es una segunda vía\nparalela a la semijá.\n",
       "peso": 3
     },
     {
@@ -1240,6 +1311,38 @@
     {
       "from": "miedo-al-pecado",
       "to": "semijat-geula-tefila",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "ashrei-olam-haba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "ashrei-olam-haba",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "ashrei-olam-haba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "olam-haba",

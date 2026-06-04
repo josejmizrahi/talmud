@@ -1,0 +1,343 @@
+<div class="ashrei-interactivo">
+<style>
+  .ashrei-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .ashrei-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .ashrei-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .ashrei-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .ashrei-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .ashrei-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .ashrei-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .ashrei-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .ashrei-diagrama svg { width: 100%; height: auto; display: block; }
+  .ashrei-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .ashrei-nodo:hover rect { stroke-width: 2 !important; }
+  .ashrei-nodo:hover circle { stroke-width: 2.5 !important; }
+  .ashrei-nodo.activa rect { stroke-width: 2.5 !important; }
+  .ashrei-nodo.activa circle { stroke-width: 3 !important; }
+  .ashrei-nodo.dim { opacity: 0.32; }
+  .ashrei-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .ashrei-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .ashrei-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .ashrei-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .ashrei-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .ashrei-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .ashrei-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+  .letra-hebrea { font-family: 'Frank Ruhl Libre', serif; font-weight: 600; }
+  .letra-falta { fill: #8b1a1a; opacity: 0.35; text-decoration: line-through; }
+</style>
+
+<div class="ashrei-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear</span>
+  <span><span class="swatch verde"></span>razones del salmo</span>
+  <span><span class="swatch rojo"></span>la נ que falta</span>
+  <span><span class="swatch azul"></span>la samech y el sostén</span>
+  <span><span class="swatch sepia"></span>doctrina meta</span>
+</div>
+
+<div class="ashrei-diagrama">
+<svg viewBox="0 0 720 1080" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4b: Ashrei (Tehilim 145) tres veces al día · la nun ausente y el sostén de la samech</title>
+
+<defs>
+  <marker id="flecha-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Ashrei y el olam ha-ba · la נ que falta</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4b · Tehilim 145 tres veces al día · segunda vía paralela a la semijá</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR — R. ELIEZER BEN AVINA                  -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · R. ELIEZER BEN AVINA · 4B</text>
+
+<g class="ashrei-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">כָּל הָאוֹמֵר תְּהִלָּה לְדָוִד בְּכָל יוֹם שָׁלוֹשׁ פְּעָמִים</text>
+  <text x="360" y="132" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">מוּבְטָח לוֹ שֶׁהוּא בֶּן הָעוֹלָם הַבָּא</text>
+  <text x="360" y="153" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Todo el que recita Tehilá le-David tres veces cada día — está garantizado ben olam ha-ba»</text>
+  <text x="360" y="173" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la misma fórmula de R. Yojanan (#10) — otra técnica · otra vía</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- POR QUÉ ESTE SALMO — DOS RAZONES                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="186" x2="360" y2="204" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-a)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">¿POR QUÉ ESTE SALMO? · DOS RAZONES</text>
+
+<g class="ashrei-nodo" data-id="razon-acrostico">
+  <rect x="60" y="226" width="290" height="100" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="205" y="246" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">1 · Acróstico alfabético</text>
+  <text x="205" y="266" text-anchor="middle" font-size="11" fill="#3d2f23">א · ב · ג · ד … תּ</text>
+  <text x="78" y="288" font-size="10" fill="#3d2f23">cada versículo comienza con una letra</text>
+  <text x="78" y="302" font-size="10" fill="#3d2f23">del alfabeto hebreo en orden estricto</text>
+  <text x="78" y="318" font-size="9" fill="#6b4423" font-style="italic">recitarlo es recorrer la lengua sagrada entera</text>
+</g>
+
+<g class="ashrei-nodo" data-id="razon-providencia">
+  <rect x="370" y="226" width="290" height="100" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="515" y="246" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">2 · La verseta de la providencia</text>
+  <text x="515" y="268" text-anchor="middle" font-size="11" direction="rtl" fill="#3d2f23">פּוֹתֵחַ אֶת יָדֶךָ</text>
+  <text x="388" y="290" font-size="10" fill="#3d2f23" font-style="italic">«abres tu mano y sacias a todo ser»</text>
+  <text x="388" y="304" font-size="10" fill="#3d2f23">verseta de פַּרְנָסָה — providencia universal</text>
+  <text x="388" y="318" font-size="9" fill="#6b4423" font-style="italic">Tehilim 145:16 · centro teológico del salmo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA COMBINACIÓN ÚNICA                                         -->
+<!-- ============================================================ -->
+<line x1="205" y1="326" x2="205" y2="344" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-a)"/>
+<line x1="515" y1="326" x2="515" y2="344" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-a)"/>
+<line x1="205" y1="344" x2="515" y2="344" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="360" y1="344" x2="360" y2="358" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-a)"/>
+
+<g class="ashrei-nodo" data-id="combinacion">
+  <rect x="60" y="362" width="600" height="56" rx="5" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="78" y="382" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Rav Najman bar Yitzjak · la combinación es única</text>
+  <text x="78" y="400" font-size="9.5" fill="#3d2f23">otros salmos tienen acróstico (Tehilim 119) · otros mencionan providencia (136) · solo este UNE LOS DOS</text>
+  <text x="78" y="412" font-size="9" fill="#6b4423" font-style="italic">por eso este salmo en particular es el «pasaporte» al olam ha-ba</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL ENIGMA · LA נ QUE FALTA                                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="418" x2="360" y2="438" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-a-red)"/>
+
+<text x="60" y="450" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ENIGMA · ¿DÓNDE ESTÁ LA נ?</text>
+
+<g class="ashrei-nodo" data-id="enigma-nun">
+  <rect x="60" y="460" width="600" height="138" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="480" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">El acróstico debería tener 22 versículos · tiene 21</text>
+  <!-- Visualización del alfabeto con la nun tachada -->
+  <text x="78" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">… כ</text>
+  <text x="118" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">ל</text>
+  <text x="148" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">מ</text>
+  <text x="180" y="510" font-size="18" class="letra-hebrea letra-falta" fill="#8b1a1a" font-weight="700">נ</text>
+  <text x="215" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">ס</text>
+  <text x="245" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">ע</text>
+  <text x="275" y="510" font-size="14" class="letra-hebrea" fill="#3d2f23">פ …</text>
+  <text x="180" y="528" font-size="9" text-anchor="middle" fill="#8b1a1a" font-style="italic">↑ ausente</text>
+  <text x="78" y="554" font-size="10" fill="#3d2f23">después del versículo de מ (מַלְכוּתְךָ מַלְכוּת כָּל עוֹלָמִים)</text>
+  <text x="78" y="570" font-size="10" fill="#3d2f23">salta directamente al versículo de ס (סוֹמֵךְ ה' לְכָל הַנֹּפְלִים)</text>
+  <text x="78" y="588" font-size="9.5" fill="#6b4423" font-style="italic">¿por qué David — autor del salmo — omitió deliberadamente la נ?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- R. YOJANAN EXPLICA · AMOS 5:2                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="598" x2="360" y2="616" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-a-red)"/>
+
+<text x="60" y="628" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">R. YOJANAN · LA נ DE LA CAÍDA · AMOS 5:2</text>
+
+<g class="ashrei-nodo" data-id="r-yojanan-amos">
+  <rect x="60" y="638" width="600" height="110" rx="6" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="360" y="662" text-anchor="middle" font-size="12.5" direction="rtl" fill="#8b1a1a">נָפְלָה לֹא תוֹסִיף קוּם בְּתוּלַת יִשְׂרָאֵל</text>
+  <text x="360" y="682" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Cayó, no se levantará más, la virgen de Israel» (Amos 5:2)</text>
+  <text x="78" y="704" font-size="10" fill="#3d2f23">la נ habría correspondido a esta verseta profética de caída de Israel</text>
+  <text x="78" y="720" font-size="10" fill="#3d2f23">David, por vergüenza ante esta profecía, EVITÓ poner נ en su salmo de alabanza</text>
+  <text x="78" y="736" font-size="9" fill="#6b4423" font-style="italic">la ausencia es deliberada · no dejar entrada verbal a la sombra de la caída</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA DOBLE LECTURA                                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="748" x2="360" y2="766" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-a)"/>
+
+<g class="ashrei-nodo" data-id="doble-lectura">
+  <rect x="60" y="770" width="600" height="62" rx="5" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="78" y="790" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="600">La lectura del oeste (Eretz Israel)</text>
+  <text x="78" y="808" font-size="10" fill="#3d2f23">leen: «נָפְלָה — לֹא תוֹסִיף לִנְפֹּל עוֹד · קוּם בְּתוּלַת יִשְׂרָאֵל»</text>
+  <text x="78" y="822" font-size="9" fill="#6b4423" font-style="italic">«cayó — pero NO caerá más; ¡levántate!» · lectura positiva — pero David igual evitó la נ</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL SOSTÉN · LA SAMECH                                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="832" x2="360" y2="850" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-a)"/>
+
+<text x="60" y="862" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA NUN ESCONDIDA · SOSTÉN DESDE LA SAMECH</text>
+
+<g class="ashrei-nodo" data-id="samech-somej">
+  <rect x="60" y="872" width="600" height="118" rx="6" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="360" y="894" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">סוֹמֵךְ ה' לְכָל הַנֹּפְלִים</text>
+  <text x="360" y="914" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Hashem SOSTIENE a todos los que CAEN» (Tehilim 145:14)</text>
+  <line x1="100" y1="926" x2="620" y2="926" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <text x="78" y="944" font-size="10" fill="#1e3a5f" font-weight="600">el detalle midráshico:</text>
+  <text x="78" y="960" font-size="10" fill="#3d2f23">la palabra הַנֹּפְלִים («los que caen») contiene la נ insinuada — pero como letra interna</text>
+  <text x="78" y="976" font-size="10" fill="#3d2f23">David ESCONDE la caída dentro del versículo del SOSTÉN — el rescate llega antes que el acto formal</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · POR QUÉ TRES VECES                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="990" x2="360" y2="1010" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-a)"/>
+
+<g class="ashrei-nodo" data-id="doctrina">
+  <rect x="60" y="1014" width="600" height="60" rx="5" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="360" y="1034" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Dos vías paralelas al olam ha-ba · misma fórmula editorial</text>
+  <text x="78" y="1054" font-size="9.5" fill="#3d2f23">#10 (R. Yojanan) — semijá geulá-tefilá · técnica del orden litúrgico</text>
+  <text x="78" y="1068" font-size="9.5" fill="#3d2f23">#11 (R. Eliezer ben Avina) — Ashrei × 3 · técnica de la recitación diaria</text>
+</g>
+
+</svg>
+</div>
+
+<div class="ashrei-panel" id="ashrei-panel">
+  <p class="ashrei-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'R. Eliezer ben Avina · la segunda vía al olam ha-ba',
+      hebreo: 'כָּל הָאוֹמֵר תְּהִלָּה לְדָוִד בְּכָל יוֹם שָׁלוֹשׁ פְּעָמִים מוּבְטָח לוֹ שֶׁהוּא בֶּן הָעוֹלָם הַבָּא',
+      traduccion: '«Todo el que recita Tehilá le-David tres veces cada día — está garantizado que es ben olam ha-ba»',
+      explicacion: 'Una segunda fórmula con la misma estructura que la de R. Yojanan en el diagrama anterior. La paralelismo es deliberado del editor:\n\n  · R. Yojanan: «¿quién es ben olam ha-ba? — el que junta geulá a tefilá»\n  · R. Eliezer ben Avina: «todo el que recita Ashrei tres veces — garantizado ben olam ha-ba»\n\nDos amoraim, dos técnicas litúrgicas, una misma garantía soteriológica. El editor pega ambas para mostrar que el rabinismo NO confía en una sola vía técnica — proporciona MÚLTIPLES caminos accesibles.\n\nNote la diferencia de fórmula:\n  · R. Yojanan usa pregunta retórica («¿quién es?»)\n  · R. Eliezer usa garantía directa («מוּבְטָח» — está asegurado)\n\nLa palabra «מוּבְטָח» es legal-contractual: implica una promesa con respaldo. No es probabilidad — es seguridad.\n\nLa práctica: Ashrei se recita hoy en cada una de las tres tefilot (shacharit dos veces, minjá una vez), cumpliendo así la regla de las tres veces.'
+    },
+    'razon-acrostico': {
+      titulo: 'Razón 1 · acróstico alfabético completo',
+      hebreo: 'א · ב · ג · ד … תּ',
+      traduccion: 'Alef · bet · guimel · dalet … tav',
+      explicacion: 'Tehilim 145 está construido como ACRÓSTICO ALFABÉTICO: cada versículo comienza con una letra del alfabeto hebreo, en orden estricto, de la alef a la tav.\n\nEsta estructura formal tiene un significado profundo en la tradición rabínica:\n\n  · El alfabeto es el MATERIAL CRUDO del mundo. Las palabras de la Creación (בְּרֵאשִׁית) están hechas de letras. La Torah misma es una secuencia de letras.\n\n  · Recorrer las 22 letras en alabanza a HKBH es ofrecer TODO LO QUE EXISTE en alabanza. No queda letra sin ofrecer.\n\n  · El acróstico es una técnica de EXHAUSTIVIDAD ritual. Quien recita un acróstico alfabético está, simbólicamente, alabando con todos los recursos del lenguaje.\n\nOtros salmos también son acrósticos (especialmente Tehilim 119, con 8 versículos por cada letra — el acróstico más extenso del Salterio). Pero Tehilim 145 tiene una propiedad que el 119 no tiene: el versículo de providencia («potéach et yadeja»).\n\nEsa COMBINACIÓN de acróstico + providencia es lo que vuelve único a este salmo.'
+    },
+    'razon-providencia': {
+      titulo: 'Razón 2 · la verseta de la providencia',
+      hebreo: 'פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חַי רָצוֹן',
+      traduccion: '«Abres tu mano y sacias el deseo de todo ser viviente» (Tehilim 145:16)',
+      explicacion: 'En el centro del salmo está la verseta de la PARNASÁ (providencia / sustento).\n\n«פּוֹתֵחַ אֶת יָדֶךָ» — «abres tu mano» — es la imagen central del HKBH como proveedor universal. No solo para los justos. No solo para Israel. Para «todo ser viviente» — לְכָל חַי. Animales, plantas, gentiles, todos.\n\nEsta verseta es:\n\n  · UNIVERSAL — no exclusiva de ningún grupo\n  · CONCRETA — la mano divina se abre con materialidad\n  · ACTUAL — es continuamente verdad, no histórica\n  · COMPLETA — sacia el רָצוֹן (deseo, voluntad), no solo el hambre\n\nLa halajá practica esta verseta con extrema seriedad: cuando se recita Ashrei, hay que CONCENTRARSE especialmente en este versículo. Si uno lo recitó sin kavaná (intención), debe volver y repetirlo. Es el único versículo del Ashrei con este peso especial.\n\nLa razón teológica: la providencia es la confianza fundamental del judío. Recitar la verseta sin atención es expresar oralmente lo que internamente no se cree — una contradicción que invalida la halajá del Ashrei.'
+    },
+    'combinacion': {
+      titulo: 'Rav Najman bar Yitzjak · la combinación es única',
+      hebreo: 'אַף עַל פִּי שֶׁיֵּשׁ אַחֵר — אֵין כָּזֶה',
+      traduccion: '«Aunque hay otros [con cada propiedad] — no hay como este [con AMBAS]»',
+      explicacion: 'Rav Najman bar Yitzjak precisa el argumento: ¿no podríamos elegir OTRO salmo con acróstico (como el 119)? ¿O con providencia (como el 136)?\n\nResponde: solo Tehilim 145 tiene AMBAS propiedades:\n\n  · Tehilim 119 — acróstico mucho más extenso (8 versículos por letra) PERO no tiene la verseta de providencia.\n\n  · Tehilim 136 — «הוֹדוּ לַה\' כִּי טוֹב» — recita la providencia con el estribillo «כִּי לְעוֹלָם חַסְדּוֹ» (26 veces) PERO no es acróstico alfabético.\n\n  · Tehilim 145 — el único que COMBINA: acróstico alfabético + verseta explícita de providencia.\n\nLa lección es metodológica: la halajá NO elige al azar entre los salmos. Hay una razón ESTRUCTURAL precisa para que sea este. R. Eliezer ben Avina no inventa una práctica — DESCUBRE en este salmo una combinación única que lo cualifica para su rol.\n\nEsta es una marca del rabinismo: las prácticas litúrgicas tienen razones discernibles. No son arbitrarias. Si entendemos por qué este salmo, entendemos también qué es lo que la recitación pretende lograr: invocar la totalidad del lenguaje + reconocer la providencia universal.'
+    },
+    'enigma-nun': {
+      titulo: 'El enigma · la נ que falta en el acróstico',
+      hebreo: 'הַאַלְפָא בֵּיתָא הַחָסֵר',
+      traduccion: 'El acróstico defectuoso',
+      explicacion: 'Si el salmo es un acróstico completo, debería tener 22 versículos — uno por cada letra del alfabeto. Pero un conteo cuidadoso revela: tiene SOLO 21.\n\nLa letra ausente es la נ. Después del versículo:\n  · מ — «מַלְכוּתְךָ מַלְכוּת כָּל עוֹלָמִים»\nEl siguiente NO comienza con נ. Salta directamente a:\n  · ס — «סוֹמֵךְ ה\' לְכָל הַנֹּפְלִים»\n\nEl problema es agudo: una OMISIÓN deliberada en un acróstico es un acto literario fuerte. No es error escribal — el salmo está canonizado, y la masorá ha preservado la ausencia con celo.\n\nDos preguntas inmediatas:\n\n  1. ¿POR QUÉ omitió David la נ?\n  2. ¿CÓMO se justifica que este salmo, defectuoso en su estructura formal, sea el «pasaporte» al olam ha-ba?\n\nR. Yojanan da una respuesta brillante a la primera. La segunda se responde implícitamente: la imperfección del salmo no es defecto sino MARCA — David eligió la imperfección con propósito.\n\nEsta es la lección teológica más profunda: a veces lo que falta es lo que más significa.'
+    },
+    'r-yojanan-amos': {
+      titulo: 'R. Yojanan explica · la נ de la caída (Amos 5:2)',
+      hebreo: 'מִפְּנֵי שֶׁיֵּשׁ בָּהּ מַפַּלְתָּן שֶׁל שׂוֹנְאֵיהֶם שֶׁל יִשְׂרָאֵל',
+      traduccion: '«Porque hay en ella la caída de Israel» (eufemismo: שונאיהם)',
+      explicacion: 'R. Yojanan resuelve el enigma con un análisis filológico-profético.\n\nLa letra נ corresponde, en el lenguaje profético, a una versta de doom: Amos 5:2 — «נָפְלָה לֹא תוֹסִיף קוּם בְּתוּלַת יִשְׂרָאֵל» («Cayó, no se levantará más, la virgen de Israel»).\n\nEs uno de los versículos más oscuros del Tanaj. Amos profetiza el fin del Reino del Norte (las 10 tribus). El verbo «נָפְלָה» (cayó) y el sustantivo «בְּתוּלַת יִשְׂרָאֵל» (virgen de Israel) componen una imagen de pérdida irrecuperable.\n\nDavid, AL COMPONER su salmo de alabanza, evitó deliberadamente comenzar un versículo con נ. La razón:\n\n  · El alfabeto hebreo está cargado de asociaciones proféticas.\n  · Cada letra evoca, en la conciencia rabínica, los versículos famosos que comienzan con ella.\n  · La נ, en este contexto, está ligada a «נָפְלָה» — la caída.\n  · David, autor del salmo, evita verbalizar — incluso indirectamente — la caída futura de Israel.\n\nEsta es la aplicación práctica de la máxima del diagrama #8: לְעוֹלָם אַל יִפְתַּח אָדָם פִּיו לְשָׂטָן («que nunca abra el hombre su boca al Satán»). David la cumple a nivel ALFABÉTICO. No solo no dice «caída», ni siquiera USA LA LETRA INICIAL que la evoca.\n\nLa omisión es la marca del cuidado profético del rey-poeta.'
+    },
+    'doble-lectura': {
+      titulo: 'La doble lectura · el oeste lee positivo',
+      hebreo: 'בַּמַּעֲרָב מְתָרְצֵי לֵיהּ הָכִי — נָפְלָה לֹא תוֹסִיף לִנְפֹּל עוֹד · קוּם בְּתוּלַת יִשְׂרָאֵל',
+      traduccion: 'En el oeste lo resuelven así: «cayó, no caerá más; levántate, virgen de Israel»',
+      explicacion: 'La guemará añade una sutileza: en el oeste (Eretz Israel), el versículo de Amos 5:2 se lee con PUNTUACIÓN DIFERENTE:\n\nLectura babli (negativa):\n  «נָפְלָה לֹא תוֹסִיף קוּם בְּתוּלַת יִשְׂרָאֵל»\n  → «Cayó, no [volverá a] levantarse, la virgen de Israel»\n\nLectura yerushalmi (positiva):\n  «נָפְלָה — לֹא תוֹסִיף לִנְפֹּל עוֹד · קוּם בְּתוּלַת יִשְׂרָאֵל»\n  → «Cayó — pero no caerá MÁS; ¡levántate, virgen de Israel!»\n\nLa diferencia es DRAMÁTICA: la lectura del oeste convierte el versículo de Amos en una PROMESA DE RESURRECCIÓN, no en una sentencia de muerte. La virgen cayó UNA VEZ — y precisamente por eso ya no caerá más.\n\nPero — y aquí está el detalle decisivo — INCLUSO con la lectura positiva, David omitió la נ. La precaución del rey-poeta operaba al nivel literal del versículo bíblico tal como llegó a sus manos, no al nivel de las interpretaciones futuras.\n\nLa lección metodológica: el cuidado de no «abrir boca al Satán» opera a nivel del TEXTO, no a nivel del COMENTARIO. Aun cuando el texto pueda releerse positivamente, su PUNTUACIÓN POTENCIAL negativa es ya suficiente razón para esquivarlo. La sensibilidad de David es preventiva, no interpretativa.'
+    },
+    'samech-somej': {
+      titulo: 'La samech del sostén · «הַנֹּפְלִים» esconde la נ',
+      hebreo: 'סוֹמֵךְ ה\' לְכָל הַנֹּפְלִים',
+      traduccion: '«Hashem SOSTIENE a todos los que CAEN»',
+      explicacion: 'El detalle midráshico más sutil del diagrama. Aunque David omitió la נ como letra INICIAL de versículo, la palabra «הַנֹּפְלִים» («los que caen») aparece DENTRO del versículo siguiente:\n\n  «סוֹמֵךְ ה\' לְכָל הַנֹּפְלִים» — el versículo de samech (סּ).\n\nLa raíz נפל (caer) ESTÁ presente — pero como letra interna, no como letra inicial. David la escondió.\n\nY el contexto en que aparece es decisivo: HKBH SOSTIENE a los que caen. La caída es nombrada solo en el contexto del SOSTÉN. La palabra «caer» llega siempre acompañada del rescate.\n\nLectura estructural:\n  · La נ de la caída es ESQUIVADA como letra inicial\n  · Pero ENCAJADA dentro de la samech del sostén\n  · El rescate divino LLEGA ANTES que el acto formal de caída\n\nEsto es teología rabínica en estado puro. La caída de Israel es real (David no la niega), pero llega siempre dentro de la red del sostén divino. La estructura misma del salmo lo enseña: la נ EXISTE en el salmo — pero solo como letra interna de la palabra que reconoce el SOSTÉN, no como letra que inicia una verseta independiente de doom.\n\nLa lección es esperanzadora: ni siquiera la caída de Israel queda fuera de la providencia. Israel cae — y HKBH sostiene. Por eso el salmo es un pasaporte al olam ha-ba: contiene la teología completa de la providencia, incluso en su omisión.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · dos vías paralelas al olam ha-ba',
+      hebreo: 'שְׁתֵּי דְּרָכִים מַקְבִּילוֹת',
+      traduccion: 'Dos caminos paralelos',
+      explicacion: 'Los diagramas #10 y #11 forman una DÍADA editorial deliberada:\n\n  · #10 (R. Yojanan, 4b temprano): «¿quién es ben olam ha-ba? — el que junta geulá a tefilá»\n  · #11 (R. Eliezer ben Avina, 4b tardío): «todo el que recita Ashrei tres veces — garantizado ben olam ha-ba»\n\nMisma estructura formal, técnicas distintas:\n\n  | aspecto       | semijá (R. Yojanan) | Ashrei (R. Eliezer)|\n  |---------------|---------------------|--------------------|\n  | tipo          | técnica de orden    | técnica de cantidad|\n  | momento       | en cada tefilá      | tres veces al día  |\n  | foco          | ENTRE brachot       | en una bracha sola |\n  | tema teológico| geulá-presente      | providencia        |\n\nLa lección editorial: el rabinismo NO confía en una sola vía. El olam ha-ba es alcanzable POR MÚLTIPLES TÉCNICAS, todas accesibles, todas precisas.\n\nEsta multiplicación de vías democratiza la salvación. No es un asunto de eliminación («solo X»), sino de proliferación («también Y»). El judío promedio tiene varias herramientas técnicas precisas, todas con la misma promesa.\n\nEl orden en el daf también es significativo. Las dos vías aparecen una tras otra. El editor las quiere PEGADAS — pares de fórmula. Después vendrán otras formulaciones (diagrama #12, etc.). El editor está construyendo una constelación de TÉCNICAS DE SALVACIÓN — un catálogo halájico de cómo alcanzar el olam ha-ba.\n\nLa subversión es notable: en otros sistemas religiosos, la salvación es asunto de pertenencia o de fe abstracta. En el rabinismo de Berajot, es asunto de TÉCNICAS LITÚRGICAS PRECISAS, reproducibles, aprendibles, contables. La doctrina más profunda es accesible POR LA REPETICIÓN ATENTA.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.ashrei-interactivo')
+    : document.querySelector('.ashrei-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#ashrei-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.ashrei-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="ashrei-panel-header">' +
+        '<p class="ashrei-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="ashrei-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="ashrei-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="ashrei-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.ashrei-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.ashrei-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="ashrei-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
