@@ -177,17 +177,42 @@
       "slug": "gobierno-tripartito",
       "orden": 6,
       "titulo": "El gobierno tripartito de David",
-      "subtitulo": "Ajitofel · Sanedrín · Urim ve-Tumim",
+      "subtitulo": "Ajitófel · Sanedrín · Urim ve-Tumim",
       "dapim": [
         "3b",
-        "4a",
-        "7b"
+        "4a"
       ],
       "grupo": "El rey David",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/gobierno-tripartito.html",
+      "sabios": [
+        "rav-yitzjak-bar-adda",
+        "rav-yosef",
+        "r-yitzjak-bar-shmuel-bar-marta"
+      ],
+      "sabios_biblicos": [
+        "david",
+        "ajitofel",
+        "benayahu-ben-yehoyada",
+        "evyatar",
+        "tzadok",
+        "yoav"
+      ],
+      "pesukim": [
+        "divrei-hayamim-i-27-34",
+        "tehilim-119-62",
+        "tehilim-57-9"
+      ],
+      "conceptos": [
+        "sanedrin",
+        "urim-vetumim",
+        "kohen-gadol",
+        "consejo-tripartito"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama anterior estableció que David se despertaba a medianoche\ncon el kinor y estudiaba Torah hasta el alba. La sugyá inmediatamente\npregunta: ¿y qué hacía después? Tan pronto como amanecía, los sabios\nde Israel entraban a verle. Esta es la transición narrativa exacta —\nde la noche íntima de Torah a la gestión pública del reino.\n"
+      }
     },
     {
       "slug": "david-chasid",
@@ -505,6 +530,18 @@
       ]
     },
     {
+      "slug": "rav-yitzjak-bar-adda",
+      "nombre": "Rav Yitzjak Bar Adda"
+    },
+    {
+      "slug": "rav-yosef",
+      "nombre": "Rav Yosef"
+    },
+    {
+      "slug": "r-yitzjak-bar-shmuel-bar-marta",
+      "nombre": "R Yitzjak Bar Shmuel Bar Marta"
+    },
+    {
       "slug": "rav-oshaya",
       "nombre": "Rav Oshaya"
     },
@@ -527,10 +564,6 @@
     {
       "slug": "r-shimon-jasida",
       "nombre": "R Shimon Jasida"
-    },
-    {
-      "slug": "rav-yitzjak-bar-adda",
-      "nombre": "Rav Yitzjak Bar Adda"
     },
     {
       "slug": "tanu-rabanan",
@@ -593,16 +626,20 @@
       "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
     },
     {
+      "slug": "divrei-hayamim-i-27-34",
+      "nombre": "Divrei Hayamim I 27 34"
+    },
+    {
+      "slug": "tehilim-57-9",
+      "nombre": "Tehilim 57 9"
+    },
+    {
       "slug": "tehilim-119-147",
       "nombre": "Tehilim 119 147"
     },
     {
       "slug": "mishlei-7-9",
       "nombre": "Mishlei 7 9"
-    },
-    {
-      "slug": "tehilim-57-9",
-      "nombre": "Tehilim 57 9"
     },
     {
       "slug": "shemot-11-4",
@@ -636,6 +673,22 @@
       "slug": "mazikin",
       "nombre": "Mazikin (demonios)",
       "hebreo": "מַזִּיקִין"
+    },
+    {
+      "slug": "sanedrin",
+      "nombre": "Sanedrin"
+    },
+    {
+      "slug": "urim-vetumim",
+      "nombre": "Urim Vetumim"
+    },
+    {
+      "slug": "kohen-gadol",
+      "nombre": "Kohen Gadol"
+    },
+    {
+      "slug": "consejo-tripartito",
+      "nombre": "Consejo Tripartito"
     },
     {
       "slug": "chatzot",
@@ -748,6 +801,14 @@
       "peso": 3
     },
     {
+      "from": "noche-de-david",
+      "to": "gobierno-tripartito",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama anterior estableció que David se despertaba a medianoche\ncon el kinor y estudiaba Torah hasta el alba. La sugyá inmediatamente\npregunta: ¿y qué hacía después? Tan pronto como amanecía, los sabios\nde Israel entraban a verle. Esta es la transición narrativa exacta —\nde la noche íntima de Torah a la gestión pública del reino.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -804,11 +865,43 @@
       "peso": 1
     },
     {
+      "from": "vigilias-noche",
+      "to": "gobierno-tripartito",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
       "from": "r-yose-ruina",
       "to": "tres-razones-ruina",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "ruina-yerushalayim",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "gobierno-tripartito",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yitzjak-bar-adda",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "gobierno-tripartito",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "gobierno-tripartito",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-57-9",
       "peso": 1
     }
   ]

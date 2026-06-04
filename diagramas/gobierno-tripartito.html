@@ -1,0 +1,325 @@
+<div class="gobierno-interactivo">
+<style>
+  .gobierno-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .gobierno-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .gobierno-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .gobierno-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .gobierno-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .gobierno-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .gobierno-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .gobierno-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .gobierno-diagrama svg { width: 100%; height: auto; display: block; }
+  .gobierno-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .gobierno-nodo:hover rect { stroke-width: 2 !important; }
+  .gobierno-nodo:hover circle { stroke-width: 2.5 !important; }
+  .gobierno-nodo.activa rect { stroke-width: 2.5 !important; }
+  .gobierno-nodo.activa circle { stroke-width: 3 !important; }
+  .gobierno-nodo.dim { opacity: 0.32; }
+  .gobierno-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .gobierno-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .gobierno-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .gobierno-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .gobierno-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .gobierno-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .gobierno-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="gobierno-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>versículo · base</span>
+  <span><span class="swatch azul"></span>1. consejo político</span>
+  <span><span class="swatch verde"></span>2. Sanedrín halájico</span>
+  <span><span class="swatch dorado"></span>3. Urim ve-Tumim</span>
+  <span><span class="swatch rojo"></span>4. ejecución militar</span>
+</div>
+
+<div class="gobierno-diagrama">
+<svg viewBox="0 0 720 980" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 3b–4a: El gobierno tripartito de David · el protocolo de consulta antes de la guerra</title>
+
+<defs>
+  <marker id="flecha-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-g-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El gobierno tripartito de David</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 3b–4a · אֲחִיתֹפֶל · סַנְהֶדְרִין · אוּרִים וְתֻמִּים · יוֹאָב</text>
+
+<!-- ============================================================ -->
+<!-- ESCENA INICIAL — los sabios entran al rey al amanecer        -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA · AL AMANECER ENTRAN LOS SABIOS · 4A</text>
+
+<g class="gobierno-nodo" data-id="escena-amanecer">
+  <rect x="60" y="86" width="600" height="80" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.2"/>
+  <text x="78" y="108" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Tan pronto despuntaba el alba, los sabios de Israel entraban a verle</text>
+  <text x="78" y="127" font-size="10" direction="ltr" fill="#3d2f23">«אֲדֹנֵנוּ הַמֶּלֶךְ עַמְּךָ יִשְׂרָאֵל צְרִיכִין פַּרְנָסָה»</text>
+  <text x="78" y="145" font-size="9.5" fill="#3d2f23" font-style="italic">«Nuestro señor el rey: tu pueblo Israel necesita sustento»</text>
+  <text x="78" y="160" font-size="9" fill="#6b4423" font-style="italic">David: «vayan y extiendan las manos en la tropa» — disparador del protocolo bélico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL VERSÍCULO BASE — Divrei HaYamim I 27:34                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="166" x2="360" y2="184" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-g)"/>
+
+<text x="60" y="194" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VERSÍCULO BASE · DIVREI HA-YAMIM I 27:34</text>
+
+<g class="gobierno-nodo" data-id="verso-base">
+  <rect x="60" y="204" width="600" height="100" rx="6" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="228" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">וְאַחֲרֵי אֲחִיתֹפֶל יְהוֹיָדָע בֶּן בְּנָיָהוּ וְאֶבְיָתָר</text>
+  <text x="360" y="246" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">וְשַׂר־צָבָא לַמֶּלֶךְ יוֹאָב</text>
+  <text x="360" y="268" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Y después de Ajitófel: Yehoyada hijo de Benayahu, y Evyatar;</text>
+  <text x="360" y="282" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">y el general del ejército del rey: Yoav.»</text>
+  <text x="360" y="298" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">La guemará lee este versículo como las CUATRO ESTACIONES del consejo real</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- KEY INSIGHT — Inversión chiástica                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="304" x2="360" y2="322" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#flecha-g-gold)"/>
+
+<g class="gobierno-nodo" data-id="inversion">
+  <rect x="60" y="326" width="600" height="62" rx="5" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="78" y="348" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Inversión chiástica · Rav Yitzjak bar Adda</text>
+  <text x="682" y="348" text-anchor="end" font-size="11" direction="rtl" fill="#b8860b">יְהוֹיָדָע בֶּן בְּנָיָהוּ ↔ בְּנָיָהוּ בֶּן יְהוֹיָדָע</text>
+  <text x="78" y="368" font-size="9.5" fill="#3d2f23">El versículo invierte el orden patronímico real: lectura midráshica del Sanedrín</text>
+  <text x="78" y="382" font-size="9" fill="#6b4423" font-style="italic">la inversión señala que «Yehoyada hijo de Benayahu» = código de la institución, no figura única</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS CUATRO PASOS — diagrama de flujo vertical                -->
+<!-- ============================================================ -->
+<text x="360" y="416" text-anchor="middle" font-size="11" fill="#3d2f23" font-family="'JetBrains Mono', monospace" letter-spacing="2">EL PROTOCOLO DE CUATRO ESTACIONES</text>
+
+<!-- Línea vertical conectora -->
+<line x1="360" y1="430" x2="360" y2="900" stroke="#6b4423" stroke-width="1" stroke-dasharray="2,3" opacity="0.4"/>
+
+<!-- ============================================================ -->
+<!-- PASO 1 — Ajitófel (consejero político)                       -->
+<!-- ============================================================ -->
+<g class="gobierno-nodo" data-id="ajitofel">
+  <!-- Número circular -->
+  <circle cx="105" cy="470" r="22" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2"/>
+  <text x="105" y="476" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">I</text>
+  <!-- Box -->
+  <rect x="142" y="440" width="518" height="78" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="160" y="462" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">Ajitófel · יוֹעֵץ · el consejero político</text>
+  <text x="642" y="462" text-anchor="end" font-size="12" direction="rtl" fill="#1e3a5f">אֲחִיתֹפֶל</text>
+  <text x="160" y="482" font-size="10" fill="#3d2f23">Evalúa la sabiduría humana del plan: estrategia, logística, oportunidad</text>
+  <text x="160" y="500" font-size="9.5" fill="#6b4423" font-style="italic">«עֲצַת אֲחִיתֹפֶל כַּאֲשֶׁר יִשְׁאַל אִישׁ בִּדְבַר הָאֱלֹהִים» (Sh. II 16:23)</text>
+  <text x="160" y="514" font-size="9" fill="#6b4423">su consejo era «como si uno consultara la palabra de Dios»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PASO 2 — Sanedrín                                            -->
+<!-- ============================================================ -->
+<g class="gobierno-nodo" data-id="sanedrin">
+  <circle cx="105" cy="570" r="22" fill="rgba(30,107,90,0.18)" stroke="#2d6b4e" stroke-width="2"/>
+  <text x="105" y="576" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">II</text>
+  <rect x="142" y="540" width="518" height="78" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="160" y="562" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">Sanedrín · בֵּנָיָהוּ בֶּן יְהוֹיָדָע · aprobación halájica</text>
+  <text x="642" y="562" text-anchor="end" font-size="12" direction="rtl" fill="#2d6b4e">סַנְהֶדְרִין</text>
+  <text x="160" y="582" font-size="10" fill="#3d2f23">El tribunal de 71 evalúa la legalidad halájica del plan</text>
+  <text x="160" y="600" font-size="9.5" fill="#6b4423" font-style="italic">Benayahu ben Yehoyada presidía el Sanedrín — kohen + sabio</text>
+  <text x="160" y="614" font-size="9" fill="#6b4423">filtro de Tora: ¿es esta una guerra permitida (רשות)?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PASO 3 — Urim ve-Tumim                                       -->
+<!-- ============================================================ -->
+<g class="gobierno-nodo" data-id="urim-tumim">
+  <circle cx="105" cy="670" r="22" fill="rgba(184,134,11,0.22)" stroke="#b8860b" stroke-width="2"/>
+  <text x="105" y="676" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">III</text>
+  <rect x="142" y="640" width="518" height="78" rx="5" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="160" y="662" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Urim ve-Tumim · אֶבְיָתָר · consulta oracular</text>
+  <text x="642" y="662" text-anchor="end" font-size="12" direction="rtl" fill="#b8860b">אוּרִים וְתֻמִּים</text>
+  <text x="160" y="682" font-size="10" fill="#3d2f23">El kohen gadol Evyatar (o Tzadok) consulta el pectoral de las 12 piedras</text>
+  <text x="160" y="700" font-size="9.5" fill="#6b4423" font-style="italic">Las letras iluminadas en el jóshen revelan la voluntad divina</text>
+  <text x="160" y="714" font-size="9" fill="#6b4423">filtro profético — el último «¿quiere HKBH esta guerra?»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PASO 4 — Yoav (ejecución militar)                            -->
+<!-- ============================================================ -->
+<g class="gobierno-nodo" data-id="yoav">
+  <circle cx="105" cy="770" r="22" fill="rgba(139,26,26,0.18)" stroke="#8b1a1a" stroke-width="2"/>
+  <text x="105" y="776" text-anchor="middle" font-size="16" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">IV</text>
+  <rect x="142" y="740" width="518" height="78" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="160" y="762" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">Yoav · שַׂר־צָבָא · ejecución militar</text>
+  <text x="642" y="762" text-anchor="end" font-size="12" direction="rtl" fill="#8b1a1a">יוֹאָב</text>
+  <text x="160" y="782" font-size="10" fill="#3d2f23">El general en jefe — solo ejecuta una vez aprobados los tres filtros</text>
+  <text x="160" y="800" font-size="9.5" fill="#6b4423" font-style="italic">«שַׂר־צָבָא לַמֶּלֶךְ» — al final del versículo, al final de la cadena</text>
+  <text x="160" y="814" font-size="9" fill="#6b4423">su nombre cierra el versículo como cierra el proceso</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="818" x2="360" y2="838" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-g)"/>
+
+<text x="60" y="850" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA TRIPARTICIÓN DEL PODER</text>
+
+<g class="gobierno-nodo" data-id="doctrina">
+  <rect x="60" y="860" width="600" height="100" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="884" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El gobierno davídico no era monocrático</text>
+  <text x="160" y="908" font-size="9.5" fill="#1e3a5f" font-weight="600">SABIDURÍA</text>
+  <text x="360" y="908" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">HALAJÁ</text>
+  <text x="560" y="908" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="600">PROFECÍA</text>
+  <text x="160" y="924" font-size="9" fill="#3d2f23" font-style="italic">consejo político</text>
+  <text x="360" y="924" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">tribunal de Tora</text>
+  <text x="560" y="924" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">kohen + oráculo</text>
+  <text x="360" y="950" text-anchor="middle" font-size="9.5" fill="#6b4423">Modelo halájico para מִלְחֶמֶת הָרְשׁוּת (guerra opcional) · Mishné Torá Hil. Melajim 5:2</text>
+</g>
+
+</svg>
+</div>
+
+<div class="gobierno-panel" id="gobierno-panel">
+  <p class="gobierno-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'escena-amanecer': {
+      titulo: 'La escena: los sabios entran al rey al amanecer',
+      hebreo: 'אֲדֹנֵנוּ הַמֶּלֶךְ עַמְּךָ יִשְׂרָאֵל צְרִיכִין פַּרְנָסָה',
+      traduccion: '«Nuestro señor el rey: tu pueblo Israel necesita sustento»',
+      explicacion: 'La sugyá continúa exactamente desde el diagrama anterior: David ha estudiado Torah toda la noche con la ayuda del kinor. Al despuntar el alba, los sabios de Israel entran a su cámara con una preocupación práctica — el pueblo necesita parnasá (sustento económico).\n\nDavid responde sucesivamente: «sustentense unos a otros». Ellos: «un puñado no satisface al león». David: «vayan y extiendan las manos en la tropa» — esto es, salgan a la guerra (de territorio o botín).\n\nEste es el momento bisagra: del estudio nocturno se pasa a la gestión bélica diurna. Y la guemará detalla aquí el protocolo que David seguía antes de cualquier decisión militar.'
+    },
+    'verso-base': {
+      titulo: 'Divrei HaYamim I 27:34 — el versículo del protocolo',
+      hebreo: 'וְאַחֲרֵי אֲחִיתֹפֶל יְהוֹיָדָע בֶּן בְּנָיָהוּ וְאֶבְיָתָר וְשַׂר־צָבָא לַמֶּלֶךְ יוֹאָב',
+      traduccion: '«Y después de Ajitófel: Yehoyada hijo de Benayahu, y Evyatar; y el general del ejército del rey: Yoav»',
+      explicacion: 'El versículo aparece en la lista de oficiales del rey David al final de Divrei HaYamim I. A primera vista es un censo administrativo, pero la guemará lee en su SECUENCIA («y después de…», «y después…») un PROTOCOLO ordinal: la cadena exacta de consulta que David seguía.\n\nLa lectura es notable porque transforma cuatro NOMBRES PROPIOS en cuatro INSTITUCIONES:\n\n  · Ajitófel → consejo político\n  · Yehoyada/Benayahu → Sanedrín\n  · Evyatar → Urim ve-Tumim\n  · Yoav → ejército\n\nEste es el método midráshico clásico: descubrir doctrina constitucional en una lista aparentemente burocrática.'
+    },
+    'inversion': {
+      titulo: 'La inversión chiástica: ¿Yehoyada ben Benayahu o Benayahu ben Yehoyada?',
+      hebreo: 'יְהוֹיָדָע בֶּן בְּנָיָהוּ ↔ בְּנָיָהוּ בֶּן יְהוֹיָדָע',
+      traduccion: 'En todo el resto del Tanaj: «Benayahu hijo de Yehoyada» — aquí está invertido',
+      explicacion: 'Rav Yitzjak bar Adda nota una anomalía textual decisiva: en todos los demás versículos donde aparece este personaje (II Sh 8:18, 20:23; Melajim I 1:8 etc.), se llama «בְּנָיָהוּ בֶּן יְהוֹיָדָע» (Benayahu hijo de Yehoyada).\n\nAquí, en Divrei HaYamim I 27:34, el orden patronímico se INVIERTE: «יְהוֹיָדָע בֶּן בְּנָיָהוּ» (Yehoyada hijo de Benayahu).\n\nLa lectura midráshica: la inversión no es un error escribal — es una CLAVE. Señala que aquí «Yehoyada hijo de Benayahu» no es un nombre individual, sino el código de una INSTITUCIÓN: el Sanedrín. Tanto Benayahu como Yehoyada son nombres asociados al sacerdocio y al consejo de sabios. La inversión convierte al individuo en función.\n\nEs un ejemplo clásico del principio: cuando el texto bíblico se aparta de su patrón, está hablando midráshicamente.'
+    },
+    'ajitofel': {
+      titulo: 'I · Ajitófel — el consejo político',
+      hebreo: 'אֲחִיתֹפֶל · יוֹעֵץ',
+      traduccion: 'Ajitófel — «el consejero»',
+      explicacion: 'La PRIMERA estación del protocolo: el consejo político-estratégico.\n\nAjitófel era el consejero supremo de David. La calidad de su consejo era proverbial: el versículo en Shmuel II 16:23 dice que su consejo «era como si uno consultara la palabra de Dios». Esa hipérbole describe la cumbre humana de la sabiduría estratégica.\n\nDavid empezaba el proceso aquí: ¿es militarmente sabio? ¿logísticamente factible? ¿políticamente oportuno? Este filtro NO era halájico ni profético — era pura razón práctica humana.\n\nNotablemente, Ajitófel después traicionó a David al unirse a Avshalom (Shmuel II 15-17), lo que añade una capa trágica a su rol como «primer consultor» del rey: la sabiduría humana es necesaria pero NO suficiente.'
+    },
+    'sanedrin': {
+      titulo: 'II · Sanedrín — la aprobación halájica',
+      hebreo: 'סַנְהֶדְרִין · בֵּנָיָהוּ בֶּן יְהוֹיָדָע',
+      traduccion: 'Sanedrín, presidido por Benayahu ben Yehoyada',
+      explicacion: 'La SEGUNDA estación: el tribunal halájico de 71 sabios.\n\nUna vez Ajitófel proponía un plan, David no actuaba directamente — lo llevaba al Sanedrín. La inversión chiástica del versículo señala precisamente esto: «Yehoyada ben Benayahu» = no la persona, sino el TRIBUNAL que presidía.\n\nEl filtro era halájico estricto:\n• ¿Es esta una guerra permitida (מלחמת רשות)?\n• ¿El motivo es legítimo según Tora?\n• ¿El número de combatientes está dentro de lo halájicamente requerido?\n• ¿Se cumplen las exenciones de Devarim 20 (recién casados, plantadores de viñedo, miedosos)?\n\nDavid SE SOMETÍA al Sanedrín. Aunque era rey, no podía declarar guerra opcional sin su aprobación. Este sometimiento del monarca a la corte rabínica es el pilar de la doctrina rabínica del poder.'
+    },
+    'urim-tumim': {
+      titulo: 'III · Urim ve-Tumim — la consulta oracular',
+      hebreo: 'אוּרִים וְתֻמִּים · אֶבְיָתָר הַכֹּהֵן',
+      traduccion: 'Urim ve-Tumim, consultados por Evyatar el kohen',
+      explicacion: 'La TERCERA estación: el oráculo del jóshen mishpat (pectoral del kohen gadol).\n\nLos Urim ve-Tumim eran una piedra (o conjunto de piedras) colocada en el pectoral del sumo sacerdote. Las 12 piedras tenían grabadas las iniciales de las tribus. Cuando se hacía una pregunta sí/no al rey o al tribunal, las letras se ILUMINABAN en secuencia para deletrear la respuesta divina.\n\nEvyatar (o Tzadok) era el kohen gadol que David consultaba. Solo el rey, el av bet din y un agente de la comunidad podían pedir esta consulta.\n\nNotablemente: este era el ÚLTIMO filtro antes del combate. Aunque el plan fuera militarmente brillante (Ajitófel) y halájicamente correcto (Sanedrín), si los Urim ve-Tumim daban señal negativa, la guerra se cancelaba. Era la voz directa de la voluntad divina sobre el evento concreto.\n\nEsta institución cesó al finales del Segundo Templo según muchas opiniones — por eso el protocolo davídico tiene un carácter histórico irrepetible.'
+    },
+    'yoav': {
+      titulo: 'IV · Yoav — la ejecución militar',
+      hebreo: 'שַׂר־צָבָא לַמֶּלֶךְ יוֹאָב',
+      traduccion: '«El general del ejército del rey: Yoav»',
+      explicacion: 'La CUARTA y última estación: la ejecución.\n\nYoav era el sobrino de David y el comandante en jefe del ejército. Una vez los tres filtros (Ajitófel · Sanedrín · Urim ve-Tumim) aprobaban, Yoav recibía la orden de ejecutar.\n\nObsérvese que el versículo lo coloca AL FINAL: «וְשַׂר־צָבָא לַמֶּלֶךְ יוֹאָב». La guemará lee esta posición como significativa: el general NO inicia el proceso ni participa de la deliberación — solo recibe la orden ya validada por los tres filtros previos.\n\nEsta es una doctrina constitucional importante: la separación entre QUIEN DECIDE la guerra (rey + 3 instituciones) y QUIEN LA EJECUTA (general). El general no era miembro del consejo — su rol era puramente operativo.\n\nLa estructura «cierra el versículo como cierra el proceso» — el orden literario del texto refleja la jerarquía institucional.'
+    },
+    'doctrina': {
+      titulo: 'La doctrina meta: tres filtros antes de la espada',
+      hebreo: 'מִלְחֶמֶת הָרְשׁוּת — שָׁלוֹשׁ מְסַנְנוֹת',
+      traduccion: 'Guerra opcional — tres filtros',
+      explicacion: 'El protocolo davídico se convierte en el MODELO HALÁJICO para la guerra opcional (מלחמת הרשות) en futuras codificaciones.\n\nMaimónides codifica este principio en Mishné Torá, Hiljot Melajim 5:2:\n\n«El rey no sale a guerra opcional excepto por el dictamen del tribunal de 71».\n\nNote la triple validación:\n\n  • SABIDURÍA HUMANA (Ajitófel) — el plan tiene que ser inteligente\n  • LEGALIDAD HALÁJICA (Sanedrín) — el plan tiene que ser justo\n  • VOLUNTAD DIVINA (Urim ve-Tumim) — el plan tiene que ser querido\n\nNinguno de los tres es suficiente por sí solo. Un plan inteligente puede ser injusto. Un plan halájicamente permitido puede no ser deseado por Dios. Un plan profético sin sabiduría humana es peligroso.\n\nEsta tripartición es el legado constitucional más duradero del reinado de David según la lectura talmúdica: la convicción de que el poder político NO debe ser monolítico, y que la guerra — el acto más grave del estado — requiere el consenso de tres autoridades independientes.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.gobierno-interactivo')
+    : document.querySelector('.gobierno-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#gobierno-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.gobierno-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="gobierno-panel-header">' +
+        '<p class="gobierno-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="gobierno-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="gobierno-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="gobierno-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.gobierno-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.gobierno-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="gobierno-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
