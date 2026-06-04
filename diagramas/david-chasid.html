@@ -1,0 +1,341 @@
+<div class="chasid-interactivo">
+<style>
+  .chasid-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .chasid-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .chasid-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .chasid-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .chasid-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .chasid-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .chasid-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .chasid-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .chasid-diagrama svg { width: 100%; height: auto; display: block; }
+  .chasid-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .chasid-nodo:hover rect { stroke-width: 2 !important; }
+  .chasid-nodo.activa rect { stroke-width: 2.5 !important; }
+  .chasid-nodo.dim { opacity: 0.32; }
+  .chasid-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .chasid-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .chasid-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .chasid-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .chasid-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .chasid-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .chasid-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="chasid-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>versículo · pregunta</span>
+  <span><span class="swatch azul"></span>1ª lectura · el madrugador</span>
+  <span><span class="swatch rojo"></span>2ª lectura · manos manchadas</span>
+  <span><span class="swatch verde"></span>Mefivoshet · maestro</span>
+  <span><span class="swatch sepia"></span>doctrina</span>
+</div>
+
+<div class="chasid-diagrama">
+<svg viewBox="0 0 720 980" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4a: David se llama chasid · dos defensas · el madrugador y las manos manchadas</title>
+
+<defs>
+  <marker id="flecha-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-c-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">David chasid · dos lecturas</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4a · «¿cómo puede un rey llamarse chasid?» · el madrugador y las manos manchadas</text>
+
+<!-- ============================================================ -->
+<!-- VERSÍCULO + PREGUNTA                                         -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL DETONANTE · TEHILIM 86:2</text>
+
+<g class="chasid-nodo" data-id="verso">
+  <rect x="60" y="86" width="600" height="76" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="112" text-anchor="middle" font-size="14" direction="rtl" fill="#1a1410">שָׁמְרָה נַפְשִׁי כִּי חָסִיד אָנִי</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Guarda mi alma, porque soy un chasid» — Tehilim 86:2</text>
+  <text x="360" y="151" text-anchor="middle" font-size="9.5" fill="#6b4423">David se aplica a sí mismo el título de חָסִיד — pero ¿con qué derecho?</text>
+</g>
+
+<!-- Pregunta -->
+<line x1="360" y1="162" x2="360" y2="178" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#flecha-c-gold)"/>
+
+<g class="chasid-nodo" data-id="pregunta">
+  <rect x="115" y="182" width="490" height="48" rx="5" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="360" y="204" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">¿Cómo puede David — un REY — llamarse a sí mismo chasid?</text>
+  <text x="360" y="222" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">El título es propio de hombres humildes · no de monarcas en su gloria</text>
+</g>
+
+<!-- División en dos lecturas -->
+<line x1="360" y1="230" x2="360" y2="248" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="248" x2="540" y2="248" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="248" x2="180" y2="266" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+<line x1="540" y1="248" x2="540" y2="266" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+
+<text x="180" y="262" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">PRIMERA DEFENSA</text>
+<text x="540" y="262" text-anchor="middle" font-size="9" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">SEGUNDA DEFENSA</text>
+
+<!-- ============================================================ -->
+<!-- COLUMNA IZQUIERDA · EL MADRUGADOR                            -->
+<!-- ============================================================ -->
+<g class="chasid-nodo" data-id="reyes-paganos">
+  <rect x="50" y="272" width="260" height="92" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="180" y="292" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">Los reyes paganos</text>
+  <text x="180" y="312" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">מַלְכֵי מִזְרָח וּמַעֲרָב</text>
+  <text x="60" y="332" font-size="9.5" fill="#3d2f23" font-style="italic">«reyes de Oriente y Occidente»</text>
+  <text x="60" y="348" font-size="9.5" fill="#3d2f23">se sientan en grupos en su gloria</text>
+  <text x="60" y="362" font-size="9" fill="#6b4423" font-style="italic">duermen hasta la tercera hora · vida de pompa</text>
+</g>
+
+<g class="chasid-nodo" data-id="david-madruga">
+  <rect x="50" y="378" width="260" height="92" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="180" y="398" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">David — el rey madrugador</text>
+  <text x="180" y="418" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">חֲצוֹת לַיְלָה אָקוּם</text>
+  <text x="60" y="438" font-size="9.5" fill="#3d2f23" font-style="italic">«a medianoche me levanto» (119:62)</text>
+  <text x="60" y="454" font-size="9.5" fill="#3d2f23">se levanta a chatzot — Torah · oración</text>
+  <text x="60" y="468" font-size="9" fill="#6b4423" font-style="italic">conexión con [[noche-de-david]] · el kinor</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- COLUMNA DERECHA · LAS MANOS MANCHADAS                        -->
+<!-- ============================================================ -->
+<g class="chasid-nodo" data-id="manos-manchadas">
+  <rect x="410" y="272" width="260" height="92" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="540" y="292" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">David — las manos manchadas</text>
+  <text x="540" y="312" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">יָדַי מְלוּכְלָכוֹת בְּדָם</text>
+  <text x="420" y="332" font-size="9.5" fill="#3d2f23" font-style="italic">«mis manos están manchadas de sangre»</text>
+  <text x="420" y="348" font-size="9.5" fill="#3d2f23">examina muestras de niddah</text>
+  <text x="420" y="362" font-size="9" fill="#6b4423" font-style="italic">— para declarar pura a la mujer ante su marido —</text>
+</g>
+
+<g class="chasid-nodo" data-id="shafir-shilya">
+  <rect x="410" y="378" width="260" height="92" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="540" y="398" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">El triple examen</text>
+  <text x="540" y="418" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">שָׁפִיר · שִׁלְיָה · דָּם</text>
+  <text x="420" y="438" font-size="9.5" fill="#3d2f23" font-style="italic">feto inviable · placenta · sangre</text>
+  <text x="420" y="454" font-size="9.5" fill="#3d2f23">distingue tipos para resolver tum'á / tahará</text>
+  <text x="420" y="468" font-size="9" fill="#6b4423" font-style="italic">trabajo halájico íntimo · sin pompa</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CONVERGENCIA — EL ANTI-REY                                   -->
+<!-- ============================================================ -->
+<line x1="180" y1="470" x2="180" y2="490" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+<line x1="540" y1="470" x2="540" y2="490" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+<line x1="180" y1="498" x2="540" y2="498" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="498" x2="360" y2="514" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+
+<g class="chasid-nodo" data-id="anti-rey">
+  <rect x="60" y="518" width="600" height="60" rx="5" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="540" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El anti-rey · la inversión de la realeza</text>
+  <text x="360" y="560" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">los otros reyes — pompa nocturna · descanso prolongado · ministros que ejecutan</text>
+  <text x="360" y="574" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">David — Tora nocturna · sangre en las manos · pregunta antes de juzgar</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MEFIVOSHET                                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="578" x2="360" y2="598" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-c)"/>
+
+<text x="60" y="610" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MEFIVOSHET · EL MAESTRO QUE AVERGÜENZA</text>
+
+<g class="chasid-nodo" data-id="mefivoshet-pregunta">
+  <rect x="60" y="620" width="600" height="100" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="78" y="642" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">David al maestro Mefivoshet (Berajot 4a)</text>
+  <text x="642" y="642" text-anchor="end" font-size="11" direction="rtl" fill="#2d6b4e">מְפִיבֹשֶׁת רַבִּי</text>
+  <text x="78" y="664" font-size="10" fill="#3d2f23" font-style="italic">«Mefivoshet, maestro mío:</text>
+  <text x="78" y="680" font-size="10" fill="#3d2f23" font-style="italic">¿juzgué bien? ¿condené bien? ¿declaré puro bien? ¿declaré impuro bien?»</text>
+  <text x="78" y="700" font-size="10" direction="ltr" fill="#1a1410">וְלֹא בּוֹשְׁתִּי — «y no me avergoncé»</text>
+  <text x="78" y="715" font-size="9" fill="#6b4423" font-style="italic">el rey de Israel verificaba cada dictamen halájico con su maestro</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- R. YEHOSHUA BEN LEVI · EL NOMBRE                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="720" x2="360" y2="740" stroke="#2d6b4e" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#flecha-c)"/>
+
+<g class="chasid-nodo" data-id="rylevi-nombre">
+  <rect x="60" y="744" width="600" height="100" rx="5" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="78" y="766" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="600">R. Yehoshua ben Levi · el origen del nombre</text>
+  <text x="78" y="788" font-size="10.5" direction="ltr" fill="#1a1410">¿Mefivoshet? Su nombre real era אִישׁ־בֹּשֶׁת.</text>
+  <text x="360" y="808" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e">מְפִיבֹשֶׁת = מֵפִי בֹשֶׁת</text>
+  <text x="360" y="824" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«de [su] boca · vergüenza» — el que avergüenza por la boca</text>
+  <text x="360" y="838" text-anchor="middle" font-size="9.5" fill="#6b4423">corregía a David en halajá sin temor al rango real</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="844" x2="360" y2="864" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-c)"/>
+
+<text x="60" y="876" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · ¿QUÉ ES UN CHASID?</text>
+
+<g class="chasid-nodo" data-id="doctrina">
+  <rect x="60" y="884" width="600" height="80" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="906" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">«Chasid» davídico = el que se humilla ante la halajá</text>
+  <text x="360" y="926" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">no es piedad romántica · es disposición concreta de servir y de ser corregido</text>
+  <text x="360" y="944" text-anchor="middle" font-size="9.5" fill="#6b4423">(1) mancharse en el ministerio · (2) someterse al maestro · (3) no avergonzarse de revisar</text>
+  <text x="360" y="958" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el «chasid» NO es el que no se equivoca — es el que verifica para no errar</text>
+</g>
+
+</svg>
+</div>
+
+<div class="chasid-panel" id="chasid-panel">
+  <p class="chasid-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'verso': {
+      titulo: 'Tehilim 86:2 — David se llama chasid',
+      hebreo: 'שָׁמְרָה נַפְשִׁי כִּי חָסִיד אָנִי',
+      traduccion: '«Guarda mi alma, porque soy un chasid»',
+      explicacion: 'El versículo es una oración personal de David. La autodescripción es osada: el rey se aplica el título חָסִיד.\n\nEn el vocabulario rabínico, «chasid» designa al hombre que va MÁS ALLÁ del estricto deber halájico — el que sirve a HKBH con un margen de generosidad espiritual. Es uno de los títulos más altos.\n\nPero ¿puede un rey reclamarlo? El monarca por definición ocupa el centro del aparato del poder y la pompa. La etiqueta «chasid» parece reservada para hombres humildes — y la guemará pregunta exactamente eso.'
+    },
+    'pregunta': {
+      titulo: 'La pregunta talmúdica: ¿cómo puede un rey llamarse chasid?',
+      hebreo: 'הֵיכִי קָרֵי לְנַפְשֵׁיהּ חָסִיד?',
+      traduccion: '¿Cómo se atreve David a llamarse chasid?',
+      explicacion: 'La pregunta es retórica pero seria. El stam (anonymo redactor) sospecha de la autodescripción real.\n\nLa lógica: el chasid es paradigmáticamente un hombre como Hilel — humilde, pobre, que vive en el margen y se dedica enteramente al espíritu. El rey, por contraste, posee, manda, ejecuta. ¿Cómo coinciden las dos figuras?\n\nLa guemará no rechaza la autodescripción de David — la JUSTIFICA mediante dos defensas. Y la doctrina que emerge es importantísima: ser chasid no es un asunto de POSICIÓN SOCIAL sino de DISPOSICIÓN INTERIOR. Un rey puede ser chasid si se conduce como uno. Y David se conduce como uno.'
+    },
+    'reyes-paganos': {
+      titulo: 'Los reyes paganos: pompa nocturna',
+      hebreo: 'מַלְכֵי מִזְרָח וּמַעֲרָב יוֹשְׁבִים אֲגוּדוֹת אֲגוּדוֹת בִּכְבוֹדָם',
+      traduccion: '«Los reyes de Oriente y Occidente se sientan en grupos en su gloria»',
+      explicacion: 'David define su propio rol por contraste explícito con los demás monarcas del mundo.\n\nLa imagen es vívida: los reyes paganos viven en CORTE. Se rodean de ministros, comen con séquito, duermen en horarios de privilegio (hasta la tercera hora de la mañana según el midrash). Su jornada es ceremonia.\n\nEsta descripción NO es solo etnográfica — es teológica. La estructura de la realeza pagana es la pompa: el poder se manifiesta en la apariencia, el lujo y el ocio. La presencia visible del rey ES su poder.\n\nDavid, en cambio, redefine la realeza: el rey verdadero no se manifiesta en pompa sino en SERVICIO.'
+    },
+    'david-madruga': {
+      titulo: 'David — el rey madrugador',
+      hebreo: 'חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לָךְ',
+      traduccion: '«A medianoche me levanto para darte gracias» (Tehilim 119:62)',
+      explicacion: 'La primera defensa de David contra la objeción «¿cómo puede un rey llamarse chasid?»:\n\nMientras los demás reyes duermen hasta tarde, yo me levanto a CHATZOT — la medianoche exacta. Esta conexión con el diagrama anterior es decisiva: el kinor sobre la cama, el viento del norte que toca las cuerdas, David despertando para estudiar Torah hasta el alba.\n\nLa horaria es la prueba: el rey-chasid NO es el que se exhibe ante el pueblo de día, sino el que ora y estudia mientras todos duermen. La vida interior es invisible — y precisamente por invisible es la marca verdadera del chasid.\n\nEste es el argumento NOCTURNO de la chesed davídica: lo que ocurre cuando nadie ve.'
+    },
+    'manos-manchadas': {
+      titulo: 'David — las manos manchadas de sangre',
+      hebreo: 'יָדַי מְלוּכְלָכוֹת בְּדָם · לְטַהֵר אִשָּׁה לְבַעְלָהּ',
+      traduccion: '«Mis manos están manchadas de sangre — para declarar pura a una mujer ante su marido»',
+      explicacion: 'La segunda defensa, ahora DIURNA: el ministerio halájico real.\n\nLas mujeres del pueblo venían a David con consultas de pureza ritual: ¿es esta mancha de sangre niddah que la separa de su marido? ¿es de aborto? ¿de menstruación? ¿de qué clase?\n\nDavid no las despachaba a un escriba. Él MISMO examinaba las muestras, manchándose las manos en el proceso. Y emitía un veredicto: «pura para su marido» o «debe esperar».\n\nObsérvese la inversión simbólica: los demás reyes tienen MANOS LIMPIAS y vidas LLENAS de sangre (guerra, ejecución, venganza). David tiene MANOS MANCHADAS y vida llena de RESTAURACIÓN MARITAL — devolver a las mujeres a sus maridos por dictamen halájico.\n\nLa sangre en las manos del rey-chasid es sangre que UNE, no que separa.'
+    },
+    'shafir-shilya': {
+      titulo: 'El triple examen: shafir · shilya · dam',
+      hebreo: 'שָׁפִיר · שִׁלְיָה · דָּם',
+      traduccion: 'Feto inviable · placenta · sangre',
+      explicacion: 'David distinguía con precisión halájica entre tres categorías de productos uterinos:\n\n  • שָׁפִיר — el saco fetal (feto en estado muy temprano); ciertas formas implican tum\'á de niddah, otras de leda (parto).\n\n  • שִׁלְיָה — la placenta; tiene leyes propias de tum\'á del cuerpo materno.\n\n  • דָּם — la sangre uterina; categorías separadas según color y origen.\n\nCada categoría tenía consecuencias halájicas diferentes para el estado de la mujer (pura, impura, días de espera). Confundir una con otra significaba imponer cargas innecesarias o, al revés, permitir lo prohibido.\n\nEste es el contenido del «manos manchadas»: no es una metáfora — David realmente realizaba la examinación material de muestras. El rey trabajaba como un dayán de niddah.'
+    },
+    'anti-rey': {
+      titulo: 'El anti-rey: la inversión de la realeza',
+      hebreo: 'הֲפָכָה שֶׁל הַמַּלְכוּת',
+      traduccion: 'La inversión de la realeza',
+      explicacion: 'La doble defensa de David revela un patrón coherente: David es el ANTI-REY.\n\nSi la realeza pagana es:\n  · pompa nocturna · banquete · gloria pública\n  · descanso prolongado · sueño hasta tarde\n  · ministros que ejecutan · el rey nunca se ensucia\n\nLa realeza davídica es:\n  · Torah nocturna · estudio en soledad · invisible\n  · medianoche · vigilia\n  · examinación directa · sangre en las manos del rey\n\nNo es solo una diferencia de estilo — es una redefinición de la NATURALEZA del poder. Para David, ser rey es SERVIR, no exhibirse. Y precisamente por eso puede llamarse chasid sin contradicción.\n\nLa lectura talmúdica de Tehilim 86:2 se convierte así en una doctrina política: la realeza verdadera (la mesiánica, la davídica) es por definición chesed-servicio. El rey legítimo se manifiesta en lo invisible.'
+    },
+    'mefivoshet-pregunta': {
+      titulo: 'David al maestro Mefivoshet',
+      hebreo: 'מְפִיבֹשֶׁת רַבִּי — יָפֶה דַּנְתִּי? יָפֶה חִיַּיבְתִּי? יָפֶה זִכִּיתִי? יָפֶה טִמֵּאתִי? יָפֶה טִהַרְתִּי?',
+      traduccion: '«Mefivoshet maestro mío: ¿juzgué bien? ¿condené bien? ¿absolví bien? ¿declaré impuro bien? ¿declaré puro bien?»',
+      explicacion: 'La tercera capa de la defensa davídica: NO solo trabajaba en halajá — VERIFICABA cada dictamen con su maestro.\n\nEl detalle es asombroso: David — el rey ungido, el autor de Tehilim, el comandante en jefe — preguntaba a Mefivoshet después de cada decisión:\n\n  · ¿juzgué bien en este pleito civil?\n  · ¿condené correctamente a este reo?\n  · ¿absolví correctamente a este otro?\n  · ¿declaré impuro esto correctamente?\n  · ¿declaré puro esto correctamente?\n\nY la línea decisiva: וְלֹא בּוֹשְׁתִּי — «y no me avergoncé».\n\nEl rey de Israel se sometía a la corrección de un maestro sin que el orgullo intermediara. Si Mefivoshet decía «erraste», David revisaba.\n\nEsta es la marca más íntima del chasid davídico: NO la confianza en sí mismo (ningún rey la tiene mayor), sino la CAPACIDAD DE SER CORREGIDO.'
+    },
+    'rylevi-nombre': {
+      titulo: 'R. Yehoshua ben Levi: el origen del nombre Mefivoshet',
+      hebreo: 'לֹא מְפִיבֹשֶׁת שְׁמוֹ אֶלָּא אִישׁ־בֹּשֶׁת · וְלָמָּה נִקְרָא מְפִיבֹשֶׁת? — שֶׁהָיָה מַבִּישׁ פְּנֵי דָוִד בַּהֲלָכָה',
+      traduccion: '«Su nombre no era Mefivoshet sino Ish-Boshet; ¿y por qué se le llamó Mefivoshet? — porque avergonzaba (mevayesh) la cara de David en halajá»',
+      explicacion: 'R. Yehoshua ben Levi cierra la sugyá con una explicación etimológica del nombre del maestro:\n\n  · Su nombre real: אִישׁ־בֹּשֶׁת (Ish-Boshet — «hombre de vergüenza», un nombre con su propia historia)\n  · El apodo midráshico: מְפִיבֹשֶׁת = מֵפִי בֹשֶׁת («de su boca, vergüenza»)\n\nLa lectura disecciona el nombre como midrash: era llamado «Mefivoshet» PORQUE «מַבִּישׁ» (avergonzaba) a David «en halajá» — corregía sus dictámenes con tal precisión y autoridad que David tenía que reconocer públicamente su error.\n\nNote el detalle: el maestro era ALGUIEN QUE AVERGONZABA AL REY. No un cortesano, no un asesor diplomático — un crítico halájico despiadado.\n\nY el genio del retrato: David ELEGÍA voluntariamente como maestro a alguien capaz de avergonzarle. Esa elección es la prueba final de su título de chasid.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta: ¿qué es un chasid?',
+      hebreo: 'הַחָסִיד — הַמִּתְבַּטֵּל לִפְנֵי הַהֲלָכָה',
+      traduccion: 'El chasid es el que se anula ante la halajá',
+      explicacion: 'La sugyá redefine el concepto de chasid a partir del retrato davídico.\n\nNo es:\n  · piedad romántica\n  · ascetismo extremo\n  · austeridad social\n\nEs una disposición CONCRETA con tres marcas:\n\n  1. MANCHARSE en el ministerio — entrar al detalle ritual real del pueblo (sangre, niddah, pureza). El chasid no delega lo «sucio».\n\n  2. SOMETERSE al maestro — admitir que la opinión propia, por más informada que sea, necesita revisión. El chasid no confía en su solo juicio.\n\n  3. NO AVERGONZARSE de la corrección — וְלֹא בּוֹשְׁתִּי. La marca decisiva: aceptar pública e íntimamente que se erró cuando se erró.\n\nEsta doctrina es exportable más allá del rey: cualquier persona que ejerce autoridad (rabino, juez, padre, médico) se convierte en chasid si se conduce con estas tres marcas.\n\nY hay una ironía bellísima en la conclusión: el chasid NO es el que no se equivoca. Es el que TIENE UN MEFIVOSHET — un crítico que le avergüenza en halajá, y al que NO despide.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.chasid-interactivo')
+    : document.querySelector('.chasid-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#chasid-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.chasid-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="chasid-panel-header">' +
+        '<p class="chasid-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="chasid-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="chasid-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="chasid-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.chasid-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.chasid-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="chasid-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

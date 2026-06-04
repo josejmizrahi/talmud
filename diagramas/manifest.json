@@ -223,10 +223,31 @@
         "4a"
       ],
       "grupo": "El rey David",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/david-chasid.html",
+      "sabios": [
+        "r-yehoshua-ben-levi"
+      ],
+      "sabios_biblicos": [
+        "david",
+        "mefivoshet"
+      ],
+      "pesukim": [
+        "tehilim-86-2",
+        "tehilim-119-62"
+      ],
+      "conceptos": [
+        "chasid",
+        "niddah",
+        "dam",
+        "shafir",
+        "shilya",
+        "vergueza-halajica"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "Los diagramas #5 y #6 establecieron a David como el rey-tzadik:\ndespertando a medianoche, consultando tres instituciones antes de\ncada guerra. Pero el siguiente verso de Tehilim 86:2 le pone título\npropio — חָסִיד אָנִי, «soy un chasid». La guemará pregunta: ¿cómo\nosa un REY llamarse chasid? La fórmula apologética «¿no soy chasid?»\nabre dos justificaciones — una nocturna (el madrugador) y otra\ndiurna (las manos manchadas). Misma fórmula, dos pruebas distintas.\n"
+      }
     },
     {
       "slug": "miedo-al-pecado",
@@ -530,6 +551,10 @@
       ]
     },
     {
+      "slug": "r-yehoshua-ben-levi",
+      "nombre": "R Yehoshua Ben Levi"
+    },
+    {
       "slug": "rav-yitzjak-bar-adda",
       "nombre": "Rav Yitzjak Bar Adda"
     },
@@ -626,6 +651,10 @@
       "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
     },
     {
+      "slug": "tehilim-86-2",
+      "nombre": "Tehilim 86 2"
+    },
+    {
       "slug": "divrei-hayamim-i-27-34",
       "nombre": "Divrei Hayamim I 27 34"
     },
@@ -673,6 +702,30 @@
       "slug": "mazikin",
       "nombre": "Mazikin (demonios)",
       "hebreo": "מַזִּיקִין"
+    },
+    {
+      "slug": "chasid",
+      "nombre": "Chasid"
+    },
+    {
+      "slug": "niddah",
+      "nombre": "Niddah"
+    },
+    {
+      "slug": "dam",
+      "nombre": "Dam"
+    },
+    {
+      "slug": "shafir",
+      "nombre": "Shafir"
+    },
+    {
+      "slug": "shilya",
+      "nombre": "Shilya"
+    },
+    {
+      "slug": "vergueza-halajica",
+      "nombre": "Vergueza Halajica"
     },
     {
       "slug": "sanedrin",
@@ -809,6 +862,14 @@
       "peso": 3
     },
     {
+      "from": "gobierno-tripartito",
+      "to": "david-chasid",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "Los diagramas #5 y #6 establecieron a David como el rey-tzadik:\ndespertando a medianoche, consultando tres instituciones antes de\ncada guerra. Pero el siguiente verso de Tehilim 86:2 le pone título\npropio — חָסִיד אָנִי, «soy un chasid». La guemará pregunta: ¿cómo\nosa un REY llamarse chasid? La fórmula apologética «¿no soy chasid?»\nabre dos justificaciones — una nocturna (el madrugador) y otra\ndiurna (las manos manchadas). Misma fórmula, dos pruebas distintas.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -873,6 +934,14 @@
       "peso": 1
     },
     {
+      "from": "vigilias-noche",
+      "to": "david-chasid",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
       "from": "r-yose-ruina",
       "to": "tres-razones-ruina",
       "categoria": "co-referencia",
@@ -902,6 +971,22 @@
       "categoria": "co-referencia",
       "tipo": "co-pasuk",
       "via": "tehilim-57-9",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "david-chasid",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "david-chasid",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-119-62",
       "peso": 1
     }
   ]
