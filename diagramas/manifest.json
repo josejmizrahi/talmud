@@ -325,17 +325,37 @@
       "slug": "semijat-geula-tefila",
       "orden": 10,
       "titulo": "Semijat geulá le-tefilá",
-      "subtitulo": "el pasaporte al olam ha-ba · Hashkiveinu",
+      "subtitulo": "el pasaporte al olam ha-ba · Hashkiveinu como גְּאוּלָּה אֲרִיכְתָּא",
       "dapim": [
         "4b",
         "6b",
         "9b"
       ],
       "grupo": "La técnica litúrgica",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/semijat-geula-tefila.html",
+      "sabios": [
+        "r-yojanan",
+        "r-yehoshua-ben-levi",
+        "r-zera",
+        "r-ami",
+        "r-asi"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "tehilim-19-15"
+      ],
+      "conceptos": [
+        "geula",
+        "tefila",
+        "hashkiveinu",
+        "olam-haba",
+        "hefsek"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #9 trató la ESTRUCTURA EXTERNA de la noche litúrgica\n(cuándo recitar shema — la cerca de chatzot). Ahora la sugyá se\nmueve a la ESTRUCTURA INTERNA del rezo: el orden y la conexión\nentre brachot. La pregunta es ya no «¿hasta cuándo?» sino «¿en\nqué orden?». La fórmula R. Yojanan «¿quién es ben olam ha-ba?» se\nconvierte en clave: pegar la bracha de geulá con la amidá tiene\nvalor cósmico. Y esta enseñanza VUELVE en 6b y en 9b — es uno de\nlos temas que el editor recorre tres veces.\n"
+      }
     },
     {
       "slug": "ashrei-olam-haba",
@@ -659,6 +679,18 @@
       "nombre": "R Shimon Jasida"
     },
     {
+      "slug": "r-zera",
+      "nombre": "R Zera"
+    },
+    {
+      "slug": "r-ami",
+      "nombre": "R Ami"
+    },
+    {
+      "slug": "r-asi",
+      "nombre": "R Asi"
+    },
+    {
       "slug": "tanu-rabanan",
       "nombre": "Tanu Rabanan"
     },
@@ -757,6 +789,10 @@
     {
       "slug": "shemot-11-4",
       "nombre": "Shemot 11 4"
+    },
+    {
+      "slug": "tehilim-19-15",
+      "nombre": "Tehilim 19 15"
     },
     {
       "slug": "shoftim-7-19",
@@ -900,6 +936,22 @@
       "nombre": "Tefilá Ketzará"
     },
     {
+      "slug": "geula",
+      "nombre": "Geula"
+    },
+    {
+      "slug": "tefila",
+      "nombre": "Tefila"
+    },
+    {
+      "slug": "hashkiveinu",
+      "nombre": "Hashkiveinu"
+    },
+    {
+      "slug": "hefsek",
+      "nombre": "Hefsek"
+    },
+    {
       "slug": "dialectica-talmudica",
       "nombre": "Dialectica Talmudica"
     },
@@ -999,6 +1051,14 @@
       "categoria": "editorial",
       "tipo": "continuacion-halajica",
       "texto": "Los diagramas #5-8 exploraron la dimensión INTERIOR de la noche\ndavídica (kinor · gobierno · chesed · temor al pecado). Ahora la\nsugyá vuelve al pshat de la mishná inicial: «¿hasta cuándo se\nrecita el shema de arvit?». El maestro nos lleva de la psicología\na la ESTRUCTURA halájica — ¿por qué los chajamim dijeron «ad\nchatzot» si la Torah permite «hasta amud hashachar»? La respuesta\nrevela el mecanismo de la SAYAG (cerca rabínica) y se ilustra con\nla baraita de los hijos de Rabban Gamliel.\n",
+      "peso": 3
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "semijat-geula-tefila",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #9 trató la ESTRUCTURA EXTERNA de la noche litúrgica\n(cuándo recitar shema — la cerca de chatzot). Ahora la sugyá se\nmueve a la ESTRUCTURA INTERNA del rezo: el orden y la conexión\nentre brachot. La pregunta es ya no «¿hasta cuándo?» sino «¿en\nqué orden?». La fórmula R. Yojanan «¿quién es ben olam ha-ba?» se\nconvierte en clave: pegar la bracha de geulá con la amidá tiene\nvalor cósmico. Y esta enseñanza VUELVE en 6b y en 9b — es uno de\nlos temas que el editor recorre tres veces.\n",
       "peso": 3
     },
     {
@@ -1159,6 +1219,30 @@
       "categoria": "co-referencia",
       "tipo": "co-pasuk",
       "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
+      "from": "david-chasid",
+      "to": "semijat-geula-tefila",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "semijat-geula-tefila",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "semijat-geula-tefila",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
       "peso": 1
     }
   ]

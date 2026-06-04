@@ -1,0 +1,363 @@
+<div class="semija-interactivo">
+<style>
+  .semija-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .semija-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .semija-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .semija-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .semija-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .semija-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .semija-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .semija-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .semija-diagrama svg { width: 100%; height: auto; display: block; }
+  .semija-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .semija-nodo:hover rect { stroke-width: 2 !important; }
+  .semija-nodo.activa rect { stroke-width: 2.5 !important; }
+  .semija-nodo.dim { opacity: 0.32; }
+  .semija-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .semija-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .semija-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .semija-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .semija-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .semija-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .semija-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="semija-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear · R. Yojanan</span>
+  <span><span class="swatch sepia"></span>cadena litúrgica</span>
+  <span><span class="swatch rojo"></span>el conflicto del hefsek</span>
+  <span><span class="swatch verde"></span>geulá arichta · resolución</span>
+  <span><span class="swatch azul"></span>las tres apariciones</span>
+</div>
+
+<div class="semija-diagrama">
+<svg viewBox="0 0 720 1100" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4b·6b·9b: semijat geulá le-tefilá · el pasaporte al olam ha-ba · hashkiveinu como geulá arichta</title>
+
+<defs>
+  <marker id="flecha-sg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-sg-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- patrón de cadena visual -->
+  <symbol id="eslabon" viewBox="0 0 20 20">
+    <circle cx="10" cy="10" r="8" fill="none" stroke="#b8860b" stroke-width="1.5"/>
+  </symbol>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Semijat geulá le-tefilá · el pasaporte al olam ha-ba</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4b · 6b · 9b — el tema recurre TRES VECES en el perek</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR — R. YOJANAN                            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · R. YOJANAN · 4B</text>
+
+<g class="semija-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">אֵיזֶהוּ בֶּן הָעוֹלָם הַבָּא? זֶה הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה שֶׁל עַרְבִית</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¿Quién es ben olam ha-ba? — Aquel que junta geulá a tefilá del arvit»</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10" fill="#b8860b">↑ una TÉCNICA LITÚRGICA precisa se convierte en marca soteriológica</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">no se exige estudio · ayuno · pobreza — sino el ORDEN exacto de dos brachot</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA CADENA LITÚRGICA — SECUENCIA VISUAL                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="186" x2="360" y2="204" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-sg-gold)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CADENA LITÚRGICA · CÓMO SE PEGA</text>
+
+<g class="semija-nodo" data-id="cadena">
+  <rect x="60" y="226" width="600" height="148" rx="6" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.3"/>
+  <!-- Eslabón 1: shema -->
+  <rect x="78" y="248" width="118" height="46" rx="4" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1"/>
+  <text x="137" y="266" text-anchor="middle" font-size="10" fill="#3d2f23" font-weight="600">קְרִיאַת שְׁמַע</text>
+  <text x="137" y="281" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">shema con sus brachot</text>
+  <!-- flecha -->
+  <line x1="196" y1="271" x2="218" y2="271" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-sg)"/>
+  <!-- Eslabón 2: ga'al yisrael -->
+  <rect x="220" y="248" width="118" height="46" rx="4" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.3"/>
+  <text x="279" y="266" text-anchor="middle" font-size="10" fill="#3d2f23" font-weight="600">גָּאַל יִשְׂרָאֵל</text>
+  <text x="279" y="281" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">cierre de גְּאוּלָּה</text>
+  <!-- flecha -->
+  <line x1="338" y1="271" x2="360" y2="271" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-sg)"/>
+  <!-- Eslabón 3: hashkiveinu (problema) -->
+  <rect x="362" y="248" width="118" height="46" rx="4" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.3" stroke-dasharray="3,2"/>
+  <text x="421" y="266" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">הַשְׁכִּיבֵנוּ</text>
+  <text x="421" y="281" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">¿hefsek o no?</text>
+  <!-- flecha -->
+  <line x1="480" y1="271" x2="502" y2="271" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-sg)"/>
+  <!-- Eslabón 4: amidá -->
+  <rect x="504" y="248" width="118" height="46" rx="4" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.3"/>
+  <text x="563" y="266" text-anchor="middle" font-size="10" fill="#3d2f23" font-weight="600">תְּפִלָּה</text>
+  <text x="563" y="281" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">amidá</text>
+  <!-- Marco de "lo que debe pegarse" -->
+  <rect x="216" y="240" width="412" height="62" rx="5" fill="none" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <text x="422" y="318" text-anchor="middle" font-size="9.5" fill="#b8860b">⬆ los dos extremos (גָּאַל יִשְׂרָאֵל y תְּפִלָּה) deben quedar PEGADOS</text>
+  <text x="360" y="340" text-anchor="middle" font-size="10" fill="#3d2f23">aplicación: terminar la bracha · no responder amén · no conversar</text>
+  <text x="360" y="356" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">comenzar amidá con ה' שְׂפָתַי תִּפְתָּח (Tehilim 19:15)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL CONFLICTO DEL HEFSEK                                      -->
+<!-- ============================================================ -->
+<line x1="421" y1="374" x2="421" y2="392" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-sg)"/>
+
+<text x="60" y="404" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CONFLICTO TÉCNICO · ¿HASHKIVEINU INTERRUMPE?</text>
+
+<g class="semija-nodo" data-id="conflicto">
+  <rect x="60" y="414" width="600" height="98" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="78" y="436" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">El problema halájico</text>
+  <text x="78" y="458" font-size="9.5" fill="#3d2f23">1. la halajá pide PEGAR גָּאַל יִשְׂרָאֵל con la amidá (sin nada en medio)</text>
+  <text x="78" y="474" font-size="9.5" fill="#3d2f23">2. PERO en arvit, entre ambas se inserta הַשְׁכִּיבֵנוּ</text>
+  <text x="78" y="490" font-size="9.5" fill="#3d2f23">3. ¿no es esto exactamente un הֶפְסֵק (interrupción)?</text>
+  <text x="78" y="506" font-size="9" fill="#6b4423" font-style="italic">si lo es, ningún yehudí podría cumplir la regla de R. Yojanan en el arvit</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESOLUCIÓN — GEULÁ ARICHTÁ                               -->
+<!-- ============================================================ -->
+<line x1="360" y1="512" x2="360" y2="532" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-sg)"/>
+
+<text x="60" y="544" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESOLUCIÓN · גְּאוּלָּה אֲרִיכְתָּא</text>
+
+<g class="semija-nodo" data-id="geula-arichta">
+  <rect x="60" y="554" width="600" height="118" rx="6" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.6"/>
+  <text x="360" y="578" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">הַשְׁכִּיבֵנוּ — גְּאוּלָּה אֲרִיכְתָּא הִיא</text>
+  <text x="360" y="598" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Hashkiveinu es una GEULÁ EXTENDIDA — no rompe la cadena, la prolonga»</text>
+  <line x1="100" y1="608" x2="620" y2="608" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+  <text x="360" y="626" text-anchor="middle" font-size="10" fill="#3d2f23">la bracha de hashkiveinu pide PROTECCIÓN durante el sueño:</text>
+  <text x="360" y="641" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«acuéstanos en paz · levántanos en paz · protégenos de toda mala cosa»</text>
+  <text x="360" y="658" text-anchor="middle" font-size="9.5" fill="#2d6b4e">→ es el LADO NOCTURNO de la geulá · rescate durante el sueño</text>
+  <text x="360" y="671" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">temáticamente continúa la geulá · no la interrumpe</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- R. YEHOSHUA BEN LEVI — POSICIÓN ALTERNA                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="672" x2="360" y2="690" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-sg)"/>
+
+<g class="semija-nodo" data-id="rylevi-alterna">
+  <rect x="60" y="694" width="600" height="56" rx="5" fill="rgba(30,58,95,0.05)" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="78" y="714" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">R. Yehoshua ben Levi · posición alterna</text>
+  <text x="78" y="730" font-size="10" direction="ltr" fill="#3d2f23">«תְּפִלּוֹת בָּאֶמְצַע תִּקְּנוּם» — las tefilot se establecieron «en el medio»</text>
+  <text x="78" y="744" font-size="9" fill="#6b4423" font-style="italic">marco diferente del análisis — la primacía de R. Yojanan se queda como la halajá normativa</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS TRES APARICIONES — TIMELINE EDITORIAL                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="750" x2="360" y2="770" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-sg)"/>
+
+<text x="60" y="782" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL EDITOR REGRESA · LAS TRES APARICIONES</text>
+
+<!-- Timeline horizontal -->
+<g class="semija-nodo" data-id="aparicion-4b">
+  <rect x="50" y="794" width="200" height="120" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="150" y="814" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" font-weight="600">4B</text>
+  <text x="150" y="834" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">declaración inicial</text>
+  <text x="60" y="854" font-size="9.5" fill="#3d2f23">contexto · mishná de arvit</text>
+  <text x="60" y="870" font-size="9.5" fill="#3d2f23">R. Yojanan introduce</text>
+  <text x="60" y="884" font-size="9" fill="#1e3a5f" font-style="italic">ben olam ha-ba = sumej</text>
+  <text x="60" y="897" font-size="9" fill="#1e3a5f" font-style="italic">+ resolución hashkiveinu</text>
+  <text x="60" y="908" font-size="9" fill="#6b4423" font-style="italic">la doctrina pura</text>
+</g>
+
+<g class="semija-nodo" data-id="aparicion-6b">
+  <rect x="260" y="794" width="200" height="120" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="360" y="814" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" font-weight="600">6B</text>
+  <text x="360" y="834" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">R. Zera · testimonio</text>
+  <text x="270" y="854" font-size="9.5" fill="#3d2f23">no solo olam ha-ba —</text>
+  <text x="270" y="870" font-size="9.5" fill="#3d2f23">también protege durante el día</text>
+  <text x="270" y="884" font-size="9" fill="#1e3a5f" font-style="italic">אֵינוֹ נִזּוֹק כָּל הַיּוֹם</text>
+  <text x="270" y="897" font-size="9" fill="#1e3a5f" font-style="italic">«no sufre daño todo el día»</text>
+  <text x="270" y="908" font-size="9" fill="#6b4423" font-style="italic">dimensión protectora</text>
+</g>
+
+<g class="semija-nodo" data-id="aparicion-9b">
+  <rect x="470" y="794" width="200" height="120" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="570" y="814" text-anchor="middle" font-size="10" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" font-weight="600">9B</text>
+  <text x="570" y="834" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">R. Ami y R. Asi</text>
+  <text x="480" y="854" font-size="9.5" fill="#3d2f23">institucionalización</text>
+  <text x="480" y="870" font-size="9.5" fill="#3d2f23">aunque tenían 70 bedei</text>
+  <text x="480" y="884" font-size="9" fill="#1e3a5f" font-style="italic">en la academia, iban a</text>
+  <text x="480" y="897" font-size="9" fill="#1e3a5f" font-style="italic">la sinagoga a rezar</text>
+  <text x="480" y="908" font-size="9" fill="#6b4423" font-style="italic">práctica modelo</text>
+</g>
+
+<!-- Línea conectora horizontal entre los 3 -->
+<line x1="150" y1="930" x2="570" y2="930" stroke="#1e3a5f" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6"/>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="930" x2="360" y2="950" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-sg)"/>
+
+<text x="60" y="962" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA TÉCNICA ES SOTERIOLÓGICA</text>
+
+<g class="semija-nodo" data-id="doctrina">
+  <rect x="60" y="972" width="600" height="118" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="994" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">No solo importa QUÉ se reza — importa el ORDEN y la CONTINUIDAD</text>
+  <text x="78" y="1018" font-size="10" fill="#3d2f23"><tspan font-weight="600">גְּאוּלָּה</tspan> = redención del pasado (éxodo) y del futuro (mashiaj)</text>
+  <text x="78" y="1034" font-size="10" fill="#3d2f23"><tspan font-weight="600">תְּפִלָּה</tspan> = la petición presente (amidá)</text>
+  <text x="360" y="1056" text-anchor="middle" font-size="10" fill="#6b4423">pegar las dos = anclar la oración presente en la línea continua del rescate divino</text>
+  <text x="360" y="1074" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">el ben olam ha-ba es el que vive con su oración SITUADA en la geulá</text>
+</g>
+
+</svg>
+</div>
+
+<div class="semija-panel" id="semija-panel">
+  <p class="semija-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'La declaración nuclear de R. Yojanan',
+      hebreo: 'אֵיזֶהוּ בֶּן הָעוֹלָם הַבָּא? — זֶה הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה שֶׁל עַרְבִית',
+      traduccion: '«¿Quién es ben olam ha-ba? — Aquel que junta geulá a tefilá del arvit»',
+      explicacion: 'Una de las declaraciones más radicales del perek. R. Yojanan responde a la pregunta más fundamental del judaísmo — «¿quién tiene parte en el mundo venidero?» — con una respuesta TÉCNICA.\n\nNo dice: «el que estudia mucha Torah», «el que ayuna», «el que da tzedaká», «el que llega al rango de jajam». Dice: el que tiene una TÉCNICA LITÚRGICA precisa. Una microacción ritual.\n\nLa radicalidad es triple:\n\n  1. DEMOCRATIZA la salvación — cualquiera puede aprender la técnica. No requiere genio rabínico ni privilegio social.\n\n  2. CONCRETIZA el merit — no es un asunto de disposición interna abstracta, sino un acto observable y reproducible.\n\n  3. ELEVA el detalle ritual — lo que podría parecer mero protocolo de orden litúrgico se revela como ACTO ESPIRITUAL de máxima dignidad.\n\nLa fórmula «איזהו...זה» es típica del lenguaje midráshico: «¿quién es X? Este es...» — convierte una pregunta categórica en una IDENTIFICACIÓN PRECISA. R. Yojanan no nos dice las CONDICIONES para ser ben olam ha-ba; nos PROPORCIONA la marca distintiva.'
+    },
+    'cadena': {
+      titulo: 'La cadena litúrgica · cómo se pega',
+      hebreo: 'שְׁמַע → גָּאַל יִשְׂרָאֵל → הַשְׁכִּיבֵנוּ → תְּפִלָּה',
+      traduccion: 'Shema → ga\'al yisrael → hashkiveinu → amidá',
+      explicacion: 'La cadena litúrgica del arvit tiene una estructura precisa:\n\n  1. שְׁמַע — la recitación de los tres párrafos (Devarim 6, Devarim 11, Bamidbar 15)\n\n  2. Las brachot que rodean al shema: en arvit son DOS antes (ma\'ariv aravim, ahavat olam) y DOS después (emet ve-emuná, hashkiveinu)\n\n  3. La bracha que CIERRA la geulá es גָּאַל יִשְׂרָאֵל («redentor de Israel»). Aquí termina el «bloque de geulá».\n\n  4. INMEDIATAMENTE debería empezar la amidá — comenzando con «ה\' שְׂפָתַי תִּפְתָּח» (Tehilim 19:15: «Hashem, abre mis labios»).\n\n  5. PERO entre ambas se inserta הַשְׁכִּיבֵנוּ.\n\nLa práctica halájica para «pegar» (semijá):\n  · terminar la bracha de גָּאַל יִשְׂרָאֵל sin interrupción\n  · NO responder amén al final (controvertido — algunos sí, algunos no)\n  · NO conversar entre la bracha y la amidá\n  · comenzar la amidá con la verseta de apertura\n\nEn la práctica del minyan moderno, esto requiere coordinación temporal: el jazán debe terminar las brachot con tiempo suficiente para que el público pueda transicionar continuamente. Esto es por qué la halajá requiere atención técnica precisa.'
+    },
+    'conflicto': {
+      titulo: 'El conflicto técnico · ¿hashkiveinu es hefsek?',
+      hebreo: 'הַשְׁכִּיבֵנוּ — הֶפְסֵק?',
+      traduccion: '¿Es hashkiveinu una interrupción?',
+      explicacion: 'El problema halájico es agudo. La regla de R. Yojanan exige PEGAR geulá con tefilá — entre ambas no debe haber ninguna otra cosa.\n\nPero la realidad litúrgica del arvit es que ENTRE la bracha de ga\'al yisrael y la amidá, viene la bracha de הַשְׁכִּיבֵנוּ («Acostúmbranos…»).\n\nEsta bracha pide protección para el sueño nocturno: «acuéstanos en paz, levántanos en paz, dispón sobre nosotros una sucá de paz, líbranos del enemigo, de la pestilencia, de la espada, del hambre, de la pena…»\n\nSi hashkiveinu es un HEFSEK (interrupción), entonces:\n\n  · NADIE puede cumplir la regla de R. Yojanan en arvit\n  · La declaración «ben olam ha-ba» se vuelve técnicamente imposible para el arvit\n  · Los chajamim habrían instituido una bracha que IMPIDE cumplir la mitzvá\n\nEsto sería un absurdo halájico. Algo está mal en cómo entendemos la situación. La sugyá necesita una resolución.\n\nLa pregunta es: ¿es hashkiveinu una INTERRUPCIÓN o una EXTENSIÓN? La diferencia es enorme. Si es interrupción, rompe la cadena. Si es extensión, la cadena sigue intacta porque hashkiveinu pertenece estructuralmente al bloque de geulá.'
+    },
+    'geula-arichta': {
+      titulo: 'La resolución · גְּאוּלָּה אֲרִיכְתָּא (geulá extendida)',
+      hebreo: 'הַשְׁכִּיבֵנוּ — גְּאוּלָּה אֲרִיכְתָּא הִיא',
+      traduccion: '«Hashkiveinu es una geulá extendida»',
+      explicacion: 'La guemará resuelve con una distinción genial: hashkiveinu NO es un HEFSEK porque TEMÁTICAMENTE pertenece a la geulá. Es una «geulá larga» (אֲרִיכְתָּא del arameo «larga, extendida»).\n\nEl argumento es temático y teológico:\n\n  La GEULÁ no es solo el éxodo de Egipto (el «pasado»). Es un acto continuo de rescate divino:\n  · rescate histórico — Egipto, Persia, los milagros\n  · rescate cotidiano — la providencia diaria\n  · rescate nocturno — la protección durante el sueño (lo más vulnerable del día)\n  · rescate escatológico — la redención final por el mashiaj\n\nHashkiveinu pertenece a la 3ª dimensión: el rescate NOCTURNO. Pide protección durante el sueño — el momento del día en que el hombre está más vulnerable, no controla nada, depende enteramente de la providencia.\n\nEsta es la «geulá larga»: la redención que se EXTIENDE de lo histórico a lo personal-nocturno. Por eso hashkiveinu, lejos de interrumpir la geulá, la PROLONGA hacia el lado más íntimo.\n\nLa categoría halájica «geulá arichta» es una de las herramientas conceptuales más útiles del sistema. Aparece en otros contextos: brachot extendidas que parecen incluir otro tema pero que estructuralmente pertenecen al primero.'
+    },
+    'rylevi-alterna': {
+      titulo: 'R. Yehoshua ben Levi · posición alterna',
+      hebreo: 'תְּפִלּוֹת בָּאֶמְצַע תִּקְּנוּם',
+      traduccion: '«Las tefilot se establecieron en el medio»',
+      explicacion: 'R. Yehoshua ben Levi presenta una doctrina alterna sobre la tefilá de arvit. Para él, las tefilot fueron instituidas «en el medio» — entre las dos comidas del día, como un punto intermedio entre el descanso vespertino y el descanso nocturno.\n\nEsta posición tiene una consecuencia: para R. Yehoshua ben Levi, la tefilá de arvit es de carácter VOLUNTARIO (רְשׁוּת), no obligatorio (חוֹבָה). Esto se discute en otras partes del Talmud (Berajot 27b).\n\nSi la tefilá de arvit es voluntaria, entonces la regla de semijá no es tan urgente para él — uno podría argumentar que no hay obligación de unir geulá con una tefilá que es opcional.\n\nLa halajá normativa sigue a R. Yojanan: la semijá ES obligatoria en arvit, y hashkiveinu cuenta como geulá arichta para preservar la cadena.\n\nNote la elegancia editorial: la guemará cita la posición de RYLevi sin desarrollarla aquí, pero deja la huella de que existe un debate más amplio. Esta es la marca de un editor que confía en que el lector reconocerá la conversación más grande.'
+    },
+    'aparicion-4b': {
+      titulo: '4b · la declaración inicial',
+      hebreo: 'הָעִיקָּר',
+      traduccion: 'El núcleo',
+      explicacion: 'La primera aparición — Berajot 4b — establece la doctrina pura:\n\n  · R. Yojanan declara la fórmula «ben olam ha-ba = sumej geulá»\n  · Se identifica el problema técnico de hashkiveinu\n  · Se resuelve con la categoría «geulá arichta»\n\nEsto es el PERIODO MAYOR del tema. Aquí está toda la doctrina conceptual. Si solo hubieras leído 4b, ya tendrías la halajá.\n\nLa función editorial de 4b: SENTAR LA BASE.\n\nNote que esta aparición está perfectamente situada en la sugyá: después de la discusión de zman arvit (4a) y la cerca de chatzot (4b inicio), el editor pasa naturalmente a OTRA pregunta sobre el arvit: ¿cómo se ordena su rezo? La semijá geulá-tefilá es la respuesta a esa pregunta.\n\nEs una conexión por palabra-puente: el contexto sigue siendo «arvit», pero el ángulo cambia de TIEMPO a ORDEN.'
+    },
+    'aparicion-6b': {
+      titulo: '6b · R. Zera y el testimonio personal',
+      hebreo: 'אֵינוֹ נִזּוֹק כָּל אוֹתוֹ הַיּוֹם',
+      traduccion: '«No sufre daño todo ese día»',
+      explicacion: 'La segunda aparición — Berajot 6b — añade una NUEVA DIMENSIÓN. R. Zera declara:\n\n  «Todo el que junta geulá a tefilá NO SUFRE DAÑO en todo ese día»\n\nEsto desplaza el beneficio del olam ha-ba (futuro escatológico) al día presente (protección concreta). La semijá no solo da mérito futuro — protege HOY.\n\nR. Zera, además, AÑADE testimonio personal: «yo lo hice, y no fui dañado». Esta es una de las pocas declaraciones autobiográficas explícitas en la guemará — un amora confirma con su propia vida la eficacia de la práctica.\n\nLa estructura editorial es notable:\n  · 4b establece la doctrina (olam ha-ba)\n  · 6b la AMPLÍA con beneficio diario (protección)\n  · El lector ahora tiene DOS razones para hacer la semijá\n\nEsta capa adicional se conecta editorialmente con la sugyá sobre la TEFILÁ en general que ocurre en 6b. El editor regresa al tema no por repetición sino por DESARROLLO.'
+    },
+    'aparicion-9b': {
+      titulo: '9b · R. Ami y R. Asi · la práctica modelo',
+      hebreo: 'הָווּ מְצַלּוּ בֵּי כָנִישְׁתָּא',
+      traduccion: '«Iban a la sinagoga a rezar»',
+      explicacion: 'La tercera aparición — Berajot 9b, al final del perek — añade la dimensión INSTITUCIONAL.\n\nR. Ami y R. Asi eran amoraim de rango supremo. Tenían 70 בדי בי מדרשא (alfombras / esteras en la academia) — símbolo de su lugar de máximo honor en el bet midrash.\n\nUno esperaría que rezaran EN la academia — pero NO: salían a la SINAGOGA a rezar. ¿Por qué?\n\nLa respuesta tradicional: en la sinagoga se asegura el ORDEN ESTRICTO de la liturgia, y allí es donde se cumple la semijá geulá-tefilá con precisión litúrgica. La academia es para estudio; la sinagoga es para la técnica del rezo.\n\nEsta capa añade el principio del MARCO COMUNITARIO. La semijá no es solo individual — se practica mejor en el espacio comunitario que la garantiza estructuralmente.\n\nEditorialmente, esta aparición CIERRA el perek con la imagen práctica de los amoraim. La doctrina abstracta de R. Yojanan (4b) → la protección de R. Zera (6b) → la práctica institucional de R. Ami y R. Asi (9b). Tres apariciones, tres capas, una sola doctrina enriquecida.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la técnica es soteriológica',
+      hebreo: 'הַטֶּכְנִיקָה הַלִּיתּוּרְגִּית הִיא בַּעֲלַת מַשְׁמָעוּת רוּחָנִית',
+      traduccion: 'La técnica litúrgica tiene significación espiritual',
+      explicacion: 'La sugyá sobre semijat geulá le-tefilá enseña uno de los principios más profundos del judaísmo rabínico:\n\n  EL ORDEN Y LA CONTINUIDAD del rezo NO son meros detalles formales — son ACTOS ESPIRITUALES con valor cósmico.\n\nLa razón teológica:\n\n  גְּאוּלָּה = la redención divina (pasado: éxodo, futuro: mashiaj)\n  תְּפִלָּה = la oración presente (amidá, la petición)\n\nCuando estos dos elementos están SEPARADOS por una conversación, una distracción, una interrupción — la oración presente queda DESCONECTADA de la línea histórica del rescate divino. El que pide a HKBH lo hace como un huérfano, sin pertenencia.\n\nCuando los dos están PEGADOS, la oración presente queda INSERTA en la cadena continua del rescate. El que pide lo hace como un hijo en la familia del rescatado — heredero de la geulá, postulante consciente de su lugar.\n\nEsta es la teología detrás de la regla de R. Yojanan. La semijá NO es un capricho rabínico. Es una FORMACIÓN ESPIRITUAL: enseña al hombre que su oración no está sola, sino enraizada en la historia divina de salvación.\n\nY por eso «ben olam ha-ba» — porque el olam ha-ba ES la culminación de la geulá. El que VIVE su oración como continuación de la geulá ya pertenece al mundo donde la geulá se consuma. Lo escatológico se anticipa en la técnica litúrgica.\n\nLa lección general es aún más amplia: en la halajá, los DETALLES de orden y continuidad expresan VERDADES TEOLÓGICAS. El cómo y el qué son inseparables. El judaísmo rabínico es una espiritualidad de PRECISIÓN.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.semija-interactivo')
+    : document.querySelector('.semija-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#semija-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.semija-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="semija-panel-header">' +
+        '<p class="semija-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="semija-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="semija-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="semija-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.semija-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.semija-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="semija-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
