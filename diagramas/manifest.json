@@ -439,10 +439,27 @@
         "5a"
       ],
       "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/escalera-yetzer.html",
+      "sabios": [
+        "reish-lakish",
+        "r-levi-bar-jama"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "tehilim-4-5"
+      ],
+      "conceptos": [
+        "yetzer-tov",
+        "yetzer-hara",
+        "estudio-tora",
+        "keriat-shema-al-hamita",
+        "yom-hamita"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #12 estableció el ritual del shema sobre la cama y la\ninvocación de los ángeles cardinales. Pero hay un peligro que los\nángeles no neutralizan: el yetzer hará INTERIOR. La sugyá continúa\ninmediatamente con la enseñanza de Reish Lakish (citada por R. Levi\nbar Jama) — una ESCALERA progresiva de cuatro escalones para\nvencer la mala inclinación. La conexión es exacta: el shema sobre\nla cama es UNO de los escalones, pero hay otros tres más arriba y\nuno más abajo. El editor expande el inventario de técnicas íntimas.\n"
+      }
     },
     {
       "slug": "yisurim-shel-ahava",
@@ -686,6 +703,14 @@
     {
       "slug": "rav-yitzjak",
       "nombre": "Rav Yitzjak"
+    },
+    {
+      "slug": "reish-lakish",
+      "nombre": "Reish Lakish"
+    },
+    {
+      "slug": "r-levi-bar-jama",
+      "nombre": "R Levi Bar Jama"
     },
     {
       "slug": "rav-yitzjak-bar-adda",
@@ -993,6 +1018,22 @@
       "nombre": "Vulnerabilidad Del Sueno"
     },
     {
+      "slug": "yetzer-tov",
+      "nombre": "Yetzer Tov"
+    },
+    {
+      "slug": "yetzer-hara",
+      "nombre": "Yetzer Hara"
+    },
+    {
+      "slug": "estudio-tora",
+      "nombre": "Estudio Tora"
+    },
+    {
+      "slug": "yom-hamita",
+      "nombre": "Yom Hamita"
+    },
+    {
       "slug": "sanedrin",
       "nombre": "Sanedrin"
     },
@@ -1196,6 +1237,14 @@
       "categoria": "editorial",
       "tipo": "continuacion-halajica",
       "texto": "Los diagramas #10 y #11 dieron dos vías «públicas» al olam ha-ba\n(semijá y Ashrei). Ahora la sugyá vuelve al espacio íntimo — la\ncama, el momento del sueño, la vulnerabilidad nocturna que el\nrezo institucional no cubre. R. Yehoshua ben Levi establece una\nTERCERA práctica: kriat shema AL HA-MITÁ (sobre la cama),\nprivada, después de la sinagoga. La sugyá despliega la mitología\nangélica que protege ese espacio.\n",
+      "peso": 3
+    },
+    {
+      "from": "escala-angeles",
+      "to": "escalera-yetzer",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #12 estableció el ritual del shema sobre la cama y la\ninvocación de los ángeles cardinales. Pero hay un peligro que los\nángeles no neutralizan: el yetzer hará INTERIOR. La sugyá continúa\ninmediatamente con la enseñanza de Reish Lakish (citada por R. Levi\nbar Jama) — una ESCALERA progresiva de cuatro escalones para\nvencer la mala inclinación. La conexión es exacta: el shema sobre\nla cama es UNO de los escalones, pero hay otros tres más arriba y\nuno más abajo. El editor expande el inventario de técnicas íntimas.\n",
       "peso": 3
     },
     {
@@ -1452,6 +1501,22 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "escalera-yetzer",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-4-5",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "escalera-yetzer",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "keriat-shema-al-hamita",
       "peso": 1
     }
   ]

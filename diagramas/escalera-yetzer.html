@@ -1,0 +1,321 @@
+<div class="escalera-interactivo">
+<style>
+  .escalera-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .escalera-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .escalera-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .escalera-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .escalera-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .escalera-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .escalera-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .escalera-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .escalera-diagrama svg { width: 100%; height: auto; display: block; }
+  .escalera-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .escalera-nodo:hover rect { stroke-width: 2 !important; }
+  .escalera-nodo:hover circle { stroke-width: 2.5 !important; }
+  .escalera-nodo.activa rect { stroke-width: 2.5 !important; }
+  .escalera-nodo.activa circle { stroke-width: 3 !important; }
+  .escalera-nodo.dim { opacity: 0.32; }
+  .escalera-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .escalera-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .escalera-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .escalera-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .escalera-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .escalera-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .escalera-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="escalera-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear</span>
+  <span><span class="swatch rojo"></span>1 · embravecer</span>
+  <span><span class="swatch azul"></span>2 · Torá</span>
+  <span><span class="swatch verde"></span>3 · shema</span>
+  <span><span class="swatch sepia"></span>4 · día de la muerte</span>
+</div>
+
+<div class="escalera-diagrama">
+<svg viewBox="0 0 720 1080" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 5a: la escalera de Reish Lakish · cuatro escalones progresivos contra el yetzer hará</title>
+
+<defs>
+  <marker id="flecha-y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-y-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-y-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d6b4e"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La escalera contra el yetzer hará</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 5a · Reish Lakish · cuatro escalones progresivos</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR — R. LEVI BAR JAMA / REISH LAKISH       -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · R. LEVI BAR JAMA · REISH LAKISH · 5A</text>
+
+<g class="escalera-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="98" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">לְעוֹלָם יַרְגִּיז אָדָם יֵצֶר טוֹב עַל יֵצֶר הָרַע</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Que siempre el hombre EMBRAVEZCA su yetzer tov contra su yetzer ha-rá»</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10" fill="#b8860b">↑ יַרְגִּיז = embravecer, agitar — la lucha NO es pasiva</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">la verseta de proof — רִגְזוּ וְאַל תֶּחֱטָאוּ (Tehilim 4:5) leída como combate interior</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESCALERA — VISUALIZACIÓN CENTRAL                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="184" x2="360" y2="202" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-y-gold)"/>
+
+<text x="60" y="214" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALERA · CUATRO ESCALONES PROGRESIVOS</text>
+
+<!-- Marco general de la escalera -->
+<rect x="60" y="224" width="600" height="700" rx="8" fill="rgba(107,68,35,0.04)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+
+<!-- Línea vertical conectora "escalera" -->
+<line x1="100" y1="280" x2="100" y2="860" stroke="#6b4423" stroke-width="2" opacity="0.5"/>
+
+<!-- ============================================================ -->
+<!-- ESCALÓN 1 · EMBRAVECER                                       -->
+<!-- ============================================================ -->
+<g class="escalera-nodo" data-id="escalon-1">
+  <!-- Número en círculo -->
+  <circle cx="100" cy="290" r="28" fill="rgba(139,26,26,0.18)" stroke="#8b1a1a" stroke-width="2.5"/>
+  <text x="100" y="297" text-anchor="middle" font-size="18" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">1</text>
+  <!-- Box principal -->
+  <rect x="148" y="252" width="512" height="80" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="166" y="274" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">יַרְגִּיז · embravecer · combate interior directo</text>
+  <text x="642" y="274" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a">יַרְגִּיז יֵצֶר טוֹב</text>
+  <text x="166" y="294" font-size="10" fill="#3d2f23" font-style="italic">voluntad pura contra voluntad — la forma más íntima de la lucha</text>
+  <text x="166" y="310" font-size="9.5" fill="#3d2f23">«agita» el yetzer tov · mobilízalo · NO te limites a tener buenas intenciones pasivas</text>
+  <text x="166" y="324" font-size="9" fill="#6b4423" font-style="italic">nivel mínimo · interior · sin uso de palabras o textos</text>
+</g>
+
+<!-- Flecha condicional 1 -->
+<line x1="100" y1="318" x2="100" y2="394" stroke="#6b4423" stroke-width="1.2" stroke-dasharray="3,2"/>
+<text x="60" y="362" font-size="9" fill="#6b4423" font-style="italic">si falla ↓</text>
+<text x="148" y="354" font-size="11" fill="#2d6b4e" font-style="italic">נָצַח — מוּטָב</text>
+<text x="148" y="368" font-size="9" fill="#6b4423" font-style="italic">«venció — bueno» · descansa aquí</text>
+<text x="148" y="382" font-size="9" fill="#6b4423" font-style="italic">si no venció · sube al escalón 2</text>
+
+<!-- ============================================================ -->
+<!-- ESCALÓN 2 · TORÁ                                             -->
+<!-- ============================================================ -->
+<g class="escalera-nodo" data-id="escalon-2">
+  <circle cx="100" cy="430" r="28" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2.5"/>
+  <text x="100" y="437" text-anchor="middle" font-size="18" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <rect x="148" y="392" width="512" height="80" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="166" y="414" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">תּוֹרָה · estudio · desplazamiento del objeto</text>
+  <text x="642" y="414" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f">יַעֲסוֹק בְּתוֹרָה</text>
+  <text x="166" y="434" font-size="10" fill="#3d2f23" font-style="italic">la mente ocupada en Torá no tiene espacio para la transgresión</text>
+  <text x="166" y="450" font-size="9.5" fill="#3d2f23">objeto sagrado externo absorbe la atención · el yetzer pierde espacio operativo</text>
+  <text x="166" y="464" font-size="9" fill="#6b4423" font-style="italic">nivel intermedio · requiere recurso textual · pero NO declaración explícita de fe</text>
+</g>
+
+<!-- Flecha condicional 2 -->
+<line x1="100" y1="458" x2="100" y2="534" stroke="#6b4423" stroke-width="1.2" stroke-dasharray="3,2"/>
+<text x="148" y="494" font-size="11" fill="#2d6b4e" font-style="italic">נָצַח — מוּטָב</text>
+<text x="148" y="508" font-size="9" fill="#6b4423" font-style="italic">«venció — bueno» · descansa aquí</text>
+<text x="148" y="522" font-size="9" fill="#6b4423" font-style="italic">si no venció · sube al escalón 3</text>
+
+<!-- ============================================================ -->
+<!-- ESCALÓN 3 · SHEMA                                            -->
+<!-- ============================================================ -->
+<g class="escalera-nodo" data-id="escalon-3">
+  <circle cx="100" cy="570" r="28" fill="rgba(30,107,90,0.18)" stroke="#2d6b4e" stroke-width="2.5"/>
+  <text x="100" y="577" text-anchor="middle" font-size="18" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">3</text>
+  <rect x="148" y="532" width="512" height="80" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="166" y="554" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">קְרִיאַת שְׁמַע · confesión verbal de fe</text>
+  <text x="642" y="554" text-anchor="end" font-size="11" direction="rtl" fill="#2d6b4e">יִקְרָא קְרִיאַת שְׁמַע</text>
+  <text x="166" y="574" font-size="10" fill="#3d2f23" font-style="italic">invoca explícitamente la unidad divina</text>
+  <text x="166" y="590" font-size="9.5" fill="#3d2f23">verbalización SAGRADA · «Shema Yisrael HaShem Eloqenu HaShem Echad»</text>
+  <text x="166" y="604" font-size="9" fill="#6b4423" font-style="italic">nivel alto · acto litúrgico explícito · conecta con el shema sobre la cama (#12)</text>
+</g>
+
+<!-- Flecha condicional 3 -->
+<line x1="100" y1="598" x2="100" y2="674" stroke="#6b4423" stroke-width="1.2" stroke-dasharray="3,2"/>
+<text x="148" y="634" font-size="11" fill="#2d6b4e" font-style="italic">נָצַח — מוּטָב</text>
+<text x="148" y="648" font-size="9" fill="#6b4423" font-style="italic">«venció — bueno» · descansa aquí</text>
+<text x="148" y="662" font-size="9" fill="#6b4423" font-style="italic">si no venció · sube al escalón 4 (último recurso)</text>
+
+<!-- ============================================================ -->
+<!-- ESCALÓN 4 · DÍA DE LA MUERTE                                 -->
+<!-- ============================================================ -->
+<g class="escalera-nodo" data-id="escalon-4">
+  <circle cx="100" cy="710" r="30" fill="rgba(107,68,35,0.22)" stroke="#3d2f23" stroke-width="3"/>
+  <text x="100" y="717" text-anchor="middle" font-size="18" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23" font-weight="700">4</text>
+  <rect x="148" y="672" width="512" height="80" rx="5" fill="rgba(107,68,35,0.12)" stroke="#3d2f23" stroke-width="1.6"/>
+  <text x="166" y="694" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23" font-weight="700">יוֹם הַמִּיתָה · memento mori · recurso último</text>
+  <text x="642" y="694" text-anchor="end" font-size="11" direction="rtl" fill="#3d2f23">יַזְכִּיר לוֹ יוֹם הַמִּיתָה</text>
+  <text x="166" y="714" font-size="10" fill="#3d2f23" font-style="italic">contemplar la propia mortalidad reduce a polvo cualquier deseo</text>
+  <text x="166" y="730" font-size="9.5" fill="#3d2f23">recordar la cuenta final · la disolución del cuerpo · el juicio</text>
+  <text x="166" y="744" font-size="9" fill="#6b4423" font-style="italic">nivel máximo · solo cuando todo lo demás ha fallado · NO se invoca innecesariamente</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ANOTACIÓN — POR QUÉ EN ESTE ORDEN                            -->
+<!-- ============================================================ -->
+<rect x="148" y="770" width="512" height="80" rx="5" fill="rgba(107,68,35,0.04)" stroke="#6b4423" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="166" y="792" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="600">¿Por qué el shema NO es el último?</text>
+<text x="166" y="810" font-size="9.5" fill="#3d2f23">porque el shema ya es práctica HABITUAL del judío observante — se recita 2 veces al día mínimo</text>
+<text x="166" y="824" font-size="9.5" fill="#3d2f23">si el yetzer resiste al shema cotidiano, queda solo lo más drástico: la imagen de la muerte</text>
+<text x="166" y="840" font-size="9" fill="#6b4423" font-style="italic">la muerte es el recurso límite — usarlo demasiado lo desgasta · se preserva para emergencias</text>
+
+<!-- Flecha al doctrine meta -->
+<line x1="360" y1="924" x2="360" y2="944" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-y)"/>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<text x="60" y="956" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · PSICOLOGÍA HALÁJICA DEL YETZER</text>
+
+<g class="escalera-nodo" data-id="doctrina">
+  <rect x="60" y="966" width="600" height="98" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="988" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El yetzer ha-rá NO se vence con un solo golpe · es escalable</text>
+  <text x="78" y="1010" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1010" font-size="9.5" fill="#3d2f23">las técnicas van de la menor a la mayor SOLEMNIDAD ritual</text>
+  <text x="78" y="1026" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1026" font-size="9.5" fill="#3d2f23">cada nivel descansa (מוּטָב) si funciona — no se escala por escalar</text>
+  <text x="78" y="1042" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1042" font-size="9.5" fill="#3d2f23">la muerte es RECURSO LÍMITE — se preserva para no desgastarla</text>
+  <text x="360" y="1060" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">repertorio técnico vs visión simplista de la lucha contra el deseo</text>
+</g>
+
+</svg>
+</div>
+
+<div class="escalera-panel" id="escalera-panel">
+  <p class="escalera-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'Reish Lakish · la declaración nuclear',
+      hebreo: 'לְעוֹלָם יַרְגִּיז אָדָם יֵצֶר טוֹב עַל יֵצֶר הָרַע',
+      traduccion: '«Que siempre el hombre EMBRAVEZCA su yetzer tov contra su yetzer ha-rá»',
+      explicacion: 'Reish Lakish (Shimon ben Lakish), uno de los amoraim más célebres por su biografía dramática (gladiador convertido en jajam), ofrece una de las enseñanzas más sistemáticas sobre la lucha interior contra el deseo.\n\nLa palabra clave es יַרְגִּיז (ye-raguíz). Su raíz, רגז, significa «temblar, agitarse, embravecerse». Es una palabra ACTIVA y FUERTE. NO dice «que el hombre cultive su yetzer tov» o «que se concentre en su yetzer tov». Dice «EMBRAVEZCA» — agite, mobilice agresivamente.\n\nLa lección psicológica de la elección verbal:\n\n  · El yetzer tov NO es naturalmente activo\n  · Si lo dejas en estado pasivo, el yetzer ha-rá lo domina\n  · Para vencer necesitas DESPERTARLO con energía\n\nEsta es una corrección a una visión moralista ingenua que cree que «basta con tener buenas intenciones». No basta. Las buenas intenciones tienen que ser ENERGIZADAS contra las malas.\n\nLa verseta de prueba — Tehilim 4:5 «רִגְזוּ וְאַל תֶּחֱטָאוּ» — es la misma del diagrama #12 (shema sobre la cama). Aquí se lee en clave de combate interior: «embravézcanse y no pequen» = activen su yetzer tov, y el resultado será no pecar.\n\nEl mismo versículo, dos enseñanzas distintas. Esta es la cadena-fórmula editorial: el editor agrupa pasajes por verseta compartida, y nosotros descubrimos cómo un mismo texto bíblico genera múltiples derashot.'
+    },
+    'escalon-1': {
+      titulo: '1 · יַרְגִּיז — el combate interior directo',
+      hebreo: 'יַרְגִּיז יֵצֶר טוֹב עַל יֵצֶר הָרַע',
+      traduccion: '«Embravezca el yetzer tov contra el yetzer ha-rá»',
+      explicacion: 'El PRIMER escalón es el nivel mínimo: combate interior puro, voluntad contra voluntad. Sin uso de palabras, sin texto sagrado, sin invocación litúrgica.\n\nLa mecánica:\n\n  · Reconoces que tienes un impulso hacia algo malo (envidia, lujuria, cólera, deseo de transgresión)\n  · ACTIVAS conscientemente la fuerza opuesta dentro de ti — la voluntad de hacer el bien\n  · Pones las dos en confrontación deliberada\n  · La voluntad activa vence a la pasiva\n\nEste escalón es PSICOLÓGICO en estado puro. No requiere recursos externos. Está disponible siempre, en cualquier momento. Es la primera línea de defensa.\n\n¿Por qué empieza aquí?\n\nPorque la mayoría de las tentaciones son MENORES. No requieren artillería pesada. Un simple «no, no quiero hacer esto» con CONVICCIÓN activa es suficiente.\n\nLa lección pedagógica: NO escalar a recursos más fuertes innecesariamente. Si la tentación se rinde con un acto de voluntad simple, ese es el final del proceso. Recurrir a Torá o shema o memento mori para cada deseo trivial es DESPILFARRO espiritual.\n\nEl escalón 1 entrena la voluntad como músculo. Mientras más se ejercita, más fuerte se vuelve, y menos necesario es escalar.'
+    },
+    'escalon-2': {
+      titulo: '2 · תּוֹרָה — el desplazamiento del objeto',
+      hebreo: 'יַעֲסוֹק בְּתוֹרָה',
+      traduccion: '«Que se ocupe en Torá»',
+      explicacion: 'Si el escalón 1 falla — la voluntad sola no puede — se sube al SEGUNDO: el estudio de Torá.\n\nLa lógica es psicológica precisa: la mente humana NO puede sostener dos focos de atención simultáneamente con intensidad. Si pones la mente a estudiar Torá con concentración real, NO TIENE ESPACIO para procesar la tentación.\n\nLa Torá actúa como DESPLAZADOR DEL OBJETO:\n\n  · El yetzer ha-rá necesita atención mental para operar\n  · Quita la atención del objeto deseado\n  · Dirígela a otro objeto, uno SAGRADO y COMPLEJO\n  · El yetzer ha-rá pierde su combustible y se debilita\n\nEsta enseñanza es práctica: NO es «piensa en cosas santas» en abstracto. Es ESTUDIA TORÁ — un texto concreto, con su gramática, sus paralelos, sus problemas, sus comentarios. La complejidad cognitiva del estudio absorbe toda la capacidad mental.\n\nPor eso David se levantaba a chatzot a estudiar (#5 noche de David). No era piedad romántica — era PROTECCIÓN ACTIVA. Las horas nocturnas son las de mayor vulnerabilidad al yetzer ha-rá (silencio, soledad, fatiga, imágenes). David ocupaba esas horas en Torá precisamente para neutralizar el riesgo.\n\nEl escalón 2 es el preferido de los amoraim. Casi todas las enseñanzas talmúdicas sobre cómo vencer al yetzer recurren al estudio. Es la técnica favorita del rabinismo porque es REPRODUCIBLE, ENSEÑABLE, y compatible con el modo de vida rabínico (la mayoría del tiempo está disponible para estudio).'
+    },
+    'escalon-3': {
+      titulo: '3 · קְרִיאַת שְׁמַע — la confesión verbal de fe',
+      hebreo: 'יִקְרָא קְרִיאַת שְׁמַע',
+      traduccion: '«Que recite el shema»',
+      explicacion: 'Si el escalón 2 falla — incluso el estudio no logra desplazar la tentación — se sube al TERCERO: la recitación del shema.\n\nEl shema (שְׁמַע יִשְׂרָאֵל ה\' אֱלוֹקֵינוּ ה\' אֶחָד) es la confesión verbal MÁS BÁSICA de la fe judía. Su recitación:\n\n  · Verbaliza la unidad divina\n  · Invoca explícitamente a HKBH\n  · Establece al recitante como SIERVO de HKBH (acepta el yugo del reino)\n  · Es el acto litúrgico más cargado del repertorio judío\n\nEl mecanismo aquí no es solo psicológico (como en el escalón 2) — es TEOLÓGICO. El shema no solo distrae la mente: REORIENTA al hombre ante HKBH. Después de proclamar la unidad divina, transgredir es ABSURDO — sería contradecir verbalmente lo que acabas de afirmar.\n\nLa conexión con el diagrama anterior (#12) es directa: el shema sobre la cama protege contra los mazikin externos. Aquí, el shema combate al mazik interno — el yetzer ha-rá que opera dentro del hombre.\n\nNote la elegancia: el mismo recurso (shema) sirve tanto para protección EXTERIOR (mazikin) como INTERIOR (yetzer). Es la herramienta más polivalente del repertorio.\n\n¿Por qué no es el cuarto escalón? Porque el shema es ya práctica HABITUAL — se recita al menos dos veces al día. Si el yetzer ha-rá ya está acostumbrado al shema cotidiano y no se rinde ante su recitación, queda solo lo más drástico. El shema es poderoso, pero no infinito en su poder de impacto sorpresa.'
+    },
+    'escalon-4': {
+      titulo: '4 · יוֹם הַמִּיתָה — el memento mori final',
+      hebreo: 'יַזְכִּיר לוֹ יוֹם הַמִּיתָה',
+      traduccion: '«Que le recuerde el día de la muerte»',
+      explicacion: 'El CUARTO y último escalón: contemplar la propia mortalidad. Cuando todo lo demás ha fallado, queda esta arma final.\n\nLa lógica es psicológica radical: ningún deseo carnal sobrevive a la contemplación honesta de la muerte. La imagen de:\n\n  · El cuerpo en descomposición\n  · La cuenta final ante el tribunal celestial\n  · La nada que queda de los placeres acumulados\n  · La irreversibilidad de las decisiones del último momento\n\nfunciona como ACIDO CORROSIVO sobre los deseos del momento. ¿Qué importa esta gratificación cuando dentro de poco serás polvo?\n\nEsta técnica tiene una historia larga en la tradición ascética (no solo judía). Los estoicos romanos practicaban memento mori. Los monjes cristianos meditaban sobre el cráneo (ad mortem cogita). Reish Lakish la canoniza en el rabinismo como RECURSO LÍMITE.\n\n¿Por qué último? Porque tiene un costo:\n\n  · Es DEPRESIVA si se invoca demasiado — el hombre que vive constantemente recordando la muerte se vuelve melancólico\n  · Es DESGASTANTE — pierde fuerza con la repetición\n  · Es DESPROPORCIONADA para deseos triviales — usar pensamientos de la muerte para resistir, por ejemplo, comer un dulce extra es maladie de la imaginación\n\nReish Lakish lo coloca al final POR DEFENSA del recurso: no se gasta. Se reserva para los momentos en que realmente importa.\n\nEn las codificaciones halájicas posteriores (Rambam, Hil. Tshuvá; Shulján Aruj OC 231), esta técnica aparece pero siempre con la nota de moderación. La vida judía NO es una vida obsesionada con la muerte — es una vida que TIENE la muerte como recurso para los momentos críticos.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · psicología halájica del yetzer',
+      hebreo: 'הַסּוּלָּם נֶגֶד הַיֵּצֶר',
+      traduccion: 'La escalera contra el yetzer',
+      explicacion: 'La escalera de Reish Lakish revela una psicología halájica sofisticada que se separa de visiones simplistas de la lucha contra el deseo.\n\nLa visión simplista dice: «simplemente di no», «ten más fuerza de voluntad», «sé más santo». Esta visión culpa al individuo cuando falla — la falta de voluntad es atribuida a falta de carácter.\n\nLa visión talmúdica es ESTRUCTURAL:\n\n  1. El yetzer ha-rá NO es un enemigo fácil. Es una fuerza COMPLEJA que requiere repertorio técnico.\n\n  2. Hay NIVELES de tentación. Lo que funciona para una tentación menor (escalón 1) no funciona para una mayor (escalón 4).\n\n  3. La halajá PROVEE LAS HERRAMIENTAS — no exige al individuo inventar técnicas. La escala está canonizada. El usuario solo necesita saber escalar.\n\n  4. NO se escala por escalar. Cada nivel tiene su «מוּטָב» (descansa aquí si funciona). El usuario para en el primer nivel efectivo.\n\n  5. Los recursos MÁS PODEROSOS se preservan. Memento mori es el último porque desgastarlo lo debilita.\n\nEsta es una pedagogía espiritual madura. Reconoce que:\n\n  · La gente NO es uniforme — algunos tendrán éxito en escalón 1, otros necesitarán escalón 4\n  · El nivel de éxito puede VARIAR con la circunstancia — el mismo individuo puede necesitar el escalón 4 en un momento crítico aunque normalmente el escalón 1 le baste\n  · La gracia divina no reemplaza la TÉCNICA — el judío se entrena en el repertorio y lo aplica según el caso\n\nEsta escalera se conecta con el resto del perek:\n\n  · #5 (kinor de David) — David se levanta a chatzot y estudia Torá (escalón 2)\n  · #7 (David chasid) — David examina niddah en lugar de pompa (escalón 1 mantenido por estructura de vida)\n  · #11 (Ashrei × 3) — recitación habitual del salmo como práctica preventiva diaria\n  · #12 (cuatro ángeles) — protección EXTERNA contra mazikin · ahora #13 protección INTERNA contra yetzer\n\nEl perek se está revelando como un MANUAL TÉCNICO completo de la vida espiritual judía: protocolos para cada peligro, técnicas para cada nivel, herramientas para cada momento.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.escalera-interactivo')
+    : document.querySelector('.escalera-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#escalera-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.escalera-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="escalera-panel-header">' +
+        '<p class="escalera-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="escalera-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="escalera-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="escalera-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.escalera-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.escalera-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="escalera-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
