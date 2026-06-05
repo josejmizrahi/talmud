@@ -465,16 +465,44 @@
       "slug": "yisurim-shel-ahava",
       "orden": 14,
       "titulo": "Yisurim shel ahavá · doctrina completa",
-      "subtitulo": "diagnóstico, aceptación, las tres escenas médicas",
+      "subtitulo": "diagnóstico · los tres regalos · las tres escenas médicas",
       "dapim": [
         "5a",
         "5b"
       ],
       "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/yisurim-shel-ahava.html",
+      "sabios": [
+        "rava",
+        "r-yojanan",
+        "r-shimon-bar-yojai",
+        "r-jiya-bar-aba",
+        "r-janina",
+        "r-elazar",
+        "r-yaakov-bar-idi",
+        "r-aja-bar-janina"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "mishlei-3-12",
+        "tehilim-94-12",
+        "devarim-8-5",
+        "mishlei-6-23",
+        "tehilim-94-13"
+      ],
+      "conceptos": [
+        "yisurim",
+        "yisurim-shel-ahava",
+        "bitul-tora",
+        "bitul-tefila",
+        "tres-regalos",
+        "nejamat-avelim"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #13 estableció la escalera contra el yetzer hará — la\nlucha INTERIOR contra el deseo. Pero hay un sufrimiento que NO\nproviene del propio yetzer: el dolor que HKBH envía. La sugyá\npasa de la auto-disciplina al sufrimiento RECIBIDO. Reish Lakish\ncerró con «recordar el día de la muerte»; ahora la guemará explora\nel más difícil de los temas — ¿por qué sufren los justos? La\ntransición es de la muerte como recurso espiritual al sufrimiento\ncomo enigma teológico.\n"
+      }
     },
     {
       "slug": "tres-regalos",
@@ -785,12 +813,32 @@
       "nombre": "Rav Yitzjak Bar Shmuel"
     },
     {
-      "slug": "r-meir",
-      "nombre": "R Meir"
+      "slug": "r-shimon-bar-yojai",
+      "nombre": "R Shimon Bar Yojai"
+    },
+    {
+      "slug": "r-jiya-bar-aba",
+      "nombre": "R Jiya Bar Aba"
     },
     {
       "slug": "r-janina",
       "nombre": "R Janina"
+    },
+    {
+      "slug": "r-elazar",
+      "nombre": "R Elazar"
+    },
+    {
+      "slug": "r-yaakov-bar-idi",
+      "nombre": "R Yaakov Bar Idi"
+    },
+    {
+      "slug": "r-aja-bar-janina",
+      "nombre": "R Aja Bar Janina"
+    },
+    {
+      "slug": "r-meir",
+      "nombre": "R Meir"
     },
     {
       "slug": "r-ajai",
@@ -907,6 +955,26 @@
     {
       "slug": "tehilim-119-148",
       "nombre": "Tehilim 119 148"
+    },
+    {
+      "slug": "mishlei-3-12",
+      "nombre": "Mishlei 3 12"
+    },
+    {
+      "slug": "tehilim-94-12",
+      "nombre": "Tehilim 94 12"
+    },
+    {
+      "slug": "devarim-8-5",
+      "nombre": "Devarim 8 5"
+    },
+    {
+      "slug": "mishlei-6-23",
+      "nombre": "Mishlei 6 23"
+    },
+    {
+      "slug": "tehilim-94-13",
+      "nombre": "Tehilim 94 13"
     }
   ],
   "conceptos": [
@@ -1134,6 +1202,30 @@
       "nombre": "Signos Terrestres"
     },
     {
+      "slug": "yisurim",
+      "nombre": "Yisurim"
+    },
+    {
+      "slug": "yisurim-shel-ahava",
+      "nombre": "Yisurim Shel Ahava"
+    },
+    {
+      "slug": "bitul-tora",
+      "nombre": "Bitul Tora"
+    },
+    {
+      "slug": "bitul-tefila",
+      "nombre": "Bitul Tefila"
+    },
+    {
+      "slug": "tres-regalos",
+      "nombre": "Tres Regalos"
+    },
+    {
+      "slug": "nejamat-avelim",
+      "nombre": "Nejamat Avelim"
+    },
+    {
       "slug": "zman-shema",
       "nombre": "Zman Shema"
     },
@@ -1248,6 +1340,14 @@
       "peso": 3
     },
     {
+      "from": "escalera-yetzer",
+      "to": "yisurim-shel-ahava",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #13 estableció la escalera contra el yetzer hará — la\nlucha INTERIOR contra el deseo. Pero hay un sufrimiento que NO\nproviene del propio yetzer: el dolor que HKBH envía. La sugyá\npasa de la auto-disciplina al sufrimiento RECIBIDO. Reish Lakish\ncerró con «recordar el día de la muerte»; ahora la guemará explora\nel más difícil de los temas — ¿por qué sufren los justos? La\ntransición es de la muerte como recurso espiritual al sufrimiento\ncomo enigma teológico.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -1301,6 +1401,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-janina",
       "peso": 1
     },
     {
@@ -1424,6 +1532,14 @@
       "peso": 1
     },
     {
+      "from": "noche-de-david",
+      "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
       "from": "gobierno-tripartito",
       "to": "david-chasid",
       "categoria": "co-referencia",
@@ -1480,6 +1596,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -1501,6 +1625,22 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
       "peso": 1
     },
     {

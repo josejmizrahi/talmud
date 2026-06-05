@@ -1,0 +1,395 @@
+<div class="yisurim-interactivo">
+<style>
+  .yisurim-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .yisurim-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .yisurim-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .yisurim-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .yisurim-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .yisurim-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .yisurim-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .yisurim-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .yisurim-diagrama svg { width: 100%; height: auto; display: block; }
+  .yisurim-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .yisurim-nodo:hover rect { stroke-width: 2 !important; }
+  .yisurim-nodo:hover circle { stroke-width: 2.5 !important; }
+  .yisurim-nodo.activa rect { stroke-width: 2.5 !important; }
+  .yisurim-nodo.activa circle { stroke-width: 3 !important; }
+  .yisurim-nodo.dim { opacity: 0.32; }
+  .yisurim-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .yisurim-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .yisurim-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .yisurim-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .yisurim-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .yisurim-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .yisurim-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="yisurim-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>diagnóstico · definición</span>
+  <span><span class="swatch verde"></span>los tres regalos</span>
+  <span><span class="swatch rojo"></span>la condición límite</span>
+  <span><span class="swatch azul"></span>las tres escenas médicas</span>
+  <span><span class="swatch sepia"></span>doctrina meta</span>
+</div>
+
+<div class="yisurim-diagrama">
+<svg viewBox="0 0 720 1320" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 5a-5b: yisurim shel ahavá · el diagnóstico, los tres regalos, las tres escenas médicas</title>
+
+<defs>
+  <marker id="flecha-yi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-yi-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-yi-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Yisurim shel ahavá · la doctrina del sufrimiento</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 5a–5b · ¿por qué sufren los justos? · diagnóstico · tres regalos · tres escenas</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · RAVA                                   -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · RAVA · 5A</text>
+
+<g class="yisurim-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="78" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אִם רוֹאֶה אָדָם שֶׁיִּסּוּרִין בָּאִין עָלָיו — יְפַשְׁפֵּשׁ בְּמַעֲשָׂיו</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Si una persona ve que le vienen sufrimientos — que examine sus actos»</text>
+  <text x="360" y="152" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">el sufrimiento se diagnostica como un médico: por descarte progresivo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PROTOCOLO DIAGNÓSTICO DE TRES PASOS                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="164" x2="360" y2="182" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yi-gold)"/>
+
+<text x="60" y="194" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PROTOCOLO DIAGNÓSTICO · DESCARTE PROGRESIVO</text>
+
+<!-- Paso 1 -->
+<g class="yisurim-nodo" data-id="paso-pecado">
+  <rect x="60" y="204" width="600" height="58" rx="5" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <circle cx="92" cy="233" r="16" fill="rgba(107,68,35,0.18)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="92" y="238" text-anchor="middle" font-size="13" fill="#6b4423" font-weight="700">1</text>
+  <text x="120" y="226" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿hay un pecado específico?</text>
+  <text x="642" y="226" text-anchor="end" font-size="10.5" direction="rtl" fill="#6b4423">יְפַשְׁפֵּשׁ בְּמַעֲשָׂיו</text>
+  <text x="120" y="245" font-size="9.5" fill="#3d2f23">examina tus actos · si encuentras pecado → arrepiéntete · si NO →</text>
+  <text x="120" y="258" font-size="9" fill="#6b4423" font-style="italic">descarta esta causa y baja al paso 2</text>
+</g>
+
+<line x1="360" y1="262" x2="360" y2="278" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-yi)"/>
+
+<!-- Paso 2 -->
+<g class="yisurim-nodo" data-id="paso-bitul">
+  <rect x="60" y="280" width="600" height="58" rx="5" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <circle cx="92" cy="309" r="16" fill="rgba(107,68,35,0.18)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="92" y="314" text-anchor="middle" font-size="13" fill="#6b4423" font-weight="700">2</text>
+  <text x="120" y="302" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿hay negligencia en el estudio de Torá?</text>
+  <text x="642" y="302" text-anchor="end" font-size="10.5" direction="rtl" fill="#6b4423">יִתְלֶה בְּבִיטּוּל תּוֹרָה</text>
+  <text x="120" y="321" font-size="9.5" fill="#3d2f23">atribúyelo a bitul Torá · si era eso → refuerza el estudio · si NO →</text>
+  <text x="120" y="334" font-size="9" fill="#6b4423" font-style="italic">descarta esta causa y baja al paso 3</text>
+</g>
+
+<line x1="360" y1="338" x2="360" y2="354" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yi-gold)"/>
+
+<!-- Paso 3 - conclusión -->
+<g class="yisurim-nodo" data-id="paso-ahava">
+  <rect x="60" y="356" width="600" height="66" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <circle cx="92" cy="389" r="16" fill="rgba(184,134,11,0.24)" stroke="#b8860b" stroke-width="2"/>
+  <text x="92" y="394" text-anchor="middle" font-size="13" fill="#b8860b" font-weight="700">3</text>
+  <text x="120" y="380" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">se sabe: son YISURIM SHEL AHAVÁ</text>
+  <text x="642" y="380" text-anchor="end" font-size="11" direction="rtl" fill="#b8860b">יִסּוּרִין שֶׁל אַהֲבָה</text>
+  <text x="120" y="400" font-size="10" fill="#3d2f23" font-style="italic">solo cuando se descartan las causas-castigo se concluye: el dolor es de AMOR</text>
+  <text x="120" y="415" font-size="9" fill="#6b4423" font-style="italic">Mishlei 3:12 — «a quien HKBH ama, reprende · como un padre al hijo que quiere»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA CONDICIÓN LÍMITE                                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="422" x2="360" y2="440" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-yi-red)"/>
+
+<text x="60" y="452" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CONDICIÓN LÍMITE · RAVA PRECISA · 5B</text>
+
+<g class="yisurim-nodo" data-id="condicion">
+  <rect x="60" y="462" width="600" height="72" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="485" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">וְהוּא דְּלָא מְבַטֵּל בְּהוּ לֹא תּוֹרָה וְלֹא תְּפִלָּה</text>
+  <text x="360" y="505" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Y eso [son de amor] siempre que NO le impidan ni Torá ni tefilá»</text>
+  <text x="360" y="524" text-anchor="middle" font-size="9.5" fill="#6b4423">si el dolor es tan grande que anula el estudio o el rezo → NO son yisurim shel ahavá</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS TRES REGALOS                                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="534" x2="360" y2="552" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-yi)"/>
+
+<text x="60" y="564" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LOS TRES REGALOS · R. SHIMON BAR YOJAI · 5A</text>
+
+<g class="yisurim-nodo" data-id="tres-regalos">
+  <rect x="60" y="574" width="600" height="156" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="596" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">«Tres buenos regalos dio HKBH a Israel — todos solo a través del sufrimiento»</text>
+
+  <!-- Regalo 1 -->
+  <rect x="78" y="612" width="186" height="100" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="171" y="632" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">תּוֹרָה</text>
+  <text x="171" y="648" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">la Torá</text>
+  <text x="171" y="670" text-anchor="middle" font-size="8.5" fill="#3d2f23">Tehilim 94:12</text>
+  <text x="88" y="686" font-size="8" fill="#6b4423">אַשְׁרֵי הַגֶּבֶר אֲשֶׁר</text>
+  <text x="88" y="698" font-size="8" fill="#6b4423">תְּיַסְּרֶנּוּ יָ-הּ</text>
+  <text x="171" y="708" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">«…y de tu Torá le enseñas»</text>
+
+  <!-- Regalo 2 -->
+  <rect x="267" y="612" width="186" height="100" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="360" y="632" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">אֶרֶץ יִשְׂרָאֵל</text>
+  <text x="360" y="648" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">la Tierra de Israel</text>
+  <text x="360" y="670" text-anchor="middle" font-size="8.5" fill="#3d2f23">Devarim 8:5</text>
+  <text x="277" y="686" font-size="8" fill="#6b4423">כִּי כַּאֲשֶׁר יְיַסֵּר</text>
+  <text x="277" y="698" font-size="8" fill="#6b4423">אִישׁ אֶת בְּנוֹ</text>
+  <text x="360" y="708" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">(seguido de «tierra buena»)</text>
+
+  <!-- Regalo 3 -->
+  <rect x="456" y="612" width="186" height="100" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="549" y="632" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">עוֹלָם הַבָּא</text>
+  <text x="549" y="648" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">el mundo venidero</text>
+  <text x="549" y="670" text-anchor="middle" font-size="8.5" fill="#3d2f23">Mishlei 6:23</text>
+  <text x="466" y="686" font-size="8" fill="#6b4423">כִּי נֵר מִצְוָה וְתוֹרָה אוֹר</text>
+  <text x="466" y="698" font-size="8" fill="#6b4423">וְדֶרֶךְ חַיִּים תּוֹכְחוֹת מוּסָר</text>
+  <text x="549" y="708" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">«el camino de vida: reproches»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS TRES ESCENAS MÉDICAS · CORAZÓN DE LA SUGYÁ              -->
+<!-- ============================================================ -->
+<line x1="360" y1="730" x2="360" y2="748" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-yi)"/>
+
+<text x="60" y="760" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LAS TRES ESCENAS MÉDICAS · BIQUR JOLIM · 5B</text>
+
+<!-- El estribillo compartido -->
+<g class="yisurim-nodo" data-id="estribillo">
+  <rect x="60" y="770" width="600" height="64" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="360" y="790" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="600">El estribillo que se repite en las tres escenas</text>
+  <text x="360" y="809" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">חֲבִיבִין עָלֶיךָ יִסּוּרִין? · לֹא הֵן וְלֹא שְׂכָרָן · הַב לִי יָדָךְ</text>
+  <text x="360" y="826" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«¿te son queridos los sufrimientos? — ni ellos ni su recompensa — dame tu mano»</text>
+</g>
+
+<!-- Escena 1 -->
+<line x1="360" y1="834" x2="360" y2="850" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-yi)"/>
+<g class="yisurim-nodo" data-id="escena-1">
+  <rect x="60" y="852" width="600" height="92" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <circle cx="96" cy="888" r="18" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="96" y="894" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="128" y="876" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">R. Jiyá bar Aba enfermo · lo visita R. Yojanan</text>
+  <text x="128" y="896" font-size="10" fill="#3d2f23">R. Yojanan le da la mano y lo levanta · <tspan font-style="italic" fill="#1e3a5f">el SANO cura al enfermo</tspan></text>
+  <text x="128" y="914" font-size="9.5" fill="#3d2f23">el maestro responde al dolor con presencia y contacto físico — la mano que levanta</text>
+  <text x="128" y="932" font-size="9" fill="#6b4423" font-style="italic">incluso el gran sabio enfermo dice «ni ellos ni su recompensa» — la doctrina no obliga a amar el dolor</text>
+</g>
+
+<!-- Escena 2 -->
+<line x1="360" y1="944" x2="360" y2="960" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-yi)"/>
+<g class="yisurim-nodo" data-id="escena-2">
+  <rect x="60" y="962" width="600" height="102" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <circle cx="96" cy="1003" r="18" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="96" y="1009" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="128" y="986" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">R. Yojanan enfermo · lo visita R. Janina</text>
+  <text x="128" y="1006" font-size="10" fill="#3d2f23">¿por qué R. Yojanan no se curó a sí mismo (si curó a otro en la escena 1)?</text>
+  <text x="360" y="1026" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">אֵין חָבוּשׁ מַתִּיר עַצְמוֹ מִבֵּית הָאֲסוּרִים</text>
+  <text x="128" y="1044" font-size="10" fill="#3d2f23" font-style="italic">«el prisionero no se libera a sí mismo de la cárcel» — NADIE se cura solo</text>
+  <text x="128" y="1059" font-size="9" fill="#6b4423" font-style="italic">el que cura necesita ser curado por otro · la salvación es siempre relacional</text>
+</g>
+
+<!-- Escena 3 -->
+<line x1="360" y1="1064" x2="360" y2="1080" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-yi)"/>
+<g class="yisurim-nodo" data-id="escena-3">
+  <rect x="60" y="1082" width="600" height="116" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <circle cx="96" cy="1130" r="18" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="96" y="1136" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">3</text>
+  <text x="128" y="1104" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">R. Elazar enfermo y LLORANDO · lo visita R. Yojanan</text>
+  <text x="128" y="1124" font-size="10" fill="#3d2f23">R. Yojanan refuta cada razón de llanto · al fin R. Elazar revela la verdadera:</text>
+  <text x="360" y="1144" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">עַל הַאי שׁוּפְרָא דְּבָלֵי בְּעַפְרָא קָא בָכֵינָא</text>
+  <text x="128" y="1162" font-size="10" fill="#3d2f23" font-style="italic">«lloro por esta belleza que se descompondrá en el polvo»</text>
+  <text x="128" y="1180" font-size="10" fill="#3d2f23">R. Yojanan: «por esto, ciertamente, vale llorar» — <tspan font-style="italic" fill="#1e3a5f">וּבְכוֹ תַּרְוַויְיהוּ · y lloraron ambos</tspan></text>
+  <text x="128" y="1194" font-size="9" fill="#6b4423" font-style="italic">la doctrina justifica el sufrimiento · pero el maestro LLORA junto al que sufre</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META -->
+<!-- ============================================================ -->
+<line x1="360" y1="1198" x2="360" y2="1216" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-yi)"/>
+
+<g class="yisurim-nodo" data-id="doctrina">
+  <rect x="60" y="1220" width="600" height="84" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1242" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La tensión central de la sugyá</text>
+  <text x="360" y="1262" text-anchor="middle" font-size="9.5" fill="#3d2f23">la doctrina JUSTIFICA el sufrimiento (es de amor · compra los bienes supremos)</text>
+  <text x="360" y="1278" text-anchor="middle" font-size="9.5" fill="#3d2f23">pero los mismos sabios, al sufrir, lo RECHAZAN: «ni ellos ni su recompensa»</text>
+  <text x="360" y="1296" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">se puede entender el valor del dolor y aun así no quererlo · y nadie se cura solo</text>
+</g>
+
+</svg>
+</div>
+
+<div class="yisurim-panel" id="yisurim-panel">
+  <p class="yisurim-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'Rava · el sufrimiento se diagnostica',
+      hebreo: 'אִם רוֹאֶה אָדָם שֶׁיִּסּוּרִין בָּאִין עָלָיו — יְפַשְׁפֵּשׁ בְּמַעֲשָׂיו',
+      traduccion: '«Si una persona ve que le vienen sufrimientos — que examine sus actos»',
+      explicacion: 'La sugyá del sufrimiento abre con un principio metodológico: el dolor NO se acepta pasivamente ni se rechaza ciegamente. Se DIAGNOSTICA.\n\nLa palabra clave es יְפַשְׁפֵּשׁ (yefashpesh) — «que examine, que escudriñe». La misma raíz se usa para registrar minuciosamente, buscar en cada rincón. El sufrimiento es una señal que demanda investigación.\n\nLa actitud es notablemente RACIONAL para un tema tan emotivo. Ante el dolor, el judío no se desespera ni se resigna: investiga sus causas. El sufrimiento es información — una comunicación de HKBH que requiere descifrado.\n\nEsto establece el marco de toda la sugyá: el sufrimiento tiene SENTIDO, y el sentido es DISCERNIBLE mediante un protocolo. El protocolo tiene tres pasos, que la guemará desarrolla en secuencia.\n\nLa actitud diagnóstica es terapéutica en sí misma: convierte el dolor de experiencia pasiva (algo que ME pasa) en objeto de análisis activo (algo que YO investigo). El sufridor recupera agencia.'
+    },
+    'paso-pecado': {
+      titulo: '1 · ¿hay un pecado específico?',
+      hebreo: 'יְפַשְׁפֵּשׁ בְּמַעֲשָׂיו',
+      traduccion: '«Que examine sus actos»',
+      explicacion: 'El PRIMER paso del diagnóstico: buscar un pecado concreto.\n\nLa teología de base es la retribución: el sufrimiento puede ser CASTIGO por una transgresión específica. Antes de cualquier otra explicación, hay que descartar esta — la más obvia y la más común.\n\nEl examen es honesto y minucioso (פשפש). No es un autoexamen superficial («soy buena persona») sino una revisión seria de la conducta reciente: ¿hubo una injusticia? ¿una falta de honestidad? ¿una negligencia con otros? ¿una transgresión ritual?\n\nDos resultados posibles:\n\n  · SI encuentra un pecado → el camino es la teshuvá (arrepentimiento). El sufrimiento cumplió su función: alertar sobre la falta. Corregida la falta, no hay más que investigar.\n\n  · SI NO encuentra nada → no significa que el sufrimiento sea injusto. Significa que hay que SEGUIR investigando. Se descarta esta causa y se baja al paso 2.\n\nLa honestidad del paso 1 es crucial. Un autoexamen complaciente que no encuentra pecados porque no busca seriamente corrompe todo el protocolo. La sinceridad del primer paso es la base de la validez del diagnóstico entero.'
+    },
+    'paso-bitul': {
+      titulo: '2 · ¿hay negligencia en el estudio de Torá?',
+      hebreo: 'יִתְלֶה בְּבִיטּוּל תּוֹרָה',
+      traduccion: '«Que lo atribuya a la negligencia en Torá»',
+      explicacion: 'El SEGUNDO paso: si no hay pecado de acción, examinar la negligencia en el estudio.\n\nEl bitul Torá (la anulación o el descuido del estudio) es una categoría distinta del pecado activo. NO es hacer algo malo — es DEJAR de hacer algo bueno y obligatorio. El estudio de Torá es una obligación constante; descuidarlo es una falta por omisión.\n\nLa teología aquí es sutil: el sufrimiento puede venir no por un acto concreto sino por un vacío — la ausencia de Torá en la vida. El estudio es el alma de la existencia judía; su descuido produce un desequilibrio que el sufrimiento señala.\n\nLa lógica de la secuencia es importante:\n\n  · Primero se descartan los pecados de ACCIÓN (más visibles, más graves)\n  · Luego los de OMISIÓN (más sutiles, más difíciles de detectar)\n\nEl bitul Torá es difícil de diagnosticar porque casi siempre se puede estudiar MÁS. ¿Cuándo es «negligencia» y cuándo es límite humano razonable? La sugyá no lo cuantifica — deja al sufridor la honestidad del autoexamen.\n\nDos resultados:\n  · SI era bitul Torá → reforzar el estudio.\n  · SI NO → se descarta y se baja al paso 3, la conclusión más profunda.'
+    },
+    'paso-ahava': {
+      titulo: '3 · yisurim shel ahavá — sufrimientos de amor',
+      hebreo: 'בְּיָדוּעַ שֶׁיִּסּוּרִין שֶׁל אַהֲבָה הֵם',
+      traduccion: '«Se sabe entonces que son sufrimientos de amor»',
+      explicacion: 'La CONCLUSIÓN del protocolo: si no hay pecado de acción ni de omisión, el sufrimiento es de AMOR.\n\nEsta es la doctrina más audaz de la sugyá. Hay sufrimientos que NO son castigo en absoluto. Vienen del amor divino. Son la marca de una relación especial, no de un déficit.\n\nLa verseta de base es Mishlei 3:12:\n  «כִּי אֶת אֲשֶׁר יֶאֱהַב ה\' יוֹכִיחַ · וּכְאָב אֶת בֵּן יִרְצֶה»\n  «Porque a quien HKBH ama, reprende — como un padre al hijo que quiere»\n\nLa analogía es PATERNAL. Un padre que ama corrige a su hijo — no por rechazo, sino por inversión en su crecimiento. La corrección es la forma más íntima del cuidado. El padre indiferente no corrige; el padre que ama, sí.\n\nLa lógica teológica:\n\n  · HKBH no «castiga» a estos justos — los REFINA\n  · El sufrimiento purifica, eleva, prepara para recompensas mayores\n  · Es señal de cercanía, no de distancia\n  · El justo que sufre sin pecado está siendo TRATADO como un hijo amado\n\nPero — y esto es crucial — la conclusión NO es que el sufridor deba ALEGRARSE del dolor. Las escenas médicas que cierran la sugyá muestran a los mismos grandes sabios diciendo «ni ellos ni su recompensa». Entender que el sufrimiento es de amor NO obliga a desearlo. Esta tensión es el corazón de la sugyá.'
+    },
+    'condicion': {
+      titulo: 'La condición límite · que no anulen Torá ni tefilá',
+      hebreo: 'וְהוּא דְּלָא מְבַטֵּל בְּהוּ לֹא תּוֹרָה וְלֹא תְּפִלָּה',
+      traduccion: '«Siempre que no le impidan ni Torá ni tefilá»',
+      explicacion: 'Rava precisa una CONDICIÓN crucial que limita la doctrina: el sufrimiento solo es «de amor» si NO impide al hombre estudiar Torá ni rezar.\n\nLa lógica es teológicamente profunda. El propósito del sufrimiento de amor es ELEVAR al hombre — refinarlo, acercarlo a HKBH. Pero si el dolor es tan intenso que el hombre NO puede estudiar ni rezar, entonces el sufrimiento ALEJA en lugar de acercar. Habría destruido su propio propósito.\n\nEl criterio es funcional:\n\n  · Sufrimiento de amor = duele, pero el hombre todavía puede crecer espiritualmente a través de él\n  · Sufrimiento que anula Torá/tefilá = corta la conexión espiritual misma — ya no puede ser «de amor»\n\nEsta condición tiene una implicación práctica importante: el sufrimiento extremo, incapacitante, que destruye la capacidad de servir a HKBH, NO se clasifica como yisurim shel ahavá. Es otra cosa — quizá sufrimiento sin sentido discernible, quizá un misterio que excede el protocolo.\n\nLa precisión de Rava protege la doctrina de un abuso peligroso: no se puede usar «yisurim shel ahavá» para justificar CUALQUIER sufrimiento. El dolor que rompe a la persona — que la deja sin capacidad de estudio, oración, conexión — no entra en la categoría consoladora. La doctrina tiene límites honestos.\n\nEsto resuena con la posición de muchos pensadores posteriores: hay sufrimientos que NO se pueden teologizar, que exceden toda explicación. El judaísmo no pretende justificar TODO dolor.'
+    },
+    'tres-regalos': {
+      titulo: 'Los tres regalos · R. Shimon bar Yojai',
+      hebreo: 'שָׁלוֹשׁ מַתָּנוֹת טוֹבוֹת נָתַן הַקָּדוֹשׁ בָּרוּךְ הוּא לְיִשְׂרָאֵל וְכוּלָּן לֹא נְתָנָן אֶלָּא עַל יְדֵי יִסּוּרִין',
+      traduccion: '«Tres buenos regalos dio HKBH a Israel — y todos los dio solo a través del sufrimiento»',
+      explicacion: 'R. Shimon bar Yojai (Rashbi) ofrece la dimensión POSITIVA del sufrimiento: es el precio de los bienes más altos.\n\nLos TRES regalos supremos del judaísmo, y cada uno se «compra» con sufrimiento:\n\n  1. TORÁ — Tehilim 94:12: «אַשְׁרֵי הַגֶּבֶר אֲשֶׁר תְּיַסְּרֶנּוּ יָ-הּ וּמִתּוֹרָתְךָ תְּלַמְּדֶנּוּ» («Feliz el hombre a quien Tú disciplinas, Yah, y de tu Torá le enseñas»). El versículo une disciplina (yisurim) y enseñanza de Torá en una sola frase. La Torá se ADQUIERE a través del sufrimiento — el estudio profundo requiere sacrificio, privación, esfuerzo doloroso.\n\n  2. ERETZ ISRAEL — Devarim 8:5, donde «כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ» (la disciplina paternal) precede la promesa de la tierra buena en 8:7. La Tierra se gana a través de tribulación — el desierto, las pruebas, la conquista.\n\n  3. OLAM HA-BA — Mishlei 6:23: «כִּי נֵר מִצְוָה וְתוֹרָה אוֹר וְדֶרֶךְ חַיִּים תּוֹכְחוֹת מוּסָר» («el camino de la vida son los reproches de la disciplina»). El mundo venidero — la recompensa eterna — se alcanza a través de la corrección (tochajot musar).\n\nLa estructura es magistral: las tres adquisiciones más altas (sabiduría, hogar, eternidad) NO se regalan gratis. Pasan por el crisol del sufrimiento.\n\nLa enseñanza de Rashbi NO contradice la condición de Rava — la complementa. El sufrimiento de amor es PRODUCTIVO: refina al hombre y le da acceso a bienes que no podría adquirir de otro modo. El dolor tiene un fruto.\n\nPero, de nuevo, la sugyá no romantiza. Las escenas médicas que siguen muestran que incluso quienes ENSEÑAN esta doctrina, cuando les toca sufrir, dicen «ni ellos ni su recompensa».'
+    },
+    'estribillo': {
+      titulo: 'El estribillo de las tres escenas',
+      hebreo: 'חֲבִיבִין עָלֶיךָ יִסּוּרִין? · לֹא הֵן וְלֹא שְׂכָרָן · הַב לִי יָדָךְ',
+      traduccion: '«¿Te son queridos los sufrimientos? — Ni ellos ni su recompensa — Dame tu mano»',
+      explicacion: 'Las tres escenas médicas comparten un ESTRIBILLO de tres movimientos que se repite idéntico. Esta repetición es deliberada — un recurso narrativo que convierte el diálogo en ritmo, casi en liturgia.\n\nLos tres movimientos:\n\n  1. LA PREGUNTA — «חֲבִיבִין עָלֶיךָ יִסּוּרִין?» («¿te son queridos los sufrimientos?»). El visitante pregunta al enfermo si valora su dolor a la luz de la doctrina (después de todo, los yisurim shel ahavá compran la Torá, la Tierra, el olam ha-ba). Es una pregunta casi provocadora: ¿pones en práctica lo que enseñas?\n\n  2. LA RESPUESTA — «לֹא הֵן וְלֹא שְׂכָרָן» («ni ellos ni su recompensa»). La respuesta es ASOMBROSA. El gran sabio enfermo dice: no quiero ni los sufrimientos NI la recompensa que traen. Prefiero no tener ninguno de los dos. Rechaza la transacción entera.\n\n  3. LA MANO — «הַב לִי יָדָךְ» («dame tu mano»). El visitante extiende la mano, el enfermo la toma, y el visitante lo LEVANTA — lo cura. El contacto físico, la mano que se ofrece, es el vehículo de la sanación.\n\nLa genialidad del estribillo: muestra que la teología (los yisurim son de amor, compran bienes supremos) y la experiencia humana (el dolor es indeseable, hasta para los más santos) COEXISTEN sin resolverse.\n\nLa respuesta «ni ellos ni su recompensa» es la honestidad espiritual más alta: estos sabios CONOCEN la doctrina mejor que nadie — algunos la ENSEÑARON — y aun así, cuando les toca, no quieren el dolor. No hay hipocresía en esto. Hay madurez: entender el valor de algo y aun así no desearlo es perfectamente coherente.\n\nY la MANO: la solución final no es teológica sino RELACIONAL. No se cura con un argumento — se cura con el contacto del otro.'
+    },
+    'escena-1': {
+      titulo: 'Escena 1 · R. Jiyá bar Aba enfermo · el sano cura',
+      hebreo: 'נְפַל בֵּיהּ רַבִּי חִיָּיא בַּר אַבָּא · עָל לְגַבֵּיהּ רַבִּי יוֹחָנָן',
+      traduccion: 'R. Jiyá bar Aba cayó enfermo · entró a verlo R. Yojanan',
+      explicacion: 'La PRIMERA escena médica. R. Jiyá bar Aba está enfermo. R. Yojanan — su colega y maestro — lo visita (biqur jolim, la mitzvá de visitar enfermos).\n\nEl diálogo sigue el estribillo:\n  · R. Yojanan pregunta: «¿te son queridos tus sufrimientos?»\n  · R. Jiyá responde: «ni ellos ni su recompensa»\n  · R. Yojanan: «dame tu mano» — la toma y lo LEVANTA (וְאוֹקְמֵיהּ).\n\nLa lección de esta escena: EL SANO CURA AL ENFERMO. R. Yojanan, estando sano, puede extender la mano y sanar a su colega. El contacto del que está bien levanta al que está postrado.\n\nEs significativo que la cura NO viene de un argumento teológico. R. Yojanan no le dice a R. Jiyá «pero recuerda que los yisurim shel ahavá compran el olam ha-ba, así que alégrate». Al contrario — acepta su «ni ellos ni su recompensa» sin discusión, y simplemente le da la mano.\n\nLa sanación es por PRESENCIA y CONTACTO, no por doctrina. El maestro que enseñó la doctrina del sufrimiento, cuando ve a un amigo sufrir, no predica — toca.\n\nEsta escena establece el patrón. Las siguientes dos lo complicarán: en la 2, el mismo R. Yojanan caerá enfermo y NO podrá curarse solo; en la 3, llorará junto al enfermo.'
+    },
+    'escena-2': {
+      titulo: 'Escena 2 · R. Yojanan enfermo · nadie se cura solo',
+      hebreo: 'אֵין חָבוּשׁ מַתִּיר עַצְמוֹ מִבֵּית הָאֲסוּרִים',
+      traduccion: '«El prisionero no se libera a sí mismo de la cárcel»',
+      explicacion: 'La SEGUNDA escena introduce una paradoja brillante. Ahora es R. YOJANAN quien está enfermo — el mismo que curó a R. Jiyá en la escena 1. Lo visita R. Janina, repiten el estribillo, y R. Janina lo levanta.\n\nLa guemará plantea la pregunta obvia: si R. Yojanan tiene el poder de curar (como demostró en la escena 1), ¿POR QUÉ NO SE CURÓ A SÍ MISMO? ¿Por qué necesitó que R. Janina viniera a levantarlo?\n\nLa respuesta es uno de los principios más profundos del Talmud:\n\n  «אֵין חָבוּשׁ מַתִּיר עַצְמוֹ מִבֵּית הָאֲסוּרִים»\n  «El prisionero no se libera a sí mismo de la cárcel»\n\nLa imagen: un prisionero, aunque tenga la llave o el conocimiento, NO puede liberarse solo. Necesita que ALGUIEN MÁS, desde afuera, abra la puerta. La libertad es estructuralmente RELACIONAL.\n\nLa aplicación al sufrimiento: incluso el sanador más grande, cuando ÉL sufre, no puede sanarse. Necesita la mano de OTRO. El que ayuda a todos necesita ser ayudado. El que consuela necesita consuelo.\n\nLa profundidad de esto:\n\n  · Nadie es autosuficiente espiritualmente — ni el más grande maestro\n  · La salvación, la curación, el rescate son siempre DON DEL OTRO\n  · El que está «dentro» del sufrimiento no tiene la perspectiva ni la fuerza para salir solo\n  · Por eso la mitzvá de biqur jolim (visitar enfermos) es esencial: el enfermo NECESITA al visitante, no como cortesía sino como vehículo de sanación\n\nEsta escena humaniza al gran R. Yojanan: el sanador también enferma, también necesita, también depende. La grandeza no es autosuficiencia — es saber recibir la mano del otro.'
+    },
+    'escena-3': {
+      titulo: 'Escena 3 · R. Elazar llorando · la belleza que se descompone',
+      hebreo: 'עַל הַאי שׁוּפְרָא דְּבָלֵי בְּעַפְרָא קָא בָכֵינָא · וּבְכוֹ תַּרְוַויְיהוּ',
+      traduccion: '«Lloro por esta belleza que se descompondrá en el polvo» · «Y lloraron ambos»',
+      explicacion: 'La TERCERA escena es la más emotiva y profunda. R. Elazar está enfermo, y R. Yojanan lo visita. Pero esta vez encuentra al enfermo LLORANDO (בָּכֵי).\n\nR. Yojanan pregunta por qué llora, y propone razones, refutando cada una para consolarlo:\n\n  · «¿Lloras porque no estudiaste suficiente Torá?» — Aprendimos: tanto el que hace mucho como el que hace poco [son iguales] si dirige su corazón al cielo. (No es razón para llorar.)\n  · «¿Lloras por falta de sustento?» — No todos merecen dos mesas (riqueza Y Torá). (No es razón.)\n  · «¿Lloras por los hijos [que no tienes o perdiste]?» — Y le muestra el hueso de su décimo hijo [que él mismo perdió, demostrando que se puede sobrevivir]. (No es razón.)\n\nFinalmente R. Elazar revela la VERDADERA razón de su llanto:\n\n  «עַל הַאי שׁוּפְרָא דְּבָלֵי בְּעַפְרָא קָא בָכֵינָא»\n  «Lloro por ESTA BELLEZA que se descompondrá en el polvo»\n\nLlora por la belleza de R. Yojanan (que era proverbialmente hermoso) — o por la belleza humana en general — que está destinada a pudrirse en la tierra. Llora por la MORTALIDAD, por la transitoriedad de todo lo bello.\n\nLa respuesta de R. Yojanan es asombrosa:\n\n  «עַל דָּא וַדַּאי קָא בָכֵית» — «por ESTO, ciertamente, vale llorar»\n  «וּבְכוֹ תַּרְוַויְיהוּ» — «y lloraron AMBOS»\n\nA diferencia de las razones anteriores (que refutó), esta NO la refuta. La VALIDA. Hay un dolor que NO tiene consuelo doctrinal: la pérdida de la belleza en la muerte. Y ante ese dolor, el maestro no predica — LLORA JUNTO al que sufre.\n\nEsta es la cumbre de la sugyá. Después de toda la doctrina (el sufrimiento es de amor, compra bienes supremos), la conclusión NARRATIVA es que hay dolores legítimos que solo se acompañan con lágrimas compartidas. El consuelo final no es una explicación — es la presencia de otro que llora contigo.\n\nLuego sí, repiten el estribillo de la mano, y R. Yojanan lo levanta. Pero primero lloraron juntos. La curación viene DESPUÉS del llanto compartido, no en lugar de él.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la tensión irresuelta',
+      hebreo: 'הַמֶּתַח שֶׁבֵּין הַתּוֹרָה לַחֲוָיָה',
+      traduccion: 'La tensión entre la doctrina y la experiencia',
+      explicacion: 'La sugyá de yisurim shel ahavá es uno de los textos más honestos del Talmud sobre el sufrimiento. Su grandeza está en que NO RESUELVE la tensión central — la mantiene viva.\n\nLA DOCTRINA dice:\n  · El sufrimiento del justo puede no ser castigo, sino amor\n  · Se diagnostica por descarte (pecado → bitul Torá → amor)\n  · Tiene límite: si anula Torá/tefilá, no es de amor\n  · Los bienes supremos (Torá, Tierra, olam ha-ba) se compran con él\n  · Es señal de cercanía divina, no de rechazo\n\nLA EXPERIENCIA dice (en boca de los mismos sabios):\n  · «ni ellos ni su recompensa» — no quiero el dolor, ni siquiera por sus frutos\n  · «el prisionero no se libera solo» — nadie se sana sin la mano del otro\n  · «por esto vale llorar» — hay pérdidas (la belleza, la mortalidad) sin consuelo doctrinal\n  · «y lloraron ambos» — la respuesta final al dolor es la presencia compartida\n\nAMBAS son verdad. Esta es la madurez espiritual de la sugyá:\n\n  1. Se puede ENTENDER el valor del sufrimiento Y AUN ASÍ no quererlo. No hay contradicción. La comprensión teológica no obliga al deseo emocional.\n\n  2. Los grandes maestros que ENSEÑAN la doctrina son los mismos que, al sufrir, la encuentran insuficiente como consuelo. Esto no los hace hipócritas — los hace HONESTOS.\n\n  3. El consuelo real NO viene de la doctrina sino de la RELACIÓN. La mano que se extiende, el maestro que llora contigo, el visitante que te levanta. La teología explica; el amor sana.\n\n  4. NADIE SE CURA SOLO. La autosuficiencia espiritual es una ilusión. Hasta R. Yojanan necesitó la mano de R. Janina.\n\nLa sugyá termina, significativamente, NO con una conclusión doctrinal sino con escenas de contacto humano. Después de toda la teología del sufrimiento, la última palabra es una mano extendida y dos hombres llorando juntos.\n\nEsta es la respuesta del judaísmo al problema del sufrimiento: no una solución intelectual definitiva, sino una comunidad de manos que se levantan unas a otras, y de lágrimas que se acompañan. La doctrina da sentido; la presencia da consuelo. Se necesitan ambas, y ninguna reemplaza a la otra.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.yisurim-interactivo')
+    : document.querySelector('.yisurim-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#yisurim-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.yisurim-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="yisurim-panel-header">' +
+        '<p class="yisurim-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="yisurim-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="yisurim-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="yisurim-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.yisurim-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.yisurim-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="yisurim-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
