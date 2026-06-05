@@ -1,0 +1,366 @@
+<div class="angeles-interactivo">
+<style>
+  .angeles-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .angeles-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .angeles-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .angeles-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .angeles-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .angeles-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .angeles-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .angeles-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .angeles-diagrama svg { width: 100%; height: auto; display: block; }
+  .angeles-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .angeles-nodo:hover rect { stroke-width: 2 !important; }
+  .angeles-nodo:hover circle { stroke-width: 2.5 !important; }
+  .angeles-nodo.activa rect { stroke-width: 2.5 !important; }
+  .angeles-nodo.activa circle { stroke-width: 3 !important; }
+  .angeles-nodo.dim { opacity: 0.32; }
+  .angeles-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .angeles-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .angeles-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .angeles-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .angeles-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .angeles-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .angeles-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="angeles-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>halajá · pasuk</span>
+  <span><span class="swatch verde"></span>cuatro ángeles cardinales</span>
+  <span><span class="swatch azul"></span>escala de velocidad</span>
+  <span><span class="swatch rojo"></span>mazikin · plaga</span>
+  <span><span class="swatch sepia"></span>doctrina meta</span>
+</div>
+
+<div class="angeles-diagrama">
+<svg viewBox="0 0 720 1180" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 4b-5a: keriat shema sobre la cama · los cuatro ángeles cardinales · la escala de velocidad angelical</title>
+
+<defs>
+  <marker id="flecha-ang" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-ang-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <radialGradient id="grad-shejina" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#b8860b" stop-opacity="0.5"/>
+    <stop offset="60%" stop-color="#b8860b" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#b8860b" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La escala de los ángeles · keriat shema al ha-mita</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 4b–5a · cuatro guardianes cardinales · la velocidad del Mal'aj</text>
+
+<!-- ============================================================ -->
+<!-- LA HALAJÁ — R. YEHOSHUA BEN LEVI                            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA HALAJÁ · R. YEHOSHUA BEN LEVI · 4B</text>
+
+<g class="angeles-nodo" data-id="halaja-rylevi">
+  <rect x="60" y="86" width="600" height="78" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אַף עַל פִּי שֶׁקָּרָא אָדָם קְרִיאַת שְׁמַע בְּבֵית הַכְּנֶסֶת, מִצְוָה לִקְרוֹתוֹ עַל מִטָּתוֹ</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Aunque uno haya recitado el shema en la sinagoga, es mitzvá recitarlo [otra vez] sobre su cama»</text>
+  <text x="360" y="150" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">DOS recitaciones del shema en arvit · pública (con brachot) + privada (sobre la cama)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- VERSETA DE R. YOSE — TEHILIM 4:5                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="164" x2="360" y2="182" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-ang-gold)"/>
+
+<g class="angeles-nodo" data-id="verseta-yose">
+  <rect x="60" y="186" width="600" height="90" rx="6" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="78" y="206" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="600">R. Yose · la verseta del ritual</text>
+  <text x="360" y="226" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">רִגְזוּ וְאַל תֶּחֱטָאוּ · אִמְרוּ בִלְבַבְכֶם עַל מִשְׁכַּבְכֶם · וְדֹמּוּ סֶלָה</text>
+  <text x="360" y="244" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Tiemblen y no pequen · digan en su corazón sobre su cama · y guarden silencio» (Tehilim 4:5)</text>
+  <text x="360" y="264" text-anchor="middle" font-size="9.5" fill="#6b4423">cuatro cláusulas → temor reverencial · vigilancia moral · shema interior · calma del sueño</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PROTECCIÓN — MAZIKIN SE ALEJAN                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="276" x2="360" y2="294" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-ang)"/>
+
+<text x="60" y="306" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PROTECCIÓN · RAV YITZJAK · MAZIKIN SE ALEJAN</text>
+
+<g class="angeles-nodo" data-id="mazikin-alejan">
+  <rect x="60" y="316" width="600" height="64" rx="5" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="360" y="338" text-anchor="middle" font-size="11.5" direction="rtl" fill="#8b1a1a">כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע עַל מִטָּתוֹ — מַזִּיקִין בְּדֵילִין הֵימֶנּוּ</text>
+  <text x="360" y="358" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Todo el que recita shema sobre su cama — los mazikin se alejan de él»</text>
+  <text x="360" y="374" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la cama es espacio liminal (1/60 de la muerte) · el shema es escudo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS CUATRO ÁNGELES CARDINALES — CENTRO DEL DIAGRAMA          -->
+<!-- ============================================================ -->
+<line x1="360" y1="380" x2="360" y2="396" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-ang)"/>
+
+<text x="60" y="408" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LOS CUATRO ÁNGELES CARDINALES · «BE-SHEM HASHEM ELOQUEI YISRAEL»</text>
+
+<g class="angeles-nodo" data-id="cuatro-angeles">
+  <rect x="60" y="416" width="600" height="320" rx="8" fill="rgba(30,107,90,0.04)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <!-- SHEJINÁ arriba — círculo dorado con halo -->
+  <circle cx="360" cy="464" r="48" fill="url(#grad-shejina)"/>
+  <circle cx="360" cy="464" r="28" fill="rgba(184,134,11,0.18)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="460" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b" font-weight="600">שְׁכִינָה</text>
+  <text x="360" y="474" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">arriba</text>
+  <text x="360" y="494" text-anchor="middle" font-size="8" fill="#3d2f23">Presencia divina</text>
+
+  <!-- Centro: la cama / el dormiente -->
+  <rect x="305" y="540" width="110" height="56" rx="6" fill="rgba(255,255,255,0.6)" stroke="#3d2f23" stroke-width="1.2"/>
+  <text x="360" y="562" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#3d2f23">el durmiente</text>
+  <text x="360" y="580" text-anchor="middle" font-size="9" direction="rtl" fill="#3d2f23">עַל מִשְׁכָּבוֹ</text>
+  <text x="360" y="592" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">«sobre su cama»</text>
+
+  <!-- DELANTE · Uriel (arriba del durmiente, dentro del círculo) -->
+  <rect x="280" y="510" width="160" height="22" rx="3" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="360" y="525" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="600">לְפָנַי אוּרִיאֵל · delante</text>
+
+  <!-- DETRÁS · Rafael (debajo del durmiente) -->
+  <rect x="280" y="604" width="160" height="22" rx="3" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="360" y="619" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">וּמֵאֲחוֹרַי רְפָאֵל · detrás</text>
+
+  <!-- DERECHA · Mikhael -->
+  <g>
+    <rect x="80" y="540" width="200" height="56" rx="5" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.3"/>
+    <text x="180" y="560" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b" font-weight="700">מִיכָאֵל</text>
+    <text x="180" y="576" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">a mi derecha</text>
+    <text x="180" y="590" text-anchor="middle" font-size="8.5" fill="#6b4423">misericordia · agua</text>
+  </g>
+
+  <!-- IZQUIERDA · Gabriel -->
+  <g>
+    <rect x="440" y="540" width="200" height="56" rx="5" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.3"/>
+    <text x="540" y="560" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="700">גַּבְרִיאֵל</text>
+    <text x="540" y="576" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">a mi izquierda</text>
+    <text x="540" y="590" text-anchor="middle" font-size="8.5" fill="#6b4423">rigor · fuego</text>
+  </g>
+
+  <!-- líneas conectoras de los 4 ángeles al durmiente -->
+  <line x1="280" y1="568" x2="305" y2="568" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="440" y1="568" x2="415" y2="568" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="360" y1="532" x2="360" y2="540" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="360" y1="596" x2="360" y2="604" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.7"/>
+  <line x1="360" y1="490" x2="360" y2="510" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
+
+  <!-- La fórmula de invocación -->
+  <text x="360" y="660" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23" font-style="italic">בְּשֵׁם ה' אֱלוֹקֵי יִשְׂרָאֵל</text>
+  <text x="360" y="678" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«En el nombre de HKBH, Dios de Israel —</text>
+  <text x="360" y="694" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">a mi derecha Mikhael · a mi izquierda Gabriel · ante mí Uriel · tras mí Rafael ·</text>
+  <text x="360" y="710" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">y sobre mi cabeza la Shejiná de El»</text>
+  <text x="360" y="728" text-anchor="middle" font-size="9" fill="#6b4423">los cuatro guardianes + la Presencia · pentagonal cosmológico que custodia el sueño</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESCALA DE VELOCIDAD ANGÉLICA                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="736" x2="360" y2="754" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-ang)"/>
+
+<text x="60" y="766" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALA DE VELOCIDAD · CUÁNTOS «SALTOS» DESDE EL TRONO</text>
+
+<g class="angeles-nodo" data-id="escala-velocidad">
+  <rect x="60" y="776" width="600" height="180" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+
+  <!-- Eje horizontal de saltos -->
+  <line x1="100" y1="900" x2="620" y2="900" stroke="#1e3a5f" stroke-width="1.2"/>
+
+  <!-- Posiciones con marcadores -->
+  <circle cx="120" cy="900" r="5" fill="#b8860b"/>
+  <text x="120" y="888" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b" font-weight="700">מִיכָאֵל</text>
+  <text x="120" y="920" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">1 salto</text>
+  <text x="120" y="934" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">misericordia inmediata</text>
+
+  <circle cx="240" cy="900" r="5" fill="#8b1a1a"/>
+  <text x="240" y="888" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a" font-weight="700">גַּבְרִיאֵל</text>
+  <text x="240" y="920" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">2 saltos</text>
+  <text x="240" y="934" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">rigor · llega con peso</text>
+
+  <circle cx="400" cy="900" r="5" fill="#2d6b4e"/>
+  <text x="400" y="888" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e" font-weight="700">אֵלִיָּהוּ הַנָּבִיא</text>
+  <text x="400" y="920" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">4 saltos</text>
+  <text x="400" y="934" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">guía profética</text>
+
+  <circle cx="580" cy="900" r="6" fill="#3d2f23"/>
+  <text x="580" y="888" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23" font-weight="700">מַלְאַךְ הַמָּוֶת</text>
+  <text x="580" y="920" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">8 saltos</text>
+  <text x="580" y="934" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">el más lejano · frontera</text>
+
+  <text x="360" y="800" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Cuanto más alejado del Trono, más «saltos» necesita el ángel para llegar</text>
+  <text x="360" y="822" text-anchor="middle" font-size="9.5" fill="#3d2f23">la misericordia (Mikhael) es la más cercana — llega de un salto · llega siempre primero</text>
+  <text x="360" y="840" text-anchor="middle" font-size="9.5" fill="#3d2f23">el ángel de la muerte normalmente está en el extremo más lejano de la cosmología</text>
+  <text x="360" y="858" text-anchor="middle" font-size="9.5" fill="#3d2f23">la halajá del rezo se apoya en esta jerarquía: invocas a los cercanos primero</text>
+  <text x="360" y="876" text-anchor="middle" font-size="9" fill="#1e3a5f" font-style="italic">los números no son numerología decorativa — son medida funcional del trayecto cosmológico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EXCEPCIÓN · EN TIEMPO DE PLAGA                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="956" x2="360" y2="974" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-ang)"/>
+
+<text x="60" y="986" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA EXCEPCIÓN · בְּשַׁעַת הַמַּגֵּפָה</text>
+
+<g class="angeles-nodo" data-id="excepcion-plaga">
+  <rect x="60" y="996" width="600" height="86" rx="6" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="78" y="1018" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">En tiempo de epidemia · la distancia se colapsa</text>
+  <text x="78" y="1040" font-size="10" fill="#3d2f23">el ángel de la muerte (8 saltos normalmente) llega en <tspan font-weight="700" fill="#8b1a1a">UN solo salto</tspan> — la misma velocidad que Mikhael</text>
+  <text x="78" y="1056" font-size="10" fill="#3d2f23">durante la plaga la cosmología se reorganiza · la frontera lejana se vuelve adyacente</text>
+  <text x="78" y="1072" font-size="9" fill="#6b4423" font-style="italic">por eso la halajá ordena protocolos especiales (encierro, oración) durante magefá — la distancia normal se pierde</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="1082" x2="360" y2="1100" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-ang)"/>
+
+<g class="angeles-nodo" data-id="doctrina">
+  <rect x="60" y="1104" width="600" height="64" rx="5" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="360" y="1124" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El sueño es 1/60 de la muerte · la halajá lo trata como espacio teológico real</text>
+  <text x="360" y="1144" text-anchor="middle" font-size="9.5" fill="#3d2f23">los ángeles no son ornamento · son agentes funcionales con dirección cardinal y velocidad medible</text>
+  <text x="360" y="1160" text-anchor="middle" font-size="9.5" fill="#6b4423">shema sobre la cama + invocación angélica = protocolo nocturno completo del judío</text>
+</g>
+
+</svg>
+</div>
+
+<div class="angeles-panel" id="angeles-panel">
+  <p class="angeles-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'halaja-rylevi': {
+      titulo: 'R. Yehoshua ben Levi · shema sobre la cama',
+      hebreo: 'אַף עַל פִּי שֶׁקָּרָא אָדָם קְרִיאַת שְׁמַע בְּבֵית הַכְּנֶסֶת, מִצְוָה לִקְרוֹתוֹ עַל מִטָּתוֹ',
+      traduccion: '«Aunque uno haya recitado el shema en la sinagoga, es mitzvá recitarlo [otra vez] sobre su cama»',
+      explicacion: 'R. Yehoshua ben Levi establece una práctica halájica que sigue vigente hoy: DOS recitaciones del shema en arvit.\n\n  1. PRIMERA recitación — en la sinagoga, como parte del rezo público de arvit, con sus brachot rodeantes (ma\'ariv aravim, ahavat olam, emet ve-emuná, hashkiveinu).\n\n  2. SEGUNDA recitación — privada, sobre la cama, justo antes de dormir, SIN las brachot.\n\nLa primera cumple la obligación bíblica de la mitzvá del shema. ¿Por qué entonces una segunda? R. Yehoshua ben Levi responde: porque la cama es un espacio de vulnerabilidad ESPECIAL que requiere protección ritual ADICIONAL.\n\nLa práctica se codifica en el sidur moderno como «keriat shema al ha-mita» — un servicio completo que incluye:\n  · selichá (perdón por agravios)\n  · shema (al menos el primer párrafo)\n  · Tehilim 91 (yoshev be-séter elyón)\n  · la invocación de los cuatro ángeles\n  · brachot de protección\n\nEsta es la TERCERA vía al olam ha-ba después de la semijá (#10) y el Ashrei (#11): la disciplina nocturna privada.'
+    },
+    'verseta-yose': {
+      titulo: 'R. Yose · la verseta del ritual',
+      hebreo: 'רִגְזוּ וְאַל תֶּחֱטָאוּ · אִמְרוּ בִלְבַבְכֶם עַל מִשְׁכַּבְכֶם · וְדֹמּוּ סֶלָה',
+      traduccion: '«Tiemblen y no pequen · digan en su corazón sobre su cama · y guarden silencio» (Tehilim 4:5)',
+      explicacion: 'R. Yose aporta el versículo escriturario que da base bíblica a la práctica. Tehilim 4:5 contiene CUATRO cláusulas que se mapean al ritual de acostarse:\n\n  · רִגְזוּ — «tiemblen»: temor reverencial al transicionar al estado de vulnerabilidad\n\n  · וְאַל תֶּחֱטָאוּ — «no pequen»: vigilancia moral antes de perder conciencia (no acostarse con un agravio sin reconciliar)\n\n  · אִמְרוּ בִלְבַבְכֶם — «digan en su corazón»: el shema interior, la afirmación de unidad divina como último pensamiento del día\n\n  · עַל מִשְׁכַּבְכֶם — «sobre su cama»: el lugar exacto. NO en la silla, NO de pie. Sobre la cama, en posición de entrega.\n\n  · וְדֹמּוּ סֶלָה — «y guarden silencio»: la calma del sueño, el cese del habla.\n\nEl versículo describe un protocolo psicológico completo: del temor a la vigilancia, a la afirmación interna, al silencio. Es como un descenso ritual hacia el sueño.\n\nLa palabra סֶלָה (selah) al final marca interrupción musical — pausa solemne. El día concluye con un silencio cantado.'
+    },
+    'mazikin-alejan': {
+      titulo: 'Rav Yitzjak · los mazikin se alejan',
+      hebreo: 'כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע עַל מִטָּתוֹ — מַזִּיקִין בְּדֵילִין הֵימֶנּוּ',
+      traduccion: '«Todo el que recita shema sobre su cama — los mazikin se alejan de él»',
+      explicacion: 'Rav Yitzjak añade la motivación práctica de la práctica: PROTECCIÓN contra los mazikin (los demonios destructivos).\n\nEsta enseñanza enraíza el shema-sobre-la-cama en la cosmología talmúdica de los peligros espirituales nocturnos (ver diagrama #4 sobre las TRES RAZONES de la ruina — donde los mazikin son una de las tres causas para no entrar).\n\nLa cama, en esta cosmología, es un espacio LIMINAL:\n  · el hombre PIERDE conciencia\n  · NO controla su cuerpo\n  · está expuesto a influencias espirituales\n  · está en una «muerte parcial» (1/60 de la muerte según otra sugyá)\n\nLos mazikin son atraídos precisamente por este estado. La conciencia del hombre vigilante los repele. Cuando uno duerme, la barrera natural se debilita — necesita un escudo ritual.\n\nEl shema funciona como escudo porque:\n  · proclama la unidad divina (los mazikin operan en la fragmentación)\n  · invoca la presencia de HKBH\n  · estructura la atención en una afirmación teológica fuerte\n\nLa derashá talmúdica deriva esto del versículo «ויחל לבי בכל שעת אגוז» (suelto de Tehilim 119:62 o similar) — donde la actividad espiritual nocturna se asocia con liberación del cuerpo del peligro.'
+    },
+    'cuatro-angeles': {
+      titulo: 'Los cuatro ángeles cardinales · invocación cosmológica',
+      hebreo: 'מִיכָאֵל יְמִינִי · גַּבְרִיאֵל שְׂמֹאלִי · לְפָנַי אוּרִיאֵל · וּמֵאֲחוֹרַי רְפָאֵל',
+      traduccion: '«Mikhael a mi derecha · Gabriel a mi izquierda · delante de mí Uriel · tras de mí Rafael»',
+      explicacion: 'La práctica acompaña el shema-sobre-la-cama con la invocación de los CUATRO ÁNGELES CARDINALES, distribuidos en una geometría sagrada alrededor del durmiente:\n\n  · DERECHA — מִיכָאֵל (Mikhael): el ángel de la MISERICORDIA, asociado con el elemento AGUA. La derecha en hebreo es יָמִין (yamin), donde acampa la jésed (bondad) en la cosmología cabalística.\n\n  · IZQUIERDA — גַּבְרִיאֵל (Gabriel): el ángel del RIGOR, asociado con el FUEGO. La izquierda es שְׂמֹאל (smol), lado de la guevurá (severidad). Gabriel es el que ejecuta los juicios divinos (destruye Sodoma, anuncia el fin del exilio en Daniel).\n\n  · DELANTE — אוּרִיאֵל (Uriel): el ángel de la LUZ (אוּר = luz) y el ENTENDIMIENTO. Va delante porque ilumina el camino — la conciencia que precede a la acción.\n\n  · DETRÁS — רְפָאֵל (Rafael): el ángel de la CURACIÓN (רפא = curar) y la PAZ. Va detrás porque cura las heridas del camino ya recorrido — la sanación del pasado.\n\n  · ARRIBA — שְׁכִינָה (Shejiná): la Presencia divina sobre la cabeza. NO es un ángel — es la presencia INMEDIATA de HKBH, supervisando todo el dispositivo.\n\nLa formación es PENTAGONAL: cuatro ángeles en los puntos cardinales + la Shejiná en el vector vertical. El durmiente queda EN EL CENTRO de un cubo protector con vértices angélicos.\n\nEsta cosmología funcional NO es metáfora poética — es entendida en el rabinismo clásico como protección REAL. Cada noche el judío se acuesta dentro de un altar geométrico de ángeles.'
+    },
+    'escala-velocidad': {
+      titulo: 'La escala de velocidad · saltos desde el Trono',
+      hebreo: 'מַסַּעַ הַמַּלְאָכִים',
+      traduccion: 'El viaje de los ángeles',
+      explicacion: 'La tradición rabínica clasifica los ángeles por la VELOCIDAD con que viajan desde el Trono Celestial hasta el mundo de los hombres. La métrica son los «saltos» (פְּסִיעוֹת) que cada uno necesita.\n\nLa escala:\n\n  · מִיכָאֵל — 1 SALTO. El más cercano al Trono. Llega de un solo movimiento. La MISERICORDIA es la fuerza más próxima a HKBH — no requiere distancia.\n\n  · גַּבְרִיאֵל — 2 SALTOS. Un poco más lejos. El RIGOR llega «con peso» — necesita más espacio para movilizarse. La justicia divina no es inmediata: se procesa.\n\n  · אֵלִיָּהוּ הַנָּבִיא — 4 SALTOS. Bastante más lejos. Eliyahu es el AGENTE PROFÉTICO — viene «del cielo distante» (cf. su ascenso en 2 Reyes 2). Su llegada requiere un trayecto cosmológico mayor.\n\n  · מַלְאַךְ הַמָּוֶת — 8 SALTOS. El MÁS LEJANO. La muerte habita en la frontera más distante de la cosmología. Para llegar al alma de un hombre, debe atravesar 8 esferas cosmológicas.\n\nLa estructura es NUMÉRICA en progresión geométrica (1, 2, 4, 8) — duplicación constante. Cada ángel está al doble de distancia que el anterior.\n\nLa lección teológica:\n  · la MISERICORDIA está siempre a un paso\n  · la MUERTE está siempre a ocho\n  · invocar a los cercanos (Mikhael) garantiza llegada rápida del rescate\n  · esto justifica orden de la invocación: primero los más cercanos\n\nEstos números no son numerología decorativa. Son MEDIDA FUNCIONAL del trayecto cosmológico de cada agente celestial. La halajá del rezo se apoya implícitamente en esta jerarquía: invocas a Mikhael en primer lugar porque, simplemente, llega antes.'
+    },
+    'excepcion-plaga': {
+      titulo: 'La excepción · en tiempo de plaga la distancia se colapsa',
+      hebreo: 'בְּשַׁעַת הַמַּגֵּפָה — מַלְאַךְ הַמָּוֶת מְקַפֵּץ בִּפְסִיעָה אַחַת',
+      traduccion: '«En tiempo de plaga, el ángel de la muerte salta en una sola pasada»',
+      explicacion: 'La normalidad cosmológica es que el ángel de la muerte está a 8 saltos. PERO en tiempo de epidemia, esa distancia se COLAPSA. El Mal\'aj Ha-Mavet llega en UN SOLO salto — la misma velocidad que Mikhael.\n\nEsto es teológicamente alarmante. Significa que durante una magefá, la frontera cósmica entre la vida y la muerte se ha REORGANIZADO. Lo que normalmente está lejano se vuelve adyacente.\n\nImplicaciones halájicas concretas:\n\n  1. Durante plaga, la halajá ordena PROTOCOLOS ESPECIALES — encierro, ayuno, oración intensificada, invocaciones particulares. Esto no es solo medida sanitaria — es respuesta a una alteración cosmológica.\n\n  2. La distancia entre el durmiente y la muerte ya no es de 8 saltos. La protección ritual ordinaria (los cuatro ángeles) puede no bastar — se necesita reforzar con prácticas adicionales.\n\n  3. La sensibilidad espiritual del judío debe aumentar — la negligencia que en tiempo normal es tolerable, en plaga es fatal.\n\nEsta enseñanza tiene resonancia particular en periodos de pandemia (ej. el COVID-19 de 2020). La tradición rabínica entiende que las plagas alteran la geometría del cosmos espiritual — no son meros eventos biológicos.\n\nNote la simetría: en magefá, el ángel de la muerte iguala la velocidad del ángel de la misericordia. La carrera es directa. Esto es por qué los judíos en plaga han practicado históricamente intensificación de la tefilá: cada oración cuenta el doble en el equilibrio invertido.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · el sueño como espacio teológico',
+      hebreo: 'שֵׁינָה אֶחָד מִשִּׁשִּׁים בַּמָּוֶת',
+      traduccion: '«El sueño es 1/60 de la muerte» (Berajot 57b)',
+      explicacion: 'La sugyá entera sobre keriat shema al ha-mita está apoyada en una doctrina central del rabinismo: EL SUEÑO NO ES UN EVENTO NEUTRAL BIOLÓGICO. Es un espacio teológico real, con leyes y peligros propios.\n\nLa famosa cláusula de Berajot 57b — «el sueño es 1/60 de la muerte» — codifica esto. Cada noche, el judío experimenta una pequeña muerte. Pierde la conciencia, abandona el control del cuerpo, entra en estados de vulnerabilidad. La halajá responde con protocolos rituales precisos.\n\nLas tres componentes del protocolo nocturno:\n\n  1. TEXTUAL — el shema sobre la cama, Tehilim 91, las brachot de protección. Texto sagrado como escudo.\n\n  2. ESPACIAL — la invocación de los cuatro ángeles cardinales. El espacio físico de la cama se REORGANIZA como altar protegido.\n\n  3. PSICOLÓGICA — el cierre del día con perdón (selichá), reconciliación, intención específica para el sueño. El estado mental del durmiente importa.\n\nLa cosmología asociada es realista pero no naturalista:\n  · los ángeles son AGENTES funcionales con direcciones y velocidades\n  · los mazikin son PELIGROS reales que el shema neutraliza\n  · las distancias entre el Trono y el mundo son MENSURABLES en saltos\n  · las plagas REORGANIZAN esta geometría\n\nEsta visión del mundo es continua con la teología de los DIAGRAMAS ANTERIORES:\n  · #2 (vigilias) — la noche cósmica tiene estructura de turnos\n  · #4 (tres razones de la ruina) — los espacios tienen carga espiritual\n  · #5 (kinor de David) — los vientos cosmológicos golpean instrumentos sagrados\n\nEl mundo del rabinismo NO es un universo desencantado. Es un cosmos POBLADO de agentes, fuerzas, peligros y protecciones. La halajá es el manual técnico para navegarlo con seguridad.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.angeles-interactivo')
+    : document.querySelector('.angeles-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#angeles-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.angeles-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="angeles-panel-header">' +
+        '<p class="angeles-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="angeles-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="angeles-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="angeles-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.angeles-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.angeles-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="angeles-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
