@@ -543,15 +543,32 @@
       "slug": "tefila-y-cama",
       "orden": 16,
       "titulo": "Tefilá y la posición de la cama",
-      "subtitulo": "Aba Binyamin · dos cosas que le preocuparon",
+      "subtitulo": "Aba Binyamin · dos preocupaciones de toda una vida",
       "dapim": [
         "5b"
       ],
       "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/tefila-y-cama.html",
+      "sabios": [
+        "aba-binyamin",
+        "r-yitzjak"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "tehilim-17-14"
+      ],
+      "conceptos": [
+        "keriat-shema-al-hamita",
+        "mejitzá",
+        "bein-tzafon-le-darom",
+        "banim-zecharim",
+        "tefila"
+      ],
+      "puente_desde": {
+        "tipo": "agav-orcheih",
+        "texto": "Los diagramas #13-15 trataron la lucha contra el yetzer y la\ndoctrina del sufrimiento — temas de gran envergadura espiritual.\nAhora la sugyá baja a lo MÁS pequeño: la dirección de la cama y la\nposición exacta del orador en tefilá. La transición es agav-orcheih\n(«de paso»): la mención del shema sobre la cama en diagramas\nprevios dispara la cita de Aba Binyamin sobre las dos preocupaciones\nde su vida. El editor demuestra que la grandeza espiritual NO está\nsolo en las grandes doctrinas sino también en la atención metódica\nal detalle minúsculo.\n"
+      }
     },
     {
       "slug": "mazikin-invisibles",
@@ -822,6 +839,14 @@
       "nombre": "R Asi"
     },
     {
+      "slug": "aba-binyamin",
+      "nombre": "Aba Binyamin"
+    },
+    {
+      "slug": "r-yitzjak",
+      "nombre": "R Yitzjak"
+    },
+    {
       "slug": "tanu-rabanan",
       "nombre": "Tanu Rabanan"
     },
@@ -968,6 +993,10 @@
     {
       "slug": "tehilim-19-15",
       "nombre": "Tehilim 19 15"
+    },
+    {
+      "slug": "tehilim-17-14",
+      "nombre": "Tehilim 17 14"
     },
     {
       "slug": "tehilim-94-12",
@@ -1207,6 +1236,18 @@
       "nombre": "Hefsek"
     },
     {
+      "slug": "mejitzá",
+      "nombre": "Mejitzá"
+    },
+    {
+      "slug": "bein-tzafon-le-darom",
+      "nombre": "Bein Tzafon Le Darom"
+    },
+    {
+      "slug": "banim-zecharim",
+      "nombre": "Banim Zecharim"
+    },
+    {
       "slug": "dialectica-talmudica",
       "nombre": "Dialectica Talmudica"
     },
@@ -1394,6 +1435,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "El diagrama #14 incluyó la baraita de Rashbi sobre los tres regalos\ncomo UN elemento entre varios en la sugyá amplia del sufrimiento.\nPero la baraita merece una exposición independiente: cada uno de\nlos tres regalos se prueba con una técnica exegética DISTINTA, y\nel orden Torá → Tierra → Olam Ha-Ba revela la jerarquía rabínica\nde los bienes supremos. La sugyá previa explora la TENSIÓN del\nsufrimiento; esta enseñanza expone su PRODUCTIVIDAD.\n",
+      "peso": 3
+    },
+    {
+      "from": "tres-regalos",
+      "to": "tefila-y-cama",
+      "categoria": "editorial",
+      "tipo": "agav-orcheih",
+      "texto": "Los diagramas #13-15 trataron la lucha contra el yetzer y la\ndoctrina del sufrimiento — temas de gran envergadura espiritual.\nAhora la sugyá baja a lo MÁS pequeño: la dirección de la cama y la\nposición exacta del orador en tefilá. La transición es agav-orcheih\n(«de paso»): la mención del shema sobre la cama en diagramas\nprevios dispara la cita de Aba Binyamin sobre las dos preocupaciones\nde su vida. El editor demuestra que la grandeza espiritual NO está\nsolo en las grandes doctrinas sino también en la atención metódica\nal detalle minúsculo.\n",
       "peso": 3
     },
     {
@@ -1701,6 +1750,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "tefila-y-cama",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -1727,6 +1784,22 @@
     {
       "from": "escala-angeles",
       "to": "escalera-yetzer",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "keriat-shema-al-hamita",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "tefila-y-cama",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "keriat-shema-al-hamita",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "tefila-y-cama",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "keriat-shema-al-hamita",

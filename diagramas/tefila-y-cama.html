@@ -1,0 +1,377 @@
+<div class="tefcama-interactivo">
+<style>
+  .tefcama-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .tefcama-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .tefcama-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .tefcama-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .tefcama-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .tefcama-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .tefcama-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .tefcama-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .tefcama-diagrama svg { width: 100%; height: auto; display: block; }
+  .tefcama-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .tefcama-nodo:hover rect { stroke-width: 2 !important; }
+  .tefcama-nodo:hover circle { stroke-width: 2.5 !important; }
+  .tefcama-nodo.activa rect { stroke-width: 2.5 !important; }
+  .tefcama-nodo.activa circle { stroke-width: 3 !important; }
+  .tefcama-nodo.dim { opacity: 0.32; }
+  .tefcama-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .tefcama-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .tefcama-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .tefcama-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .tefcama-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .tefcama-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .tefcama-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="tefcama-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>baraita de Aba Binyamin</span>
+  <span><span class="swatch azul"></span>concern 1 · tefilá</span>
+  <span><span class="swatch verde"></span>concern 2 · orientación</span>
+  <span><span class="swatch rojo"></span>cosmología sagrada</span>
+  <span><span class="swatch sepia"></span>doctrina · halajá del detalle</span>
+</div>
+
+<div class="tefcama-diagrama">
+<svg viewBox="0 0 720 1180" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 5b: las dos preocupaciones de Aba Binyamin · tefilatí lifné mitatí · mitatí bein tzafon le-darom</title>
+
+<defs>
+  <marker id="flecha-tc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-tc-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- Rosa de los vientos -->
+  <radialGradient id="grad-rosa" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#b8860b" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#b8860b" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Tefilá y la posición de la cama · Aba Binyamin</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 5b · dos preocupaciones de toda una vida · la halajá del detalle minúsculo</text>
+
+<!-- ============================================================ -->
+<!-- LA BARAITA                                                   -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA BARAITA · TANYA ABA BINYAMIN OMER · 5B</text>
+
+<g class="tefcama-nodo" data-id="baraita">
+  <rect x="60" y="86" width="600" height="118" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">עַל שְׁנֵי דְּבָרִים הָיִיתִי מִצְטַעֵר כָּל יָמַי:</text>
+  <text x="360" y="132" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">עַל תְּפִלָּתִי — שֶׁתְּהֵא לִפְנֵי מִטָּתִי</text>
+  <text x="360" y="152" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">וְעַל מִטָּתִי — שֶׁתְּהֵא נְתוּנָה בֵּין צָפוֹן לְדָרוֹם</text>
+  <text x="360" y="174" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Sobre DOS cosas me angustié todos mis días — mi tefilá delante de mi cama · mi cama entre norte y sur»</text>
+  <text x="360" y="194" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la fórmula «כָּל יָמַי» («todos mis días») es decisiva — no fue etapa, fue compromiso vital</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA SORPRENDENTE BREVEDAD                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="204" x2="360" y2="222" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#flecha-tc-gold)"/>
+
+<g class="tefcama-nodo" data-id="brevedad">
+  <rect x="60" y="226" width="600" height="56" rx="5" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="78" y="246" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="600">La sorprendente brevedad</text>
+  <text x="78" y="262" font-size="10" fill="#3d2f23">pudo haber dicho: «me angustié por la santificación del Nombre» o «por la justicia social»</text>
+  <text x="78" y="276" font-size="10" fill="#3d2f23"><tspan font-style="italic">dijo dos cosas pequeñas</tspan> — la grandeza espiritual aparece en la atención obsesiva al detalle ritual</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DIVISIÓN EN DOS CONCERNS                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="282" x2="360" y2="298" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="298" x2="540" y2="298" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="298" x2="180" y2="316" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+<line x1="540" y1="298" x2="540" y2="316" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+
+<text x="180" y="312" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">CONCERN 1 · TEFILÁ</text>
+<text x="540" y="312" text-anchor="middle" font-size="9" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1">CONCERN 2 · ORIENTACIÓN</text>
+
+<!-- ============================================================ -->
+<!-- CONCERN 1 · TEFILÁ — DOS LECTURAS                           -->
+<!-- ============================================================ -->
+<g class="tefcama-nodo" data-id="concern-tefila">
+  <rect x="50" y="324" width="260" height="240" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="180" y="346" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">תְּפִלָּתִי לִפְנֵי מִטָּתִי</text>
+  <text x="180" y="362" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«mi tefilá delante de mi cama»</text>
+  <line x1="70" y1="372" x2="290" y2="372" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Lectura A: espacial -->
+  <text x="60" y="392" font-size="10" fill="#1e3a5f" font-weight="600">A · Lectura espacial (Rashi)</text>
+  <text x="60" y="408" font-size="9" fill="#3d2f23">NO mejitzá entre el orador y la pared</text>
+  <text x="60" y="422" font-size="9" fill="#3d2f23">concentración total · ausencia de objetos</text>
+  <text x="60" y="436" font-size="9" fill="#3d2f23">la cama era el único mobiliario tolerado</text>
+  <text x="60" y="450" font-size="8.5" fill="#6b4423" font-style="italic">— inmueble, no objeto activo</text>
+
+  <!-- Lectura B: temporal -->
+  <text x="60" y="476" font-size="10" fill="#1e3a5f" font-weight="600">B · Lectura temporal</text>
+  <text x="60" y="492" font-size="9" fill="#3d2f23">tefilá inmediatamente ANTES de la cama</text>
+  <text x="60" y="506" font-size="9" fill="#3d2f23">debe ser el último acto consciente del día</text>
+  <text x="60" y="520" font-size="9" fill="#3d2f23">sin actividades intermedias</text>
+  <text x="60" y="534" font-size="8.5" fill="#6b4423" font-style="italic">— proximidad temporal</text>
+
+  <text x="180" y="556" text-anchor="middle" font-size="9" fill="#1e3a5f" font-style="italic">ambas convergen en: PROXIMIDAD estructural</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CONCERN 2 · ORIENTACIÓN — LA DERASHÁ                        -->
+<!-- ============================================================ -->
+<g class="tefcama-nodo" data-id="concern-orientacion">
+  <rect x="410" y="324" width="260" height="240" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="540" y="346" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">מִטָּתִי בֵּין צָפוֹן לְדָרוֹם</text>
+  <text x="540" y="362" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«mi cama entre norte y sur»</text>
+  <line x1="430" y1="372" x2="650" y2="372" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="420" y="392" font-size="10" fill="#2d6b4e" font-weight="600">R. Yitzjak explica:</text>
+  <text x="420" y="408" font-size="9.5" fill="#3d2f23">quien orienta su cama N-S</text>
+  <text x="420" y="422" font-size="9.5" fill="#3d2f23">→ tendrá hijos varones</text>
+  <text x="420" y="438" font-size="9.5" fill="#3d2f23">→ la esposa no abortará</text>
+
+  <text x="420" y="464" font-size="10" fill="#2d6b4e" font-weight="600">La verseta:</text>
+  <text x="540" y="482" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">וּצְפוּנְךָ תְּמַלֵּא בִטְנָם</text>
+  <text x="540" y="498" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">יִשְׂבְּעוּ בָנִים (תה' יז:יד)</text>
+  <text x="420" y="516" font-size="9" fill="#3d2f23" font-style="italic">«tu tesoro/norte llena su vientre»</text>
+  <text x="420" y="532" font-size="9" fill="#3d2f23" font-style="italic">«se sacian de hijos»</text>
+
+  <text x="540" y="554" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">juego: צָפוּן (tesoro) ↔ צָפוֹן (norte)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ROSA DE LOS VIENTOS — VISUALIZACIÓN CENTRAL              -->
+<!-- ============================================================ -->
+<line x1="180" y1="564" x2="180" y2="582" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+<line x1="540" y1="564" x2="540" y2="582" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+<line x1="180" y1="582" x2="540" y2="582" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="582" x2="360" y2="596" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+
+<text x="60" y="608" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA COSMOLOGÍA SAGRADA · POR QUÉ N-S Y NO E-O</text>
+
+<g class="tefcama-nodo" data-id="cosmologia">
+  <rect x="60" y="618" width="600" height="276" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.4"/>
+
+  <!-- Rosa de los vientos -->
+  <circle cx="360" cy="758" r="100" fill="url(#grad-rosa)"/>
+  <circle cx="360" cy="758" r="80" fill="none" stroke="#b8860b" stroke-width="1" opacity="0.6"/>
+
+  <!-- Eje E-O (sagrado, prohibido para cama) -->
+  <line x1="240" y1="758" x2="480" y2="758" stroke="#b8860b" stroke-width="3" opacity="0.8"/>
+  <text x="232" y="762" text-anchor="end" font-size="11" fill="#b8860b" font-weight="700">מַעֲרָב</text>
+  <text x="232" y="775" text-anchor="end" font-size="8" fill="#6b4423">oeste · Shejiná</text>
+  <text x="488" y="762" font-size="11" fill="#b8860b" font-weight="700">מִזְרָח</text>
+  <text x="488" y="775" font-size="8" fill="#6b4423">este · sol</text>
+  <text x="360" y="742" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">eje sagrado del Templo</text>
+
+  <!-- Eje N-S (permitido) -->
+  <line x1="360" y1="688" x2="360" y2="828" stroke="#2d6b4e" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="360" y="680" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">צָפוֹן</text>
+  <text x="360" y="844" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">דָּרוֹם</text>
+
+  <!-- Cama (norte-sur) visualizada -->
+  <rect x="345" y="708" width="30" height="100" rx="3" fill="rgba(30,107,90,0.18)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="360" y="724" text-anchor="middle" font-size="7" fill="#2d6b4e" font-weight="600">cama</text>
+  <text x="360" y="794" text-anchor="middle" font-size="7" fill="#2d6b4e">N-S</text>
+
+  <!-- Labels arriba -->
+  <text x="78" y="640" font-size="10" fill="#8b1a1a" font-weight="600">El eje E-O es SAGRADO:</text>
+  <text x="78" y="654" font-size="9.5" fill="#3d2f23">· sol sale por el este, se pone por el oeste</text>
+  <text x="78" y="666" font-size="9.5" fill="#3d2f23">· la Shejiná habita en el oeste</text>
+  <text x="78" y="678" font-size="9.5" fill="#3d2f23">· el Templo se orienta este-oeste</text>
+
+  <!-- Labels abajo derecha -->
+  <text x="450" y="640" font-size="10" fill="#2d6b4e" font-weight="600">La cama N-S:</text>
+  <text x="450" y="654" font-size="9.5" fill="#3d2f23">· PERPENDICULAR al eje sagrado</text>
+  <text x="450" y="666" font-size="9.5" fill="#3d2f23">· no «compite» con la orientación divina</text>
+  <text x="450" y="678" font-size="9.5" fill="#3d2f23">· bendición de fertilidad</text>
+
+  <text x="360" y="876" text-anchor="middle" font-size="10" fill="#8b1a1a" font-style="italic">orientar el sueño paralelo al eje sagrado = falta de respeto · perpendicular = honra</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- TABLA DE ORIENTACIONES                                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="894" x2="360" y2="912" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+
+<g class="tefcama-nodo" data-id="tabla-orientaciones">
+  <rect x="60" y="916" width="600" height="92" rx="6" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1"/>
+  <text x="360" y="938" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="600">Tabla de orientaciones</text>
+  <!-- Headers -->
+  <text x="120" y="958" text-anchor="middle" font-size="9.5" fill="#6b4423" font-weight="600">eje de cama</text>
+  <text x="360" y="958" text-anchor="middle" font-size="9.5" fill="#6b4423" font-weight="600">diagnóstico</text>
+  <text x="600" y="958" text-anchor="middle" font-size="9.5" fill="#6b4423" font-weight="600">resultado</text>
+  <line x1="78" y1="966" x2="642" y2="966" stroke="#6b4423" stroke-width="0.5"/>
+  <!-- Fila 1 -->
+  <text x="120" y="982" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="600">este-oeste</text>
+  <text x="360" y="982" text-anchor="middle" font-size="9.5" fill="#3d2f23">paralelo al eje sagrado</text>
+  <text x="600" y="982" text-anchor="middle" font-size="9.5" fill="#8b1a1a">prohibido · no fertilidad</text>
+  <!-- Fila 2 -->
+  <text x="120" y="1000" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">norte-sur</text>
+  <text x="360" y="1000" text-anchor="middle" font-size="9.5" fill="#3d2f23">perpendicular al eje sagrado</text>
+  <text x="600" y="1000" text-anchor="middle" font-size="9.5" fill="#2d6b4e">óptimo · bendecido</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · LA HALAJÁ DEL DETALLE                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="1008" x2="360" y2="1024" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tc)"/>
+
+<g class="tefcama-nodo" data-id="doctrina">
+  <rect x="60" y="1028" width="600" height="138" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1050" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La halajá del detalle minúsculo</text>
+  <text x="78" y="1072" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1072" font-size="9.5" fill="#3d2f23">la grandeza espiritual NO se mide solo por dogmas o hazañas</text>
+  <text x="78" y="1088" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1088" font-size="9.5" fill="#3d2f23">se mide también por la ATENCIÓN persistente a detalles minúsculos</text>
+  <text x="78" y="1104" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1104" font-size="9.5" fill="#3d2f23">Aba Binyamin no escribió tratados — VIVIÓ con dos preocupaciones técnicas</text>
+  <text x="78" y="1120" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="1120" font-size="9.5" fill="#3d2f23">la fidelidad halájica es inversamente proporcional al tamaño del objeto</text>
+  <text x="78" y="1136" font-size="9.5" fill="#3d2f23">5.</text>
+  <text x="100" y="1136" font-size="9.5" fill="#3d2f23">cuanto más pequeño el ritual, más reveladora es la dedicación a él</text>
+  <text x="360" y="1158" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la sensibilidad halájica del detalle abre paso a las sugyot que vienen sobre micro-precisión ritual</text>
+</g>
+
+</svg>
+</div>
+
+<div class="tefcama-panel" id="tefcama-panel">
+  <p class="tefcama-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'baraita': {
+      titulo: 'La baraita de Aba Binyamin',
+      hebreo: 'עַל שְׁנֵי דְּבָרִים הָיִיתִי מִצְטַעֵר כָּל יָמַי',
+      traduccion: '«Sobre dos cosas me angustié todos mis días»',
+      explicacion: 'Aba Binyamin es una figura menor del corpus tannaítico. Sus enseñanzas son pocas pero memorables. La fórmula «על שני דברים הייתי מצטער כל ימי» («sobre dos cosas me angustié todos mis días») es autobiográfica y reveladora.\n\nLa palabra clave es מִצְטַעֵר (mitsta\'er) — «me angustiaba, me preocupaba intensamente». No es un verbo neutro. Implica esfuerzo continuo, vigilancia, preocupación operante. Aba Binyamin NO se preocupó esporádicamente por estas cosas — vivió con ellas como obsesión cotidiana.\n\nY la frase «כָּל יָמַי» («todos mis días») es absoluta. No fue una etapa de juventud rabínica, no fue un período. Fue su VIDA ENTERA. Desde joven hasta su muerte, dos detalles ocupaban su sensibilidad espiritual.\n\nLa sorpresa de la baraita es lo PEQUEÑOS que son los dos detalles. Aba Binyamin pudo haber dicho cosas grandes: «me angustié por la santificación del Nombre», «por la pobreza de los huérfanos», «por la profundidad de la Torá». Dijo dos cosas técnicas, casi domésticas.\n\nLa lección metodológica es central para entender el rabinismo: la grandeza espiritual NO se manifiesta solo en grandes doctrinas. Se manifiesta también — y a veces sobre todo — en la fidelidad obsesiva a pequeñas precisiones rituales. El detalle micro IMPORTA.\n\nLa baraita prepara la sensibilidad para todo el perek de Berajot: si Aba Binyamin dedicó su vida a estos dos detalles, vale la pena estudiarlos con su mismo cuidado.'
+    },
+    'brevedad': {
+      titulo: 'La sorprendente brevedad',
+      hebreo: 'מַה שֶּׁאָמַר וּמַה שֶּׁלֹּא אָמַר',
+      traduccion: 'Lo que dijo y lo que no dijo',
+      explicacion: 'La brevedad de la baraita es deliberada y reveladora. Aba Binyamin tenía toda la riqueza del repertorio rabínico para enumerar como objeto de su angustia. Eligió dos cosas pequeñas.\n\nLo que NO dijo (y pudo haber dicho):\n\n  · «me angustié por la santificación del Nombre»\n  · «por la justicia para los huérfanos y las viudas»\n  · «por la pureza de mis intenciones en cada mitzvá»\n  · «por la profundidad de mi estudio de Torá»\n  · «por el amor a HKBH en todo momento»\n\nLo que DIJO:\n\n  · que mi tefilá esté delante de mi cama\n  · que mi cama esté entre norte y sur\n\nLa elección no es accidental ni modesta. Es una DOCTRINA implícita: las grandes virtudes morales (santificación, justicia, pureza, amor) se cultivan a través de la atención a las micro-precisiones rituales. NO se puede santificar el Nombre si descuidas el detalle físico de cómo rezas. NO se puede amar a HKBH si no te ocupas de la orientación de tu cama.\n\nLa atención al detalle NO es un sustituto de las grandes virtudes — es su VEHÍCULO. Aba Binyamin entendió que la espiritualidad concreta opera por canales materiales. Sin esos canales (la posición exacta del cuerpo, la orientación exacta del mueble), las virtudes abstractas no tienen donde anclarse.\n\nEsta es la sensibilidad halájica clásica: la santidad NO es asunto de momentos sublimes sino de regularidades técnicas. Lo grande se logra atendiendo a lo pequeño.'
+    },
+    'concern-tefila': {
+      titulo: 'Concern 1 · «mi tefilá delante de mi cama»',
+      hebreo: 'תְּפִלָּתִי לִפְנֵי מִטָּתִי',
+      traduccion: '«Mi tefilá delante de mi cama»',
+      explicacion: 'La primera preocupación de Aba Binyamin admite DOS lecturas clásicas, ambas con apoyo en la tradición.\n\nLECTURA A — ESPACIAL (Rashi):\n  La preocupación es que durante la amidá NO HUBIERA NADA INTERPUESTO entre el orador y la pared. Esto se basa en la halajá general de que ciertos objetos NO pueden interponerse entre el orador y el Norte (donde está la Shejiná, según Bava Batra 25a) o entre el orador y la pared.\n\n  ¿Por qué entonces «delante de MI CAMA»? Porque la cama era el único mobiliario tolerado como mejitzá. La cama es estática, inanimada, parte del cuarto. Otros objetos (mesa, sillas, herramientas) NO se permiten.\n\n  Aba Binyamin se aseguraba de que SU cama estuviera bien posicionada para que durante el rezo NO HUBIERA OTRA COSA entre él y la pared. La concentración requiere ausencia de mediadores visuales.\n\nLECTURA B — TEMPORAL:\n  Otra tradición lee «delante de mi cama» en sentido temporal — INMEDIATAMENTE antes de acostarse. Es decir, la tefilá nocturna debe ser el ÚLTIMO acto consciente del día.\n\n  El argumento: si rezo y luego ceno, conversaciono, leo, etc., la conexión espiritual del rezo se ha PERDIDO antes de dormir. El orden correcto es: actividades del día → cena → recapitulación → tefilá nocturna → SUEÑO INMEDIATO.\n\n  Aba Binyamin se aseguraba de no tener nada entre la tefilá y el sueño. La proximidad TEMPORAL preserva el efecto espiritual.\n\nAMBAS lecturas convergen en un punto: PROXIMIDAD ESTRUCTURAL entre tefilá y cama. La diferencia es si se trata de proximidad espacial (sin objetos entre) o temporal (sin actividades entre). Las dos son halájicamente operativas y ambas se incorporaron en la práctica posterior.\n\nLa lección general: el rezo NO es un evento aislado. Tiene una geometría — espacial y temporal — que importa para su eficacia espiritual.'
+    },
+    'concern-orientacion': {
+      titulo: 'Concern 2 · «mi cama entre norte y sur»',
+      hebreo: 'מִטָּתִי שֶׁתְּהֵא נְתוּנָה בֵּין צָפוֹן לְדָרוֹם',
+      traduccion: '«Mi cama colocada entre norte y sur»',
+      explicacion: 'La segunda preocupación es PRECISA: la cama debía estar orientada con su eje LONGITUDINAL (cabeza-pies) alineado norte-sur, NUNCA este-oeste.\n\nR. Yitzjak ofrece dos consecuencias positivas:\n\n  1. בָּנִים זְכָרִים — la pareja tendrá HIJOS VARONES\n  2. אִשְׁתּוֹ אֵינָהּ מַפֶּלֶת — la esposa NO ABORTARÁ\n\nLa derashá se apoya en Tehilim 17:14:\n  «וּצְפוּנְךָ תְּמַלֵּא בִטְנָם · יִשְׂבְּעוּ בָנִים»\n  «y de tu tesoro/norte llenas su vientre · se sacian de hijos»\n\nEl juego filológico es decisivo:\n  · צָפוּן (tsafún, «tesoro escondido») — el significado bíblico literal\n  · צָפוֹן (tsafón, «norte») — comparte las mismas consonantes en estado no-vocalizado\n\nLa derashá explota la ambigüedad: «tu norte llena su vientre» — la orientación al norte produce el llenado del vientre con hijos. La palabra del versículo se LEE en clave de orientación geográfica.\n\nLa consecuencia halájica: para asegurar fertilidad y nacimiento de varones, hay que orientar la cama N-S. Es una práctica que aparece codificada en los códigos halájicos posteriores (Shulján Aruj OC 3:6) y se sigue observando en comunidades observantes hoy.\n\nLa razón profunda — por qué precisamente N-S y no E-O — requiere entender la cosmología sagrada del eje E-O. Lo desarrolla el siguiente nodo.\n\nEs importante notar: la promesa de R. Yitzjak NO es mágica en sentido pagano. NO dice «la orientación causa mecánicamente el resultado». Dice que orientar la cama es UNA EXPRESIÓN DE RESPETO al orden cosmológico divino, y que ese respeto recibe a su vez bendiciones divinas (fertilidad). La causalidad es teológica, no técnica.'
+    },
+    'cosmologia': {
+      titulo: 'La cosmología sagrada · por qué N-S y no E-O',
+      hebreo: 'מִזְרָח ↔ מַעֲרָב הִיא צִיר הַקְּדֻשָּׁה',
+      traduccion: 'Este-oeste es el eje de la santidad',
+      explicacion: 'Para entender por qué Aba Binyamin orientaba su cama norte-sur, hay que entender la COSMOLOGÍA SAGRADA del eje este-oeste en el judaísmo.\n\nEL EJE E-O ES EL EJE DE LO SAGRADO:\n\n  1. EL SOL — sale por el este, se pone por el oeste. El movimiento diario más visible y poderoso del cosmos sigue este eje.\n\n  2. LA SHEJINÁ — la presencia divina se asocia con el OESTE. Berajot 31a y Bava Batra 25a establecen: «la Shejiná está en el oeste» (שכינה במערב). El que reza mira al oeste — o al menos no le da la espalda al oeste.\n\n  3. EL TEMPLO — se orienta E-O. El Kodesh ha-Kodashim (Santo de los Santos) está al OESTE; la entrada al este. El cohen gadol entra desde el este, avanzando hacia el oeste — hacia la Shejiná.\n\n  4. EL TABERNÁCULO — Moshé construyó el Mishkán con la misma orientación: entrada al este, Kodesh ha-Kodashim al oeste.\n\nDado que el eje E-O es SAGRADO, orientar el sueño paralelo a él sería problemático:\n\n  · El sueño es íntimo, vulnerable, sexual\n  · Orientar el cuerpo durmiente PARALELO al eje del Templo/Shejiná = «competir» con la orientación sagrada\n  · Es una falta de respeto cosmológico\n\nLA SOLUCIÓN: orientar la cama PERPENDICULAR al eje sagrado — es decir, NORTE-SUR. Así el sueño NO interfiere con el eje divino. El eje íntimo es ortogonal al eje cósmico — separados y respetuosos.\n\nLa visualización del diagrama muestra esto: el eje E-O (dorado, sagrado) atraviesa horizontalmente; el eje N-S (verde, donde se coloca la cama) lo cruza verticalmente. La cama, dibujada en el eje vertical, está en su orientación correcta.\n\nEsta cosmología es continua con la teología de los #12 (cuatro ángeles cardinales) y #5 (kinor de David, viento del norte). El cosmos rabínico está orientado, con ejes y direcciones cargadas de significado. La vida judía cotidiana se ajusta a esa geometría sagrada.'
+    },
+    'tabla-orientaciones': {
+      titulo: 'Tabla de orientaciones · diagnóstico halájico',
+      hebreo: 'הַשּׁוּלְחָן',
+      traduccion: 'La tabla',
+      explicacion: 'La tabla sistematiza la enseñanza en términos halájicos prácticos.\n\nORIENTACIÓN E-O — PROHIBIDA:\n  · paralela al eje sagrado del Templo y la Shejiná\n  · falta de respeto cosmológico\n  · resultado: no se reciben las bendiciones de fertilidad\n  · en algunas opiniones: prohibición técnica halájica (Shulján Aruj OC 3:6)\n\nORIENTACIÓN N-S — ÓPTIMA:\n  · perpendicular al eje sagrado\n  · honra la geometría cosmológica\n  · resultado: bendecido con fertilidad, hijos varones, sin abortos\n  · práctica recomendada para todo judío observante\n\nLa codificación posterior (Shulján Aruj OC 3:6):\n  «יְזַהֵר שֶׁלֹּא תְּהֵא מִטָּתוֹ נְתוּנָה בֵּין מִזְרָח לְמַעֲרָב, אֶלָּא בֵּין צָפוֹן לְדָרוֹם»\n  «Se cuidará de que su cama NO esté entre este y oeste, sino entre norte y sur»\n\nNote que la codificación es NEGATIVA primero (no E-O) y luego POSITIVA (sino N-S). Esto refleja la estructura de la preocupación de Aba Binyamin: la preocupación es EVITAR el eje sagrado más que abrazar uno específico. El N-S es la solución a la PROHIBICIÓN del E-O.\n\nLa práctica HOY: esta halajá sigue observándose en comunidades ortodoxas. Al amueblar un dormitorio, el primer cálculo es: ¿dónde está el este? ¿en qué orientación queda la cama? Si la única opción es E-O, se redistribuye el cuarto.\n\nLa lección es vívida: la halajá entra hasta la geometría del mobiliario doméstico. NO hay esferas neutrales en la vida del judío observante — todo lo material tiene su orientación correcta dentro del cosmos sagrado.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la halajá del detalle minúsculo',
+      hebreo: 'הַהֲלָכָה שֶׁל הַפְּרָט הַקָּטָן',
+      traduccion: 'La halajá del detalle pequeño',
+      explicacion: 'La baraita de Aba Binyamin enseña una sensibilidad espiritual distintiva del rabinismo: la HALAJÁ DEL DETALLE MINÚSCULO.\n\nPRINCIPIOS QUE EMERGEN:\n\n  1. LA GRANDEZA NO SE MIDE SOLO POR LO GRANDE — no por dogmas heroicos, hazañas espectaculares, sufrimientos públicos. Aba Binyamin no aparece en grandes narrativas; solo en estas dos preocupaciones.\n\n  2. LA ATENCIÓN PERSISTENTE ES LA MARCA — la palabra clave es «כָּל יָמַי» («todos mis días»). No fue intensidad momentánea sino FIDELIDAD sostenida. La virtud judía es duración, no destello.\n\n  3. NO SE ESCRIBIERON TRATADOS — Aba Binyamin no nos dejó un tratado sobre la oración ni sobre la cama. Nos dejó dos PREOCUPACIONES VIVIDAS. La vida santificada es por sí misma testimonio. La doctrina sigue a la práctica, no al revés.\n\n  4. INVERSAMENTE PROPORCIONAL — cuanto MÁS PEQUEÑO el objeto al que se atiende, MÁS REVELADORA es la atención. Cualquier persona podría preocuparse por «la justicia». Solo un alma especialmente sensible se preocupa por la orientación de la cama. La rareza del objeto certifica la calidad del alma.\n\n  5. LO MICRO Y LO MACRO — la cama pequeña refleja el cosmos. Su orientación participa de la geometría del Templo, del movimiento del sol, de la presencia de la Shejiná. Lo más pequeño se conecta con lo más grande.\n\nESTA ENSEÑANZA PREPARA EL RESTO DEL PEREK:\n\n  · sugyot sobre cómo lavarse las manos exactamente\n  · sobre la posición exacta de los pies en la amidá\n  · sobre la cantidad exacta de saliva permitida durante el rezo\n  · sobre la precisión micrométrica de cada detalle litúrgico\n\nTodo esto es continuación de la sensibilidad de Aba Binyamin: el detalle micro IMPORTA y la atención a él es la VIDA ESPIRITUAL real.\n\nUNA OBSERVACIÓN FINAL: hay un peligro implícito de la doctrina — el escrúpulo neurótico, la obsesión incapacitante con detalles. El rabinismo NO romantiza esto. La sugyá presenta a Aba Binyamin como modelo precisamente porque sus dos preocupaciones eran ESPECÍFICAS Y LIMITADAS — dos cosas, no veinte. La maestría consiste en seleccionar BIEN qué detalles ocupar — y dejar lo demás en su lugar natural. No se trata de obsesionarse con todo, sino de seleccionar los pocos puntos donde la atención cosmológica es decisiva.\n\nAba Binyamin no era un escrupuloso paralizado — era un sabio FOCALIZADO. Eligió sus dos puntos críticos y los cultivó toda la vida. La lección es ese discernimiento.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.tefcama-interactivo')
+    : document.querySelector('.tefcama-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#tefcama-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.tefcama-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="tefcama-panel-header">' +
+        '<p class="tefcama-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="tefcama-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="tefcama-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="tefcama-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.tefcama-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.tefcama-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="tefcama-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
