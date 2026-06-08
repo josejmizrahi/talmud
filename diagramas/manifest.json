@@ -508,15 +508,36 @@
       "slug": "tres-regalos",
       "orden": 15,
       "titulo": "Los tres regalos por sufrimiento",
-      "subtitulo": "Torá · Eretz Yisrael · Olam Ha-Ba (RaShBÍ)",
+      "subtitulo": "la baraita de RaShBÍ · tres pruebas exegéticas",
       "dapim": [
         "5a"
       ],
       "grupo": "El alma y el sufrimiento",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/tres-regalos.html",
+      "sabios": [
+        "r-shimon-bar-yojai"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "tehilim-94-12",
+        "tehilim-94-13",
+        "devarim-8-5",
+        "devarim-8-7",
+        "mishlei-6-23"
+      ],
+      "conceptos": [
+        "yisurim-shel-ahava",
+        "tora",
+        "eretz-yisrael",
+        "olam-haba",
+        "gezera-shava",
+        "kal-vajomer"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #14 incluyó la baraita de Rashbi sobre los tres regalos\ncomo UN elemento entre varios en la sugyá amplia del sufrimiento.\nPero la baraita merece una exposición independiente: cada uno de\nlos tres regalos se prueba con una técnica exegética DISTINTA, y\nel orden Torá → Tierra → Olam Ha-Ba revela la jerarquía rabínica\nde los bienes supremos. La sugyá previa explora la TENSIÓN del\nsufrimiento; esta enseñanza expone su PRODUCTIVIDAD.\n"
+      }
     },
     {
       "slug": "tefila-y-cama",
@@ -805,16 +826,16 @@
       "nombre": "Tanu Rabanan"
     },
     {
+      "slug": "r-shimon-bar-yojai",
+      "nombre": "R Shimon Bar Yojai"
+    },
+    {
       "slug": "r-natan",
       "nombre": "R Natan"
     },
     {
       "slug": "rav-yitzjak-bar-shmuel",
       "nombre": "Rav Yitzjak Bar Shmuel"
-    },
-    {
-      "slug": "r-shimon-bar-yojai",
-      "nombre": "R Shimon Bar Yojai"
     },
     {
       "slug": "r-jiya-bar-aba",
@@ -949,6 +970,26 @@
       "nombre": "Tehilim 19 15"
     },
     {
+      "slug": "tehilim-94-12",
+      "nombre": "Tehilim 94 12"
+    },
+    {
+      "slug": "tehilim-94-13",
+      "nombre": "Tehilim 94 13"
+    },
+    {
+      "slug": "devarim-8-5",
+      "nombre": "Devarim 8 5"
+    },
+    {
+      "slug": "devarim-8-7",
+      "nombre": "Devarim 8 7"
+    },
+    {
+      "slug": "mishlei-6-23",
+      "nombre": "Mishlei 6 23"
+    },
+    {
       "slug": "shoftim-7-19",
       "nombre": "Shoftim 7 19"
     },
@@ -959,22 +1000,6 @@
     {
       "slug": "mishlei-3-12",
       "nombre": "Mishlei 3 12"
-    },
-    {
-      "slug": "tehilim-94-12",
-      "nombre": "Tehilim 94 12"
-    },
-    {
-      "slug": "devarim-8-5",
-      "nombre": "Devarim 8 5"
-    },
-    {
-      "slug": "mishlei-6-23",
-      "nombre": "Mishlei 6 23"
-    },
-    {
-      "slug": "tehilim-94-13",
-      "nombre": "Tehilim 94 13"
     }
   ],
   "conceptos": [
@@ -1190,6 +1215,26 @@
       "nombre": "Syag RabíNico"
     },
     {
+      "slug": "yisurim-shel-ahava",
+      "nombre": "Yisurim Shel Ahava"
+    },
+    {
+      "slug": "tora",
+      "nombre": "Tora"
+    },
+    {
+      "slug": "eretz-yisrael",
+      "nombre": "Eretz Yisrael"
+    },
+    {
+      "slug": "gezera-shava",
+      "nombre": "Gezera Shava"
+    },
+    {
+      "slug": "kal-vajomer",
+      "nombre": "Kal Vajomer"
+    },
+    {
       "slug": "vigilias",
       "nombre": "Vigilias"
     },
@@ -1204,10 +1249,6 @@
     {
       "slug": "yisurim",
       "nombre": "Yisurim"
-    },
-    {
-      "slug": "yisurim-shel-ahava",
-      "nombre": "Yisurim Shel Ahava"
     },
     {
       "slug": "bitul-tora",
@@ -1345,6 +1386,14 @@
       "categoria": "editorial",
       "tipo": "continuacion-halajica",
       "texto": "El diagrama #13 estableció la escalera contra el yetzer hará — la\nlucha INTERIOR contra el deseo. Pero hay un sufrimiento que NO\nproviene del propio yetzer: el dolor que HKBH envía. La sugyá\npasa de la auto-disciplina al sufrimiento RECIBIDO. Reish Lakish\ncerró con «recordar el día de la muerte»; ahora la guemará explora\nel más difícil de los temas — ¿por qué sufren los justos? La\ntransición es de la muerte como recurso espiritual al sufrimiento\ncomo enigma teológico.\n",
+      "peso": 3
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #14 incluyó la baraita de Rashbi sobre los tres regalos\ncomo UN elemento entre varios en la sugyá amplia del sufrimiento.\nPero la baraita merece una exposición independiente: cada uno de\nlos tres regalos se prueba con una técnica exegética DISTINTA, y\nel orden Torá → Tierra → Olam Ha-Ba revela la jerarquía rabínica\nde los bienes supremos. La sugyá previa explora la TENSIÓN del\nsufrimiento; esta enseñanza expone su PRODUCTIVIDAD.\n",
       "peso": 3
     },
     {
@@ -1604,6 +1653,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -1636,11 +1693,27 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
       "peso": 1
     },
     {
@@ -1657,6 +1730,54 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "keriat-shema-al-hamita",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-94-12",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-94-13",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-8-5",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "mishlei-6-23",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tres-regalos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yisurim-shel-ahava",
       "peso": 1
     }
   ]

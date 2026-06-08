@@ -1,0 +1,362 @@
+<div class="regalos-interactivo">
+<style>
+  .regalos-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .regalos-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .regalos-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .regalos-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .regalos-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .regalos-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .regalos-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .regalos-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .regalos-diagrama svg { width: 100%; height: auto; display: block; }
+  .regalos-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .regalos-nodo:hover rect { stroke-width: 2 !important; }
+  .regalos-nodo:hover circle { stroke-width: 2.5 !important; }
+  .regalos-nodo.activa rect { stroke-width: 2.5 !important; }
+  .regalos-nodo.activa circle { stroke-width: 3 !important; }
+  .regalos-nodo.dim { opacity: 0.32; }
+  .regalos-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .regalos-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .regalos-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .regalos-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .regalos-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .regalos-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .regalos-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="regalos-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>baraita · entrada</span>
+  <span><span class="swatch azul"></span>1 · Torá · derashá directa</span>
+  <span><span class="swatch verde"></span>2 · Tierra · gezera shavá</span>
+  <span><span class="swatch rojo"></span>3 · Olam Ha-Ba · kal vajomer</span>
+  <span><span class="swatch sepia"></span>repertorio · doctrina</span>
+</div>
+
+<div class="regalos-diagrama">
+<svg viewBox="0 0 720 1240" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 5a: los tres regalos de RaShBÍ · Torá, Eretz Israel, Olam Ha-Ba · tres pruebas exegéticas distintas</title>
+
+<defs>
+  <marker id="flecha-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-tr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Los tres regalos por sufrimiento · RaShBÍ</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 5a · Torá · Eretz Yisrael · Olam Ha-Ba · tres pruebas, tres técnicas</text>
+
+<!-- ============================================================ -->
+<!-- LA BARAITA — ENTRADA                                         -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA BARAITA · TANYA R. SHIMON BAR YOJAI · 5A</text>
+
+<g class="regalos-nodo" data-id="baraita">
+  <rect x="60" y="86" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">שָׁלוֹשׁ מַתָּנוֹת טוֹבוֹת נָתַן הַקָּדוֹשׁ בָּרוּךְ הוּא לְיִשְׂרָאֵל</text>
+  <text x="360" y="130" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">וְכוּלָּן לֹא נְתָנָן אֶלָּא עַל יְדֵי יִסּוּרִין</text>
+  <text x="360" y="152" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Tres buenos regalos dio HKBH a Israel — y todos los dio solo a través del sufrimiento»</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la doctrina del PRECIO METAFÍSICO · lo más alto requiere el costo proporcional</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS TRES — ESCALA TEOLÓGICA CRECIENTE                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="186" x2="360" y2="204" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tr-gold)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALA · TORÁ ↗ TIERRA ↗ OLAM HA-BA</text>
+
+<g class="regalos-nodo" data-id="escala">
+  <rect x="60" y="226" width="600" height="86" rx="6" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.2"/>
+  <!-- Tres círculos escalonados -->
+  <circle cx="140" cy="270" r="22" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="140" y="276" text-anchor="middle" font-size="13" direction="rtl" fill="#1e3a5f" font-weight="700">תּוֹרָה</text>
+  <circle cx="360" cy="265" r="26" fill="rgba(30,107,90,0.18)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="271" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">אֶ"י</text>
+  <circle cx="580" cy="260" r="30" fill="rgba(139,26,26,0.18)" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="580" y="266" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a" font-weight="700">עוה"ב</text>
+  <!-- líneas conectoras -->
+  <line x1="162" y1="262" x2="334" y2="252" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="386" y1="248" x2="550" y2="240" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- labels -->
+  <text x="140" y="306" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">portable · íntimo</text>
+  <text x="360" y="306" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">territorio · colectivo</text>
+  <text x="580" y="306" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">escatológico · supremo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS TRES PRUEBAS — INTRODUCCIÓN                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="312" x2="360" y2="332" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tr)"/>
+
+<text x="60" y="344" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CADA REGALO · UNA PRUEBA ESCRITURARIA · UNA TÉCNICA</text>
+
+<!-- ============================================================ -->
+<!-- REGALO 1 · TORÁ — DERASHÁ DIRECTA                           -->
+<!-- ============================================================ -->
+<g class="regalos-nodo" data-id="regalo-tora">
+  <rect x="60" y="356" width="600" height="180" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <!-- Número y badge -->
+  <circle cx="92" cy="384" r="18" fill="rgba(30,58,95,0.22)" stroke="#1e3a5f" stroke-width="2"/>
+  <text x="92" y="389" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="124" y="380" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">תּוֹרָה · la Torá</text>
+  <rect x="540" y="370" width="100" height="20" rx="3" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="590" y="384" text-anchor="middle" font-size="9" fill="#1e3a5f" font-style="italic">derashá directa</text>
+  <text x="124" y="396" font-size="9" fill="#6b4423">Tehilim 94:12 — paralelismo sintáctico en UN versículo</text>
+  <!-- el versículo -->
+  <rect x="80" y="410" width="560" height="46" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="360" y="430" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">אַשְׁרֵי הַגֶּבֶר אֲשֶׁר תְּיַסְּרֶנּוּ יָ-הּ · וּמִתּוֹרָתְךָ תְּלַמְּדֶנּוּ</text>
+  <text x="360" y="448" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Feliz el hombre a quien Tú disciplinas, Yah · y de tu Torá le enseñas»</text>
+  <!-- mecanismo de la derashá -->
+  <text x="80" y="478" font-size="10" fill="#1e3a5f" font-weight="600">El mecanismo:</text>
+  <text x="80" y="494" font-size="9.5" fill="#3d2f23">paralelismo sintáctico — DOS cláusulas paralelas conectadas por la conjunción «y»</text>
+  <text x="80" y="510" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">«tu disciplina»</tspan> ↔ <tspan font-weight="600">«tu Torá»</tspan> · el versículo MISMO las equipara</text>
+  <text x="80" y="526" font-size="9" fill="#6b4423" font-style="italic">la prueba más simple: el texto une lo que la baraita afirma · sin necesidad de inferencia</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- REGALO 2 · ERETZ ISRAEL — GEZERA SHAVÁ                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="536" x2="360" y2="552" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tr)"/>
+
+<g class="regalos-nodo" data-id="regalo-tierra">
+  <rect x="60" y="556" width="600" height="208" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <circle cx="92" cy="584" r="18" fill="rgba(30,107,90,0.22)" stroke="#2d6b4e" stroke-width="2"/>
+  <text x="92" y="589" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">2</text>
+  <text x="124" y="580" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">אֶרֶץ יִשְׂרָאֵל · la Tierra de Israel</text>
+  <rect x="510" y="570" width="130" height="20" rx="3" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="575" y="584" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">gezera shavá implícita</text>
+  <text x="124" y="596" font-size="9" fill="#6b4423">Devarim 8:5 + 8:7 — término-puente entre DOS versículos cercanos</text>
+
+  <!-- Versículo 1 -->
+  <rect x="80" y="610" width="560" height="44" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="80" y="626" font-size="9" fill="#2d6b4e" font-style="italic">Devarim 8:5 — la disciplina paternal</text>
+  <text x="360" y="644" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ · ה' אֱלֹקֶיךָ מְיַסְּרֶךָּ</text>
+
+  <!-- Versículo 2 -->
+  <rect x="80" y="660" width="560" height="44" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="80" y="676" font-size="9" fill="#2d6b4e" font-style="italic">Devarim 8:7 — DOS versículos después</text>
+  <text x="360" y="694" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">כִּי ה' אֱלֹקֶיךָ מְבִיאֲךָ אֶל אֶרֶץ טוֹבָה</text>
+
+  <!-- mecanismo -->
+  <text x="80" y="722" font-size="10" fill="#2d6b4e" font-weight="600">El mecanismo:</text>
+  <text x="80" y="738" font-size="9.5" fill="#3d2f23">la palabra <tspan font-weight="700" fill="#2d6b4e">כִּי</tspan> aparece al inicio de AMBOS versículos · conexión por término idéntico</text>
+  <text x="80" y="754" font-size="9" fill="#6b4423" font-style="italic">la disciplina (8:5) y la entrada a la tierra (8:7) son el MISMO movimiento · proximidad textual = causalidad</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- REGALO 3 · OLAM HA-BA — KAL VAJOMER                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="764" x2="360" y2="780" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tr)"/>
+
+<g class="regalos-nodo" data-id="regalo-olamhaba">
+  <rect x="60" y="784" width="600" height="240" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <circle cx="92" cy="812" r="18" fill="rgba(139,26,26,0.22)" stroke="#8b1a1a" stroke-width="2"/>
+  <text x="92" y="817" text-anchor="middle" font-size="14" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">3</text>
+  <text x="124" y="808" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">עוֹלָם הַבָּא · el mundo venidero</text>
+  <rect x="510" y="798" width="130" height="20" rx="3" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="0.8"/>
+  <text x="575" y="812" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">kal vajomer · a fortiori</text>
+  <text x="124" y="824" font-size="9" fill="#6b4423">Mishlei 6:23 — escala de intensidades de luz</text>
+
+  <!-- El versículo -->
+  <rect x="80" y="838" width="560" height="44" rx="4" fill="rgba(139,26,26,0.04)" stroke="#8b1a1a" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="360" y="858" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">כִּי נֵר מִצְוָה · וְתוֹרָה אוֹר · וְדֶרֶךְ חַיִּים תּוֹכְחוֹת מוּסָר</text>
+  <text x="360" y="874" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«La mitzvá es vela · la Torá es luz · y el camino de la vida son los reproches de la disciplina»</text>
+
+  <!-- escala de luz visualizada -->
+  <text x="80" y="900" font-size="10" fill="#8b1a1a" font-weight="600">La escala de luz (tres intensidades crecientes):</text>
+
+  <!-- Vela -->
+  <rect x="80" y="910" width="170" height="44" rx="4" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="0.8"/>
+  <text x="98" y="928" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="600">נֵר</text>
+  <text x="165" y="928" font-size="9.5" fill="#3d2f23">= mitzvá</text>
+  <text x="98" y="945" font-size="8.5" fill="#6b4423" font-style="italic">luz menor · una mitzvá</text>
+
+  <!-- Luz -->
+  <rect x="270" y="910" width="170" height="44" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="288" y="928" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="600">אוֹר</text>
+  <text x="355" y="928" font-size="9.5" fill="#3d2f23">= Torá</text>
+  <text x="288" y="945" font-size="8.5" fill="#6b4423" font-style="italic">luz mayor · la Torá entera</text>
+
+  <!-- Camino de vida -->
+  <rect x="460" y="910" width="180" height="44" rx="4" fill="rgba(139,26,26,0.13)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="478" y="928" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="700">דֶּרֶךְ חַיִּים</text>
+  <text x="558" y="928" font-size="9.5" fill="#3d2f23">= OLAM HA-BA</text>
+  <text x="478" y="945" font-size="8.5" fill="#6b4423" font-style="italic">luz máxima · escatológica</text>
+
+  <text x="80" y="976" font-size="10" fill="#8b1a1a" font-weight="600">El kal vajomer:</text>
+  <text x="80" y="992" font-size="9.5" fill="#3d2f23">si vela es mitzvá y luz es Torá, el «camino de vida» (mayor) DEBE ser el olam ha-ba</text>
+  <text x="80" y="1008" font-size="9.5" fill="#3d2f23">y la VÍA hacia ese camino es <tspan font-weight="700" fill="#8b1a1a">תּוֹכְחוֹת מוּסָר</tspan> · reproches disciplinarios = yisurim</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL REPERTORIO METODOLÓGICO                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="1024" x2="360" y2="1042" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tr)"/>
+
+<text x="60" y="1054" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL REPERTORIO METODOLÓGICO · TRES TIPOS DE DERASHÁ EN UN BARAITA</text>
+
+<g class="regalos-nodo" data-id="repertorio">
+  <rect x="60" y="1064" width="600" height="86" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1086" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Rashbi NO solo enumera — despliega un repertorio derashista completo</text>
+  <text x="78" y="1108" font-size="9.5" fill="#3d2f23"><tspan fill="#1e3a5f" font-weight="600">1.</tspan> derashá DIRECTA — leer el paralelismo dentro de un versículo</text>
+  <text x="78" y="1122" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="600">2.</tspan> GEZERA SHAVÁ implícita — término-puente entre dos versículos cercanos</text>
+  <text x="78" y="1136" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">3.</tspan> KAL VAJOMER — argumento a fortiori sobre escala de intensidades</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · PRECIO METAFÍSICO                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="1150" x2="360" y2="1166" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tr)"/>
+
+<g class="regalos-nodo" data-id="doctrina">
+  <rect x="60" y="1170" width="600" height="62" rx="5" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1192" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La doctrina del PRECIO METAFÍSICO</text>
+  <text x="360" y="1212" text-anchor="middle" font-size="9.5" fill="#3d2f23">los bienes SUPREMOS no son gratuitos · su valor exige un costo proporcional · y el costo es siempre el mismo</text>
+  <text x="360" y="1226" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">yisurim — no como castigo, sino como divisa metafísica que adquiere lo más alto</text>
+</g>
+
+</svg>
+</div>
+
+<div class="regalos-panel" id="regalos-panel">
+  <p class="regalos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'baraita': {
+      titulo: 'La baraita de Rashbi · entrada',
+      hebreo: 'שָׁלוֹשׁ מַתָּנוֹת טוֹבוֹת נָתַן הַקָּדוֹשׁ בָּרוּךְ הוּא לְיִשְׂרָאֵל וְכוּלָּן לֹא נְתָנָן אֶלָּא עַל יְדֵי יִסּוּרִין',
+      traduccion: '«Tres buenos regalos dio HKBH a Israel — y todos los dio solo a través del sufrimiento»',
+      explicacion: 'La fórmula «שָׁלוֹשׁ מַתָּנוֹת טוֹבוֹת» (tres buenos regalos) es típica del estilo de R. Shimon bar Yojai. Sus enseñanzas se organizan a menudo en tríadas memorables.\n\nLa formulación es PROVOCADORA por dos razones:\n\n  1. La palabra «מַתָּנָה» (regalo) implica gratuidad — un regalo es por definición lo que se da SIN exigir contraprestación.\n\n  2. Y sin embargo la baraita afirma que estos regalos solo se dan «עַל יְדֵי יִסּוּרִין» — a través del sufrimiento. Es decir: CON contraprestación.\n\n¿Es entonces un regalo o un intercambio? La paradoja es deliberada. Son REGALOS en el sentido de que HKBH no tenía obligación de darlos — son inmerecidos. Pero la entrega de cada uno PASA POR el sufrimiento del receptor. El sufrimiento no es el precio que HKBH cobra — es el medio refinador que prepara al receptor para recibir el regalo.\n\nLa enseñanza tiene una resonancia política importante: Rashbi era un sabio que vivió bajo persecución romana, escondiéndose en una cueva durante años. Su teología del sufrimiento es vivencial, no abstracta. Cuando él dice que la Torá, la Tierra y el olam ha-ba se compran con yisurim, habla desde la experiencia del exilio en la cueva, del aislamiento, del cuerpo agrietado por la sal del agua.\n\nLa autoridad de la baraita está en que su autor practicaba lo que enseñaba.'
+    },
+    'escala': {
+      titulo: 'La escala teológica creciente',
+      hebreo: 'תּוֹרָה · אֶרֶץ · עוֹלָם הַבָּא',
+      traduccion: 'Torá · Tierra · Mundo Venidero',
+      explicacion: 'El orden Torá → Tierra → Olam Ha-Ba NO es accidental. Es una escala teológica precisa, con tres dimensiones:\n\nDIMENSIÓN 1 — ÍNTIMO A PÚBLICO:\n  · Torá es lo más íntimo — vive en la mente y el corazón\n  · Tierra es colectivo-territorial — un pueblo en un espacio\n  · Olam ha-ba es metafísico-universal — la realidad última\n\nDIMENSIÓN 2 — PORTABLE A FIJO A INMENSO:\n  · Torá viaja con el judío — Bavel, España, Roma, NY\n  · Tierra es fija — un lugar específico en el mapa\n  · Olam ha-ba excede toda geografía — el cosmos rediseñado\n\nDIMENSIÓN 3 — PRESENTE A FUTURO:\n  · Torá se posee ahora (estudiando)\n  · Tierra se posee parcialmente (no toda la diáspora la tiene)\n  · Olam ha-ba es futuro (escatológico)\n\nLa progresión refleja una jerarquía: cada uno SUPERIOR al anterior en alcance. Esto explica por qué los tres requieren sufrimiento proporcional:\n\n  · adquirir Torá requiere sacrificio menor (horas de estudio, austeridad material)\n  · adquirir Tierra requiere sacrificio colectivo (guerra, exilio, retorno)\n  · adquirir Olam ha-ba requiere sacrificio último (la vida espiritual entera)\n\nLa visualización de los círculos crecientes en el diagrama representa esta escala. Cada círculo es más grande que el anterior — más bien, más vasto en su alcance ontológico.\n\nLa enseñanza implícita: NO se puede saltar la escala. Para alcanzar el olam ha-ba se debe primero poseer la Tierra; para la Tierra, primero la Torá. La estructura del judaísmo es secuencial — Torá primero, todo lo demás después.'
+    },
+    'regalo-tora': {
+      titulo: '1 · Torá — derashá directa (paralelismo)',
+      hebreo: 'אַשְׁרֵי הַגֶּבֶר אֲשֶׁר תְּיַסְּרֶנּוּ יָ-הּ · וּמִתּוֹרָתְךָ תְּלַמְּדֶנּוּ',
+      traduccion: '«Feliz el hombre a quien Tú disciplinas, Yah, y de tu Torá le enseñas» (Tehilim 94:12)',
+      explicacion: 'La PRIMERA prueba es la más simple metodológicamente. Rashbi recurre a la DERASHÁ DIRECTA — leer el paralelismo sintáctico dentro de un solo versículo.\n\nLa estructura del versículo:\n  Cláusula A: «תְּיַסְּרֶנּוּ יָ-הּ» — Tú lo disciplinas, Yah\n  Cláusula B: «וּמִתּוֹרָתְךָ תְּלַמְּדֶנּוּ» — y de tu Torá le enseñas\n\nLas dos cláusulas están unidas por la conjunción «וְ» (y) — la sintaxis las equipara. El sujeto («tú» = HKBH) es el mismo. El objeto («él» = el hombre feliz) es el mismo. La acción cambia: «disciplinar» y «enseñar Torá» son dos formas de la misma actividad divina.\n\nLa derashá: lo que un padre hace al disciplinar a su hijo es paralelo a lo que HKBH hace al enseñarle Torá. Es decir: HKBH ENSEÑA Torá a través de la disciplina. Sin la disciplina, no hay Torá adquirida.\n\nLa palabra clave «אַשְׁרֵי» (feliz, dichoso) al principio del versículo es decisiva. El sufridor de la disciplina es FELIZ — no a pesar del sufrimiento, sino EN VIRTUD de él. Porque a través del sufrimiento accede a la enseñanza de la Torá.\n\nEsta es la prueba MÁS FUERTE de las tres porque NO requiere inferencia. El versículo MISMO equipara los dos términos. No hay que cruzar versículos ni hacer comparaciones — basta leer.\n\nLa lección psicológica del versículo: la actitud correcta ante la disciplina divina NO es resentimiento ni resignación, sino RECONOCIMIENTO de que estás siendo enseñado. La pedagogía divina opera por el sufrimiento.\n\nLa continuación del versículo (94:13, no citada por Rashbi) confirma el sentido: «לְהַשְׁקִיט לוֹ מִימֵי רָע» — «para darle reposo en los días malos». El propósito de la disciplina-Torá NO es el dolor mismo sino el REPOSO interior que la Torá produce en el sufridor — capacidad de mantener la calma cuando vienen los días malos.'
+    },
+    'regalo-tierra': {
+      titulo: '2 · Eretz Israel — gezera shavá implícita',
+      hebreo: 'כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ … כִּי ה\' אֱלֹקֶיךָ מְבִיאֲךָ אֶל אֶרֶץ טוֹבָה',
+      traduccion: 'Devarim 8:5 + 8:7 — la disciplina paternal y la entrada a la tierra buena',
+      explicacion: 'La SEGUNDA prueba sube en complejidad. Rashbi necesita conectar DOS versículos diferentes. La técnica es la GEZERA SHAVÁ (analogía verbal) implícita.\n\nLa gezera shavá formal requiere que dos versículos compartan un término idéntico, lo que permite transferir conclusiones de uno al otro. Aquí el término común es «כִּי» (que, porque) — aparece al inicio de AMBOS versículos:\n\n  Devarim 8:5 — «כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ · ה\' אֱלֹקֶיךָ מְיַסְּרֶךָּ»\n  «Que como disciplina un hombre a su hijo · HKBH tu Dios te disciplina»\n\n  Devarim 8:7 — «כִּי ה\' אֱלֹקֶיךָ מְבִיאֲךָ אֶל אֶרֶץ טוֹבָה»\n  «Que HKBH tu Dios te trae a una tierra buena»\n\nLas dos cláusulas con «כִּי», a dos versículos de distancia (con 8:6 intermedio sobre guardar mitzvot). La proximidad textual NO es accidente del scribe — es señal divina de que ambos versículos forman una unidad.\n\nLa lógica de la derashá:\n  · 8:5: HKBH te disciplina (yisurim)\n  · 8:6 (puente): por lo cual debes guardar mitzvot\n  · 8:7: te trae a la tierra buena\n\nEl movimiento textual completo: disciplina → mitzvot guardadas → tierra. La tierra se alcanza COMO RESULTADO de la disciplina. Sin disciplina, no hay tierra.\n\nHistóricamente, esto resuena con la experiencia del desierto. Israel pasó 40 años en el desierto — «מַסַּע» de yisurim — antes de entrar a la tierra. El desierto NO era castigo arbitrario: era el precio de adquisición de la tierra. Y los versículos de Devarim 8 son precisamente el discurso de Moshé antes del cruce del Jordán: «recuerda toda la disciplina que HKBH te dio en el desierto… para traerte a esta tierra buena».\n\nLa enseñanza implícita: ningún pueblo «merece» una tierra. Las tierras se adquieren por refinamiento espiritual a través del sufrimiento histórico. Esto es teología política — la tenencia de la Tierra de Israel es condicional al estado moral de la generación. La pérdida de la tierra (exilio) es resultado de degradación; la recuperación es resultado de refinamiento.'
+    },
+    'regalo-olamhaba': {
+      titulo: '3 · Olam Ha-Ba — kal vajomer (a fortiori)',
+      hebreo: 'כִּי נֵר מִצְוָה וְתוֹרָה אוֹר · וְדֶרֶךְ חַיִּים תּוֹכְחוֹת מוּסָר',
+      traduccion: '«La mitzvá es vela, la Torá es luz, y el camino de la vida son los reproches» (Mishlei 6:23)',
+      explicacion: 'La TERCERA prueba es la más sofisticada. Rashbi usa el KAL VAJOMER — argumento a fortiori — sobre una escala de intensidades.\n\nLa estructura del versículo es genial. Mishlei 6:23 enumera TRES términos de luz, en orden creciente:\n\n  1. נֵר (vela) — luz menor, doméstica, limitada\n  2. אוֹר (luz, claridad) — luz mayor, generalizada\n  3. דֶּרֶךְ חַיִּים (camino de vida) — la vía suprema\n\nY los identifica con tres realidades:\n\n  1. נֵר = מִצְוָה (mitzvá)\n  2. אוֹר = תּוֹרָה (Torá)\n  3. דֶּרֶךְ חַיִּים = ??? + תּוֹכְחוֹת מוּסָר (yisurim disciplinarios)\n\nEl kal vajomer: si la escala es creciente y los dos primeros son ya cosas altas (mitzvá, Torá), el TERCERO debe ser aún más alto. Pero ¿qué es más alto que la Torá? La respuesta inevitable: el OLAM HA-BA. El versículo identifica al «camino de vida» con el mundo venidero — el premio escatológico, la luz última.\n\nY el versículo MISMO especifica cómo se alcanza ese camino: «תּוֹכְחוֹת מוּסָר» — los reproches de la disciplina, es decir, los yisurim.\n\nLa elegancia del argumento:\n\n  · La mitzvá ilumina como una vela (mejora la vida del mitzvar)\n  · La Torá ilumina como una claridad general (mejora la cosmovisión del estudiante)\n  · El olam ha-ba ilumina como el «camino de vida» — luz absoluta, vida eterna\n\nY el COSTO sube proporcionalmente:\n\n  · Para encender una vela (cumplir una mitzvá) basta un esfuerzo pequeño\n  · Para mantener la luz (estudiar Torá) hace falta dedicación constante\n  · Para acceder al camino de vida hace falta el costo MÁS ALTO: los yisurim\n\nLa estructura «vela < luz < camino» modela un kal vajomer perfecto: la conclusión sobre el tercer término es FORZOSA dada la escala.\n\nEsta es la prueba más conceptualmente refinada. Las tres juntas — derashá directa, gezera shavá, kal vajomer — exhiben el repertorio metodológico completo del rabinismo en una sola baraita. Es un curso de hermenéutica condensado en seis líneas de Talmud.'
+    },
+    'repertorio': {
+      titulo: 'El repertorio metodológico',
+      hebreo: 'שָׁלוֹשׁ דַּרְכֵי דְרָשָׁה',
+      traduccion: 'Tres tipos de derashá',
+      explicacion: 'La baraita de Rashbi NO es solo una enseñanza teológica — es también un MANIFIESTO METODOLÓGICO. Las tres pruebas exhiben tres tipos distintos de derashá rabínica, presentándolos como complementarios:\n\n  1. DERASHÁ DIRECTA (Tehilim 94:12) — la técnica más simple. Lee el paralelismo dentro de UN solo versículo. No requiere inferencia entre textos. Basta atender a la sintaxis interna.\n\n  2. GEZERA SHAVÁ implícita (Devarim 8:5 + 8:7) — la técnica intermedia. Conecta DOS versículos por un término compartido. Permite transferir conclusiones de un contexto a otro. Crea una red textual.\n\n  3. KAL VAJOMER (Mishlei 6:23) — la técnica más conceptual. NO depende de términos compartidos, sino de RELACIONES lógicas entre conceptos. Construye una escala y argumenta a fortiori.\n\nEstas tres son, junto con otras como binyán av y midá kenegued midá, las herramientas básicas del rabinismo derashista (sistemáticamente listadas como las 13 middot de R. Yishmael).\n\nLa lección pedagógica: en una sola baraita Rashbi enseña tres maneras distintas de leer las Escrituras. El estudiante que internaliza esta enseñanza aprende NO solo la doctrina del sufrimiento sino también el método para construir doctrinas similares.\n\nEsto explica por qué la baraita es tan citada. Es densa: contiene en seis líneas (i) tres regalos supremos, (ii) tres versículos clave, (iii) tres técnicas hermenéuticas, (iv) una doctrina coherente sobre el sufrimiento. Es un manual condensado.\n\nLa progresión también es pedagógica: la primera prueba es accesible para principiantes (basta leer); la segunda requiere conocimiento de cómo funcionan las gezerot shavá (intermedio); la tercera requiere comprensión de la lógica a fortiori (avanzado). El lector que estudia la baraita en orden está siendo INICIADO en la complejidad creciente del método rabínico.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · el precio metafísico',
+      hebreo: 'מְחִיר מֵטָאפִיזִי',
+      traduccion: 'Precio metafísico',
+      explicacion: 'La baraita de Rashbi establece una doctrina central del judaísmo rabínico: la doctrina del PRECIO METAFÍSICO.\n\nLos bienes supremos del judío NO son gratuitos. Tienen un costo, y el costo es proporcional al valor del bien:\n\n  · Para la Torá — el sufrimiento del estudio (horas, austeridad, esfuerzo cognitivo)\n  · Para Eretz Israel — el sufrimiento histórico colectivo (exilio, retorno, guerra)\n  · Para Olam Ha-Ba — el sufrimiento espiritual total (toda la vida orientada hacia él)\n\nY el costo es siempre del MISMO TIPO: yisurim — sufrimientos. No riqueza, no esfuerzo físico, no virtud heroica espectacular. Sufrimientos.\n\nEsta doctrina tiene implicaciones radicales:\n\n  1. NO HAY ATAJOS — no se puede comprar la Torá con riqueza, ni la Tierra con diplomacia inteligente, ni el olam ha-ba con buenas obras sin costo. Todo lo supremo PASA POR el sufrimiento.\n\n  2. EL SUFRIMIENTO ES PRODUCTIVO — no es accidente cósmico ni castigo arbitrario. Es la divisa metafísica del sistema. Sin él, los bienes supremos serían imposibles.\n\n  3. INVIERTE LA ECONOMÍA POPULAR — la sabiduría popular dice «evita el sufrimiento». La sabiduría rabínica responde: si evitas todo sufrimiento, evitas también los bienes que solo se compran con él.\n\n  4. ELIMINA LA AUTOCOMPADECENCIA — el justo que sufre NO debe verse como víctima. Está PAGANDO por algo. La cuenta no le es injusta — está siendo elevada.\n\n  5. EXPLICA LA FELICIDAD DE LOS TZADIKIM EN MEDIO DEL DOLOR — saben que están comprando algo valioso. El precio se siente, pero el bien adquirido lo justifica.\n\nLa doctrina no es masoquista. NO dice «busca el sufrimiento». Dice: «no lo huyas cuando viene, porque a través de él HKBH te está entregando bienes que ningún otro camino te daría».\n\nEsta es la respuesta de Rashbi a la pregunta más antigua del judaísmo: ¿por qué sufren los justos? Porque están comprando. Y lo que compran — Torá, Tierra, eternidad — supera infinitamente el precio que pagan.\n\nLa conexión con #14 (yisurim shel ahavá) ahora se completa: la sugya amplia del sufrimiento EXPLICA por qué se llama «de amor» — porque HKBH usa el dolor como vehículo para entregar regalos. El amor del padre se manifiesta en la disciplina que el hijo recibe. Pero la baraita de Rashbi NO mitiga la tensión que las escenas médicas de #14 dejaron viva: incluso sabiendo todo esto, los grandes sabios al sufrir dicen «ni ellos ni su recompensa». La doctrina explica el sentido; la experiencia no necesariamente acepta el precio.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.regalos-interactivo')
+    : document.querySelector('.regalos-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#regalos-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.regalos-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="regalos-panel-header">' +
+        '<p class="regalos-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="regalos-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="regalos-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="regalos-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.regalos-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.regalos-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="regalos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
