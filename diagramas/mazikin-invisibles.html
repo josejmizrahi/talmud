@@ -1,0 +1,381 @@
+<div class="mazinv-interactivo">
+<style>
+  .mazinv-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .mazinv-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .mazinv-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .mazinv-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .mazinv-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .mazinv-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .mazinv-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .mazinv-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .mazinv-diagrama svg { width: 100%; height: auto; display: block; }
+  .mazinv-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .mazinv-nodo:hover rect { stroke-width: 2 !important; }
+  .mazinv-nodo:hover circle { stroke-width: 2.5 !important; }
+  .mazinv-nodo.activa rect { stroke-width: 2.5 !important; }
+  .mazinv-nodo.activa circle { stroke-width: 3 !important; }
+  .mazinv-nodo.dim { opacity: 0.32; }
+  .mazinv-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .mazinv-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .mazinv-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .mazinv-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .mazinv-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .mazinv-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .mazinv-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="mazinv-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración de Aba Binyamin</span>
+  <span><span class="swatch rojo"></span>el censo · números</span>
+  <span><span class="swatch azul"></span>los cuatro síntomas (Rava)</span>
+  <span><span class="swatch verde"></span>protocolos de detección</span>
+  <span><span class="swatch sepia"></span>doctrina · misericordia</span>
+</div>
+
+<div class="mazinv-diagrama">
+<svg viewBox="0 0 720 1200" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 6a: los mazikin invisibles · la cosmología poblada · los cuatro síntomas de Rava · cómo detectarlos</title>
+
+<defs>
+  <marker id="flecha-mi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-mi-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- Patrón de "puntos" representando mazikin invisibles -->
+  <pattern id="patron-mazikin" patternUnits="userSpaceOnUse" width="16" height="16">
+    <circle cx="4" cy="4" r="1" fill="#8b1a1a" opacity="0.3"/>
+    <circle cx="12" cy="12" r="1" fill="#8b1a1a" opacity="0.3"/>
+    <circle cx="12" cy="4" r="0.7" fill="#8b1a1a" opacity="0.25"/>
+    <circle cx="4" cy="12" r="0.7" fill="#8b1a1a" opacity="0.25"/>
+  </pattern>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Los mazikin invisibles · la cosmología poblada</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 6a · «si el ojo pudiera ver, nadie podría estar de pie»</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · ABA BINYAMIN                          -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · TANEI ABA BINYAMIN · 6A</text>
+
+<g class="mazinv-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אִילָּמָלֵא נִיתְּנָה רְשׁוּת לָעַיִן לִרְאוֹת</text>
+  <text x="360" y="132" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אֵין כָּל בִּרְיָה יְכוֹלָה לַעֲמוֹד מִפְּנֵי הַמַּזִּיקִין</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Si se diera al ojo permiso de ver — ninguna criatura podría mantenerse en pie ante los mazikin»</text>
+  <text x="360" y="174" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la invisibilidad NO es ausencia — es misericordia funcional · el mundo nos está oculto para que podamos vivir</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL CENSO · ABAYE Y RAV HUNA                                 -->
+<!-- ============================================================ -->
+<line x1="360" y1="186" x2="360" y2="204" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-mi)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CENSO · ABAYE Y RAV HUNA · NÚMEROS Y GEOMETRÍA</text>
+
+<!-- Abaye -->
+<g class="mazinv-nodo" data-id="abaye-cresta">
+  <rect x="60" y="226" width="290" height="124" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="205" y="248" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Abaye · la geometría</text>
+  <text x="205" y="270" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">אִינְהוּ נְפִישֵׁי מִינַּן</text>
+  <text x="78" y="288" font-size="9.5" fill="#3d2f23" font-style="italic">«son MÁS numerosos que nosotros»</text>
+  <text x="205" y="306" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">כִּי כִּסְלָא לְאוּגְיָא</text>
+  <text x="78" y="324" font-size="9.5" fill="#3d2f23" font-style="italic">«como cresta sobre el surco»</text>
+  <text x="78" y="340" font-size="9" fill="#6b4423">estamos DENTRO de un cerco invisible</text>
+</g>
+
+<!-- Rav Huna -->
+<g class="mazinv-nodo" data-id="rav-huna-cifra">
+  <rect x="370" y="226" width="290" height="124" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="515" y="248" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Rav Huna · la cifra exacta</text>
+  <text x="515" y="270" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">אַלְפָא מִשְּׂמָאלֵיהּ</text>
+  <text x="388" y="288" font-size="9.5" fill="#3d2f23" font-style="italic">1.000 a la izquierda</text>
+  <text x="515" y="306" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">וּרְבָבָה מִימִינֵיהּ</text>
+  <text x="388" y="324" font-size="9.5" fill="#3d2f23" font-style="italic">10.000 a la derecha</text>
+  <text x="388" y="340" font-size="9" fill="#6b4423">Tehilim 91:7 leído literalmente</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- VISUALIZACIÓN DEL HOMBRE RODEADO                            -->
+<!-- ============================================================ -->
+<line x1="205" y1="350" x2="205" y2="368" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-mi)"/>
+<line x1="515" y1="350" x2="515" y2="368" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-mi)"/>
+<line x1="205" y1="368" x2="515" y2="368" stroke="#8b1a1a" stroke-width="1"/>
+<line x1="360" y1="368" x2="360" y2="380" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-mi)"/>
+
+<g class="mazinv-nodo" data-id="visualizacion-hombre">
+  <rect x="60" y="384" width="600" height="160" rx="6" fill="url(#patron-mazikin)"/>
+  <rect x="60" y="384" width="600" height="160" rx="6" fill="rgba(139,26,26,0.04)" stroke="#8b1a1a" stroke-width="1.4"/>
+
+  <!-- Izquierda: 1000 -->
+  <text x="130" y="416" text-anchor="middle" font-size="11" fill="#8b1a1a" font-weight="700">שְׂמֹאל</text>
+  <text x="130" y="432" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">izquierda</text>
+  <text x="130" y="468" text-anchor="middle" font-size="22" fill="#8b1a1a" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">1.000</text>
+  <text x="130" y="490" text-anchor="middle" font-size="9.5" fill="#3d2f23">mazikin</text>
+
+  <!-- Centro: hombre -->
+  <circle cx="360" cy="464" r="44" fill="rgba(184,134,11,0.20)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="460" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">EL HOMBRE</text>
+  <text x="360" y="476" text-anchor="middle" font-size="9" direction="rtl" fill="#b8860b">אֵלֶיךָ לֹא יִגָּשׁ</text>
+  <text x="360" y="494" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">«a ti no se acerca»</text>
+  <text x="360" y="506" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">(Tehilim 91:7)</text>
+
+  <!-- Derecha: 10000 -->
+  <text x="590" y="416" text-anchor="middle" font-size="11" fill="#8b1a1a" font-weight="700">יָמִין</text>
+  <text x="590" y="432" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">derecha</text>
+  <text x="590" y="468" text-anchor="middle" font-size="22" fill="#8b1a1a" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">10.000</text>
+  <text x="590" y="490" text-anchor="middle" font-size="9.5" fill="#3d2f23">mazikin</text>
+
+  <!-- Conexiones -->
+  <line x1="170" y1="464" x2="316" y2="464" stroke="#8b1a1a" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="404" y1="464" x2="550" y2="464" stroke="#8b1a1a" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <text x="360" y="530" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«caerán mil a tu lado, diez mil a tu derecha — A TI NO SE ACERCAN»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS CUATRO SÍNTOMAS · RAVA                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="544" x2="360" y2="562" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-mi)"/>
+
+<text x="60" y="574" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LOS CUATRO SÍNTOMAS · RAVA DIAGNOSTICA</text>
+
+<g class="mazinv-nodo" data-id="cuatro-sintomas">
+  <rect x="60" y="584" width="600" height="180" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="360" y="606" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Rava ofrece una fenomenología clínica: lo que parece accidente es CONTACTO con mazikin</text>
+
+  <!-- Síntoma 1 -->
+  <rect x="80" y="622" width="280" height="64" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="98" y="640" font-size="10" fill="#1e3a5f" font-weight="600">1 · el empujón en el rezo</text>
+  <text x="340" y="640" text-anchor="end" font-size="9.5" direction="rtl" fill="#1e3a5f">חֲבִיטָה דִּצְלוֹתָא</text>
+  <text x="98" y="656" font-size="9" fill="#3d2f23">la presión / codazos en la sinagoga</text>
+  <text x="98" y="670" font-size="9" fill="#3d2f23">durante la amidá</text>
+  <text x="98" y="682" font-size="8.5" fill="#6b4423" font-style="italic">— son los mazikin, no los vecinos</text>
+
+  <!-- Síntoma 2 -->
+  <rect x="370" y="622" width="280" height="64" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="388" y="640" font-size="10" fill="#1e3a5f" font-weight="600">2 · rodillas que se debilitan</text>
+  <text x="630" y="640" text-anchor="end" font-size="9.5" direction="rtl" fill="#1e3a5f">כָּרְעֵי דְרַבָּנַן</text>
+  <text x="388" y="656" font-size="9" fill="#3d2f23">la fatiga inexplicable de las</text>
+  <text x="388" y="670" font-size="9" fill="#3d2f23">rodillas de los sabios</text>
+  <text x="388" y="682" font-size="8.5" fill="#6b4423" font-style="italic">— fricción con los mazikin</text>
+
+  <!-- Síntoma 3 -->
+  <rect x="80" y="694" width="280" height="64" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="98" y="712" font-size="10" fill="#1e3a5f" font-weight="600">3 · ropas que se gastan</text>
+  <text x="340" y="712" text-anchor="end" font-size="9.5" direction="rtl" fill="#1e3a5f">לְבוּשִׁים דְּבָלוּ</text>
+  <text x="98" y="728" font-size="9" fill="#3d2f23">la ropa de los rabinos se</text>
+  <text x="98" y="742" font-size="9" fill="#3d2f23">desgasta «sin razón»</text>
+  <text x="98" y="754" font-size="8.5" fill="#6b4423" font-style="italic">— el roce constante con ellos</text>
+
+  <!-- Síntoma 4 -->
+  <rect x="370" y="694" width="280" height="64" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="388" y="712" font-size="10" fill="#1e3a5f" font-weight="600">4 · rodillas golpeadas</text>
+  <text x="630" y="712" text-anchor="end" font-size="9.5" direction="rtl" fill="#1e3a5f">כָּרְעֵי דְּמִנַקְּפָן</text>
+  <text x="388" y="728" font-size="9" fill="#3d2f23">los golpes en las rodillas</text>
+  <text x="388" y="742" font-size="9" fill="#3d2f23">de la gente común</text>
+  <text x="388" y="754" font-size="8.5" fill="#6b4423" font-style="italic">— colisión con mazikin invisibles</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CÓMO DETECTARLOS · CENIZA                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="764" x2="360" y2="782" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-mi)"/>
+
+<text x="60" y="794" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PROTOCOLO DE DETECCIÓN · LA CENIZA ALREDEDOR DE LA CAMA</text>
+
+<g class="mazinv-nodo" data-id="ceniza">
+  <rect x="60" y="804" width="600" height="98" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="78" y="826" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">El protocolo empírico</text>
+  <text x="78" y="846" font-size="10" fill="#3d2f23">1 · traer קִיטְמָא נְהִילָא (ceniza fina)</text>
+  <text x="78" y="861" font-size="10" fill="#3d2f23">2 · esparcirla alrededor de la cama antes de dormir</text>
+  <text x="78" y="876" font-size="10" fill="#3d2f23">3 · en la mañana se ven huellas «כִּי כַרְעֵי דְתַרְנְגוֹלָא» — como patas de gallo</text>
+  <text x="78" y="894" font-size="9" fill="#6b4423" font-style="italic">la presencia se prueba por la TRAZA MATERIAL · método forense, no místico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CÓMO VERLOS · LA RECETA PROHIBIDA                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="902" x2="360" y2="920" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-mi)"/>
+
+<text x="60" y="932" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CÓMO VERLOS · LA RECETA · CON ADVERTENCIA</text>
+
+<g class="mazinv-nodo" data-id="receta-gato">
+  <rect x="60" y="942" width="600" height="116" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5" stroke-dasharray="5,2"/>
+  <text x="78" y="964" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La fórmula alquímica</text>
+  <text x="78" y="984" font-size="9.5" fill="#3d2f23">1 · placenta de gata negra · hija de negra · primogénita · hija de primogénita</text>
+  <text x="78" y="999" font-size="9.5" fill="#3d2f23">2 · quemarla en fuego</text>
+  <text x="78" y="1014" font-size="9.5" fill="#3d2f23">3 · molerla hasta polvo fino</text>
+  <text x="78" y="1029" font-size="9.5" fill="#3d2f23">4 · llenarse los ojos con ese polvo · entonces se VEN</text>
+  <text x="78" y="1048" font-size="9.5" fill="#8b1a1a" font-style="italic" font-weight="600">⚠ la guemará advierte: hay PELIGRO real — el conocimiento existe pero la prudencia lo prohíbe</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="1058" x2="360" y2="1074" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-mi)"/>
+
+<text x="60" y="1086" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA INVISIBILIDAD COMO MISERICORDIA</text>
+
+<g class="mazinv-nodo" data-id="doctrina">
+  <rect x="60" y="1096" width="600" height="98" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1118" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El espacio NO está vacío · la invisibilidad es DON</text>
+  <text x="78" y="1140" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1140" font-size="9.5" fill="#3d2f23">somos minoría — los mazikin nos superan numéricamente</text>
+  <text x="78" y="1156" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1156" font-size="9.5" fill="#3d2f23">si los VIÉRAMOS, no podríamos vivir — HKBH «cierra el ojo» como misericordia</text>
+  <text x="78" y="1172" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1172" font-size="9.5" fill="#3d2f23">el justo está PROTEGIDO — «mil a tu izquierda… a ti no se acerca» (Tehilim 91:7)</text>
+  <text x="360" y="1190" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la halajá del shema, mezuzá y tefilín opera como BARRERA invisible · ver #12 y #4</text>
+</g>
+
+</svg>
+</div>
+
+<div class="mazinv-panel" id="mazinv-panel">
+  <p class="mazinv-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'La declaración nuclear de Aba Binyamin',
+      hebreo: 'אִילָּמָלֵא נִיתְּנָה רְשׁוּת לָעַיִן לִרְאוֹת · אֵין כָּל בִּרְיָה יְכוֹלָה לַעֲמוֹד מִפְּנֵי הַמַּזִּיקִין',
+      traduccion: '«Si se diera al ojo permiso de ver — ninguna criatura podría mantenerse en pie ante los mazikin»',
+      explicacion: 'La tercera enseñanza de Aba Binyamin en este perek (después de las dos preocupaciones del diagrama #16) es una de las declaraciones más vívidas del Talmud sobre la COSMOLOGÍA POBLADA.\n\nLa premisa es radical: el espacio que nos rodea NO está vacío. Está LLENO de seres que normalmente no vemos — los mazikin (fuerzas destructivas, demonios). Y la única razón por la que podemos seguir viviendo es que NO los vemos.\n\nLa frase clave es אִילָּמָלֵא נִיתְּנָה רְשׁוּת — «si se diera permiso». La invisibilidad NO es una característica intrínseca de los mazikin. Es una RESTRICCIÓN ACTIVA impuesta sobre el ojo humano. HKBH le quita al ojo la capacidad de ver lo que está ahí.\n\n¿Por qué? Porque si lo viéramos:\n\n  · אֵין כָּל בִּרְיָה יְכוֹלָה לַעֲמוֹד — «ninguna criatura podría mantenerse en pie»\n  · El espectáculo sería de tal horror que el cuerpo se paralizaría\n  · El miedo por sí solo sería incapacitante\n  · La vida cotidiana sería imposible\n\nLa lección teológica es invertida pero profunda: LA INVISIBILIDAD ES MISERICORDIA. HKBH «cierra el ojo» humano como ACTO DE PROTECCIÓN. Lo que parece carencia (no ver) es regalo (no morir de pánico).\n\nEsto reorienta toda la fenomenología cotidiana: el mundo que vemos NO es el mundo total. Es solo la fracción que HKBH nos permite ver para sobrevivir. La realidad excede infinitamente nuestra percepción.\n\nY explícitamente la declaración prepara el censo que sigue — Abaye y Rav Huna van a CUANTIFICAR cuántos mazikin hay. Pero antes hay que aceptar el principio fundamental: están AHÍ, aunque no los veamos.'
+    },
+    'abaye-cresta': {
+      titulo: 'Abaye · la geometría del cerco',
+      hebreo: 'אִינְהוּ נְפִישֵׁי מִינַּן · וְקָיְימִי עֲלַן כִּי כִּסְלָא לְאוּגְיָא',
+      traduccion: '«Son más numerosos que nosotros · y están sobre nosotros como cresta sobre el surco»',
+      explicacion: 'Abaye ofrece una imagen agrícola precisa para describir la disposición de los mazikin: כִּסְלָא לְאוּגְיָא — «cresta sobre el surco».\n\nLa metáfora viene del campo arado: cuando se hace un surco para sembrar, la tierra extraída se acumula a los lados, formando una CRESTA (כִּסְלָא). El surco propiamente es el espacio bajo; la cresta es la pared elevada que lo rodea.\n\nAplicado a nosotros: NOSOTROS somos el surco. Los mazikin son la cresta que nos rodea por todos lados. Estamos en el ESPACIO INTERIOR de un cerco hecho de seres invisibles.\n\nDos lecciones de la metáfora:\n\n  1. ESTAMOS RODEADOS, NO PENETRADOS. Como el surco está bajo la cresta sin que la cresta entre en él, los mazikin están ALREDEDOR de nosotros sin (normalmente) entrar. Hay una membrana invisible que los mantiene fuera.\n\n  2. SON ESTRUCTURALES, NO ESPORÁDICOS. La cresta NO es accidente — es el RESULTADO ESTRUCTURAL de cómo se hizo el surco. De la misma manera, los mazikin NO son ocasionales — son parte de la geometría cosmológica permanente. Donde hay un ser humano, hay mazikin rodeándolo, automáticamente.\n\nLa primera frase — אִינְהוּ נְפִישֵׁי מִינַּן («son más numerosos que nosotros») — establece la PROPORCIÓN inquietante. NO somos la mayoría del cosmos. Somos minoría dentro de un mundo poblado por agentes que nos exceden numéricamente.\n\nEsta es una corrección teológica al antropocentrismo ingenuo. El judaísmo rabínico NO supone que el ser humano sea el centro numérico del cosmos. Compartimos el espacio con vastas multitudes de seres invisibles. Nuestro estatus especial NO viene del número sino de la imagen divina y la mitzvá.\n\nLa imagen del surco también tiene resonancia con la vulnerabilidad: el surco es BAJO, EXPUESTO, el lugar donde la semilla está más vulnerable. El surco depende de la PROTECCIÓN de las crestas circundantes para no ser pisado, lavado por la lluvia, etc. Nosotros, en el sentido cosmológico, dependemos de la BARRERA INVISIBLE (mezuzá, tefilín, mitzvot) que mantiene a los mazikin como crestas — alrededor, no encima.'
+    },
+    'rav-huna-cifra': {
+      titulo: 'Rav Huna · la cifra exacta · Tehilim 91:7',
+      hebreo: 'אַלְפָא מִשְּׂמָאלֵיהּ · וּרְבָבָה מִימִינֵיהּ',
+      traduccion: '«Mil a su izquierda · diez mil a su derecha»',
+      explicacion: 'Rav Huna sube la apuesta: NO solo «son más numerosos» — son EXACTAMENTE 1.000 a la izquierda y 10.000 a la derecha de cada persona.\n\nLa cifra parece especulativa hasta que se ve su FUENTE: Tehilim 91:7. El versículo del Salterio dice:\n\n  «יִפֹּל מִצִּדְּךָ אֶלֶף · וּרְבָבָה מִימִינֶךָ · אֵלֶיךָ לֹא יִגָּשׁ»\n  «Caerán mil a tu lado · diez mil a tu derecha · A TI NO SE ACERCAN»\n\nEl versículo originalmente se lee como una promesa de protección contra ENEMIGOS (humanos o militares). Rav Huna lo relee como descripción del CERCO INVISIBLE de mazikin que rodea al protegido.\n\nLas cifras del versículo se vuelven literales: hay UN NÚMERO PRECISO de mazikin por persona — mil a un lado, diez mil al otro. La asimetría (10:1) es notable. ¿Por qué más a la derecha?\n\nDos explicaciones tradicionales:\n  · La derecha es el lado del PODER y la acción — donde uno actúa, más peligro\n  · La derecha simboliza la jésed (bondad) que atrae más oposición espiritual\n  · O simplemente: el versículo lo dice así\n\nPero la frase decisiva del versículo es la última: אֵלֶיךָ לֹא יִגָּשׁ — «A TI NO SE ACERCAN». Esta es la promesa de PROTECCIÓN. Los mazikin existen en cifras enormes alrededor del justo, pero NO LO TOCAN. La barrera invisible los mantiene en sus posiciones.\n\nLa lectura combinada de Tehilim 91 con la enseñanza de Aba Binyamin produce una cosmología vívida:\n  · existen 11.000 mazikin por persona\n  · están distribuidos asimétricamente (1.000 izq + 10.000 der)\n  · rodean al hombre como un ejército\n  · pero al protegido NO se acercan\n\nEsta es la fuente de la práctica tradicional de recitar Tehilim 91 antes de dormir y en momentos de peligro — el versículo INVOCA la protección que describe. Recitar es activar el cerco protector que mantiene a los 11.000 en sus posiciones.\n\nLa precisión numérica también tiene una función pedagógica: convierte la afirmación general («hay muchos») en imagen contable. Cada vez que el judío camina, puede imaginar 11.000 ojos invisibles rodeándolo. La concretización transforma una doctrina abstracta en disposición espiritual cotidiana.'
+    },
+    'visualizacion-hombre': {
+      titulo: 'El hombre en medio del cerco · «a ti no se acerca»',
+      hebreo: 'אֵלֶיךָ לֹא יִגָּשׁ',
+      traduccion: '«A ti no se acerca» (Tehilim 91:7)',
+      explicacion: 'La visualización central del diagrama representa la cosmología completa: el hombre en el CENTRO, los 1.000 mazikin a la izquierda, los 10.000 a la derecha. El círculo dorado del hombre contiene el versículo de protección.\n\nLa estructura visual codifica varias verdades simultáneas:\n\n  1. AISLAMIENTO PROTEGIDO — el hombre está en el centro, separado por espacio del cerco circundante. NO está mezclado con los mazikin; está EN MEDIO de ellos pero NO los toca.\n\n  2. ASIMETRÍA — la derecha tiene 10x más que la izquierda. La visualización refleja esta proporción para que el ojo capture la disproporción.\n\n  3. CONEXIONES VISIBLES — las líneas punteadas desde los grupos al hombre representan la VECINDAD CONSTANTE. Los mazikin están en RELACIÓN espacial activa con el hombre, no lejanos. La punteadura indica que el contacto está SUSPENDIDO (no roto).\n\n  4. EL VERSO COMO ESCUDO — el texto «אֵלֶיךָ לֹא יִגָּשׁ» dentro del círculo del hombre representa que la protección OPERA desde el interior. Es el verso recitado/internalizado el que mantiene la distancia.\n\n  5. FONDO PUNTEADO — el patrón de pequeños puntos rojos en el fondo del recuadro representa la TEXTURA INVISIBLE del aire poblado. Aunque no se ven mazikin individuales, el «aire» mismo tiene una textura distinta de la vacuidad — está cargado de presencia espiritual.\n\nEsta visualización integra las enseñanzas de Aba Binyamin (existen pero no se ven), Abaye (rodean como cresta sobre surco) y Rav Huna (con números precisos del versículo). Es la condición cotidiana del judío observante: caminar en medio de un cerco invisible, protegido por las palabras del Salterio internalizadas.\n\nLa práctica derivada: cada vez que se recita Tehilim 91 (en el shema sobre la cama, en situaciones de peligro, en oraciones funerarias), se INVOCA esta cosmología. El recitante activa la promesa: existen multitudes invisibles, pero a mí no se me acercan.\n\nLa frase «אֵלֶיךָ לֹא יִגָּשׁ» es PERSONAL (tú singular). NO es general. La protección es individual, otorgada al que confía y recita. El cerco se mantiene mientras la conexión con HKBH se mantiene.'
+    },
+    'cuatro-sintomas': {
+      titulo: 'Los cuatro síntomas · Rava diagnostica',
+      hebreo: 'אַרְבָּעָה סִימָנִים',
+      traduccion: 'Cuatro síntomas',
+      explicacion: 'Rava aterriza la doctrina abstracta en EXPERIENCIA COTIDIANA. Ofrece una fenomenología clínica: cuatro situaciones que la gente atribuye a causas mundanas, pero que en realidad son CONTACTO con los mazikin invisibles.\n\nSÍNTOMA 1 · חֲבִיטָה דִּצְלוֹתָא — «el empujón del rezo»\n  El contexto: durante la amidá comunitaria en la sinagoga, los fieles están parados próximos unos a otros. A menudo uno siente un EMPUJÓN o codazo que asume del vecino. Pero el vecino jura no haberse movido.\n  Diagnóstico: NO fue el vecino. Fueron los mazikin atravesando el espacio durante el rezo.\n  Implicación: la sinagoga durante la amidá es un lugar de FRICCIÓN ESPIRITUAL — los mazikin se concentran donde hay actividad sagrada. El empujón inexplicable es síntoma.\n\nSÍNTOMA 2 · כָּרְעֵי דְרַבָּנַן דְּשָׁלְפֵי — «rodillas de rabinos que se debilitan»\n  Los grandes maestros experimentan fatiga inexplicable en las rodillas — más allá de lo que justifica la edad o el ejercicio.\n  Diagnóstico: la fricción CONTINUA con los mazikin desgasta las articulaciones. Los rabinos, dedicados al estudio y la oración, atraen MÁS contacto espiritual — y por tanto MÁS desgaste físico.\n  Implicación: la grandeza espiritual tiene un PRECIO físico discreto. Los cuerpos de los justos llevan las cicatrices invisibles de su servicio.\n\nSÍNTOMA 3 · לְבוּשַׁיְיהוּ דְּרַבָּנַן דְּבָלוּ — «ropas de rabinos que se gastan»\n  La vestimenta de los maestros se desgasta inexplicablemente. NO por uso excesivo, NO por baja calidad — simplemente «se pudre».\n  Diagnóstico: el ROCE CONSTANTE con los mazikin va deshaciendo la tela. Cada vez que un maestro camina entre el cerco invisible, su ropa absorbe la fricción.\n  Implicación: el desgaste material tiene causas espirituales tanto como físicas. La economía doméstica de un rabino refleja su realidad cosmológica.\n\nSÍNTOMA 4 · כָּרְעֵי דְאִינָשֵׁי דִּמְנַקְפָן — «rodillas de gente común golpeadas»\n  La gente común también sufre golpes en las rodillas — chocan con muebles, tropiezan, se lastiman en formas que parecen accidentales.\n  Diagnóstico: NO son accidentes. Son COLISIONES con mazikin invisibles. El cuerpo humano se mueve por un espacio poblado, y a veces el cálculo del paso falla porque hay algo invisible donde se asumía vacío.\n  Implicación: la VULNERABILIDAD cotidiana es mayor de la que parece. Los pequeños accidentes domésticos tienen una dimensión cosmológica.\n\nLA LECCIÓN GENERAL del diagnóstico de Rava:\n\nLa REALIDAD COTIDIANA está saturada de signos del mundo invisible. La fatiga, los golpes, los empujones, el desgaste — todo lo que parece banal accidente — es en realidad TRAZA de un cosmos poblado. La sensibilidad espiritual del rabino consiste en saber leer estos signos. Donde otros ven coincidencia, el sabio ve la geometría invisible.\n\nEsto NO produce paranoia (el mundo no es hostil), sino HUMILDAD cosmológica (no eres el único actor en el espacio). La diferencia es crucial. La doctrina de los mazikin invisibles no pretende aterrorizar — pretende re-encantar el mundo cotidiano, devolverle su densidad espiritual.'
+    },
+    'ceniza': {
+      titulo: 'El protocolo de detección · la ceniza alrededor de la cama',
+      hebreo: 'קִיטְמָא נְהִילָא · כִּי כַרְעֵי דְתַרְנְגוֹלָא',
+      traduccion: 'Ceniza fina · como patas de gallo',
+      explicacion: 'La sugyá ofrece un EXPERIMENTO empírico para los escépticos. Si quieres VERIFICAR que existen los mazikin, sigue este protocolo:\n\n  PASO 1 — קִיטְמָא נְהִילָא: traer CENIZA FINA (la palabra נְהִילָא indica «cernida», muy fina, como talco). La textura es importante: debe ser capaz de captar huellas delicadas.\n\n  PASO 2 — נֶהְדַּר אַפּוּרְיֵיהּ: esparcirla AROUND THE BED (la palabra אַפּוּרְיֵיהּ significa «alrededor de su cama»). Antes de dormir, hacer un anillo de ceniza alrededor del mueble.\n\n  PASO 3 — בְּצַפְרָא חָזֵי: AL DESPERTAR, observar. En la ceniza habrá huellas.\n\n  PASO 4 — כִּי כַרְעֵי דְתַרְנְגוֹלָא: las huellas tienen forma DE PATAS DE GALLO — tres dedos delgados separados.\n\nLa propuesta es brillantemente EMPÍRICA. NO es magia, NO es revelación. Es un EXPERIMENTO REPRODUCIBLE: si hago X, observo Y. La presencia invisible deja TRAZAS MATERIALES en la ceniza.\n\n¿Por qué patas de gallo? Algunas tradiciones sugieren que los mazikin tienen forma parcialmente animal. Otras dicen que es solo la descripción de los rastros que se ven empíricamente. Sea como sea, la ESPECIFICIDAD del detalle («patas de gallo, no de gato, no de ratón») sugiere que esta práctica era REALMENTE realizada por algunos sabios.\n\nLa lógica epistemológica:\n\n  · Lo invisible NO es lo imposible de detectar\n  · La invisibilidad opera contra el ojo, no contra otros medios\n  · La ceniza es un MEDIO INDIRECTO de visualización\n  · El método transforma una presencia invisible (mazikin) en evidencia visible (huellas en ceniza)\n\nEsta es una temprana experiencia con detección INDIRECTA — el principio que después fundamentará la ciencia experimental: lo que no se ve directamente puede REGISTRARSE si se elige el medio adecuado.\n\nLa lección teológica: la fe NO requiere ceguera. La doctrina de los mazikin invisibles puede VERIFICARSE empíricamente por quien quiera. El judaísmo no exige credulidad — ofrece evidencias proporcionalmente accesibles.\n\nNo se especifica si todos los sabios realizaban este experimento o si era patrimonio de unos pocos. Pero el hecho de que la halajá lo PROVEA — un protocolo paso-a-paso — sugiere que se consideraba un recurso disponible para los curiosos.\n\nEl experimento NO se ha estandarizado en la práctica rabínica posterior. Probablemente porque la halajá considera SUFICIENTE la fe en la doctrina sin requerir verificación. Pero la opción está ahí, en el corpus, para quien la necesite.'
+    },
+    'receta-gato': {
+      titulo: 'La receta para verlos directamente · con advertencia',
+      hebreo: 'שִׁילְיְיתָא דְּשׁוּנְּרָא אוּכַמְתָּא',
+      traduccion: 'Placenta de gata negra',
+      explicacion: 'Para los aún MÁS audaces, la sugyá ofrece un protocolo de visión DIRECTA — no por huellas indirectas, sino por contacto perceptual real. Pero la receta es alquímica, compleja, y la guemará advierte explícitamente del PELIGRO de realizarla.\n\nLA RECETA:\n\n  · Conseguir una placenta de gata\n  · La gata debe ser NEGRA\n  · La gata debe ser HIJA DE NEGRA (negra de raza, no manchada)\n  · La gata debe ser PRIMOGÉNITA\n  · La gata debe ser HIJA DE PRIMOGÉNITA (también primogénita su madre)\n\nLas cinco condiciones encadenadas (placenta + negra + hija de negra + primogénita + hija de primogénita) hacen que el material sea EXTREMADAMENTE RARO. Encontrar una gata que cumpla los cuatro requisitos genealógicos es prácticamente imposible. Y solo se puede usar SU PLACENTA — un material que aparece solo en el parto.\n\nUna vez conseguido el material:\n  · Quemarlo en el fuego (לִיקְלְיֵהּ בְּנוּרָא)\n  · Molerlo hasta polvo fino (לִישְׁחֲקֵיהּ)\n  · Llenar los ojos con ese polvo (לִימְלֵי עֵינֵיהּ מִינֵּיהּ)\n  · ENTONCES — y solo entonces — se ven los mazikin\n\n¿Por qué tan complicado? Probablemente porque la dificultad es UN FILTRO. Solo quien REALMENTE quiere ver los mazikin invierte el esfuerzo. Y quien tiene la determinación de seguir este protocolo ya ha demostrado un cierto grado de preparación espiritual.\n\nLA ADVERTENCIA:\n\nLa guemará añade que el procedimiento es PELIGROSO. La visión de los mazikin puede causar daño físico o espiritual real al que la realiza. La declaración inicial de Aba Binyamin — «si vieras, no podrías estar de pie» — se aplica AQUÍ: el que abre los ojos a los mazikin sufre las consecuencias de quitar la misericordia de la invisibilidad.\n\nDos lecciones de la receta y su advertencia:\n\n  1. EL CONOCIMIENTO EXISTE PERO LA PRUDENCIA LO PROHÍBE. La halajá NO oculta la receta. Está ahí, en el texto canónico, para quien quiera leerla. Pero advierte. La sabiduría rabínica confía en la capacidad del estudiante para resistir la tentación. No se ofrece censura — se ofrece información con advertencia.\n\n  2. LA TRANSGRESIÓN DE LA MISERICORDIA TIENE COSTO. HKBH «cierra el ojo» para protegernos. Quien insiste en abrirlo va contra el diseño protector. El daño que sufre es CAUSAL — no es castigo divino, es consecuencia natural de haber quitado la barrera de misericordia.\n\nEn la práctica histórica, no hay registros amplios de sabios realizando esta receta. Aparece en el texto como REFERENCIA — una manera de decir «sí, es posible verlos» — pero no como manual práctico. La función del pasaje es teológica: confirmar la REALIDAD de los mazikin (no son metáfora) sin invitar a la experiencia directa.\n\nUn ejercicio interesante: la receta es estructuralmente similar a otras pociones mágicas de las tradiciones antiguas (gata negra, primogénita, placenta — todos motivos clásicos de la magia premoderna). El judaísmo rabínico RECONOCE el conocimiento mágico de su entorno pero lo desactiva con la advertencia: «existe pero no lo uses». Esto refleja una postura matizada — ni negación total del conocimiento esotérico, ni adopción sin filtro.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la invisibilidad como misericordia',
+      hebreo: 'הָאִי־רְאוּת הוּא רַחֲמִים',
+      traduccion: 'La no-vista es misericordia',
+      explicacion: 'La sugyá entera enseña una doctrina coherente sobre la relación entre VISIÓN, REALIDAD y MISERICORDIA.\n\nTESIS CENTRAL: El mundo que vemos NO es el mundo total. Es la fracción FILTRADA que HKBH nos permite ver para que podamos vivir. La INVISIBILIDAD de lo demás es un don activo, no una limitación pasiva.\n\nLAS IMPLICACIONES TEOLÓGICAS:\n\n  1. EL ESPACIO NO ESTÁ VACÍO. La concepción moderna del «aire vacío» entre objetos es POBRE. En realidad, el aire está saturado de presencias espirituales — mazikin, ángeles, fuerzas, agentes. La densidad cosmológica del mundo rabínico es mucho mayor que la del mundo materialista.\n\n  2. SOMOS MINORÍA. Numéricamente, los seres humanos NO son la población principal del cosmos. 11.000 mazikin por persona — solo la cifra de mazikin EN UNA CATEGORÍA. Suma ángeles, otros tipos de seres espirituales, y el cosmos rabínico aparece poblado más allá de la imaginación.\n\n  3. LA PERCEPCIÓN ES PROTECTORA. NO ver no es defecto — es regalo. Si el ojo se abriera, la visión nos paralizaría. La halajá del «ojo cerrado» permite la actividad humana cotidiana. Cada vez que abrimos los ojos por la mañana sin colapsar de terror, estamos recibiendo un acto de misericordia divina.\n\n  4. LA REALIDAD ES DETECTABLE. Aunque invisible, lo espiritual NO es indetectable. La halajá ofrece protocolos (ceniza, recetas) para verificar la presencia. La fe NO compite con la evidencia — la fe REORDENA la evidencia.\n\n  5. EL JUSTO ESTÁ PROTEGIDO. La cosmología es VULNERABLE pero también ORDENADA. Los mazikin existen en cifras enormes, pero AL JUSTO NO LO TOCAN (Tehilim 91:7). La protección NO es por número (somos minoría) sino por ALIANZA (la promesa divina al pueblo de Israel).\n\nLAS PRÁCTICAS DERIVADAS:\n\n  · La mezuzá en la puerta — barrera contra mazikin que entran\n  · El tefilín — invocación de protección personal\n  · El shema sobre la cama (#12) — protección nocturna\n  · La recitación de Tehilim 91 — invocación de la promesa de 91:7\n  · La invocación de los cuatro ángeles cardinales (#12) — cerco angélico positivo\n  · La halajá de no entrar en ruina solo (#4) — evitación de concentraciones de mazikin\n\nTodas estas prácticas operan dentro del marco cosmológico de los mazikin invisibles. SON las herramientas para navegar el cosmos poblado.\n\nCONEXIÓN CON LA MODERNIDAD:\n\nUna pregunta natural: ¿cómo se relaciona esta cosmología con la ciencia moderna? Tres posibles respuestas:\n\n  1. LITERALISTA: los mazikin existen literalmente como entidades empíricas, simplemente la ciencia aún no los ha detectado.\n\n  2. SIMBÓLICA: los mazikin son representación rabínica de las FUERZAS DE DESORDEN (entropía, vulnerabilidad, accidente, enfermedad) que operan en el mundo. El lenguaje es figurado, pero el referente es real.\n\n  3. FENOMENOLÓGICA: lo importante no es la METAFÍSICA de los mazikin sino la EXPERIENCIA que producen — la conciencia de vulnerabilidad cotidiana, la necesidad de protección ritual, la humildad cósmica.\n\nLas tres interpretaciones son legítimas dentro del judaísmo contemporáneo. El texto de Berajot 6a opera en cualquiera de ellas: como descripción literal del cosmos, como simbolismo del riesgo, o como herramienta fenomenológica de cultivo espiritual.\n\nLo que la doctrina NO permite es la negación TOTAL — la pretensión moderna de que el mundo está vacío de espíritu. Para el rabinismo, el aire SIEMPRE tiene textura. El mundo SIEMPRE está poblado. La vida espiritual SIEMPRE opera contra un fondo de fuerzas invisibles. Esta densidad cosmológica es la atmósfera básica del judío observante.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.mazinv-interactivo')
+    : document.querySelector('.mazinv-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#mazinv-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.mazinv-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="mazinv-panel-header">' +
+        '<p class="mazinv-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="mazinv-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="mazinv-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="mazinv-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.mazinv-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.mazinv-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="mazinv-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

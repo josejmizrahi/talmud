@@ -579,10 +579,28 @@
         "6a"
       ],
       "grupo": "El espacio sagrado",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/mazikin-invisibles.html",
+      "sabios": [
+        "aba-binyamin",
+        "abaye",
+        "rav-huna",
+        "rava"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "tehilim-91-7"
+      ],
+      "conceptos": [
+        "mazikin",
+        "vulnerabilidad-del-sueno",
+        "invisibilidad-como-misericordia",
+        "keva-y-kavaná"
+      ],
+      "puente_desde": {
+        "tipo": "mismo-orador",
+        "texto": "El diagrama #16 trajo dos enseñanzas de Aba Binyamin sobre la\nposición física de la tefilá y la cama. La sugyá continúa con\nOTRA enseñanza del mismo Aba Binyamin — sobre los seres\ninvisibles que pueblan el espacio del rezo y del sueño. El editor\nagrupa por MISMO ORADOR: tres enseñanzas de Aba Binyamin\nconsecutivas, todas sobre la geografía espiritual del cuerpo y su\nentorno. Las dos primeras eran sobre dirección y posición; la\ntercera revela QUIÉN MÁS habita ese espacio.\n"
+      }
     },
     {
       "slug": "beit-knesset",
@@ -791,6 +809,22 @@
       "nombre": "R Yitzjak Bar Shmuel Bar Marta"
     },
     {
+      "slug": "aba-binyamin",
+      "nombre": "Aba Binyamin"
+    },
+    {
+      "slug": "abaye",
+      "nombre": "Abaye"
+    },
+    {
+      "slug": "rav-huna",
+      "nombre": "Rav Huna"
+    },
+    {
+      "slug": "rava",
+      "nombre": "Rava"
+    },
+    {
       "slug": "r-yose-bar-zimra",
       "nombre": "R Yose Bar Zimra"
     },
@@ -815,10 +849,6 @@
       "nombre": "Rav Ashi"
     },
     {
-      "slug": "rava",
-      "nombre": "Rava"
-    },
-    {
       "slug": "rav-aja-bar-bizna",
       "nombre": "Rav Aja Bar Bizna"
     },
@@ -837,10 +867,6 @@
     {
       "slug": "r-asi",
       "nombre": "R Asi"
-    },
-    {
-      "slug": "aba-binyamin",
-      "nombre": "Aba Binyamin"
     },
     {
       "slug": "r-yitzjak",
@@ -961,6 +987,10 @@
     {
       "slug": "tehilim-57-9",
       "nombre": "Tehilim 57 9"
+    },
+    {
+      "slug": "tehilim-91-7",
+      "nombre": "Tehilim 91 7"
     },
     {
       "slug": "tehilim-27-13",
@@ -1170,6 +1200,14 @@
     {
       "slug": "consejo-tripartito",
       "nombre": "Consejo Tripartito"
+    },
+    {
+      "slug": "invisibilidad-como-misericordia",
+      "nombre": "Invisibilidad Como Misericordia"
+    },
+    {
+      "slug": "keva-y-kavaná",
+      "nombre": "Keva Y Kavaná"
     },
     {
       "slug": "shema-yigrom-hachet",
@@ -1446,6 +1484,14 @@
       "peso": 3
     },
     {
+      "from": "tefila-y-cama",
+      "to": "mazikin-invisibles",
+      "categoria": "editorial",
+      "tipo": "mismo-orador",
+      "texto": "El diagrama #16 trajo dos enseñanzas de Aba Binyamin sobre la\nposición física de la tefilá y la cama. La sugyá continúa con\nOTRA enseñanza del mismo Aba Binyamin — sobre los seres\ninvisibles que pueblan el espacio del rezo y del sueño. El editor\nagrupa por MISMO ORADOR: tres enseñanzas de Aba Binyamin\nconsecutivas, todas sobre la geografía espiritual del cuerpo y su\nentorno. Las dos primeras eran sobre dirección y posición; la\ntercera revela QUIÉN MÁS habita ese espacio.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -1590,6 +1636,14 @@
       "peso": 1
     },
     {
+      "from": "tres-razones-ruina",
+      "to": "mazikin-invisibles",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "mazikin",
+      "peso": 1
+    },
+    {
       "from": "noche-de-david",
       "to": "gobierno-tripartito",
       "categoria": "co-referencia",
@@ -1632,6 +1686,14 @@
     {
       "from": "noche-de-david",
       "to": "yisurim-shel-ahava",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "mazikin-invisibles",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rava",
@@ -1798,6 +1860,22 @@
       "peso": 1
     },
     {
+      "from": "escala-angeles",
+      "to": "mazikin-invisibles",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "mazikin",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "mazikin-invisibles",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "vulnerabilidad-del-sueno",
+      "peso": 1
+    },
+    {
       "from": "escalera-yetzer",
       "to": "tefila-y-cama",
       "categoria": "co-referencia",
@@ -1851,6 +1929,22 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "yisurim-shel-ahava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "mazikin-invisibles",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "mazikin-invisibles",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "aba-binyamin",
       "peso": 1
     }
   ]
