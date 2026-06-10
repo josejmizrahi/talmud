@@ -1,0 +1,349 @@
+<div class="hkbh-interactivo">
+<style>
+  .hkbh-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .hkbh-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .hkbh-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .hkbh-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .hkbh-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .hkbh-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .hkbh-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .hkbh-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .hkbh-diagrama svg { width: 100%; height: auto; display: block; }
+  .hkbh-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .hkbh-nodo:hover rect { stroke-width: 2 !important; }
+  .hkbh-nodo:hover circle { stroke-width: 2.5 !important; }
+  .hkbh-nodo.activa rect { stroke-width: 2.5 !important; }
+  .hkbh-nodo.activa circle { stroke-width: 3 !important; }
+  .hkbh-nodo.dim { opacity: 0.32; }
+  .hkbh-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .hkbh-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .hkbh-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .hkbh-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .hkbh-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .hkbh-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .hkbh-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="hkbh-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>1 · HKBH usa tefilín</span>
+  <span><span class="swatch verde"></span>2 · HKBH reza</span>
+  <span><span class="swatch rojo"></span>3 · HKBH se enoja · el rega</span>
+  <span><span class="swatch azul"></span>Bilam · pacto especular</span>
+  <span><span class="swatch sepia"></span>doctrina meta</span>
+</div>
+
+<div class="hkbh-diagrama">
+<svg viewBox="0 0 720 1320" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 6a-7a: HKBH usa tefilín · HKBH reza · HKBH se enoja durante 1/58.888 hora · la teología del espejo</title>
+
+<defs>
+  <marker id="flecha-hk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-hk-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">HKBH usa tefilín · reza · se enoja</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 6a · 7a — la teología del espejo · antropomorfismo refinado</text>
+
+<!-- ============================================================ -->
+<!-- 1 · HKBH USA TEFILÍN · 6A                                   -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">1 · HKBH USA TEFILÍN · RAV YITZJAK · 6A</text>
+
+<g class="hkbh-nodo" data-id="tefilin">
+  <rect x="60" y="86" width="600" height="216" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.8"/>
+
+  <!-- La pregunta y verseta -->
+  <text x="360" y="110" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">מִנַּיִן שֶׁהַקָּדוֹשׁ בָּרוּךְ הוּא מַנִּיחַ תְּפִלִּין?</text>
+  <text x="360" y="128" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¿De dónde sabemos que HKBH se pone tefilín?»</text>
+  <text x="360" y="148" text-anchor="middle" font-size="10.5" direction="rtl" fill="#b8860b">נִשְׁבַּע ה' בִּימִינוֹ וּבִזְרוֹעַ עֻזּוֹ (יש' סב:ח)</text>
+  <text x="360" y="164" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">«HKBH juró por Su diestra y por el brazo de Su poder»</text>
+
+  <line x1="80" y1="178" x2="640" y2="178" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- LA INVERSIÓN ESPECTACULAR -->
+  <text x="360" y="198" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">¿Qué hay DENTRO de los tefilín de HKBH?</text>
+
+  <!-- Tefilín humanos vs divinos -->
+  <rect x="80" y="212" width="260" height="76" rx="5" fill="rgba(184,134,11,0.04)" stroke="#b8860b" stroke-width="1"/>
+  <text x="210" y="232" text-anchor="middle" font-size="10" fill="#6b4423" font-weight="600">TEFILÍN HUMANOS</text>
+  <text x="210" y="252" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">שְׁמַע יִשְׂרָאֵל</text>
+  <text x="210" y="268" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">la unicidad de HKBH</text>
+  <text x="210" y="282" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el hombre proclama: «Dios es uno»</text>
+
+  <rect x="380" y="212" width="260" height="76" rx="5" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="510" y="232" text-anchor="middle" font-size="10" fill="#6b4423" font-weight="600">TEFILÍN DE HKBH</text>
+  <text x="510" y="250" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">וּמִי כְעַמְּךָ יִשְׂרָאֵל</text>
+  <text x="510" y="265" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">גּוֹי אֶחָד בָּאָרֶץ</text>
+  <text x="510" y="280" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«¿quién como tu pueblo Israel,</text>
+  <text x="510" y="294" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">una nación única en la tierra?»</text>
+
+  <!-- Flecha de inversión -->
+  <line x1="345" y1="248" x2="372" y2="248" stroke="#b8860b" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="358" y="244" text-anchor="middle" font-size="14" fill="#b8860b">⇄</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 2 · HKBH REZA · 7A                                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="302" x2="360" y2="320" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-hk)"/>
+
+<text x="60" y="332" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">2 · HKBH REZA · R. YOJANAN EN NOMBRE DE R. YOSE · 7A</text>
+
+<g class="hkbh-nodo" data-id="tefila">
+  <rect x="60" y="342" width="600" height="240" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <!-- La pregunta -->
+  <text x="360" y="364" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">מִנַּיִן שֶׁהַקָּדוֹשׁ בָּרוּךְ הוּא מִתְפַּלֵּל?</text>
+  <text x="360" y="382" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¿De dónde sabemos que HKBH reza?»</text>
+
+  <!-- La verseta -->
+  <text x="360" y="404" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">וְשִׂמַּחְתִּים בְּבֵית תְּפִלָּתִי (יש' נו:ז)</text>
+  <text x="360" y="420" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«los alegraré en MI casa de tefilá» — תְּפִלָּתִי no תְּפִלָּתָם</text>
+
+  <line x1="80" y1="434" x2="640" y2="434" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ¿Qué reza? -->
+  <text x="360" y="452" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">¿Qué tefilá reza HKBH? (Rav Zutra bar Tuvia en nombre de Rav)</text>
+
+  <rect x="80" y="464" width="560" height="106" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="360" y="484" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">יְהִי רָצוֹן מִלְּפָנַי — שֶׁיִּכָּבְשׁוּ רַחֲמַי אֶת כַּעֲסִי</text>
+  <text x="360" y="500" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְיָגֹלּוּ רַחֲמַי עַל מִדּוֹתַי</text>
+  <text x="360" y="516" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְאֶתְנַהֵג עִם בָּנַי בְּמִדַּת רַחֲמִים</text>
+  <text x="360" y="534" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Que Mi voluntad sea — que Mis MISERICORDIAS sojuzguen Mi enojo</text>
+  <text x="360" y="548" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">y que Me conduzca con Mis hijos en el atributo de MISERICORDIA»</text>
+  <text x="360" y="564" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">HKBH se reza A SÍ MISMO · para que rajamim venza a din</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 3 · HKBH SE ENOJA · EL REGA · 7A                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="582" x2="360" y2="598" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-hk)"/>
+
+<text x="60" y="610" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">3 · HKBH SE ENOJA · LA DURACIÓN DEL REGA · 7A</text>
+
+<g class="hkbh-nodo" data-id="enojo">
+  <rect x="60" y="620" width="600" height="232" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+
+  <!-- Verso -->
+  <text x="360" y="642" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">וְאֵל זוֹעֵם בְּכָל יוֹם (תה' ז:יב)</text>
+  <text x="360" y="660" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Y Dios se enoja cada día» (Tehilim 7:12)</text>
+
+  <line x1="80" y1="672" x2="640" y2="672" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- La cifra exacta -->
+  <text x="360" y="692" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">¿Cuánto dura el enojo?</text>
+  <text x="360" y="710" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">רֶגַע · אֶחָד מֵחֲמֵשֶׁת רִבּוֹא וּשְׁמוֹנַת אֲלָפִים וּשְׁמוֹנֶה מֵאוֹת וּשְׁמוֹנִים וּשְׁמוֹנָה בְּשָׁעָה</text>
+  <text x="360" y="728" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«un REGA — una parte de 58.888 de hora»</text>
+
+  <!-- Visualización del rega -->
+  <rect x="200" y="744" width="320" height="58" rx="4" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="360" y="764" text-anchor="middle" font-size="14" fill="#8b1a1a" font-weight="700">1 / 58.888 hora</text>
+  <text x="360" y="780" text-anchor="middle" font-size="11" fill="#8b1a1a">≈ 0.061 segundos</text>
+  <text x="360" y="795" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">una fracción casi infinitesimal del día</text>
+
+  <!-- Cuándo: las primeras horas + el gallo -->
+  <text x="78" y="822" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">¿Cuándo?</tspan> en las TRES PRIMERAS HORAS · cuando el sol sale y los reyes se postran a él</text>
+  <text x="78" y="838" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">¿Cómo identificarlo?</tspan> la cresta del gallo se vuelve BLANCA — detector cósmico del rega</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- BILAM · EL MANIPULADOR DEL REGA                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="852" x2="360" y2="868" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-hk)"/>
+
+<text x="60" y="880" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">BILAM · EL QUE CONOCÍA EL MOMENTO · 7A</text>
+
+<g class="hkbh-nodo" data-id="bilam">
+  <rect x="60" y="890" width="600" height="138" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="912" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f">בִּלְעָם — יוֹדֵעַ דַּעַת עֶלְיוֹן (במ' כד:טז)</text>
+  <text x="360" y="930" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Bilam — conocedor del conocimiento del Altísimo»</text>
+  <text x="78" y="950" font-size="10" fill="#3d2f23">¿qué SABÍA Bilam que ningún otro profeta sabía? — el momento EXACTO del rega</text>
+  <text x="78" y="966" font-size="10" fill="#3d2f23">intentó MALDECIR a Israel en ese instante · cualquier maldición en el rega tendría efecto cósmico</text>
+
+  <line x1="80" y1="978" x2="640" y2="978" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="998" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="600">כָּל אוֹתָן הַיָּמִים — לֹא כָעַס</text>
+  <text x="360" y="1016" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«durante todos esos días — HKBH NO se enojó» · suspendió su enojo diario para proteger a Israel</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA SIMETRÍA ESPECULAR                                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="1028" x2="360" y2="1044" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-hk)"/>
+
+<text x="60" y="1056" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA SIMETRÍA ESPECULAR · PACTO DEL RECONOCIMIENTO MUTUO</text>
+
+<g class="hkbh-nodo" data-id="simetria">
+  <rect x="60" y="1066" width="600" height="120" rx="6" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1088" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Cada acto del hombre tiene un correlato divino · con la diferencia ontológica</text>
+
+  <!-- Línea separadora -->
+  <line x1="360" y1="1100" x2="360" y2="1180" stroke="#6b4423" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <text x="200" y="1112" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">HOMBRE → HKBH</text>
+  <text x="520" y="1112" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">HKBH → HOMBRE</text>
+
+  <text x="200" y="1132" text-anchor="middle" font-size="9.5" fill="#3d2f23">usa tefilín con el shema</text>
+  <text x="520" y="1132" text-anchor="middle" font-size="9.5" fill="#3d2f23">usa tefilín con elogio de Israel</text>
+
+  <text x="200" y="1150" text-anchor="middle" font-size="9.5" fill="#3d2f23">reza para que HKBH escuche</text>
+  <text x="520" y="1150" text-anchor="middle" font-size="9.5" fill="#3d2f23">reza para que su rajamim venza</text>
+
+  <text x="200" y="1168" text-anchor="middle" font-size="9.5" fill="#3d2f23">se enoja por horas o días</text>
+  <text x="520" y="1168" text-anchor="middle" font-size="9.5" fill="#3d2f23">se enoja por 0.061 segundos</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="1186" x2="360" y2="1202" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-hk)"/>
+
+<g class="hkbh-nodo" data-id="doctrina">
+  <rect x="60" y="1206" width="600" height="98" rx="6" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1228" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El default divino · misericordia, no justicia</text>
+  <text x="78" y="1250" font-size="9.5" fill="#3d2f23">la tefilá divina REVELA la preferencia divina · HKBH no es neutral entre rajamim y din</text>
+  <text x="78" y="1266" font-size="9.5" fill="#3d2f23">se INCLINA activamente hacia rajamim — y se lo PIDE a sí mismo en su propia oración</text>
+  <text x="78" y="1284" font-size="9.5" fill="#3d2f23">lipnim mishurat ha-din (más allá de la línea de la ley) es el modo divino DEFAULT con sus hijos</text>
+  <text x="78" y="1298" font-size="9" fill="#6b4423" font-style="italic">el antropomorfismo refinado NO degrada lo divino — revela una vida divina ESTRUCTURADA por la compasión</text>
+</g>
+
+</svg>
+</div>
+
+<div class="hkbh-panel" id="hkbh-panel">
+  <p class="hkbh-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'tefilin': {
+      titulo: '1 · HKBH usa tefilín · la inversión espectacular',
+      hebreo: 'וּמַאי כְּתִיב בְּהוּ — בְּתֵפִילִּין שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא?',
+      traduccion: '«¿Y qué está escrito en los tefilín de HKBH?»',
+      explicacion: 'Rav Yitzjak en Berajot 6a establece uno de los antropomorfismos más audaces del Talmud: HKBH USA TEFILÍN.\n\nLa derashá se apoya en Yeshayahu 62:8: «נִשְׁבַּע ה\' בִּימִינוֹ וּבִזְרוֹעַ עֻזּוֹ» («HKBH juró por Su diestra y por el brazo de Su poder»). El término «brazo» (זְרוֹעַ) es el mismo brazo donde se ponen los tefilín. El versículo, leído rabínicamente, atribuye un BRAZO a HKBH — y donde hay brazo, hay tefilín.\n\nPero el momento DECISIVO de la sugyá es la pregunta siguiente: ¿QUÉ ESTÁ ESCRITO en los tefilín de HKBH?\n\nLa respuesta es UNA INVERSIÓN ESPECTACULAR:\n\nLOS TEFILÍN HUMANOS contienen los versículos del shema y otros pasajes — todos ellos proclaman la UNICIDAD DE HKBH. Cuando un judío se pone tefilín, lleva sobre su brazo y su frente la afirmación: «HKBH es uno».\n\nLOS TEFILÍN DIVINOS, según la sugyá, contienen el versículo de Divrei haYamim I 17:21:\n\n  «וּמִי כְעַמְּךָ יִשְׂרָאֵל גּוֹי אֶחָד בָּאָרֶץ»\n  «¿Y quién como tu pueblo Israel, una nación única en la tierra?»\n\nEl paralelo es PERFECTO:\n\n  · Tefilín del hombre — afirman: «HKBH es UNO» (אֶחָד)\n  · Tefilín de HKBH — afirman: «Israel es UNO» (אֶחָד)\n\nMutuo reconocimiento. El hombre proclama la unidad divina; Dios proclama la unidad de Israel. Cada parte lleva sobre el cuerpo la afirmación del OTRO.\n\nEsta inversión tiene profundidades teológicas:\n\n  1. LA RELACIÓN ES BILATERAL — no solo el hombre tiene que recordar a HKBH; HKBH también «recuerda» a Israel\n\n  2. EL AMOR ES ESTRUCTURAL — los tefilín NO son ornamento ritual. Son la memoria PORTABLE del amor mutuo. HKBH también «necesita» recordar\n\n  3. LA UNICIDAD ES RECÍPROCA — proclamar «HKBH es uno» tiene un correlato cósmico: «Israel también es único». La singularidad divina tiene una contraparte en la singularidad histórica del pueblo elegido\n\n  4. EL JUDAÍSMO NO ES UNA RELIGIÓN UNILATERAL — el mundo rabínico NO supone que Dios sea simplemente el objeto del culto humano. Dios mismo TIENE un culto. Tiene tefilín. Tiene oraciones. La relación es ESPECULAR.\n\nObserva que esta no es una teología pagana del «dios que necesita» o del «dios pequeño». El judaísmo rabínico mantiene la trascendencia divina absoluta — pero EXPRESA la relación entre HKBH e Israel en lenguaje antropomórfico INVERTIDO. HKBH tiene los atributos humanos del amor: lleva memoria portable de su amado.\n\nLa tradición posterior (especialmente la cabalística) desarrollará esta enseñanza a profundidades enormes. Pero ya en Berajot 6a está el núcleo: HKBH ama a Israel con un amor que LO MARCA — como los tefilín marcan al judío.'
+    },
+    'tefila': {
+      titulo: '2 · HKBH reza · y se reza a sí mismo',
+      hebreo: 'יְהִי רָצוֹן מִלְּפָנַי שֶׁיִּכָּבְשׁוּ רַחֲמַי אֶת כַּעֲסִי',
+      traduccion: '«Que sea mi voluntad — que mis misericordias sojuzguen mi enojo»',
+      explicacion: 'R. Yojanan en nombre de R. Yose establece la SEGUNDA enseñanza de la trilogía: HKBH REZA.\n\nLa derashá es filológicamente brillante. Yeshayahu 56:7 promete: «וַהֲבִיאוֹתִים אֶל־הַר קָדְשִׁי וְשִׂמַּחְתִּים בְּבֵית תְּפִלָּתִי» («los traeré a mi monte santo y los alegraré en MI casa de tefilá»).\n\nLa lectura simple esperaría «בית תפילתם» («su casa de tefilá» — refiriéndose al pueblo). Pero el versículo dice «תְּפִלָּתִי» (TU/MI tefilá — la palabra está en primera persona referida a HKBH).\n\nLa derashá: el Templo NO es solo la casa de la tefilá DEL HOMBRE. Es también la casa de la tefilá DE HKBH. HKBH tiene su propia oración que se reza ALLÍ.\n\n¿Pero qué reza HKBH? Rav Zutra bar Tuvia en nombre de Rav transmite el TEXTO de la oración divina:\n\n  «יְהִי רָצוֹן מִלְּפָנַי — שֶׁיִּכָּבְשׁוּ רַחֲמַי אֶת כַּעֲסִי»\n  «Que sea Mi voluntad — que Mis misericordias sojuzguen Mi enojo»\n\n  «וְיָגֹלּוּ רַחֲמַי עַל מִדּוֹתַי»\n  «Y que Mis misericordias rueden sobre Mis [otros] atributos»\n\n  «וְאֶתְנַהֵג עִם בָּנַי בְּמִדַּת רַחֲמִים»\n  «Y que Me conduzca con Mis hijos en el atributo de misericordia»\n\n  «וְאֶכָּנֵס לָהֶם לִפְנִים מִשּׁוּרַת הַדִּין»\n  «Y entre con ellos lipnim mishurat ha-din [más allá de la línea de la ley]»\n\nLA TEOLOGÍA INCRUSTADA EN ESTA ORACIÓN:\n\n  1. HKBH TIENE MIDOT (atributos) DIVERSAS — midat ha-din (justicia/juicio) y midat ha-rajamim (misericordia), entre otras\n\n  2. ESTAS MIDOT PUEDEN ESTAR EN TENSIÓN — el enojo es una expresión del din; el perdón es expresión de los rajamim\n\n  3. HKBH PREFIERE QUE LOS RAJAMIM PREVALEZCAN — su propia oración lo dice\n\n  4. ASÍ LO PIDE en su tefilá — como si tuviera que «pedirse a sí mismo» la prevalencia\n\nLA FORMA AUTORREFERENCIAL es teológicamente sutil. HKBH no le reza a OTRO Dios. Se reza A SÍ MISMO — al «yo» del compromiso, al «yo» del corazón, contra el «yo» de la justicia automática.\n\nEsto modela una psicología divina compleja. HKBH no es un agente UNITARIO simple. Tiene atributos diversos que pueden estar en tensión. Y dentro de esa tensión, hay una PREFERENCIA clara: rajamim sobre din.\n\nIMPLICACIONES TEOLÓGICAS:\n\n  1. EL DEFAULT DIVINO ES LA MISERICORDIA — no la justicia. HKBH no es un juez frío que ocasionalmente perdona. Es un padre cuya naturaleza primaria es el amor, y ocasionalmente debe castigar\n\n  2. LIPNIM MISHURAT HA-DIN es divino antes que humano — el principio rabínico de «ir más allá de la letra de la ley» se origina en la propia oración de HKBH. Cuando un humano practica lipnim mishurat ha-din, IMITA a HKBH\n\n  3. LA ORACIÓN HUMANA ENTRA EN UN CAMPO YA INCLINADO — cuando el judío pide perdón, no llega a un tribunal hostil. Llega a un Padre que YA ESTÁ rezando por el perdón. Su oración SE SUMA a la oración divina, no compite con ella\n\n  4. LA TEFILÁ ES UN ACTO COSMOLÓGICO — el judío que reza «que tu misericordia prevalezca» está repitiendo lo que HKBH mismo reza. Las dos oraciones coinciden\n\nLA TRADICIÓN POSTERIOR desarrollará esta enseñanza ampliamente. Los rishonim verán en ella el fundamento de la doctrina del perdón divino. Los cabalistas verán la dinámica entre las sefirot. Los hasidim verán el modelo de toda oración humana — pedirle a HKBH que sea el HKBH que él mismo quiere ser.\n\nLA LECCIÓN PRÁCTICA: cuando rezas pidiendo misericordia, NO estás imponiendo una voluntad ajena a HKBH. Estás SUMANDO tu voz a la voluntad explícita de HKBH. Esto cambia la sicología del rezo del temor a la confianza.'
+    },
+    'enojo': {
+      titulo: '3 · HKBH se enoja · el rega de 1/58.888 hora',
+      hebreo: 'וְכַמָּה זַעְמוֹ? — רֶגַע · אֶחָד מֵחֲמֵשֶׁת רִבּוֹא וּשְׁמוֹנַת אֲלָפִים וּשְׁמוֹנֶה מֵאוֹת וּשְׁמוֹנִים וּשְׁמוֹנָה בְּשָׁעָה',
+      traduccion: '«¿Y cuánto su enojo? — Un rega — una parte de 58.888 de hora»',
+      explicacion: 'La TERCERA enseñanza de la trilogía: HKBH SE ENOJA. La verseta proof es Tehilim 7:12 «וְאֵל זוֹעֵם בְּכָל יוֹם» («Y Dios se enoja cada día»).\n\nA primera vista, esto contradice la imagen amorosa de la enseñanza anterior (HKBH reza por la misericordia). Si HKBH PREFIERE la misericordia, ¿por qué se enoja diariamente?\n\nLa respuesta de la sugyá es MATEMÁTICA: el enojo dura UN REGA — y el rega es una fracción de tiempo casi infinitesimal.\n\nLA CIFRA EXACTA:\n\n  · Un rega = 1/58.888 de una hora\n  · Una hora = 3.600 segundos\n  · 3.600 / 58.888 ≈ 0.0611 segundos\n  · Un rega ≈ 61 milésimas de segundo\n\nEs una fracción TAN PEQUEÑA que es prácticamente imperceptible para la conciencia humana. El enojo divino diario es REAL pero TÉCNICAMENTE LIMITADO a un instante.\n\n¿POR QUÉ ESTA PRECISIÓN MATEMÁTICA?\n\nLa cifra exacta cumple dos funciones:\n\n  1. CONFIRMA LA REALIDAD del enojo — no es metáfora vaga. Tiene duración medible. HKBH realmente se enoja, no es solo figura literaria\n\n  2. RELATIVIZA SU IMPACTO — 0.061 segundos de enojo divino dentro de 86.400 segundos diarios. La PROPORCIÓN abrumadora del día es NO-ENOJO. El enojo es la EXCEPCIÓN microscópica, no la regla\n\nEsto produce una imagen teológica compleja: HKBH tiene capacidad de enojo, lo experimenta diariamente, pero el enojo es FUNCIONALMENTE inocuo por su brevedad extrema.\n\n¿CUÁNDO OCURRE? La sugyá especifica: en las TRES PRIMERAS HORAS del día, en el momento en que el sol sale y los reyes paganos colocan coronas y se postran al sol. El paganismo cosmológico — la idolatría del sol — DISPARA el enojo divino. HKBH se ofende por la confusión entre creador y creatura.\n\n¿CÓMO IDENTIFICAR EL MOMENTO EXACTO? La sugyá ofrece un detector cósmico: la CRESTA DEL GALLO. Normalmente roja, en el rega del enojo se vuelve BLANCA. El gallo es el reloj espiritual del cosmos — su cresta refleja la temperatura espiritual del momento.\n\nIMPLICACIONES TEOLÓGICAS:\n\n  1. EL UNIVERSO TIENE SEÑALES — no estamos sin pistas sobre el estado divino. La realidad física (el gallo, el sol, los reyes paganos) refleja la realidad espiritual. El judío que conoce los signos puede LEER el cosmos\n\n  2. EL ENOJO ESTÁ CONTEXTUALIZADO — no es enojo arbitrario. Está conectado a EVENTOS CONCRETOS (la postración pagana al sol). HKBH no se enoja aleatoriamente — se enoja por causas específicas\n\n  3. LA PROTECCIÓN OPERA EN LA BREVEDAD — porque el enojo dura menos de un décimo de segundo, las consecuencias quedan acotadas. Si durara horas, todo el universo colapsaría\n\nLA APLICACIÓN PRÁCTICA: el judío observante debe ser cuidadoso con sus oraciones durante las tres primeras horas del día — específicamente con cómo formula peticiones. Una petición que se traduzca como queja, recriminación, o desafío en el momento del rega podría caer en condiciones halájicamente desfavorables. Por eso muchas tradiciones recomiendan no decir tefilot críticas en ese horario.\n\nLA PARADOJA del enojo divino tan breve y tan calibrado modela una doctrina: HKBH es PERFECTAMENTE JUSTO y PERFECTAMENTE MISERICORDIOSO al mismo tiempo. La justicia se expresa en el enojo diario (no es ignorada). La misericordia se expresa en la brevedad EXTREMA del enojo (no domina). Las dos coexisten en un equilibrio fino.'
+    },
+    'bilam': {
+      titulo: 'Bilam · el conocedor del rega',
+      hebreo: 'יוֹדֵעַ דַּעַת עֶלְיוֹן · כָּל אוֹתָן הַיָּמִים — לֹא כָעַס',
+      traduccion: '«Conocedor del conocimiento del Altísimo · durante todos esos días no se enojó»',
+      explicacion: 'La sugyá presenta una historia bíblica revisitada: Bilam, el profeta pagano-mago que intentó maldecir a Israel.\n\nBamidbar 22-24 narra cómo Balak, rey de Moav, contrató a Bilam para maldecir a Israel cuando se acercaba a Eretz Israel. Bilam intentó tres veces, pero cada vez SUS MALDICIONES SE TRANSFORMARON en bendiciones. La narrativa bíblica explica esto como intervención divina directa.\n\nLA SUGYÁ AÑADE UNA CAPA: ¿qué hacía Bilam técnicamente tan especial? Bamidbar 24:16 lo describe como «יוֹדֵעַ דַּעַת עֶלְיוֹן» («conocedor del conocimiento del Altísimo»). ¿Qué conocimiento exacto tenía Bilam que ningún otro profeta tenía?\n\nLA RESPUESTA RABÍNICA: Bilam SABÍA el momento exacto del rega del enojo divino. Tenía la capacidad de identificar el instante 0.061 segundos en que HKBH se enoja. Y planeaba pronunciar SU MALDICIÓN precisamente en ese instante.\n\nEL PODER DE ESTA TÉCNICA: cualquier maldición pronunciada en el rega del enojo recibiría el ENDORSEMENT cósmico del momento. Si HKBH está enojado y Bilam maldice precisamente entonces, la maldición se «sintoniza» con la voluntad divina momentánea. Sería virtualmente IRREVOCABLE.\n\nERA UN PLAN TÉCNICAMENTE BRILLANTE — explotar la calibración interna del cosmos espiritual.\n\nPERO HKBH RESPONDIÓ CON UN ACTO EXTRAORDINARIO:\n\n  «כָּל אוֹתָן הַיָּמִים — לֹא כָעַס»\n  «Durante TODOS aquellos días — HKBH NO se enojó»\n\nDurante los días en que Bilam intentaba maldecir a Israel, HKBH SUSPENDIÓ su enojo diario. La rutina cósmica del enojo diario (parte del orden natural) fue PUESTA EN PAUSA específicamente para evitar que Bilam encontrara su ventana.\n\nESTO ES TEOLOGÍA DE EXTRAORDINARIA PROFUNDIDAD:\n\n  1. HKBH PROTEGE A ISRAEL AL ROMPER SU PROPIA RUTINA — el orden cósmico se altera por el amor de un pueblo\n\n  2. LA MIDAT RAJAMIM OPERA ACTIVAMENTE — no es solo «prefiere la misericordia». La actúa: suspende el din\n\n  3. LA PROVIDENCIA ES INTERVENCIONISTA — no es solo legal, no es solo distante. Cuando Israel está en peligro, HKBH interviene en la PROPIA estructura del tiempo divino\n\n  4. EL TÉCNICO MÁGICO ES DERROTADO POR EL AMOR — Bilam, con todo su conocimiento técnico, no puede contra un Dios que ELIGE NO ENOJARSE. La técnica no vence al amor\n\nLA LECCIÓN AMPLIA: el conocimiento esotérico (que Bilam tenía) puede ser real y poderoso. Pero está SUBORDINADO al pacto de amor entre HKBH e Israel. Cuando los dos chocan, gana el pacto.\n\nLA PARÁBOLA MORAL: nadie puede dañar a Israel SI HKBH ha decidido protegerlo. Aun el conocedor más profundo de las técnicas espirituales fracasará si HKBH simplemente DECIDE no abrir la ventana de oportunidad.\n\nESTA NARRATIVA TAMBIÉN ILUMINA LA RAZÓN POR LA QUE EL ENOJO EXISTE: si HKBH puede suspenderlo a voluntad para proteger, ¿por qué existe? La respuesta implícita: el enojo es PARTE DEL ORDEN COSMOLÓGICO — pero subordinado a la libertad divina. Es regla y excepción simultáneamente.\n\nIMPLICACIONES PARA LA TEFILÁ MODERNA: cuando rezamos por protección de Israel o por seguridad personal, estamos pidiendo precisamente esto — que HKBH SUSPENDA su rutina, intervenga en el tiempo divino, actúe lipnim mishurat ha-din. La oración del rega de Bilam es nuestro precedente. Si pasó entonces, puede pasar ahora.'
+    },
+    'simetria': {
+      titulo: 'La simetría especular · pacto del reconocimiento mutuo',
+      hebreo: 'בְּרִית הַהַכָּרָה הַהֲדָדִית',
+      traduccion: 'Pacto del reconocimiento mutuo',
+      explicacion: 'Las tres enseñanzas (tefilín, tefilá, enojo) se revelan como un sistema unificado: la teología del ESPEJO ESPECULAR entre HKBH e Israel.\n\nLA ESTRUCTURA SIMÉTRICA:\n\nTAB | HOMBRE | HKBH\nTEFILÍN | proclaman la unicidad de HKBH («echad») | proclaman la unicidad de Israel («goy echad»)\nTEFILÁ | el hombre pide a HKBH que escuche | HKBH se pide a sí mismo que sus rajamim venzan\nENOJO | dura horas o días | dura 0.061 segundos\n\nLO QUE LA SIMETRÍA REVELA:\n\n  1. NO ES SIMETRÍA SIMPLE — los dos polos no son idénticos\n\n  2. ES SIMETRÍA INVERTIDA O CALIBRADA — cada acto divino tiene un correlato humano, pero CON LA DIFERENCIA QUE CORRESPONDE A LA CATEGORÍA ONTOLÓGICA\n\n  3. EL HOMBRE FINITO TIENE ENOJO PROLONGADO — el cuerpo humano no tiene capacidad de modular emociones con precisión micrométrica\n\n  4. HKBH TIENE ENOJO TÉCNICAMENTE MICROSCÓPICO — porque su naturaleza infinita le permite calibrar emociones con precisión cósmica\n\n  5. PERO AMBOS EXPERIMENTAN LA EMOCIÓN — la enseñanza NO suprime el enojo divino, lo CALIBRA\n\nESTE ES ANTROPOMORFISMO REFINADO, NO INGENUO:\n\nLA TEOLOGÍA INGENUA dice: HKBH es exactamente como el hombre, solo más grande. Esta es la teología pagana, en la que los dioses son humanos amplificados.\n\nLA TEOLOGÍA ABSTRACTA dice: HKBH NO se parece al hombre en absoluto. Cualquier antropomorfismo es metáfora pura sin contenido. Esta es la teología filosófica medieval.\n\nLA TEOLOGÍA RABÍNICA dice algo TERCERO: HKBH se parece al hombre en sus ATRIBUTOS — tiene oración, emociones, atención — pero las CALIBRA con precisión que el hombre no tiene. La estructura es compartida; la implementación es ontológicamente distinta.\n\nIMPLICACIONES:\n\n  1. EL JUDAÍSMO ES UNA RELIGIÓN DE PACTO BILATERAL — HKBH e Israel no son cliente-y-vendedor, ni siervo-y-amo en sentido pleno. Son partes de un pacto que IMPLICA reciprocidad de actos\n\n  2. EL AMOR ES CONSTITUTIVO DEL PACTO — la simetría de los tefilín (Yo proclamo tu unicidad / tú proclamas mi unicidad) es el modelo: el amor pasa POR LA RECIPROCIDAD, no por la submisión unilateral\n\n  3. LA HALAJÁ HUMANA REFLEJA LA HALAJÁ DIVINA — cuando el judío reza la amidá, está repitiendo a su escala humana lo que HKBH reza a su escala divina. Cuando el judío modera su enojo, imita a HKBH calibrando el rega. La práctica humana es ESPEJO de la divina\n\n  4. LA IMITATIO DEI ES POSIBLE PORQUE LA SIMETRÍA EXISTE — el hombre puede aspirar a parecerse a HKBH solo porque ya hay una estructura compartida. El llamado a la santidad («קְדוֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי ה\' אֱלֹקֵיכֶם») presupone esta simetría base\n\nUN PUNTO TEOLÓGICAMENTE DELICADO: ¿esta enseñanza no degrada la trascendencia divina al atribuirle emociones humanas?\n\nLa respuesta rabínica: NO. Las emociones de HKBH son ESTRUCTURALMENTE como las humanas pero ONTOLÓGICAMENTE distintas. Cuando HKBH «se enoja», no pierde el control. Cuando «reza», no le pide a otro. Cuando «usa tefilín», no necesita recordar. Las formas son humanas; los contenidos son divinos. La trascendencia se preserva incluso EN el lenguaje antropomórfico.\n\nLA TRADICIÓN POSTERIOR — especialmente Rambam — luchará con cómo articular esto sin pérdida del rigor filosófico. Pero en Berajot 6a-7a la estructura ya está clara: HKBH e Israel se reflejan mutuamente, cada uno haciendo lo que el otro hace, pero según su naturaleza propia.\n\nLA PRÁCTICA QUE EMERGE: el judío observante NO se siente solo en su tefilá. No le habla a un cielo silencioso. Se suma a una conversación cósmica donde HKBH también está rezando, también está actuando, también está tomando decisiones. La oración del hombre se vuelve PARTE de un diálogo continuo en el que el otro polo también participa.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · el default divino es la misericordia',
+      hebreo: 'הָרַחֲמִים הֵם בְּרִירַת הַמֶּחְדָּל הָאֱלֹהִית',
+      traduccion: 'La misericordia es el default divino',
+      explicacion: 'La doctrina meta de las tres enseñanzas se condensa en una proposición teológica: EL DEFAULT DIVINO ES LA MISERICORDIA, NO LA JUSTICIA.\n\nCONTRA UNA TEOLOGÍA POPULAR EQUIVOCADA:\n\nMuchos asumen que HKBH es primariamente JUEZ y secundariamente PERDONADOR. La imagen: HKBH evalúa cada acción, registra culpas y méritos, decide consecuencias. El perdón es excepción que requiere súplica humana.\n\nLA SUGYÁ INVIERTE ESTO. HKBH es primariamente PADRE/AMANTE, y solo secundariamente juez. Su default es la rajamim. La justicia es la excepción que opera cuando la rajamim no encuentra cómo expresarse.\n\nLA PRUEBA EN LA TEFILÁ DIVINA:\n\nNO necesitamos especular. HKBH NOS DICE explícitamente lo que quiere — en SU PROPIA ORACIÓN:\n\n  · «que mis rajamim sojuzguen mi enojo»\n  · «que mis rajamim rueden sobre mis atributos»\n  · «que me conduzca con mis hijos en midat rajamim»\n  · «que entre con ellos lipnim mishurat ha-din»\n\nEsto no es interpretación humana de HKBH. Es lo que HKBH se desea a sí mismo. Es transparente. Es explícito.\n\nLAS IMPLICACIONES PRÁCTICAS:\n\n  1. LA TEFILÁ ENTRA EN UN CAMPO INCLINADO HACIA LA MISERICORDIA — cuando rezas pidiendo perdón, NO estás pidiendo a un juez frío que cambie su veredicto. Estás pidiendo a un Padre que YA ESTÁ rezando por la misericordia que hagas lo que él mismo quiere\n\n  2. EL LIPNIM MISHURAT HA-DIN ES NORMA, NO EXCEPCIÓN — el principio rabínico de «ir más allá de la letra de la ley» no es un favor excepcional. Es el modo OPERATIVO REGULAR de HKBH con sus hijos. La estricta letra de la ley es la excepción que se aplica cuando los rajamim no encuentran cómo prevalecer\n\n  3. LA ESPERANZA TIENE BASE TEOLÓGICA — quien teme el juicio divino debe recordar: HKBH MISMO reza para no juzgar estrictamente. El temor del juicio es legítimo pero contextualizado por la estructura del default\n\n  4. LA IMITATIO DEI INCLUYE MODERAR EL ENOJO — si HKBH tiene capacidad infinita de enojo y lo restringe a 0.061 segundos, los humanos deben buscar la misma proporción. Tu enojo NO debe dominar tu día — debe ser microscópico\n\n  5. EL EJEMPLO DE BILAM ENSEÑA QUE HKBH PROTEGE — incluso suspende su rutina cósmica para evitar daño a Israel. Si lo hizo contra Bilam, lo hace contra todas las amenazas equivalentes en la historia. Israel está bajo PROTECCIÓN ACTIVA\n\nLA ESCATOLOGÍA IMPLÍCITA:\n\nSi el default divino es rajamim, entonces el destino final del pueblo y del individuo se inclina a favor. Las pruebas son temporales; la misericordia es estructural. El olam ha-ba — el premio final — está EN LA DIRECCIÓN del default. El juicio del último día se calibrará según el principio del rega: enojo microscópico, rajamim abrumadora.\n\nLA TENSIÓN HONESTA:\n\nLa sugyá no niega que existe el enojo, ni que existe el juicio, ni que existen los yisurim. Todo eso es real. Pero contextualiza: TODO ESO ES EXCEPCIÓN dentro de una estructura cuyo eje principal es el amor.\n\nUNA PERSONA QUE SUFRE puede preguntar: «si el default es la misericordia, ¿por qué este dolor?». La respuesta de la sugyá: el dolor es real, pero PASAJERO en la economía cósmica. Lo PROLONGADO, lo ESTRUCTURAL, es la misericordia. El dolor es paréntesis dentro del corredor del amor.\n\nESTA ENSEÑANZA ES UNA DE LAS MÁS PROFUNDAS RAZONES PARA SER JUDÍO:\n\nNO porque Dios sea blando o complaciente con la maldad. Sino porque la estructura misma de la divinidad — según la enseñanza rabínica — INCLUYE el amor como su modo primario. Servir a este Dios es servir a un Padre que ya está orientado hacia ti antes de que tú lo busques. Es entrar en un pacto cuya estructura misma te recibe con misericordia. Es vivir bajo un cielo en el que las nubes del enojo duran 0.061 segundos y el sol del amor brilla el resto del día.\n\nESTA ES LA TEOLOGÍA QUE PERMITE LA VIDA RELIGIOSA JUDÍA: rigurosa pero confiada, exigente pero amorosa, atenta al juicio pero anclada en la misericordia. Las tres enseñanzas de Berajot 6a-7a son su fundamento.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.hkbh-interactivo')
+    : document.querySelector('.hkbh-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#hkbh-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.hkbh-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="hkbh-panel-header">' +
+        '<p class="hkbh-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="hkbh-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="hkbh-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="hkbh-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.hkbh-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.hkbh-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="hkbh-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

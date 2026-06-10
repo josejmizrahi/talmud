@@ -652,16 +652,41 @@
       "slug": "hkbh-reza-tefilin",
       "orden": 19,
       "titulo": "HKBH reza, se enoja, usa tefilín",
-      "subtitulo": "R. Yishmael ben Elisha · el rega del enojo",
+      "subtitulo": "R. Yishmael ben Elisha · el rega del enojo · la oración divina",
       "dapim": [
         "6a",
         "7a"
       ],
       "grupo": "Teología refinada",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/hkbh-reza-tefilin.html",
+      "sabios": [
+        "rav-yitzjak",
+        "r-yojanan",
+        "r-yose-baraita",
+        "rav-zutra-bar-tuvia",
+        "rav",
+        "r-yishmael-ben-elisha"
+      ],
+      "sabios_biblicos": [
+        "bilam"
+      ],
+      "pesukim": [
+        "yeshayahu-56-7",
+        "tehilim-7-12",
+        "divrei-hayamim-i-17-21"
+      ],
+      "conceptos": [
+        "tefilin-shel-hkbh",
+        "rega-haka'as",
+        "midat-rajamim",
+        "midat-hadin",
+        "antropomorfismo"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #18 estableció la doctrina del beit knesset: el lugar\ndonde la Shejiná se concentra y recibe la tefilá del hombre. La\nsugyá inmediatamente pega una doctrina especular: si el hombre\nreza A HKBH, ¿qué hace HKBH? La sorprendente respuesta del editor:\nHKBH TAMBIÉN reza. Y se enoja. Y usa tefilín. El editor agrupa por\ncadena-fórmula — la enseñanza sobre el lugar privilegiado del rezo\nhumano dispara la reflexión sobre el espejo divino. La teología\nrabínica refinada del antropomorfismo.\n"
+      }
     },
     {
       "slug": "moshe-tres-cosas",
@@ -857,6 +882,18 @@
       "nombre": "R Yitzjak Bar Shmuel Bar Marta"
     },
     {
+      "slug": "r-yose-baraita",
+      "nombre": "R Yose Baraita"
+    },
+    {
+      "slug": "rav-zutra-bar-tuvia",
+      "nombre": "Rav Zutra Bar Tuvia"
+    },
+    {
+      "slug": "r-yishmael-ben-elisha",
+      "nombre": "R Yishmael Ben Elisha"
+    },
+    {
       "slug": "aba-binyamin",
       "nombre": "Aba Binyamin"
     },
@@ -871,10 +908,6 @@
     {
       "slug": "r-yose-bar-zimra",
       "nombre": "R Yose Bar Zimra"
-    },
-    {
-      "slug": "r-yose-baraita",
-      "nombre": "R Yose Baraita"
     },
     {
       "slug": "tana-devei-r-yishmael",
@@ -1039,6 +1072,18 @@
     {
       "slug": "tehilim-57-9",
       "nombre": "Tehilim 57 9"
+    },
+    {
+      "slug": "yeshayahu-56-7",
+      "nombre": "Yeshayahu 56 7"
+    },
+    {
+      "slug": "tehilim-7-12",
+      "nombre": "Tehilim 7 12"
+    },
+    {
+      "slug": "divrei-hayamim-i-17-21",
+      "nombre": "Divrei Hayamim I 17 21"
     },
     {
       "slug": "tehilim-91-7",
@@ -1280,6 +1325,26 @@
     {
       "slug": "consejo-tripartito",
       "nombre": "Consejo Tripartito"
+    },
+    {
+      "slug": "tefilin-shel-hkbh",
+      "nombre": "Tefilin Shel Hkbh"
+    },
+    {
+      "slug": "rega-haka'as",
+      "nombre": "Rega Haka'As"
+    },
+    {
+      "slug": "midat-rajamim",
+      "nombre": "Midat Rajamim"
+    },
+    {
+      "slug": "midat-hadin",
+      "nombre": "Midat Hadin"
+    },
+    {
+      "slug": "antropomorfismo",
+      "nombre": "Antropomorfismo"
     },
     {
       "slug": "invisibilidad-como-misericordia",
@@ -1580,6 +1645,14 @@
       "peso": 3
     },
     {
+      "from": "beit-knesset",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #18 estableció la doctrina del beit knesset: el lugar\ndonde la Shejiná se concentra y recibe la tefilá del hombre. La\nsugyá inmediatamente pega una doctrina especular: si el hombre\nreza A HKBH, ¿qué hace HKBH? La sorprendente respuesta del editor:\nHKBH TAMBIÉN reza. Y se enoja. Y usa tefilín. El editor agrupa por\ncadena-fórmula — la enseñanza sobre el lugar privilegiado del rezo\nhumano dispara la reflexión sobre el espejo divino. La teología\nrabínica refinada del antropomorfismo.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -1868,6 +1941,22 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-baraita",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -1924,6 +2013,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -1942,6 +2039,14 @@
     {
       "from": "ashrei-olam-haba",
       "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "hkbh-reza-tefilin",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -1985,6 +2090,14 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "vulnerabilidad-del-sueno",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yitzjak",
       "peso": 1
     },
     {
@@ -2068,6 +2181,14 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2089,6 +2210,22 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
       "peso": 1
     }
   ]
