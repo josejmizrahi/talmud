@@ -692,15 +692,37 @@
       "slug": "moshe-tres-cosas",
       "orden": 20,
       "titulo": "Moshé pide tres cosas",
-      "subtitulo": "y HKBH se las da",
+      "subtitulo": "las tres peticiones · la teodicea · ¿se le respondió la tercera?",
       "dapim": [
         "7a"
       ],
       "grupo": "Teología refinada",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/moshe-tres-cosas.html",
+      "sabios": [
+        "r-yojanan",
+        "r-yose-baraita",
+        "r-meir"
+      ],
+      "sabios_biblicos": [
+        "moshe"
+      ],
+      "pesukim": [
+        "shemot-33-13",
+        "shemot-33-16",
+        "shemot-33-19"
+      ],
+      "conceptos": [
+        "shejina",
+        "teodicea",
+        "tzadik-ve-tov-lo",
+        "midat-rajamim",
+        "dios-mistery"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #19 reveló que HKBH mismo reza para que su rajamim\nvenza a su din. Si HKBH prefiere la misericordia, ¿por qué\nentonces el justo sufre y el malvado prospera? La sugyá continúa\ninmediatamente con la enseñanza más famosa sobre la TEODICEA: las\ntres peticiones de Moshé. La conexión es exacta — desde la\nteología del default divino misericordioso a la pregunta más\nintratable: si así son las cosas, ¿por qué el mundo no lo refleja?\n"
+      }
     },
     {
       "slug": "david-y-avshalom",
@@ -914,6 +936,10 @@
       "nombre": "Tana Devei R Yishmael"
     },
     {
+      "slug": "r-meir",
+      "nombre": "R Meir"
+    },
+    {
       "slug": "rav-oshaya",
       "nombre": "Rav Oshaya"
     },
@@ -980,10 +1006,6 @@
     {
       "slug": "r-aja-bar-janina",
       "nombre": "R Aja Bar Janina"
-    },
-    {
-      "slug": "r-meir",
-      "nombre": "R Meir"
     },
     {
       "slug": "r-ajai",
@@ -1104,6 +1126,18 @@
     {
       "slug": "shemot-15-16",
       "nombre": "Shemot 15 16"
+    },
+    {
+      "slug": "shemot-33-13",
+      "nombre": "Shemot 33 13"
+    },
+    {
+      "slug": "shemot-33-16",
+      "nombre": "Shemot 33 16"
+    },
+    {
+      "slug": "shemot-33-19",
+      "nombre": "Shemot 33 19"
     },
     {
       "slug": "tehilim-119-147",
@@ -1365,6 +1399,18 @@
     {
       "slug": "lulei",
       "nombre": "Lulei"
+    },
+    {
+      "slug": "teodicea",
+      "nombre": "Teodicea"
+    },
+    {
+      "slug": "tzadik-ve-tov-lo",
+      "nombre": "Tzadik Ve Tov Lo"
+    },
+    {
+      "slug": "dios-mistery",
+      "nombre": "Dios Mistery"
     },
     {
       "slug": "arpa-de-david",
@@ -1653,6 +1699,14 @@
       "peso": 3
     },
     {
+      "from": "hkbh-reza-tefilin",
+      "to": "moshe-tres-cosas",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #19 reveló que HKBH mismo reza para que su rajamim\nvenza a su din. Si HKBH prefiere la misericordia, ¿por qué\nentonces el justo sufre y el malvado prospera? La sugyá continúa\ninmediatamente con la enseñanza más famosa sobre la TEODICEA: las\ntres peticiones de Moshé. La conexión es exacta — desde la\nteología del default divino misericordioso a la pregunta más\nintratable: si así son las cosas, ¿por qué el mundo no lo refleja?\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -1714,6 +1768,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-janina",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
       "peso": 1
     },
     {
@@ -1957,6 +2019,22 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-baraita",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -2021,6 +2099,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -2047,6 +2133,14 @@
     {
       "from": "ashrei-olam-haba",
       "to": "hkbh-reza-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -2189,6 +2283,14 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2226,6 +2328,46 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shejina",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-baraita",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "midat-rajamim",
       "peso": 1
     }
   ]

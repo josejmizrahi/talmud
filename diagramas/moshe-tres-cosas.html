@@ -1,0 +1,364 @@
+<div class="moshe-interactivo">
+<style>
+  .moshe-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .moshe-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .moshe-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .moshe-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .moshe-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .moshe-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .moshe-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .moshe-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .moshe-diagrama svg { width: 100%; height: auto; display: block; }
+  .moshe-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .moshe-nodo:hover rect { stroke-width: 2 !important; }
+  .moshe-nodo:hover circle { stroke-width: 2.5 !important; }
+  .moshe-nodo.activa rect { stroke-width: 2.5 !important; }
+  .moshe-nodo.activa circle { stroke-width: 3 !important; }
+  .moshe-nodo.dim { opacity: 0.32; }
+  .moshe-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .moshe-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .moshe-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .moshe-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .moshe-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .moshe-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .moshe-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="moshe-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear</span>
+  <span><span class="swatch azul"></span>peticiones 1 y 2 · concedidas</span>
+  <span><span class="swatch verde"></span>petición 3 · respuesta sistemática</span>
+  <span><span class="swatch rojo"></span>R. Meir · disenso</span>
+  <span><span class="swatch sepia"></span>doctrina · tensión</span>
+</div>
+
+<div class="moshe-diagrama">
+<svg viewBox="0 0 720 1280" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 7a: las tres peticiones de Moshé · la teodicea · R. Yojanan y R. Meir en disputa</title>
+
+<defs>
+  <marker id="flecha-mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-mo-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Las tres peticiones de Moshé · la teodicea</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 7a · R. Yojanan: pidió tres, recibió tres · R. Meir disiente sobre la tercera</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · R. YOJANAN                            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · R. YOJANAN EN NOMBRE DE R. YOSE · 7A</text>
+
+<g class="moshe-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="88" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">שְׁלֹשָׁה דְּבָרִים בִּקֵּשׁ מֹשֶׁה מִלִּפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא — וְנָתַן לוֹ</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Tres cosas pidió Moshé ante HKBH — y se las dio»</text>
+  <text x="360" y="156" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">Moshé como negociador divino · la tefilá NO es solo ruego pasivo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PETICIÓN 1 · SHEJINÁ SOBRE ISRAEL                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="174" x2="360" y2="192" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="204" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PETICIÓN 1 · LA SHEJINÁ SOBRE ISRAEL</text>
+
+<g class="moshe-nodo" data-id="peticion-1">
+  <rect x="60" y="214" width="600" height="106" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <circle cx="92" cy="246" r="20" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="92" y="252" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="124" y="240" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">שֶׁתִּשְׁרֶה שְׁכִינָה עַל יִשְׂרָאֵל</text>
+  <text x="124" y="256" font-size="10" fill="#3d2f23" font-style="italic">«que la Shejiná more sobre Israel»</text>
+  <text x="124" y="278" font-size="10" direction="ltr" fill="#3d2f23">«וְנָתַן לוֹ» — concedido · Shemot 33:16</text>
+  <text x="124" y="294" font-size="10.5" direction="rtl" fill="#1e3a5f">הֲלוֹא בְּלֶכְתְּךָ עִמָּנוּ</text>
+  <text x="124" y="310" font-size="9" fill="#6b4423" font-style="italic">«¿acaso no es por tu ir con nosotros?» · la presencia escogió a Israel por petición</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PETICIÓN 2 · NO SOBRE LAS NACIONES                           -->
+<!-- ============================================================ -->
+<line x1="360" y1="320" x2="360" y2="338" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="350" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PETICIÓN 2 · LA SHEJINÁ NO SOBRE LAS NACIONES</text>
+
+<g class="moshe-nodo" data-id="peticion-2">
+  <rect x="60" y="360" width="600" height="106" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <circle cx="92" cy="392" r="20" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="92" y="398" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="124" y="386" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">שֶׁלֹּא תִּשְׁרֶה שְׁכִינָה עַל אוּמּוֹת הָעוֹלָם</text>
+  <text x="124" y="402" font-size="10" fill="#3d2f23" font-style="italic">«que la Shejiná NO more sobre las naciones»</text>
+  <text x="124" y="424" font-size="10" direction="ltr" fill="#3d2f23">«וְנָתַן לוֹ» — concedido · misma verseta</text>
+  <text x="124" y="440" font-size="10.5" direction="rtl" fill="#1e3a5f">וְנִפְלֵינוּ אֲנִי וְעַמְּךָ</text>
+  <text x="124" y="456" font-size="9" fill="#6b4423" font-style="italic">«y seremos distinguidos, yo y tu pueblo» · la singularidad de Israel es RESULTADO de la petición</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PETICIÓN 3 · LAS VÍAS DE HKBH (TEODICEA)                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="466" x2="360" y2="484" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="496" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PETICIÓN 3 · LAS VÍAS DE HKBH · LA TEODICEA</text>
+
+<g class="moshe-nodo" data-id="peticion-3">
+  <rect x="60" y="506" width="600" height="98" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <circle cx="92" cy="540" r="20" fill="rgba(30,107,90,0.22)" stroke="#2d6b4e" stroke-width="2"/>
+  <text x="92" y="546" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">3</text>
+  <text x="124" y="534" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">לְהוֹדִיעוֹ דְּרָכָיו שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא</text>
+  <text x="124" y="550" font-size="10" fill="#3d2f23" font-style="italic">«que le mostrara las vías de HKBH»</text>
+  <text x="124" y="572" font-size="10.5" direction="rtl" fill="#2d6b4e">הוֹדִיעֵנִי נָא אֶת־דְּרָכֶךָ (שמ' לג:יג)</text>
+  <text x="124" y="588" font-size="9" fill="#6b4423" font-style="italic">la pregunta IMPLÍCITA: ¿por qué el justo sufre y el malvado prospera?</text>
+  <text x="600" y="588" text-anchor="end" font-size="9" fill="#2d6b4e" font-style="italic">— el problema clásico de la teodicea</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESPUESTA CLÁSICA · CUATRO CUADRADOS                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="604" x2="360" y2="622" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="634" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RESPUESTA CLÁSICA · LOS CUATRO CUADRADOS DE LA TEODICEA</text>
+
+<g class="moshe-nodo" data-id="cuatro-cuadrados">
+  <rect x="60" y="644" width="600" height="170" rx="6" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="1.3"/>
+
+  <text x="360" y="666" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Original (mérito heredado) → Refinado (mérito personal)</text>
+
+  <!-- Cuadrante 1 - tzadik tov -->
+  <rect x="78" y="680" width="278" height="58" rx="4" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="217" y="696" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="700">צַדִּיק וְטוֹב לוֹ</text>
+  <text x="217" y="710" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">justo y le va bien</text>
+  <text x="217" y="724" text-anchor="middle" font-size="8.5" fill="#3d2f23">hijo de tzadik / <tspan font-weight="600">tzadik gamur</tspan></text>
+
+  <!-- Cuadrante 2 - tzadik ra -->
+  <rect x="364" y="680" width="278" height="58" rx="4" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="503" y="696" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">צַדִּיק וְרַע לוֹ</text>
+  <text x="503" y="710" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">justo y le va mal</text>
+  <text x="503" y="724" text-anchor="middle" font-size="8.5" fill="#3d2f23">hijo de rasha / <tspan font-weight="600">tzadik eino gamur</tspan></text>
+
+  <!-- Cuadrante 3 - rasha tov -->
+  <rect x="78" y="746" width="278" height="58" rx="4" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="217" y="762" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">רָשָׁע וְטוֹב לוֹ</text>
+  <text x="217" y="776" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">malvado y le va bien</text>
+  <text x="217" y="790" text-anchor="middle" font-size="8.5" fill="#3d2f23">hijo de tzadik / <tspan font-weight="600">rasha eino gamur</tspan></text>
+
+  <!-- Cuadrante 4 - rasha ra -->
+  <rect x="364" y="746" width="278" height="58" rx="4" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="503" y="762" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="700">רָשָׁע וְרַע לוֹ</text>
+  <text x="503" y="776" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">malvado y le va mal</text>
+  <text x="503" y="790" text-anchor="middle" font-size="8.5" fill="#3d2f23">hijo de rasha / <tspan font-weight="600">rasha gamur</tspan></text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA REFUTACIÓN DEL VERSÍCULO                                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="814" x2="360" y2="830" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="842" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OBJECIÓN · POR QUÉ HUBO QUE REFINAR</text>
+
+<g class="moshe-nodo" data-id="objecion-verso">
+  <rect x="60" y="852" width="600" height="78" rx="5" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="78" y="872" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="600">La objeción del stam:</text>
+  <text x="78" y="890" font-size="10" direction="rtl" fill="#1a1410">אִינִי? וְהָא כְּתִיב — «פֹּקֵד עֲוֹן אָבוֹת עַל בָּנִים» (שמ' כ:ה)</text>
+  <text x="78" y="906" font-size="9.5" fill="#3d2f23" font-style="italic">«¿es así? ¡pero está escrito 'visita la culpa de los padres sobre los hijos'!»</text>
+  <text x="78" y="922" font-size="9" fill="#6b4423" font-style="italic">el sistema original (hijo de tzadik = bueno) contradice el versículo · por eso se refina a gamur/eino gamur</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- R. MEIR DISIENTE                                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="930" x2="360" y2="948" stroke="#8b1a1a" stroke-width="1.4" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="960" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">R. MEIR DISIENTE · LA TERCERA NO FUE CONCEDIDA</text>
+
+<g class="moshe-nodo" data-id="r-meir">
+  <rect x="60" y="970" width="600" height="160" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="992" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">שְׁתַּיִם נָתְנוּ לוֹ — וְאַחַת לֹא נָתְנוּ לוֹ</text>
+  <text x="360" y="1010" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«DOS le dieron — y UNA no le dieron»</text>
+
+  <line x1="80" y1="1024" x2="640" y2="1024" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="1044" font-size="10" fill="#8b1a1a" font-weight="600">El proof de R. Meir — Shemot 33:19:</text>
+  <text x="360" y="1062" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">וְחַנֹּתִי אֶת־אֲשֶׁר אָחֹן · וְרִחַמְתִּי אֶת־אֲשֶׁר אֲרַחֵם</text>
+  <text x="360" y="1080" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«me apiadaré de quien me apiade · tendré compasión de quien tenga compasión»</text>
+
+  <text x="78" y="1102" font-size="10" fill="#3d2f23">la derashá: HKBH dice «de quien YO ME APIADE» — incluso si no es digno</text>
+  <text x="78" y="1118" font-size="9.5" fill="#8b1a1a" font-style="italic" font-weight="600">la discrecionalidad divina ESCAPA al sistema mérito-destino · las vías de HKBH NO son sistematizables</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA TENSIÓN IRRESUELTA                                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="1130" x2="360" y2="1148" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-mo)"/>
+
+<text x="60" y="1160" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA TENSIÓN IRRESUELTA · DOS POSICIONES, NINGUNA VENCEDORA</text>
+
+<g class="moshe-nodo" data-id="tension">
+  <rect x="60" y="1170" width="600" height="100" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1192" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El editor NO decide · ambas posiciones se transmiten como halájicamente válidas</text>
+
+  <!-- Línea separadora -->
+  <line x1="360" y1="1200" x2="360" y2="1260" stroke="#6b4423" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <text x="200" y="1216" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="700">R. Yojanan / R. Yose</text>
+  <text x="520" y="1216" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">R. Meir</text>
+
+  <text x="200" y="1234" text-anchor="middle" font-size="9.5" fill="#3d2f23">la teodicea ES sistematizable</text>
+  <text x="520" y="1234" text-anchor="middle" font-size="9.5" fill="#3d2f23">la teodicea NO es sistematizable</text>
+
+  <text x="200" y="1250" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">gamur + eino gamur explica todo</text>
+  <text x="520" y="1250" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la gracia divina excede el sistema</text>
+
+  <text x="360" y="1266" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el lector debe vivir con la TENSIÓN — herencia de audacia + humildad epistemológica</text>
+</g>
+
+</svg>
+</div>
+
+<div class="moshe-panel" id="moshe-panel">
+  <p class="moshe-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'La declaración nuclear · tres peticiones, tres concesiones',
+      hebreo: 'שְׁלֹשָׁה דְּבָרִים בִּקֵּשׁ מֹשֶׁה מִלִּפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא וְנָתַן לוֹ',
+      traduccion: '«Tres cosas pidió Moshé ante HKBH — y se las dio»',
+      explicacion: 'R. Yojanan en nombre de R. Yose abre una de las enseñanzas más densas del perek: el catálogo de las tres peticiones de Moshé.\n\nLa fórmula «תֶּן לִי / וְנָתַן לוֹ» (pidió / le dio) establece a Moshé como el NEGOCIADOR DIVINO por excelencia. NO es un siervo que solo recibe órdenes. Es un interlocutor que PIDE — y que CONSIGUE lo que pide.\n\nEsto es teológicamente decisivo. La halajá de la tefilá NO es solo «hablar a un Dios silencioso que decide lo que quiere». Es DIÁLOGO. El hombre puede pedir, y a veces obtener. El precedente de Moshé es el fundamento de esta confianza.\n\nLAS TRES PETICIONES forman una progresión:\n\n  1. SHEJINÁ SOBRE ISRAEL — la presencia divina especial para el pueblo elegido\n  2. SHEJINÁ NO SOBRE LAS NACIONES — la exclusividad de esa presencia\n  3. CONOCIMIENTO DE LAS VÍAS DE HKBH — la comprensión del PORQUÉ divino, la teodicea\n\nLa progresión es notable: las dos primeras son sobre EL DESTINO HISTÓRICO de Israel; la tercera es sobre EL ENTENDIMIENTO INTELECTUAL del orden cósmico. Moshé pide primero protección colectiva (Shejiná con su pueblo), luego comprensión filosófica (las vías de Dios).\n\nLa estructura ya anticipa la tensión: las dos primeras son CONCESIONES históricas relativamente concretas. La tercera es un PEDIDO METAFÍSICO mucho más ambicioso. ¿Se le concedió todo lo que pidió? La sugyá va a explorar precisamente esto, y R. Meir va a disentir.'
+    },
+    'peticion-1': {
+      titulo: 'Petición 1 · la Shejiná sobre Israel',
+      hebreo: 'בִּקֵּשׁ שֶׁתִּשְׁרֶה שְׁכִינָה עַל יִשְׂרָאֵל — וְנָתַן לוֹ',
+      traduccion: '«Pidió que la Shejiná morara sobre Israel — y se le concedió»',
+      explicacion: 'La PRIMERA petición de Moshé: que la Shejiná (Presencia divina) more específicamente sobre el pueblo de Israel.\n\nEl contexto bíblico: después del pecado del becerro de oro (Shemot 32), HKBH amenaza con NO acompañar a Israel en el viaje a la Tierra Prometida. Moshé negocia. La sugyá lee esta negociación como la PRIMERA petición.\n\nLa verseta proof es Shemot 33:16: «הֲלוֹא בְּלֶכְתְּךָ עִמָּנוּ» («¿Acaso no es por tu ir con nosotros?»). El argumento de Moshé es retórico: si HKBH no va con Israel, ¿de qué sirve la elección? ¿Qué distingue a Israel de cualquier otra nación si no es la Shejiná?\n\nLA TEOLOGÍA IMPLÍCITA:\n\n  1. LA ELECCIÓN DE ISRAEL NO ES ONTOLÓGICAMENTE AUTOMÁTICA — fue NEGOCIADA. Moshé tuvo que pedirla específicamente. El pueblo elegido es elegido POR PETICIÓN MOSAICA, no por simple decreto divino.\n\n  2. LA RELACIÓN ES HISTÓRICA, NO METAFÍSICA — la Shejiná no «pertenece» a Israel por naturaleza. Llegó por gracia respondida a oración. Esto preserva la libertad divina.\n\n  3. SI FUERA AUTOMÁTICA, NO HABRÍA OBLIGACIÓN MOSAICA DE PEDIR. El hecho de que Moshé tuvo que pedir muestra que la presencia divina podía haberse retirado. La gracia es CONTINGENTE.\n\nIMPLICACIONES PARA LA TEFILÁ MODERNA:\n\nCuando el judío reza «השב שכינתך לציון» («devuelve tu Shejiná a Sión») está repitiendo a pequeña escala lo que Moshé hizo a gran escala: NEGOCIANDO la presencia divina en la historia. La oración no es decorativa — es OPERATIVA. Cambia la realidad cósmica.\n\nLA NEGOCIACIÓN COMO MODELO HALÁJICO:\n\nMoshé establece el precedente de que el hombre PUEDE pedir cosas grandes a HKBH. Las tefilot judías están construidas sobre este precedente. La amidá pide salud, sabiduría, paz, retorno del exilio, reconstrucción del Templo. Todas estas son peticiones AMBICIOSAS basadas en el modelo de la audacia mosaica.\n\nLA HUMILDAD QUE ACOMPAÑA: Moshé NO exige. Pide. Y la tefilá moderna debe seguir el mismo tono. No exigencia, sino petición. No demanda, sino súplica.\n\nQUE ESTA PETICIÓN HAYA SIDO CONCEDIDA es la base teológica de la SUPERVIVENCIA HISTÓRICA DE ISRAEL. La presencia divina prometida es lo que mantiene al pueblo a través de los exilios, las persecuciones, las dispersiones. Quita esta promesa, y el pueblo se diluye en las naciones. Mantenla, y el pueblo sobrevive contra toda probabilidad histórica.'
+    },
+    'peticion-2': {
+      titulo: 'Petición 2 · la Shejiná NO sobre las naciones',
+      hebreo: 'בִּקֵּשׁ שֶׁלֹּא תִּשְׁרֶה שְׁכִינָה עַל אוּמּוֹת הָעוֹלָם — וְנָתַן לוֹ',
+      traduccion: '«Pidió que la Shejiná NO morara sobre las naciones — y se le concedió»',
+      explicacion: 'La SEGUNDA petición es la inversa de la primera: que la Shejiná NO more sobre las naciones (los gentiles).\n\nEsta petición es teológicamente más delicada. ¿Por qué Moshé pediría EXCLUIR a las naciones de la presencia divina? ¿No es esto una forma de chauvinismo religioso?\n\nLA LECTURA RABÍNICA es más sutil:\n\nLa petición no es de exclusión MALIGNA, sino de DISTINCIÓN. La verseta proof es la misma de la petición 1 (Shemot 33:16) — pero con énfasis en la segunda parte: «וְנִפְלֵינוּ אֲנִי וְעַמְּךָ» («y seremos DISTINGUIDOS, yo y tu pueblo»).\n\nLa palabra clave es נִפְלֵינוּ — «seremos diferenciados, distinguidos». Moshé pide que la relación Israel-HKBH sea DISTINGUIBLE de las relaciones HKBH con otros pueblos. No pide que HKBH no tenga relación con las naciones — pide que la relación CON ISRAEL sea ÚNICA.\n\nLA TEOLOGÍA DE LA SINGULARIDAD:\n\n  1. ISRAEL TIENE UN VÍNCULO ÚNICO con HKBH. No es solo un vínculo más fuerte — es un vínculo DE CALIDAD DISTINTA. Las naciones tienen su relación con HKBH (mediante los siete preceptos noájicos, mediante la providencia general), pero NO tienen la Shejiná en el sentido específico de Israel.\n\n  2. LA SHEJINÁ ES PROFÉTICA — la Presencia divina específica permite la profecía, el Templo, la halajá revelada. Las naciones no tienen profetas en el sentido bíblico clásico (excepto Bilam, mencionado en #19, que es excepcionalmente concedido para protección de Israel).\n\n  3. LA EXCLUSIVIDAD ES INSTRUMENTAL — la Shejiná exclusiva permite a Israel ser «luz para las naciones» (Yeshayahu 49:6). Si todos tuvieran lo mismo, no habría luz para iluminar a nadie. La singularidad de Israel es PARA EL BENEFICIO de todos.\n\nLA INTERPRETACIÓN UNIVERSALISTA:\n\nDesde una perspectiva contemporánea, esta petición se puede leer no como exclusión sino como ROL ESPECÍFICO. Israel tiene un rol cósmico distinto al de las naciones, y la Shejiná especializada es la herramienta de ese rol.\n\nLA TEOLOGÍA POSTMODERNA puede sentir tensión con esta lectura — la idea de un pueblo elegido contradice ideales contemporáneos de igualdad universal. Pero la sugyá no se preocupa por estas tensiones modernas. Para R. Yojanan, la singularidad de Israel es DADO bíblico que Moshé NEGOCIÓ.\n\nLO QUE LA PETICIÓN NO ES:\n\n  · NO es desear el mal de las naciones\n  · NO es pretender que HKBH abandone a las naciones\n  · NO es supremacismo étnico\n\nLO QUE SÍ ES:\n\n  · Una negociación por DISTINCIÓN funcional\n  · Una petición por la unicidad del rol de Israel\n  · Un reconocimiento de que las naciones tienen su propia relación, distinta\n\nLA HISTORIA HA SIDO COMPLICADA: a veces los judíos han usado esta enseñanza como justificación de aislamiento o de desprecio hacia los otros. La sugyá NO autoriza tal uso. El nifleinu mosaico es distinción de FUNCIÓN, no de valor.\n\nLA PRÁCTICA HALÁJICA derivada: el judío reconoce a las naciones como creaciones divinas con su propia dignidad. Pero también reconoce que su propia relación con HKBH tiene una forma específica (Torá, mitzvot, Shabbat, festividades). Las dos verdades son compatibles. La singularidad de Israel no exige el desvalor de los otros.'
+    },
+    'peticion-3': {
+      titulo: 'Petición 3 · las vías de HKBH (la teodicea)',
+      hebreo: 'בִּקֵּשׁ לְהוֹדִיעוֹ דְּרָכָיו שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא',
+      traduccion: '«Pidió que le mostrara las vías de HKBH»',
+      explicacion: 'La TERCERA petición es la más ambiciosa y la más teológicamente importante: que HKBH le revele LAS VÍAS por las que opera en el mundo.\n\nLa verseta proof es Shemot 33:13: «הוֹדִיעֵנִי נָא אֶת־דְּרָכֶךָ» («hazme conocer, por favor, tus vías»). El contexto bíblico es la negociación de Moshé tras el pecado del becerro de oro. Moshé quiere ENTENDER cómo funciona HKBH.\n\nLA PREGUNTA IMPLÍCITA, según la lectura rabínica, es la PREGUNTA CLÁSICA DE LA TEODICEA:\n\n  · ¿POR QUÉ EL JUSTO SUFRE?\n  · ¿POR QUÉ EL MALVADO PROSPERA?\n  · ¿CUÁL ES LA LÓGICA OCULTA detrás de la distribución de recompensa y castigo?\n\nEsta pregunta es la que ha torturado a teólogos, filósofos y creyentes durante toda la historia humana. Iov, Heimán, Asaf en Tehilim 73, los profetas — todos la formulan. Y Moshé, según R. Yojanan, la formuló también, y obtuvo respuesta.\n\nEL VALOR DE LA PREGUNTA:\n\n  1. SI TIENE RESPUESTA, hay una RACIONALIDAD COSMOLÓGICA. El mundo no es caos. El sufrimiento del justo tiene una RAZÓN.\n\n  2. SI NO TIENE RESPUESTA, el mundo permanece OPACO. El justo que sufre debe aceptar sin entender. La fe se vuelve confianza ciega.\n\nLa enseñanza de R. Yojanan toma la primera posición: SÍ hay respuesta, y Moshé la obtuvo. La sugyá va a desplegar el SISTEMA de esa respuesta — los cuatro cuadrados de la teodicea.\n\nPERO R. MEIR DISIENTE — y su disenso es teológicamente importante. Para R. Meir, esta tercera petición NO fue concedida. La teodicea permanece OPACA. La gracia divina escapa a todo sistema. Esta posición se desarrolla más adelante en la sugyá.\n\nLA TENSIÓN PERMANECE: el judaísmo no resuelve definitivamente esta cuestión. Tanto R. Yojanan (teodicea sistematizable) como R. Meir (teodicea misteriosa) se transmiten en el corpus. Cada generación de judíos puede inclinarse hacia una u otra dependiendo de su experiencia y temperamento.\n\nLA INMENSIDAD DE LA PETICIÓN:\n\nObserva la audacia: Moshé está pidiendo COMPRENSIÓN INTELECTUAL del orden cósmico. Esto es lo que los filósofos buscan a través del razonamiento. Moshé busca obtenerlo por revelación directa. Si lo consigue, sería el ser humano más sabio que haya existido — un Maimónides cuya filosofía está fundada en revelación directa.\n\nQUE LA SUGYÁ TOME EN SERIO ESTA PETICIÓN — que se dispute si fue o no concedida — muestra que el judaísmo NO renuncia a la búsqueda intelectual. La pregunta filosófica más difícil tiene su lugar en la sugyá. Moshé puede pedirla. HKBH puede responderla (o no).\n\nESTO LIBERA AL JUDÍO MODERNO: la teodicea no es tema prohibido. Pensar sobre el sufrimiento del justo es CONTINUAR la línea mosaica. Buscar respuestas filosóficas es legítimo. Aceptar que no las haya también lo es.'
+    },
+    'cuatro-cuadrados': {
+      titulo: 'Los cuatro cuadrados · la respuesta sistemática a la teodicea',
+      hebreo: 'אַרְבָּעָה מְקוֹמוֹת · צַדִּיק וְטוֹב · צַדִּיק וְרַע · רָשָׁע וְטוֹב · רָשָׁע וְרַע',
+      traduccion: 'Cuatro cuadrantes: justo+bueno, justo+malo, malvado+bueno, malvado+malo',
+      explicacion: 'La sugyá ofrece una RESPUESTA SISTEMÁTICA a la pregunta de Moshé. La estructura es cuádruple, combinando MÉRITO (justo/malvado) con DESTINO (bueno/malo).\n\nVERSIÓN ORIGINAL (mérito heredado):\n\n  · צַדִּיק וְטוֹב לוֹ — justo y le va bien = es hijo de tzadik\n  · צַדִּיק וְרַע לוֹ — justo y le va mal = es hijo de rasha\n  · רָשָׁע וְטוֹב לוֹ — malvado y le va bien = es hijo de tzadik\n  · רָשָׁע וְרַע לוֹ — malvado y le va mal = es hijo de rasha\n\nLA LÓGICA: el destino combina (a) el mérito personal y (b) el mérito heredado de los padres. Un tzadik con padres tzadikim recibe doble bendición → le va bien. Un tzadik con padres rashaim solo tiene su propio mérito, insuficiente para neutralizar la desventaja → le va mal.\n\nLA OBJECIÓN OBVIA — y la sugyá la plantea — es que esto parece CONTRADECIR el versículo «פֹּקֵד עֲוֹן אָבוֹת עַל בָּנִים» (Shemot 20:5): «visita la culpa de los padres sobre los hijos». Si el sistema dice «padres rashaim → hijo sufre», ¿no es esto justamente VISITAR la culpa sobre los hijos? Pero entonces el hijo está siendo castigado por los pecados de los padres, lo cual es problemático teológicamente.\n\nVERSIÓN REFINADA (mérito personal):\n\nLa sugyá refina las categorías. NO es mérito heredado lo que decide — es CALIDAD personal del propio mérito o demérito:\n\n  · צַדִּיק וְטוֹב לוֹ = צַדִּיק גָּמוּר (justo COMPLETO, sin defecto)\n  · צַדִּיק וְרַע לוֹ = צַדִּיק שֶׁאֵינוֹ גָּמוּר (justo INCOMPLETO, con alguna mancha residual)\n  · רָשָׁע וְטוֹב לוֹ = רָשָׁע שֶׁאֵינוֹ גָּמוּר (malvado INCOMPLETO, con algún mérito residual)\n  · רָשָׁע וְרַע לוֹ = רָשָׁע גָּמוּר (malvado COMPLETO, sin mérito residual)\n\nLA LÓGICA REFINADA: el destino del individuo se determina por LA CALIDAD INTEGRAL de su mérito personal. No hay tzadik «perfecto» universalmente; cada uno tiene grados. El que sufre, aun siendo tzadik, debe tener ALGÚN defecto que justifique los yisurim. El malvado que prospera debe tener ALGÚN mérito que justifique su prosperidad.\n\nIMPLICACIONES TEOLÓGICAS:\n\n  1. EL UNIVERSO ES JUSTO en sentido fino — cada destino corresponde a un mérito exacto, calibrado al detalle\n\n  2. NO HAY INJUSTICIA DIVINA — el justo que sufre no sufre INJUSTAMENTE; tiene un defecto que el observador externo no ve\n\n  3. EL OBSERVADOR HUMANO NO PUEDE JUZGAR — quien parece tzadik puede ser solo «eino gamur». Quien parece rasha puede ser «eino gamur». Solo HKBH ve el balance exacto\n\n  4. SE PRESERVA LA HEREDABILIDAD DE LA TORÁ — el versículo «פוקד עון» se mantiene; lo que se modifica es la INTERPRETACIÓN de los cuadrantes\n\nLA TEOLOGÍA DE GAMUR/EINO GAMUR — la teología del «completo / incompleto»:\n\nEsta refinación introduce una idea muy importante en el judaísmo: NADIE es completamente justo o completamente malvado. Todos somos MIXTURAS — combinaciones de mérito y demérito. Lo que decide el destino es el BALANCE de los componentes, calibrado por HKBH con precisión micrométrica.\n\nEsta enseñanza tiene una consecuencia consoladora y una desafiante:\n\n  CONSOLADORA — el tzadik que sufre puede ENTENDER su sufrimiento como refinación del residuo de demérito. Su sufrimiento purifica, lo eleva, lo lleva a la categoría de «gamur». El sufrimiento tiene función pedagógica.\n\n  DESAFIANTE — el «tzadik» debe aceptar que NO es completamente justo. Tiene defectos. El sufrimiento revela esos defectos. La humildad es obligatoria.\n\nESTA ES LA TEOLOGÍA DE R. YOJANAN: la teodicea ES sistematizable. El sistema es complejo, opaco al observador externo, pero existe. HKBH es justo en sentido fino.\n\nPERO R. MEIR — como veremos — rechaza este sistema. Para R. Meir, NO hay sistema. La gracia divina opera al margen del mérito. Esta es la tensión irresuelta de la sugyá.'
+    },
+    'objecion-verso': {
+      titulo: 'La objeción del versículo · por qué hubo que refinar',
+      hebreo: 'אִינִי? וְהָא כְּתִיב — פֹּקֵד עֲוֹן אָבוֹת עַל בָּנִים',
+      traduccion: '«¿Es así? ¡Pero está escrito visita la culpa de los padres sobre los hijos!»',
+      explicacion: 'El stam (anonymous editor) plantea una OBJECIÓN crucial al sistema original.\n\nEL VERSÍCULO PROBLEMÁTICO es Shemot 20:5, que aparece en los Diez Mandamientos:\n\n  «פֹּקֵד עֲוֹן אָבוֹת עַל־בָּנִים עַל־שִׁלֵּשִׁים וְעַל־רִבֵּעִים»\n  «visita la culpa de los padres sobre los hijos, sobre la tercera y la cuarta generación»\n\nESTE VERSÍCULO PARECE DECIR EXPLÍCITAMENTE: el hijo SUFRE por los pecados del padre. Es decir, el hijo de un rasha está condenado a sufrir CON o SIN su propio pecado.\n\nESTO PARECE CONTRADECIR el sistema original de R. Yojanan:\n\n  · Sistema original: tzadik ve-ra lo = hijo de rasha (sufre el tzadik porque hereda demérito paterno)\n  · Problema: pero el versículo confirma esto literalmente — el hijo sí hereda culpa\n  · Conclusión: el «hijo de rasha» que sufre NO es un tzadik. Es un PECADOR que merece su sufrimiento (porque hereda culpa que se vuelve suya).\n\nDONDE ESTÁ LA CONTRADICCIÓN: el sistema original quería decir «un tzadik PURO sufre solo porque heredó padres rashaim». Pero el versículo dice que la heredia no es injusta — el hijo HEREDA LA CULPA. Por tanto el «tzadik» del cuadrante 2 NO es realmente puro — es un mezclado.\n\nLA REFINACIÓN A GAMUR/EINO GAMUR resuelve el problema:\n\n  · El «tzadik ve-ra lo» NO es un tzadik puro. Es un «tzadik eino gamur» — un justo con manchas.\n  · El sufrimiento NO viene de la herencia paterna injusta. Viene de SUS PROPIAS manchas que el sufrimiento purifica.\n  · El versículo «פוקד עון אבות» se mantiene — describe cómo el demérito paterno se TRANSFIERE al hijo mediante influencia, ejemplo, hábitos, ambiente. Pero el demérito del hijo, una vez transferido, es SUYO. El sufrimiento responde al demérito ahora propio.\n\nLA ELEGANCIA DE LA REFINACIÓN:\n\n  1. PRESERVA EL VERSÍCULO BÍBLICO — el «פוקד עון» sigue siendo verdad\n\n  2. PRESERVA LA JUSTICIA DIVINA — nadie sufre por culpa ajena pura. Sufren por mérito MIXTO\n\n  3. INTRODUCE LA NOCIÓN DE MIXTURA — los humanos son mezclas de tzadik y rasha en proporciones diversas\n\n  4. EXPLICA LA OBSERVACIÓN COTIDIANA — vemos «tzadikim» que sufren y «rashaim» que prosperan, pero el sistema nos dice que estos NO son tzadikim ni rashaim PUROS. Son mixtos. La apariencia engaña.\n\nLA HUMILDAD METODOLÓGICA implicada:\n\nAl refinar a gamur/eino gamur, la sugyá ADMITE que el observador externo NO puede determinar quién es tzadik gamur. La estimación moral del prójimo es siempre incompleta. Solo HKBH ve el balance fino.\n\nEsto tiene implicaciones prácticas:\n\n  · NO juzgar a los que sufren — pueden ser tzadikim eino gamur en proceso de purificación\n  · NO envidiar a los que prosperan — pueden ser rashaim eino gamur cuyo mérito residual está siendo agotado\n  · NO confiar en uno mismo como tzadik puro — todos somos mixturas\n\nLA OBJECIÓN DEL VERSÍCULO Y SU RESOLUCIÓN modelan un método halájico clásico: cuando un versículo parece contradecir una doctrina, no se rechaza el versículo ni la doctrina — se REFINA la doctrina para acomodar ambos. Esta capacidad de refinación es lo que mantiene viva la tradición rabínica.'
+    },
+    'r-meir': {
+      titulo: 'R. Meir disiente · la tercera petición NO fue concedida',
+      hebreo: 'שְׁתַּיִם נָתְנוּ לוֹ — וְאַחַת לֹא נָתְנוּ לוֹ',
+      traduccion: '«Dos le dieron — y una NO le dieron»',
+      explicacion: 'R. Meir ofrece la VOZ DISIDENTE de la sugyá. Para él, R. Yojanan se equivoca: las tres peticiones NO fueron todas concedidas. Solo DOS lo fueron. La tercera — la comprensión de las vías de HKBH — NO le fue concedida a Moshé.\n\nLA POSICIÓN DE R. MEIR ES TEOLÓGICAMENTE PROFUNDA. Reconoce las dos primeras como concedidas (la Shejiná en Israel, no en las naciones — el destino histórico colectivo). Pero la tercera — la comprensión filosófica de la teodicea — NO le fue dada.\n\nEL PROOF DE R. MEIR es la verseta inmediatamente posterior, Shemot 33:19:\n\n  «וְחַנֹּתִי אֶת־אֲשֶׁר אָחֹן · וְרִחַמְתִּי אֶת־אֲשֶׁר אֲרַחֵם»\n  «Me apiadaré DE QUIEN YO ME APIADE · tendré compasión DE QUIEN TENGA COMPASIÓN»\n\nLA DERASHÁ DE R. MEIR es brillante. La estructura tautológica del versículo («me apiadaré de quien me apiade») parece extraña. ¿Por qué duplicar el verbo? La lectura rabínica: HKBH está expresando DISCRECIONALIDAD ABSOLUTA. «Me apiadaré DE QUIEN YO QUIERA APIADAR».\n\nIMPLICACIONES:\n\n  1. LA GRACIA DIVINA NO ES SISTEMATIZABLE — HKBH se apiada de quien quiere, no de quien «merece» según un sistema\n\n  2. EL MÉRITO NO PREDETERMINA EL DESTINO — incluso si alguien no es tzadik gamur, HKBH puede apiadarse de él. Y al revés, incluso si alguien es tzadik gamur, HKBH puede no apiadarse\n\n  3. LAS VÍAS DE HKBH PERMANECEN OPACAS — no hay sistema que las explique. Son MISTERIO\n\n  4. POR ESO MOSHÉ NO RECIBIÓ ESTA TERCERA PETICIÓN — porque LO QUE QUERÍA conocer (un sistema explicativo) NO EXISTE\n\nLA AUDACIA TEOLÓGICA DE R. MEIR:\n\nR. Meir está rechazando una de las pretensiones más profundas del judaísmo racionalista: que el orden divino es RACIONAL Y COMPRENSIBLE. Para R. Meir, hay un núcleo de IRRACIONALIDAD divina — no irracionalidad en sentido negativo, sino en el sentido de que EXCEDE la racionalidad humana. La gracia divina es libertad pura.\n\nESTO TIENE IMPLICACIONES PRÁCTICAS:\n\n  1. LA HUMILDAD ANTE EL SUFRIMIENTO ES OBLIGATORIA — no podemos «explicar» por qué alguien sufre. Si Moshé no obtuvo la explicación, nosotros tampoco la tendremos\n\n  2. LA TEFILÁ ES MÁS AUDAZ — si la gracia divina es discrecional, entonces incluso quien no «merece» puede pedir. La oración no es un cálculo de mérito\n\n  3. LA TEODICEA NO TIENE SOLUCIÓN — vivimos con el misterio. Aceptamos que el universo no se nos abre completamente\n\n  4. LA FE COEXISTE CON LA OPACIDAD — no creer ni esperar que se nos explique todo. La fe es confianza en LA BONDAD divina aun sin entender su LÓGICA\n\nLA TENSIÓN CON R. YOJANAN:\n\nLas dos posiciones son IRRECONCILIABLES en su núcleo:\n\n  · R. YOJANAN: hay sistema (gamur/eino gamur). Moshé lo conoció. La teodicea es resolvable.\n\n  · R. MEIR: no hay sistema. Moshé no lo conoció (no existe). La teodicea es irresoluble.\n\nESTA TENSIÓN ES UNA DE LAS MÁS IMPORTANTES DEL TALMUD. No es disputa técnica sobre detalles halájicos — es disputa sobre la NATURALEZA del cosmos divino.\n\nLA SUGYÁ NO ELIGE. Transmite ambas posiciones como halájicamente válidas. El lector debe vivir con la TENSIÓN. Algunos judíos serán más R. Yojanan (racionalistas, sistematizadores), otros más R. Meir (místicos, conscientes de lo opaco).\n\nLAS DOS TRADICIONES POSTERIORES:\n\n  · LA FILOSOFÍA JUDÍA MEDIEVAL (Sa\'adiá, Maimónides) tiende a R. Yojanan — busca explicaciones racionales del sufrimiento\n\n  · LA CABALÁ Y EL HASIDISMO tienden a R. Meir — aceptan la opacidad de la gracia divina, la libertad infinita de HKBH\n\nAMBAS TRADICIONES SON HEREDERAS LEGÍTIMAS de Berajot 7a. El judaísmo es rico en proporción a su capacidad de albergar a R. Yojanan y a R. Meir en el mismo corpus.'
+    },
+    'tension': {
+      titulo: 'La tensión irresuelta · el editor no decide',
+      hebreo: 'הַמַּחְלוֹקֶת לְעוֹלָם וָעֶד',
+      traduccion: 'La disputa para siempre',
+      explicacion: 'La sugyá termina con UNA DECISIÓN EDITORIAL EXTRAORDINARIA: NO DECIDE entre R. Yojanan y R. Meir. Las dos posiciones se transmiten lado a lado como halájicamente válidas. La tensión queda IRRESUELTA, deliberadamente.\n\nESTO ES NOTABLE. En muchas disputas talmúdicas, el editor decide. Cita una opinión como halajá, marca otra como inválida. Aquí no. Las dos voces siguen sonando, contradiciéndose mutuamente, sin resolución.\n\n¿POR QUÉ EL EDITOR NO DECIDE?\n\nPosibles razones:\n\n  1. LA TEODICEA NO ES TEMA HALÁJICO PRÁCTICO — no afecta a la práctica diaria. No hay nada que «hacer» con la conclusión. Por tanto no urge decidir.\n\n  2. AMBAS POSICIONES SON TEOLÓGICAMENTE LEGÍTIMAS — el editor reconoce que el judaísmo CONTIENE ambas tendencias y NO debe sacrificar una por la otra.\n\n  3. LA DISPUTA REFLEJA UNA DUALIDAD DEL ESPÍRITU JUDÍO — la mente que sistematiza Y la mente que reverencia el misterio. Las dos son válidas; ambas son judías.\n\n  4. LA EXPERIENCIA HUMANA CAMBIA — habrá momentos en la vida del individuo o de la generación en que R. Yojanan será más vivificante (cuando el orden cósmico parece racional). Habrá otros en que R. Meir será más honesto (cuando el dolor excede toda explicación).\n\nLA INVITACIÓN AL LECTOR:\n\nEl Talmud invita al estudiante a NO RESOLVER prematuramente. Vive con la tensión. Conserva las dos voces. NO te apresures a sistematizar (perdiendo a R. Meir) NI a abandonar el sistema (perdiendo a R. Yojanan).\n\nLO QUE EL JUDÍO HEREDA DE ESTA SUGYÁ:\n\n  1. LA AUDACIA NEGOCIADORA DE MOSHÉ — pide cosas grandes. La tefilá puede obtener mucho. NO te limites en la oración.\n\n  2. LA HUMILDAD EPISTEMOLÓGICA — incluso Moshé, el más grande profeta, NO obtuvo (según R. Meir) la explicación TOTAL. No esperes que tú la obtengas.\n\n  3. LA CAPACIDAD DE COEXISTIR CON LA TENSIÓN — sin resolverla, sin reducir el judaísmo a una sola tendencia. La complejidad es virtud, no defecto.\n\n  4. LA LECTURA SITUACIONAL — en algunos momentos vivirás más con R. Yojanan, en otros más con R. Meir. Es legítimo. La verdad espiritual es dinámica.\n\nLA CONEXIÓN CON LA SUGYÁ MAYOR:\n\nObserva la PROGRESIÓN del perek:\n\n  · #14 — yisurim shel ahavá: el sufrimiento del justo se explica como amor (R. Yojanan style)\n  · #14 (escenas médicas) — los sabios al sufrir dicen «ni ellos ni su recompensa» (R. Meir style)\n  · #19 — HKBH reza para que rajamim venza (R. Yojanan: el sistema favorece la misericordia)\n  · #19 (Bilam) — HKBH suspende su rutina por amor a Israel (R. Meir: la libertad divina opera al margen del sistema)\n  · #20 — las dos posiciones explícitas sobre la teodicea\n\nLA SUGYÁ ENTERA es la dialéctica entre estos dos polos. Y la conclusión es: NO HAY CONCLUSIÓN. El judaísmo es la TENSIÓN entre la racionalización (R. Yojanan) y el misterio (R. Meir).\n\nESTA TENSIÓN PERMITE LA SUPERVIVENCIA HISTÓRICA del pueblo: cuando una de las dos tendencias se vuelve insuficiente, la otra está disponible. El judío racionalista en tiempos racionales; el judío místico en tiempos oscuros. El mismo corpus alimenta ambas.\n\nLA LECCIÓN PRÁCTICA FINAL: cuando enfrentes el sufrimiento — propio o ajeno — recuerda las DOS voces. Una te dirá que hay sistema, que el dolor tiene razón. Otra te dirá que el sistema NO existe y que la gracia es libre. AMBAS son verdaderas. Vives en la coexistencia. NO escoges entre ellas — las llevas juntas como herencia mosaica.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.moshe-interactivo')
+    : document.querySelector('.moshe-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#moshe-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.moshe-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="moshe-panel-header">' +
+        '<p class="moshe-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="moshe-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="moshe-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="moshe-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.moshe-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.moshe-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="moshe-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
