@@ -606,7 +606,7 @@
       "slug": "beit-knesset",
       "orden": 18,
       "titulo": "El beit knesset como lugar privilegiado",
-      "subtitulo": "HKBH busca 10 · fijar lugar · shajen ra",
+      "subtitulo": "HKBH busca el minyan · fijar lugar · shajen ra",
       "dapim": [
         "6a",
         "6b",
@@ -615,10 +615,38 @@
         "8b"
       ],
       "grupo": "El espacio sagrado",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/beit-knesset.html",
+      "sabios": [
+        "rav",
+        "rav-yehuda",
+        "reish-lakish",
+        "r-yitzjak",
+        "rav-jisda",
+        "r-yojanan",
+        "abaye"
+      ],
+      "sabios_biblicos": [
+        "avraham"
+      ],
+      "pesukim": [
+        "bereshit-19-27",
+        "hoshea-6-3",
+        "tehilim-69-14"
+      ],
+      "conceptos": [
+        "beit-knesset",
+        "minyan",
+        "shejina",
+        "kovea-makom",
+        "shajen-ra",
+        "et-ratzon",
+        "tefila-be-tzibur"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Los diagramas #16-17 establecieron la sensibilidad del espacio\nsagrado: dirección de la cama, mazikin invisibles, la geometría\ncosmológica. Si el ESPACIO importa así de minuciosamente, ¿cuál\nes entonces EL ESPACIO POR EXCELENCIA del servicio a HKBH? La\nsugyá responde con un tema MAYOR que recorre cinco daf (6a, 6b,\n7b, 8a, 8b): el BEIT KNESSET es el lugar privilegiado donde la\nShejiná se concentra, donde la tefilá se hace eficaz, donde la\ncomunidad transforma la oración individual en evento cósmico.\n"
+      }
     },
     {
       "slug": "hkbh-reza-tefilin",
@@ -773,6 +801,30 @@
       "nombre": "Rav Najman Bar Yitzjak"
     },
     {
+      "slug": "rav",
+      "nombre": "Rav"
+    },
+    {
+      "slug": "rav-yehuda",
+      "nombre": "Rav Yehuda"
+    },
+    {
+      "slug": "reish-lakish",
+      "nombre": "Reish Lakish"
+    },
+    {
+      "slug": "r-yitzjak",
+      "nombre": "R Yitzjak"
+    },
+    {
+      "slug": "rav-jisda",
+      "nombre": "Rav Jisda"
+    },
+    {
+      "slug": "abaye",
+      "nombre": "Abaye"
+    },
+    {
       "slug": "rabban-gamliel",
       "nombre": "Rabban Gamliel"
     },
@@ -787,10 +839,6 @@
     {
       "slug": "rav-yitzjak",
       "nombre": "Rav Yitzjak"
-    },
-    {
-      "slug": "reish-lakish",
-      "nombre": "Reish Lakish"
     },
     {
       "slug": "r-levi-bar-jama",
@@ -811,10 +859,6 @@
     {
       "slug": "aba-binyamin",
       "nombre": "Aba Binyamin"
-    },
-    {
-      "slug": "abaye",
-      "nombre": "Abaye"
     },
     {
       "slug": "rav-huna",
@@ -867,10 +911,6 @@
     {
       "slug": "r-asi",
       "nombre": "R Asi"
-    },
-    {
-      "slug": "r-yitzjak",
-      "nombre": "R Yitzjak"
     },
     {
       "slug": "tanu-rabanan",
@@ -963,6 +1003,18 @@
     {
       "slug": "amos-5-2",
       "nombre": "Amos 5 2"
+    },
+    {
+      "slug": "bereshit-19-27",
+      "nombre": "Bereshit 19 27"
+    },
+    {
+      "slug": "hoshea-6-3",
+      "nombre": "Hoshea 6 3"
+    },
+    {
+      "slug": "tehilim-69-14",
+      "nombre": "Tehilim 69 14"
     },
     {
       "slug": "devarim-6-7",
@@ -1100,6 +1152,34 @@
     {
       "slug": "mafolet-pueblo",
       "nombre": "Mafolet Pueblo"
+    },
+    {
+      "slug": "beit-knesset",
+      "nombre": "Beit Knesset"
+    },
+    {
+      "slug": "minyan",
+      "nombre": "Minyan"
+    },
+    {
+      "slug": "shejina",
+      "nombre": "Shejina"
+    },
+    {
+      "slug": "kovea-makom",
+      "nombre": "Kovea Makom"
+    },
+    {
+      "slug": "shajen-ra",
+      "nombre": "Shajen Ra"
+    },
+    {
+      "slug": "et-ratzon",
+      "nombre": "Et Ratzon"
+    },
+    {
+      "slug": "tefila-be-tzibur",
+      "nombre": "Tefila Be Tzibur"
     },
     {
       "slug": "sayag",
@@ -1492,6 +1572,14 @@
       "peso": 3
     },
     {
+      "from": "mazikin-invisibles",
+      "to": "beit-knesset",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Los diagramas #16-17 establecieron la sensibilidad del espacio\nsagrado: dirección de la cama, mazikin invisibles, la geometría\ncosmológica. Si el ESPACIO importa así de minuciosamente, ¿cuál\nes entonces EL ESPACIO POR EXCELENCIA del servicio a HKBH? La\nsugyá responde con un tema MAYOR que recorre cinco daf (6a, 6b,\n7b, 8a, 8b): el BEIT KNESSET es el lugar privilegiado donde la\nShejiná se concentra, donde la tefilá se hace eficaz, donde la\ncomunidad transforma la oración individual en evento cósmico.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -1772,6 +1860,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -1820,6 +1916,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -1833,6 +1937,14 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
       "peso": 1
     },
     {
@@ -1881,6 +1993,14 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "keriat-shema-al-hamita",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
       "peso": 1
     },
     {
@@ -1940,11 +2060,35 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "aba-binyamin",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
       "peso": 1
     }
   ]

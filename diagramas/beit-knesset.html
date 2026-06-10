@@ -1,0 +1,363 @@
+<div class="beitkn-interactivo">
+<style>
+  .beitkn-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .beitkn-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .beitkn-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .beitkn-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .beitkn-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .beitkn-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .beitkn-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .beitkn-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .beitkn-diagrama svg { width: 100%; height: auto; display: block; }
+  .beitkn-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .beitkn-nodo:hover rect { stroke-width: 2 !important; }
+  .beitkn-nodo:hover circle { stroke-width: 2.5 !important; }
+  .beitkn-nodo.activa rect { stroke-width: 2.5 !important; }
+  .beitkn-nodo.activa circle { stroke-width: 3 !important; }
+  .beitkn-nodo.dim { opacity: 0.32; }
+  .beitkn-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .beitkn-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .beitkn-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .beitkn-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .beitkn-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .beitkn-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .beitkn-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="beitkn-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración · Shejiná</span>
+  <span><span class="swatch azul"></span>escala · 10·3·2·1</span>
+  <span><span class="swatch rojo"></span>shajen ra · obligación social</span>
+  <span><span class="swatch verde"></span>kovea makom · Avraham</span>
+  <span><span class="swatch sepia"></span>et ratzon · cinco capas</span>
+</div>
+
+<div class="beitkn-diagrama">
+<svg viewBox="0 0 720 1280" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 6a-8b: el beit knesset como lugar privilegiado · la escala de la Shejiná · kovea makom · et ratzon</title>
+
+<defs>
+  <marker id="flecha-bk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-bk-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- Aureola de presencia de la Shejiná -->
+  <radialGradient id="grad-shejina-bk" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#b8860b" stop-opacity="0.45"/>
+    <stop offset="100%" stop-color="#b8860b" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El beit knesset · el lugar privilegiado</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 6a · 6b · 7b · 8a · 8b — el editor regresa al tema en CINCO daf</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · 6A                                     -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · RAV YEHUDA EN NOMBRE DE RAV · 6A</text>
+
+<g class="beitkn-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="98" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אֵין תְּפִלָּתוֹ שֶׁל אָדָם נִשְׁמַעַת אֶלָּא בְּבֵית הַכְּנֶסֶת</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«La tefilá de una persona NO es escuchada excepto en el beit knesset»</text>
+  <text x="360" y="152" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b">וַאֲנִי תְפִלָּתִי לְךָ ה' עֵת רָצוֹן (תה' סט:יד)</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">«mi tefilá ante Ti, HKBH, tiempo favorable» · ¿cuándo? cuando el tzibur reza (8a)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESCALA DE LA SHEJINÁ · R. YITZJAK · 6A                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="184" x2="360" y2="202" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="214" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALA DE LA SHEJINÁ · R. YITZJAK · 6A</text>
+
+<g class="beitkn-nodo" data-id="escala-shejina">
+  <rect x="60" y="224" width="600" height="280" rx="6" fill="rgba(30,58,95,0.05)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="246" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Cuanto más se reúnen, más concentrada la presencia divina</text>
+
+  <!-- 10 -->
+  <g>
+    <circle cx="130" cy="296" r="40" fill="url(#grad-shejina-bk)"/>
+    <circle cx="130" cy="296" r="28" fill="rgba(184,134,11,0.25)" stroke="#b8860b" stroke-width="2"/>
+    <text x="130" y="302" text-anchor="middle" font-size="18" fill="#b8860b" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">10</text>
+    <text x="130" y="346" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">בְּבֵית הַכְּנֶסֶת</text>
+    <text x="130" y="360" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">minyan en shul</text>
+    <text x="130" y="372" text-anchor="middle" font-size="8" fill="#6b4423">Tehilim 82:1</text>
+  </g>
+
+  <!-- 3 -->
+  <g>
+    <circle cx="295" cy="296" r="32" fill="url(#grad-shejina-bk)"/>
+    <circle cx="295" cy="296" r="22" fill="rgba(184,134,11,0.20)" stroke="#b8860b" stroke-width="1.6"/>
+    <text x="295" y="302" text-anchor="middle" font-size="15" fill="#b8860b" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">3</text>
+    <text x="295" y="346" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">בֵּית דִּין</text>
+    <text x="295" y="360" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">tres jueces</text>
+    <text x="295" y="372" text-anchor="middle" font-size="8" fill="#6b4423">«בְּקֶרֶב אֱלֹקִים יִשְׁפֹּט»</text>
+  </g>
+
+  <!-- 2 -->
+  <g>
+    <circle cx="450" cy="296" r="24" fill="url(#grad-shejina-bk)"/>
+    <circle cx="450" cy="296" r="16" fill="rgba(184,134,11,0.16)" stroke="#b8860b" stroke-width="1.3"/>
+    <text x="450" y="302" text-anchor="middle" font-size="13" fill="#b8860b" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">2</text>
+    <text x="450" y="346" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">תּוֹרָה בִּשְׁנַיִם</text>
+    <text x="450" y="360" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">estudio entre dos</text>
+    <text x="450" y="372" text-anchor="middle" font-size="8" fill="#6b4423">Malají 3:16</text>
+  </g>
+
+  <!-- 1 -->
+  <g>
+    <circle cx="590" cy="296" r="18" fill="url(#grad-shejina-bk)"/>
+    <circle cx="590" cy="296" r="12" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.1"/>
+    <text x="590" y="302" text-anchor="middle" font-size="11" fill="#b8860b" font-weight="700" font-family="'Cormorant Garamond', serif" font-style="italic">1</text>
+    <text x="590" y="346" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">יָחִיד</text>
+    <text x="590" y="360" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">estudio individual</text>
+    <text x="590" y="372" text-anchor="middle" font-size="8" fill="#6b4423">Shemot 20:24</text>
+  </g>
+
+  <!-- Línea conectora de la escala -->
+  <line x1="160" y1="396" x2="610" y2="396" stroke="#1e3a5f" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+  <text x="100" y="400" font-size="9" fill="#1e3a5f">más Shejiná ←</text>
+  <text x="640" y="400" text-anchor="end" font-size="9" fill="#1e3a5f">→ menos concentrada</text>
+
+  <!-- Paradoja de la Shejiná esperando -->
+  <line x1="78" y1="416" x2="642" y2="416" stroke="#1e3a5f" stroke-width="0.4" opacity="0.4"/>
+  <text x="360" y="436" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La paradoja inversa · R. Yitzjak</text>
+  <text x="78" y="456" font-size="9.5" fill="#3d2f23">«Quien acostumbra venir y un día no viene — HKBH PREGUNTA POR ÉL»</text>
+  <text x="78" y="472" font-size="9.5" fill="#3d2f23">la sinagoga NO solo recibe al hombre — la Shejiná misma se preocupa por su ausencia</text>
+  <text x="78" y="490" font-size="9" fill="#6b4423" font-style="italic">la asistencia regular crea una expectativa cósmica · el rabino que falta es ECHADO DE MENOS por arriba</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL SHAJEN RA · 6B                                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="504" x2="360" y2="522" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="534" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL SHAJEN RA · LA OBLIGACIÓN SOCIAL · 6B</text>
+
+<g class="beitkn-nodo" data-id="shajen-ra">
+  <rect x="60" y="544" width="600" height="116" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="566" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">כָּל מִי שֶׁיֵּשׁ לוֹ בֵּית הַכְּנֶסֶת בְּעִירוֹ וְאֵינוֹ נִכְנָס שָׁם — נִקְרָא שָׁכֵן רַע</text>
+  <text x="360" y="586" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Todo el que tiene shul en su ciudad y no entra a rezar — es llamado שָׁכֵן רַע (mal vecino)»</text>
+  <text x="78" y="608" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">שָׁכֵן רַע</tspan> es término halájico-legal · en derecho social, el «mal vecino» es objeto de sanción</text>
+  <text x="78" y="624" font-size="9.5" fill="#3d2f23">aplicarlo al ausente de shul revela que la asistencia es DEBER SOCIAL, no opción privada</text>
+  <text x="78" y="642" font-size="9" fill="#6b4423" font-style="italic">causa exilio para sí y para sus hijos · el desinterés en la comunidad sagrada tiene consecuencias colectivas</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- KOVEA MAKOM · AVRAHAM COMO MODELO · 6B                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="660" x2="360" y2="678" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="690" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">KOVEA MAKOM · AVRAHAM COMO MODELO · REISH LAKISH · 6B</text>
+
+<g class="beitkn-nodo" data-id="kovea-makom">
+  <rect x="60" y="700" width="600" height="180" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <!-- La regla -->
+  <text x="360" y="722" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e">כָּל הַקּוֹבֵעַ מָקוֹם לִתְפִלָּתוֹ — אֱלֹקֵי אַבְרָהָם בְּעֶזְרוֹ</text>
+  <text x="360" y="742" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Todo el que fija un lugar para su tefilá — el Dios de Avraham está en su ayuda»</text>
+
+  <!-- La verseta proof -->
+  <rect x="80" y="754" width="560" height="44" rx="4" fill="rgba(30,107,90,0.04)" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="360" y="772" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר אֶל הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם</text>
+  <text x="360" y="788" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Y madrugó Avraham al LUGAR donde había estado» (Bereshit 19:27)</text>
+
+  <!-- El elogio post-mortem -->
+  <text x="78" y="812" font-size="10" fill="#2d6b4e" font-weight="600">Cuando muere quien fijó lugar — el elogio es:</text>
+  <text x="78" y="828" font-size="10" direction="ltr" fill="#3d2f23">אוֹמְרִים: «אֵי עָנָיו · אֵי חָסִיד · מִתַּלְמִידָיו שֶׁל אַבְרָהָם»</text>
+  <text x="78" y="844" font-size="9.5" fill="#3d2f23" font-style="italic">«¡qué humilde! ¡qué chasid! ¡de los discípulos de Avraham!»</text>
+  <text x="78" y="864" font-size="9" fill="#6b4423" font-style="italic">fijar lugar = identificarse con la práctica de Avraham · cumplido durante una vida entera</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ET RATZON · 8A · LA SINCRONIZACIÓN                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="880" x2="360" y2="898" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-bk-gold)"/>
+
+<text x="60" y="910" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ET RATZON · R. YOJANAN · 8A</text>
+
+<g class="beitkn-nodo" data-id="et-ratzon">
+  <rect x="60" y="920" width="600" height="108" rx="6" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="360" y="942" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">אֵימָתַי עֵת רָצוֹן? — בְּשָׁעָה שֶׁהַצִּבּוּר מִתְפַּלְלִים</text>
+  <text x="360" y="962" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¿cuándo es tiempo favorable? — cuando el tzibur reza»</text>
+  <text x="78" y="984" font-size="9.5" fill="#3d2f23">la tefilá individual ES escuchada · pero NO siempre llega al «default escuchar» de HKBH</text>
+  <text x="78" y="1000" font-size="9.5" fill="#3d2f23">cuando se SUMA al tzibur, accede automáticamente al עֵת רָצוֹן — momento de favor garantizado</text>
+  <text x="78" y="1018" font-size="9" fill="#6b4423" font-style="italic">la sinagoga MULTIPLICA la eficacia · sincronizar con el tzibur cambia la categoría halájica del rezo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- STAND CLOSE · LA GEOMETRÍA · 8A                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="1028" x2="360" y2="1044" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="1056" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">STAND CLOSE, NOT FAR · LA GEOMETRÍA INTERNA · 8A</text>
+
+<g class="beitkn-nodo" data-id="stand-close">
+  <rect x="60" y="1066" width="600" height="62" rx="5" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.2"/>
+  <text x="360" y="1088" text-anchor="middle" font-size="11" direction="rtl" fill="#3d2f23">אַל יַעֲמוֹד אָדָם אֲחוֹרֵי בֵּית הַכְּנֶסֶת וְיִתְפַּלֵּל</text>
+  <text x="360" y="1106" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Que no se pare un hombre DETRÁS de la sinagoga a rezar»</text>
+  <text x="360" y="1120" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">si hay lugar adentro · ENTRA · la proximidad al núcleo importa halájicamente</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · CINCO CAPAS EN CINCO DAF                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="1128" x2="360" y2="1146" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="1158" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · CINCO CAPAS EN CINCO DAF</text>
+
+<g class="beitkn-nodo" data-id="doctrina">
+  <rect x="60" y="1168" width="600" height="108" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1190" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El editor regresa al beit knesset en cinco daf · cada uno añade una capa</text>
+  <text x="78" y="1210" font-size="9.5" fill="#3d2f23"><tspan fill="#b8860b" font-weight="600">6a</tspan> · TEOLOGÍA — la Shejiná concentrada (10→3→2→1)</text>
+  <text x="78" y="1224" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">6b</tspan> · SOCIOLOGÍA — la asistencia como deber (shajen ra · kovea makom)</text>
+  <text x="78" y="1238" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="600">7b</tspan> · DISCIPLINA — fijar lugar individual dentro de la sinagoga</text>
+  <text x="78" y="1252" font-size="9.5" fill="#3d2f23"><tspan fill="#1e3a5f" font-weight="600">8a</tspan> · SINCRONIZACIÓN — rezar con el tzibur · et ratzon</text>
+  <text x="78" y="1266" font-size="9.5" fill="#3d2f23"><tspan fill="#6b4423" font-weight="600">8b</tspan> · GEOMETRÍA — posición dentro del espacio (cerca del núcleo)</text>
+</g>
+
+</svg>
+</div>
+
+<div class="beitkn-panel" id="beitkn-panel">
+  <p class="beitkn-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'La declaración nuclear · la tefilá se escucha en la sinagoga',
+      hebreo: 'אֵין תְּפִלָּתוֹ שֶׁל אָדָם נִשְׁמַעַת אֶלָּא בְּבֵית הַכְּנֶסֶת',
+      traduccion: '«La tefilá de una persona NO es escuchada excepto en el beit knesset»',
+      explicacion: 'Una declaración halájica de máxima ambición. Rav Yehuda en nombre de Rav establece como principio general que la tefilá del judío SOLO se escucha EN LA SINAGOGA.\n\nLa declaración es teológicamente provocadora. ¿Significa que HKBH NO oye la oración del individuo en su casa, en el campo, en su corazón privado? Claro que la oye — pero en la categoría halájica precisa, hay una distinción crucial:\n\n  · TEFILÁ INDIVIDUAL EN PRIVADO — escuchada, válida, pero NO con la garantía especial del «tiempo favorable»\n  · TEFILÁ EN BEIT KNESSET — escuchada con la PROMESA del «et ratzon» — momento de favor garantizado\n\nLa derashá del versículo Tehilim 69:14 es decisiva:\n\n  «וַאֲנִי תְפִלָּתִי לְךָ ה\' עֵת רָצוֹן»\n  «Y yo, mi tefilá ante Ti HKBH — tiempo favorable»\n\nLa estructura del versículo es extraña: ¿por qué yuxtaponer «mi tefilá» con «tiempo favorable»? La respuesta rabínica: la tefilá del hablante se encuentra con un «tiempo favorable» garantizado SOLO en ciertas condiciones — específicamente, cuando el tzibur reza.\n\nLa frase «en el beit knesset» no es simplemente geográfica. Es CATEGORIAL: marca una clase distinta de tefilá. La tefilá privada del hombre solitario es una cosa; la tefilá del hombre EN LA COMUNIDAD CONGREGADA es otra cosa. La primera depende de la disposición divina del momento; la segunda accede automáticamente al «et ratzon».\n\nEsta declaración ABRE el complejo temático del beit knesset que recorrerá cinco daf consecutivos. Es el principio fundacional sobre el que se construyen todas las elaboraciones posteriores: la escala de Shejiná, la categoría de shajen ra, la disciplina de kovea makom, la sincronización con el tzibur, la geometría interna del espacio sagrado.\n\nLa práctica halájica derivada: el judío observante NO sustituye la sinagoga por el rezo privado. Aunque rece tres veces al día, busca rezar AL MENOS las tres en la sinagoga, en minyan. Si las circunstancias lo impiden, reza solo, pero con conciencia de que ha perdido el grado de eficacia categorial.'
+    },
+    'escala-shejina': {
+      titulo: 'La escala de la Shejiná · 10·3·2·1',
+      hebreo: 'דַּרְגוֹת הַשְּׁכִינָה לְפִי הַמִּסְפָּר',
+      traduccion: 'Grados de la Shejiná según el número',
+      explicacion: 'R. Yitzjak presenta una estructura cosmológica de máxima elegancia: la presencia de la Shejiná está siempre disponible, pero su CONCENTRACIÓN varía según el número de personas reunidas en servicio sagrado.\n\nLA ESCALA:\n\n  · 10 PERSONAS EN SINAGOGA — concentración MÁXIMA. La Shejiná está «entre» (קֶרֶב) el grupo de manera especial. Versículo: Tehilim 82:1 «אֱלֹקִים נִצָּב בַּעֲדַת אֵל» («Elokim está erguido en la congregación de El»). La congregación (עֲדָה) requiere mínimo 10.\n\n  · 3 PERSONAS EN BEIT DIN — concentración fuerte. Cuando tres jueces se reúnen para sentenciar, la Shejiná está «entre los jueces». Versículo: «בְּקֶרֶב אֱלֹקִים יִשְׁפֹּט» (mismo Tehilim 82:1). La traducción rabínica de «אֱלֹקִים» como «jueces» (uno de sus sentidos legales) hace que el versículo prometa la presencia divina en el tribunal.\n\n  · 2 PERSONAS EN ESTUDIO — concentración significativa. Cuando dos estudian Torá juntos, la Shejiná está con ellos. Versículo: Malají 3:16 «אָז נִדְבְּרוּ יִרְאֵי ה\' אִישׁ אֶל רֵעֵהוּ» («entonces hablaron los temerosos de HKBH cada uno con su prójimo»). El estudio en jevrutá (parejas) ya invoca la Presencia.\n\n  · 1 PERSONA EN ESTUDIO INDIVIDUAL — concentración minima pero presente. Incluso el solitario que estudia recibe la visita de la Shejiná. Versículo: Shemot 20:24 «בְּכָל הַמָּקוֹם אֲשֶׁר אַזְכִּיר אֶת שְׁמִי אָבֹא אֵלֶיךָ» («en todo lugar donde mencione Mi Nombre vendré a ti»). Incluso uno solo, mencionando el Nombre, atrae la presencia.\n\nLA LÓGICA DE LA ESCALA:\n\n  · La Shejiná NUNCA está ausente del servicio sagrado — incluso el más solitario la atrae\n  · Pero la CALIDAD de la presencia varía según la reunión\n  · A más gente reunida, más densa la presencia\n  · Y existe un UMBRAL CRÍTICO en 10 — la sinagoga — donde la presencia alcanza su forma plena\n\nLA VISUALIZACIÓN DEL DIAGRAMA: los cuatro círculos descendentes en tamaño, cada uno rodeado por un halo radial que se atenúa, representan la escala. El círculo del 10 es el más grande y con el halo más intenso; el del 1, el más pequeño con halo tenue. La estructura es proporcional.\n\nIMPLICACIÓN HALÁJICA: esta escala JUSTIFICA la insistencia rabínica en la asistencia al minyan. NO es opcional. NO es para los devotos especiales. Es la forma EFICIENTE de acceder a la Shejiná. Quien reza solo está accediendo a la presencia divina con eficiencia mínima — un patrón legalmente subóptimo cuando hay alternativa.\n\nLA PARADOJA INVERSA (debajo de la escala en el diagrama): R. Yitzjak añade una vuelta sorprendente. La Shejiná NO solo recibe a los que vienen — RECLAMA a los que faltan. «Quien acostumbra venir y un día no viene — HKBH pregunta por él». La Shejiná tiene EXPECTATIVAS sobre el asistente regular. Es una relación bilateral: el hombre necesita la sinagoga, y la sinagoga (la Shejiná en ella) necesita al hombre.\n\nEsto reconfigura todo el sentido del minyan: NO eres una persona que va a un lugar a ver a HKBH. Eres parte de una congregación QUE HKBH ESPERA. Tu ausencia altera la expectativa cósmica.'
+    },
+    'shajen-ra': {
+      titulo: 'El shajen ra · la obligación social',
+      hebreo: 'כָּל מִי שֶׁיֵּשׁ לוֹ בֵּית הַכְּנֶסֶת בְּעִירוֹ וְאֵינוֹ נִכְנָס שָׁם — נִקְרָא שָׁכֵן רַע',
+      traduccion: '«Todo el que tiene una sinagoga en su ciudad y no entra a rezar — es llamado mal vecino»',
+      explicacion: 'La sugyá da una vuelta sociológica decisiva. La asistencia al beit knesset NO es solo deber religioso individual — es DEBER SOCIAL hacia la comunidad. El que falta es un «mal vecino» (שָׁכֵן רַע).\n\n¿Qué significa שָׁכֵן רַע?\n\nEn la halajá general, un «mal vecino» es un término legal con consecuencias concretas:\n\n  · Es objeto de SANCIÓN COMUNITARIA — los demás vecinos pueden quejarse formalmente, presionar, ostracizarlo\n  · Su presencia en el vecindario REDUCE el valor de las propiedades adyacentes\n  · Puede ser EXPULSADO de la sinagoga (paradoja) o de cargos comunitarios\n  · Sus hijos pueden ser excluidos de matrimonios deseables\n\nAplicar este término al ausente de la sinagoga es legalmente DURO. Equipara la ausencia a una falta SOCIAL ACTIVA, no a una omisión privada.\n\nLA LÓGICA:\n\n  · La sinagoga es ESPACIO COMUNITARIO\n  · El minyan requiere DIEZ — sin la décima persona, el minyan no se forma\n  · El que tiene shul cerca y no asiste está SUSTRAYÉNDOSE del minyan ajeno\n  · Su ausencia daña la posibilidad de la tefilá comunitaria para los demás\n  · Por tanto: ES un mal vecino, no metafóricamente sino LEGALMENTE\n\nLAS CONSECUENCIAS NARRATIVAS:\n\nLa guemará continúa con la advertencia de que este shajen ra «causa exilio para sí y para sus hijos». NO es solo daño moral abstracto — es CAUSA DE EXILIO. La conexión es teológica: la presencia comunitaria sostiene la tierra (cf. la lectura clásica de la pérdida del Templo como consecuencia de la fragmentación comunitaria). Quien rompe la presencia comunitaria está erosionando los fundamentos de la habitabilidad colectiva.\n\nESTA ENSEÑANZA AMPLÍA LA TEOLOGÍA DEL DIAGRAMA #4 (las tres razones de la ruina):\n  · No entrar en ruina por chashad, mafolet, mazikin\n  · Pero TAMPOCO ABANDONAR el espacio sagrado opuesto a la ruina — la sinagoga\n  · La ruina es el espacio del peligro; la sinagoga el espacio de la bendición\n  · El judío debe NAVEGAR estos dos polos — evitar uno, frecuentar el otro\n\nLA PRÁCTICA HALÁJICA CONTEMPORÁNEA:\n\nLa categoría de shajen ra se ha mantenido en los códigos halájicos. El Shulján Aruj OC 90:11 codifica: «todo el que tiene una sinagoga en su ciudad y no entra a rezar es llamado mal vecino». Las comunidades tradicionales aplican presión social sobre los ausentes recurrentes — invitaciones, recordatorios, llamadas de la directiva, visitas pastorales.\n\nLA TENSIÓN MODERNA:\n\nEn la era contemporánea, donde la individualización del judaísmo es la norma, esta sugyá presenta un desafío. La asistencia regular a la sinagoga NO es asunto privado del individuo — es asunto comunitario, con consecuencias sociales. Quien elige rezar privadamente cuando hay shul cercana ESTÁ TOMANDO UNA DECISIÓN HALÁJICAMENTE PROBLEMÁTICA, no neutral.\n\nLa lección general es contracultural en el mejor sentido: el judaísmo NO es una espiritualidad de aeropuerto (individual, móvil, sin lazos). Es una práctica de PERTENENCIA ANCLADA en lugar y comunidad. El que se desancla — incluso por buenas razones — sufre y hace sufrir la consecuencia halájica.'
+    },
+    'kovea-makom': {
+      titulo: 'Kovea makom · Avraham como modelo',
+      hebreo: 'כָּל הַקּוֹבֵעַ מָקוֹם לִתְפִלָּתוֹ — אֱלֹקֵי אַבְרָהָם בְּעֶזְרוֹ',
+      traduccion: '«Todo el que fija lugar para su tefilá — el Dios de Avraham está en su ayuda»',
+      explicacion: 'Reish Lakish establece una práctica halájica de profundidad insospechada: dentro de la sinagoga, el judío observante debe FIJAR UN LUGAR específico para rezar.\n\nEl concepto de «קְבִיעַת מָקוֹם» (fijar lugar) significa que el orador habitualmente reza EN EL MISMO ASIENTO de la sinagoga. NO un asiento cualquiera cada vez — UNO específico, identificado, suyo.\n\n¿POR QUÉ MAIMPORTA?\n\n  1. CONCENTRACIÓN — el lugar familiar reduce la distracción. El orador entra sabiendo dónde irá; no busca asiento, no socializa con vecinos nuevos cada día. La tefilá comienza con la atención YA preparada.\n\n  2. CONSISTENCIA ESPIRITUAL — el lugar acumula la energía de las tefilot pasadas. Cada oración deja una huella espiritual en el espacio. El orador que regresa al mismo lugar conecta con su propia historia espiritual.\n\n  3. SEGUIMIENTO DEL MODELO DE AVRAHAM — el versículo de Bereshit 19:27 establece el precedente. Avraham, después de la destrucción de Sodoma, madruga y va específicamente «al lugar donde había estado» (אֶל הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם). NO va a UN lugar — va AL lugar. El definido «ha-makom» es decisivo.\n\nLA DERASHÁ DEL VERSÍCULO:\n\nReish Lakish lee la palabra «עָמַד» (estuvo de pie) como REZÓ. La derashá tiene apoyo: en el lenguaje rabínico, «estar de pie ante HKBH» es expresión técnica para rezar (porque la amidá se reza de pie). Por tanto, Avraham regresa al lugar donde rezó antes.\n\nLa práctica de Avraham — kovea makom — se convierte en NORMA halájica. Quien la sigue se identifica con Avraham; cuando muere, se le elogia como «discípulo de Avraham».\n\nEL ELOGIO POST-MORTEM:\n\n«אֵי עָנָיו · אֵי חָסִיד · מִתַּלְמִידָיו שֶׁל אַבְרָהָם»\n«¡qué humilde! ¡qué chasid! ¡de los discípulos de Avraham!»\n\nLa secuencia es interesante:\n  · עָנָיו (humilde) — quien fija lugar NO busca el sitio prominente, acepta el lugar que toca\n  · חָסִיד (chasid) — la consistencia revela amor desinteresado al servicio\n  · «מִתַּלְמִידָיו שֶׁל אַבְרָהָם» — la pertenencia a la línea espiritual fundadora\n\nLA HUMILDAD DEL KOVEA MAKOM:\n\n¿Por qué la práctica se asocia con humildad? Porque quien fija lugar:\n  · NO compite por el asiento prominente\n  · NO se mueve buscando el «mejor» sitio\n  · Acepta su lugar y lo dignifica con presencia constante\n  · Se vuelve PARTE del mobiliario sagrado, no protagonista buscando visibilidad\n\nLa práctica común en sinagogas tradicionales: cada miembro tiene «su» lugar — un asiento específico que la comunidad respeta. Visitantes lo reconocen y NO lo ocupan si conocen al titular. La identificación entre persona y lugar se vuelve tan fuerte que la sinagoga después de la muerte del titular puede dejar el asiento VACÍO durante un período de duelo — el lugar también «sufre» la pérdida.\n\nESTA PRÁCTICA ENRIQUECE EL ESPACIO SAGRADO:\n\n  · La sinagoga deja de ser espacio genérico (cualquiera en cualquier lugar)\n  · Se convierte en MAPA DE RELACIONES — cada lugar pertenece a alguien\n  · Las relaciones humanas se entrelazan con la geometría sagrada\n  · La comunidad NO es solo conjunto de individuos — es REDISTRIBUCIÓN ESPACIAL específica\n\nLA TENSIÓN CON LA MODERNIDAD:\n\nEn sinagogas modernas no-ortodoxas, la práctica de kovea makom a veces se ha perdido. Los asientos son intercambiables. Cada visitante se sienta donde quiere. Esto, desde la perspectiva de Reish Lakish, es una PÉRDIDA halájica — el judaísmo se vuelve aeropuerto, no hogar.\n\nLa recuperación de kovea makom es uno de los proyectos de comunidades que buscan reanudar la riqueza halájica clásica. La sinagoga vuelve a ser mapa de relaciones, no salón intercambiable.'
+    },
+    'et-ratzon': {
+      titulo: 'El et ratzon · sincronización con el tzibur',
+      hebreo: 'אֵימָתַי עֵת רָצוֹן? — בְּשָׁעָה שֶׁהַצִּבּוּר מִתְפַּלְלִים',
+      traduccion: '«¿Cuándo es tiempo favorable? — Cuando el tzibur reza»',
+      explicacion: 'R. Yojanan responde a la pregunta hermenéutica clave que había quedado abierta desde 6a: ¿qué significa «עֵת רָצוֹן» (tiempo favorable) en Tehilim 69:14? La respuesta es PRECISA: el tiempo favorable es CUANDO EL TZIBUR REZA.\n\nLa derashá tiene implicaciones halájicas masivas:\n\n  · Cualquier momento en que la congregación está rezando es ipso facto «et ratzon»\n  · La tefilá del individuo que SE SUMA a la tefilá pública entra automáticamente en categoría de tefilá-en-et-ratzon\n  · La tefilá del individuo que reza SOLO, en otro momento, NO accede a esta garantía\n\nLA CATEGORÍA DEL «ET RATZON»:\n\nEs una categoría halájica con peso. Cuando HKBH está en «et ratzon»:\n  · ESCUCHA por defecto — no hay que ganarse la atención\n  · Las tefilot tienen MÁS PESO en el cómputo divino\n  · Hay PROTECCIÓN especial al orador y a sus seres queridos\n  · Hay OPORTUNIDAD para peticiones que en otros momentos serían denegadas\n\nDE AQUÍ DERIVA LA INSISTENCIA HALÁJICA:\n\n  1. REZAR CON EL TZIBUR — siempre que sea posible, sincronizar la propia tefilá con el horario de la sinagoga\n\n  2. LLEGAR A TIEMPO — empezar la amidá AL MISMO TIEMPO que el resto del minyan, para que la propia tefilá sea coetánea con la pública\n\n  3. NO REZAR DEMASIADO TEMPRANO ni demasiado tarde — esto saca al orador del «et ratzon» del tzibur, aunque esté en la misma sinagoga\n\nLA MULTIPLICACIÓN DE EFICACIA:\n\nLa metáfora útil: la tefilá privada es como una carta enviada por correo regular — llegará, será leída, pero con tiempo y prioridad estándar. La tefilá en et ratzon es como una carta enviada en el «horario VIP» — llega cuando el destinatario está disponible y atento, garantizando lectura prioritaria.\n\nLA TENSIÓN PSICOLÓGICA:\n\nMuchos creyentes prefieren rezar SOLOS — sin distracciones, en su propio ritmo, con mayor concentración interior. Esta preferencia es comprensible, pero la halajá la SUBORDINA al beneficio del et ratzon. Mejor una tefilá menos concentrada en sinagoga que una más concentrada en privado — porque la primera accede a la garantía del et ratzon que la segunda no tiene.\n\nESTO REQUIERE UNA INVERSIÓN ESPIRITUAL: el rabino enseña que el VALOR DE LA TEFILÁ NO ES SOLO SU CALIDAD INTERIOR. Es también su CATEGORÍA HALÁJICA. Las dos importan. La halajá pide cultivar ambas — concentración Y sincronización pública.\n\nLA PRÁCTICA DE LOS GRANDES:\n\nLos amoraim y rishonim documentan rezar siempre con el tzibur, incluso a costos personales altos. R. Ami y R. Asi (mencionados en #10) tenían 70 esteras en la academia pero salían a rezar en la sinagoga — precisamente para acceder al et ratzon. La grandeza halájica reside en este ajuste de la práctica privada a la disciplina pública.\n\nLA CONEXIÓN CON DIAGRAMA #10 (SEMIJAT GEULÁ LE-TEFILÁ):\n\nAhora vemos por qué R. Yojanan en #10 establece que la semijá es marca del ben olam ha-ba específicamente EN ARVIT. La semijá es una TÉCNICA INDIVIDUAL — el judío hace la juxtaposición personalmente. Pero opera DENTRO del contexto del tzibur de arvit. La técnica individual se PRACTICA en el marco comunitario. Ambos diagramas se complementan: #10 enseña la técnica interna; #18 enseña el contexto externo. Juntos, definen la tefilá ideal.'
+    },
+    'stand-close': {
+      titulo: 'Stand close, not far · la geometría interna',
+      hebreo: 'אַל יַעֲמוֹד אָדָם אֲחוֹרֵי בֵּית הַכְּנֶסֶת וְיִתְפַּלֵּל',
+      traduccion: '«Que no se pare un hombre detrás de la sinagoga a rezar»',
+      explicacion: 'Una halajá específica sobre la POSICIÓN dentro/fuera del espacio sagrado. Si la sinagoga está llena o si uno llega tarde, hay tentación de rezar AFUERA, junto a la pared exterior del edificio. La halajá PROHÍBE esto.\n\n¿POR QUÉ ESTÁ PROHIBIDO?\n\nLas razones halájicas son varias:\n\n  1. NO HAY MINYAN AFUERA — el minyan se forma DENTRO. Quien está afuera no es contado para el minyan, aunque oiga la tefilá adentro. Está fuera de la categoría de tefilá-be-tzibur.\n\n  2. EL ET RATZON OPERA EN EL ESPACIO INTERIOR — la Shejiná está adentro, donde están los diez. El que está afuera está accediendo a un et ratzon DERIVADO, no primario.\n\n  3. LA APARIENCIA DE DESPRECIO — quedarse afuera puede leerse como rechazo del espacio comunitario, como preferir la separación. Esto contradice toda la doctrina del beit knesset.\n\n  4. LA PARED ENTRE ÉL Y EL ARK — la cocha de Torá (donde están los rollos) está adentro. Rezar afuera con la pared interpuesta crea una BARRERA física entre el orador y el ark. La tefilá pierde su dirección focal.\n\nLA SOLUCIÓN HALÁJICA:\n\nSi la sinagoga está llena:\n  · ENTRA. Hazte espacio incluso en condiciones apretadas.\n  · Si literalmente no cabes, busca otro minyan.\n  · Como último recurso, reza solo en casa — pero NO afuera de la sinagoga.\n\nQuedarse afuera es la PEOR opción. Combina la pérdida del minyan (no estás adentro) con la apariencia de exclusión (estás CASI dentro pero no del todo).\n\nLA EXCEPCIÓN:\n\nLa halajá codificada permite UNA forma de rezar «cerca» — si uno está en el patio exterior pero FRENTE a la entrada y NADIE le bloquea, puede estar tecnológicamente «conectado» al minyan adentro. Pero esto es excepción técnica, no práctica recomendada.\n\nLA GEOMETRÍA TOTAL DEL BEIT KNESSET:\n\nEsta enseñanza completa la geometría sagrada del beit knesset:\n  · DENTRO del edificio = territorio sagrado primario\n  · MUY CERCA pero afuera = territorio degradado (mejor evitarlo)\n  · LEJOS = territorio neutral (rezar en casa, en privado)\n\nCuriosamente, el LEJOS es MEJOR que el CERCA-PERO-AFUERA. La distancia honesta es preferible a la proximidad ambigua. El rabinismo prefiere las distinciones claras a las posiciones mixtas.\n\nLECCIÓN GENERAL:\n\nEn la vida espiritual, el COMPROMISO PLENO es preferible a la presencia parcial. Quedarse afuera de la sinagoga es la imagen de la VIDA RELIGIOSA TIBIA — no del todo afuera (porque está cerca, en el patio, escuchando), no del todo adentro (porque no se compromete a entrar). Esta tibieza es halájicamente DEFICIENTE.\n\nMejor rezar privadamente en casa con plena intención, mejor rezar adentro con minyan completo. Pero quedarse en la frontera — esa es la posición que la halajá específicamente desalienta.\n\nLa lección moderna es relevante: las prácticas religiosas «light» — asistir solo a parte del servicio, llegar tarde, salir temprano, quedarse al fondo sin participar — son halájicamente análogas al «pararse detrás de la sinagoga». Mejor el compromiso claro o la abstención clara que la presencia ambigua. La halajá pide claridad de posición.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · cinco capas en cinco daf',
+      hebreo: 'חֲמֵשׁ שִׁכְבוֹת בַּהֲלָכַת בֵּית הַכְּנֶסֶת',
+      traduccion: 'Cinco capas en la halajá de la sinagoga',
+      explicacion: 'El editor del Talmud regresa al tema del beit knesset en CINCO daf consecutivos: 6a, 6b, 7b, 8a, 8b. Esta recurrencia NO es repetición — es DESPLIEGUE PROGRESIVO. Cada daf añade una capa a la doctrina.\n\nLAS CINCO CAPAS:\n\nCAPA 1 · TEOLOGÍA (6a)\n  · La Shejiná está en la sinagoga\n  · La escala de presencia (10·3·2·1)\n  · El versículo proof: Tehilim 82:1\n  · La paradoja: la Shejiná pregunta por el ausente\n\nLa primera capa establece QUE LA SHEJINÁ ESTÁ. Sin esta base teológica, las capas siguientes no tendrían fundamento.\n\nCAPA 2 · SOCIOLOGÍA (6b)\n  · La asistencia como deber comunitario\n  · La categoría de shajen ra\n  · Avraham como modelo de kovea makom\n  · El elogio post-mortem\n\nLa segunda capa CONVIERTE la teología en deber social. La presencia de la Shejiná NO es solo metafísica — implica obligaciones COMUNITARIAS.\n\nCAPA 3 · DISCIPLINA (7b)\n  · El lugar fijo individual\n  · Rav Jisda y la práctica de fijar asiento\n  · La consistencia espiritual\n\nLa tercera capa AFINA la práctica. No solo asistir — asistir en lugar específico, con disciplina personal.\n\nCAPA 4 · SINCRONIZACIÓN (8a)\n  · El et ratzon del tzibur\n  · R. Yojanan y la derashá de Tehilim 69:14\n  · La multiplicación de eficacia\n  · Llegar a tiempo, rezar al unísono\n\nLa cuarta capa AÑADE LA DIMENSIÓN TEMPORAL. No solo dónde, sino cuándo. Sincronización con la tefilá pública.\n\nCAPA 5 · GEOMETRÍA (8b)\n  · La posición dentro del espacio sagrado\n  · No quedarse afuera\n  · Cerca del núcleo\n  · La halajá del compromiso pleno\n\nLa quinta capa REGULA LA POSICIÓN MICRO. Dentro del beit knesset, en lugar fijo, con sincronización del tzibur, AHORA además: cerca del núcleo.\n\nLAS CAPAS FORMAN UNA SECUENCIA PEDAGÓGICA:\n\n  · Capa 1 — POR QUÉ asistir (la Shejiná está)\n  · Capa 2 — QUÉ ocurre si no asistes (eres shajen ra)\n  · Capa 3 — DÓNDE específicamente (lugar fijo)\n  · Capa 4 — CUÁNDO específicamente (con el tzibur)\n  · Capa 5 — CÓMO específicamente (adentro, cerca, comprometido)\n\nEs la HALAJÁ COMPLETA de la tefilá pública desplegada en cinco daf. Si solo se tuviera 6a, la doctrina sería abstracta. Si solo 6b, sería sociológica sin profundidad. La integración de las cinco capas produce la práctica completa.\n\nEL EDITOR REGRESA AL TEMA PORQUE LA HALAJÁ DE LA TEFILÁ ES CENTRAL:\n\nBerajot es el tractado de las bendiciones y oraciones. El beit knesset es el contexto físico-social de la oración. NO es posible exponer la halajá de la tefilá sin establecer la halajá del lugar donde se reza. Y esa halajá del lugar es MULTIDIMENSIONAL — requiere capa tras capa.\n\nLA LECCIÓN METODOLÓGICA:\n\nCualquier tema central del judaísmo se DESPLIEGA en muchas dimensiones: teológica, social, disciplinar, temporal, espacial. Para entenderlo bien, hay que ver las capas en SECUENCIA, no en una sola exposición. El Talmud enseña así — capa por capa, regresando al tema, refinando, complicando, sintetizando.\n\nLa práctica halájica derivada para el judío moderno: la sinagoga NO es un lugar de visita ocasional ni de obligación abstracta. Es el TEATRO de la vida espiritual cotidiana, con su propia geometría, su propia temporalidad, su propia jerarquía de posiciones. Aprender a habitarla requiere la sensibilidad que estas cinco capas cultivan.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.beitkn-interactivo')
+    : document.querySelector('.beitkn-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#beitkn-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.beitkn-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="beitkn-panel-header">' +
+        '<p class="beitkn-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="beitkn-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="beitkn-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="beitkn-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.beitkn-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.beitkn-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="beitkn-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
