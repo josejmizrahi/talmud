@@ -1,0 +1,403 @@
+<div class="pesaj-interactivo">
+<style>
+  .pesaj-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .pesaj-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .pesaj-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .pesaj-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .pesaj-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .pesaj-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .pesaj-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .pesaj-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .pesaj-diagrama svg { width: 100%; height: auto; display: block; }
+  .pesaj-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .pesaj-nodo:hover rect { stroke-width: 2 !important; }
+  .pesaj-nodo:hover circle { stroke-width: 2.5 !important; }
+  .pesaj-nodo.activa rect { stroke-width: 2.5 !important; }
+  .pesaj-nodo.activa circle { stroke-width: 3 !important; }
+  .pesaj-nodo.dim { opacity: 0.32; }
+  .pesaj-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .pesaj-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .pesaj-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .pesaj-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .pesaj-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .pesaj-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .pesaj-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="pesaj-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>versículo · pregunta</span>
+  <span><span class="swatch verde"></span>R. Elazar ben Azaria · chatzot</span>
+  <span><span class="swatch rojo"></span>R. Akiva · amud hashachar</span>
+  <span><span class="swatch azul"></span>cierre estructural del perek</span>
+  <span><span class="swatch sepia"></span>doctrina meta · perek completo</span>
+</div>
+
+<div class="pesaj-diagrama">
+<svg viewBox="0 0 720 1380" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 9a: R. Elazar ben Azaria vs R. Akiva sobre el zman del korban pesaj · el cierre del perek</title>
+
+<defs>
+  <marker id="flecha-pe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-pe-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Pesaj y el zman shema · el cierre del perek</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 9a · R. Elazar ben Azaria vs R. Akiva · ¿chatzot o amud hashachar?</text>
+
+<!-- ============================================================ -->
+<!-- EL VERSÍCULO BASE                                            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VERSÍCULO BASE · SHEMOT 12:8</text>
+
+<g class="pesaj-nodo" data-id="verso-base">
+  <rect x="60" y="86" width="600" height="106" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה · צְלִי־אֵשׁ</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Comerán la carne EN ESTA NOCHE · asada al fuego» (Shemot 12:8)</text>
+
+  <line x1="80" y1="146" x2="640" y2="146" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="166" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La pregunta: ¿hasta CUÁNDO dentro de la noche?</text>
+  <text x="360" y="184" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la frase clave «בַּלַּיְלָה הַזֶּה» dispara la disputa de los tanaítas</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DIVISIÓN EN DOS POSICIONES                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="192" x2="360" y2="210" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="210" x2="540" y2="210" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="210" x2="180" y2="228" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-pe)"/>
+<line x1="540" y1="210" x2="540" y2="228" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-pe)"/>
+
+<text x="180" y="224" text-anchor="middle" font-size="9" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1">R. ELAZAR BEN AZARIA</text>
+<text x="540" y="224" text-anchor="middle" font-size="9" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1">R. AKIVA</text>
+
+<!-- ============================================================ -->
+<!-- COLUMNA IZQUIERDA · R. ELAZAR BEN AZARIA · CHATZOT          -->
+<!-- ============================================================ -->
+<g class="pesaj-nodo" data-id="reba-chatzot">
+  <rect x="50" y="238" width="260" height="296" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <text x="180" y="260" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Hasta CHATZOT (medianoche)</text>
+  <text x="180" y="278" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">עַד חֲצוֹת</text>
+
+  <line x1="60" y1="288" x2="300" y2="288" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="60" y="306" font-size="10" fill="#2d6b4e" font-weight="600">El argumento · GEZERA SHAVÁ</text>
+
+  <text x="60" y="324" font-size="9" fill="#3d2f23">Verso 1 (Shemot 12:8):</text>
+  <text x="180" y="340" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">בַּלַּיְלָה הַזֶּה</text>
+  <text x="60" y="354" font-size="8.5" fill="#3d2f23" font-style="italic">(sobre comer el korban)</text>
+
+  <text x="60" y="372" font-size="9" fill="#3d2f23">Verso 2 (Shemot 12:12):</text>
+  <text x="180" y="388" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">בַּלַּיְלָה הַזֶּה</text>
+  <text x="60" y="402" font-size="8.5" fill="#3d2f23" font-style="italic">(sobre makat bechorot)</text>
+
+  <text x="60" y="420" font-size="9" fill="#3d2f23">¿Cuándo fue makat bechorot?</text>
+  <text x="60" y="436" font-size="9" direction="ltr" fill="#3d2f23">Shemot 12:29:</text>
+  <text x="180" y="452" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">וַיְהִי בַּחֲצִי הַלַּיְלָה</text>
+  <text x="60" y="466" font-size="8.5" fill="#3d2f23" font-style="italic">«fue a la MITAD de la noche»</text>
+
+  <line x1="60" y1="478" x2="300" y2="478" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="60" y="496" font-size="9" fill="#2d6b4e" font-weight="600">∴ por gezera shavá:</text>
+  <text x="180" y="514" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="700">comer el pesaj = HASTA CHATZOT</text>
+  <text x="180" y="528" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">misma expresión → mismo límite</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- COLUMNA DERECHA · R. AKIVA · AMUD HASHACHAR                 -->
+<!-- ============================================================ -->
+<g class="pesaj-nodo" data-id="akiva-amud">
+  <rect x="410" y="238" width="260" height="296" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+
+  <text x="540" y="260" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Hasta AMUD HASHACHAR</text>
+  <text x="540" y="278" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">עַד עַמּוּד הַשַּׁחַר</text>
+
+  <line x1="420" y1="288" x2="660" y2="288" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="420" y="306" font-size="10" fill="#8b1a1a" font-weight="600">El contraargumento · CHIPAZON</text>
+
+  <text x="420" y="324" font-size="9" fill="#3d2f23">Verso clave (Shemot 12:11):</text>
+  <text x="540" y="340" text-anchor="middle" font-size="9.5" direction="rtl" fill="#8b1a1a">וַאֲכַלְתֶּם אוֹתוֹ בְּחִפָּזוֹן</text>
+  <text x="420" y="354" font-size="8.5" fill="#3d2f23" font-style="italic">«lo comerán con PRISA»</text>
+
+  <text x="420" y="376" font-size="9" fill="#3d2f23">¿Cuándo es la «hora de prisa»?</text>
+  <text x="420" y="390" font-size="9" fill="#3d2f23">cuando Israel sale de Egipto</text>
+
+  <text x="420" y="412" font-size="9" fill="#3d2f23">¿Cuándo salieron de Egipto?</text>
+  <text x="540" y="428" text-anchor="middle" font-size="9.5" direction="rtl" fill="#8b1a1a">בַּבֹּקֶר · בַּשַּׁחַר</text>
+  <text x="420" y="442" font-size="8.5" fill="#3d2f23" font-style="italic">«en la mañana · al amanecer»</text>
+
+  <text x="420" y="462" font-size="9" fill="#3d2f23">la hora de la prisa termina</text>
+  <text x="420" y="476" font-size="9" fill="#3d2f23">con el amud hashachar</text>
+
+  <line x1="420" y1="488" x2="660" y2="488" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="420" y="506" font-size="9" fill="#8b1a1a" font-weight="600">∴ desde el verso bechipazon:</text>
+  <text x="540" y="524" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">comer el pesaj = HASTA AH</text>
+  <text x="540" y="538" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">se come mientras hay razón de prisa</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESTRUCTURA UNIVERSAL · PARALELO CON EL PEREK             -->
+<!-- ============================================================ -->
+<line x1="180" y1="534" x2="180" y2="552" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-pe)"/>
+<line x1="540" y1="534" x2="540" y2="552" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-pe)"/>
+
+<text x="60" y="564" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESTRUCTURA UNIVERSAL · EL MISMO DEBATE A LO LARGO DEL PEREK</text>
+
+<g class="pesaj-nodo" data-id="paralelo-perek">
+  <rect x="60" y="574" width="600" height="244" rx="6" fill="rgba(30,58,95,0.05)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="360" y="596" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El mismo debate halájico recorre todo el perek</text>
+
+  <!-- Tabla del perek -->
+  <text x="120" y="620" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">Sugyá</text>
+  <text x="360" y="620" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">Disputa</text>
+  <text x="600" y="620" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">Posiciones</text>
+  <line x1="78" y1="628" x2="642" y2="628" stroke="#1e3a5f" stroke-width="0.5"/>
+
+  <!-- Fila 1 -->
+  <text x="120" y="646" text-anchor="middle" font-size="9" fill="#3d2f23">Mishná #1</text>
+  <text x="360" y="646" text-anchor="middle" font-size="9" fill="#3d2f23">zman shema arvit</text>
+  <text x="600" y="646" text-anchor="middle" font-size="9" fill="#3d2f23">chajamim: chatzot · RG: AH</text>
+
+  <!-- Fila 2 -->
+  <text x="120" y="664" text-anchor="middle" font-size="9" fill="#3d2f23">Sugyá #9</text>
+  <text x="360" y="664" text-anchor="middle" font-size="9" fill="#3d2f23">cerca y trabajador</text>
+  <text x="600" y="664" text-anchor="middle" font-size="9" fill="#3d2f23">cerca chatzot / Torah AH</text>
+
+  <!-- Fila 3 -->
+  <text x="120" y="682" text-anchor="middle" font-size="9" fill="#3d2f23">Sugyá #24</text>
+  <text x="360" y="682" text-anchor="middle" font-size="9" fill="#3d2f23">shema dos veces (RSBY)</text>
+  <text x="600" y="682" text-anchor="middle" font-size="9" fill="#3d2f23">AH como frontera flexible</text>
+
+  <!-- Fila 4 -->
+  <text x="120" y="700" text-anchor="middle" font-size="9" fill="#3d2f23">Sugyá #25</text>
+  <text x="360" y="700" text-anchor="middle" font-size="9" fill="#3d2f23">korban pesaj (esta sugyá)</text>
+  <text x="600" y="700" text-anchor="middle" font-size="9" fill="#3d2f23">REbA: chatzot · RA: AH</text>
+
+  <line x1="78" y1="712" x2="642" y2="712" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="734" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El perek tiene UNIDAD TEMÁTICA</text>
+  <text x="78" y="754" font-size="9.5" fill="#3d2f23">· la misma pregunta estructural se aplica a múltiples obligaciones nocturnas</text>
+  <text x="78" y="770" font-size="9.5" fill="#3d2f23">· shema arvit · ajilat kodashim · hektér chalavim · korban pesaj</text>
+  <text x="78" y="786" font-size="9.5" fill="#3d2f23">· la cerca de chatzot opera como sayag rabínico común a TODOS</text>
+  <text x="78" y="804" font-size="9" fill="#6b4423" font-style="italic">el editor cierra el perek mostrando la UNIDAD del problema halájico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA HALAJÁ CODIFICADA                                         -->
+<!-- ============================================================ -->
+<line x1="360" y1="818" x2="360" y2="836" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-pe)"/>
+
+<text x="60" y="848" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA HALAJÁ CODIFICADA · SE SIGUE A R. ELAZAR BEN AZARIA</text>
+
+<g class="pesaj-nodo" data-id="halaja-codificada">
+  <rect x="60" y="858" width="600" height="120" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="882" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">El korban pesaj se come HASTA CHATZOT</text>
+  <text x="360" y="900" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">Mishná Pesajim 10:9 · codificado en todos los códigos posteriores</text>
+
+  <line x1="80" y1="912" x2="640" y2="912" stroke="#6b4423" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="932" font-size="9.5" fill="#3d2f23">· la posición de REbA (chatzot) gana la normatividad halájica</text>
+  <text x="78" y="948" font-size="9.5" fill="#3d2f23">· la cerca rabínica de chatzot opera como halajá vinculante (no solo recomendación)</text>
+  <text x="78" y="964" font-size="9" fill="#6b4423" font-style="italic">el judío observante CIERRA su comida del pesaj antes de medianoche</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL CIERRE POÉTICO DEL PEREK                                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="978" x2="360" y2="996" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-pe-gold)"/>
+
+<text x="60" y="1008" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CIERRE POÉTICO DEL PEREK · RETORNO AL INICIO REFINADO</text>
+
+<g class="pesaj-nodo" data-id="cierre-poetico">
+  <rect x="60" y="1018" width="600" height="170" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="1042" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El perek viaja desde la pregunta inicial hasta la disputa universal</text>
+
+  <!-- Visualización de la trayectoria -->
+  <text x="360" y="1064" text-anchor="middle" font-size="10" fill="#3d2f23">empezó: «¿desde cuándo se recita el shema?» (#1)</text>
+  <text x="360" y="1078" text-anchor="middle" font-size="10" fill="#3d2f23">recorrió: vigilias · ángeles · teodicea · David · HKBH · naciones · 25 temas</text>
+  <text x="360" y="1092" text-anchor="middle" font-size="10" fill="#3d2f23">cierra: «¿hasta cuándo se come el pesaj?» (#25)</text>
+
+  <line x1="80" y1="1104" x2="640" y2="1104" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="1126" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La misma pregunta — refinada por todo el viaje intermedio</text>
+  <text x="78" y="1148" font-size="9.5" fill="#3d2f23">· la pregunta empezó técnica (shema)</text>
+  <text x="78" y="1162" font-size="9.5" fill="#3d2f23">· termina universal (pesaj — el korban paradigmático)</text>
+  <text x="78" y="1176" font-size="9" fill="#6b4423" font-style="italic">el editor demuestra que el problema del límite nocturno es ESTRUCTURAL en toda la halajá</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · EL PEREK COMPLETO                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="1188" x2="360" y2="1206" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-pe)"/>
+
+<g class="pesaj-nodo" data-id="doctrina">
+  <rect x="60" y="1210" width="600" height="158" rx="6" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="1232" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">Doctrina meta · el perek de Berajot 2a–9b completo</text>
+
+  <text x="78" y="1254" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1254" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">El tiempo halájico</tspan> es preciso pero flexible · chatzot y AH como fronteras estructurales</text>
+
+  <text x="78" y="1272" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1272" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">La cerca rabínica</tspan> protege la Torah · chatzot como sayag herencia halájica común</text>
+
+  <text x="78" y="1290" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1290" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">El judío vive con doble conciencia</tspan> · sabe el Torah-límite, sigue el rabínico</text>
+
+  <text x="78" y="1308" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="1308" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">Las grandes preguntas son estructurales</tspan> · misma disputa en shema, terumá, korbanot, pesaj</text>
+
+  <text x="78" y="1326" font-size="9.5" fill="#3d2f23">5.</text>
+  <text x="100" y="1326" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">El perek tiene unidad</tspan> · la noche halájica y sus límites como tema vertebral</text>
+
+  <text x="360" y="1352" text-anchor="middle" font-size="10.5" fill="#b8860b" font-style="italic" font-weight="600">— el perek está completo —</text>
+</g>
+
+</svg>
+</div>
+
+<div class="pesaj-panel" id="pesaj-panel">
+  <p class="pesaj-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'verso-base': {
+      titulo: 'El versículo base · Shemot 12:8',
+      hebreo: 'וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה · צְלִי־אֵשׁ',
+      traduccion: '«Comerán la carne en esta noche · asada al fuego» (Shemot 12:8)',
+      explicacion: 'El versículo base de toda la disputa es Shemot 12:8. La Torah ordena comer el korban pesaj «en esta noche» — בַּלַּיְלָה הַזֶּה.\n\nLA FRASE CLAVE es «בַּלַּיְלָה הַזֶּה» («en esta noche»). Tiene dos componentes interpretables:\n\n  · «בַּלַּיְלָה» — «en la noche»: indica el ESPACIO TEMPORAL general\n  · «הַזֶּה» — «esta»: indica especificidad (ESTA noche en particular)\n\nLA PREGUNTA HALÁJICA: ¿qué significa «esta noche»? ¿Toda la noche, hasta amud hashachar? ¿O una parte específica de la noche?\n\nESTA AMBIGÜEDAD genera la disputa entre los tanaítas. Cada lado interpreta «esta noche» de manera distinta, basándose en distintos recursos exegéticos.\n\nEL CONTEXTO HISTÓRICO ORIGINAL:\n\nEl versículo está en el contexto del éxodo de Egipto. Es la noche del 15 de Nisán, la noche en que Israel sale de Egipto. La comida del pesaj se hace al COMIENZO de esa noche (después de la inmolación del cordero en la tarde del 14).\n\nLA PREGUNTA HALÁJICA NO ES sobre cuándo COMENZAR a comer — es claro que se comienza desde el inicio de la noche (tras shkiá). La pregunta es CUÁNDO TERMINAR.\n\nLOS DOS POLOS DE LA DISPUTA:\n\n  · CHATZOT (medianoche) — la noche se divide en dos mitades; tal vez la primera mitad es el zman específico\n\n  · AMUD HASHACHAR (amanecer) — la noche entera completa, hasta el primer rayo de luz\n\nAMBOS ENFOQUES tienen apoyo escriturario. Cada uno traerá un argumento textual específico.\n\nEL POSICIONAMIENTO DEL VERSÍCULO EN EL PEREK:\n\nEl perek 1 de Berajot CIERRA con esta sugyá. ¿Por qué? Porque el versículo de Shemot 12:8 es el PROTOTIPO halájico de las obligaciones nocturnas:\n\n  · El shema arvit (la mishná inicial del perek)\n  · La ajilat kodashim (comer korbanot)\n  · El hektér chalavim (quemar grasas)\n  · El korban pesaj (esta sugyá)\n\nTODOS comparten la misma estructura halájica: una obligación que se cumple EN LA NOCHE. La pregunta del límite nocturno se aplica a TODOS.\n\nLA SUGYÁ FINAL DEL PEREK lleva la pregunta a su forma más PARADIGMÁTICA: el korban pesaj. Si entendemos el límite para pesaj, entendemos el límite para todas las demás obligaciones nocturnas. Esta es la razón estructural del cierre del perek con esta sugyá.\n\nLA PREGUNTA QUE SE DESPLIEGA:\n\nDel versículo y su frase clave, la sugyá desarrolla dos posiciones contrapuestas:\n\n  · R. ELAZAR BEN AZARIA: el límite es chatzot\n  · R. AKIVA: el límite es amud hashachar\n\nAmbos sabios son grandes tanaítas. Sus razonamientos son sofisticados. La disputa NO se resuelve por preferencia personal — se resuelve por TÉCNICA EXEGÉTICA y por la lógica de la verseta.'
+    },
+    'reba-chatzot': {
+      titulo: 'R. Elazar ben Azaria · gezera shavá hasta chatzot',
+      hebreo: 'נֶאֱמַר כָּאן «בַּלַּיְלָה הַזֶּה» וְנֶאֱמַר לְהַלָּן «וְעָבַרְתִּי בְאֶרֶץ מִצְרַיִם בַּלַּיְלָה הַזֶּה»',
+      traduccion: '«Está dicho aquí "en esta noche" y está dicho allá "pasaré por la tierra de Egipto en esta noche"»',
+      explicacion: 'R. Elazar ben Azaria (REbA) defiende la posición de que el korban pesaj se come SOLO HASTA CHATZOT. Su argumento es una GEZERA SHAVÁ — una de las técnicas hermenéuticas clásicas del rabinismo.\n\n¿QUÉ ES UNA GEZERA SHAVÁ?\n\nUna gezera shavá es una técnica que conecta dos versículos por una EXPRESIÓN COMPARTIDA. La regla: si dos versículos usan la misma expresión, comparten también el mismo régimen halájico.\n\nLA APLICACIÓN:\n\nREbA identifica DOS versículos en Shemot 12 que usan la EXACTA expresión «בַּלַּיְלָה הַזֶּה» («en esta noche»):\n\n  VERSO 1 — Shemot 12:8:\n  «וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה»\n  «Comerán la carne EN ESTA NOCHE»\n  Contexto: el comer del korban pesaj.\n\n  VERSO 2 — Shemot 12:12:\n  «וְעָבַרְתִּי בְאֶרֶץ מִצְרַיִם בַּלַּיְלָה הַזֶּה»\n  «Pasaré por la tierra de Egipto EN ESTA NOCHE»\n  Contexto: la makat bechorot (matanza de los primogénitos egipcios).\n\nAMBOS VERSOS usan EXACTAMENTE la misma frase: «בַּלַּיְלָה הַזֶּה». Por gezera shavá, ambos comparten el mismo régimen temporal.\n\n¿CUÁNDO FUE LA MAKAT BECHOROT?\n\nLa Torá nos lo dice EXACTAMENTE — Shemot 12:29:\n\n  «וַיְהִי בַּחֲצִי הַלַּיְלָה · וַה\' הִכָּה כָל בְּכוֹר בְּאֶרֶץ מִצְרַיִם»\n  «Y FUE A LA MITAD DE LA NOCHE — y HKBH hirió a todo primogénito en la tierra de Egipto»\n\nLa makat bechorot ocurrió EXACTAMENTE a CHATZOT (medianoche). La frase «בַּחֲצִי הַלַּיְלָה» es inequívoca.\n\nLA CADENA EXEGÉTICA:\n\n  · Versículo de la makat bechorot tiene la frase «בַּלַּיְלָה הַזֶּה» y ocurrió a CHATZOT\n  · Versículo del korban pesaj tiene la MISMA frase «בַּלַּיְלָה הַזֶּה»\n  · Por gezera shavá, ambos comparten el mismo régimen temporal\n  · Por tanto, el korban pesaj se come HASTA CHATZOT (no más allá)\n\nLA ELEGANCIA DEL ARGUMENTO:\n\nLa derashá de REbA es ELEGANTE porque NO INTRODUCE nada externo al texto. Conecta dos versículos del mismo capítulo (Shemot 12) usando una frase IDÉNTICA. La conexión es textual, no especulativa.\n\nLA INTERPRETACIÓN TEOLÓGICA:\n\n¿Por qué tiene sentido que el korban pesaj se relacione temporalmente con la makat bechorot?\n\nPORQUE LOS DOS EVENTOS están histórico-teológicamente LINKADOS:\n\n  · La makat bechorot golpea a los egipcios\n  · La sangre del korban pesaj en los dinteles PROTEGE a los israelitas\n  · Ambos ocurren simultáneamente\n  · La memoria del korban pesaj es la memoria de la noche de la liberación\n\nQUE EL KORBAN se relacione con el momento exacto de la makat bechorot (chatzot) tiene sentido teológico: en cada generación, los israelitas comen el korban pesaj DURANTE el mismo periodo en que sus ancestros fueron protegidos por su sangre.\n\nEL CHATZOT ES UN MOMENTO TEOLÓGICAMENTE CARGADO:\n\n  · Es el momento de la makat bechorot\n  · Es el momento en que David se despertaba a estudiar Torá (#5)\n  · Es la frontera halájica de muchas obligaciones nocturnas (#1, #9)\n\nEL CHATZOT NO ES PUNTO ARBITRARIO de la noche. Es el centro teológico, el límite estructural, el momento del rescate.\n\nLA RECEPCIÓN HALÁJICA:\n\nLa halajá codificada SIGUE a REbA. La práctica judía mantiene CHATZOT como límite del comer del korban pesaj (cuando se comía korban) y, por extensión, del afikomán (que reemplaza al korban después de la destrucción del Templo).\n\nESTA POSICIÓN MUESTRA LA INFLUENCIA de REbA — como descendiente de Ezra el Escriba — en la consolidación halájica de la práctica judía. Su autoridad como gran tanaíta y como cabeza del Sanedrín en su tiempo refuerza la aceptación de su posición.'
+    },
+    'akiva-amud': {
+      titulo: 'R. Akiva · chipazon hasta amud hashachar',
+      hebreo: 'וַהֲלֹא כְּבָר נֶאֱמַר «וַאֲכַלְתֶּם אוֹתוֹ בְּחִפָּזוֹן» — עַד שְׁעַת חִפָּזוֹן',
+      traduccion: '«Pero ya está dicho "lo comerán con prisa" — solo hasta la hora de la prisa»',
+      explicacion: 'R. Akiva (RA) DESAFÍA la posición de REbA. Para RA, el korban pesaj se come hasta AMUD HASHACHAR — el amanecer, no la medianoche.\n\nEL CONTRAARGUMENTO de R. Akiva se basa en OTRO versículo del mismo capítulo, Shemot 12:11:\n\n  «וְכָכָה תֹּאכְלוּ אֹתוֹ · מָתְנֵיכֶם חֲגֻרִים · נַעֲלֵיכֶם בְּרַגְלֵיכֶם · וּמַקֶּלְכֶם בְּיֶדְכֶם · וַאֲכַלְתֶּם אֹתוֹ בְּחִפָּזוֹן»\n  «Y así lo comerán: con cinturones ceñidos, calzados en sus pies, bastón en mano · y lo comerán CON PRISA»\n\nLA FRASE CLAVE es «בְּחִפָּזוֹן» — «con prisa». RA interpreta este término como un MARCADOR TEMPORAL.\n\nLA LÓGICA DE RA:\n\n  · La Torá dice que el korban pesaj se come «con prisa»\n  · La prisa solo es válida MIENTRAS HAY RAZÓN PARA TENER PRISA\n  · ¿Cuándo había razón para tener prisa? Cuando Israel estaba a punto de SALIR DE EGIPTO\n  · ¿Cuándo salieron de Egipto? Al amanecer (no a medianoche)\n  · Por tanto: el comer con prisa se extiende HASTA EL AMANECER\n\nEL RESPALDO BÍBLICO de la salida al amanecer está en versículos como Shemot 12:22 («no salgan de las puertas de su casa hasta la mañana») y la descripción posterior de la salida en Shemot 12:41-42 (que la salida del éxodo ocurre por la mañana).\n\nLA LÓGICA ES SOFISTICADA:\n\nRA NO niega que el versículo «בַּלַּיְלָה הַזֶּה» se refiera a la noche. Acepta que el korban se come en la noche. Lo que disputa es CÓMO se identifica el FINAL de esa noche.\n\n  · REbA usa gezera shavá con makat bechorot → chatzot\n  · RA usa el contexto de «chipazon» → amud hashachar\n\nLOS DOS sabios están haciendo derashot legítimas. Ambos respetan el texto. Difieren en cuál marcador prevalece.\n\nLA TEOLOGÍA DE LA POSICIÓN DE RA:\n\nPara RA, lo que define el zman del pesaj es la SITUACIÓN HISTÓRICA del éxodo — la prisa de la salida. Mientras los israelitas estaban en Egipto preparándose para salir, había razón de prisa. Eso se extendió desde el comer del korban (al inicio de la noche) hasta la salida (al amanecer).\n\nUNA DIMENSIÓN PROFUNDA:\n\nLa posición de RA es teológicamente significativa. Sugiere que el pesaj NO es solo una conmemoración del evento puntual (la makat bechorot en chatzot) — es la conmemoración de un PROCESO HISTÓRICO completo (la preparación + el éxodo).\n\nSi el límite es chatzot, el pesaj conmemora solo la matanza de los primogénitos.\n\nSi el límite es amud hashachar, el pesaj conmemora TODA la noche del éxodo — la preparación, la matanza, la espera, la salida.\n\nLA POSICIÓN DE RA es MÁS AMPLIA narrativamente. Captura todo el evento, no solo un momento.\n\nLA RECEPCIÓN HALÁJICA:\n\nA pesar de la elegancia del argumento de RA, la halajá codificada NO LO SIGUE. La práctica normativa sigue a REbA (chatzot).\n\n¿POR QUÉ? Probablemente por varias razones:\n\n  · GEZERA SHAVÁ es técnica MÁS FUERTE que derashá temática\n  · CHATZOT como límite armoniza con OTRAS halajot del perek (cerca rabínica, etc.)\n  · LA POSICIÓN MÁS RESTRICTIVA tiende a ganar en disputas halájicas (principio: ספק דאורייתא לחומרא — en duda sobre Torá, lo más estricto)\n\nLA POSICIÓN DE RA NO SE PIERDE:\n\nAunque no normativa, la posición de RA se transmite en el corpus. Esto preserva la voz de RA y permite que su razonamiento se estudie y aprecie.\n\nESTA TRANSMISIÓN DUAL — posición normativa Y posición disidente — es típica del Talmud. Las dos voces se conservan, aunque la práctica siga a una.\n\nLA TENSIÓN PRODUCTIVA:\n\nEntre REbA y RA, la sugyá presenta dos paradigmas:\n\n  · REbA — gezera shavá rígida, chatzot, conmemoración puntual\n  · RA — contexto histórico amplio, amud hashachar, conmemoración procesual\n\nAmbos son LEGÍTIMOS judaísmos. La halajá elige uno, pero la sensibilidad espiritual del judío puede nutrirse de ambos.'
+    },
+    'paralelo-perek': {
+      titulo: 'El paralelo con el perek entero · estructura universal',
+      hebreo: 'אוֹתָהּ מַחְלוֹקֶת לְכָל אֹרֶךְ הַפֶּרֶק',
+      traduccion: 'La misma disputa a lo largo de todo el perek',
+      explicacion: 'La sugyá final del perek revela una ESTRUCTURA SUBYACENTE: la disputa sobre el korban pesaj NO es aislada. Es la MISMA DISPUTA que ha recorrido todo el perek 1 de Berajot, aplicada a un contexto distinto.\n\nLA DISPUTA ESTRUCTURAL:\n\n  · CHATZOT (medianoche) vs AMUD HASHACHAR (amanecer)\n\nEsta es LA pregunta del perek. Aparece en CUATRO lugares principales:\n\nUBICACIÓN 1 · MISHNÁ INICIAL (#1)\n\n  La pregunta: «¿hasta cuándo se recita el shema de arvit?»\n  Posiciones:\n  · Chajamim: hasta CHATZOT\n  · Rabban Gamliel: hasta AMUD HASHACHAR\n\nUBICACIÓN 2 · BARAITA DE LOS HIJOS DE RG (#9)\n\n  La discusión: ¿la cerca de chatzot es vinculante o solo recomendación?\n  Conclusión: la cerca es RABÍNICA, el límite Torah es amud hashachar, pero la cerca es OPERATIVA.\n\nUBICACIÓN 3 · R. SHIMON BAR YOJAI (#24)\n\n  La halajá flexible: dos shemas en una noche, una antes de AH y otra después.\n  Amud hashachar como frontera estructural FLEXIBLE.\n\nUBICACIÓN 4 · KORBAN PESAJ (#25 — esta sugyá)\n\n  La disputa REbA vs RA:\n  · REbA: CHATZOT\n  · RA: AMUD HASHACHAR\n\nLA UNIDAD TEMÁTICA REVELADA:\n\nObserva: en TODAS estas ubicaciones, la pregunta estructural es la misma. ¿La obligación nocturna se extiende hasta chatzot o hasta amud hashachar?\n\nESTO ES UNIFICACIÓN ESTRUCTURAL del perek. Las múltiples sugyot, los temas diversos (David, naciones, HKBH, etc.) son DIGRESIONES de un tema central. Y el tema central es: ¿cuándo termina la noche halájica?\n\nEL EDITOR DEL TALMUD lo demuestra mediante el CIERRE estructural. El perek termina con la disputa sobre korban pesaj porque esa disputa ENCAPSULA el tema central que ha recorrido todo el perek.\n\nLAS OBLIGACIONES NOCTURNAS COMPARTIDAS:\n\nMúltiples obligaciones nocturnas comparten la MISMA estructura halájica:\n\n  · Shema arvit (recitación de los párrafos)\n  · Ajilat kodashim (comer korbanot)\n  · Hektér chalavim (quemar grasas)\n  · Korban pesaj (comer el cordero)\n\nTODAS estas obligaciones son nocturnas. TODAS plantean la misma pregunta: ¿hasta cuándo?\n\nLA HALAJÁ RABÍNICA codifica una respuesta unitaria:\n\n  · LÍMITE TORAH: amud hashachar (en todos los casos)\n  · CERCA RABÍNICA: chatzot (en todos los casos)\n  · OBSERVANCIA PRÁCTICA: opera en chatzot, sabiendo que el Torah-límite es AH\n\nESTA UNIDAD MUESTRA LA SOFISTICACIÓN del rabinismo. El sistema halájico tiene CONSISTENCIA INTERNA. La misma estructura se aplica a múltiples obligaciones del mismo carácter.\n\nLA RELEVANCIA PEDAGÓGICA:\n\nQuien estudia el perek completo (los 25 diagramas) emerge no solo con conocimiento de detalles halájicos específicos sino con SENSIBILIDAD ESTRUCTURAL para la halajá rabínica:\n\n  · Reconoce patrones halájicos en distintos contextos\n  · Aplica la lógica de la cerca rabínica donde es relevante\n  · Distingue entre límite Torah y límite rabínico\n  · Aprecia la consistencia interna del sistema halájico\n\nESTA SENSIBILIDAD es CARACTERÍSTICA del estudiante avanzado de Talmud. NO se obtiene leyendo una sola sugyá. Se obtiene viendo CÓMO las múltiples sugyot del perek se interconectan.\n\nEL EDITOR del Talmud diseña el perek para CULTIVAR esta sensibilidad. La aparente diversidad temática (David, ángeles, naciones, teodicea) es PEDAGÓGICAMENTE intencional — distrae al estudiante de la unidad subyacente, hasta que la sugyá final la revela claramente.\n\nLA REVELACIÓN FINAL:\n\nAl llegar al cierre del perek con la disputa sobre korban pesaj, el estudiante ve LA UNIDAD. «Ah», dice, «esta es la misma pregunta que vimos en la mishná inicial sobre el shema. Y en la cerca rabínica. Y en la halajá flexible de RSBY. Y aquí. Todo el perek ha estado sobre LO MISMO.»\n\nESTA REVELACIÓN es ILUMINACIÓN PEDAGÓGICA. Es uno de los placeres del estudio talmúdico — descubrir la unidad estructural que el editor ha enterrado dentro de la aparente diversidad.'
+    },
+    'halaja-codificada': {
+      titulo: 'La halajá codificada · se sigue a R. Elazar ben Azaria',
+      hebreo: 'הִלְכָה כְּרַבִּי אֶלְעָזָר בֶּן עֲזַרְיָה — עַד חֲצוֹת',
+      traduccion: 'La halajá sigue a R. Elazar ben Azaria — hasta chatzot',
+      explicacion: 'La halajá codificada en los códigos posteriores SIGUE a R. Elazar ben Azaria. El korban pesaj se come HASTA CHATZOT, no hasta amud hashachar.\n\nLA SEDE DE LA CODIFICACIÓN:\n\nLa Mishná Pesajim 10:9 lo establece claramente:\n\n  «הַפֶּסַח אַחַר חֲצוֹת מְטַמֵּא אֶת הַיָּדַיִם»\n  «El pesaj después de chatzot impurifica las manos» (es decir, ya no es kasher para comer)\n\nEsta mishná codifica halájicamente la posición de REbA. Lo que está después de chatzot ya no se come ritualmente.\n\nLA APLICACIÓN POST-TEMPLO:\n\nDespués de la destrucción del Beit Hamikdash (70 EC), ya no se trae korban pesaj. Pero el AFIKOMÁN — el último pedazo de matzá que se come al final del seder de Pesaj — conserva la halajá del korban.\n\nEl afikomán DEBE COMERSE ANTES DE CHATZOT. Si uno no terminó el afikomán antes de medianoche, hay un problema halájico — algunas opiniones dicen que ya no se debe comer; otras dicen que se come pero sin bracha; otras lo permiten con condiciones.\n\nESTA HALAJÁ AFECTA LA PRÁCTICA DEL SEDER:\n\n  · Los líderes del seder calculan el tiempo cuidadosamente\n  · Se intenta llegar al afikomán antes de chatzot\n  · Si el seder es largo y se acerca chatzot, el líder ACELERA para llegar al afikomán a tiempo\n\nESTA PREOCUPACIÓN ES PRÁCTICA Y REAL. Familias judías observantes coordinan el tiempo del seder con conciencia de chatzot.\n\nLA CERCA RABÍNICA COMO HALAJÁ VINCULANTE:\n\nUna OBSERVACIÓN importante: la posición de REbA (chatzot) es CONSISTENTE con la doctrina rabínica de la cerca (#9). Los chajamim consistentemente prefieren chatzot como límite operativo.\n\nEsto sugiere que la posición de REbA NO se basa solo en gezera shavá técnica — también refleja la SENSIBILIDAD HALÁJICA general del rabinismo: PROTEGER las obligaciones nocturnas con un margen antes del verdadero límite Torah.\n\nLA DOBLE LECTURA POSIBLE:\n\nHay dos formas de leer la decisión halájica de codificar a REbA:\n\n  LECTURA 1 — TÉCNICA: la gezera shavá de REbA es exegéticamente más fuerte que la derashá de RA. Por tanto su posición prevalece.\n\n  LECTURA 2 — PRINCIPIO: la cerca de chatzot es la sensibilidad rabínica preferida. REbA ofreció el argumento técnico para esa sensibilidad. La halajá codifica REbA porque su posición coincide con el principio de la cerca.\n\nAmbas lecturas son válidas. La codificación de REbA opera tanto por mérito técnico como por consistencia con el principio rabínico.\n\nLA POSICIÓN DE RA NO SE PIERDE:\n\nAunque la halajá normativa sigue a REbA, la posición de RA se PRESERVA en el corpus. Esto tiene varios efectos:\n\n  · DOCUMENTAL — la posición está disponible para estudio\n  · EDUCATIVO — los estudiantes aprenden la lógica completa\n  · PRECEDENTE — en casos especiales podría aplicarse\n  · SENSIBILIDAD — el judaísmo NO pretende que solo una opinión sea válida\n\nLA TENSIÓN PRODUCTIVA SE MANTIENE:\n\nEl seder de Pesaj se hace según REbA — hasta chatzot. Pero la posición de RA permanece como recordatorio de la sensibilidad halájica completa.\n\nEN LA EXPERIENCIA DEL SEDER:\n\nCuando un judío observante COME el afikomán antes de chatzot, está siguiendo la halajá codificada (REbA). Pero LA TRADICIÓN entera le permite saber que existe otra voz (RA) que habría extendido el zman hasta amud hashachar.\n\nESTE CONOCIMIENTO de las múltiples voces ENRIQUECE la práctica. NO se cumple la halajá ciegamente — se cumple SABIENDO el contexto completo del debate.\n\nLA HALAJÁ CODIFICADA ES PUNTO DE LLEGADA, NO PUNTO DE INICIO:\n\nLa práctica halájica final (REbA-chatzot) es el RESULTADO de un proceso de debate y razonamiento. Quien la cumple sin entender el proceso cumple a medias.\n\nQUIEN ESTUDIA EL PEREK completo (incluyendo esta sugyá final) cumple con la halajá Y entiende su lógica. Esta es la doble dimensión del cumplimiento halájico: ACCIÓN + COMPRENSIÓN.\n\nLA TRADICIÓN RABÍNICA invita a esta doble dimensión. NO basta cumplir mecánicamente. Hay que ESTUDIAR el por qué. La codificación de REbA opera mejor cuando se entiende contra el fondo de la posición de RA.'
+    },
+    'cierre-poetico': {
+      titulo: 'El cierre poético del perek · retorno al inicio refinado',
+      hebreo: 'הַסִּיוּם הַפִּיוּטִי שֶׁל הַפֶּרֶק',
+      traduccion: 'El cierre poético del perek',
+      explicacion: 'El perek 1 de Berajot cierra de manera POÉTICAMENTE PERFECTA. Empezó con una pregunta y termina con una pregunta — pero la pregunta final es la pregunta inicial AMPLIADA y REFINADA.\n\nEL VIAJE DEL PEREK:\n\nLA PREGUNTA INICIAL (#1):\n  «¿Desde cuándo se recita el shema de arvit?»\n  Pregunta técnica, específica al shema de arvit.\n\nDE AHÍ, EL PEREK SE DESPLIEGA en 23 sugyot intermedias que parecen DIGRESIONES:\n\n  · Las vigilias cósmicas (#2) — estructura de la noche\n  · La protección angélica (#12) — cuatro ángeles cardinales\n  · La teodicea (#14, #20) — yisurim shel ahavá, las tres peticiones\n  · El rey David (#5-7, #21) — kinor, gobierno, chasid, Avshalom\n  · HKBH reza (#19) — antropomorfismo refinado\n  · Las naciones gentiles (#22-23) — provocar a los rashaim, amar las virtudes\n  · Y muchas otras\n\nA PRIMERA VISTA, estas sugyot parecen DESCONECTADAS de la pregunta inicial. ¿Qué tienen que ver los ángeles cardinales con el zman del shema? ¿Qué relación tiene la teodicea con la halajá nocturna?\n\nLA RESPUESTA: TODAS son MEDITACIONES sobre LA NOCHE HALÁJICA. Cada sugyá ilumina UN ASPECTO de lo que significa habitar la noche del judío observante:\n\n  · Cosmológicamente (vigilias)\n  · Defensivamente (ángeles, mazikin)\n  · Espiritualmente (sufrimiento, teodicea)\n  · Históricamente (David)\n  · Teológicamente (HKBH)\n  · Culturalmente (naciones)\n\nLA NOCHE HALÁJICA no es solo un período de horas. Es un ESPACIO COMPLETO de experiencia humana, espiritual, cósmica. El perek explora ese espacio en sus múltiples dimensiones.\n\nLA PREGUNTA FINAL (#25):\n  «¿Hasta cuándo se come el korban pesaj?»\n  Misma forma estructural que la pregunta inicial — pregunta sobre LÍMITE TEMPORAL nocturno.\n\nPERO LA PREGUNTA ES AMPLIADA:\n\n  · La pregunta inicial era sobre shema arvit (mishná local)\n  · La pregunta final es sobre korban pesaj (paradigma halájico universal)\n\nEL PEREK HA TRANSFORMADO la pregunta. Lo que empezó como cuestión técnica de un caso específico se ha revelado como ESTRUCTURA UNIVERSAL aplicable a múltiples contextos.\n\nLA POÉTICA DEL CIERRE:\n\nEl editor del Talmud cierra el perek con una sugyá que:\n\n  · RETORNA al tema original (límite nocturno)\n  · LO REFINA con todo el aprendizaje intermedio\n  · LO UNIVERSALIZA (korban pesaj como paradigma)\n  · LO CRISTALIZA en la halajá codificada (REbA-chatzot)\n\nESTO ES MADUREZ ESTRUCTURAL. El editor no cierra arbitrariamente. Cierra DELIBERADAMENTE en el punto que MAYOR sentido tiene.\n\nLA LECCIÓN PEDAGÓGICA:\n\nEl estudiante que llega al final del perek con esta sugyá experimenta una REVELACIÓN:\n\n  · «Ah — el perek entero ha estado preparando para esta sugyá»\n  · «Las digresiones aparentes eran contextos para enriquecer la pregunta original»\n  · «El perek no es una colección de temas aleatorios — es una EXPLORACIÓN UNIFICADA»\n\nESTA REVELACIÓN es uno de los grandes placeres del estudio talmúdico. La estructura aparentemente caótica del Talmud REVELA su orden interno cuando se estudia con atención.\n\nLA COMPLETUD DEL PEREK:\n\nDespués de #25, el perek está COMPLETO. NO se necesita más. La pregunta ha sido planteada, explorada en sus múltiples dimensiones, y respondida tanto técnicamente (halajá codificada) como espiritualmente (todo el aprendizaje intermedio).\n\nEL PEREK SIGUIENTE (perek 2) comenzará con OTRA pregunta — sobre los detalles del shema durante el día. Pero el perek 1 está cerrado. Su exploración de la noche halájica ha concluido satisfactoriamente.\n\nUN VOLVER A LA ETIMOLOGÍA:\n\nLa palabra «perek» en arameo y hebreo significa «capítulo» o «sección» — pero también «articulación» (como entre huesos). Un perek bien construido es una ARTICULACIÓN COMPLETA — tiene sus límites, su comienzo, su medio, su final.\n\nESTE PEREK ES MODELO de articulación. La sugyá final lo CIERRA con la satisfacción de la articulación bien hecha.\n\nEL JUDÍO QUE COMPLETA EL ESTUDIO del perek experimenta esta articulación. Ha viajado desde una pregunta técnica hasta una sensibilidad completa sobre la noche halájica. El viaje TIENE forma, propósito, conclusión.\n\nLA CONCLUSIÓN ESTRUCTURAL:\n\nDespués de 25 sugyot, después de explorar la teología, la halajá, la narrativa, la ética y la filosofía judías sobre la noche — el perek termina con UNA SENTENCIA halájica clara:\n\n  «La halajá sigue a R. Elazar ben Azaria · hasta chatzot»\n\nUna sentencia simple. Pero esconde dentro de sí todo el aprendizaje del perek. Quien la dice sin entender el perek dice palabras vacías. Quien la dice habiendo estudiado el perek dice TODO.\n\nESTE ES EL TALMUD. Un sistema donde una sola sentencia halájica puede esconder dentro de sí un mundo completo de aprendizaje.\n\nQUIEN HA RECORRIDO LOS 25 DIAGRAMAS HA ATRAVESADO ese mundo. El perek está completo. El estudiante también.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · el perek de Berajot 2a-9b completo',
+      hebreo: 'הַפֶּרֶק שָׁלוּם',
+      traduccion: 'El perek está completo',
+      explicacion: 'El perek 1 de Berajot, completo en sus 25 sugyot, ofrece una doctrina coherente y profunda. Las cinco lecciones meta del perek entero:\n\nLECCIÓN 1 · EL TIEMPO HALÁJICO ES PRECISO PERO FLEXIBLE\n\nLos límites halájicos — chatzot, amud hashachar — son fronteras REALES con consecuencias técnicas exactas. NO son aproximados. Un segundo antes o después de un límite halájico cambia la categoría legal.\n\nPERO la halajá rabínica permite FLEXIBILIDAD en su aplicación. R. Shimon bar Yojai (#24) muestra cómo la halajá acomoda situaciones reales (madrugador, viajero). Las fronteras son rígidas en su DEFINICIÓN pero adaptables en su USO.\n\nESTA COMBINACIÓN de precisión y flexibilidad es marca de la halajá madura. NO es rigidez ciega. NO es relativismo arbitrario. Es estructura sólida con adaptación inteligente.\n\nLECCIÓN 2 · LA CERCA RABÍNICA PROTEGE LA TORAH\n\nEl principio del SAYAG (cerca rabínica, #9) recorre todo el perek. Chatzot funciona como cerca para múltiples obligaciones nocturnas (shema, terumá, korbanot, pesaj). El Torah-límite es amud hashachar; el rabínico es chatzot.\n\nLA CERCA NO ES NEGACIÓN de la Torah — es PROTECCIÓN. Si el observante opera dentro de la cerca, NO TRANSGREDE accidentalmente el Torah-límite. Es una sabiduría protectora.\n\nLA POSICIÓN DE REbA en la sugyá final (#25) institucionaliza esta sabiduría. La halajá codificada para pesaj sigue a REbA — el principio de la cerca prevalece.\n\nLECCIÓN 3 · EL JUDÍO VIVE CON DOBLE CONCIENCIA\n\nEl observante sabe DOS cosas simultáneamente:\n\n  · LA LEY TORAH — el límite real (amud hashachar)\n  · LA LEY RABÍNICA — la cerca operativa (chatzot)\n\nVIVE OPERATIVAMENTE en la cerca rabínica. PERO sabe la ley Torah subyacente. Esta doble conciencia produce SOFISTICACIÓN halájica.\n\nEL JUDÍO IGNORANTE solo sabe «hasta chatzot» y no entiende por qué. El judío educado sabe «hasta chatzot por sayag, hasta AH por Torah» y entiende todo el sistema.\n\nESTA EDUCACIÓN HALÁJICA es objetivo del estudio del Talmud. El perek 1 de Berajot, completo, la cultiva.\n\nLECCIÓN 4 · LAS GRANDES PREGUNTAS SON ESTRUCTURALES\n\nA primera vista, el perek presenta MUCHOS temas: David, naciones, HKBH, teodicea, ángeles, mazikin, etc. Parece DIVERSO.\n\nPERO la sugyá final REVELA la unidad estructural. Todos los temas son aplicaciones / digresiones de UN PROBLEMA CENTRAL — la noche halájica y sus límites.\n\nESTA REVELACIÓN cambia cómo se lee el perek. Las «digresiones» se vuelven aplicaciones contextuales del tema central. La diversidad temática se reordena como riqueza unificada.\n\nESTA SENSIBILIDAD para detectar UNIDAD ESTRUCTURAL en diversidad aparente es marca del estudiante avanzado de Talmud. El perek 1 la cultiva.\n\nLECCIÓN 5 · EL PEREK TIENE UNIDAD\n\nEl editor del Talmud DISEÑA el perek con UNIDAD INTENCIONAL. NO es colección aleatoria de sugyot. Es CONSTRUCCIÓN ARTÍSTICA con:\n\n  · COMIENZO (mishná inicial sobre zman shema)\n  · DESARROLLO (25 sugyot que exploran múltiples dimensiones)\n  · CIERRE (sugyá final sobre korban pesaj que retorna al tema)\n\nESTA UNIDAD EDITORIAL es uno de los descubrimientos más impresionantes del estudio del Talmud. El Talmud NO es caos aparente — es ORDEN PROFUNDO que requiere estudio sostenido para revelarse.\n\nLA REVELACIÓN DE LA UNIDAD es la recompensa del estudiante paciente. Quien completa el perek con atención emerge transformado — no solo con conocimiento, sino con SENSIBILIDAD para reconocer estructuras editoriales similares en otros pereks y tratados.\n\nLA TRANSFORMACIÓN DEL ESTUDIANTE:\n\nEl estudiante que llega al final del perek con esta sugyá ha sufrido una transformación:\n\n  · CONOCE muchos detalles halájicos específicos\n  · ENTIENDE la estructura halájica del tiempo\n  · RECONOCE patrones en la edición talmúdica\n  · APRECIA la unidad bajo la diversidad\n  · PUEDE aplicar el sistema halájico con sensibilidad\n  · SIENTE la madurez del judaísmo rabínico\n\nESTA TRANSFORMACIÓN es el objetivo del estudio. NO basta memorizar — hay que TRANSFORMARSE.\n\nQUIEN HA SEGUIDO LOS 25 DIAGRAMAS de este perek — con atención, paciencia, dedicación — ha cumplido el objetivo. Está transformado. El perek está completo en él.\n\nEL PEREK ESTÁ COMPLETO.\n\nNO HAY MÁS sugyot que estudiar en este perek. La articulación está terminada. La doctrina está enseñada. El sistema está expuesto. La sensibilidad está cultivada.\n\nQUEDA UNA SOLA COSA: vivirlo. Internalizar el aprendizaje y manifestarlo en la práctica halájica cotidiana. Estudiar es preparación para vivir.\n\nEL JUDÍO QUE HA COMPLETADO el estudio del perek ahora APLICA su aprendizaje:\n\n  · Recita el shema con conciencia del zman\n  · Respeta la cerca de chatzot en sus obligaciones nocturnas\n  · Conoce la halajá del pesaj y la aplica en el seder\n  · Habita la noche halájica con sensibilidad madura\n  · Reconoce los patrones rabínicos en otros pereks que estudie después\n\nESTO ES EL CIERRE DEL PEREK. NO un cierre que clausura — un cierre que ABRE camino. El perek termina; el estudio continúa. Pero ESTE perek está completo.\n\nMAZAL TOV al estudiante que ha llegado aquí. הָדְרָן עֲלָךְ פֶּרֶק רִאשׁוֹן דְּבְרָכוֹת — «retornaremos a ti, primer perek de Berajot». La tradición de estudio judía permite retornar a este perek, releerlo, redescubrirlo. La completud de hoy es preparación para la profundización de mañana.\n\nEL PEREK ESTÁ COMPLETO. EL ESTUDIO CONTINÚA.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.pesaj-interactivo')
+    : document.querySelector('.pesaj-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#pesaj-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.pesaj-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="pesaj-panel-header">' +
+        '<p class="pesaj-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="pesaj-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="pesaj-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="pesaj-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.pesaj-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.pesaj-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="pesaj-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

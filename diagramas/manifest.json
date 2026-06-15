@@ -861,15 +861,38 @@
       "slug": "pesaj-y-zman-shema",
       "orden": 25,
       "titulo": "Pesaj y el zman shema",
-      "subtitulo": "R. Elazar ben Azaria vs R. Akiva",
+      "subtitulo": "R. Elazar ben Azaria vs R. Akiva · el cierre del perek",
       "dapim": [
         "9a"
       ],
       "grupo": "La gran sugyá del shema",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/pesaj-y-zman-shema.html",
+      "sabios": [
+        "r-elazar-ben-azaria",
+        "r-akiva"
+      ],
+      "sabios_biblicos": [
+        "moshe"
+      ],
+      "pesukim": [
+        "shemot-12-8",
+        "shemot-12-11",
+        "shemot-12-12",
+        "shemot-12-29"
+      ],
+      "conceptos": [
+        "korban-pesaj",
+        "chatzot",
+        "amud-hashachar",
+        "gezera-shava",
+        "chipazon",
+        "makat-bechorot"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #24 mostró la halajá flexible de R. Shimon bar Yojai\nsobre el zman shema — dos recitaciones en una noche. El perek\nAHORA cierra con una sugyá que TRANSFORMA la pregunta inicial.\nEl zman shema arvit (#1) tenía como horizonte estructural el zman\nde COMER EL KORBAN PESAJ. ¿Hasta cuándo se puede comer? Esta es\nla disputa entre R. Elazar ben Azaria y R. Akiva. El perek\ncompleta su trayectoria desde la mishná inicial sobre el shema\nhasta el korban paradigmático. La estructura es PERFECTA — el\ncierre retorna al inicio, pero ampliado a su forma más universal.\n"
+      }
     }
   ],
   "sabios": [
@@ -1038,6 +1061,10 @@
     {
       "slug": "r-shimon-jasida",
       "nombre": "R Shimon Jasida"
+    },
+    {
+      "slug": "r-elazar-ben-azaria",
+      "nombre": "R Elazar Ben Azaria"
     },
     {
       "slug": "r-yose-ben-zimra",
@@ -1250,6 +1277,22 @@
     {
       "slug": "shemot-11-4",
       "nombre": "Shemot 11 4"
+    },
+    {
+      "slug": "shemot-12-8",
+      "nombre": "Shemot 12 8"
+    },
+    {
+      "slug": "shemot-12-11",
+      "nombre": "Shemot 12 11"
+    },
+    {
+      "slug": "shemot-12-12",
+      "nombre": "Shemot 12 12"
+    },
+    {
+      "slug": "shemot-12-29",
+      "nombre": "Shemot 12 29"
     },
     {
       "slug": "tehilim-37-1",
@@ -1573,6 +1616,22 @@
       "nombre": "Knor Shel David"
     },
     {
+      "slug": "korban-pesaj",
+      "nombre": "Korban Pesaj"
+    },
+    {
+      "slug": "gezera-shava",
+      "nombre": "Gezera Shava"
+    },
+    {
+      "slug": "chipazon",
+      "nombre": "Chipazon"
+    },
+    {
+      "slug": "makat-bechorot",
+      "nombre": "Makat Bechorot"
+    },
+    {
       "slug": "rashaim",
       "nombre": "Rashaim"
     },
@@ -1675,10 +1734,6 @@
     {
       "slug": "eretz-yisrael",
       "nombre": "Eretz Yisrael"
-    },
-    {
-      "slug": "gezera-shava",
-      "nombre": "Gezera Shava"
     },
     {
       "slug": "kal-vajomer",
@@ -1919,6 +1974,14 @@
       "peso": 3
     },
     {
+      "from": "shema-dos-veces",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #24 mostró la halajá flexible de R. Shimon bar Yojai\nsobre el zman shema — dos recitaciones en una noche. El perek\nAHORA cierra con una sugyá que TRANSFORMA la pregunta inicial.\nEl zman shema arvit (#1) tenía como horizonte estructural el zman\nde COMER EL KORBAN PESAJ. ¿Hasta cuándo se puede comer? Esta es\nla disputa entre R. Elazar ben Azaria y R. Akiva. El perek\ncompleta su trayectoria desde la mishná inicial sobre el shema\nhasta el korban paradigmático. La estructura es PERFECTA — el\ncierre retorna al inicio, pero ampliado a su forma más universal.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -2135,6 +2198,14 @@
       "peso": 1
     },
     {
+      "from": "noche-de-david",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "chatzot",
+      "peso": 1
+    },
+    {
       "from": "gobierno-tripartito",
       "to": "david-chasid",
       "categoria": "co-referencia",
@@ -2289,6 +2360,22 @@
     {
       "from": "cerca-y-trabajador",
       "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "chatzot",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "pesaj-y-zman-shema",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "amud-hashachar",
@@ -2615,6 +2702,14 @@
       "peso": 1
     },
     {
+      "from": "tres-regalos",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "gezera-shava",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2796,6 +2891,22 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "pesaj-y-zman-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
       "peso": 1
     }
   ]
