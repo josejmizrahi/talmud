@@ -728,15 +728,38 @@
       "slug": "david-y-avshalom",
       "orden": 21,
       "titulo": "David y Avshalom",
-      "subtitulo": "tarbut ra'á peor que Gog y Magog",
+      "subtitulo": "tarbut ra'á peor que Gog uMagog · ¿mizmor o kiná?",
       "dapim": [
         "7b"
       ],
       "grupo": "El rey David",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/david-y-avshalom.html",
+      "sabios": [
+        "r-yojanan",
+        "rav"
+      ],
+      "sabios_biblicos": [
+        "david",
+        "avshalom",
+        "natan-hanavi"
+      ],
+      "pesukim": [
+        "tehilim-3-1",
+        "tehilim-3-2",
+        "tehilim-2-1",
+        "shmuel-ii-12-11"
+      ],
+      "conceptos": [
+        "tarbut-raa",
+        "mizmor-vs-kina",
+        "rebelion-filial",
+        "gog-umagog"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #20 dejó la tensión irresuelta sobre la teodicea —\nR. Meir sostiene que las vías de HKBH son MISTERIOSAS, no\nsistematizables. La sugyá inmediatamente trae UN CASO concreto\ndonde la teodicea opera de manera ENIGMÁTICA: David, al huir de\nAvshalom su hijo, escribe «MIZMOR» (cántico) en lugar de «KINÁ»\n(lamento). ¿Cómo se canta en medio de la tragedia? El editor pega\nel caso por cadena-fórmula: la tercera petición de Moshé (la\nteodicea) se ilustra con la respuesta DAVÍDICA al sufrimiento.\n"
+      }
     },
     {
       "slug": "provocar-rashaim",
@@ -1080,6 +1103,22 @@
       "nombre": "Tehilim 86 2"
     },
     {
+      "slug": "tehilim-3-1",
+      "nombre": "Tehilim 3 1"
+    },
+    {
+      "slug": "tehilim-3-2",
+      "nombre": "Tehilim 3 2"
+    },
+    {
+      "slug": "tehilim-2-1",
+      "nombre": "Tehilim 2 1"
+    },
+    {
+      "slug": "shmuel-ii-12-11",
+      "nombre": "Shmuel Ii 12 11"
+    },
+    {
       "slug": "tehilim-4-5",
       "nombre": "Tehilim 4 5"
     },
@@ -1303,6 +1342,22 @@
     {
       "slug": "vergueza-halajica",
       "nombre": "Vergueza Halajica"
+    },
+    {
+      "slug": "tarbut-raa",
+      "nombre": "Tarbut Raa"
+    },
+    {
+      "slug": "mizmor-vs-kina",
+      "nombre": "Mizmor Vs Kina"
+    },
+    {
+      "slug": "rebelion-filial",
+      "nombre": "Rebelion Filial"
+    },
+    {
+      "slug": "gog-umagog",
+      "nombre": "Gog Umagog"
     },
     {
       "slug": "keriat-shema-al-hamita",
@@ -1707,6 +1762,14 @@
       "peso": 3
     },
     {
+      "from": "moshe-tres-cosas",
+      "to": "david-y-avshalom",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #20 dejó la tensión irresuelta sobre la teodicea —\nR. Meir sostiene que las vías de HKBH son MISTERIOSAS, no\nsistematizables. La sugyá inmediatamente trae UN CASO concreto\ndonde la teodicea opera de manera ENIGMÁTICA: David, al huir de\nAvshalom su hijo, escribe «MIZMOR» (cántico) en lugar de «KINÁ»\n(lamento). ¿Cómo se canta en medio de la tragedia? El editor pega\nel caso por cadena-fórmula: la tercera petición de Moshé (la\nteodicea) se ilustra con la respuesta DAVÍDICA al sufrimiento.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -2035,6 +2098,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -2107,6 +2178,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -2141,6 +2220,14 @@
     {
       "from": "ashrei-olam-haba",
       "to": "moshe-tres-cosas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "david-y-avshalom",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -2291,6 +2378,14 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2347,6 +2442,22 @@
       "peso": 1
     },
     {
+      "from": "beit-knesset",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "hkbh-reza-tefilin",
       "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
@@ -2368,6 +2479,30 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "midat-rajamim",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
       "peso": 1
     }
   ]

@@ -1,0 +1,348 @@
+<div class="dyav-interactivo">
+<style>
+  .dyav-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .dyav-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .dyav-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .dyav-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .dyav-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .dyav-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .dyav-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .dyav-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .dyav-diagrama svg { width: 100%; height: auto; display: block; }
+  .dyav-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .dyav-nodo:hover rect { stroke-width: 2 !important; }
+  .dyav-nodo:hover circle { stroke-width: 2.5 !important; }
+  .dyav-nodo.activa rect { stroke-width: 2.5 !important; }
+  .dyav-nodo.activa circle { stroke-width: 3 !important; }
+  .dyav-nodo.dim { opacity: 0.32; }
+  .dyav-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .dyav-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .dyav-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .dyav-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .dyav-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .dyav-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .dyav-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="dyav-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la pregunta · mizmor vs kiná</span>
+  <span><span class="swatch azul"></span>parábola del acreedor</span>
+  <span><span class="swatch verde"></span>profecía de Natán</span>
+  <span><span class="swatch rojo"></span>tarbut ra'á · proof textual</span>
+  <span><span class="swatch sepia"></span>doctrina meta</span>
+</div>
+
+<div class="dyav-diagrama">
+<svg viewBox="0 0 720 1200" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 7b: David y Avshalom · ¿mizmor o kiná? · tarbut ra'á peor que Gog uMagog</title>
+
+<defs>
+  <marker id="flecha-dy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-dy-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">David y Avshalom · ¿mizmor o kiná?</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 7b · tarbut ra'á peor que Gog uMagog · el cántico dentro de la tragedia</text>
+
+<!-- ============================================================ -->
+<!-- LA PREGUNTA INICIAL                                          -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PREGUNTA INICIAL · TEHILIM 3:1 · 7B</text>
+
+<g class="dyav-nodo" data-id="pregunta">
+  <rect x="60" y="86" width="600" height="120" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">מִזְמוֹר לְדָוִד · בְּבָרְחוֹ מִפְּנֵי אַבְשָׁלוֹם בְּנוֹ</text>
+  <text x="360" y="128" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Cántico de David · cuando huía de Avshalom su hijo» (Tehilim 3:1)</text>
+
+  <line x1="80" y1="142" x2="640" y2="142" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="162" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">מִזְמוֹר? קִינָה מִבָּעֵי לֵיהּ!</text>
+  <text x="360" y="180" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¿MIZMOR? ¡Debería decir KINÁ (lamento)!»</text>
+  <text x="360" y="198" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">¿cómo cantar cuándo el propio hijo te persigue para matarte?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PARÁBOLA DEL ACREEDOR                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="206" x2="360" y2="224" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-dy)"/>
+
+<text x="60" y="236" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PARÁBOLA DEL ACREEDOR · 1.000 ZUZ Y EL HIJO</text>
+
+<g class="dyav-nodo" data-id="parabola">
+  <rect x="60" y="246" width="600" height="156" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+
+  <!-- Escena 1 -->
+  <text x="78" y="268" font-size="10" fill="#1e3a5f" font-weight="600">Escena 1 · la amenaza inicial</text>
+  <text x="78" y="284" font-size="9.5" fill="#3d2f23">un hombre tenía deuda de 1.000 zuz · el acreedor amenaza con cobrar</text>
+  <text x="78" y="298" font-size="9.5" fill="#3d2f23" font-style="italic">el deudor está triste y angustiado</text>
+
+  <line x1="80" y1="310" x2="640" y2="310" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Escena 2 -->
+  <text x="78" y="328" font-size="10" fill="#1e3a5f" font-weight="600">Escena 2 · la transformación</text>
+  <text x="78" y="344" font-size="9.5" fill="#3d2f23">el acreedor: «acepto que la pague TU HIJO en mi lugar»</text>
+  <text x="78" y="358" font-size="9.5" fill="#3d2f23" font-style="italic">el deudor SE ALEGRA — su hijo es manejable, cercano, accesible</text>
+
+  <line x1="80" y1="370" x2="640" y2="370" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="390" text-anchor="middle" font-size="10" fill="#1e3a5f" font-style="italic">la deuda es la misma · pero el cobrador cambia · y esto cambia TODO</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PROFECÍA DE NATÁN · APLICACIÓN                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="402" x2="360" y2="420" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-dy)"/>
+
+<text x="60" y="432" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PROFECÍA DE NATÁN · SHMUEL II 12:11 · APLICACIÓN</text>
+
+<g class="dyav-nodo" data-id="natan">
+  <rect x="60" y="442" width="600" height="148" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <!-- La profecía -->
+  <text x="360" y="464" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e">הִנְנִי מֵקִים עָלֶיךָ רָעָה מִבֵּיתֶךָ</text>
+  <text x="360" y="482" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«He aquí, levanto contra ti mal — DE TU PROPIA CASA» (Shmuel II 12:11)</text>
+
+  <line x1="80" y1="496" x2="640" y2="496" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="516" font-size="10" fill="#2d6b4e" font-weight="600">La aplicación de la parábola a David:</text>
+  <text x="78" y="532" font-size="9.5" fill="#3d2f23">David sabía que vendría un רָעָה (mal) · NO sabía DE DÓNDE</text>
+  <text x="78" y="548" font-size="9.5" fill="#3d2f23">esperaba lo PEOR — un esclavo, un extraño, un kushí (sin parentesco · sin misericordia)</text>
+  <text x="78" y="564" font-size="9.5" fill="#3d2f23">cuando vio que era su PROPIO HIJO Avshalom — <tspan font-weight="600">SE ALEGRÓ</tspan></text>
+  <text x="78" y="582" font-size="9" fill="#6b4423" font-style="italic">porque al menos era familia · podía haber alguna misericordia residual · por eso MIZMOR no KINÁ</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA COMPARACIÓN · TARBUT RA'Á VS GOG UMAGOG                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="590" x2="360" y2="608" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-dy)"/>
+
+<text x="60" y="620" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA COMPARACIÓN · TARBUT RA'Á PEOR QUE GOG UMAGOG</text>
+
+<g class="dyav-nodo" data-id="comparacion">
+  <rect x="60" y="630" width="600" height="86" rx="6" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="654" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">קָשָׁה תַּרְבּוּת רָעָה בְּתוֹךְ בֵּיתוֹ שֶׁל אָדָם יוֹתֵר מִמִּלְחֶמֶת גּוֹג וּמָגוֹג</text>
+  <text x="360" y="674" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Más grave es la mala crianza dentro de la casa del hombre que la guerra de Gog uMagog»</text>
+  <text x="360" y="696" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">la traición ÍNTIMA supera a la guerra CÓSMICA · lo cercano duele más que lo lejano</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PROOF TEXTUAL · TEHILIM 2 VS TEHILIM 3                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="716" x2="360" y2="732" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-dy)"/>
+
+<text x="60" y="744" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PROOF TEXTUAL · LA EXTENSIÓN DE LOS SALMOS</text>
+
+<g class="dyav-nodo" data-id="proof">
+  <rect x="60" y="754" width="600" height="180" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.3"/>
+
+  <!-- Gog uMagog -->
+  <rect x="78" y="772" width="276" height="148" rx="5" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="216" y="792" text-anchor="middle" font-size="10.5" fill="#8b1a1a" font-weight="700">GOG UMAGOG · Tehilim 2</text>
+  <text x="216" y="806" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">guerra cósmica de fin de los tiempos</text>
+  <text x="216" y="828" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">לָמָּה רָגְשׁוּ גוֹיִם</text>
+  <text x="216" y="846" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«¿por qué se agitan las naciones?»</text>
+
+  <text x="216" y="876" text-anchor="middle" font-size="9" fill="#3d2f23">salmo breve · introducción solitaria</text>
+  <text x="216" y="892" text-anchor="middle" font-size="9" fill="#3d2f23">enumeración minimal</text>
+  <text x="216" y="908" text-anchor="middle" font-size="9" fill="#8b1a1a" font-weight="600">BREVE</text>
+
+  <!-- Avshalom -->
+  <rect x="366" y="772" width="276" height="148" rx="5" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="504" y="792" text-anchor="middle" font-size="10.5" fill="#8b1a1a" font-weight="700">AVSHALOM · Tehilim 3</text>
+  <text x="504" y="806" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">traición íntima del hijo</text>
+  <text x="504" y="828" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">ה' מָה רַבּוּ צָרָי</text>
+  <text x="504" y="846" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«HKBH, ¡cuántos son mis enemigos!»</text>
+
+  <text x="504" y="876" text-anchor="middle" font-size="9" fill="#3d2f23">enumeración abundante</text>
+  <text x="504" y="892" text-anchor="middle" font-size="9" fill="#3d2f23">«muchos·muchos·muchos» (רבים·רבים·רבים)</text>
+  <text x="504" y="908" text-anchor="middle" font-size="9" fill="#8b1a1a" font-weight="600">EXTENSO</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PARADOJA DE LA INVERSIÓN                                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="934" x2="360" y2="952" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-dy)"/>
+
+<g class="dyav-nodo" data-id="paradoja">
+  <rect x="60" y="956" width="600" height="98" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="360" y="978" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La paradoja invertida · lo íntimo duele más que lo cósmico</text>
+
+  <!-- Comparación final -->
+  <line x1="360" y1="990" x2="360" y2="1044" stroke="#6b4423" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <text x="200" y="1004" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">Gog uMagog</text>
+  <text x="520" y="1004" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">Tarbut ra'á</text>
+
+  <text x="200" y="1020" text-anchor="middle" font-size="9" fill="#3d2f23">universal · público · histórico</text>
+  <text x="520" y="1020" text-anchor="middle" font-size="9" fill="#3d2f23">familiar · íntimo · privado</text>
+
+  <text x="200" y="1034" text-anchor="middle" font-size="9" fill="#3d2f23">enemigo: las naciones (extraños)</text>
+  <text x="520" y="1034" text-anchor="middle" font-size="9" fill="#3d2f23">enemigo: el hijo propio</text>
+
+  <text x="200" y="1048" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">menor dolor</text>
+  <text x="520" y="1048" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">MAYOR dolor</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · TRES LECCIONES                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="1054" x2="360" y2="1072" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-dy)"/>
+
+<g class="dyav-nodo" data-id="doctrina">
+  <rect x="60" y="1076" width="600" height="118" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1098" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El mizmor dentro de la kiná · la halajá del dolor</text>
+  <text x="78" y="1120" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1120" font-size="9.5" fill="#3d2f23">la traición de los CERCANOS duele más que la oposición de los extraños</text>
+  <text x="78" y="1136" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1136" font-size="9.5" fill="#3d2f23">incluso dentro de la tragedia hay GRADOS · lo íntimo es redimible donde lo cósmico no</text>
+  <text x="78" y="1152" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1152" font-size="9.5" fill="#3d2f23">el judío entrenado encuentra el MIZMOR dentro de la KINÁ · siempre hay gracia residual</text>
+  <text x="360" y="1178" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">respuesta práctica a la teodicea de R. Meir (#20) — sin teoría, el mizmor es teología sin sistema</text>
+</g>
+
+</svg>
+</div>
+
+<div class="dyav-panel" id="dyav-panel">
+  <p class="dyav-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'pregunta': {
+      titulo: 'La pregunta inicial · ¿mizmor o kiná?',
+      hebreo: 'מִזְמוֹר לְדָוִד · בְּבָרְחוֹ מִפְּנֵי אַבְשָׁלוֹם בְּנוֹ · מִזְמוֹר? קִינָה מִבָּעֵי לֵיהּ!',
+      traduccion: '«Cántico de David cuando huía de Avshalom su hijo» — ¿MIZMOR? ¡Debería decir KINÁ!',
+      explicacion: 'La sugyá abre con una pregunta editorial. El título de Tehilim 3 dice «מִזְמוֹר לְדָוִד» — «cántico de David» — y luego añade «בְּבָרְחוֹ מִפְּנֵי אַבְשָׁלוֹם בְּנוֹ» («cuando huía de Avshalom su hijo»).\n\nEl editor del Talmud SE SORPRENDE por la palabra «מִזְמוֹר» (cántico, salmo de alabanza). La situación es la peor que un padre puede experimentar — su propio hijo se ha rebelado, ha tomado el reino, persigue a su padre para matarlo. David huye de Jerusalén por su vida, descalzo, llorando, atravesando el Kidrón.\n\nLa palabra esperada para titular este texto sería «קִינָה» (kiná) — lamento, elegía, canción fúnebre. La tradición hebrea tiene un género distinto para la tragedia: las lamentaciones (megillat Eichá) son kinot, no mizmorim. La denominación «mizmor» implica alabanza y celebración.\n\n¿CÓMO PUEDE DAVID CANTAR EN MEDIO DE LA TRAGEDIA?\n\nLa pregunta no es solo filológica. Es teológica. ¿Hay algo POSITIVO en el desastre que merezca alabanza? ¿O David está negando su dolor con falsa piedad?\n\nLa sugyá va a responder que SÍ — hay algo concreto en la tragedia que merece mizmor, y la parábola del acreedor lo explica.\n\nLA PROFUNDIDAD DE LA PREGUNTA invita al lector a una sensibilidad espiritual particular: cuando enfrentas tragedia, NO te limites a llorar. Pregunta también qué hay de CANTABLE en la situación. NO porque la tragedia no duela, sino porque siempre hay un ángulo de gracia que el dolor inicial oscurece. La halajá del mizmor en la kiná es buscar ese ángulo.\n\nEsta es la enseñanza más amplia: el judaísmo NO autoriza el lamento puro. Siempre hay que buscar la dimensión bendecible incluso en la peor situación. Esta búsqueda NO es deshonestidad emocional — es disciplina espiritual.'
+    },
+    'parabola': {
+      titulo: 'La parábola del acreedor · 1.000 zuz y el hijo',
+      hebreo: 'מָשָׁל לְמָה הַדָּבָר דּוֹמֶה — לְמִי שֶׁהָיָה לוֹ חוֹב שֶׁל אֶלֶף זוּז',
+      traduccion: 'Parábola: a uno que tenía una deuda de 1.000 zuz',
+      explicacion: 'La sugyá ofrece una parábola para EXPLICAR la elección de «mizmor». La parábola es brillantemente psicológica.\n\nLA PARÁBOLA:\n\nEsCENA 1 — Un hombre debe 1.000 zuz a su acreedor. El acreedor amenaza con cobrar la deuda. El deudor está ANGUSTIADO. Es una deuda grande; el cobro lo arruinaría.\n\nESCENA 2 — El acreedor anuncia una variación: «acepto que la deuda la pague tu HIJO en mi lugar». La deuda es la MISMA cantidad. Pero el cobrador cambia: ahora no es un extraño hostil, sino su propio hijo.\n\nEL CAMBIO DE EMOCIÓN: el deudor pasa de angustia a ALIVIO. ¿Por qué? Porque su hijo:\n  · Tiene acceso a él permanente\n  · Conoce su situación real\n  · Tiene incentivo a no destruirlo (el padre y el hijo comparten patrimonio)\n  · Es flexible — puede negociar plazo, condiciones, parcialidades\n  · Tiene memoria del amor familiar\n\nEl acreedor extraño no tiene ninguna de estas cosas. Cobraría con la dureza máxima permitida por ley.\n\nLA APLICACIÓN A DAVID:\n\nHKBH había anunciado a David, vía el profeta Natán, que vendría un רָעָה (mal) contra él, de su PROPIA CASA (Shmuel II 12:11). Esto era resultado del asunto Bat-Sheva.\n\nDavid sabía que la deuda existía. Pero NO sabía QUIÉN sería el cobrador.\n\nEsperaba lo peor: un esclavo de su casa, un extraño, un kushí (extranjero) — alguien sin amor familiar, sin memoria, sin flexibilidad. Alguien que cobraría con la dureza máxima.\n\nCuando descubrió que el agente del mal era SU HIJO Avshalom — para todo lo terrible que era esto — fue UN ALIVIO RELATIVO. Porque al menos era familia.\n\nDAVID CANTÓ MIZMOR — no porque la situación fuera buena, sino porque podía haber sido PEOR. La gracia residual: que el cobrador es familia.\n\nESTA LECTURA TIENE MATICES SUTILES:\n\n  1. NO ESTÁ NEGANDO EL DOLOR — Tehilim 3 expresa angustia abundante. David no pretende que todo esté bien.\n\n  2. ESTÁ CALIBRANDO EL DOLOR — hay tragedia, sí, pero la tragedia podía haber sido absoluta. No lo es. Hay gracia.\n\n  3. ESTÁ TRANSFORMANDO LA PERCEPCIÓN — al ver el dolor en proporción (no como peor de los peores, sino como uno entre los posibles dolores), se libera el espacio para el mizmor.\n\nLA LECCIÓN GENERAL es de psicología espiritual: cuando enfrentas tragedia, pregúntate «¿cómo podría haber sido peor?». Esto NO es pensamiento positivo de autoayuda — es disciplina rabínica para identificar la gracia que sostiene incluso en el desastre.\n\nDavid, encontrando esa gracia (el cobrador es familia), CANTA. Esto es teología práctica: la alabanza convive con el dolor, no lo niega ni lo borra.'
+    },
+    'natan': {
+      titulo: 'La profecía de Natán · aplicación bíblica',
+      hebreo: 'הִנְנִי מֵקִים עָלֶיךָ רָעָה מִבֵּיתֶךָ',
+      traduccion: '«He aquí, levanto contra ti mal — de tu propia casa» (Shmuel II 12:11)',
+      explicacion: 'La parábola del acreedor encuentra su anclaje bíblico en la profecía de Natán a David.\n\nEL CONTEXTO BÍBLICO: tras el asunto de Bat-Sheva y Uriá (Shmuel II 11), HKBH envía al profeta Natán para confrontar a David. Natán le narra la famosa parábola del cordero pobre (12:1-4), David se condena a sí mismo, y Natán le anuncia las consecuencias:\n\n  «הִנְנִי מֵקִים עָלֶיךָ רָעָה מִבֵּיתֶךָ»\n  «He aquí, levanto contra ti mal — DE TU PROPIA CASA»\n\nLa profecía es ESPECÍFICA: el castigo vendrá DE LA CASA DE DAVID, no de afuera. Pero NO especifica QUIÉN exactamente sería el agente.\n\nLAS POSIBILIDADES DEL «מִבֵּיתֶךָ»:\n\nLa casa de David incluía:\n  · Sus hijos (Amnón, Avshalom, Adonías, Shlomó, etc.)\n  · Sus esposas y concubinas\n  · Sus siervos y oficiales palaciegos\n  · Los súbditos de su corte (Ajitófel, Joab, Benayahu, etc.)\n  · Los esclavos extranjeros adquiridos\n  · Los kushim (eunucos o personal foráneo en la corte)\n\nEntre todos estos, David esperaba que el agente del mal fuera ALGUIEN DEL EXTREMO MENOS FAMILIAR — un esclavo, un kushí, alguien sin lazo de sangre.\n\nPOR QUÉ DAVID ESPERABA LO PEOR:\n\n  1. LA TEOLOGÍA DEL CASTIGO — el castigo divino tiende a ser proporcional al pecado. El asunto Bat-Sheva era grave. David esperaba castigo proporcional, es decir, terrible.\n\n  2. LA HISTORIA BÍBLICA — los reyes anteriores fueron derrocados por extraños (Shaúl por filisteos). David esperaba esquema similar.\n\n  3. EL TEMOR DEL TZADIK — como se establece en #8 (miedo al pecado), el justo siempre teme la consecuencia peor. David, sabiéndose pecador, esperaba el peor agente.\n\nCUANDO DAVID DESCUBRE QUE EL AGENTE ES AVSHALOM:\n\nLa narrativa bíblica de la rebelión (Shmuel II 15-18) muestra a David enterándose progresivamente. Primero rumores. Luego confirmación. Luego huida apresurada de Jerusalén.\n\nEn ese momento de descubrimiento, según la lectura rabínica, David PROCESÓ que el «mal de su casa» era su PROPIO HIJO — no un esclavo, no un extraño.\n\nLA REACCIÓN ESPERADA sería desolación total — además de la pérdida del trono, la pérdida de un hijo a través de la rebelión.\n\nLA REACCIÓN REAL fue componer Tehilim 3 — «MIZMOR leDavid». Cántico.\n\n¿POR QUÉ? Porque Avshalom era SU HIJO. Compartían sangre, memoria, amor. Aunque rebelado, no era completamente extranjero al amor paterno. Había aún base para alguna misericordia residual. La tragedia era REDIMIBLE en formas que un esclavo asesino no permitiría.\n\nLA TRÁGICA IRONÍA HISTÓRICA: la rebelión termina con la muerte de Avshalom, y David llora amargamente «בני בני אבשלום» («mi hijo, mi hijo Avshalom» — Shmuel II 19:1). La gracia residual del mizmor inicial NO impidió el desastre completo. Pero la sugyá no está leyendo el final — está leyendo el momento de la composición del salmo. En ese momento, David encontró el ángulo de la gracia y cantó.\n\nLA LECCIÓN HALÁJICA: el mizmor en medio del dolor NO es ingenuo. Es atención DELIBERADA al elemento de gracia identificable. El dolor sigue siendo dolor; pero la gracia, una vez identificada, MERECE su canto. Las dos cosas conviven sin contradicción.'
+    },
+    'comparacion': {
+      titulo: 'La comparación · tarbut ra\'á más grave que Gog uMagog',
+      hebreo: 'קָשָׁה תַּרְבּוּת רָעָה בְּתוֹךְ בֵּיתוֹ שֶׁל אָדָם יוֹתֵר מִמִּלְחֶמֶת גּוֹג וּמָגוֹג',
+      traduccion: '«Más grave es la mala crianza dentro de la casa del hombre que la guerra de Gog uMagog»',
+      explicacion: 'La sugyá da un giro importante. Después de explicar por qué David cantó mizmor (la gracia residual del hijo vs. el extraño), ahora hace una afirmación INTENSIFICATORIA:\n\n  «קָשָׁה תַּרְבּוּת רָעָה בְּתוֹךְ בֵּיתוֹ שֶׁל אָדָם יוֹתֵר מִמִּלְחֶמֶת גּוֹג וּמָגוֹג»\n  «Más grave es la mala crianza (tarbut ra\'á) dentro de la casa del hombre que la guerra de Gog uMagog»\n\nVOCABULARIO CLAVE:\n\n  · תַּרְבּוּת רָעָה (tarbut ra\'á) — «mala crianza». Literalmente, «hábito malo» o «cultura defectuosa». Se refiere a un hijo descarriado, una rebelión familiar interna, una corrupción dentro del hogar.\n\n  · גּוֹג וּמָגוֹג (Gog uMagog) — la guerra cósmica del fin de los tiempos. Una de las imágenes más temibles del Tanaj (Yejezkel 38-39). Representa la oposición universal a Israel, el conflicto final de la historia, el apocalipsis bíblico.\n\nLA COMPARACIÓN ES PARADÓJICA:\n\nINTUITIVAMENTE, esperaríamos que Gog uMagog — guerra cósmica, fin del mundo, oposición universal — sea peor que cualquier otra cosa. ¿Cómo puede una situación familiar particular ser MÁS GRAVE que el apocalipsis universal?\n\nLA SUGYÁ DICE PRECISAMENTE ESO. Y va a ofrecer PRUEBA TEXTUAL.\n\nPERO ANTES de la prueba, vale la pena reflexionar SOBRE LA AFIRMACIÓN. Por qué es plausible:\n\n  1. EL DOLOR ÍNTIMO ATRAVIESA LA IDENTIDAD — Gog uMagog ataca lo COLECTIVO. Tarbut ra\'á ataca lo INDIVIDUAL en su núcleo. La identidad del padre/madre se construye en relación al hijo. Cuando el hijo se vuelve enemigo, la identidad misma se desgarra.\n\n  2. NO HAY HUIDA DEL DOLOR ÍNTIMO — en Gog uMagog, el sufrimiento es compartido por todos. Hay sentimiento de pertenencia colectiva, de causa común. Tarbut ra\'á aísla — solo TÚ tienes este hijo, este desastre familiar específico. Estás solo en tu dolor.\n\n  3. EL TRAIDOR ÍNTIMO CONOCE TUS VULNERABILIDADES — un enemigo extraño te ataca por fuera. Un hijo rebelado sabe DÓNDE duele exactamente. La traición íntima es dirigida al punto exacto del corazón.\n\n  4. LA POSIBILIDAD DE PERDÓN COMPLICA TODO — un enemigo distante puede ser odiado simplemente. Un hijo rebelado no puede ser odiado limpiamente — el amor no se borra. El dolor se mezcla con esperanza, frustración, culpa parental. Es psicológicamente más complejo.\n\n  5. EL EFECTO TRASCIENDE AL INDIVIDUO — Gog uMagog se acaba (Israel triunfa). Tarbut ra\'á envenena la línea — el hijo rebelado puede engendrar nietos rebelados. El daño es generacional.\n\nLA FORMULACIÓN HALÁJICA («kashá» — «es más grave/grave») es técnica. NO es solo «duele más» — es CATEGORIALMENTE más grave. Tiene status halájico distinto. La halajá de cómo reaccionar a tarbut ra\'á es distinta de la halajá de cómo reaccionar a Gog uMagog.\n\nIMPLICACIONES PRÁCTICAS:\n\n  · La crianza de los hijos es la PRIORIDAD halájica suprema — más urgente que cualquier preocupación cósmica\n  · El judío que tiene buenos hijos es BENDECIDO más allá de lo que cualquier triunfo externo pueda dar\n  · El judío que tiene hijos rebelados sufre más allá de lo que cualquier desastre externo pueda traer\n  · La oración por los hijos es la oración más urgente del padre/madre\n\nESTA DOCTRINA INVIERTE LA INTUICIÓN MODERNA: en una era donde los grandes desafíos parecen universales (cambio climático, crisis políticas, guerras), la sugyá recuerda que LA UNIDAD MÁS ÍNTIMA — la familia — sigue siendo el espacio de mayor riesgo y mayor recompensa. El éxito o fracaso de la vida humana se decide MÁS EN LA CASA que en el escenario público.'
+    },
+    'proof': {
+      titulo: 'El proof textual · Tehilim 2 vs Tehilim 3',
+      hebreo: 'הַהוֹכָחָה מִן הַתְּהִלִּים',
+      traduccion: 'La prueba desde los Salmos',
+      explicacion: 'La sugyá ofrece una prueba ELEGANTE de la afirmación: «tarbut ra\'á es más grave que Gog uMagog». La prueba es estructural — basada en la LONGITUD COMPARATIVA de los textos de Tehilim sobre cada tema.\n\nLA LÓGICA: si Tehilim trata extensivamente cierto tema, indica que ese tema requiere más expresión, más procesamiento, más reflexión — porque el dolor que comunica es mayor. Si trata otro tema brevemente, el dolor de ese tema es menor (relativamente).\n\nGOG UMAGOG · Tehilim 2:\n\nEste salmo es tradicionalmente interpretado como referido a Gog uMagog — la guerra cósmica del fin de los tiempos. Comienza con:\n\n  «לָמָּה רָגְשׁוּ גוֹיִם · וּלְאֻמִּים יֶהְגּוּ־רִיק»\n  «¿Por qué se agitan las naciones · y los pueblos meditan en vano?»\n\nEl salmo CONTINÚA describiendo el complot universal contra HKBH y su ungido, la reacción divina, el establecimiento del rey mesiánico. ES UN SALMO POTENTE, pero RELATIVAMENTE BREVE en su enumeración de angustias. Las quejas son específicas y limitadas.\n\nAVSHALOM · Tehilim 3:\n\nEl salmo del momento de la huida de Avshalom comienza:\n\n  «מִזְמוֹר לְדָוִד · בְּבָרְחוֹ מִפְּנֵי אַבְשָׁלוֹם בְּנוֹ»\n  «Cántico de David · cuando huía de Avshalom su hijo»\n\nY los versículos siguientes ENUMERAN:\n\n  «ה\' מָה רַבּוּ צָרָי» — «HKBH, ¡cuántos son mis enemigos!»\n  «רַבִּים קָמִים עָלָי» — «¡muchos se levantan contra mí!»\n  «רַבִּים אֹמְרִים לְנַפְשִׁי, אֵין יְשׁוּעָתָה לּוֹ» — «muchos dicen a mi alma, no hay salvación»\n\nNOTA LA REPETICIÓN DE «רַבִּים» («muchos») tres veces seguidas. Es un grito repetitivo, un dolor que necesita decirse y decirse. La enumeración de la angustia es ABUNDANTE.\n\nLA COMPARACIÓN ESTRUCTURAL:\n\n  · Gog uMagog (cósmico) — un solo versículo introductorio, breve enumeración\n  · Avshalom (íntimo) — tres «muchos» seguidos, enumeración extensa\n\nLA INFERENCIA: si los Salmos — la voz inspirada de la angustia humana — dedican MÁS espacio a la tragedia de Avshalom que a la guerra cósmica de Gog uMagog, entonces la tragedia de Avshalom DUELE MÁS. La sensibilidad del Salterio NO se equivoca; refleja la realidad psicológica del dolor.\n\nLA ELEGANCIA DEL ARGUMENTO:\n\nLa prueba NO se basa en argumentos filosóficos abstractos sobre la naturaleza del dolor. Se basa en EVIDENCIA TEXTUAL CONCRETA. El Tanaj mismo, por su estructura, valida la afirmación rabínica.\n\nEsta es metodología clásica del Talmud: cuando un argumento parece intuitivamente extraño, búscalo en la estructura textual de la Escritura. Si la Escritura lo confirma estructuralmente, es válido.\n\nLA APLICACIÓN AMPLIA:\n\nEste método de leer la EXTENSIÓN de los textos como índice de la INTENSIDAD del tema se puede aplicar a muchos otros temas:\n\n  · Los textos extensos sobre el amor entre Yaakov y Rajel indican la magnitud del amor\n  · Los textos breves sobre ciertos pecados pueden indicar que la Torá no quiere dwell en ellos\n  · Los textos extensos sobre la construcción del Mishkán indican su importancia central\n\nLA LECCIÓN PRÁCTICA: cuando leas Tanaj, observa NO SOLO QUÉ se dice, sino CUÁNTO. La cantidad de palabras dedicadas a un tema es información significativa.\n\nLA CONCLUSIÓN DEL PROOF: confirmada estructuralmente, la doctrina queda establecida — tarbut ra\'á es más grave que Gog uMagog. La intuición del lector se ALINEA con la estructura del Tanaj. La sugyá ha hecho su trabajo argumentativo.'
+    },
+    'paradoja': {
+      titulo: 'La paradoja invertida · lo íntimo duele más',
+      hebreo: 'הַפָּרָדוֹקְס הַהֲפוּךְ',
+      traduccion: 'La paradoja invertida',
+      explicacion: 'La conclusión de la sugyá es una PARADOJA INVERTIDA. La intuición ordinaria espera que lo grande, cósmico, universal sea más grave que lo pequeño, íntimo, privado. La sugyá DEMUESTRA lo contrario.\n\nLA TABLA COMPARATIVA:\n\n  · ESCALA — Gog uMagog es universal; Avshalom es familiar\n  · VISIBILIDAD — Gog uMagog es público histórico; Avshalom es íntimo personal\n  · COMPAÑÍA — en Gog uMagog toda la humanidad sufre junta; en Avshalom David está casi solo (acompañado por unos pocos leales)\n  · IDENTIDAD DEL ENEMIGO — Gog uMagog: naciones extranjeras; Avshalom: el propio hijo\n  · TEXTO EN TEHILIM — Gog uMagog: breve; Avshalom: extenso\n  · DOLOR RELATIVO — Gog uMagog: menor; Avshalom: MAYOR\n\n¿POR QUÉ ESTA INVERSIÓN ES CORRECTA?\n\nVARIAS LECTURAS POSIBLES:\n\nLECTURA 1 — Psicológica:\nEl dolor más intenso es el que toca el núcleo de la identidad personal. La identidad del padre se construye en relación con el hijo. Cuando el hijo se vuelve enemigo, la identidad se desgarra. La identidad del ciudadano de Israel se construye en relación con un pueblo amplio; cuando otras naciones atacan, el ciudadano comparte el sufrimiento con muchos otros. El dolor compartido es proporcionalmente menos intenso por individuo.\n\nLECTURA 2 — Teológica:\nLa relación padre-hijo es modelo de la relación HKBH-Israel. Cuando el hijo se rebela, no es solo desgarrar el corazón del padre — es ofender el orden cósmico que pone a los hijos al servicio del legado paterno. Avshalom rebela contra DAVID Y CONTRA HKBH simultáneamente. La gravedad es doble.\n\nLECTURA 3 — Halájica:\nLa halajá responde con sanciones específicas a tarbut ra\'á. Un hijo rebelado (ben sorer u-moré) tiene un tratamiento halájico distinto al de un enemigo nacional. La gravedad legal de la traición filial es categorialmente distinta y mayor.\n\nLECTURA 4 — Existencial:\nLa traición íntima ataca el sentido de SEGURIDAD básica. Si NO puedes confiar en tu hijo, ¿en quién puedes confiar? Gog uMagog confirma que los enemigos son enemigos — esto, aunque doloroso, NO altera el orden de confianza interna. Avshalom altera la confianza fundamental — descubres que no puedes confiar ni en los más cercanos. Esta alteración existencial es más radical que cualquier amenaza externa.\n\nLA INVERSIÓN COMO LECCIÓN ESPIRITUAL:\n\nQUIEN APRENDE esta sugyá modifica su sentido de prioridad espiritual. Tiende a:\n\n  · Concentrar atención y oración en las relaciones FAMILIARES\n  · Considerar la calidad de la vida familiar como criterio supremo de éxito espiritual\n  · Resistir la tentación de medirse por logros públicos mientras descuida la vida íntima\n  · Reconocer que las tragedias domésticas requieren más atención halájica que las catástrofes externas\n\nLA LECCIÓN ES CONTRACULTURAL en una época que glorifica lo grande y lo público. La sugyá insiste: lo más importante ocurre en la casa. Los reinos pueden caer y reconstruirse; las relaciones familiares destruidas son más difíciles de restaurar.\n\nESTA DOCTRINA EXPLICA POR QUÉ EL JUDAÍSMO INVIERTE TANTO EN LA FAMILIA. La halajá de educación de los hijos, de respeto a los padres, de pureza familiar, de oración por los hijos — toda esta densidad halájica refleja el reconocimiento de que la familia es EL ESPACIO MÁS IMPORTANTE DE LA VIDA HUMANA. Si la familia funciona, hay base para todo. Si la familia falla, las catástrofes que esto produce superan a las catástrofes externas.\n\nLA PARADOJA INVERTIDA es entonces una guía vital: invierte tu atención. No te dejes hipnotizar por lo cósmico. Atiende a lo íntimo. Es ahí donde se juega la verdadera batalla.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · el mizmor dentro de la kiná',
+      hebreo: 'הַמִּזְמוֹר בְּתוֹךְ הַקִּינָה',
+      traduccion: 'El mizmor dentro del lamento',
+      explicacion: 'La sugyá termina con una doctrina espiritual de tres lecciones, cada una de las cuales reconfigura la actitud del judío hacia el sufrimiento.\n\nLECCIÓN 1 · EL VERDADERO DOLOR ES EL ÍNTIMO\n\nLa enseñanza inicial: la traición de los cercanos duele más que la oposición de los extraños. Esto tiene implicaciones para la vida espiritual:\n\n  · INVIERTE en las relaciones íntimas — son donde se juega lo más profundo\n  · NO te concentres exclusivamente en preocupaciones externas — las internas son más urgentes\n  · La halajá de la vida familiar es la halajá más urgente\n\nQuien NUNCA ha sido lastimado por familia no entiende qué es el verdadero dolor. Esto no es romance del dolor familiar — es reconocimiento de su CATEGORÍA distinta. La familia es donde se vive lo definitivo, para bien y para mal.\n\nLECCIÓN 2 · LA SALVACIÓN TIENE GRADIENTES\n\nIncluso dentro de la tragedia hay GRADOS de gravedad. La tragedia familiar es REDIMIBLE en formas que la cósmica no es. Por eso David canta — porque dentro del horror, hay un camino posible.\n\nESTO REFINA LA RESPUESTA AL SUFRIMIENTO:\n\n  · NO simplifiques la tragedia a «todo está mal» — hay matices\n  · BUSCA siempre el ángulo de la gracia residual — siempre existe\n  · LA REDIMIBILIDAD ES INFORMACIÓN ESPIRITUAL — saber qué se puede salvar guía las acciones\n\nDavid, al identificar que Avshalom era SU HIJO (no un extraño), identificó la POSIBILIDAD de redención. Sabía que aunque la situación era terrible, no era irreversible. Esta identificación de la posibilidad genera el espacio para el mizmor.\n\nLECCIÓN 3 · LA HALAJÁ DEL MIZMOR EN LA KINÁ\n\nLa lección suprema: incluso en la peor tragedia, EXISTE un ángulo desde el cual cantar. NO porque la tragedia no sea real, sino porque SIEMPRE hay alguna gracia residual identificable.\n\nEL JUDÍO ENTRENADO encuentra el mizmor dentro de la kiná. Esto es disciplina espiritual de la más alta orden. Requiere:\n\n  · NO negar el dolor\n  · NO embotar el dolor con positivismo barato\n  · IDENTIFICAR específicamente la gracia residual\n  · DARLE su lugar legítimo en la experiencia\n\nLA DOCTRINA NO ES «pensamiento positivo». Es teología práctica de la atención: dirigir la atención a los puntos de gracia incluso en medio del desastre.\n\nLA CONEXIÓN CON LA TEODICEA DE #20:\n\nR. Meir había dicho que las vías de HKBH NO son sistematizables — la tercera petición de Moshé NO fue concedida. La teodicea permanece teóricamente IRRESUELTA.\n\nPERO LA SUGYÁ DE DAVID OFRECE UNA RESPUESTA PRÁCTICA. Sin teoría sistemática del por qué, David encuentra el ángulo del cántico. La respuesta a la teodicea NO es teórica (R. Meir tenía razón sobre eso) — es POÉTICA. El mizmor es teología sin teoría. El cántico es la halajá del dolor.\n\nDavid NO ENTIENDE por qué su hijo le persigue (Moshé tampoco habría obtenido la respuesta teórica). Pero NO TIENE QUE entender para CANTAR. La respuesta al sufrimiento no es comprensión — es respuesta. Es ACTUAR con dignidad espiritual aun sin claridad intelectual.\n\nESTA ES LA HERENCIA DAVÍDICA: la teología poética. La capacidad de encontrar el cántico dentro del dolor. La halajá del mizmor en la kiná.\n\nQUIEN APRENDE ESTA SUGYÁ aprende a buscar — en cada situación de su vida — el ángulo del mizmor. No porque negar la kiná, sino porque honrar tanto la kiná como el mizmor que siempre la acompaña.\n\nLA APLICACIÓN PRÁCTICA: en momentos de tragedia personal, deten la atención. Pregúntate: «¿qué hay aquí que merezca mizmor a pesar de todo?». La respuesta puede ser pequeña — un hijo que aún tiene memoria del amor, una salud parcial preservada, un amigo que se mantiene cerca. Pero esa respuesta merece su cántico. Y el cántico, junto al lamento, completa la experiencia espiritual del dolor.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.dyav-interactivo')
+    : document.querySelector('.dyav-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#dyav-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.dyav-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="dyav-panel-header">' +
+        '<p class="dyav-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="dyav-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="dyav-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="dyav-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.dyav-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.dyav-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="dyav-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
