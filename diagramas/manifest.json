@@ -829,16 +829,33 @@
       "slug": "shema-dos-veces",
       "orden": 24,
       "titulo": "R. Shimon bar Yojai · shema dos veces",
-      "subtitulo": "antes y después del amud hashachar",
+      "subtitulo": "antes y después del amud hashachar · ¿es noche o día?",
       "dapim": [
         "8b",
         "9a"
       ],
       "grupo": "La gran sugyá del shema",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/shema-dos-veces.html",
+      "sabios": [
+        "r-shimon-bar-yojai",
+        "rabban-gamliel"
+      ],
+      "sabios_biblicos": [],
+      "pesukim": [
+        "devarim-6-7"
+      ],
+      "conceptos": [
+        "amud-hashachar",
+        "shema",
+        "shokhbeicha-vekumecha",
+        "boundary-times",
+        "tichdic-tov"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #23 mostró el judaísmo aprendiendo de las naciones —\nsu dimensión cultural más abierta. Ahora la sugyá VUELVE al\ncentro halájico del perek: la mishná del שמע. El editor cierra\nel perek con un retorno al tema inicial — pero ahora desde una\nperspectiva refinada por todo lo aprendido. R. Shimon bar Yojai\npropone una halajá audaz: hay momentos en que el judío recita\nshema DOS VECES dentro de una misma «noche» — una para cumplir\nla obligación nocturna, otra para cumplir la diurna. La frontera\nentre noche y día se vuelve halájicamente FLEXIBLE.\n"
+      }
     },
     {
       "slug": "pesaj-y-zman-shema",
@@ -1039,12 +1056,12 @@
       "nombre": "R Asi"
     },
     {
-      "slug": "tanu-rabanan",
-      "nombre": "Tanu Rabanan"
-    },
-    {
       "slug": "r-shimon-bar-yojai",
       "nombre": "R Shimon Bar Yojai"
+    },
+    {
+      "slug": "tanu-rabanan",
+      "nombre": "Tanu Rabanan"
     },
     {
       "slug": "r-natan",
@@ -1612,6 +1629,22 @@
       "nombre": "Hefsek"
     },
     {
+      "slug": "shema",
+      "nombre": "Shema"
+    },
+    {
+      "slug": "shokhbeicha-vekumecha",
+      "nombre": "Shokhbeicha Vekumecha"
+    },
+    {
+      "slug": "boundary-times",
+      "nombre": "Boundary Times"
+    },
+    {
+      "slug": "tichdic-tov",
+      "nombre": "Tichdic Tov"
+    },
+    {
       "slug": "mejitzá",
       "nombre": "Mejitzá"
     },
@@ -1875,6 +1908,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "El diagrama #22 estableció que se PERMITE provocar a los rashaim\n— la dimensión confrontacional del judaísmo. Ahora la sugyá ofrece\nel COMPLEMENTO necesario: cuando hay VIRTUD entre las naciones,\nel judaísmo la RECONOCE Y APRENDE. R. Akiva y R. Gamliel — dos de\nlas figuras más grandes del tanaitismo — declaran abiertamente\n«amo» (אוהב אני) ciertas costumbres de los Medos y los Persas.\nLa dialéctica completa: confrontación cuando hay mal, aprendizaje\ncuando hay bien.\n",
+      "peso": 3
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "shema-dos-veces",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #23 mostró el judaísmo aprendiendo de las naciones —\nsu dimensión cultural más abierta. Ahora la sugyá VUELVE al\ncentro halájico del perek: la mishná del שמע. El editor cierra\nel perek con un retorno al tema inicial — pero ahora desde una\nperspectiva refinada por todo lo aprendido. R. Shimon bar Yojai\npropone una halajá audaz: hay momentos en que el judío recita\nshema DOS VECES dentro de una misma «noche» — una para cumplir\nla obligación nocturna, otra para cumplir la diurna. La frontera\nentre noche y día se vuelve halájicamente FLEXIBLE.\n",
       "peso": 3
     },
     {
@@ -2230,6 +2271,30 @@
       "peso": 1
     },
     {
+      "from": "cerca-y-trabajador",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -2534,6 +2599,22 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "tres-regalos",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2707,6 +2788,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "shema-dos-veces",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
       "peso": 1
     }
   ]

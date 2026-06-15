@@ -1,0 +1,359 @@
+<div class="dos-interactivo">
+<style>
+  .dos-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .dos-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .dos-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .dos-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .dos-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .dos-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .dos-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .dos-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .dos-diagrama svg { width: 100%; height: auto; display: block; }
+  .dos-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .dos-nodo:hover rect { stroke-width: 2 !important; }
+  .dos-nodo:hover circle { stroke-width: 2.5 !important; }
+  .dos-nodo.activa rect { stroke-width: 2.5 !important; }
+  .dos-nodo.activa circle { stroke-width: 3 !important; }
+  .dos-nodo.dim { opacity: 0.32; }
+  .dos-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .dos-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .dos-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .dos-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .dos-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .dos-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .dos-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="dos-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear</span>
+  <span><span class="swatch verde"></span>verseta · derashá flexible</span>
+  <span><span class="swatch azul"></span>caso del madrugador</span>
+  <span><span class="swatch rojo"></span>condición · hashkivenu</span>
+  <span><span class="swatch sepia"></span>doctrina · cierre del perek</span>
+</div>
+
+<div class="dos-diagrama">
+<svg viewBox="0 0 720 1240" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 8b-9a: R. Shimon bar Yojai · shema dos veces en una noche · la flexibilidad halájica del zman</title>
+
+<defs>
+  <marker id="flecha-dv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-dv-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- Gradiente del amanecer -->
+  <linearGradient id="grad-amanecer" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%"   stop-color="#0d1425" stop-opacity="0.9"/>
+    <stop offset="45%"  stop-color="#1a2744" stop-opacity="0.85"/>
+    <stop offset="55%"  stop-color="#b8860b" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#c8873c" stop-opacity="0.6"/>
+  </linearGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Shimon bar Yojai · shema dos veces en una noche</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 8b–9a · la frontera entre noche y día es FLEXIBLE</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · R. SHIMON BAR YOJAI                    -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · TANEI R. SHIMON BAR YOJAI · 8B</text>
+
+<g class="dos-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="118" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">פְּעָמִים שֶׁאָדָם קוֹרֵא קְרִיאַת שְׁמַע שְׁתֵּי פְעָמִים בַּלַּיְלָה</text>
+  <text x="360" y="128" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">אַחַת קוֹדֶם שֶׁיַּעֲלֶה עַמּוּד הַשַּׁחַר · וְאַחַת לְאַחַר שֶׁיַּעֲלֶה</text>
+  <text x="360" y="150" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«A veces una persona recita shema DOS VECES en la noche — una antes de amud hashachar y una después»</text>
+
+  <line x1="80" y1="164" x2="640" y2="164" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="184" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b">וְיוֹצֵא בָּהֶן יְדֵי חוֹבָתוֹ — אַחַת שֶׁל יוֹם וְאַחַת שֶׁל לַיְלָה</text>
+  <text x="360" y="200" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Y cumple con AMBAS obligaciones — una del día y una de la noche»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PARADOJA TEMPORAL · VISUALIZACIÓN                         -->
+<!-- ============================================================ -->
+<line x1="360" y1="204" x2="360" y2="222" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-dv-gold)"/>
+
+<text x="60" y="234" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VISUALIZACIÓN · LA PARADOJA TEMPORAL DEL AMUD HASHACHAR</text>
+
+<g class="dos-nodo" data-id="visualizacion">
+  <rect x="60" y="244" width="600" height="226" rx="6" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1.3"/>
+
+  <!-- Timeline horizontal con gradiente -->
+  <rect x="80" y="284" width="560" height="42" rx="6" fill="url(#grad-amanecer)"/>
+
+  <!-- Línea divisoria del amud hashachar -->
+  <line x1="380" y1="276" x2="380" y2="338" stroke="#b8860b" stroke-width="2.5"/>
+  <text x="380" y="270" text-anchor="middle" font-size="11" fill="#b8860b" font-weight="700">AH</text>
+  <text x="380" y="354" text-anchor="middle" font-size="9" fill="#b8860b">amud hashachar</text>
+  <text x="380" y="366" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">frontera halájica</text>
+
+  <!-- Labels: antes y después -->
+  <text x="80" y="270" font-size="9" fill="#6b4423">noche ⟵</text>
+  <text x="640" y="270" text-anchor="end" font-size="9" fill="#6b4423">⟶ día</text>
+
+  <!-- Marcadores de shema #1 y #2 -->
+  <circle cx="220" cy="305" r="14" fill="rgba(184,134,11,0.30)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="220" y="310" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="700">1</text>
+  <text x="220" y="354" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-weight="600">shema #1</text>
+  <text x="220" y="368" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">antes de AH</text>
+
+  <circle cx="500" cy="305" r="14" fill="rgba(184,134,11,0.30)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="500" y="310" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="700">2</text>
+  <text x="500" y="354" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-weight="600">shema #2</text>
+  <text x="500" y="368" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">después de AH</text>
+
+  <!-- Asignación halájica -->
+  <line x1="220" y1="380" x2="220" y2="398" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-dv)"/>
+  <line x1="500" y1="380" x2="500" y2="398" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-dv)"/>
+
+  <rect x="120" y="404" width="200" height="50" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="220" y="420" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">obligación de la NOCHE</text>
+  <text x="220" y="436" text-anchor="middle" font-size="9" fill="#3d2f23">(arvit)</text>
+  <text x="220" y="450" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">cumple shema arvit</text>
+
+  <rect x="400" y="404" width="200" height="50" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="500" y="420" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="700">obligación del DÍA</text>
+  <text x="500" y="436" text-anchor="middle" font-size="9" fill="#3d2f23">(shajarit)</text>
+  <text x="500" y="450" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">cumple shema shajarit</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA VERSETA · DERASHÁ FLEXIBLE                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="470" x2="360" y2="488" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-dv)"/>
+
+<text x="60" y="500" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA BASE ESCRITURARIA · DEVARIM 6:7 · DERASHÁ DEÍCTICA</text>
+
+<g class="dos-nodo" data-id="verseta">
+  <rect x="60" y="510" width="600" height="156" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <text x="360" y="534" text-anchor="middle" font-size="12.5" direction="rtl" fill="#2d6b4e">וּבְשָׁכְבְּךָ וּבְקוּמֶךָ</text>
+  <text x="360" y="552" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«cuando te acuestes y cuando te levantes» (Devarim 6:7)</text>
+
+  <line x1="80" y1="564" x2="640" y2="564" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="584" font-size="10" fill="#2d6b4e" font-weight="600">Lectura DEÍCTICA · no cronológica:</text>
+
+  <!-- Dos cláusulas en columnas -->
+  <rect x="80" y="594" width="270" height="60" rx="4" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="215" y="612" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e" font-weight="700">וּבְשָׁכְבְּךָ</text>
+  <text x="215" y="628" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">no «en la noche»</text>
+  <text x="215" y="644" text-anchor="middle" font-size="9" fill="#3d2f23">= período del «acostarse»</text>
+
+  <rect x="370" y="594" width="270" height="60" rx="4" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="505" y="612" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e" font-weight="700">וּבְקוּמֶךָ</text>
+  <text x="505" y="628" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">no «en el día»</text>
+  <text x="505" y="644" text-anchor="middle" font-size="9" fill="#3d2f23">= período del «levantarse»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL CASO DEL MADRUGADOR                                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="666" x2="360" y2="684" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-dv)"/>
+
+<text x="60" y="696" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CASO ESPECÍFICO · EL MADRUGADOR</text>
+
+<g class="dos-nodo" data-id="madrugador">
+  <rect x="60" y="706" width="600" height="156" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="728" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿En qué caso una persona recita shema dos veces en una noche?</text>
+
+  <text x="78" y="752" font-size="10" fill="#1e3a5f" font-weight="600">Casos típicos:</text>
+  <text x="78" y="770" font-size="9.5" fill="#3d2f23">· un cohen que necesita inmersión ritual antes del amanecer</text>
+  <text x="78" y="786" font-size="9.5" fill="#3d2f23">· un viajero que parte muy temprano (antes del amud hashachar)</text>
+  <text x="78" y="802" font-size="9.5" fill="#3d2f23">· un sabio que se levanta a chatzot a estudiar y no quiere esperar</text>
+
+  <line x1="80" y1="814" x2="640" y2="814" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="834" font-size="10" fill="#1e3a5f" font-weight="600">Condición del madrugador:</text>
+  <text x="78" y="850" font-size="9.5" fill="#3d2f23">se levantó antes del AH · ya completó su sueño · necesita cumplir ambas obligaciones</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA CONDICIÓN · HASHKIVENU                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="862" x2="360" y2="880" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-dv)"/>
+
+<text x="60" y="892" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CONDICIÓN CRUCIAL · ובלבד שלא יאמר השכיבנו</text>
+
+<g class="dos-nodo" data-id="hashkivenu">
+  <rect x="60" y="902" width="600" height="124" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="924" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">וּבִלְבַד שֶׁלֹּא יֹאמַר הַשְׁכִּיבֵנוּ</text>
+  <text x="360" y="942" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«con tal que NO diga Hashkivenu»</text>
+
+  <line x1="80" y1="956" x2="640" y2="956" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="976" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">Hashkivenu</tspan> (acuéstanos) es la bracha que cierra arvit · NO se recita en la madrugada</text>
+  <text x="78" y="992" font-size="9.5" fill="#3d2f23">cerca del AH · TÉCNICAMENTE cuenta como arvit, pero ya no es momento de «acostarse»</text>
+  <text x="78" y="1008" font-size="9" fill="#6b4423" font-style="italic">la halajá distingue entre el SHEMA mismo (flexible) y las brachot circundantes (más rígidas)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · LA MALEABILIDAD HALÁJICA DEL TIEMPO         -->
+<!-- ============================================================ -->
+<line x1="360" y1="1026" x2="360" y2="1044" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-dv)"/>
+
+<text x="60" y="1056" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA MALEABILIDAD HALÁJICA DEL TIEMPO</text>
+
+<g class="dos-nodo" data-id="doctrina">
+  <rect x="60" y="1066" width="600" height="158" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1088" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El tiempo halájico es FUNCIONAL, no astronómico</text>
+
+  <text x="78" y="1110" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1110" font-size="9.5" fill="#3d2f23">«noche» y «día» se definen por FUNCIÓN HUMANA (acostarse / levantarse), no por sol</text>
+
+  <text x="78" y="1126" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1126" font-size="9.5" fill="#3d2f23">las FRONTERAS son calibrables — AH puede flexibilizarse hacia atrás o adelante</text>
+
+  <text x="78" y="1142" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1142" font-size="9.5" fill="#3d2f23">la halajá ACOMODA el caso real — diseñada para cohens, viajeros, madrugadores</text>
+
+  <text x="78" y="1158" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="1158" font-size="9.5" fill="#3d2f23">dos shemas en una noche NO es duplicación — es COMPLETUD de obligaciones</text>
+
+  <text x="78" y="1174" font-size="9.5" fill="#3d2f23">5.</text>
+  <text x="100" y="1174" font-size="9.5" fill="#3d2f23">el perek CIERRA con su tema inicial · retorno del zman shema arvit (#1) refinado</text>
+
+  <text x="360" y="1200" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el cierre del perek marca COMPLETUD · la sugyá ha viajado del zman literal a la flexibilidad refinada</text>
+  <text x="360" y="1214" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">esta sensibilidad permite a R. Yose entrar a la ruina, a David estudiar a chatzot, al cohen prepararse para el Templo</text>
+</g>
+
+</svg>
+</div>
+
+<div class="dos-panel" id="dos-panel">
+  <p class="dos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'La declaración nuclear de R. Shimon bar Yojai',
+      hebreo: 'פְּעָמִים שֶׁאָדָם קוֹרֵא קְרִיאַת שְׁמַע שְׁתֵּי פְעָמִים בַּלַּיְלָה · וְיוֹצֵא בָּהֶן יְדֵי חוֹבָתוֹ — אַחַת שֶׁל יוֹם וְאַחַת שֶׁל לַיְלָה',
+      traduccion: '«A veces uno recita shema DOS VECES en la noche y cumple ambas obligaciones — una del día y una de la noche»',
+      explicacion: 'R. Shimon bar Yojai (Rashbi) establece una halajá SORPRENDENTE. Una misma persona, en una misma noche, puede recitar shema DOS VECES — y NO está duplicando innecesariamente. Está cumpliendo DOS OBLIGACIONES DISTINTAS.\n\nLA PARADOJA APARENTE:\n\nLa intuición simple dice: el shema de la noche se recita EN LA NOCHE, y el shema del día se recita EN EL DÍA. Si recito shema dos veces antes del amanecer, ¿no estaría duplicando la obligación nocturna?\n\nLA RESPUESTA DE RASHBI: NO. Si una de las dos recitaciones ocurre DESPUÉS del amud hashachar (la primera señal de luz del alba), entonces esa recitación cumple la obligación DEL DÍA — aunque físicamente todavía sea oscuro y la mayoría considere que es «noche».\n\nLA SUTILEZA:\n\nLa palabra «בלילה» («en la noche») en la declaración de Rashbi es engañosa. Físicamente, ambas recitaciones ocurren antes de que el sol salga completamente — durante lo que coloquialmente llamaríamos «la noche». Pero HALÁJICAMENTE, una está antes del amud hashachar (= noche legal) y otra está después (= día legal).\n\nLA TECNICALIDAD:\n\n  · Amud hashachar = primer rayo de luz, definido astronómicamente como cuando el cielo del este comienza a iluminarse antes del amanecer pleno (haneitz hachama)\n\n  · Es un punto TEMPRANO de la mañana, cuando para los ojos comunes todavía parece noche\n\n  · Pero halájicamente, marca el INICIO del día (לעניין כמה דברים)\n\nESTA HALAJÁ DE RASHBI:\n\n  · No es invento abstracto — responde a casos reales (madrugadores, cohens, viajeros)\n  · Tiene base bíblica (la flexibilidad deíctica de «בשכבך ובקומך»)\n  · Cumple ambas obligaciones con eficiencia litúrgica\n  · Demuestra la SOFISTICACIÓN del tiempo halájico\n\nLA POSICIÓN EDITORIAL:\n\nEsta enseñanza viene al FINAL del perek (8b-9a). El perek comenzó con la mishná sobre el zman del shema arvit (#1) — discutida ampliamente al principio. Ahora CIERRA con una halajá refinada que demuestra la madurez de la sugyá. El editor utiliza esta estructura para señalar COMPLETUD temática.\n\nLA RECEPCIÓN POSTERIOR:\n\nLa halajá de Rashbi se incorpora a la práctica codificada. En casos específicos (kohen tahor que necesita inmersión antes del amanecer para servir en el Beit Hamikdash, viajero que sale antes del alba), se aplica la doble recitación. La sensibilidad halájica clásica MANTIENE esta sofisticación temporal.\n\nLA LECCIÓN GENERAL:\n\nEl judaísmo NO es rígido temporalmente. Tiene precisión PERO con flexibilidad. La precisión asegura que la halajá no se diluya. La flexibilidad asegura que se ACOMODE a circunstancias reales. La combinación de ambas — precisión flexible — es marca de la madurez halájica.'
+    },
+    'visualizacion': {
+      titulo: 'La visualización · la frontera del amud hashachar',
+      hebreo: 'עַמּוּד הַשַּׁחַר · גְּבוּל הֲלָכִי',
+      traduccion: 'Amud hashachar · frontera halájica',
+      explicacion: 'La visualización muestra la estructura temporal de la halajá de Rashbi.\n\nLA LÍNEA TEMPORAL:\n\nDe IZQUIERDA a DERECHA en el diagrama:\n\n  · NOCHE COMPLETA (extremo izquierdo, color oscuro)\n  · APROXIMACIÓN AL AMANECER (gradiente azul-dorado)\n  · AMUD HASHACHAR (línea vertical dorada — la frontera halájica)\n  · DESPUÉS DEL AH (gradiente amaneciendo)\n  · DÍA PLENO (extremo derecho, dorado)\n\nLA FRONTERA HALÁJICA está marcada por la LÍNEA VERTICAL del amud hashachar. Esta es la única frontera que importa halájicamente para esta sugyá.\n\nLOS DOS PUNTOS DE SHEMA:\n\n  · SHEMA #1 (círculo dorado a la izquierda) — recitado ANTES del amud hashachar\n  · SHEMA #2 (círculo dorado a la derecha) — recitado DESPUÉS del amud hashachar\n\nAmbos puntos están dentro del gradiente del amanecer — físicamente, ambos parecen «noche» para el observador casual. Pero el AH los SEPARA halájicamente.\n\nLA ASIGNACIÓN DE OBLIGACIONES:\n\n  · SHEMA #1 (antes de AH) → cumple OBLIGACIÓN DE LA NOCHE (arvit)\n  · SHEMA #2 (después de AH) → cumple OBLIGACIÓN DEL DÍA (shajarit)\n\nESTO ES CONTRAINTUITIVO porque ambas recitaciones ocurren en lo que coloquialmente parece la madrugada — pero HALÁJICAMENTE, una está «en la noche» y otra está «en el día», con AH como frontera.\n\nLA ESTRUCTURA REVELA UNA VERDAD HALÁJICA:\n\n  · El tiempo halájico es DISCRETO, no continuo. Hay momentos PRECISOS (amud hashachar, shkiá, chatzot) que dividen períodos legales.\n\n  · Cruzar uno de estos momentos cambia la CATEGORÍA HALÁJICA aunque el cambio físico sea mínimo.\n\n  · Un segundo antes del amud hashachar = noche legal. Un segundo después = día legal. La frontera es ABSOLUTA en su efecto, aunque casi imperceptible en la realidad sensorial.\n\nLA ILUSTRACIÓN VISUAL ENSEÑA:\n\n  · El amud hashachar NO es momento de sol pleno — es CASI IMPERCEPTIBLE\n  · La halajá funciona con PRECISIÓN MICROMÉTRICA en el tiempo\n  · Pero las CATEGORÍAS halájicas (noche/día) son CLARAS y absolutas\n\nESTA PRECISIÓN HALÁJICA es característica del judaísmo rabínico. Los tiempos no son aproximados — son exactos. Y un cambio de un segundo puede tener consecuencias halájicas reales.\n\nLA APLICACIÓN MODERNA:\n\nLos judíos observantes consultan calendarios halájicos (como Luaj) para conocer el momento EXACTO del amud hashachar en su localidad y fecha. Esta precisión NO es obsesión inútil — es respeto por la estructura halájica del tiempo.\n\nLa halajá de Rashbi sobre los dos shemas es una de las muchas razones por las que esta precisión importa. Si recitas shema un minuto antes del AH, cumples obligación NOCTURNA. Si lo recitas un minuto después, cumples obligación DIURNA. Lo mismo en apariencia, distinto halájicamente.'
+    },
+    'verseta': {
+      titulo: 'La base escrituraria · derashá deíctica del versículo',
+      hebreo: 'וּבְשָׁכְבְּךָ וּבְקוּמֶךָ',
+      traduccion: '«cuando te acuestes y cuando te levantes» (Devarim 6:7)',
+      explicacion: 'La base escrituraria de la halajá de Rashbi viene del versículo más fundamental del shema: Devarim 6:7.\n\nEL VERSÍCULO COMPLETO:\n\n  «וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ»\n\n  «Y las enseñarás a tus hijos, y hablarás de ellas cuando te sientes en tu casa, cuando camines por el camino, cuando te acuestes y cuando te levantes»\n\nLAS DOS CLÁUSULAS RELEVANTES para el shema son las últimas:\n\n  · בְּשָׁכְבְּךָ (be-shakhbecha) — «cuando te acuestes»\n  · בְּקוּמֶךָ (uvekumecha) — «y cuando te levantes»\n\nLA LECTURA INTUITIVA ESPERARÍA:\n\n  · «cuando te acuestes» = en la noche\n  · «cuando te levantes» = en el día\n\nPero esta lectura es DEMASIADO RÍGIDA para Rashbi.\n\nLA DERASHÁ DEÍCTICA:\n\nRashbi lee las cláusulas como DEÍCTICOS funcionales, no como referencias cronológicas absolutas.\n\n  · בְּשָׁכְבְּךָ = en el PERÍODO en que LA GENTE se acuesta\n  · בְּקוּמֶךָ = en el PERÍODO en que LA GENTE se levanta\n\nESTA LECTURA es flexible. El período en que «la gente se acuesta» no es solo «la noche estándar». Incluye también las primeras horas de la madrugada cuando algunos todavía están durmiendo y otros están despertando.\n\nLA IMPLICACIÓN:\n\nUna persona que se levanta TEMPRANO — antes del amud hashachar — está en el PERÍODO en que «la gente se levanta». Para ese individuo, ese momento puede contar como «kumecha» (levantarse) aunque astronómicamente sea aún noche.\n\nA LA INVERSA, una persona que NO ha dormido aún a las 4am está en el PERÍODO en que «la gente se acuesta» — la mayoría sigue dormida. Para ese individuo, ese momento puede contar como «shakhbecha».\n\nLA FLEXIBILIDAD DEÍCTICA permite la halajá de la doble recitación:\n\n  · Antes del AH = todavía «período de acostarse» para muchos → cumple arvit\n  · Después del AH = ya «período de levantarse» para los madrugadores → cumple shajarit\n\nLA SOFISTICACIÓN DE LA DERASHÁ:\n\nLa lectura deíctica de Rashbi es una técnica hermenéutica MUY SOFISTICADA. Reconoce que las palabras bíblicas pueden tener significados RELATIVOS al contexto humano, no absolutos al cosmos.\n\nESTO ABRE el camino a una halajá ACOMODATICIA — que se ajusta a las necesidades reales de las personas — sin sacrificar la base bíblica de la obligación.\n\nLA OBJECIÓN POTENCIAL:\n\n¿No se podría argumentar que esta lectura es DEMASIADO flexible? Si «shakhbecha» significa simplemente «cuando uno se acuesta», ¿no podría alguien que se acuesta a la 1pm decir que es momento de shema arvit?\n\nLA HALAJÁ MANTIENE UN LÍMITE: el amud hashachar es la frontera para la madrugada. La halajá NO permite recitar arvit DESPUÉS del AH. La flexibilidad opera DENTRO del período legal de la noche, no fuera de él.\n\nLA LECCIÓN GENERAL:\n\nLa hermenéutica halájica RABÍNICA es a la vez:\n\n  · FLEXIBLE — acomoda situaciones humanas reales\n  · ANCLADA — opera dentro de los límites bíblicos y halájicos\n\nEsta combinación es lo que hace que la halajá sea VIVA. NO es código rígido aplicado mecánicamente. Es sistema sofisticado que respeta tanto la letra del texto como la realidad humana.\n\nRASHBI MODELA esta sensibilidad. Su derashá deíctica permite la halajá flexible sin romper el marco bíblico. Esta es la madurez halájica clásica.'
+    },
+    'madrugador': {
+      titulo: 'El caso específico · el madrugador',
+      hebreo: 'הַמַּשְׁכִּים',
+      traduccion: 'El que se levanta temprano',
+      explicacion: 'La halajá de Rashbi no es abstracta. Responde a CASOS CONCRETOS de la vida judía clásica. Los principales casos son tres:\n\nCASO 1 · EL COHEN DEL TEMPLO\n\nLos cohens (sacerdotes) que servían en el Beit Hamikdash necesitaban inmersión ritual ANTES de comenzar su servicio matutino. La inmersión debía completarse antes del amud hashachar para que la pureza fuera plena al iniciar el servicio.\n\nUN COHEN puede levantarse a las 3am, ir al mikve, regresar, y todavía estar antes del AH. En ese momento, necesita:\n\n  · CUMPLIR la obligación de arvit (la del día anterior) — si no la cumplió por alguna razón\n  · PREPARARSE para shajarit — la del día nuevo que comienza\n\nLa halajá de Rashbi le permite recitar shema antes del AH (= arvit) y después del AH (= shajarit) eficientemente.\n\nCASO 2 · EL VIAJERO\n\nLos viajes antiguos comenzaban antes del amanecer para aprovechar las horas frescas de la mañana, especialmente en climas calurosos. Un viajero que parte a las 4am:\n\n  · Necesita salir antes del AH (la caravana parte temprano)\n  · No quiere esperar a recitar shajarit DESPUÉS del AH (perdería tiempo)\n  · Pero está obligado a recitar shema (la obligación bíblica)\n\nLa halajá de Rashbi le permite recitar TODOS los shemas que necesite ANTES del AH (= arvit) y, en el momento exacto del AH, también el del día (= shajarit). Después puede partir.\n\nCASO 3 · EL SABIO QUE ESTUDIA A CHATZOT\n\nDavid se levantaba a chatzot para estudiar Torá (diagrama #5). Otros grandes sabios siguieron el patrón. Si estos sabios estudian toda la noche, llegan al AH habiendo ya pasado horas despiertos.\n\nPARA ELLOS, la halajá de Rashbi permite:\n\n  · Recitar shema arvit muy tarde — cerca del AH (cumpliendo la obligación nocturna)\n  · Recitar shema shajarit inmediatamente al AH (cumpliendo la obligación diurna)\n\nNO necesitan esperar — están despiertos, alertas, listos para el servicio matutino.\n\nLA HALAJÁ DISEÑADA PARA CASOS REALES:\n\nObsérvese: Rashbi NO inventa esta halajá en abstracto. Tiene EN MENTE casos específicos. La halajá rabínica clásica es PRÁCTICA — diseñada para situaciones reales, no para especulación teórica.\n\nESTO ES IMPORTANTE para entender el carácter del judaísmo. La halajá NO es código teórico. Es respuesta a necesidades concretas. Cada halajá tiene un caso real en mente. Cada precisión tiene su aplicación.\n\nLAS CONDICIONES DEL MADRUGADOR:\n\nPara que la halajá de Rashbi aplique, el madrugador debe cumplir:\n\n  1. SE LEVANTÓ ANTES del AH — está físicamente despierto\n  2. YA COMPLETÓ SU SUEÑO — no está tomando «siesta» entre las dos recitaciones\n  3. NECESITA CUMPLIR AMBAS obligaciones — ya por circunstancia, ya por viaje\n  4. ESTÁ ALERTA Y CAPAZ de la kavaná (intención) requerida para ambos shemas\n\nSI ALGUNA condición falta, la halajá puede no aplicar plenamente. Por ejemplo, si alguien recita shema medio dormido a las 3am, la kavaná puede ser insuficiente.\n\nLA APLICACIÓN MODERNA:\n\nHoy día, esta halajá se aplica en varios contextos:\n\n  · Viajeros aéreos que salen antes del amanecer\n  · Personal hospitalario en turnos nocturnos\n  · Estudiantes en yeshivot que estudian toda la noche\n  · Soldados en operaciones que requieren rezo temprano\n\nLA SENSIBILIDAD RABÍNICA reconoce que la vida moderna tiene situaciones donde los rezos del día normal no encajan perfectamente. La halajá de Rashbi proporciona FLEXIBILIDAD halájica para estos casos.\n\nESTA HALAJÁ EJEMPLIFICA UNA VIRTUD: la capacidad del judaísmo rabínico de ACOMODAR la realidad humana sin sacrificar la estructura halájica. Precisión + flexibilidad = halajá madura.'
+    },
+    'hashkivenu': {
+      titulo: 'La condición crucial · no decir Hashkivenu',
+      hebreo: 'וּבִלְבַד שֶׁלֹּא יֹאמַר הַשְׁכִּיבֵנוּ',
+      traduccion: '«Con tal que no diga Hashkivenu»',
+      explicacion: 'La halajá de Rashbi tiene una CONDICIÓN crucial: aunque uno recite shema antes del amud hashachar para cumplir arvit, NO debe decir la bracha de Hashkivenu.\n\n¿QUÉ ES HASHKIVENU?\n\nHashkivenu (literalmente «acuéstanos») es la SEGUNDA bracha después del shema de arvit en el siclo litúrgico nocturno. Su estructura:\n\n  «הַשְׁכִּיבֵנוּ ה\' אֱלֹקֵינוּ לְשָׁלוֹם · וְהַעֲמִידֵנוּ מַלְכֵּנוּ לְחַיִּים…»\n  «Acuéstanos, HKBH nuestro Dios, en paz · y levántanos, nuestro Rey, para la vida…»\n\nLa bracha pide protección DURANTE EL SUEÑO. Es esencialmente la oración nocturna del judío que se va a la cama — pidiendo que HKBH lo proteja durante el descanso vulnerable.\n\n¿POR QUÉ NO DECIRLA EN LA MADRUGADA?\n\nSi un madrugador recita shema arvit a las 5am (poco antes del AH), la PALABRA misma de Hashkivenu se vuelve incoherente:\n\n  · «Acuéstanos» — pero esta persona NO se va a acostar. Acaba de levantarse.\n  · «Levántanos en paz para la vida» — pero ya está levantado y vivo.\n\nLa bracha asume contexto NOCTURNO en sentido fuerte — preparación para el sueño. El madrugador NO está en ese contexto. Por eso no debe decirla.\n\nLA LÓGICA HALÁJICA:\n\nLa halajá DISTINGUE entre:\n\n  · EL SHEMA MISMO — la recitación de los tres párrafos bíblicos, que sigue siendo válida (Rashbi enseña esto)\n\n  · LAS BRACHOT CIRCUNDANTES — más rígidamente conectadas con su zman natural (no se trasladan)\n\nESTA DISTINCIÓN MUESTRA SOFISTICACIÓN:\n\nLa halajá NO trata «shema» y «sus brachot» como un solo bloque rígido. Reconoce que ELEMENTOS distintos del rezo tienen DIFERENTES grados de FLEXIBILIDAD temporal:\n\n  · El SHEMA es flexible (puede recitarse hasta el AH para cumplir arvit)\n  · Las BRACHOT son más rígidas (algunas no se dicen fuera de su contexto natural)\n\nLA CONSECUENCIA PRÁCTICA:\n\nEl madrugador que recita shema arvit a las 5am:\n\n  · DICE el shema con kavaná\n  · DICE las brachot precedentes apropiadas (ma\'ariv aravim, ahavat olam) si están permitidas en ese momento\n  · NO DICE Hashkivenu\n  · CIERRA con la bracha de geulá (ga\'al Yisrael)\n\nLuego, al AH, recita shema shajarit con sus brachot apropiadas (yotzer or, etc.).\n\nLA SUTILEZA DE «UVILVAD»:\n\nLa palabra «ובלבד» («con tal que») introduce una RESTRICCIÓN. Sin esta restricción, la halajá de Rashbi podría ser malinterpretada como «se puede hacer todo arvit antes del AH». La restricción establece que NO todo. El shema sí, las brachot circundantes no todas.\n\nESTO MUESTRA UN PRINCIPIO HALÁJICO GENERAL: las halajot raramente son ABSOLUTAS sin matices. Casi siempre tienen condiciones y excepciones. La halajá vive en los DETALLES.\n\nLA LECCIÓN AMPLIA:\n\nEsta condición enseña que la halajá rabínica NO es un sistema rígido aplicado mecánicamente. ES UN SISTEMA REFINADO con distinciones internas:\n\n  · El shema obligación bíblica → flexible\n  · Las brachot obligaciones rabínicas → más rígidas\n  · El contexto natural del rezo → respeto cuidadoso\n\nESTA SOFISTICACIÓN protege la halajá de DOS errores:\n\n  · ERROR RIGORISTA — todo el rezo es indivisible, debe hacerse en su tiempo o no hacerse (perderíamos la flexibilidad de Rashbi)\n\n  · ERROR LAXO — todo es flexible, se puede recitar todo a cualquier hora (perderíamos la estructura halájica del tiempo)\n\nLA HALAJÁ DE RASHBI con su condición ובלבד modela el camino medio: flexibilidad CALIBRADA. El elemento esencial (shema) se acomoda; el elemento contextual (Hashkivenu) preserva su zman natural.\n\nESTA SENSIBILIDAD halájica es marca de la madurez rabínica. Aprender esta distinción es aprender a leer la halajá con la SUTILEZA que merece.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la maleabilidad halájica del tiempo',
+      hebreo: 'הַזְּמָן הַהֲלָכִי הוּא פּוּנְקְצִיוֹנָלִי',
+      traduccion: 'El tiempo halájico es funcional',
+      explicacion: 'La sugyá de Rashbi ofrece una doctrina central: EL TIEMPO HALÁJICO ES FUNCIONAL, NO ASTRONÓMICO. Esta enseñanza tiene profundas implicaciones para entender la sensibilidad rabínica.\n\nLAS CINCO LECCIONES:\n\nLECCIÓN 1 · TIEMPO FUNCIONAL VS ASTRONÓMICO\n\n«Noche» y «día» en la halajá del shema NO se definen primariamente por posición del sol. Se definen por FUNCIÓN HUMANA:\n\n  · «Noche» = el período en que la gente SE ACUESTA\n  · «Día» = el período en que la gente SE LEVANTA\n\nLa derashá deíctica del versículo permite esta lectura. El tiempo halájico responde a la VIDA HUMANA, no solo a la cosmología.\n\nIMPLICACIONES:\n\n  · La halajá ACOMODA situaciones humanas reales\n  · Los tiempos halájicos tienen FLEXIBILIDAD interna\n  · Las fronteras son CLARAS pero no rígidas en su aplicación\n\nLECCIÓN 2 · FRONTERAS CALIBRABLES\n\nAmud hashachar es la frontera halájica, pero su FUNCIÓN se permite extender:\n\n  · HACIA ATRÁS: arvit puede recitarse hasta justo antes del AH (madrugadores)\n  · HACIA ADELANTE: shajarit puede recitarse desde el AH mismo (cohens listos)\n\nESTA CALIBRACIÓN es deliberada. La halajá NO es código mecánico. Es sistema sofisticado que respeta tanto la estructura cosmológica como las necesidades humanas.\n\nLECCIÓN 3 · ACOMODACIÓN AL CASO REAL\n\nRashbi NO inventa esta halajá abstractamente. La diseña para casos reales:\n\n  · Cohens preparándose para el servicio del Templo\n  · Viajeros que parten antes del amanecer\n  · Sabios que estudian toda la noche\n\nLA HALAJÁ RESPONDE a vidas vividas. Esta orientación práctica es marca del rabinismo. Casi todas las halajot tienen casos reales en mente. La halajá NO es código teórico — es respuesta refinada a la realidad humana concreta.\n\nLECCIÓN 4 · COMPLETUD VS DUPLICACIÓN\n\nQuien recita shema dos veces NO está duplicando innecesariamente. Está cumpliendo DOS OBLIGACIONES DISTINTAS — una nocturna, una diurna.\n\nLA LECCIÓN:\n\n  · La halajá distingue entre ACTOS APARENTEMENTE IGUALES\n  · Dos shemas en una hora no son redundantes si cumplen obligaciones distintas\n  · La COMPLETUD de obligaciones es lo que importa, no la apariencia repetitiva\n\nESTO TIENE APLICACIONES MÁS AMPLIAS: en la halajá, muchos actos «iguales» pueden tener significados halájicos distintos según su contexto y intención. La distinción interna importa.\n\nLECCIÓN 5 · EL CIERRE EDITORIAL DEL PEREK\n\nEl perek empezó con la mishná del zman shema arvit (#1) — la pregunta básica «¿hasta cuándo?». Ahora CIERRA con la halajá refinada de Rashbi sobre la misma cuestión.\n\nEL EDITOR DEL TALMUD usa esta estructura DELIBERADAMENTE. Marca la COMPLETUD del perek mediante retorno al tema inicial — pero refinado por todo el aprendizaje intermedio.\n\nEL VIAJE DEL PEREK:\n\n  · COMIENZO (#1): pregunta básica «¿hasta cuándo arvit?»\n  · MEDIO: 22 sugyot que exploran teología, halajá, narrativa, ética\n  · FINAL (#24): la respuesta refinada — el zman es FLEXIBLE en circunstancias concretas\n\nESTE VIAJE EDITORIAL es típico del Talmud. Comienza con preguntas técnicas, las desarrolla con vastas digresiones temáticas, y RETORNA al tema original con sensibilidad madura.\n\nLA APLICACIÓN MODERNA:\n\nEl judío contemporáneo hereda esta sensibilidad temporal sofisticada:\n\n  · CONSULTA luchot halájicos para conocer los tiempos exactos\n  · RECONOCE que los tiempos son funcionales (acostarse / levantarse)\n  · APROVECHA la flexibilidad halájica en situaciones reales (viajes, trabajos especiales, emergencias)\n  · MANTIENE la estructura halájica del tiempo como columna vertebral del día judío\n\nLA SENSIBILIDAD GENERAL:\n\nEl tiempo en el judaísmo NO es cantidad uniforme. Es CUALIDAD ESTRUCTURADA. Los momentos tienen significados halájicos específicos. Las fronteras temporales (AH, shkiá, chatzot, etc.) son REALES halájicamente, aunque casi imperceptibles físicamente.\n\nQUIEN VIVE el tiempo halájicamente:\n\n  · Percibe el día como ESPACIO ESTRUCTURADO con momentos significativos\n  · Adapta su vida a los ritmos halájicos\n  · Aprovecha las flexibilidades cuando las necesita\n  · Respeta las estructuras cuando puede\n\nESTA ES LA HEREDA DE RASHBI y del perek entero: el tiempo judío es PRECISO, FUNCIONAL, FLEXIBLE Y SAGRADO simultáneamente.\n\nQUE EL PEREK CIERRE con esta enseñanza es perfectamente apropiado. Comenzó preguntando «¿hasta cuándo?». Termina respondiendo «hasta donde la halajá refinada lo permite, considerando la realidad humana y la estructura cosmológica al mismo tiempo».\n\nESTA ES LA MADUREZ HALÁJICA — la capacidad de mantener ambas dimensiones (rigor y flexibilidad, estructura y acomodación) en tensión productiva. El perek de Berajot 2a-9b en su conjunto es UN CURSO en esta madurez. Quien lo estudia completo emerge con sensibilidad transformada.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.dos-interactivo')
+    : document.querySelector('.dos-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#dos-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.dos-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="dos-panel-header">' +
+        '<p class="dos-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="dos-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="dos-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="dos-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.dos-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.dos-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="dos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
