@@ -1,0 +1,346 @@
+<div class="provoc-interactivo">
+<style>
+  .provoc-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .provoc-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .provoc-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .provoc-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .provoc-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .provoc-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .provoc-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .provoc-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .provoc-diagrama svg { width: 100%; height: auto; display: block; }
+  .provoc-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .provoc-nodo:hover rect { stroke-width: 2 !important; }
+  .provoc-nodo:hover circle { stroke-width: 2.5 !important; }
+  .provoc-nodo.activa rect { stroke-width: 2.5 !important; }
+  .provoc-nodo.activa circle { stroke-width: 3 !important; }
+  .provoc-nodo.dim { opacity: 0.32; }
+  .provoc-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .provoc-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .provoc-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .provoc-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .provoc-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .provoc-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .provoc-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="provoc-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>declaración nuclear</span>
+  <span><span class="swatch verde"></span>verseta · derashá inversa</span>
+  <span><span class="swatch rojo"></span>excepción · shaa meshacheket</span>
+  <span><span class="swatch azul"></span>calificación · tzadik gamur</span>
+  <span><span class="swatch sepia"></span>doctrina · coraje calibrado</span>
+</div>
+
+<div class="provoc-diagrama">
+<svg viewBox="0 0 720 1180" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 7b: ¿se permite provocar a los rashaim? · la halajá del coraje calibrado · shaa meshacheket</title>
+
+<defs>
+  <marker id="flecha-pr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-pr-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-pr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Provocar a los rashaim · ¿cuándo confrontar?</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 7b · permitido en este mundo · pero atención a la «shaa meshacheket»</text>
+
+<!-- ============================================================ -->
+<!-- DECLARACIÓN NUCLEAR · R. YOJANAN                            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DECLARACIÓN NUCLEAR · R. YOJANAN EN NOMBRE DE R. YOSE BEN ZIMRA · 7B</text>
+
+<g class="provoc-nodo" data-id="declaracion">
+  <rect x="60" y="86" width="600" height="92" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">מוּתָּר לְהִתְגָּרוֹת בָּרְשָׁעִים בָּעוֹלָם הַזֶּה</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Está PERMITIDO provocar a los rashaim en este mundo»</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10" fill="#b8860b" font-style="italic">הִתְגָּרוֹת = no solo defenderse, sino tomar la iniciativa contra el mal</text>
+  <text x="360" y="170" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">la halajá NO obliga al pacifismo pasivo · permite la confrontación</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA VERSETA SORPRENDENTE · TEHILIM 37:1                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="178" x2="360" y2="196" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-pr)"/>
+
+<text x="60" y="208" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA VERSETA SORPRENDENTE · TEHILIM 37:1</text>
+
+<g class="provoc-nodo" data-id="verseta">
+  <rect x="60" y="218" width="600" height="156" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+
+  <!-- La verseta -->
+  <text x="360" y="240" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e">אַל־תִּתְחַר בַּמְּרֵעִים · אַל־תְּקַנֵּא בְּעֹשֵׂי עַוְלָה</text>
+  <text x="360" y="258" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«No contiendas con los malhechores · no envidies a los que obran iniquidad»</text>
+
+  <line x1="80" y1="270" x2="640" y2="270" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="290" font-size="10" fill="#2d6b4e" font-weight="600">A primera vista — PROHÍBE confrontar a los rashaim</text>
+  <text x="78" y="304" font-size="9.5" fill="#3d2f23">pero R. Yojanan lo lee de manera distinta · derashá inversa</text>
+
+  <line x1="80" y1="314" x2="640" y2="314" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="334" font-size="10" fill="#2d6b4e" font-weight="600">La derashá inversa:</text>
+  <text x="360" y="352" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">אַל־תִּתְחַר בַּמְּרֵעִים — אַל תְּהִי כְּמוֹתָם</text>
+  <text x="360" y="368" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«No seas COMO los malhechores» — NO «no compitas con ellos»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA INTERPRETACIÓN · PROHÍBE IMITAR, NO CONFRONTAR            -->
+<!-- ============================================================ -->
+<line x1="360" y1="374" x2="360" y2="392" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-pr)"/>
+
+<g class="provoc-nodo" data-id="interpretacion">
+  <rect x="60" y="396" width="600" height="86" rx="6" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1.2"/>
+  <text x="360" y="418" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La verseta prohíbe IMITAR a los malhechores · no CONFRONTARLOS</text>
+  <text x="78" y="440" font-size="9.5" fill="#3d2f23">la oposición DECIDIDA al mal NO está prohibida — está permitida</text>
+  <text x="78" y="456" font-size="9.5" fill="#3d2f23">lo prohibido es CONTAGIARSE · usar sus métodos · descender a su nivel moral</text>
+  <text x="78" y="472" font-size="9" fill="#6b4423" font-style="italic">el justo confronta SIN convertirse en lo que confronta</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA EXCEPCIÓN CRUCIAL · SHAA MESHACHEKET                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="482" x2="360" y2="500" stroke="#8b1a1a" stroke-width="1.4" marker-end="url(#flecha-pr-red)"/>
+
+<text x="60" y="512" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA EXCEPCIÓN CRUCIAL · SHAA MESHACHEKET LO</text>
+
+<g class="provoc-nodo" data-id="shaa">
+  <rect x="60" y="522" width="600" height="146" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="546" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">אִם רָאִיתָ רָשָׁע שֶׁהַשָּׁעָה מְשַׂחֶקֶת לוֹ — אַל תִּתְגָּרֶה בּוֹ</text>
+  <text x="360" y="566" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Si ves un rasha cuya hora le RÍE/SONRÍE — NO lo provoques»</text>
+
+  <line x1="80" y1="580" x2="640" y2="580" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="598" font-size="10" fill="#8b1a1a" font-weight="600">Razones para no provocar en ese momento:</text>
+  <text x="78" y="616" font-size="9.5" fill="#3d2f23">1 · estás en desventaja táctica — el momento favorece al malo</text>
+  <text x="78" y="632" font-size="9.5" fill="#3d2f23">2 · PUEDES PERDER — y el daño cae sobre ti, no sobre él</text>
+  <text x="78" y="648" font-size="9.5" fill="#3d2f23">3 · el justo no debe arriesgar imprudentemente — no es valentía sino temeridad</text>
+  <text x="360" y="664" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">la halajá distingue entre coraje justificado y temeridad disfrazada</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS SIGNOS DE LA SHAA MESHACHEKET                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="668" x2="360" y2="686" stroke="#8b1a1a" stroke-width="1" marker-end="url(#flecha-pr-red)"/>
+
+<text x="60" y="698" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LOS SIGNOS DE LA «HORA QUE LE SONRÍE»</text>
+
+<g class="provoc-nodo" data-id="signos">
+  <rect x="60" y="708" width="600" height="120" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="360" y="730" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Cinco signos que indican: NO es momento de confrontar</text>
+
+  <text x="78" y="752" font-size="9.5" fill="#3d2f23">·</text>
+  <text x="98" y="752" font-size="9.5" fill="#3d2f23">prospera materialmente — sus negocios florecen</text>
+
+  <text x="78" y="768" font-size="9.5" fill="#3d2f23">·</text>
+  <text x="98" y="768" font-size="9.5" fill="#3d2f23">gana batallas — sus oponentes caen ante él</text>
+
+  <text x="78" y="784" font-size="9.5" fill="#3d2f23">·</text>
+  <text x="98" y="784" font-size="9.5" fill="#3d2f23">encuentra aliados poderosos — tiene apoyo institucional</text>
+
+  <text x="78" y="800" font-size="9.5" fill="#3d2f23">·</text>
+  <text x="98" y="800" font-size="9.5" fill="#3d2f23">se exalta socialmente — recibe honores públicos</text>
+
+  <text x="78" y="816" font-size="9.5" fill="#3d2f23">·</text>
+  <text x="98" y="816" font-size="9.5" fill="#3d2f23">es protegido por leyes injustas — el sistema le favorece</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CALIFICACIÓN · ¿SOLO TZADIK GAMUR?                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="828" x2="360" y2="846" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-pr)"/>
+
+<text x="60" y="858" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CALIFICACIÓN ALTERNATIVA · ¿SOLO EL TZADIK GAMUR?</text>
+
+<g class="provoc-nodo" data-id="tzadik-gamur">
+  <rect x="60" y="868" width="600" height="116" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="890" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Una opinión alternativa restringe el permiso al tzadik completo</text>
+
+  <!-- Tabla -->
+  <line x1="360" y1="900" x2="360" y2="970" stroke="#1e3a5f" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <text x="200" y="916" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="700">צַדִּיק גָּמוּר</text>
+  <text x="520" y="916" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">צַדִּיק שֶׁאֵינוֹ גָּמוּר</text>
+
+  <text x="200" y="932" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">justo completo, sin manchas</text>
+  <text x="520" y="932" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">justo incompleto, con manchas residuales</text>
+
+  <text x="200" y="950" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">✓ puede provocar</text>
+  <text x="520" y="950" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="600">✗ NO debe provocar</text>
+
+  <text x="200" y="966" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">su mérito lo protege</text>
+  <text x="520" y="966" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">sus manchas lo vulnerabilizan</text>
+
+  <text x="360" y="982" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">esta opinión usa la categoría gamur/eino gamur del diagrama #20</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA APLICACIÓN PRÁCTICA                                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="984" x2="360" y2="1002" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-pr)"/>
+
+<text x="60" y="1014" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA ÉTICA DEL CORAJE CALIBRADO</text>
+
+<g class="provoc-nodo" data-id="doctrina">
+  <rect x="60" y="1024" width="600" height="148" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1046" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Coraje + discernimiento = halajá de la confrontación</text>
+  <text x="78" y="1068" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1068" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#2d6b4e">NO PACIFISMO PASIVO</tspan> — la halajá NO obliga a tolerar el mal · el justo PUEDE confrontar</text>
+  <text x="78" y="1086" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1086" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">NO TEMERIDAD HEROICA</tspan> — la halajá NO autoriza confrontaciones imprudentes</text>
+  <text x="78" y="1104" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1104" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#1e3a5f">EL DISCERNIMIENTO COMO VIRTUD</tspan> — la sabiduría de saber CUÁNDO actuar</text>
+  <text x="78" y="1122" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="1122" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#b8860b">LA DEMORA NO ES COBARDÍA</tspan> — esperar a que pase la shaa meshacheket es estrategia</text>
+  <text x="360" y="1146" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">David huye de Avshalom (shaa meshacheket) · pero confronta a Goliat (shaa no le sonríe)</text>
+  <text x="360" y="1164" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la halajá de la confrontación es CONTEXTUAL, no universal</text>
+</g>
+
+</svg>
+</div>
+
+<div class="provoc-panel" id="provoc-panel">
+  <p class="provoc-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'declaracion': {
+      titulo: 'R. Yojanan · permitido provocar a los rashaim',
+      hebreo: 'מוּתָּר לְהִתְגָּרוֹת בָּרְשָׁעִים בָּעוֹלָם הַזֶּה',
+      traduccion: '«Está permitido provocar a los rashaim en este mundo»',
+      explicacion: 'R. Yojanan en nombre de R. Yose ben Zimra establece una halajá práctica de enorme importancia: está PERMITIDO provocar a los rashaim en este mundo.\n\nLA PALABRA CLAVE es הִתְגָּרוֹת (hitgarot). Su raíz es גרה — «provocar, irritar, estimular». NO es simplemente defenderse cuando el malvado te ataca. Es TOMAR LA INICIATIVA — confrontar activamente, oponerse, denunciar.\n\nLA HALAJÁ ES CONTRACULTURAL en varios sentidos:\n\n  1. NO ES PACIFISMO PASIVO — algunas corrientes religiosas enseñan que el justo debe simplemente «poner la otra mejilla», dejar que el mal pase, no provocar conflictos. El judaísmo rabínico discrepa. El justo NO debe ser cómplice silencioso del mal.\n\n  2. PERMITE INICIATIVA — no solo permite responder, permite ATACAR primero (en sentido moral, no necesariamente físico). La provocación activa es legítima.\n\n  3. LIMITA AL «MUNDO ESTE» — la frase «בָּעוֹלָם הַזֶּה» («en este mundo») es significativa. En el olam ha-ba, el juicio divino se encargará. Pero AQUÍ Y AHORA, el justo no debe esperar la justicia divina pasivamente — debe actuar.\n\nLA FRASE «בָּעוֹלָם הַזֶּה» (en este mundo) tiene OTRA implicación. Sugiere que la situación es ESTE-MUNDANA — no es asunto de fe abstracta, sino de acción concreta en la realidad histórica. La halajá toma en serio el mundo presente como espacio de combate moral.\n\nLA POSICIÓN DE R. YOJANAN tiene fuerte apoyo en la tradición. Avraham confrontó a los reyes (Génesis 14). Moshé confrontó al Faraón. Eliyahu confrontó a Ahab. David confrontó a Goliat. La línea profética del judaísmo es CONFRONTACIONAL, no pacifista.\n\nLA TENSIÓN APARENTE con el versículo de Tehilim 37 («no contiendas con los malhechores») se resolverá en la siguiente sección, mediante una derashá inversa.\n\nLA APLICACIÓN MODERNA: el judío observante NO debe ser indiferente al mal en su sociedad. Tiene autorización halájica para confrontar — incluso para PROVOCAR — la oposición al mal. La crítica social, la denuncia profética, la acción política contra la injusticia: todas estas son legítimas dentro de esta halajá. El silencio cómplice NO es opción.\n\nPERO — y esto es crucial — el permiso tiene UNA EXCEPCIÓN importante (shaa meshacheket) que la sugyá va a desarrollar. La halajá completa NO es simple «provoca siempre». Es «provoca con discernimiento». Esta calibración es la sabiduría del justo.'
+    },
+    'verseta': {
+      titulo: 'La verseta de Tehilim 37:1 · derashá inversa',
+      hebreo: 'אַל־תִּתְחַר בַּמְּרֵעִים — אַל תְּהִי כְּמוֹתָם',
+      traduccion: 'No «no contiendas con los malhechores» sino «no seas COMO ellos»',
+      explicacion: 'La fuente halájica que R. Yojanan usa es CONTRAINTUITIVA. Tehilim 37:1 dice:\n\n  «אַל־תִּתְחַר בַּמְּרֵעִים · אַל־תְּקַנֵּא בְּעֹשֵׂי עַוְלָה»\n  «No contiendas con los malhechores · no envidies a los que obran iniquidad»\n\nA PRIMERA VISTA, este versículo PROHÍBE confrontar a los rashaim. Parece pedir RESTRICCIÓN, distancia, no-involucramiento. ¿Cómo puede R. Yojanan derivar PERMISO de PROVOCAR desde un versículo que parece PROHIBIRLO?\n\nLA DERASHÁ INVERSA es una de las técnicas hermenéuticas más audaces del Talmud. R. Yojanan REINTERPRETA el verbo «תִּתְחַר».\n\nLECTURA TRADICIONAL: «תִּתְחַר» = «contiendas, compitas» (de la raíz חרה — «calentarse, enojarse, competir»). Bajo esta lectura, el versículo prohíbe competir o contender con los malhechores.\n\nLECTURA DE R. YOJANAN: «תִּתְחַר» = «seas como» (también de la raíz חרה pero en sentido de «calentarse hasta el punto de imitar», o de la raíz תחר como «emularizarse»). Bajo esta lectura, el versículo prohíbe IMITAR a los malhechores.\n\nLA DERASHÁ COMPLETA:\n\n  «אַל־תִּתְחַר בַּמְּרֵעִים» → «No te emularices CON los malhechores»\n  → «No seas COMO ellos»\n\nESTE GIRO HERMENÉUTICO TRANSFORMA EL VERSÍCULO:\n\n  · ANTES: prohíbe la contienda externa (no confrontes)\n  · DESPUÉS: prohíbe la asimilación interna (no te conviertas en uno de ellos)\n\nIMPLICACIONES:\n\n  1. EL VERSÍCULO NO PROHÍBE CONFRONTAR — eso queda permitido (y de hecho, según R. Yojanan en la línea anterior, está permitido positivamente).\n\n  2. EL VERSÍCULO PROHÍBE IMITAR — la verdadera amenaza espiritual NO es la confrontación abierta con el mal (que es saludable). Es la ASIMILACIÓN sutil — empezar a parecerse al mal mientras pretende combatirlo.\n\n  3. LA SEGUNDA CLÁUSULA («no envidies a los que obran iniquidad») confirma la lectura. La envidia es ya una forma de asimilación — empiezas a desear lo que el malvado tiene, sus métodos, sus éxitos.\n\nLA SABIDURÍA DE LA DERASHÁ:\n\nR. Yojanan reconoce un peligro psicológico real: el que combate al malvado puede CONVERTIRSE en lo que combate. La indignación moral puede degenerar en la misma crueldad que critica. La denuncia del mal puede usar los mismos métodos del mal (mentira, manipulación, violencia desmedida).\n\nEL VERSÍCULO ADVIERTE contra ESTO específicamente. Permite la confrontación, pero exige PUREZA en la confrontación. El justo NO debe combatir al rasha con los métodos del rasha.\n\nLA CONEXIÓN CON LA HALAJÁ PRÁCTICA:\n\nCuando confrontes el mal:\n\n  · NO mientas para combatir la mentira\n  · NO manipules para combatir la manipulación\n  · NO recurras a la crueldad para combatir la crueldad\n  · NO te exaltes en orgullo al combatir el orgullo del rasha\n\nLA SEGUNDA CLÁUSULA («no envidies»):\n\nLa envidia del prosperar de los malvados es UN PELIGRO SEPARADO. Ves al malo prosperar y, en lugar de combatirlo, empiezas a desear su prosperidad — quizá sus métodos. Esto es el inicio de la asimilación. El versículo te detiene ANTES de que llegues a ese punto.\n\nLA ENSEÑANZA AMPLIA:\n\nLa derashá inversa de R. Yojanan transforma un versículo de aparente quietismo en una doctrina de COMBATE PURO. El justo combate — pero combate sin convertirse. Esta es una virtud altamente sofisticada: la confrontación SIN CONTAMINACIÓN.\n\nMUCHOS REVOLUCIONARIOS HISTÓRICOS han caído precisamente en esta trampa. Combatiendo tiranos, se vuelven tiranos. Combatiendo opresión, oprimen. El versículo de Tehilim 37, leído rabínicamente, es una advertencia preventiva: combate, pero conserva tu integridad. NO te conviertas en lo que combates.'
+    },
+    'interpretacion': {
+      titulo: 'La interpretación · prohíbe imitar, no confrontar',
+      hebreo: 'הָאִיסּוּר הוּא לְהִשְׁתַּוּוֹת',
+      traduccion: 'La prohibición es la asimilación',
+      explicacion: 'La interpretación de R. Yojanan transforma el versículo en una halajá PRÁCTICA y MATIZADA.\n\nLO QUE EL VERSÍCULO NO PROHÍBE:\n\n  · NO prohíbe ENFRENTAR al rasha\n  · NO prohíbe DENUNCIAR su mal\n  · NO prohíbe COMBATIR sus planes\n  · NO prohíbe PROVOCAR su caída\n\nLO QUE EL VERSÍCULO SÍ PROHÍBE:\n\n  · Prohíbe IMITAR sus métodos\n  · Prohíbe USAR su lenguaje (mentira, manipulación)\n  · Prohíbe DESCENDER a su nivel moral\n  · Prohíbe CONTAGIARSE de su odio, crueldad, deshonestidad\n\nLA DISTINCIÓN CLAVE: el OBJETIVO es legítimo (combatir el mal); el MÉTODO debe ser puro (sin recurso a las técnicas del mal).\n\nESTA ENSEÑANZA TIENE PARALELOS EN OTRAS TRADICIONES, pero el judaísmo rabínico la articula con precisión halájica.\n\nLA DIMENSIÓN PSICOLÓGICA:\n\nLa confrontación con el mal es PELIGROSA espiritualmente. El que combate al malvado:\n\n  · Tiene que ESTUDIAR sus métodos (para anticiparlos)\n  · Tiene que IMAGINAR su psicología (para predecirlo)\n  · Tiene que ANTICIPAR sus jugadas (para neutralizarlas)\n\nEstas operaciones mentales CONLLEVAN un riesgo de contagio. Quien pasa años pensando como un criminal puede empezar a pensar criminalmente. Quien pasa años combatiendo la corrupción puede empezar a aceptar pequeñas corrupciones como mal menor.\n\nLA HALAJÁ ADVIERTE: PROTEGE TU INTEGRIDAD. Combate, pero VIGILA constantemente que NO te asemejes al combatido.\n\nLA DIMENSIÓN COMUNITARIA:\n\nEsta enseñanza tiene implicaciones para movimientos sociales y políticos:\n\n  · Un movimiento que combate la opresión puede VOLVERSE opresor\n  · Un partido que combate la corrupción puede VOLVERSE corrupto\n  · Una ideología que combate el extremismo puede VOLVERSE extremista\n\nLA HALAJÁ EXIGE VIGILANCIA INTERNA constante. La pureza del medio es tan importante como la justicia del fin.\n\nLA APLICACIÓN HALÁJICA ESPECÍFICA:\n\nCuando uno confronta al malvado:\n\n  · USA SOLO MÉTODOS HALÁJICAMENTE PERMITIDOS — testimonio verdadero, denuncia justa, oposición política dentro de la ley\n  · EVITA TÉCNICAS MORALMENTE CUESTIONABLES — mentira piadosa, manipulación de información, calumnia presentada como denuncia\n  · DISTINGUE ENTRE LA PERSONA Y SUS ACTOS — el rasha es CONFRONTADO por sus actos, no destruido como persona\n  · MANTÉN LA POSIBILIDAD DE TESHUVÁ — incluso en la confrontación, recuerda que el rasha puede arrepentirse\n\nESTA HALAJÁ CONSTRUYE UNA ÉTICA DE COMBATE PURO. El justo es GUERRERO MORAL — pero un guerrero con código de honor estricto. NO acepta «el fin justifica los medios». Sostiene que los medios contaminados invalidan el fin.\n\nLA CONEXIÓN CON LA TRADICIÓN DE LOS PROFETAS:\n\nLos profetas hebreos combatieron contra reyes, sacerdotes corruptos, sistemas injustos. Lo hicieron con DUREZA — pero también con PUREZA. Su denuncia era veraz, su crítica precisa, su llamado al arrepentimiento sincero. No usaban manipulación. Esta es la línea que R. Yojanan continúa: el legado profético de la confrontación con el mal.\n\nEL JUDÍO MODERNO HEREDA ESTA SENSIBILIDAD. Cuando enfrenta injusticia — corrupción gubernamental, antisemitismo, opresión social — DEBE responder. La halajá lo permite y casi lo exige. Pero DEBE responder con métodos limpios. La pureza del combatiente importa tanto como la victoria.\n\nESTA ENSEÑANZA ES UNA VACUNA contra la radicalización. Permite el activismo apasionado sin caer en la deshumanización del oponente. Permite la denuncia firme sin caer en la calumnia. Permite la oposición política sin caer en la violencia ilegítima. La halajá de R. Yojanan es la halajá del COMBATIENTE NOBLE.'
+    },
+    'shaa': {
+      titulo: 'La excepción crucial · shaa meshacheket lo',
+      hebreo: 'אִם רָאִיתָ רָשָׁע שֶׁהַשָּׁעָה מְשַׂחֶקֶת לוֹ — אַל תִּתְגָּרֶה בּוֹ',
+      traduccion: '«Si ves un rasha cuya hora le sonríe — no lo provoques»',
+      explicacion: 'La halajá inicial («está permitido provocar a los rashaim») recibe AHORA una excepción crucial. NO siempre se debe provocar. Hay momentos en que la prudencia exige ABSTENCIÓN.\n\nLA FRASE IDIOMÁTICA «הַשָּׁעָה מְשַׂחֶקֶת לוֹ» («la hora le sonríe» o más literalmente «la hora le ríe / se ríe con él») es una de las expresiones más vívidas del Talmud para describir un PERÍODO DE ÉXITO DEL MALVADO.\n\nMETÁFORA: el tiempo mismo personificado, con cara de mujer (la palabra שעה es femenina), SONRIENDO al malvado. El cosmos parece estar de su lado. Sus actos prosperan. Sus enemigos caen. La sociedad le aplaude.\n\n¿POR QUÉ NO PROVOCAR EN ESE MOMENTO?\n\nRAZÓN 1 · DESVENTAJA TÁCTICA: cuando el malvado tiene la hora a favor, los recursos están de su lado. Su poder es máximo, su influencia amplia, sus aliados numerosos. Cualquier confrontación abierta encuentra al justo en posición de desventaja estructural.\n\nRAZÓN 2 · RIESGO REAL DE DERROTA: la confrontación no es éxito garantizado. Cuando la hora le sonríe al malvado, el justo puede PERDER la batalla específica. Y la derrota tiene consecuencias graves:\n\n  · El malvado queda fortalecido (venció al justo)\n  · El bien queda desprestigiado\n  · Otros justos pierden coraje al ver caer al combatiente\n  · El malvado puede tomar represalias contra el justo y los suyos\n\nRAZÓN 3 · LA HALAJÁ DEL DISCERNIMIENTO: el judaísmo distingue entre VALENTÍA (coraje justificado por circunstancias razonables de éxito) y TEMERIDAD (coraje irrazonable que garantiza la derrota).\n\n  · VALENTÍA = enfrentar peligro cuando hay posibilidad razonable de superarlo\n  · TEMERIDAD = enfrentar peligro cuando el resultado más probable es la derrota\n\nLA HALAJÁ AUTORIZA LA VALENTÍA, NO LA TEMERIDAD. Confrontar al malvado en su momento de poder máximo es generalmente temeridad. Esperar a que pase el momento de poder máximo es prudencia.\n\nIMPLICACIONES PRÁCTICAS:\n\nEN POLÍTICA: cuando un líder corrupto está en el máximo de su popularidad y poder, la oposición frontal suele ser contraproducente. Mejor preparar el terreno, construir alternativas, esperar a que el momento cambie.\n\nEN LO PERSONAL: cuando un superior abusivo está en plena protección institucional, la denuncia directa puede causar más daño al denunciante que al denunciado. Mejor documentar, esperar el momento adecuado.\n\nEN LA HISTORIA: el pueblo judío ha aplicado esta sabiduría por siglos. En tiempos de persecución intensa, la respuesta NO era la rebelión frontal (que habría sido aniquilada). Era la PRESERVACIÓN — Torá oculta, comunidades escondidas, supervivencia. Cuando la hora cambiaba, los judíos emergían de nuevo.\n\nLA SABIDURÍA HALÁJICA combina aparente quietismo (no confrontar ahora) con confrontación eventual (cuando el momento cambie). NO ES nunca confrontar — es confrontar en el momento adecuado.\n\nLA TENSIÓN CON LA HALAJÁ INICIAL:\n\nR. Yojanan dijo «está permitido provocar a los rashaim». Ahora dice «no provoques cuando su hora les sonría». ¿Hay contradicción?\n\nNO. La halajá inicial establece el PRINCIPIO GENERAL — el justo NO está obligado al pacifismo. PUEDE confrontar. La excepción establece la APLICACIÓN PRUDENTE — pero NO siempre debe confrontar. La sabiduría del momento decide.\n\nLA HALAJÁ COMPLETA es POSIBILIDAD + DISCERNIMIENTO. Permiso para confrontar + sabiduría para saber cuándo.\n\nEL EJEMPLO DE DAVID:\n\nDavid es la figura paradigmática. Confrontó a Goliat (cuando la hora NO sonreía especialmente al filisteo). Huyó de Avshalom (cuando la hora SONREÍA al rebelde). El mismo David sabe ambas cosas. La confrontación contextual es el sello de su sabiduría real.\n\nESTA HALAJÁ SE PUEDE APLICAR A LA VIDA COTIDIANA EN MUCHAS DIMENSIONES: vida familiar, profesional, política, comunitaria. Siempre que hay malvados a confrontar, la halajá pide DISCERNIMIENTO sobre el momento. NO te lances cuando perderás. Espera tu momento. Pero NO renuncies al combate.'
+    },
+    'signos': {
+      titulo: 'Los signos de la «hora que le sonríe»',
+      hebreo: 'סִימָנֵי הַשָּׁעָה הַמְּשַׂחֶקֶת',
+      traduccion: 'Las señales de la hora favorable',
+      explicacion: 'La sugyá implica varios signos por los cuales identificar el momento en que «la hora le sonríe» al malvado. Estos signos son CONCRETOS y OBSERVABLES, no místicos abstractos.\n\nSIGNO 1 · PROSPERIDAD MATERIAL\n\nLos negocios del malvado florecen. Sus inversiones triunfan. Su patrimonio crece. La gente que se le opone parece tener mala suerte económica; los aliados del malvado prosperan.\n\nEste signo es OBSERVABLE en la realidad concreta. NO es necesario tener percepción mística — basta seguir el dinero.\n\nSIGNO 2 · GANA BATALLAS\n\nEl malvado triunfa en sus conflictos públicos. Demanda y gana. Es atacado y se defiende exitosamente. Sus oponentes caen — quien lo desafía pierde.\n\nEste signo aparece en el ámbito legal, político, militar. El malvado parece intocable en disputas directas.\n\nSIGNO 3 · ENCUENTRA ALIADOS PODEROSOS\n\nFiguras importantes lo respaldan. Personas con recursos lo apoyan. Instituciones lo protegen. Tiene red de aliados influyentes.\n\nLa formación de la red de aliados es signo decisivo. El malvado solo es manejable; el malvado con red es peligroso.\n\nSIGNO 4 · SE EXALTA SOCIALMENTE\n\nLa sociedad le otorga honores, reconocimientos públicos, posiciones importantes. La cultura general lo celebra. Aparece en medios como figura admirable.\n\nEsta es una señal cultural que opera más allá de su esfera inmediata. El consenso social lo eleva.\n\nSIGNO 5 · ES PROTEGIDO POR LEYES INJUSTAS\n\nEl sistema legal le favorece — sea porque las leyes están escritas para protegerlo, sea porque los jueces se inclinan a su favor, sea porque los procesos lo benefician. La estructura del derecho está de su lado.\n\nEste es el signo más estructural. Cuando las propias leyes protegen al malvado, la confrontación legal es prácticamente inútil.\n\nLA SUMA DE LOS SIGNOS:\n\nNo se requieren TODOS los signos para identificar la shaa meshacheket. La presencia de VARIOS basta. Cuanto más signos están presentes, más segura la identificación.\n\nQUÉ HACER CUANDO TODOS LOS SIGNOS ESTÁN PRESENTES:\n\n  · ESPERAR — el justo se concentra en preservar lo que ya tiene\n  · PREPARAR — el justo trabaja para el momento futuro de cambio\n  · DOCUMENTAR — el justo registra las injusticias para el momento posterior\n  · ORAR — el justo apela a HKBH para que cambie las circunstancias\n  · NO CONFRONTAR DIRECTAMENTE — sería temeridad\n\nQUÉ HACER CUANDO LOS SIGNOS COMIENZAN A DESVANECERSE:\n\n  · EVALUAR cuidadosamente el cambio\n  · COMENZAR oposición moderada (probar el terreno)\n  · GRADUALMENTE intensificar si el momento favorece\n  · MANTENER la prudencia hasta que el cambio sea claro\n\nLA INVERSIÓN DE LA SHAA:\n\nLa sugyá NO dice explícitamente que la shaa siempre se invierte, pero la tradición talmúdica IMPLICA que sí. El malvado eventualmente cae. El versículo de Tehilim 37:2 (continuando 37:1) dice:\n\n  «כִּי כֶחָצִיר מְהֵרָה יִמָּלוּ · וּכְיֶרֶק דֶּשֶׁא יִבּוֹלוּן»\n  «Porque pronto serán cortados como heno · y como hierba verde se marchitarán»\n\nEl momento de prosperidad del malvado es PASAJERO. La halajá del justo es ESPERAR ese cambio.\n\nLA APLICACIÓN HISTÓRICA:\n\nMuchos imperios han parecido invencibles en su momento — el Egipto del faraón, el Babilonia de Nabucodonosor, la Roma del César, la Alemania nazi. Cada uno tuvo su shaa meshacheket. Cada uno cayó eventualmente. La sabiduría del justo era SOBREVIVIR durante el período, NO confrontar suicidalmente, y estar listo cuando el cambio llegara.\n\nESTA HALAJÁ DEL «ESPERAR ACTIVAMENTE» ha sido una clave de supervivencia histórica del pueblo judío. NO sumisión, NO rebelión imprudente — sino PRESERVACIÓN INTELIGENTE hasta el momento adecuado.\n\nEL DISCERNIMIENTO DE LOS SIGNOS es una habilidad que se cultiva. Los líderes sabios la desarrollan. Los rabinos a través de los siglos han ofrecido esta sabiduría a sus comunidades: NO confrontar ahora, NO renunciar al combate, ESPERAR ACTIVAMENTE el cambio de la hora.\n\nESTA ES LA POLÍTICA RABÍNICA: paciencia estratégica con coraje moral. El justo NO cede en sus principios, pero ELIGE el momento de la batalla.'
+    },
+    'tzadik-gamur': {
+      titulo: 'La calificación · ¿solo el tzadik gamur puede provocar?',
+      hebreo: 'הַאִם רַק לַצַּדִּיק הַגָּמוּר מוּתָּר?',
+      traduccion: '¿Solo al tzadik completo se le permite?',
+      explicacion: 'La sugyá registra una OPINIÓN ALTERNATIVA que restringe el permiso de R. Yojanan. Para esta opinión, NO TODO justo puede provocar a los malvados — SOLO el tzadik gamur (justo completo, sin manchas).\n\nLA DISTINCIÓN entre tzadik gamur y tzadik eino gamur viene del diagrama #20 (las tres peticiones de Moshé). Allí, R. Yojanan refinó las categorías de la teodicea: el tzadik que sufre lo hace por sus propias manchas residuales (eino gamur), no por injusticia divina.\n\nAQUÍ SE APLICA la misma distinción a la halajá de provocar a los rashaim:\n\nEL TZADIK GAMUR:\n  · Su mérito es COMPLETO\n  · Está protegido cósmicamente por su pureza\n  · Puede confrontar a los rashaim porque su mérito lo protege\n  · El mal NO puede dañarlo en lo esencial\n\nEL TZADIK EINO GAMUR:\n  · Tiene MANCHAS RESIDUALES en su mérito\n  · Está VULNERABLE en los puntos de sus manchas\n  · NO debe provocar a los rashaim porque la confrontación expone sus puntos débiles\n  · El malvado puede explotar sus manchas para dañarlo\n\nLA LÓGICA TEOLÓGICA:\n\nLa confrontación con el mal es una BATALLA ESPIRITUAL, no solo física o política. En batallas espirituales, el lado que tiene MÁS PUREZA gana. El malvado, aunque material o políticamente poderoso, ESTÁ ESPIRITUALMENTE DEBILITADO por su mal.\n\nPero si el confrontador (el justo) tiene también manchas espirituales, la diferencia de pureza se reduce. La batalla espiritual se vuelve incierta. El malvado puede ganar al explotar las manchas residuales del justo.\n\nPOR ESO LA OPINIÓN ALTERNATIVA: solo el tzadik gamur tiene la ventaja espiritual decisiva. Los demás justos deben abstenerse — no por cobardía, sino por reconocimiento de su propia vulnerabilidad.\n\nEJEMPLO BÍBLICO:\n\nMoshé pudo confrontar al Faraón porque era tzadik gamur. Su mérito era inatacable. El Faraón no podía dañarlo espiritualmente.\n\nDavid, en sus momentos de mancha (Bat-Sheva), NO pudo confrontar exitosamente a sus enemigos. Avshalom encontró el espacio para rebelarse precisamente porque David tenía manchas residuales que lo vulnerabilizaban.\n\nLA OPINIÓN DOMINANTE:\n\nR. Yojanan (la opinión principal) NO ACEPTA esta restricción. Para él, el permiso es GENERAL — todo justo puede confrontar, con la excepción del momento (shaa meshacheket), no de la persona.\n\nLA DIFERENCIA ENTRE LAS OPINIONES:\n\n  · R. Yojanan: el permiso es contextual al MOMENTO (no provoques cuando la hora le sonríe al malvado)\n  · Opinión alternativa: el permiso es contextual a la PERSONA (solo el tzadik gamur puede provocar)\n\nAMBAS POSICIONES tienen mérito:\n\nA FAVOR DE R. YOJANAN — democratiza la confrontación. Cualquier justo puede actuar, en el momento adecuado. NO se requiere perfección personal — se requiere sabiduría situacional.\n\nA FAVOR DE LA ALTERNATIVA — protege al justo imperfecto. Reconoce realísticamente que la confrontación es peligrosa, y que el imperfecto puede salir lastimado más que el perfecto.\n\nLA HALAJÁ NORMATIVA tiende a seguir a R. Yojanan — el permiso general con la excepción del momento. Pero la opinión alternativa aporta una sensibilidad importante: el imperfecto debe estar especialmente atento a sus propias vulnerabilidades.\n\nIMPLICACIONES PRÁCTICAS:\n\n  · Si confrontas el mal, EXAMÍNATE primero. ¿Tienes manchas que el malvado pueda explotar?\n  · Si tienes manchas SERIAS, considera trabajar en ellas ANTES de confrontar\n  · NO te declares a ti mismo tzadik gamur con presunción — esto sería arrogancia espiritual\n  · BUSCA aliados que compensen tus debilidades\n\nLA INTEGRACIÓN DE LAS DOS OPINIONES:\n\nMuchos comentaristas posteriores integran ambas:\n\n  · El permiso es GENERAL (R. Yojanan) — todos pueden confrontar\n  · Pero LA EFICACIA depende de PUREZA (opinión alternativa) — el más puro confronta con más eficacia\n  · La halajá del DISCERNIMIENTO incluye AMBOS — discierne el momento Y discierne tu propia preparación\n\nEsta integración es la sabiduría halájica completa: confronta cuando el momento permite Y cuando tu propio nivel te lo permite.\n\nQUIEN APRENDE ESTA SUGYÁ desarrolla una sensibilidad doble: atención al contexto externo (shaa meshacheket) Y atención al estado interior (gamur vs eino gamur). Las dos juntas calibran la decisión.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la ética del coraje calibrado',
+      hebreo: 'אֶתִיקָה שֶׁל אוֹמֶץ מְכֻוָּן',
+      traduccion: 'Ética del coraje calibrado',
+      explicacion: 'La sugyá entera ofrece una doctrina coherente: la ÉTICA DEL CORAJE CALIBRADO. NO pacifismo pasivo, NO temeridad heroica, sino CORAJE CON DISCERNIMIENTO.\n\nLAS CUATRO LECCIONES:\n\nLECCIÓN 1 · NO PACIFISMO PASIVO\n\nLa halajá NO obliga al justo a tolerar el mal silenciosamente. El permiso de R. Yojanan es CLARO: «mutar lehitgarot ba-rasha\'im» — está permitido provocar. Quien interpreta el judaísmo como religión pasiva se equivoca. La línea profética es CONFRONTACIONAL.\n\nIMPLICACIONES:\n\n  · El judío observante puede protestar contra la injusticia\n  · Puede denunciar la corrupción\n  · Puede oponerse políticamente a gobiernos malvados\n  · Puede tomar la iniciativa moral, no solo reaccionar\n\nLECCIÓN 2 · NO TEMERIDAD HEROICA\n\nLa halajá tampoco autoriza confrontaciones imprudentes. La excepción de «shaa meshacheket» es ESTRICTA. Si el momento favorece al malvado, el justo NO debe arriesgarse al combate frontal.\n\nIMPLICACIONES:\n\n  · El coraje del justo es CALCULADO, no impulsivo\n  · La halajá NO premia el sacrificio inútil\n  · La supervivencia inteligente NO es traición a la causa\n  · El que se preserva para luchar otro día sirve mejor que el que muere temerariamente hoy\n\nLECCIÓN 3 · EL DISCERNIMIENTO COMO VIRTUD\n\nEntre las virtudes morales, el DISCERNIMIENTO ocupa lugar central en esta halajá. Saber CUÁNDO confrontar es tan importante como tener el coraje para confrontar.\n\nIMPLICACIONES:\n\n  · El estudio de la situación es virtud espiritual\n  · La paciencia es forma de sabiduría\n  · La capacidad de leer signos del momento es habilidad halájica\n  · El líder rabínico que enseña discernimiento sirve más que el que solo grita confrontación\n\nLECCIÓN 4 · LA DEMORA NO ES COBARDÍA\n\nEsperar a que pase la shaa meshacheket NO es debilidad moral. Es ESTRATEGIA ESPIRITUAL. El justo que espera el momento adecuado NO está renunciando a su causa — está PRESERVÁNDOSE para servirla mejor.\n\nIMPLICACIONES:\n\n  · Los movimientos sociales que practican paciencia estratégica suelen triunfar más que los que se precipitan\n  · La supervivencia es prerrequisito de la victoria\n  · La preservación de la comunidad es valor halájico decisivo\n  · La impaciencia es a menudo orgullo disfrazado de virtud\n\nEL EJEMPLO DE DAVID:\n\nLa sugyá nos lleva al precedente de David. David:\n\n  · CONFRONTÓ a Goliat — porque la hora NO sonreía especialmente al filisteo\n  · CONFRONTÓ a Shaúl — pero con prudencia, evitando matarlo directamente\n  · HUYÓ de Avshalom — porque la hora sonreía al rebelde (#21)\n  · ESPERÓ pacientemente — sabiendo que el momento cambiaría\n  · REGRESÓ a su reino — cuando el momento le permitió\n\nDavid es el modelo halájico de coraje calibrado. NO es el héroe imprudente. Es el sabio que sabe cuándo y cómo.\n\nLA CONEXIÓN CON LA ETICA TALMÚDICA AMPLIA:\n\nEsta doctrina conecta con varias enseñanzas del Talmud:\n\n  · «איזהו גיבור — הכובש את יצרו» — «¿quién es valiente? — el que controla su impulso» (Pirkei Avot 4:1)\n  · «יפתח בדורו כשמואל בדורו» — «cada generación tiene a su líder» — el discernimiento del momento es relativo a la generación\n  · La sabiduría política de los Sabios durante el Imperio Romano — paciencia inteligente que preservó al pueblo\n\nESTA DOCTRINA SE OPONE A DOS EXTREMOS:\n\n  · EL EXTREMO DEL ZELOTE — confrontación constante, sin discernimiento, que conduce a destrucción (cf. el caso de los zelotes durante la Guerra Judía del 70 EC)\n  · EL EXTREMO DEL QUIETISTA — abstención total de la política, que abandona el mundo al mal\n\nLA HALAJÁ ES UN PUNTO MEDIO ACTIVO: confrontación cuando el momento lo permite, paciencia cuando el momento lo exige, NUNCA renuncia a la causa.\n\nLA APLICACIÓN CONTEMPORÁNEA:\n\nEsta doctrina es de relevancia URGENTE para el judío moderno. En cada generación, el judío enfrenta:\n\n  · Antisemitismo en sus diversas formas\n  · Corrupción política y social\n  · Injusticia económica y opresión\n  · Distorsión de valores en la cultura\n\nLa halajá ofrece guía:\n\n  · NO permanezcas silente — la halajá te autoriza a hablar y actuar\n  · ESTUDIA la situación — discierne el momento\n  · ELIGE tus batallas — no todas las confrontaciones son sabias\n  · PRESÉRVATE para servir más — la supervivencia inteligente es virtud\n  · MANTÉN la pureza de medios — no te conviertas en lo que combates\n\nESTA ES LA HERENCIA DE R. YOJANAN: el coraje judío clásico — apasionado pero disciplinado, valiente pero prudente, comprometido pero discernido. NO el coraje impulsivo, NO la pasividad cómplice — sino el coraje CALIBRADO por la sabiduría halájica del momento.\n\nQUIEN INCORPORA ESTA HALAJÁ a su vida adquiere una sensibilidad política y moral particular: lee los momentos, calibra las respuestas, conserva los principios, espera con paciencia activa, y actúa con decisión cuando la hora cambia. Esta es la sabiduría del justo en la halajá de la confrontación con el mal.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.provoc-interactivo')
+    : document.querySelector('.provoc-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#provoc-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.provoc-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="provoc-panel-header">' +
+        '<p class="provoc-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="provoc-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="provoc-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="provoc-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.provoc-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.provoc-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="provoc-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

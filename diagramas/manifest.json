@@ -765,15 +765,37 @@
       "slug": "provocar-rashaim",
       "orden": 22,
       "titulo": "Provocar a los rashaim",
-      "subtitulo": "permitido en este mundo · fijar lugar",
+      "subtitulo": "permitido en este mundo · pero atención a la «shaa meshacheket»",
       "dapim": [
         "7b"
       ],
       "grupo": "Halajá personal",
-      "estado": "pendiente",
-      "sabios": [],
-      "pesukim": [],
-      "conceptos": []
+      "estado": "listo",
+      "diagrama": "diagramas/provocar-rashaim.html",
+      "sabios": [
+        "r-yojanan",
+        "r-yose-ben-zimra",
+        "rav"
+      ],
+      "sabios_biblicos": [
+        "david"
+      ],
+      "pesukim": [
+        "tehilim-37-1",
+        "mishlei-24-19",
+        "mishlei-23-17"
+      ],
+      "conceptos": [
+        "rashaim",
+        "hitgarot",
+        "shaa-meshacheket",
+        "tzadik-gamur",
+        "courage-moral"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "El diagrama #21 mostró a David enfrentando la tragedia de\nAvshalom — un rasha tarbut ra'á dentro de su propia casa. Surge\nnaturalmente la pregunta práctica: ¿puede el justo PROVOCAR\nactivamente a los rashaim? ¿Confrontar el mal? ¿O debe siempre\nhuir y refugiarse en mizmorim? La sugyá responde con una halajá\nmatizada: SÍ se puede, pero con discernimiento del momento.\n"
+      }
     },
     {
       "slug": "akiva-medos-gamliel-persas",
@@ -983,6 +1005,10 @@
       "nombre": "R Shimon Jasida"
     },
     {
+      "slug": "r-yose-ben-zimra",
+      "nombre": "R Yose Ben Zimra"
+    },
+    {
       "slug": "r-zera",
       "nombre": "R Zera"
     },
@@ -1189,6 +1215,18 @@
     {
       "slug": "shemot-11-4",
       "nombre": "Shemot 11 4"
+    },
+    {
+      "slug": "tehilim-37-1",
+      "nombre": "Tehilim 37 1"
+    },
+    {
+      "slug": "mishlei-24-19",
+      "nombre": "Mishlei 24 19"
+    },
+    {
+      "slug": "mishlei-23-17",
+      "nombre": "Mishlei 23 17"
     },
     {
       "slug": "tehilim-19-15",
@@ -1484,6 +1522,26 @@
       "nombre": "Knor Shel David"
     },
     {
+      "slug": "rashaim",
+      "nombre": "Rashaim"
+    },
+    {
+      "slug": "hitgarot",
+      "nombre": "Hitgarot"
+    },
+    {
+      "slug": "shaa-meshacheket",
+      "nombre": "Shaa Meshacheket"
+    },
+    {
+      "slug": "tzadik-gamur",
+      "nombre": "Tzadik Gamur"
+    },
+    {
+      "slug": "courage-moral",
+      "nombre": "Courage Moral"
+    },
+    {
       "slug": "ruina-yerushalayim",
       "nombre": "Ruina Yerushalayim"
     },
@@ -1767,6 +1825,14 @@
       "categoria": "editorial",
       "tipo": "cadena-formula",
       "texto": "El diagrama #20 dejó la tensión irresuelta sobre la teodicea —\nR. Meir sostiene que las vías de HKBH son MISTERIOSAS, no\nsistematizables. La sugyá inmediatamente trae UN CASO concreto\ndonde la teodicea opera de manera ENIGMÁTICA: David, al huir de\nAvshalom su hijo, escribe «MIZMOR» (cántico) en lugar de «KINÁ»\n(lamento). ¿Cómo se canta en medio de la tragedia? El editor pega\nel caso por cadena-fórmula: la tercera petición de Moshé (la\nteodicea) se ilustra con la respuesta DAVÍDICA al sufrimiento.\n",
+      "peso": 3
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "provocar-rashaim",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "El diagrama #21 mostró a David enfrentando la tragedia de\nAvshalom — un rasha tarbut ra'á dentro de su propia casa. Surge\nnaturalmente la pregunta práctica: ¿puede el justo PROVOCAR\nactivamente a los rashaim? ¿Confrontar el mal? ¿O debe siempre\nhuir y refugiarse en mizmorim? La sugyá responde con una halajá\nmatizada: SÍ se puede, pero con discernimiento del momento.\n",
       "peso": 3
     },
     {
@@ -2106,6 +2172,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "semijat-geula-tefila",
       "to": "ashrei-olam-haba",
       "categoria": "co-referencia",
@@ -2186,6 +2260,14 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -2228,6 +2310,14 @@
     {
       "from": "ashrei-olam-haba",
       "to": "david-y-avshalom",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "provocar-rashaim",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -2386,6 +2476,14 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-y-cama",
       "to": "mazikin-invisibles",
       "categoria": "co-referencia",
@@ -2458,6 +2556,22 @@
       "peso": 1
     },
     {
+      "from": "beit-knesset",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "hkbh-reza-tefilin",
       "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
@@ -2498,11 +2612,51 @@
       "peso": 1
     },
     {
+      "from": "hkbh-reza-tefilin",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "moshe-tres-cosas",
       "to": "david-y-avshalom",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
       "peso": 1
     }
   ]
