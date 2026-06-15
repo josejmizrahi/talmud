@@ -1,0 +1,424 @@
+<div class="naciones-interactivo">
+<style>
+  .naciones-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .naciones-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .naciones-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .naciones-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .naciones-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .naciones-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .naciones-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .naciones-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .naciones-diagrama svg { width: 100%; height: auto; display: block; }
+  .naciones-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .naciones-nodo:hover rect { stroke-width: 2 !important; }
+  .naciones-nodo:hover circle { stroke-width: 2.5 !important; }
+  .naciones-nodo.activa rect { stroke-width: 2.5 !important; }
+  .naciones-nodo.activa circle { stroke-width: 3 !important; }
+  .naciones-nodo.dim { opacity: 0.32; }
+  .naciones-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .naciones-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .naciones-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .naciones-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .naciones-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .naciones-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .naciones-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="naciones-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>fórmula paralela</span>
+  <span><span class="swatch azul"></span>R. Akiva · Medos · civilidad</span>
+  <span><span class="swatch verde"></span>R. Gamliel · Persas · tzniut</span>
+  <span><span class="swatch sepia"></span>doctrina · apertura disciplinada</span>
+</div>
+
+<div class="naciones-diagrama">
+<svg viewBox="0 0 720 1180" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 8b: R. Akiva y los Medos · R. Gamliel y los Persas · tres cosas de cada cultura</title>
+
+<defs>
+  <marker id="flecha-na" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-na-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">R. Akiva los Medos · R. Gamliel los Persas</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 8b · el judaísmo aprende de las naciones · «אוהב אני»</text>
+
+<!-- ============================================================ -->
+<!-- FÓRMULA PARALELA                                             -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOS BARAITOT PARALELAS · LA MISMA FÓRMULA</text>
+
+<g class="naciones-nodo" data-id="formula">
+  <rect x="60" y="86" width="600" height="92" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">עַל שְׁלֹשָׁה דְּבָרִים אוֹהֵב אֲנִי…</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Por TRES cosas AMO…» — el mismo lenguaje en ambos sabios</text>
+  <text x="360" y="156" text-anchor="middle" font-size="10" fill="#b8860b" font-style="italic">el verbo אוֹהֵב (amo) es activo, agradecido — no «tolero», no «acepto»</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">declaración pública de afecto por costumbres de naciones gentiles</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DIVISIÓN EN DOS COLUMNAS                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="178" x2="360" y2="196" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="196" x2="540" y2="196" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="196" x2="180" y2="214" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-na)"/>
+<line x1="540" y1="196" x2="540" y2="214" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-na)"/>
+
+<text x="180" y="210" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">R. AKIVA · MEDOS</text>
+<text x="540" y="210" text-anchor="middle" font-size="9" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1">R. GAMLIEL · PERSAS</text>
+
+<!-- ============================================================ -->
+<!-- COLUMNA IZQUIERDA · R. AKIVA · MEDOS                        -->
+<!-- ============================================================ -->
+<g class="naciones-nodo" data-id="medos-header">
+  <rect x="50" y="222" width="260" height="56" rx="5" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="180" y="244" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Los Medos · civilidad ordenada</text>
+  <text x="180" y="262" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">אוֹהֵב אֲנִי אֶת הַמָּדִיִּים</text>
+  <text x="180" y="274" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">orden · respeto · sabiduría pública</text>
+</g>
+
+<!-- Costumbre Medo 1 -->
+<g class="naciones-nodo" data-id="medo-mesa">
+  <rect x="50" y="288" width="260" height="100" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <circle cx="78" cy="312" r="14" fill="rgba(30,58,95,0.20)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="317" text-anchor="middle" font-size="11" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="105" y="306" font-size="10" fill="#1e3a5f" font-weight="700">cortar carne</text>
+  <text x="105" y="320" font-size="9" fill="#1e3a5f">en la mesa</text>
+  <text x="60" y="338" font-size="9" direction="rtl" fill="#3d2f23">עַל גַּבֵּי הַשֻּׁלְחָן</text>
+  <text x="60" y="354" font-size="8.5" fill="#3d2f23" font-style="italic">NO en el suelo · NO en la mano</text>
+  <text x="60" y="370" font-size="8.5" fill="#6b4423" font-style="italic">civilización doméstica · orden · respeto al alimento</text>
+</g>
+
+<!-- Costumbre Medo 2 -->
+<g class="naciones-nodo" data-id="medo-beso">
+  <rect x="50" y="398" width="260" height="100" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <circle cx="78" cy="422" r="14" fill="rgba(30,58,95,0.20)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="427" text-anchor="middle" font-size="11" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="105" y="416" font-size="10" fill="#1e3a5f" font-weight="700">besar</text>
+  <text x="105" y="430" font-size="9" fill="#1e3a5f">en el dorso de la mano</text>
+  <text x="60" y="448" font-size="9" direction="rtl" fill="#3d2f23">עַל גַּב הַיָּד</text>
+  <text x="60" y="464" font-size="8.5" fill="#3d2f23" font-style="italic">NO en la palma · NO en la mejilla</text>
+  <text x="60" y="480" font-size="8.5" fill="#6b4423" font-style="italic">modestia en el saludo · afecto contenido</text>
+</g>
+
+<!-- Costumbre Medo 3 -->
+<g class="naciones-nodo" data-id="medo-consejo">
+  <rect x="50" y="508" width="260" height="100" rx="5" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <circle cx="78" cy="532" r="14" fill="rgba(30,58,95,0.20)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="537" text-anchor="middle" font-size="11" fill="#1e3a5f" font-weight="700">3</text>
+  <text x="105" y="526" font-size="10" fill="#1e3a5f" font-weight="700">deliberar</text>
+  <text x="105" y="540" font-size="9" fill="#1e3a5f">en el campo</text>
+  <text x="60" y="558" font-size="9" direction="rtl" fill="#3d2f23">בַּשָּׂדֶה</text>
+  <text x="60" y="574" font-size="8.5" fill="#3d2f23" font-style="italic">NO en casa (paredes oyen)</text>
+  <text x="60" y="590" font-size="8.5" fill="#6b4423" font-style="italic">confidencialidad estratégica · ven a quien se acerca</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- COLUMNA DERECHA · R. GAMLIEL · PERSAS                        -->
+<!-- ============================================================ -->
+<g class="naciones-nodo" data-id="persas-header">
+  <rect x="410" y="222" width="260" height="56" rx="5" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="540" y="244" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Los Persas · tzniut universal</text>
+  <text x="540" y="262" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">אוֹהֵב אֲנִי אֶת הַפַּרְסִיִּים</text>
+  <text x="540" y="274" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">modestia en TODOS los aspectos privados</text>
+</g>
+
+<!-- Costumbre Persa 1 -->
+<g class="naciones-nodo" data-id="persa-comer">
+  <rect x="410" y="288" width="260" height="100" rx="5" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <circle cx="438" cy="312" r="14" fill="rgba(30,107,90,0.20)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="438" y="317" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">1</text>
+  <text x="465" y="306" font-size="10" fill="#2d6b4e" font-weight="700">modestos</text>
+  <text x="465" y="320" font-size="9" fill="#2d6b4e">en el comer</text>
+  <text x="420" y="338" font-size="9" direction="rtl" fill="#3d2f23">צְנוּעִין בַּאֲכִילָתָן</text>
+  <text x="420" y="354" font-size="8.5" fill="#3d2f23" font-style="italic">NO devoran · NO exhiben</text>
+  <text x="420" y="370" font-size="8.5" fill="#6b4423" font-style="italic">tzniut en el alimento · sin escándalo del placer</text>
+</g>
+
+<!-- Costumbre Persa 2 -->
+<g class="naciones-nodo" data-id="persa-bano">
+  <rect x="410" y="398" width="260" height="100" rx="5" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <circle cx="438" cy="422" r="14" fill="rgba(30,107,90,0.20)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="438" y="427" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">2</text>
+  <text x="465" y="416" font-size="10" fill="#2d6b4e" font-weight="700">modestos</text>
+  <text x="465" y="430" font-size="9" fill="#2d6b4e">en el baño</text>
+  <text x="420" y="448" font-size="9" direction="rtl" fill="#3d2f23">צְנוּעִין בְּבֵית הַכִּסֵּא</text>
+  <text x="420" y="464" font-size="8.5" fill="#3d2f23" font-style="italic">privacidad biológica</text>
+  <text x="420" y="480" font-size="8.5" fill="#6b4423" font-style="italic">tzniut en el cuerpo · respeto en lo vulnerable</text>
+</g>
+
+<!-- Costumbre Persa 3 -->
+<g class="naciones-nodo" data-id="persa-otro">
+  <rect x="410" y="508" width="260" height="100" rx="5" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <circle cx="438" cy="532" r="14" fill="rgba(30,107,90,0.20)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="438" y="537" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">3</text>
+  <text x="465" y="526" font-size="10" fill="#2d6b4e" font-weight="700">modestos</text>
+  <text x="465" y="540" font-size="9" fill="#2d6b4e">en «otro asunto»</text>
+  <text x="420" y="558" font-size="9" direction="rtl" fill="#3d2f23">צְנוּעִין בְּדָבָר אַחֵר</text>
+  <text x="420" y="574" font-size="8.5" fill="#3d2f23" font-style="italic">eufemismo: la vida sexual</text>
+  <text x="420" y="590" font-size="8.5" fill="#6b4423" font-style="italic">tzniut en la intimidad · discreción íntima</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LOS PATRONES UNIFICADORES                                    -->
+<!-- ============================================================ -->
+<line x1="180" y1="608" x2="180" y2="626" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-na)"/>
+<line x1="540" y1="608" x2="540" y2="626" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-na)"/>
+
+<text x="60" y="640" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LOS PATRONES UNIFICADORES · UNA VIRTUD CENTRAL POR CULTURA</text>
+
+<g class="naciones-nodo" data-id="patron-medos">
+  <rect x="50" y="650" width="260" height="80" rx="5" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="180" y="672" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Medos = CIVILIDAD ORDENADA</text>
+  <text x="60" y="690" font-size="9" fill="#3d2f23">mesa · saludo · consejo</text>
+  <text x="60" y="704" font-size="9" fill="#3d2f23">→ vida pública con disciplina</text>
+  <text x="60" y="720" font-size="8.5" fill="#6b4423" font-style="italic">estructuran el espacio común</text>
+</g>
+
+<g class="naciones-nodo" data-id="patron-persas">
+  <rect x="410" y="650" width="260" height="80" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="540" y="672" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Persas = TZNIUT UNIVERSAL</text>
+  <text x="420" y="690" font-size="9" fill="#3d2f23">comer · cuerpo · sexualidad</text>
+  <text x="420" y="704" font-size="9" fill="#3d2f23">→ vida privada con discreción</text>
+  <text x="420" y="720" font-size="8.5" fill="#6b4423" font-style="italic">protegen la dignidad íntima</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA COMPLEMENTARIEDAD                                         -->
+<!-- ============================================================ -->
+<line x1="180" y1="730" x2="180" y2="748" stroke="#3d2f23" stroke-width="1"/>
+<line x1="540" y1="730" x2="540" y2="748" stroke="#3d2f23" stroke-width="1"/>
+<line x1="180" y1="748" x2="540" y2="748" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="748" x2="360" y2="764" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-na)"/>
+
+<g class="naciones-nodo" data-id="complementariedad">
+  <rect x="60" y="768" width="600" height="74" rx="6" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="360" y="790" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Los dos sabios cubren el ESPECTRO COMPLETO</text>
+  <text x="360" y="810" text-anchor="middle" font-size="10" fill="#3d2f23"><tspan fill="#1e3a5f" font-weight="600">Medos:</tspan> virtud en el ESPACIO PÚBLICO · <tspan fill="#2d6b4e" font-weight="600">Persas:</tspan> virtud en el ESPACIO PRIVADO</text>
+  <text x="360" y="828" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">juntos: la halajá del comportamiento humano civilizado, dentro y fuera</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · APERTURA CULTURAL DISCIPLINADA              -->
+<!-- ============================================================ -->
+<line x1="360" y1="842" x2="360" y2="860" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-na)"/>
+
+<text x="60" y="872" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · APERTURA CULTURAL DISCIPLINADA</text>
+
+<g class="naciones-nodo" data-id="doctrina">
+  <rect x="60" y="882" width="600" height="288" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="904" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El judaísmo APRENDE de las naciones · pero con discernimiento</text>
+
+  <text x="78" y="926" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="926" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">El judaísmo aprende</tspan> — hay virtudes en las culturas gentiles que merecen reconocimiento</text>
+
+  <text x="78" y="944" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="944" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">La virtud es universal</tspan> — modestia y civilidad no son monopolio judío</text>
+
+  <text x="78" y="962" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="962" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">Solo TRES</tspan> — reconocimiento específico y calibrado · no admiración indiscriminada</text>
+
+  <text x="78" y="980" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="980" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">Aprender, no imitar</tspan> — distinción entre חוקת הגוים (prohibido) y aprendizaje (permitido)</text>
+
+  <text x="78" y="998" font-size="9.5" fill="#3d2f23">5.</text>
+  <text x="100" y="998" font-size="9.5" fill="#3d2f23"><tspan font-weight="600">Complementa #22</tspan> — provoca el mal de las naciones · ama su virtud</text>
+
+  <line x1="78" y1="1014" x2="642" y2="1014" stroke="#6b4423" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="1034" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La dialéctica del judaísmo con las naciones</text>
+
+  <text x="360" y="1056" text-anchor="middle" font-size="9.5" fill="#3d2f23">contra el MAL: confrontación (#22)</text>
+  <text x="360" y="1072" text-anchor="middle" font-size="9.5" fill="#3d2f23">ante el BIEN: reconocimiento y amor (#23)</text>
+
+  <text x="360" y="1094" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">nunca xenofobia indiscriminada · nunca asimilación indiscriminada</text>
+  <text x="360" y="1110" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el judaísmo discierne CASO POR CASO · virtud por virtud · vicio por vicio</text>
+
+  <line x1="78" y1="1124" x2="642" y2="1124" stroke="#6b4423" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="1144" text-anchor="middle" font-size="10.5" fill="#1a1410" font-style="italic">«אוֹהֵב אֲנִי» — el amor del rabino por la virtud gentil es ACTIVO y AGRADECIDO</text>
+  <text x="360" y="1160" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">donde hay virtud, hay reflejo divino · donde hay reflejo divino, el judío AMA</text>
+</g>
+
+</svg>
+</div>
+
+<div class="naciones-panel" id="naciones-panel">
+  <p class="naciones-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'formula': {
+      titulo: 'La fórmula paralela · «por tres cosas amo»',
+      hebreo: 'עַל שְׁלֹשָׁה דְּבָרִים אוֹהֵב אֲנִי',
+      traduccion: '«Por tres cosas amo»',
+      explicacion: 'La sugyá presenta dos baraitot paralelas, con la MISMA fórmula de apertura, pronunciadas por dos de las figuras más importantes del tanaitismo: R. Akiva y Rabban Gamliel.\n\nLa fórmula es notable por varios aspectos:\n\n  1. EL VERBO «אוֹהֵב» (amo) — no es neutro. No dice «tolero», «acepto», «reconozco». DICE AMO. Es declaración de afecto activo.\n\n  2. LA PRIMERA PERSONA «אֲנִי» (yo) — es declaración PERSONAL. No anónima, no editorial. R. Akiva y R. Gamliel se IDENTIFICAN como los que aman.\n\n  3. EL NÚMERO TRES — específico, no abstracto. No dice «amo todo», ni «amo en general». Especifica TRES cosas concretas.\n\n  4. LAS CULTURAS NOMBRADAS — Medos y Persas. Naciones HISTÓRICAS específicas, no metáforas. Son culturas reales con las que el pueblo judío tenía contacto real durante el período babilónico-persa.\n\nESTO ES NOTABLE TEOLÓGICAMENTE. El judaísmo de los tanaítas NO era xenófobo en sentido simplista. Reconocía VIRTUDES en las culturas gentiles. Las nombraba. Las amaba.\n\nA LA VEZ, el reconocimiento era CALIBRADO. Tres cosas, no infinitas. Cosas específicas, no admiración general. La halajá rabínica permite afecto por virtudes gentiles PRECISAS — no autoriza asimilación indiscriminada.\n\nCONTEXTO HISTÓRICO:\n\nR. Akiva vivió bajo dominación romana (siglo II EC), después del destrucción del Segundo Templo. Su admiración por los Medos NO es admiración por los dominadores romanos — los Medos eran cultura más antigua, asociada con el Imperio Persa que había permitido el regreso del exilio.\n\nRabban Gamliel (probablemente Rabban Gamliel II, presidente del Sanedrín de Yavné) vivió en el mismo período. Su admiración por los Persas tiene similar contexto.\n\nAMBOS SABIOS conocían cultural y experiencialmente a las naciones de las que hablan. NO es admiración abstracta — es observación cultural informada.\n\nLA SUGYÁ DENTRO DEL CONTEXTO MAYOR:\n\nLa sugyá viene después de #22 (provocar a los rashaim). El contraste es deliberado:\n\n  · #22 — confronta al mal entre las naciones (audacia moral)\n  · #23 — reconoce y ama la virtud entre las naciones (apertura cultural)\n\nLa dialéctica del judaísmo con las naciones NO es uniforme. Es contextual: confrontación cuando hay mal, amor cuando hay virtud. Esta dialéctica es sabia y madura.\n\nLA LECCIÓN GENERAL:\n\nEl judío observante NO debe abrazar ni rechazar la cultura gentil EN BLOQUE. Debe DISCERNIR. Identificar virtudes específicas. Reconocerlas con amor. Rechazar vicios específicos con firmeza. Esta capacidad de DISCERNIMIENTO CULTURAL es virtud rabínica clásica.\n\nLA APLICACIÓN MODERNA: el judío moderno enfrenta culturas diversas (occidental, oriental, secular, religiosa). La halajá pide AMOR ACTIVO por las virtudes que encuentre — sin asimilación, sin rendición, pero con corazón abierto a reconocer el bien dondequiera aparezca.\n\nESTA ES UNA HALAJÁ que rara vez se enfatiza en la enseñanza popular del judaísmo, pero está presente en el corpus desde los tanaítas. La preserva como herencia: el amor activo por las virtudes gentiles ES MITZVÁ.'
+    },
+    'medos-header': {
+      titulo: 'R. Akiva y los Medos · civilidad ordenada',
+      hebreo: 'אוֹהֵב אֲנִי אֶת הַמָּדִיִּים',
+      traduccion: '«Amo a los Medos»',
+      explicacion: 'R. Akiva, una de las figuras más grandes del tanaitismo, declara su amor por una nación específica: los Medos (Madai).\n\n¿QUIÉNES ERAN LOS MEDOS?\n\nLos Medos eran un pueblo iranio antiguo, que junto con los persas formaron el Imperio Medo-Persa. Aparecen en el Tanaj en varias ocasiones:\n\n  · Yeshayahu 13:17, Yirmiyahu 51:11 — los Medos como instrumento divino contra Babilonia\n  · Daniel 5:28 — el reino dividido entre persas y medos\n  · Esther 1:3, 1:14 — la nobleza meda-persa en la corte de Achashverosh\n\nLos Medos tenían cultura distinta de la babilónica que dominó Mesopotamia anteriormente. Eran considerados (al menos por R. Akiva) más CIVILIZADOS en ciertos aspectos prácticos de la vida cotidiana.\n\nLAS TRES VIRTUDES MEDAS que R. Akiva señala tienen un patrón unificador: CIVILIDAD ORDENADA en la vida pública. Las tres son:\n\n  1. Cortar carne sobre la mesa (orden en el comer doméstico)\n  2. Besar en el dorso de la mano (orden en el saludo)\n  3. Deliberar en el campo (orden en la confidencialidad)\n\nLA DIMENSIÓN ESPACIAL del patrón es notable. Las tres virtudes tienen que ver con DÓNDE se hace cada cosa:\n\n  · La carne EN LA MESA (no en el suelo)\n  · El beso EN EL DORSO (no en otras partes)\n  · El consejo EN EL CAMPO (no en interiores)\n\nLos Medos, según R. Akiva, eran sabios en la CONFIGURACIÓN ESPACIAL de las actividades humanas. Sabían qué hacer dónde. Esta es una forma de civilidad que el judaísmo aprecia.\n\nEL JUDAÍSMO TIENE PARALELO INTERNO:\n\nLa halajá judía también es sumamente consciente del ESPACIO de las actividades:\n\n  · La oración EN LA SINAGOGA (#18)\n  · La cama ORIENTADA N-S (#16)\n  · La tefilá FRENTE A LA CAMA (#16)\n  · No quedarse AFUERA de la sinagoga (#18)\n\nLa sensibilidad espacial de los Medos coincide con la sensibilidad espacial halájica. Por eso R. Akiva los ama: encuentran en una cultura gentil un PARALELISMO con principios judíos.\n\nEL «AMO» de R. Akiva NO es admiración condescendiente. Es RECONOCIMIENTO de paralelismo virtuoso. Los Medos hacen algo que el judaísmo también valora. Esta convergencia merece amor activo.'
+    },
+    'medo-mesa': {
+      titulo: 'Costumbre Meda 1 · cortar carne sobre la mesa',
+      hebreo: 'כְּשֶׁחוֹתְכִין אֶת הַבָּשָׂר — אֵין חוֹתְכִין אֶלָּא עַל גַּבֵּי הַשֻּׁלְחָן',
+      traduccion: '«Cuando cortan la carne — solo cortan sobre la mesa»',
+      explicacion: 'La primera virtud meda señalada por R. Akiva: cortar la carne SOLO sobre la mesa, no en otros lugares.\n\nEL CONTEXTO CULTURAL ANTIGUO:\n\nEn el mundo antiguo, no todas las culturas usaban mesas para comer. Algunas comían en el suelo (estilo nómada), otras en cojines bajos, otras tomaban carne con las manos sin superficie. Cortar la carne podía hacerse en cualquier lugar — en el suelo, sobre las rodillas, en el aire.\n\nLOS MEDOS DESARROLLARON LA PRÁCTICA de cortar SOLO sobre la mesa. Esto representa una codificación CIVILIZACIONAL — una decisión cultural de que ciertas acciones tienen su lugar apropiado.\n\nLAS VIRTUDES IMPLÍCITAS:\n\n  1. HIGIENE — la mesa es superficie limpia y dedicada. Cortar en el suelo introduce contaminación.\n\n  2. ORDEN — la actividad de cortar tiene su lugar definido. Esto reduce el caos del comer en grupo.\n\n  3. RESPETO AL ALIMENTO — la carne no se trata como cosa cualquiera. Tiene su superficie sagrada.\n\n  4. CONTROL DEL CUERPO — uno se sienta en la mesa, se acerca al alimento de manera ordenada. NO se devora animalmente.\n\n  5. PROFESIONALIDAD DEL CORTADO — cortar sobre la mesa permite técnica adecuada. Cortes precisos, no desgarrados.\n\nLA CONEXIÓN HALÁJICA:\n\nLa halajá judía también valora estos principios:\n\n  · La mesa de Shabat es CENTRAL — todos los actos significativos de la comida se hacen sobre ella\n  · El kidush, la jalá, el bendecir — todo ANCLADO en la mesa\n  · La halajá considera la mesa como ALTAR doméstico (Berajot 55a: «la mesa del hombre es como el altar del Templo»)\n\nLos Medos, sin teología explícita del altar, descubrieron empíricamente lo que la halajá codifica teológicamente: la mesa es ESPACIO SAGRADO de la alimentación.\n\nLA LECCIÓN PARA EL JUDÍO MODERNO:\n\nEn una era donde se come en cualquier parte (frente al TV, en el auto, caminando), la sabiduría meda se pierde. La mesa del comedor se ha vaciado.\n\nLA HALAJÁ recomienda recuperar la mesa. Comer SOBRE LA MESA — no en otra parte. Cortar SOBRE LA MESA. Crear el espacio dedicado para el acto sagrado de alimentarse.\n\nESTE DETALLE «MENOR» (¿dónde cortar la carne?) tiene profundas implicaciones para la dignidad humana. Quien come civilizadamente HONRA su cuerpo, su alimento y su comunidad. Quien come desordenadamente se reduce a animal.\n\nLOS MEDOS LO ENTENDIERON. R. Akiva los amó por ello. El judaísmo aprende sin imitar.'
+    },
+    'medo-beso': {
+      titulo: 'Costumbre Meda 2 · besar en el dorso de la mano',
+      hebreo: 'כְּשֶׁנּוֹשְׁקִין — אֵין נוֹשְׁקִין אֶלָּא עַל גַּב הַיָּד',
+      traduccion: '«Cuando besan — solo besan en el dorso de la mano»',
+      explicacion: 'La segunda virtud meda: el beso de saludo se hace SOLO en el dorso de la mano, no en otras partes del cuerpo.\n\nEL CONTEXTO COMPARATIVO:\n\nDiferentes culturas han desarrollado diferentes formas de saludo:\n  · Beso en la boca (algunos contextos íntimos)\n  · Beso en las mejillas (muchas culturas mediterráneas)\n  · Beso en la frente (gestos paternales)\n  · Beso en la palma de la mano (sumisión, reverencia)\n  · Beso en el dorso de la mano (formal, respetuoso)\n  · Beso en los pies (sumisión extrema)\n\nLOS MEDOS ELIGIERON el dorso de la mano. ¿Por qué?\n\nVIRTUDES IMPLÍCITAS:\n\n  1. MODESTIA — el beso en el dorso es el menos íntimo de los besos físicos. Mantiene la distancia apropiada en interacciones sociales.\n\n  2. RESPETO — el dorso de la mano es la parte VISIBLE de la mano. Besar el dorso es saludar la parte presentable, no acercarse a partes más íntimas.\n\n  3. FORMALIDAD — el saludo es CEREMONIAL, no familiar. Esto preserva la dignidad de ambos.\n\n  4. SEGURIDAD HIGIÉNICA — el dorso de la mano se contamina menos que la palma (que toca muchas cosas) o la boca.\n\n  5. AFECTO CONTENIDO — hay AFECTO en el beso (no es indiferencia), pero CONTENIDO (no es desbordado).\n\nLA CONEXIÓN HALÁJICA:\n\nLa halajá judía también valora la TZNIUT (modestia) en el contacto físico:\n\n  · Negiá — la halajá de tocar entre hombres y mujeres no familiares\n  · La presentación pública NO debe ser eróticamente cargada\n  · El saludo sí, pero con contención\n\nLos Medos descubrieron empíricamente una práctica que codifica halájicamente la modestia: un saludo afectuoso pero contenido.\n\nESTA PRÁCTICA ESPECÍFICA (besar el dorso de la mano) sigue viva en algunas culturas — saludo formal a la realeza, gestos de respeto en algunas culturas latinas u orientales. Donde sobrevive, conserva la sabiduría meda.\n\nLA LECCIÓN MODERNA:\n\nEn una era de saludos progressivamente íntimos (besos en la mejilla, abrazos calurosos, contactos cada vez más cercanos), la sabiduría meda se pierde.\n\nLA HALAJÁ NO PROHÍBE el saludo afectuoso — pero recomienda CONTENCIÓN. NO todo saludo necesita ser íntimo. NO toda relación necesita expresarse físicamente.\n\nEL JUDÍO OBSERVANTE puede aprender de los Medos: hay belleza en el saludo formal, contenido, respetuoso. El amor a la modestia es virtud transversal que el judaísmo reconoce en todas las culturas que la practican.\n\nR. AKIVA LO RECONOCIÓ. Una práctica meda específica (dorso de la mano) encarna una virtud universal (tzniut). Por eso R. Akiva la AMÓ.'
+    },
+    'medo-consejo': {
+      titulo: 'Costumbre Meda 3 · deliberar en el campo',
+      hebreo: 'כְּשֶׁיּוֹעֲצִין — אֵין יוֹעֲצִין אֶלָּא בַּשָּׂדֶה',
+      traduccion: '«Cuando deliberan — solo deliberan en el campo»',
+      explicacion: 'La tercera virtud meda: cuando los Medos tienen que discutir asuntos serios, lo hacen EN EL CAMPO, no en interiores.\n\nLA RAZÓN PRÁCTICA:\n\nEn el campo abierto, uno puede VER quién se acerca desde lejos. No hay paredes detrás de las cuales alguien pueda esconderse. No hay rincones donde un espía pueda quedarse oculto. La conversación está protegida por la VISIBILIDAD del entorno.\n\nEN INTERIORES, en cambio:\n  · Puede haber alguien escondido en otra habitación\n  · Las paredes amplifican el sonido (los vecinos oyen)\n  · Las puertas pueden ser abiertas sin advertencia\n  · Los sirvientes pueden estar escuchando\n\nLA SABIDURÍA MEDA es de seguridad estratégica. Si tienes que discutir algo que NO debe ser oído por terceros, vete al campo.\n\nEL PROVERBIO RABÍNICO PARALELO:\n\nLa tradición rabínica tiene un dicho similar: «אזנים לכותל» («los muros tienen oídos»). Los espacios cerrados conservan las palabras de manera peligrosa. El campo abierto las DISPERSA en el viento — y a la vez permite vigilar la ausencia de oyentes ilegítimos.\n\nLA CONEXIÓN HALÁJICA:\n\nLa halajá judía valora la CONFIDENCIALIDAD en muchos contextos:\n\n  · El consejo de un rabino a un fiel debe ser privado\n  · Los secretos comerciales se respetan\n  · La halajá del lashón hará prohibe divulgar lo confidencial\n  · El Sanedrín deliberaba en cámara cerrada (pero protegida)\n\nLOS MEDOS descubrieron una técnica espacial para garantizar la confidencialidad: la deliberación al aire libre con visibilidad de 360 grados.\n\nLA APLICACIÓN MILITAR Y POLÍTICA:\n\nEn historia, los grandes consejos secretos han usado esta sabiduría:\n\n  · Las negociaciones diplomáticas confidenciales a menudo se realizan en lugares apartados (cabañas en montañas, palacios aislados)\n  · Los líderes que necesitan privacidad sin micrófonos se llevan a caminar al aire libre\n  · La tradición militar conoce «caminata privada» — el comandante invita al subordinado a caminar al aire libre cuando tiene que decir algo serio\n\nESTA TÉCNICA MEDA sigue siendo halájicamente sabia. Cuando un rabino necesita hablar muy privadamente con un fiel, llevarlo a un parque o jardín es mejor que la oficina cerrada.\n\nLA LECCIÓN MODERNA:\n\nEn la era digital, la confidencialidad se ha vuelto aún más difícil. Hay micrófonos en cada teléfono. Las paredes electrónicas «escuchan» en formas que los Medos no imaginaban.\n\nPERO EL PRINCIPIO sigue siendo válido: cuando necesitas verdadera confidencialidad, sal al aire libre. Deja los teléfonos atrás. Camina por el campo. Habla donde el viento dispersa las palabras.\n\nR. AKIVA AMÓ esta práctica meda porque encarna una sabiduría halájica universal: la CONFIDENCIALIDAD ES VIRTUD, y requiere DISCIPLINA ESPACIAL. Los Medos lo entendieron sin teología. R. Akiva lo reconoció con amor.\n\nESTA TERCERA VIRTUD MEDA cierra el patrón: vida pública con disciplina (mesa), saludo con respeto (dorso), confidencialidad con sabiduría (campo). Los Medos son maestros de la CIVILIDAD ORDENADA en el espacio público.'
+    },
+    'persas-header': {
+      titulo: 'Rabban Gamliel y los Persas · tzniut universal',
+      hebreo: 'אוֹהֵב אֲנִי אֶת הַפַּרְסִיִּים',
+      traduccion: '«Amo a los Persas»',
+      explicacion: 'Rabban Gamliel — probablemente Rabban Gamliel II, presidente del Sanedrín de Yavné después de la destrucción del Templo — declara su amor por los Persas.\n\nLA CULTURA PERSA:\n\nLos persas son los herederos del Imperio Persa fundado por Ciro el Grande. Su cultura tenía:\n\n  · Religión zoroastra (mucho antes de la sugyá)\n  · Sistemas administrativos sofisticados\n  · Tradición de modestia personal extendida\n  · Códigos de conducta refinados\n  · Influencia cultural sobre Mesopotamia y partes del Mediterráneo\n\nLos persas tenían REPUTACIÓN — entre los judíos y otras culturas — de modestia personal. Esto era reconocido culturalmente.\n\nLAS TRES VIRTUDES PERSAS que R. Gamliel señala tienen un patrón unificador CLARÍSIMO: TZNIUT (modestia) en todos los aspectos de la vida privada. Las tres son:\n\n  1. Modestia en el comer\n  2. Modestia en el cuarto de baño\n  3. Modestia en «otro asunto» (vida sexual)\n\nESTAS SON las TRES DIMENSIONES principales de la vida PRIVADA del cuerpo humano:\n\n  · ALIMENTACIÓN — el cuerpo recibiendo nutrientes\n  · ELIMINACIÓN — el cuerpo expulsando residuos\n  · REPRODUCCIÓN/SEXUALIDAD — el cuerpo en intimidad\n\nLOS PERSAS, según R. Gamliel, eran MODESTOS en las TRES. Esto es notable porque pocos pueblos antiguos tenían esta sensibilidad completa. Muchos eran modestos en alguno de los tres aspectos pero no en todos.\n\nLA SENSIBILIDAD DE R. GAMLIEL es notable. Como presidente del Sanedrín, su autoridad era enorme. Pudiera haber dicho «odiamos a los persas porque son nuestros opresores» o «los persas son inferiores». DICE LO CONTRARIO: amo tres cosas en ellos.\n\nESTO MUESTRA LA SOFISTICACIÓN del judaísmo rabínico. La modestia es virtud universal — incluso entre quienes históricamente fueron opresores políticos de los judíos.\n\nEL CONTRASTE CON LA SUGYÁ DE R. AKIVA:\n\n  · R. AKIVA · MEDOS — virtudes del ESPACIO PÚBLICO (mesa, saludo, consejo)\n  · R. GAMLIEL · PERSAS — virtudes del ESPACIO PRIVADO (comer, baño, sexualidad)\n\nLas dos baraitot juntos cubren el ESPECTRO COMPLETO de la conducta humana civilizada — público y privado. Los dos sabios se COMPLEMENTAN.\n\nESTA COMPLEMENTARIEDAD es deliberada. El editor del Talmud puso ambas baraitot juntas precisamente porque juntas forman una doctrina completa.\n\nLA LECCIÓN GENERAL:\n\nEl judaísmo aprende de los Medos cómo estructurar la vida pública con civilidad. Aprende de los Persas cómo cultivar la vida privada con modestia. NINGUNA CULTURA monopoliza la virtud — la sabiduría está distribuida.\n\nR. GAMLIEL AMÓ a los Persas porque encontraban en ellos la encarnación práctica de UNA VIRTUD CENTRAL del judaísmo: la tzniut. Donde la virtud judía encuentra paralelismo gentil, hay AMOR rabínico merecido.\n\nESTA APERTURA RABÍNICA al reconocimiento de virtudes gentiles es CRUCIAL para entender la sensibilidad judía clásica: NO XENOFOBIA, NO ASIMILACIÓN, sino DISCERNIMIENTO con corazón abierto.'
+    },
+    'persa-comer': {
+      titulo: 'Costumbre Persa 1 · modestos en el comer',
+      hebreo: 'צְנוּעִין בַּאֲכִילָתָן',
+      traduccion: 'Modestos en su comer',
+      explicacion: 'La primera virtud persa: TZNIUT (modestia) en el acto de comer.\n\n¿QUÉ SIGNIFICA «MODESTO EN EL COMER»?\n\nVarias dimensiones implícitas:\n\n  1. NO DEVORAR — no comer apresuradamente con avidez visible. Los animales devoran; los humanos comen con dignidad.\n\n  2. NO EXHIBIR LA COMIDA — no mostrar grandes cantidades como ostentación. La modestia opera incluso en la cantidad visible.\n\n  3. NO HACER ESCÁNDALO DEL PLACER — no exclamar excesivamente, no mostrar exagerado deleite. El placer se experimenta privadamente.\n\n  4. NO ABRIR LA BOCA SUCIA — no mostrar comida masticada. La boca permanece cerrada al masticar.\n\n  5. NO COMER FRENTE A OTROS HAMBRIENTOS — sensibilidad social. Si alguien presente tiene hambre, no comer ostentosamente.\n\n  6. CUBRIR ALGUNOS ALIMENTOS — algunas culturas persas tenían costumbre de cubrir ciertos alimentos durante el comer.\n\nLA SABIDURÍA UNIVERSAL:\n\nLa modestia en el comer es virtud reconocida en muchas culturas. Los romanos, contrariamente, tenían reputación de devorar (banquetes orgiásticos). Los persas, según R. Gamliel, mantenían la dignidad.\n\nLA CONEXIÓN HALÁJICA:\n\nLa halajá judía tiene principios similares:\n\n  · Comer con bracha — comenzar con bendición evita la devoración inmediata\n  · Comer con conciencia — no comer mecánicamente\n  · Cuidado con la cantidad en presencia ajena (Pirkei Avot 3:17: «no es bueno comer mucho en presencia de pobres»)\n  · La comida no es solo placer sino acto de servicio (la mesa como altar)\n\nLOS PERSAS encarnaban estos principios sin la teología judía. R. Gamliel reconoce la VIRTUD donde aparece, independientemente de la fuente teológica.\n\nLA LECCIÓN MODERNA:\n\nEn una era de comer fast-food, de redes sociales con fotos de comida exhibicionistas, de banquetes elaboradamente presentados para impresionar — la sabiduría persa se pierde.\n\nLA HALAJÁ RECOMIENDA: come con dignidad. Come con conciencia. Come modestamente — incluso cuando hay abundancia. La modestia en el comer NO es restricción excesiva; es respeto al acto sagrado de alimentarse.\n\nR. GAMLIEL AMÓ esta virtud en los persas porque resonaba con la sensibilidad judía. La modestia gentil reflejaba la santidad judía en lo cotidiano.'
+    },
+    'persa-bano': {
+      titulo: 'Costumbre Persa 2 · modestos en el cuarto de baño',
+      hebreo: 'צְנוּעִין בְּבֵית הַכִּסֵּא',
+      traduccion: 'Modestos en el cuarto de baño',
+      explicacion: 'La segunda virtud persa: TZNIUT en las funciones biológicas básicas — el cuarto de baño.\n\nLA SENSIBILIDAD CULTURAL:\n\nDiferentes culturas tienen diferente sensibilidad sobre la privacidad del cuarto de baño:\n\n  · Algunos antiguos romanos tenían baños públicos sin divisiones — funciones biológicas eran sociales\n  · Algunas culturas indígenas tenían letrinas abiertas\n  · Los persas (según R. Gamliel) eran MODESTOS — privacidad completa en las funciones biológicas\n\nLAS DIMENSIONES DE LA TZNIUT EN BAÑO:\n\n  1. PRIVACIDAD FÍSICA — el cuarto de baño es CERRADO, no expuesto a la vista pública\n\n  2. PRIVACIDAD AUDITIVA — los sonidos del baño no se exhiben ni discuten\n\n  3. NO DISCUSIÓN PÚBLICA — no se habla de las funciones biológicas en sociedad mixta\n\n  4. LIMPIEZA RIGUROSA — después de las funciones, lavado completo antes de regresar a la vida pública\n\n  5. SEPARACIÓN DEL ESPACIO SAGRADO — el cuarto de baño NO está cerca del lugar de oración o estudio\n\nLA CONEXIÓN HALÁJICA PROFUNDA:\n\nEl judaísmo tiene una halajá ELABORADA sobre el cuarto de baño:\n\n  · Asher Yatzar — bendición tras el baño (gratitud por el cuerpo funcionando)\n  · No estudiar Torá en el baño\n  · No saludar con el nombre divino al entrar/salir\n  · Distancia mínima entre el baño y los lugares sagrados\n  · Modestia en el comportamiento allí (no levantarse antes de cubrir)\n\nESTA HALAJÁ ELABORADA se basa en la dignidad humana — el cuerpo en sus momentos más vulnerables merece privacidad y respeto.\n\nLOS PERSAS, según R. Gamliel, encarnaban esta sensibilidad. No necesitaban la halajá detallada para entender que el cuarto de baño requiere TZNIUT.\n\nLA LECCIÓN MODERNA:\n\nEn la cultura contemporánea, esta sensibilidad se está erosionando:\n\n  · Algunos comparten detalles de sus funciones biológicas en redes sociales\n  · El humor escatológico es cada vez más prominente en medios masivos\n  · Algunas culturas pierden la modestia del baño\n\nLA HALAJÁ DEFIENDE la modestia. Los persas lo entendieron sin halajá. R. Gamliel lo reconoció con amor.\n\nUNA OBSERVACIÓN SUTIL:\n\nQue R. Gamliel mencione TZNIUT EN EL BAÑO como virtud digna de amor es notable. Muestra que la halajá NO considera el cuerpo «sucio» en sus funciones biológicas. Las funciones SON dignas — por eso merecen tzniut, RESPETO en su privacidad. La modestia NO es vergüenza del cuerpo; es respeto por su dignidad incluso en lo vulnerable.\n\nESTA SENSIBILIDAD es PROFUNDAMENTE JUDÍA. El cuerpo es creado en imagen divina. Sus funciones requieren tzniut precisamente porque son SAGRADAS. La halajá lo articula; los persas lo practicaban.\n\nR. GAMLIEL ENCONTRÓ en la cultura persa una expresión natural de una verdad halájica profunda. Por eso amó esta virtud específica de los persas.'
+    },
+    'persa-otro': {
+      titulo: 'Costumbre Persa 3 · modestos en «otro asunto»',
+      hebreo: 'צְנוּעִין בְּדָבָר אַחֵר',
+      traduccion: 'Modestos en otra cosa',
+      explicacion: 'La tercera virtud persa: TZNIUT en «דָּבָר אַחֵר» («otra cosa») — eufemismo rabínico clásico para LA VIDA SEXUAL.\n\nEL EUFEMISMO:\n\nLa sugyá NO dice explícitamente «modestos en lo sexual». Dice «modestos en otra cosa». Esta es DISCRECIÓN LITERARIA — la propia sugyá practica la tzniut que está alabando. NO discute la sexualidad abiertamente, la nombra con eufemismo.\n\nESTA META-PRÁCTICA es notable: la sugyá MISMA es modesta. Habla de modestia con modestia. Esto refuerza la enseñanza por demostración.\n\n¿QUÉ SIGNIFICABA LA TZNIUT SEXUAL PERSA?\n\nVarias dimensiones implícitas:\n\n  1. NO DISCUSIÓN PÚBLICA — la sexualidad no se discute en sociedad mixta. Los persas mantenían el discurso sobre el sexo en círculos íntimos.\n\n  2. NO EXHIBICIÓN — los actos sexuales eran completamente privados. No se observaban.\n\n  3. DIGNIDAD EN LA INTIMIDAD — incluso en privacidad, había código de conducta dignificada.\n\n  4. RESPETO MUTUO ENTRE CÓNYUGES — la modestia no era solo de fachada; afectaba el comportamiento real entre esposos.\n\n  5. NO USO INSTRUMENTAL — la sexualidad NO se reducía a placer transaccional. Tenía dimensión de RELACIÓN.\n\nLA CONEXIÓN HALÁJICA PROFUNDÍSIMA:\n\nEl judaísmo tiene una HALAJÁ ELABORADÍSIMA sobre la tzniut sexual:\n\n  · Hilkhot Niddah — leyes de pureza familiar\n  · Tzniut en el matrimonio — incluso entre cónyuges hay dignidad\n  · Discurso casto — no obscenidades, no chistes vulgares\n  · Vestido modesto — separa la sexualidad de la vida pública\n  · Restricción del contacto físico no marital\n\nESTA HALAJÁ JUDÍA es UNA DE LAS MÁS ELABORADAS de todo el corpus. La tzniut sexual es CENTRAL.\n\nLOS PERSAS encarnaban esta virtud sin la halajá. Por instinto cultural, por tradición ancestral, mantenían la dignidad sexual.\n\nLA LECCIÓN MODERNA:\n\nLa cultura contemporánea ha ido en dirección OPUESTA: la sexualidad se exhibe en publicidad, se discute abiertamente, se trivializa.\n\nLA HALAJÁ JUDÍA mantiene la tzniut sexual contra esta corriente. Los persas la mantenían sin halajá explícita. R. Gamliel reconoció con amor que UNA CULTURA NO-JUDÍA podía ser MAESTRA práctica de una virtud judía central.\n\nUNA REFLEXIÓN SUTIL:\n\nDe las tres virtudes persas, ESTA TERCERA es la más significativa para R. Gamliel. Como cabeza del Sanedrín, conocía la halajá completa sobre tzniut. Que reconozca a una cultura GENTIL como MAESTRA práctica de esta virtud es una declaración profunda:\n\n  · La virtud TRASCIENDE las fronteras religiosas\n  · El judaísmo NO tiene monopolio sobre la sensibilidad sexual\n  · Las naciones pueden alcanzar tzniut sexual sin Torá\n  · El judío DEBE reconocer y AMAR esta virtud dondequiera aparezca\n\nESTA HUMILDAD INTELECTUAL de R. Gamliel — reconocer que los persas entendían algo profundo sobre la dignidad sexual — es una de las grandes lecciones de la sugyá.\n\nLA CONCLUSIÓN DEL PATRÓN PERSA:\n\nLas tres virtudes persas cubren las TRES DIMENSIONES principales de la vida privada del cuerpo:\n\n  1. RECIBIR (comer) — modestia\n  2. ELIMINAR (baño) — modestia\n  3. PROCREAR (sexualidad) — modestia\n\nLos persas tenían TZNIUT INTEGRAL del cuerpo en sus actos privados. R. Gamliel los amó porque encarnaban una virtud que la halajá judía codifica centralmente.\n\nESTA APERTURA DE R. GAMLIEL es una de las páginas más notables del Talmud sobre la relación del judaísmo con las culturas gentiles.'
+    },
+    'patron-medos': {
+      titulo: 'Patrón Medo · civilidad ordenada del espacio público',
+      hebreo: 'הַסָּדֶר שֶׁל הַמָּדִיִּים בְּמֶרְחָב הָרַבִּים',
+      traduccion: 'El orden de los Medos en el espacio público',
+      explicacion: 'Las tres virtudes medas tienen un patrón unificador que vale la pena destacar: TODAS son sobre la CONFIGURACIÓN ESPACIAL CORRECTA en la vida pública.\n\nEL PATRÓN ESPACIAL:\n\n  · Mesa (cortar) — espacio doméstico interior, definido\n  · Dorso de la mano (besar) — espacio del cuerpo, parte apropiada\n  · Campo (deliberar) — espacio exterior abierto, vigilable\n\nLOS MEDOS habían INTERIORIZADO que diferentes actividades requieren DIFERENTES espacios. NO comer y deliberar son ACTIVIDADES DISTINTAS — y la sabiduría civilizacional consiste en ASIGNAR a cada una su espacio óptimo.\n\nESTA SENSIBILIDAD ES SOFISTICADA. Muchas culturas mezclan los espacios. Conversaciones serias en la cocina mientras se cocina. Deliberaciones políticas en banquetes. Saludos íntimos en contextos formales. La mezcla produce confusión y degradación.\n\nLOS MEDOS, según R. Akiva, mantenían la CLARIDAD ESPACIAL. Esto no es trivial — es civilizacional.\n\nEL CONCEPTO DE «CIVILIDAD ORDENADA»:\n\nLa civilidad meda combina:\n\n  · CIVILIDAD — comportamiento socialmente apropiado\n  · ORDEN — estructuración consistente\n\nNo es solo «ser educado». Es ser educado de manera ESTRUCTURADA y PREDECIBLE. Esto produce sociedad confiable, espacios sociales legibles, interacciones humanas dignas.\n\nLA CONEXIÓN CON LA HALAJÁ JUDÍA:\n\nEl judaísmo es UNA RELIGIÓN MUY ESPACIAL. La halajá presta enorme atención a DÓNDE se hacen las cosas:\n\n  · Tefilá en la sinagoga (#18) — espacio para la oración\n  · Cama N-S (#16) — espacio para el sueño\n  · No estudiar en el baño — separación de espacios\n  · La mesa de Shabat — espacio sagrado del comer comunitario\n  · El espacio del campo del Beit Hamikdash — espacios sagrados específicos\n\nLA HALAJÁ JUDÍA Y LA SABIDURÍA MEDA convergen en este principio: LA ASIGNACIÓN ESPACIAL CORRECTA produce dignidad humana.\n\nR. AKIVA AMÓ a los Medos porque encarnaban esta verdad halájica universal. Sin haber recibido Torá, los Medos descubrieron la sabiduría de la organización espacial dignificante.\n\nLA LECCIÓN GENERAL:\n\nUna sociedad que pierde su sentido del espacio apropiado pierde su civilidad. Cuando todo se hace en cualquier parte — cuando el límite entre lo público y lo privado se difumina, cuando los espacios sagrados se profanan con conversaciones triviales — la dignidad humana se erosiona.\n\nLOS MEDOS LO ENTENDIERON. R. Akiva los amó. El judío observante hereda esta sensibilidad y la aplica halájicamente en su vida.\n\nQUIEN PIENSA EN ESPACIOS aplica la sabiduría meda. Donde voy a comer, dónde voy a rezar, dónde voy a tener conversaciones serias, dónde recibo afecto físico — cada uno tiene su lugar apropiado. Esta es la civilidad ordenada que R. Akiva celebra.'
+    },
+    'patron-persas': {
+      titulo: 'Patrón Persa · tzniut universal del cuerpo privado',
+      hebreo: 'הַצְּנִיעוּת הַפַּרְסִית בַּגוּף הַפְּרָטִי',
+      traduccion: 'La tzniut persa en el cuerpo privado',
+      explicacion: 'Las tres virtudes persas tienen un patrón unificador clarísimo: TZNIUT (modestia) en cada dimensión de la vida privada del cuerpo.\n\nLAS TRES DIMENSIONES:\n\n  · ALIMENTACIÓN — el cuerpo recibiendo (modesto al comer)\n  · ELIMINACIÓN — el cuerpo eliminando (modesto en el baño)\n  · REPRODUCCIÓN — el cuerpo procreando (modesto en la sexualidad)\n\nESTAS TRES son LAS TRES FUNCIONES VITALES privadas del cuerpo humano. No hay otras que tengan la misma centralidad biológica. Los persas, según R. Gamliel, eran modestos en LAS TRES.\n\nESTA INTEGRALIDAD es notable. Algunas culturas son modestas en una o dos pero no en todas. Los persas tenían tzniut SISTÉMICA — actitud general hacia los aspectos privados del cuerpo.\n\nEL CONCEPTO DE «TZNIUT UNIVERSAL»:\n\nLa tzniut persa no es modestia limitada a un contexto. Es UNA VISIÓN DEL CUERPO completa que aplica modestia a todas sus funciones privadas.\n\nESTO INVOLUCRA:\n\n  · RESPETO POR EL CUERPO en sus aspectos vulnerables\n  · DIGNIDAD MANTENIDA en momentos de debilidad biológica\n  · PRIVACIDAD COMO VALOR — no como mera vergüenza\n  · DISCRECIÓN COMO HÁBITO — no solo como excepción\n\nLA CONEXIÓN HALÁJICA:\n\nEl judaísmo tiene una HALAJÁ INTEGRADA de tzniut que aplica a TODOS LOS ASPECTOS del cuerpo privado:\n\n  · Asher Yatzar — bendición que reconoce la dignidad biológica\n  · Hilkhot Niddah — pureza familiar\n  · Tzniut en el vestido\n  · Distancia entre baño y oración\n  · Modestia en el discurso sobre el cuerpo\n\nESTA HALAJÁ INTEGRADA es MUY profunda. Trata el cuerpo humano como SAGRADO en sus funciones privadas — no a pesar de ellas.\n\nLOS PERSAS encarnaban esta integralidad sin la teología judía detallada. R. Gamliel reconoció esta convergencia espiritual.\n\nUNA REFLEXIÓN PROFUNDA:\n\nLa tzniut judía NO es vergüenza del cuerpo. Es RESPETO por su dignidad. El cuerpo está creado en imagen divina — y precisamente por ser sagrado merece privacidad en sus funciones más vulnerables.\n\nLOS PERSAS, según R. Gamliel, entendían esto. NO por teología — por sensibilidad cultural acumulada.\n\nLA LECCIÓN COMPARATIVA con los Medos:\n\nLos Medos = sabiduría del ESPACIO PÚBLICO (cómo organizar las interacciones sociales con civilidad)\n\nLos Persas = sabiduría del CUERPO PRIVADO (cómo proteger la dignidad biológica con tzniut)\n\nLas dos sabidurías SON COMPLEMENTARIAS. Cualquier cultura completa necesita AMBAS. Los Medos brillan en lo público; los Persas en lo privado. Juntas, las dos baraitot ofrecen una doctrina integral de la civilización humana.\n\nR. AKIVA Y R. GAMLIEL, en sus respectivas baraitot, cubren juntas el espectro completo. Esta es la sabiduría editorial del Talmud — colocar ambas baraitot lado a lado para que el lector vea el patrón completo.\n\nLA LECCIÓN MODERNA:\n\nEn una cultura contemporánea que ha perdido tanto la sensibilidad espacial pública como la tzniut corporal privada, ambas baraitot son URGENTES.\n\nLos Medos enseñan a CONFIGURAR la vida pública con dignidad. Los Persas enseñan a PROTEGER la vida privada con tzniut. Juntas, las dos sabidurías reconstruyen la dignidad humana en una era que la ha erosionado.\n\nR. GAMLIEL AMÓ a los Persas porque entendieron una verdad judía profunda sin Torá. Esta humildad reconocedora es una de las marcas de la grandeza rabínica.'
+    },
+    'complementariedad': {
+      titulo: 'La complementariedad · público + privado',
+      hebreo: 'הָרְשׁוּת הָרַבִּים וְהָרְשׁוּת הַיָּחִיד',
+      traduccion: 'Espacio público y espacio privado',
+      explicacion: 'Las dos baraitot — R. Akiva sobre los Medos y R. Gamliel sobre los Persas — cubren juntas el ESPECTRO COMPLETO del comportamiento humano civilizado.\n\nLA DIVISIÓN:\n\n  · MEDOS (R. Akiva) — sabiduría del ESPACIO PÚBLICO (mesa social, saludo público, consejo grupal)\n  · PERSAS (R. Gamliel) — sabiduría del ESPACIO PRIVADO (comer personal, baño individual, sexualidad íntima)\n\nLA EDICIÓN TALMÚDICA ES DELIBERADA. El editor del Talmud colocó ambas baraitot juntas precisamente porque juntas forman una doctrina COMPLETA.\n\nNINGUNA BARAITA SOLA es suficiente:\n\n  · Solo Medos = sabiduría de la vida pública sin atención a lo privado (resultado: dignidad social pero degradación íntima)\n\n  · Solo Persas = sabiduría de la vida privada sin atención a lo público (resultado: dignidad personal pero caos social)\n\nJUNTAS = doctrina completa de la civilización humana en ambos espacios.\n\nLA LECCIÓN GENERAL:\n\nLa virtud humana opera en DOS DIMENSIONES interrelacionadas:\n\n  1. Cómo te comportas EN PÚBLICO\n  2. Cómo te comportas EN PRIVADO\n\nQUIEN ES VIRTUOSO en una pero no en la otra es INCOMPLETO. La virtud completa integra ambas.\n\nLOS MEDOS Y LOS PERSAS, juntos, encarnan la VIRTUD CIVILIZADA COMPLETA. Por eso ambos sabios — R. Akiva y R. Gamliel — los aman.\n\nLA CONEXIÓN CON LA HALAJÁ JUDÍA:\n\nEl judaísmo enseña ambas dimensiones:\n\n  · DIMENSIÓN PÚBLICA — halajá de tefilá pública, justicia social, derecho civil, comportamiento en la calle\n  · DIMENSIÓN PRIVADA — halajá de tzniut, niddá, observancia familiar, comportamiento en la casa\n\nUN JUDÍO completo desarrolla ambas. NO solo es respetable en la sinagoga (público) sino también modesto en casa (privado). NO solo es modesto en privado sino también honorable en público.\n\nLA COMPLEMENTARIEDAD MEDOS-PERSAS modela esta integración. La sugyá enseña sin enseñar explícitamente — por la mera YUXTAPOSICIÓN editorial — que la virtud completa abarca ambos espacios.\n\nLA APLICACIÓN MODERNA:\n\nEl judío moderno puede caer en dos errores:\n\n  · ERROR 1 — ser virtuoso en público (asistir a sinagoga, dar tzedaká, comportarse bien socialmente) PERO ser indiferente a la tzniut privada\n\n  · ERROR 2 — ser virtuoso en privado (vida familiar respetable, oración personal cuidadosa) PERO ser indiferente al impacto público\n\nLA HALAJÁ COMPLETA, modelada por la dialéctica de las dos baraitot, exige AMBAS.\n\nLA SABIDURÍA DEL EDITOR del Talmud: al colocar las dos baraitot juntas, enseña que ningún judío debe descuidar ninguno de los dos espacios. Los Medos sin Persas son incompletos. Los Persas sin Medos también. Solo juntos forman doctrina civilizacional completa.\n\nEL AMOR DE R. AKIVA Y R. GAMLIEL por estas culturas era reconocimiento de que cada una había maestrado UNA dimensión de la virtud civilizacional. El judaísmo aprende AMBAS, integradamente.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · apertura cultural disciplinada',
+      hebreo: 'פְּתִיחוּת תַּרְבּוּתִית בִּתְבוּנָה',
+      traduccion: 'Apertura cultural con discernimiento',
+      explicacion: 'La sugyá entera ofrece una doctrina coherente: APERTURA CULTURAL DISCIPLINADA. El judaísmo NO es xenofobia indiscriminada NI asimilación indiscriminada. Es DISCERNIMIENTO MADURO.\n\nLAS CINCO LECCIONES:\n\nLECCIÓN 1 · EL JUDAÍSMO APRENDE DE LAS NACIONES\n\nHay virtudes en las culturas gentiles que MERECEN reconocimiento. R. Akiva y R. Gamliel — ambos no inclinados a admirar lo gentil por intereses personales — declaran abiertamente «amo» estas costumbres.\n\nLA HALAJÁ RABÍNICA PERMITE este reconocimiento. NO solo lo permite — lo PRACTICA. Las dos baraitot están preservadas en el corpus precisamente porque expresan una verdad importante: la sabiduría no es monopolio judío.\n\nLECCIÓN 2 · LA VIRTUD ES UNIVERSAL\n\nLa modestia, la civilidad, el respeto al alimento, la tzniut corporal — todas estas virtudes son UNIVERSALES. NO son inventos judíos. Diferentes culturas las descubren independientemente.\n\nEL JUDAÍSMO NO PRETENDE monopolio sobre las virtudes humanas. Las RECONOCE dondequiera aparecen.\n\nESTA LECCIÓN es CRUCIAL para entender la sensibilidad rabínica. El judío observante NO debe pensar «solo los judíos tenemos virtud». Debe pensar: «las virtudes son universales, y celebro encontrarlas en cualquier cultura».\n\nLECCIÓN 3 · SOLO TRES — RECONOCIMIENTO LIMITADO\n\nCada sabio destaca SOLO TRES cosas — no diez, no veinte. El reconocimiento es ESPECÍFICO Y CALIBRADO. No es admiración indiscriminada de la cultura gentil completa. Es identificación PRECISA de virtudes concretas.\n\nESTO ES SOFISTICADO. El judaísmo no dice «los Medos son una gran cultura, debemos admirarlos en todo». Dice: «en estas TRES COSAS específicas, los Medos hacen algo bueno». La distinción es importante.\n\nUNA CULTURA puede tener virtudes Y vicios al mismo tiempo. La sugyá enseña a IDENTIFICAR específicamente cuáles son cuáles. NO admiración general, NO rechazo general — sino discernimiento detallado.\n\nLECCIÓN 4 · APRENDER, NO IMITAR\n\nLa halajá distingue entre IMITAR (חוקת הגוים — prohibido) y APRENDER (לימוד — permitido y a veces obligatorio).\n\nR. AKIVA Y R. GAMLIEL no dicen «hagamos lo que hacen los Medos» o «adoptemos las costumbres persas». Dicen «amamos esto en ellos».\n\nLA VIRTUD RECONOCIDA puede INSPIRAR sin pedir imitación literal. Un judío observante puede admirar la modestia persa en el comer SIN convertirse en persa. La virtud trasciende su origen cultural específico.\n\nESTA DISTINCIÓN es CRUCIAL para la sensibilidad halájica. Hay líneas claras:\n\n  · APRENDER virtudes universales = permitido y bueno\n  · IMITAR rituales no-judíos = prohibido (חוקת הגוים)\n\nLECCIÓN 5 · EL COMPLEMENTO DE #22\n\nEl diagrama #22 estableció: PROVOCA a los rashaim. Este establece: APRENDE de los virtuosos. La DIALÉCTICA COMPLETA del judaísmo con las naciones:\n\n  · CONTRA EL MAL DE ELLAS → confrontación\n  · ANTE EL BIEN DE ELLAS → reconocimiento\n\nNUNCA xenofobia indiscriminada. NUNCA asimilación indiscriminada. El judaísmo discierne CASO POR CASO, virtud POR virtud, vicio POR vicio.\n\nESTA DIALÉCTICA es la SENSIBILIDAD MADURA del judaísmo rabínico. Combina:\n\n  · FIRMEZA contra el mal\n  · APERTURA al bien\n  · DISCERNIMIENTO para distinguir\n\nLA SENSIBILIDAD DEL «AMAR»:\n\nQue las baraitot usen el verbo «אוֹהֵב» (amo) es notable:\n\n  · No dicen «toleramos»\n  · No dicen «aceptamos»\n  · No dicen «reconocemos sin entusiasmo»\n  · DICEN: AMAMOS\n\nEL AMOR del rabino por la virtud gentil es ACTIVO Y AGRADECIDO. Es una forma de reconocer la IMAGEN DIVINA presente en todas las culturas.\n\nDONDE HAY VIRTUD, hay REFLEJO DIVINO. Y donde hay reflejo divino, el judío AMA.\n\nESTA ES UNA TEOLOGÍA SOFISTICADA. La presencia divina no se limita al pueblo elegido. Cualquier virtud humana refleja a HKBH. El judío que ama esa virtud está amando a HKBH a través de la virtud.\n\nLA APLICACIÓN MODERNA:\n\nEl judío moderno enfrenta múltiples culturas — occidental, oriental, secular, religiosa, política, científica. La sugyá ofrece guía:\n\n  · IDENTIFICAR virtudes específicas en cada cultura\n  · NOMBRARLAS con precisión\n  · AMARLAS activamente\n  · DEJARSE INSPIRAR sin imitar superficialmente\n  · CONFRONTAR los vicios específicos con firmeza\n\nESTE ES EL JUDAÍSMO COMO INTERLOCUTOR CULTURAL MADURO. No xenófobo ni asimilacionista — sino discernidor abierto y firme.\n\nR. AKIVA Y R. GAMLIEL son los modelos. Sus dos baraitot, juntas, ofrecen un MANIFIESTO de cómo el judío observante se relaciona con el mundo gentil: amando lo virtuoso, confrontando lo perverso, discerniendo siempre.\n\nQUIEN APRENDE ESTA SUGYÁ adquiere una sensibilidad transformadora: el corazón abierto al bien dondequiera aparezca, la firmeza inquebrantable contra el mal, la sabiduría para distinguir entre uno y otro. Esta es la madurez espiritual del judaísmo rabínico.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.naciones-interactivo')
+    : document.querySelector('.naciones-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#naciones-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.naciones-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="naciones-panel-header">' +
+        '<p class="naciones-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="naciones-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="naciones-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="naciones-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.naciones-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.naciones-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="naciones-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

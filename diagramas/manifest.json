@@ -801,15 +801,29 @@
       "slug": "akiva-medos-gamliel-persas",
       "orden": 23,
       "titulo": "R. Akiva los Medos · R. Gamliel los Persas",
-      "subtitulo": "tres cosas de cada cultura",
+      "subtitulo": "tres cosas de cada cultura · el judaísmo aprende de los gentiles",
       "dapim": [
         "8b"
       ],
       "grupo": "Halajá personal",
-      "estado": "pendiente",
-      "sabios": [],
+      "estado": "listo",
+      "diagrama": "diagramas/akiva-medos-gamliel-persas.html",
+      "sabios": [
+        "r-akiva",
+        "rabban-gamliel"
+      ],
+      "sabios_biblicos": [],
       "pesukim": [],
-      "conceptos": []
+      "conceptos": [
+        "tzniut",
+        "civilizacion",
+        "aprender-de-las-naciones",
+        "costumbres-gentiles"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "El diagrama #22 estableció que se PERMITE provocar a los rashaim\n— la dimensión confrontacional del judaísmo. Ahora la sugyá ofrece\nel COMPLEMENTO necesario: cuando hay VIRTUD entre las naciones,\nel judaísmo la RECONOCE Y APRENDE. R. Akiva y R. Gamliel — dos de\nlas figuras más grandes del tanaitismo — declaran abiertamente\n«amo» (אוהב אני) ciertas costumbres de los Medos y los Persas.\nLa dialéctica completa: confrontación cuando hay mal, aprendizaje\ncuando hay bien.\n"
+      }
     },
     {
       "slug": "shema-dos-veces",
@@ -881,6 +895,14 @@
       ]
     },
     {
+      "slug": "r-akiva",
+      "nombre": "R Akiva"
+    },
+    {
+      "slug": "rabban-gamliel",
+      "nombre": "Rabban Gamliel"
+    },
+    {
       "slug": "r-eliezer-ben-avina",
       "nombre": "R Eliezer Ben Avina"
     },
@@ -915,10 +937,6 @@
     {
       "slug": "abaye",
       "nombre": "Abaye"
-    },
-    {
-      "slug": "rabban-gamliel",
-      "nombre": "Rabban Gamliel"
     },
     {
       "slug": "r-yehoshua",
@@ -1288,6 +1306,22 @@
       "slug": "mazikin",
       "nombre": "Mazikin (demonios)",
       "hebreo": "מַזִּיקִין"
+    },
+    {
+      "slug": "tzniut",
+      "nombre": "Tzniut"
+    },
+    {
+      "slug": "civilizacion",
+      "nombre": "Civilizacion"
+    },
+    {
+      "slug": "aprender-de-las-naciones",
+      "nombre": "Aprender De Las Naciones"
+    },
+    {
+      "slug": "costumbres-gentiles",
+      "nombre": "Costumbres Gentiles"
     },
     {
       "slug": "tehila-ledavid",
@@ -1836,6 +1870,14 @@
       "peso": 3
     },
     {
+      "from": "provocar-rashaim",
+      "to": "akiva-medos-gamliel-persas",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "El diagrama #22 estableció que se PERMITE provocar a los rashaim\n— la dimensión confrontacional del judaísmo. Ahora la sugyá ofrece\nel COMPLEMENTO necesario: cuando hay VIRTUD entre las naciones,\nel judaísmo la RECONOCE Y APRENDE. R. Akiva y R. Gamliel — dos de\nlas figuras más grandes del tanaitismo — declaran abiertamente\n«amo» (אוהב אני) ciertas costumbres de los Medos y los Persas.\nLa dialéctica completa: confrontación cuando hay mal, aprendizaje\ncuando hay bien.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -2177,6 +2219,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "akiva-medos-gamliel-persas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
       "peso": 1
     },
     {
