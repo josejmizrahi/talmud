@@ -136,6 +136,110 @@
     cursor: pointer;
   }
   .red-controles .reset:hover { background: var(--sepia); color: var(--pergamino); }
+  .red-controles .btn-recorrido {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.8rem;
+    background: transparent;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .red-controles .btn-recorrido:hover,
+  .red-controles .btn-recorrido.activo {
+    background: var(--dorado);
+    color: var(--pergamino);
+  }
+
+  /* aristas de la cadena ya recorrida */
+  .link.recorrida {
+    stroke-opacity: 1 !important;
+    stroke-width: 3.5 !important;
+  }
+
+  /* panel del recorrido */
+  .red-panel .rec-progreso {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    margin: 0.75rem 0 1rem;
+  }
+  .red-panel .rec-progreso span {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: rgba(107,68,35,0.18);
+    border: 1px solid var(--pergamino-sombra);
+    cursor: pointer;
+  }
+  .red-panel .rec-progreso span.hecho { background: var(--dorado); border-color: var(--dorado); }
+  .red-panel .rec-progreso span.actual {
+    background: var(--rojo);
+    border-color: var(--rojo);
+    transform: scale(1.3);
+  }
+  .red-panel .rec-puente {
+    margin: 0.9rem 0;
+    padding: 0.8rem 1rem;
+    background: rgba(184,134,11,0.06);
+    border-left: 2px solid var(--dorado);
+    border-radius: 0 4px 4px 0;
+  }
+  .red-panel .rec-puente .rec-puente-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+  }
+  .red-panel .rec-puente .rec-puente-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+  }
+  .red-panel .rec-puente .rec-puente-tipo {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    color: var(--sepia);
+    padding: 0.08rem 0.45rem;
+    border: 1px solid var(--sepia);
+    border-radius: 999px;
+  }
+  .red-panel .rec-puente p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    margin: 0;
+    unicode-bidi: plaintext;
+  }
+  .red-panel .rec-controles {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .red-panel .rec-controles button {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 0.4rem 0.7rem;
+    background: transparent;
+    border: 1px solid var(--sepia);
+    color: var(--sepia);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .red-panel .rec-controles button:hover { background: var(--sepia); color: var(--pergamino); }
+  .red-panel .rec-controles button.rec-play {
+    border-color: var(--dorado);
+    color: var(--dorado);
+  }
+  .red-panel .rec-controles button.rec-play:hover { background: var(--dorado); color: var(--pergamino); }
 
   .red-cuerpo {
     display: grid;
@@ -532,6 +636,10 @@
     </div>
 
     <div class="grupo-control">
+      <button class="btn-recorrido" id="btn-recorrido" title="recorrer la cadena editorial del perek, tema por tema">▶ recorrido</button>
+    </div>
+
+    <div class="grupo-control">
       <label>Buscar</label>
       <input type="text" id="busqueda" list="temas-lista" placeholder="tema, sabio, concepto…">
       <datalist id="temas-lista"></datalist>
@@ -916,7 +1024,8 @@
       panelVacio();
     }
     render();
-    actualizar();
+    if (recorrido) pintarRecorrido(ordenados[recorrido.i]);
+    else actualizar();
     aplicarLayout(false);
     simulation.alpha(alpha).restart();
   }
@@ -944,6 +1053,7 @@
   }
 
   function actualizar() {
+    if (recorrido) return; // el recorrido controla las clases mientras está activo
     const foco = hoverId || (seleccion && seleccion.id) || null;
     nodeSel.classed('dim', d => {
       if (!pasaFiltros(d)) return true;
@@ -1056,6 +1166,117 @@
     }
   });
 
+  // ----- Modo recorrido: la cadena editorial paso a paso -----
+  const RECORRIDO_MS = 9000;
+  let recorrido = null; // { i, timer }
+  const ordenados = [...temaNodes].sort((a, b) => (a.orden || 0) - (b.orden || 0));
+  const btnRecorrido = document.getElementById('btn-recorrido');
+
+  function iniciarRecorrido() {
+    hoverId = null;
+    seleccion = null;
+    setHash(null);
+    recorrido = { i: 0, timer: null };
+    btnRecorrido.classList.add('activo');
+    btnRecorrido.textContent = '✕ salir';
+    irAPaso(0);
+    reproducir();
+  }
+
+  function salirRecorrido() {
+    if (!recorrido) return;
+    detenerTimer();
+    recorrido = null;
+    btnRecorrido.classList.remove('activo');
+    btnRecorrido.textContent = '▶ recorrido';
+    linkSel.classed('recorrida', false);
+    actualizar();
+    panelVacio();
+  }
+
+  function detenerTimer() {
+    if (recorrido && recorrido.timer) { clearInterval(recorrido.timer); recorrido.timer = null; }
+  }
+
+  function reproducir() {
+    detenerTimer();
+    recorrido.timer = setInterval(() => {
+      if (recorrido.i >= ordenados.length - 1) { detenerTimer(); renderPaso(); return; }
+      irAPaso(recorrido.i + 1);
+    }, RECORRIDO_MS);
+  }
+
+  function irAPaso(i) {
+    recorrido.i = Math.max(0, Math.min(ordenados.length - 1, i));
+    const tema = ordenados[recorrido.i];
+    centrar(tema, 1.15);
+    pintarRecorrido(tema);
+    renderPaso();
+  }
+
+  function pintarRecorrido(tema) {
+    const dentro = d => d.categoria === 'editorial'
+      && (d.source.orden || 0) <= (tema.orden || 0)
+      && (d.target.orden || 0) <= (tema.orden || 0);
+    nodeSel
+      .classed('activo', d => d.id === tema.id)
+      .classed('dim', d => !(d.esTema && (d.orden || 0) <= (tema.orden || 0)));
+    linkSel
+      .classed('activo', false)
+      .classed('hover', false)
+      .classed('recorrida', dentro)
+      .classed('apagado', d => !dentro(d));
+  }
+
+  function renderPaso() {
+    const i = recorrido.i;
+    const tema = ordenados[i];
+    const puente = tema.puente_desde;
+    const esUltimo = i === ordenados.length - 1;
+    const dots = ordenados.map((t, j) =>
+      `<span class="${j < i ? 'hecho' : j === i ? 'actual' : ''}" data-paso="${j}" title="${t.titulo.replace(/"/g, '&quot;')}"></span>`
+    ).join('');
+    const tipoBadge = puente && puente.tipo && puente.tipo !== 'apertura'
+      ? `<span class="rec-puente-tipo">técnica: ${puente.tipo}</span>` : '';
+    const tagLabel = i === 0 ? 'Apertura del tratado' : 'Cómo llegó aquí el editor';
+    panel.innerHTML = `
+      <div class="tag">recorrido editorial · ${i + 1} de ${ordenados.length} · daf ${(tema.dapim || []).join(' · ')}</div>
+      <h3>${tema.titulo}</h3>
+      <p class="subtitulo">${tema.subtitulo || ''}</p>
+      <div class="rec-progreso">${dots}</div>
+      ${puente && puente.texto ? `
+        <div class="rec-puente">
+          <div class="rec-puente-meta"><span class="rec-puente-tag">${tagLabel}</span>${tipoBadge}</div>
+          <p>${puente.texto.replace(/\n/g, ' ')}</p>
+        </div>` : ''}
+      ${esUltimo && !recorrido.timer ? '<p class="subtitulo">— fin del recorrido: el perek completo, tejido —</p>' : ''}
+      <div class="rec-controles">
+        <button data-rec="prev" title="anterior">⏮</button>
+        <button data-rec="play" class="rec-play" title="pausa / reanudar">${recorrido.timer ? '⏸' : '▶'}</button>
+        <button data-rec="next" title="siguiente">⏭</button>
+        <button data-rec="salir" title="salir del recorrido">✕</button>
+      </div>
+    `;
+    panel.querySelector('[data-rec="prev"]').onclick = () => { detenerTimer(); irAPaso(recorrido.i - 1); };
+    panel.querySelector('[data-rec="next"]').onclick = () => { detenerTimer(); irAPaso(recorrido.i + 1); };
+    panel.querySelector('[data-rec="salir"]').onclick = () => salirRecorrido();
+    panel.querySelector('[data-rec="play"]').onclick = () => {
+      if (recorrido.timer) { detenerTimer(); } else {
+        if (recorrido.i >= ordenados.length - 1) irAPaso(0);
+        reproducir();
+      }
+      renderPaso();
+    };
+    panel.querySelectorAll('.rec-progreso span').forEach(s => {
+      s.onclick = () => { detenerTimer(); irAPaso(+s.dataset.paso); };
+    });
+  }
+
+  btnRecorrido.addEventListener('click', () => {
+    if (recorrido) salirRecorrido();
+    else iniciarRecorrido();
+  });
+
   // ----- Panel -----
   const panel = document.getElementById('panel');
   function setHash(id) {
@@ -1116,6 +1337,7 @@
     </details>`;
 
   function seleccionar(nodo) {
+    if (recorrido) salirRecorrido();
     if (nodo.esEntidad) return seleccionarEntidad(nodo);
     const tema = nodo;
     seleccion = tema;
@@ -1244,6 +1466,7 @@
   }
 
   function mostrarConexion(c) {
+    if (recorrido) salirRecorrido();
     seleccion = null;
     setHash(null);
     actualizar();
@@ -1268,6 +1491,7 @@
   const MENSAJE_VACIO = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.</p>`;
   function panelVacio() { panel.innerHTML = MENSAJE_VACIO; }
   function limpiarPanel() {
+    if (recorrido) { salirRecorrido(); return; }
     seleccion = null;
     hoverId = null;
     setHash(null);
