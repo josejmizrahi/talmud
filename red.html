@@ -118,7 +118,7 @@
     border: 1px solid var(--sepia);
     color: var(--tinta);
     border-radius: 3px;
-    min-width: 180px;
+    min-width: 160px;
   }
   .red-controles .reset {
     margin-left: auto;
@@ -163,10 +163,10 @@
   /* SVG styling */
   .link {
     fill: none;
-    stroke-opacity: 0.45;
-    transition: stroke-opacity 0.15s, stroke-width 0.15s;
+    stroke-opacity: 0.4;
+    transition: stroke-opacity 0.15s, stroke-width 0.15s, opacity 0.15s;
   }
-  .link.editorial   { stroke: #b8860b; stroke-opacity: 0.7; }
+  .link.editorial   { stroke: #b8860b; stroke-opacity: 0.75; }
   .link.co-sabio    { stroke: #1e3a5f; }
   .link.co-pasuk    { stroke: #8b1a1a; }
   .link.co-concepto { stroke: #1e6b5a; }
@@ -174,16 +174,30 @@
     stroke-opacity: 1 !important;
     stroke-width: 3 !important;
   }
+  /* opacidad de elemento (no de trazo) para que también se atenúe la flecha del marker */
+  .link.apagado { opacity: 0.09 !important; }
+  .link-hit {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 12;
+    cursor: pointer;
+    pointer-events: stroke;
+  }
 
   .node circle {
     stroke: rgba(60,30,15,0.6);
     stroke-width: 1.2;
-    transition: r 0.15s, stroke-width 0.15s;
+    transition: stroke-width 0.15s, opacity 0.2s;
     cursor: pointer;
   }
   .node:hover circle { stroke-width: 2.5; }
-  .node.activo circle { stroke-width: 3; stroke: #1a1410; }
-  .node.dim { opacity: 0.25; }
+  .node.activo circle {
+    stroke-width: 3;
+    stroke: #1a1410;
+    filter: drop-shadow(0 0 6px rgba(184,134,11,0.55));
+  }
+  .node { transition: opacity 0.2s; }
+  .node.dim { opacity: 0.18; }
   .node.dim circle { stroke-width: 0.6; }
   .node.pendiente circle { fill: #f4ede0 !important; stroke-dasharray: 3 2; opacity: 0.5; }
 
@@ -200,6 +214,16 @@
     stroke-linejoin: round;
   }
   .node.pendiente text { fill: var(--sepia-claro); }
+  .node .grado-badge {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 8px;
+    fill: rgba(244,237,224,0.95);
+    stroke: none;
+    text-anchor: middle;
+    pointer-events: none;
+    dominant-baseline: central;
+  }
 
   .leyenda {
     position: absolute;
@@ -213,6 +237,7 @@
     color: var(--sepia);
     line-height: 1.65;
     backdrop-filter: blur(4px);
+    max-width: 240px;
   }
   .leyenda h4 {
     font-family: var(--font-mono);
@@ -238,6 +263,23 @@
     width: 10px; height: 10px;
     border-radius: 50%;
     border: 1px solid rgba(60,30,15,0.6);
+  }
+  .leyenda details { margin-top: 0.5rem; }
+  .leyenda summary {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    cursor: pointer;
+    user-select: none;
+  }
+  .leyenda .nota {
+    margin-top: 0.4rem;
+    font-style: italic;
+    font-size: 0.68rem;
+    color: var(--sepia-claro);
+    line-height: 1.4;
   }
 
   .info {
@@ -358,6 +400,31 @@
   .red-panel .conexion.co-sabio    { border-color: #1e3a5f; }
   .red-panel .conexion.co-pasuk    { border-color: #8b1a1a; }
   .red-panel .conexion.co-concepto { border-color: #1e6b5a; }
+  .red-panel .conexion-titulo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--tinta);
+    margin-bottom: 0.2rem;
+  }
+  .red-panel .via-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .red-panel .via-badge {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.5px;
+    padding: 0.08rem 0.42rem;
+    border-radius: 999px;
+    border: 1px solid;
+    background: rgba(255,255,255,0.5);
+  }
+  .red-panel .via-badge.editorial   { color: #8a6508; border-color: #b8860b; }
+  .red-panel .via-badge.co-sabio    { color: #1e3a5f; border-color: #1e3a5f; }
+  .red-panel .via-badge.co-pasuk    { color: #8b1a1a; border-color: #8b1a1a; }
+  .red-panel .via-badge.co-concepto { color: #1e6b5a; border-color: #1e6b5a; }
   .red-panel .conexion-tipo {
     font-family: var(--font-mono);
     font-size: 0.65rem;
@@ -387,7 +454,7 @@
   <header class="red-header">
     <div class="eyebrow">Codex Talmudicus</div>
     <h1>La red de temas del primer perek</h1>
-    <p class="lede">cada nodo es un tema · las líneas son conexiones editoriales fuertes (dorado) o co-referencias por sabios, pesukim y conceptos (colores tenues)</p>
+    <p class="lede">cada nodo es un tema — su tamaño refleja cuántas conexiones tiene · las líneas doradas con flecha son la cadena editorial del perek · los arcos tenues son co-referencias por sabios, pesukim y conceptos</p>
     <a href="./" class="nav-link">← volver al scroll de diagramas</a>
   </header>
 
@@ -401,7 +468,13 @@
     </div>
 
     <div class="grupo-control">
-      <label>Filtrar por grupo</label>
+      <label>Buscar</label>
+      <input type="text" id="busqueda" list="temas-lista" placeholder="nombre del tema…">
+      <datalist id="temas-lista"></datalist>
+    </div>
+
+    <div class="grupo-control">
+      <label>Grupo</label>
       <select id="filtro-grupo">
         <option value="">— todos —</option>
       </select>
@@ -434,9 +507,11 @@
         <div><span class="sw co-sabio"></span>co-sabio</div>
         <div><span class="sw co-pasuk"></span>co-pasuk</div>
         <div><span class="sw co-concepto"></span>co-concepto</div>
-        <h4 style="margin-top: 0.6rem;">Estados</h4>
-        <div><span class="sw dot" style="background: var(--dorado);"></span>listo</div>
-        <div><span class="sw dot" style="background: var(--pergamino); border-style: dashed;"></span>pendiente</div>
+        <details id="leyenda-grupos">
+          <summary>Grupos temáticos</summary>
+          <div id="leyenda-grupos-lista"></div>
+        </details>
+        <div class="nota">pasa el cursor sobre un nodo para ver su vecindario · el número dentro del nodo es su cantidad de conexiones</div>
       </div>
 
       <div class="info" id="info-stats"></div>
@@ -445,18 +520,26 @@
     <aside class="red-panel" id="panel">
       <p class="vacio">
         Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>
-        Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).
+        Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>
+        También puedes llegar aquí desde cualquier diagrama del scroll con su link «ver en la red».
       </p>
     </aside>
   </div>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="assets/js/d3.v7.min.js"></script>
 <script>
 (async function() {
   // ----- Cargar manifest -----
   const manifest = await fetch('diagramas/manifest.json?v=' + Date.now()).then(r => r.json());
+
+  // Nombres legibles para slugs de sabios / pesukim / conceptos
+  const nombrePorSlug = {};
+  ['sabios', 'pesukim', 'conceptos'].forEach(k =>
+    (manifest[k] || []).forEach(e => { nombrePorSlug[e.slug] = e.nombre || e.slug; })
+  );
+  const nombre = slug => nombrePorSlug[slug] || slug;
 
   // Color por grupo
   const grupos = [...new Set(manifest.diagramas.map(d => d.grupo))];
@@ -474,9 +557,46 @@
     peso: c.peso || 1
   }));
 
+  // Grado (conexiones por nodo) y adyacencia
+  const grado = {};
+  const adyacencia = new Map();
+  manifest.conexiones.forEach(c => {
+    grado[c.from] = (grado[c.from] || 0) + 1;
+    grado[c.to] = (grado[c.to] || 0) + 1;
+    if (!adyacencia.has(c.from)) adyacencia.set(c.from, new Set());
+    if (!adyacencia.has(c.to)) adyacencia.set(c.to, new Set());
+    adyacencia.get(c.from).add(c.to);
+    adyacencia.get(c.to).add(c.from);
+  });
+  nodes.forEach(n => { n.grado = grado[n.id] || 0; });
+  const vecinosDe = id => adyacencia.get(id) || new Set();
+
+  const radio = d => (d.estado === 'listo' ? 8 : 5) + Math.min(14, Math.sqrt(d.grado || 0) * 2.1);
+
+  // Curvatura por aristas paralelas: cada arista entre el mismo par
+  // recibe un offset propio para que ninguna quede oculta bajo otra
+  const porPar = new Map();
+  links.forEach(l => {
+    const key = [l.source, l.target].sort().join('|');
+    if (!porPar.has(key)) porPar.set(key, []);
+    porPar.get(key).push(l);
+  });
+  porPar.forEach((grupo, key) => {
+    const canonico = key.split('|')[0];
+    grupo.forEach((l, i) => {
+      const signo = l.source === canonico ? 1 : -1;
+      l.curva = signo * (i - (grupo.length - 1) / 2) * 1.25;
+    });
+  });
+
   // Stats info
   document.getElementById('info-stats').textContent =
     `${nodes.length} temas · ${links.length} conexiones · ${nodes.filter(n => n.estado === 'listo').length} listos`;
+
+  // Leyenda de grupos
+  document.getElementById('leyenda-grupos-lista').innerHTML = grupos.map(g =>
+    `<div><span class="sw dot" style="background:${colorGrupo(g)}"></span>${g}</div>`
+  ).join('');
 
   // Filtros poblar
   const sabiosSet = new Set();
@@ -489,11 +609,17 @@
   const selGrupo = document.getElementById('filtro-grupo');
   grupos.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; selGrupo.appendChild(o); });
 
+  const porNombre = (a, b) => nombre(a).localeCompare(nombre(b), 'es');
   const selSabio = document.getElementById('filtro-sabio');
-  [...sabiosSet].sort().forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; selSabio.appendChild(o); });
+  [...sabiosSet].sort(porNombre).forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = nombre(s); selSabio.appendChild(o); });
 
   const selConcepto = document.getElementById('filtro-concepto');
-  [...conceptosSet].sort().forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; selConcepto.appendChild(o); });
+  [...conceptosSet].sort(porNombre).forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = nombre(c); selConcepto.appendChild(o); });
+
+  // Buscador
+  const inputBusqueda = document.getElementById('busqueda');
+  const datalist = document.getElementById('temas-lista');
+  nodes.forEach(n => { const o = document.createElement('option'); o.value = n.titulo; datalist.appendChild(o); });
 
   // ----- Setup SVG -----
   const svgEl = document.getElementById('grafo');
@@ -502,21 +628,42 @@
   svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
   const svg = d3.select(svgEl);
 
+  // Punta de flecha para la cadena editorial (dirección narrativa)
+  svg.append('defs').append('marker')
+    .attr('id', 'flecha-editorial')
+    .attr('viewBox', '0 -5 10 10')
+    .attr('refX', 8).attr('refY', 0)
+    .attr('markerWidth', 5.5).attr('markerHeight', 5.5)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('d', 'M0,-5L10,0L0,5')
+    .attr('fill', '#b8860b')
+    .attr('fill-opacity', 0.85);
+
   const g = svg.append('g'); // contenedor para zoom
 
-  const linkSel = g.append('g').attr('class', 'links').selectAll('line').data(links).join('line')
+  const linkSel = g.append('g').attr('class', 'links').selectAll('path').data(links).join('path')
     .attr('class', d => `link ${d.tipo}`)
-    .attr('stroke-width', d => 0.8 + d.peso * 0.7);
+    .attr('stroke-width', d => 0.8 + d.peso * 0.7)
+    .attr('marker-end', d => d.categoria === 'editorial' ? 'url(#flecha-editorial)' : null);
+
+  // Capa invisible más gruesa: hace clickeables las curvas finas
+  const hitSel = g.append('g').attr('class', 'links-hit').selectAll('path').data(links).join('path')
+    .attr('class', 'link-hit');
 
   const nodeSel = g.append('g').attr('class', 'nodes').selectAll('g').data(nodes).join('g')
     .attr('class', d => `node ${d.estado}`);
 
   nodeSel.append('circle')
-    .attr('r', d => d.estado === 'listo' ? 14 : 9)
+    .attr('r', d => radio(d))
     .attr('fill', d => colorGrupo(d.grupo));
 
   nodeSel.append('text')
-    .attr('dy', d => (d.estado === 'listo' ? 28 : 22))
+    .attr('class', 'grado-badge')
+    .text(d => d.grado > 0 ? d.grado : '');
+
+  nodeSel.append('text')
+    .attr('dy', d => radio(d) + 13)
     .text(d => d.titulo)
     .each(function(d) {
       const t = d3.select(this);
@@ -527,21 +674,48 @@
       }
     });
 
+  // Tooltip nativo
+  nodeSel.append('title')
+    .text(d => `${d.titulo}\n${d.grupo} · daf ${(d.dapim || []).join(' · ')}\n${d.grado} conexiones`);
+
+  // ----- Geometría de aristas (arcos para paralelas) -----
+  function pathDe(d) {
+    const sx = d.source.x, sy = d.source.y, tx = d.target.x, ty = d.target.y;
+    const dx = tx - sx, dy = ty - sy;
+    const dist = Math.hypot(dx, dy) || 1;
+    const ux = dx / dist, uy = dy / dist;
+    // recortar en el borde del nodo (la flecha editorial necesita más aire)
+    const r1 = radio(d.source) + 2;
+    const r2 = radio(d.target) + (d.categoria === 'editorial' ? 7 : 2);
+    const x1 = sx + ux * r1, y1 = sy + uy * r1;
+    const x2 = tx - ux * r2, y2 = ty - uy * r2;
+    const off = (d.curva || 0) * Math.min(26, dist * 0.16);
+    const mx = (x1 + x2) / 2 - uy * off;
+    const my = (y1 + y2) / 2 + ux * off;
+    return `M${x1},${y1} Q${mx},${my} ${x2},${y2}`;
+  }
+
   // ----- Simulación -----
   const simulation = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(d => d.id)
-      .distance(d => d.categoria === 'editorial' ? 90 : 130)
-      .strength(d => d.categoria === 'editorial' ? 0.8 : 0.15))
-    .force('charge', d3.forceManyBody().strength(-260))
+      .distance(d => d.categoria === 'editorial' ? 95 : 135)
+      .strength(d => d.categoria === 'editorial' ? 0.8 : 0.12))
+    .force('charge', d3.forceManyBody().strength(-280))
     .force('center', d3.forceCenter(W / 2, H / 2))
-    .force('collision', d3.forceCollide().radius(35));
+    .force('collision', d3.forceCollide().radius(d => radio(d) + 22));
 
-  simulation.on('tick', () => {
-    linkSel
-      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+  function tick() {
+    linkSel.attr('d', pathDe);
+    hitSel.attr('d', pathDe);
     nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
-  });
+  }
+  simulation.on('tick', tick);
+
+  // Pre-asentar el layout para que el grafo aparezca ya estable
+  simulation.stop();
+  for (let i = 0; i < 180; i++) simulation.tick();
+  tick();
+  simulation.restart().alpha(0.05);
 
   // ----- Drag -----
   nodeSel.call(d3.drag()
@@ -556,9 +730,53 @@
     }));
 
   // ----- Zoom -----
-  svg.call(d3.zoom().scaleExtent([0.4, 3]).on('zoom', (event) => {
+  const zoom = d3.zoom().scaleExtent([0.4, 3]).on('zoom', (event) => {
     g.attr('transform', event.transform);
-  }));
+  });
+  svg.call(zoom);
+
+  function centrar(d, escala = 1.25) {
+    const t = d3.zoomIdentity
+      .translate(W / 2, H / 2)
+      .scale(escala)
+      .translate(-d.x, -d.y);
+    svg.transition().duration(650).call(zoom.transform, t);
+  }
+
+  // ----- Estado: selección + hover + filtros -----
+  let seleccion = null;
+  let hoverId = null;
+
+  function pasaFiltros(d) {
+    const grupo = selGrupo.value;
+    const sabio = selSabio.value;
+    const concepto = selConcepto.value;
+    if (grupo && d.grupo !== grupo) return false;
+    if (sabio && !(d.sabios || []).includes(sabio)) return false;
+    if (concepto && !(d.conceptos || []).includes(concepto)) return false;
+    return true;
+  }
+
+  function actualizar() {
+    const foco = hoverId || (seleccion && seleccion.id) || null;
+    nodeSel.classed('dim', d => {
+      if (!pasaFiltros(d)) return true;
+      if (foco && d.id !== foco && !vecinosDe(foco).has(d.id)) return true;
+      return false;
+    });
+    nodeSel.classed('activo', d => seleccion && d.id === seleccion.id);
+    linkSel
+      .classed('activo', d => !!foco && (d.source.id === foco || d.target.id === foco))
+      .classed('apagado', d => {
+        if (foco) return d.source.id !== foco && d.target.id !== foco;
+        return !pasaFiltros(d.source) || !pasaFiltros(d.target);
+      });
+  }
+
+  // ----- Interacción: hover en nodo enciende su vecindario -----
+  nodeSel
+    .on('mouseenter', (event, d) => { hoverId = d.id; actualizar(); })
+    .on('mouseleave', () => { hoverId = null; actualizar(); });
 
   // ----- Click en nodo -----
   nodeSel.on('click', (event, d) => {
@@ -566,11 +784,14 @@
     seleccionar(d);
   });
 
-  // ----- Click en link -----
-  linkSel.on('click', (event, d) => {
+  // ----- Click en link (capa hit, más fácil de acertar) -----
+  hitSel.on('click', (event, d) => {
     event.stopPropagation();
     mostrarConexion(d);
   });
+  hitSel
+    .on('mouseenter', function(event, d) { linkSel.filter(l => l === d).classed('hover', true); })
+    .on('mouseleave', function(event, d) { linkSel.filter(l => l === d).classed('hover', false); });
 
   // ----- Click fondo: cierra panel -----
   svg.on('click', () => limpiarPanel());
@@ -602,75 +823,84 @@
   }
 
   // ----- Filtros -----
-  function aplicarFiltros() {
-    const grupo = selGrupo.value;
-    const sabio = selSabio.value;
-    const concepto = selConcepto.value;
-
-    nodeSel.classed('dim', d => {
-      if (grupo && d.grupo !== grupo) return true;
-      if (sabio && !(d.sabios || []).includes(sabio)) return true;
-      if (concepto && !(d.conceptos || []).includes(concepto)) return true;
-      return false;
-    });
-
-    linkSel.style('opacity', d => {
-      const src = nodeSel.filter(n => n.id === (d.source.id || d.source));
-      const tgt = nodeSel.filter(n => n.id === (d.target.id || d.target));
-      const srcDim = src.classed('dim');
-      const tgtDim = tgt.classed('dim');
-      if (srcDim || tgtDim) return 0.06;
-      return 1;
-    });
-  }
-
-  selGrupo.addEventListener('change', aplicarFiltros);
-  selSabio.addEventListener('change', aplicarFiltros);
-  selConcepto.addEventListener('change', aplicarFiltros);
+  selGrupo.addEventListener('change', actualizar);
+  selSabio.addEventListener('change', actualizar);
+  selConcepto.addEventListener('change', actualizar);
   document.getElementById('reset-filtros').addEventListener('click', () => {
     selGrupo.value = ''; selSabio.value = ''; selConcepto.value = '';
-    aplicarFiltros();
+    inputBusqueda.value = '';
+    limpiarPanel();
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  });
+
+  // ----- Buscador -----
+  function normalizar(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  inputBusqueda.addEventListener('change', () => {
+    const q = normalizar(inputBusqueda.value.trim());
+    if (!q) return;
+    const tema = nodes.find(n => normalizar(n.titulo) === q)
+      || nodes.find(n => normalizar(n.titulo).includes(q));
+    if (tema) {
+      seleccionar(tema);
+      centrar(tema);
+    }
   });
 
   // ----- Panel: seleccionar tema -----
   const panel = document.getElementById('panel');
-  function seleccionar(tema) {
-    nodeSel.classed('activo', d => d.id === tema.id);
-    linkSel.classed('activo', d => (d.source.id || d.source) === tema.id || (d.target.id || d.target) === tema.id);
+  function setHash(slug) {
+    history.replaceState(null, '', slug ? '#' + slug : location.pathname + location.search);
+  }
 
-    // Conexiones de este tema
-    const conexionesTema = links.filter(l => (l.source.id || l.source) === tema.id || (l.target.id || l.target) === tema.id);
-    const conexionesPorCategoria = {
-      editorial: conexionesTema.filter(c => c.categoria === 'editorial'),
-      'co-referencia': conexionesTema.filter(c => c.categoria === 'co-referencia'),
-    };
+  function seleccionar(tema) {
+    seleccion = tema;
+    setHash(tema.slug);
+    actualizar();
+
+    // Conexiones agrupadas por tema vecino (un bloque por vecino, con todas sus vías)
+    const conexionesTema = links.filter(l => l.source.id === tema.id || l.target.id === tema.id);
+    const porVecino = new Map();
+    conexionesTema.forEach(c => {
+      const otherSlug = c.source.id === tema.id ? c.target.id : c.source.id;
+      if (!porVecino.has(otherSlug)) porVecino.set(otherSlug, []);
+      porVecino.get(otherSlug).push(c);
+    });
+
+    const vecinosOrdenados = [...porVecino.entries()].sort((a, b) => {
+      const edA = a[1].some(c => c.categoria === 'editorial') ? 1 : 0;
+      const edB = b[1].some(c => c.categoria === 'editorial') ? 1 : 0;
+      if (edA !== edB) return edB - edA;
+      return b[1].length - a[1].length;
+    });
 
     const sabiosChips = (tema.sabios || []).map(s =>
-      `<span class="chip" onclick="document.getElementById('filtro-sabio').value='${s}';document.getElementById('filtro-sabio').dispatchEvent(new Event('change'));">${s}</span>`
+      `<span class="chip" data-filtro="sabio" data-valor="${s}">${nombre(s)}</span>`
     ).join('');
     const conceptosChips = (tema.conceptos || []).map(c =>
-      `<span class="chip" onclick="document.getElementById('filtro-concepto').value='${c}';document.getElementById('filtro-concepto').dispatchEvent(new Event('change'));">${c}</span>`
+      `<span class="chip" data-filtro="concepto" data-valor="${c}">${nombre(c)}</span>`
     ).join('');
-    const pesukimChips = (tema.pesukim || []).map(p => `<span class="chip">${p}</span>`).join('');
+    const pesukimChips = (tema.pesukim || []).map(p => `<span class="chip">${nombre(p)}</span>`).join('');
 
-    const renderConexion = (c) => {
-      const otherSlug = (c.source.id || c.source) === tema.id ? (c.target.id || c.target) : (c.source.id || c.source);
+    const badge = (c) => {
+      if (c.categoria === 'editorial') return `<span class="via-badge editorial">editorial · ${c.tipo}</span>`;
+      const etiqueta = { 'co-sabio': 'sabio', 'co-pasuk': 'pasuk', 'co-concepto': 'concepto' }[c.tipo] || c.tipo;
+      return `<span class="via-badge ${c.tipo}">${etiqueta} · ${nombre(c.via)}</span>`;
+    };
+
+    const renderVecino = ([otherSlug, cs]) => {
       const otherTema = temaPorSlug[otherSlug];
       const otherTitulo = otherTema ? otherTema.titulo : otherSlug;
-      const detalle = c.categoria === 'editorial'
-        ? `vía editorial: ${c.tipo}`
-        : `vía ${c.via}`;
-      return `<div class="conexion ${c.tipo}" onclick="(${onClickConexion.toString()})('${otherSlug}')">
-        <div class="conexion-tipo">${detalle}</div>
-        <div>${otherTitulo}</div>
+      const tipoPrincipal = cs.some(c => c.categoria === 'editorial') ? cs.find(c => c.categoria === 'editorial').tipo : cs[0].tipo;
+      return `<div class="conexion ${tipoPrincipal}" data-slug="${otherSlug}">
+        <div class="conexion-titulo">${otherTitulo}</div>
+        <div class="via-badges">${cs.map(badge).join('')}</div>
       </div>`;
     };
 
-    const editorialHtml = conexionesPorCategoria.editorial.length
-      ? `<div class="conexiones-bloque"><h4>Conexiones editoriales fuertes</h4>${conexionesPorCategoria.editorial.map(renderConexion).join('')}</div>`
-      : '';
-    const coRefHtml = conexionesPorCategoria['co-referencia'].length
-      ? `<div class="conexiones-bloque"><h4>Co-referencias (sabios, pesukim, conceptos)</h4>${conexionesPorCategoria['co-referencia'].map(renderConexion).join('')}</div>`
+    const conexionesHtml = vecinosOrdenados.length
+      ? `<div class="conexiones-bloque"><h4>Temas conectados (${vecinosOrdenados.length})</h4>${vecinosOrdenados.map(renderVecino).join('')}</div>`
       : '';
 
     panel.innerHTML = `
@@ -678,49 +908,78 @@
       <h3>${tema.titulo}</h3>
       <p class="subtitulo">${tema.subtitulo || ''}</p>
       <div class="meta">
-        ${tema.estado ? `<span class="meta-k">estado</span><span class="meta-v">${tema.estado}</span>` : ''}
+        <span class="meta-k">conexiones</span><span class="meta-v">${tema.grado}</span>
         ${tema.sabios && tema.sabios.length ? `<span class="meta-k">sabios</span><span class="meta-v"><div class="chips">${sabiosChips}</div></span>` : ''}
         ${tema.pesukim && tema.pesukim.length ? `<span class="meta-k">pesukim</span><span class="meta-v"><div class="chips">${pesukimChips}</div></span>` : ''}
         ${tema.conceptos && tema.conceptos.length ? `<span class="meta-k">conceptos</span><span class="meta-v"><div class="chips">${conceptosChips}</div></span>` : ''}
       </div>
-      ${editorialHtml}
-      ${coRefHtml}
+      ${conexionesHtml}
       ${tema.estado === 'listo' ? `<a class="ver-diagrama" href="./#${tema.slug}">→ Ver diagrama interactivo</a>` : ''}
     `;
+
+    // listeners del panel (sin inline handlers)
+    panel.querySelectorAll('.conexion[data-slug]').forEach(el => {
+      el.addEventListener('click', () => {
+        const t = nodes.find(n => n.id === el.dataset.slug);
+        if (t) { seleccionar(t); centrar(t); }
+      });
+    });
+    panel.querySelectorAll('.chip[data-filtro]').forEach(el => {
+      el.addEventListener('click', () => {
+        const sel = el.dataset.filtro === 'sabio' ? selSabio : selConcepto;
+        sel.value = el.dataset.valor;
+        actualizar();
+      });
+    });
   }
 
-  // Funcion global para click en una conexion del panel
-  window.seleccionarPorSlug = (slug) => {
-    const tema = nodes.find(n => n.id === slug);
-    if (tema) seleccionar(tema);
-  };
-  const onClickConexion = function(slug) { window.seleccionarPorSlug(slug); };
-
   function mostrarConexion(c) {
-    nodeSel.classed('activo', false);
+    seleccion = null;
+    setHash(null);
+    actualizar();
     linkSel.classed('activo', d => d === c);
-    const srcSlug = c.source.id || c.source;
-    const tgtSlug = c.target.id || c.target;
+    const srcSlug = c.source.id, tgtSlug = c.target.id;
     const src = temaPorSlug[srcSlug];
     const tgt = temaPorSlug[tgtSlug];
-    const titulo = c.categoria === 'editorial' ? `Puente editorial: ${c.tipo}` : `Co-referencia: ${c.via}`;
+    const titulo = c.categoria === 'editorial' ? `Puente editorial: ${c.tipo}` : `Co-referencia: ${nombre(c.via)}`;
     panel.innerHTML = `
       <div class="tag">${c.categoria === 'editorial' ? 'TÉCNICA EDITORIAL' : 'CO-REFERENCIA'}</div>
       <h3>${titulo}</h3>
       <p class="subtitulo">une <strong>${src.titulo}</strong> con <strong>${tgt.titulo}</strong></p>
       ${c.texto ? `<p style="font-family: var(--font-display); font-style: italic; line-height: 1.6; font-size: 0.95rem;">${c.texto.replace(/\n/g, ' ')}</p>` : ''}
-      <div style="margin-top: 1rem;">
-        <span class="chip" onclick="seleccionarPorSlug('${srcSlug}')">← ${src.titulo}</span>
-        <span class="chip" onclick="seleccionarPorSlug('${tgtSlug}')">${tgt.titulo} →</span>
+      <div style="margin-top: 1rem;" class="chips">
+        <span class="chip" data-slug="${srcSlug}">← ${src.titulo}</span>
+        <span class="chip" data-slug="${tgtSlug}">${tgt.titulo} →</span>
       </div>
     `;
+    panel.querySelectorAll('.chip[data-slug]').forEach(el => {
+      el.addEventListener('click', () => {
+        const t = nodes.find(n => n.id === el.dataset.slug);
+        if (t) { seleccionar(t); centrar(t); }
+      });
+    });
   }
 
   function limpiarPanel() {
-    nodeSel.classed('activo', false);
-    linkSel.classed('activo', false);
-    panel.innerHTML = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).</p>`;
+    seleccion = null;
+    hoverId = null;
+    setHash(null);
+    actualizar();
+    panel.innerHTML = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>También puedes llegar aquí desde cualquier diagrama del scroll con su link «ver en la red».</p>`;
   }
+
+  // ----- Deep-link: red.html#slug selecciona y centra el tema -----
+  function abrirDesdeHash() {
+    const slug = decodeURIComponent(location.hash.replace('#', ''));
+    if (!slug) return;
+    const tema = nodes.find(n => n.id === slug);
+    if (tema) {
+      seleccionar(tema);
+      centrar(tema);
+    }
+  }
+  window.addEventListener('hashchange', abrirDesdeHash);
+  abrirDesdeHash();
 
 })();
 </script>

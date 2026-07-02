@@ -219,6 +219,69 @@
   }
   .diagrama-frame .error { color: var(--rojo); }
 
+  /* Interconexiones del tema (tejido de la red) */
+  .diagrama-conexiones {
+    margin-top: 1rem;
+    padding: 0.85rem 1.1rem;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid var(--pergamino-sombra);
+    border-radius: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem 0.6rem;
+    flex-wrap: wrap;
+  }
+  .diagrama-conexiones .conx-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-right: 0.25rem;
+  }
+  .diagrama-conexiones .conx-chip {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    color: var(--tinta);
+    text-decoration: none;
+    padding: 0.18rem 0.6rem 0.18rem 0.5rem;
+    background: rgba(255,255,255,0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--sepia-claro);
+    border-radius: 0 999px 999px 0;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .diagrama-conexiones .conx-chip:hover {
+    background: rgba(184,134,11,0.1);
+    border-color: var(--dorado);
+  }
+  .diagrama-conexiones .conx-chip .n {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.62rem;
+    color: var(--sepia);
+    margin-left: 0.3rem;
+  }
+  .diagrama-conexiones .conx-chip.editorial   { border-left-color: #b8860b; }
+  .diagrama-conexiones .conx-chip.co-sabio    { border-left-color: #1e3a5f; }
+  .diagrama-conexiones .conx-chip.co-pasuk    { border-left-color: #8b1a1a; }
+  .diagrama-conexiones .conx-chip.co-concepto { border-left-color: #1e6b5a; }
+  .diagrama-conexiones .conx-red {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--dorado);
+    text-decoration: none;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--dorado);
+    border-radius: 999px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .diagrama-conexiones .conx-red:hover { background: var(--dorado); color: var(--pergamino); }
+
   /* Navegación inter-diagrama */
   .diagrama-nav {
     margin-top: 1rem;
@@ -293,6 +356,62 @@
   const manifest = await fetch('diagramas/manifest.json?' + cacheVersion).then(r => r.json());
   document.getElementById('codex-perek').textContent = manifest.perek;
 
+  // Nombres legibles para slugs de sabios / pesukim / conceptos
+  const nombrePorSlug = {};
+  ['sabios', 'pesukim', 'conceptos'].forEach(k =>
+    (manifest[k] || []).forEach(e => { nombrePorSlug[e.slug] = e.nombre || e.slug; })
+  );
+  const nombre = slug => nombrePorSlug[slug] || slug;
+  const temaPorSlug = Object.fromEntries(manifest.diagramas.map(d => [d.slug, d]));
+
+  // Interconexiones agrupadas por vecino: slug -> Map(otherSlug -> [conexiones])
+  const conexionesDe = new Map();
+  (manifest.conexiones || []).forEach(c => {
+    [[c.from, c.to], [c.to, c.from]].forEach(([yo, otro]) => {
+      if (!conexionesDe.has(yo)) conexionesDe.set(yo, new Map());
+      const m = conexionesDe.get(yo);
+      if (!m.has(otro)) m.set(otro, []);
+      m.get(otro).push(c);
+    });
+  });
+
+  function interconexionesHtml(d) {
+    const porVecino = conexionesDe.get(d.slug);
+    if (!porVecino || porVecino.size === 0) return '';
+    const vecinos = [...porVecino.entries()].sort((a, b) => {
+      const edA = a[1].some(c => c.categoria === 'editorial') ? 1 : 0;
+      const edB = b[1].some(c => c.categoria === 'editorial') ? 1 : 0;
+      if (edA !== edB) return edB - edA;
+      return b[1].length - a[1].length;
+    });
+    const MAX = 7;
+    const visibles = vecinos.slice(0, MAX);
+    const restantes = vecinos.length - visibles.length;
+    const chips = visibles.map(([otroSlug, cs]) => {
+      const otro = temaPorSlug[otroSlug];
+      if (!otro) return '';
+      const editorial = cs.find(c => c.categoria === 'editorial');
+      const clase = editorial ? 'editorial' : cs[0].tipo;
+      const detalle = cs.map(c => c.categoria === 'editorial'
+        ? `puente editorial: ${c.tipo}`
+        : `${c.tipo.replace('co-', '')} compartido: ${nombre(c.via)}`
+      ).join(' · ');
+      const cuenta = cs.length > 1 ? `<span class="n">×${cs.length}</span>` : '';
+      const destino = otro.estado === 'listo' ? `#${otro.slug}` : `red.html#${otro.slug}`;
+      return `<a class="conx-chip ${clase}" href="${destino}" title="${detalle.replace(/"/g, '&quot;')}">${editorial ? '⛓ ' : ''}${otro.titulo}${cuenta}</a>`;
+    }).join('');
+    const mas = restantes > 0
+      ? `<a class="conx-chip" href="red.html#${d.slug}" title="ver todas las conexiones en la red">+${restantes} más</a>`
+      : '';
+    return `
+      <div class="diagrama-conexiones">
+        <span class="conx-label">tejido</span>
+        ${chips}${mas}
+        <a class="conx-red" href="red.html#${d.slug}">◈ ver en la red</a>
+      </div>
+    `;
+  }
+
   // Render TOC
   const toc = document.getElementById('codex-toc-lista');
   toc.innerHTML = manifest.diagramas.map(d => {
@@ -346,6 +465,7 @@
       <div class="diagrama-frame" data-src="diagramas/${d.slug}.html?${cacheVersion}">
         <p class="cargando">Cargando…</p>
       </div>
+      ${interconexionesHtml(d)}
       <div class="diagrama-nav">
         ${prev ? `<a href="#${prev.slug}">← ${prev.titulo}</a>` : '<span class="vacio"></span>'}
         ${next ? `<a href="#${next.slug}">${next.titulo} →</a>` : '<span class="vacio"></span>'}
