@@ -110,6 +110,9 @@
     background: var(--sepia);
     color: var(--pergamino);
   }
+  .red-controles .toggle-group.entidades button.activo[data-kind="sabios"]   { background: #1e3a5f; }
+  .red-controles .toggle-group.entidades button.activo[data-kind="conceptos"]{ background: #1e6b5a; }
+  .red-controles .toggle-group.entidades button.activo[data-kind="pesukim"]  { background: #8b1a1a; }
   .red-controles select, .red-controles input[type="text"] {
     font-family: var(--font-mono);
     font-size: 0.78rem;
@@ -170,6 +173,7 @@
   .link.co-sabio    { stroke: #1e3a5f; }
   .link.co-pasuk    { stroke: #8b1a1a; }
   .link.co-concepto { stroke: #1e6b5a; }
+  .link.ent { stroke-dasharray: 2 3; stroke-opacity: 0.3; }
   .link.hover, .link.activo {
     stroke-opacity: 1 !important;
     stroke-width: 3 !important;
@@ -225,6 +229,17 @@
     dominant-baseline: central;
   }
 
+  /* Nodos-entidad: sabios, conceptos, pesukim */
+  .node.entidad circle {
+    fill: #f6f0e4;
+    stroke-width: 1.6;
+  }
+  .node.entidad text.etiqueta {
+    font-size: 9.5px;
+    fill: var(--sepia);
+  }
+  .node.entidad.activo circle { stroke-width: 3; }
+
   .leyenda {
     position: absolute;
     bottom: 12px;
@@ -264,6 +279,7 @@
     border-radius: 50%;
     border: 1px solid rgba(60,30,15,0.6);
   }
+  .leyenda .sw.dot.hueco { background: #f6f0e4; border-width: 2px; }
   .leyenda details { margin-top: 0.5rem; }
   .leyenda summary {
     font-family: var(--font-mono);
@@ -322,6 +338,9 @@
     color: var(--dorado);
     margin-bottom: 0.4rem;
   }
+  .red-panel .tag.sabios    { color: #1e3a5f; }
+  .red-panel .tag.conceptos { color: #1e6b5a; }
+  .red-panel .tag.pesukim   { color: #8b1a1a; }
   .red-panel h3 {
     font-family: var(--font-display);
     font-style: italic;
@@ -330,6 +349,14 @@
     color: var(--tinta);
     margin: 0 0 0.4rem;
     line-height: 1.2;
+  }
+  .red-panel .hebreo {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.15rem;
+    direction: rtl;
+    color: var(--tinta);
+    margin: 0 0 0.6rem;
+    line-height: 1.6;
   }
   .red-panel .subtitulo {
     font-family: var(--font-display);
@@ -420,6 +447,7 @@
     border-radius: 999px;
     border: 1px solid;
     background: rgba(255,255,255,0.5);
+    cursor: pointer;
   }
   .red-panel .via-badge.editorial   { color: #8a6508; border-color: #b8860b; }
   .red-panel .via-badge.co-sabio    { color: #1e3a5f; border-color: #1e3a5f; }
@@ -454,7 +482,7 @@
   <header class="red-header">
     <div class="eyebrow">Codex Talmudicus</div>
     <h1>La red de temas del primer perek</h1>
-    <p class="lede">cada nodo es un tema — su tamaño refleja cuántas conexiones tiene · las líneas doradas con flecha son la cadena editorial del perek · los arcos tenues son co-referencias por sabios, pesukim y conceptos</p>
+    <p class="lede">cada nodo es un tema — su tamaño refleja cuántas conexiones tiene · las líneas doradas con flecha son la cadena editorial del perek · los arcos tenues son co-referencias · activa sabios, conceptos o pesukim para verlos como nodos propios</p>
     <a href="./" class="nav-link">← volver al scroll de diagramas</a>
   </header>
 
@@ -468,8 +496,17 @@
     </div>
 
     <div class="grupo-control">
+      <label>Nodos extra</label>
+      <div class="toggle-group entidades">
+        <button data-kind="sabios">sabios</button>
+        <button data-kind="conceptos">conceptos</button>
+        <button data-kind="pesukim">pesukim</button>
+      </div>
+    </div>
+
+    <div class="grupo-control">
       <label>Buscar</label>
-      <input type="text" id="busqueda" list="temas-lista" placeholder="nombre del tema…">
+      <input type="text" id="busqueda" list="temas-lista" placeholder="tema, sabio, concepto…">
       <datalist id="temas-lista"></datalist>
     </div>
 
@@ -507,6 +544,7 @@
         <div><span class="sw co-sabio"></span>co-sabio</div>
         <div><span class="sw co-pasuk"></span>co-pasuk</div>
         <div><span class="sw co-concepto"></span>co-concepto</div>
+        <div id="leyenda-entidades" style="display:none;"><span class="sw dot hueco"></span>entidad (sabio · concepto · pasuk)</div>
         <details id="leyenda-grupos">
           <summary>Grupos temáticos</summary>
           <div id="leyenda-grupos-lista"></div>
@@ -521,7 +559,7 @@
       <p class="vacio">
         Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>
         Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>
-        También puedes llegar aquí desde cualquier diagrama del scroll con su link «ver en la red».
+        Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.
       </p>
     </aside>
   </div>
@@ -534,12 +572,27 @@
   // ----- Cargar manifest -----
   const manifest = await fetch('diagramas/manifest.json?v=' + Date.now()).then(r => r.json());
 
-  // Nombres legibles para slugs de sabios / pesukim / conceptos
+  // Tipos de entidad que pueden materializarse como nodos
+  const KINDS = [
+    { kind: 'sabios',    tipo: 'co-sabio',    etiqueta: 'sabio',    color: '#1e3a5f' },
+    { kind: 'conceptos', tipo: 'co-concepto', etiqueta: 'concepto', color: '#1e6b5a' },
+    { kind: 'pesukim',   tipo: 'co-pasuk',    etiqueta: 'pasuk',    color: '#8b1a1a' },
+  ];
+  const kindPorTipo = Object.fromEntries(KINDS.map(k => [k.tipo, k.kind]));
+  const kindInfo = Object.fromEntries(KINDS.map(k => [k.kind, k]));
+
+  // Fichas de entidades y nombres legibles
+  const entidadFicha = {};
   const nombrePorSlug = {};
-  ['sabios', 'pesukim', 'conceptos'].forEach(k =>
-    (manifest[k] || []).forEach(e => { nombrePorSlug[e.slug] = e.nombre || e.slug; })
-  );
-  const nombre = slug => nombrePorSlug[slug] || slug;
+  KINDS.forEach(K => {
+    entidadFicha[K.kind] = {};
+    (manifest[K.kind] || []).forEach(e => {
+      entidadFicha[K.kind][e.slug] = e;
+      nombrePorSlug[e.slug] = e.nombre || e.slug;
+    });
+  });
+  const nombre = slug => nombrePorSlug[slug]
+    || String(slug).replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
   // Color por grupo
   const grupos = [...new Set(manifest.diagramas.map(d => d.grupo))];
@@ -549,77 +602,140 @@
   // Indexar
   const temaPorSlug = Object.fromEntries(manifest.diagramas.map(d => [d.slug, d]));
 
-  // Nodos y links para D3
-  const nodes = manifest.diagramas.map(d => ({ ...d, id: d.slug }));
-  const links = manifest.conexiones.map(c => ({
-    source: c.from, target: c.to,
-    categoria: c.categoria, tipo: c.tipo, via: c.via, texto: c.texto,
-    peso: c.peso || 1
-  }));
+  // Nodos de temas: objetos persistentes (conservan posición entre reconstrucciones)
+  const temaNodes = manifest.diagramas.map(d => ({ ...d, id: d.slug, esTema: true }));
+  const nodoPorId = new Map(temaNodes.map(n => [n.id, n]));
+  const entityCache = new Map(); // id "kind:slug" -> nodo entidad persistente
 
-  // Grado (conexiones por nodo) y adyacencia
-  const grado = {};
-  const adyacencia = new Map();
-  manifest.conexiones.forEach(c => {
-    grado[c.from] = (grado[c.from] || 0) + 1;
-    grado[c.to] = (grado[c.to] || 0) + 1;
-    if (!adyacencia.has(c.from)) adyacencia.set(c.from, new Set());
-    if (!adyacencia.has(c.to)) adyacencia.set(c.to, new Set());
-    adyacencia.get(c.from).add(c.to);
-    adyacencia.get(c.to).add(c.from);
-  });
-  nodes.forEach(n => { n.grado = grado[n.id] || 0; });
+  // Estado de visualización
+  const mostrar = { sabios: false, conceptos: false, pesukim: false };
+
+  // Datos activos del grafo (se reconstruyen al cambiar los toggles)
+  let nodes = [], links = [], adyacencia = new Map();
+
+  function construirDatos() {
+    nodes = [...temaNodes];
+    links = [];
+
+    manifest.conexiones.forEach(c => {
+      // co-referencias de un tipo materializado se expresan vía el nodo entidad
+      if (c.categoria === 'co-referencia' && mostrar[kindPorTipo[c.tipo]]) return;
+      links.push({
+        source: c.from, target: c.to,
+        categoria: c.categoria, tipo: c.tipo, via: c.via, texto: c.texto,
+        peso: c.peso || 1
+      });
+    });
+
+    KINDS.filter(K => mostrar[K.kind]).forEach(K => {
+      temaNodes.forEach(t => (t[K.kind] || []).forEach(ref => {
+        const id = K.kind + ':' + ref;
+        if (!entityCache.has(id)) {
+          entityCache.set(id, {
+            id, slug: ref, kind: K.kind, tipo: K.tipo, esEntidad: true,
+            titulo: nombre(ref),
+            // nace junto a un tema que lo cita, no en (0,0)
+            x: (t.x || 0) + (Math.random() - 0.5) * 60,
+            y: (t.y || 0) + (Math.random() - 0.5) * 60,
+          });
+        }
+        const e = entityCache.get(id);
+        if (!nodoPorId.has(id)) { nodes.push(e); nodoPorId.set(id, e); }
+        else if (!nodes.includes(e)) nodes.push(e);
+        links.push({
+          source: t.id, target: id,
+          categoria: 'entidad', tipo: K.tipo, via: ref, peso: 1, esEnt: true,
+        });
+      }));
+    });
+    // limpiar del índice las entidades apagadas
+    [...nodoPorId.keys()].forEach(id => {
+      if (id.includes(':') && !nodes.includes(nodoPorId.get(id))) nodoPorId.delete(id);
+    });
+
+    // Grado y adyacencia
+    const grado = {};
+    adyacencia = new Map();
+    links.forEach(l => {
+      const a = l.source, b = l.target;
+      grado[a] = (grado[a] || 0) + 1;
+      grado[b] = (grado[b] || 0) + 1;
+      if (!adyacencia.has(a)) adyacencia.set(a, new Set());
+      if (!adyacencia.has(b)) adyacencia.set(b, new Set());
+      adyacencia.get(a).add(b);
+      adyacencia.get(b).add(a);
+    });
+    nodes.forEach(n => { n.grado = grado[n.id] || 0; });
+
+    // Curvatura por aristas paralelas: cada arista entre el mismo par
+    // recibe un offset propio para que ninguna quede oculta bajo otra
+    const porPar = new Map();
+    links.forEach(l => {
+      const key = [l.source, l.target].sort().join('|');
+      if (!porPar.has(key)) porPar.set(key, []);
+      porPar.get(key).push(l);
+    });
+    porPar.forEach((grupo, key) => {
+      const canonico = key.split('|')[0];
+      grupo.forEach((l, i) => {
+        const signo = l.source === canonico ? 1 : -1;
+        l.curva = signo * (i - (grupo.length - 1) / 2) * 1.25;
+      });
+    });
+  }
+
   const vecinosDe = id => adyacencia.get(id) || new Set();
 
-  const radio = d => (d.estado === 'listo' ? 8 : 5) + Math.min(14, Math.sqrt(d.grado || 0) * 2.1);
+  const radio = d => d.esEntidad
+    ? 4 + Math.min(10, Math.sqrt(d.grado || 0) * 1.7)
+    : (d.estado === 'listo' ? 8 : 5) + Math.min(14, Math.sqrt(d.grado || 0) * 2.1);
 
-  // Curvatura por aristas paralelas: cada arista entre el mismo par
-  // recibe un offset propio para que ninguna quede oculta bajo otra
-  const porPar = new Map();
-  links.forEach(l => {
-    const key = [l.source, l.target].sort().join('|');
-    if (!porPar.has(key)) porPar.set(key, []);
-    porPar.get(key).push(l);
+  // ----- Filtros / stats / leyenda -----
+  const selGrupo = document.getElementById('filtro-grupo');
+  const selSabio = document.getElementById('filtro-sabio');
+  const selConcepto = document.getElementById('filtro-concepto');
+
+  grupos.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; selGrupo.appendChild(o); });
+
+  const sabiosSet = new Set(), conceptosSet = new Set();
+  temaNodes.forEach(n => {
+    (n.sabios || []).forEach(s => sabiosSet.add(s));
+    (n.conceptos || []).forEach(c => conceptosSet.add(c));
   });
-  porPar.forEach((grupo, key) => {
-    const canonico = key.split('|')[0];
-    grupo.forEach((l, i) => {
-      const signo = l.source === canonico ? 1 : -1;
-      l.curva = signo * (i - (grupo.length - 1) / 2) * 1.25;
-    });
-  });
+  const porNombre = (a, b) => nombre(a).localeCompare(nombre(b), 'es');
+  [...sabiosSet].sort(porNombre).forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = nombre(s); selSabio.appendChild(o); });
+  [...conceptosSet].sort(porNombre).forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = nombre(c); selConcepto.appendChild(o); });
 
-  // Stats info
-  document.getElementById('info-stats').textContent =
-    `${nodes.length} temas · ${links.length} conexiones · ${nodes.filter(n => n.estado === 'listo').length} listos`;
-
-  // Leyenda de grupos
   document.getElementById('leyenda-grupos-lista').innerHTML = grupos.map(g =>
     `<div><span class="sw dot" style="background:${colorGrupo(g)}"></span>${g}</div>`
   ).join('');
 
-  // Filtros poblar
-  const sabiosSet = new Set();
-  const conceptosSet = new Set();
-  nodes.forEach(n => {
-    (n.sabios || []).forEach(s => sabiosSet.add(s));
-    (n.conceptos || []).forEach(c => conceptosSet.add(c));
-  });
-
-  const selGrupo = document.getElementById('filtro-grupo');
-  grupos.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; selGrupo.appendChild(o); });
-
-  const porNombre = (a, b) => nombre(a).localeCompare(nombre(b), 'es');
-  const selSabio = document.getElementById('filtro-sabio');
-  [...sabiosSet].sort(porNombre).forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = nombre(s); selSabio.appendChild(o); });
-
-  const selConcepto = document.getElementById('filtro-concepto');
-  [...conceptosSet].sort(porNombre).forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = nombre(c); selConcepto.appendChild(o); });
-
-  // Buscador
+  // Buscador: temas + entidades (las entidades activan su modo al buscarse)
   const inputBusqueda = document.getElementById('busqueda');
   const datalist = document.getElementById('temas-lista');
-  nodes.forEach(n => { const o = document.createElement('option'); o.value = n.titulo; datalist.appendChild(o); });
+  function poblarDatalist() {
+    datalist.innerHTML = '';
+    temaNodes.forEach(n => { const o = document.createElement('option'); o.value = n.titulo; datalist.appendChild(o); });
+    KINDS.forEach(K => {
+      [...new Set(temaNodes.flatMap(t => t[K.kind] || []))].forEach(slug => {
+        const o = document.createElement('option');
+        o.value = nombre(slug);
+        o.label = K.etiqueta;
+        datalist.appendChild(o);
+      });
+    });
+  }
+  poblarDatalist();
+
+  function actualizarStats() {
+    const temas = nodes.filter(n => n.esTema);
+    const entidades = nodes.length - temas.length;
+    document.getElementById('info-stats').textContent =
+      `${temas.length} temas` +
+      (entidades ? ` · ${entidades} entidades` : '') +
+      ` · ${links.length} conexiones · ${temas.filter(n => n.estado === 'listo').length} listos`;
+    document.getElementById('leyenda-entidades').style.display = entidades ? '' : 'none';
+  }
 
   // ----- Setup SVG -----
   const svgEl = document.getElementById('grafo');
@@ -641,42 +757,13 @@
     .attr('fill-opacity', 0.85);
 
   const g = svg.append('g'); // contenedor para zoom
+  const gLinks = g.append('g').attr('class', 'links');
+  const gHits = g.append('g').attr('class', 'links-hit');
+  const gNodes = g.append('g').attr('class', 'nodes');
 
-  const linkSel = g.append('g').attr('class', 'links').selectAll('path').data(links).join('path')
-    .attr('class', d => `link ${d.tipo}`)
-    .attr('stroke-width', d => 0.8 + d.peso * 0.7)
-    .attr('marker-end', d => d.categoria === 'editorial' ? 'url(#flecha-editorial)' : null);
-
-  // Capa invisible más gruesa: hace clickeables las curvas finas
-  const hitSel = g.append('g').attr('class', 'links-hit').selectAll('path').data(links).join('path')
-    .attr('class', 'link-hit');
-
-  const nodeSel = g.append('g').attr('class', 'nodes').selectAll('g').data(nodes).join('g')
-    .attr('class', d => `node ${d.estado}`);
-
-  nodeSel.append('circle')
-    .attr('r', d => radio(d))
-    .attr('fill', d => colorGrupo(d.grupo));
-
-  nodeSel.append('text')
-    .attr('class', 'grado-badge')
-    .text(d => d.grado > 0 ? d.grado : '');
-
-  nodeSel.append('text')
-    .attr('dy', d => radio(d) + 13)
-    .text(d => d.titulo)
-    .each(function(d) {
-      const t = d3.select(this);
-      const max = 20;
-      if (d.titulo.length > max) {
-        const cut = d.titulo.slice(0, max).replace(/\s\S*$/, '') + '…';
-        t.text(cut);
-      }
-    });
-
-  // Tooltip nativo
-  nodeSel.append('title')
-    .text(d => `${d.titulo}\n${d.grupo} · daf ${(d.dapim || []).join(' · ')}\n${d.grado} conexiones`);
+  let linkSel = gLinks.selectAll('path');
+  let hitSel = gHits.selectAll('path');
+  let nodeSel = gNodes.selectAll('g');
 
   // ----- Geometría de aristas (arcos para paralelas) -----
   function pathDe(d) {
@@ -696,13 +783,13 @@
   }
 
   // ----- Simulación -----
-  const simulation = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(links).id(d => d.id)
-      .distance(d => d.categoria === 'editorial' ? 95 : 135)
-      .strength(d => d.categoria === 'editorial' ? 0.8 : 0.12))
-    .force('charge', d3.forceManyBody().strength(-280))
+  const simulation = d3.forceSimulation()
+    .force('link', d3.forceLink().id(d => d.id)
+      .distance(d => d.categoria === 'editorial' ? 95 : (d.esEnt ? 70 : 135))
+      .strength(d => d.categoria === 'editorial' ? 0.8 : (d.esEnt ? 0.35 : 0.12)))
+    .force('charge', d3.forceManyBody().strength(d => d.esEntidad ? -110 : -280))
     .force('center', d3.forceCenter(W / 2, H / 2))
-    .force('collision', d3.forceCollide().radius(d => radio(d) + 22));
+    .force('collision', d3.forceCollide().radius(d => radio(d) + (d.esEntidad ? 10 : 22)));
 
   function tick() {
     linkSel.attr('d', pathDe);
@@ -711,14 +798,7 @@
   }
   simulation.on('tick', tick);
 
-  // Pre-asentar el layout para que el grafo aparezca ya estable
-  simulation.stop();
-  for (let i = 0; i < 180; i++) simulation.tick();
-  tick();
-  simulation.restart().alpha(0.05);
-
-  // ----- Drag -----
-  nodeSel.call(d3.drag()
+  const drag = d3.drag()
     .on('start', (event, d) => {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x; d.fy = d.y;
@@ -727,27 +807,98 @@
     .on('end', (event, d) => {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null; d.fy = null;
-    }));
+    });
 
-  // ----- Zoom -----
-  const zoom = d3.zoom().scaleExtent([0.4, 3]).on('zoom', (event) => {
-    g.attr('transform', event.transform);
-  });
-  svg.call(zoom);
+  // ----- Render (se llama en cada reconstrucción del grafo) -----
+  function render() {
+    linkSel = gLinks.selectAll('path').data(links).join('path')
+      .attr('class', d => `link ${d.tipo}${d.esEnt ? ' ent' : ''}`)
+      .attr('stroke-width', d => 0.8 + d.peso * 0.7)
+      .attr('marker-end', d => d.categoria === 'editorial' ? 'url(#flecha-editorial)' : null);
 
-  function centrar(d, escala = 1.25) {
-    const t = d3.zoomIdentity
-      .translate(W / 2, H / 2)
-      .scale(escala)
-      .translate(-d.x, -d.y);
-    svg.transition().duration(650).call(zoom.transform, t);
+    // Capa invisible más gruesa: hace clickeables las curvas finas
+    hitSel = gHits.selectAll('path').data(links).join('path')
+      .attr('class', 'link-hit');
+
+    nodeSel = gNodes.selectAll('g').data(nodes, d => d.id).join(
+      enter => {
+        const gn = enter.append('g');
+        gn.append('circle');
+        gn.append('text').attr('class', 'grado-badge');
+        gn.append('text').attr('class', 'etiqueta');
+        gn.append('title');
+        return gn;
+      }
+    );
+    nodeSel.attr('class', d => d.esEntidad
+      ? `node entidad ${d.kind}`
+      : `node ${d.estado}`);
+
+    nodeSel.select('circle')
+      .attr('r', d => radio(d))
+      .attr('fill', d => d.esEntidad ? '#f6f0e4' : colorGrupo(d.grupo))
+      .attr('stroke', d => d.esEntidad ? kindInfo[d.kind].color : null);
+
+    nodeSel.select('text.grado-badge')
+      .text(d => (!d.esEntidad && d.grado > 0) ? d.grado : '');
+
+    nodeSel.select('text.etiqueta')
+      .attr('dy', d => radio(d) + (d.esEntidad ? 11 : 13))
+      .text(d => {
+        const max = d.esEntidad ? 18 : 20;
+        return d.titulo.length > max
+          ? d.titulo.slice(0, max).replace(/\s\S*$/, '') + '…'
+          : d.titulo;
+      });
+
+    nodeSel.select('title').text(d => d.esEntidad
+      ? `${d.titulo}\n${kindInfo[d.kind].etiqueta} · aparece en ${d.grado} temas`
+      : `${d.titulo}\n${d.grupo} · daf ${(d.dapim || []).join(' · ')}\n${d.grado} conexiones`);
+
+    nodeSel.call(drag);
+    nodeSel
+      .on('mouseenter', (event, d) => { hoverId = d.id; actualizar(); })
+      .on('mouseleave', () => { hoverId = null; actualizar(); })
+      .on('click', (event, d) => { event.stopPropagation(); seleccionar(d); });
+
+    hitSel.on('click', (event, d) => {
+      event.stopPropagation();
+      if (d.esEnt) {
+        const ent = nodoPorId.get(d.target.id || d.target);
+        if (ent) seleccionar(ent);
+      } else {
+        mostrarConexion(d);
+      }
+    });
+    hitSel
+      .on('mouseenter', function(event, d) { linkSel.filter(l => l === d).classed('hover', true); })
+      .on('mouseleave', function(event, d) { linkSel.filter(l => l === d).classed('hover', false); });
+
+    simulation.nodes(nodes);
+    simulation.force('link').links(links);
+    actualizarStats();
+    tick();
+  }
+
+  function reconstruir(alpha = 0.55) {
+    // si lo seleccionado ya no existe (entidad apagada), soltar la selección
+    construirDatos();
+    if (seleccion && !nodes.includes(seleccion)) {
+      seleccion = null;
+      setHash(null);
+      panelVacio();
+    }
+    render();
+    actualizar();
+    aplicarLayout(false);
+    simulation.alpha(alpha).restart();
   }
 
   // ----- Estado: selección + hover + filtros -----
   let seleccion = null;
   let hoverId = null;
 
-  function pasaFiltros(d) {
+  function pasaFiltrosTema(d) {
     const grupo = selGrupo.value;
     const sabio = selSabio.value;
     const concepto = selConcepto.value;
@@ -755,6 +906,14 @@
     if (sabio && !(d.sabios || []).includes(sabio)) return false;
     if (concepto && !(d.conceptos || []).includes(concepto)) return false;
     return true;
+  }
+  function pasaFiltros(d) {
+    if (d.esTema) return pasaFiltrosTema(d);
+    // una entidad pasa si algún tema vecino pasa
+    return [...vecinosDe(d.id)].some(id => {
+      const t = nodoPorId.get(id);
+      return t && t.esTema && pasaFiltrosTema(t);
+    });
   }
 
   function actualizar() {
@@ -773,28 +932,22 @@
       });
   }
 
-  // ----- Interacción: hover en nodo enciende su vecindario -----
-  nodeSel
-    .on('mouseenter', (event, d) => { hoverId = d.id; actualizar(); })
-    .on('mouseleave', () => { hoverId = null; actualizar(); });
-
-  // ----- Click en nodo -----
-  nodeSel.on('click', (event, d) => {
-    event.stopPropagation();
-    seleccionar(d);
-  });
-
-  // ----- Click en link (capa hit, más fácil de acertar) -----
-  hitSel.on('click', (event, d) => {
-    event.stopPropagation();
-    mostrarConexion(d);
-  });
-  hitSel
-    .on('mouseenter', function(event, d) { linkSel.filter(l => l === d).classed('hover', true); })
-    .on('mouseleave', function(event, d) { linkSel.filter(l => l === d).classed('hover', false); });
-
   // ----- Click fondo: cierra panel -----
   svg.on('click', () => limpiarPanel());
+
+  // ----- Zoom -----
+  const zoom = d3.zoom().scaleExtent([0.4, 3]).on('zoom', (event) => {
+    g.attr('transform', event.transform);
+  });
+  svg.call(zoom);
+
+  function centrar(d, escala = 1.25) {
+    const t = d3.zoomIdentity
+      .translate(W / 2, H / 2)
+      .scale(escala)
+      .translate(-d.x, -d.y);
+    svg.transition().duration(650).call(zoom.transform, t);
+  }
 
   // ----- Layout toggle -----
   let layoutActual = 'fuerza';
@@ -807,19 +960,37 @@
     });
   });
 
-  function aplicarLayout() {
+  function aplicarLayout(reiniciar = true) {
     if (layoutActual === 'cronologico') {
-      const maxOrden = d3.max(nodes, d => d.orden);
+      const maxOrden = d3.max(temaNodes, d => d.orden);
       const xScale = d3.scaleLinear().domain([1, maxOrden]).range([60, W - 60]);
-      simulation.force('x', d3.forceX(d => xScale(d.orden)).strength(0.95));
-      simulation.force('y', d3.forceY(H / 2).strength(0.05));
+      simulation.force('x', d3.forceX(d => d.esTema ? xScale(d.orden) : W / 2)
+        .strength(d => d.esTema ? 0.95 : 0.02));
+      simulation.force('y', d3.forceY(H / 2).strength(d => d.esTema ? 0.05 : 0.02));
       simulation.force('center', null);
     } else {
       simulation.force('x', null);
       simulation.force('y', null);
       simulation.force('center', d3.forceCenter(W / 2, H / 2));
     }
-    simulation.alpha(0.8).restart();
+    if (reiniciar) simulation.alpha(0.8).restart();
+  }
+
+  // ----- Toggles de entidades -----
+  document.querySelectorAll('.toggle-group.entidades button[data-kind]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const kind = btn.dataset.kind;
+      mostrar[kind] = !mostrar[kind];
+      btn.classList.toggle('activo', mostrar[kind]);
+      reconstruir();
+    });
+  });
+  function activarKind(kind) {
+    if (mostrar[kind]) return;
+    mostrar[kind] = true;
+    const btn = document.querySelector(`.toggle-group.entidades button[data-kind="${kind}"]`);
+    if (btn) btn.classList.add('activo');
+    reconstruir();
   }
 
   // ----- Filtros -----
@@ -840,38 +1011,70 @@
   inputBusqueda.addEventListener('change', () => {
     const q = normalizar(inputBusqueda.value.trim());
     if (!q) return;
-    const tema = nodes.find(n => normalizar(n.titulo) === q)
-      || nodes.find(n => normalizar(n.titulo).includes(q));
-    if (tema) {
-      seleccionar(tema);
-      centrar(tema);
+    // primero temas
+    let objetivo = temaNodes.find(n => normalizar(n.titulo) === q)
+      || temaNodes.find(n => normalizar(n.titulo).includes(q));
+    if (objetivo) { seleccionar(objetivo); centrar(objetivo); return; }
+    // luego entidades: si coincide, activar su modo y seleccionar
+    for (const K of KINDS) {
+      const slugs = [...new Set(temaNodes.flatMap(t => t[K.kind] || []))];
+      const slug = slugs.find(s => normalizar(nombre(s)) === q)
+        || slugs.find(s => normalizar(nombre(s)).includes(q));
+      if (slug) {
+        activarKind(K.kind);
+        const ent = nodoPorId.get(K.kind + ':' + slug);
+        if (ent) { seleccionar(ent); centrar(ent); }
+        return;
+      }
     }
   });
 
-  // ----- Panel: seleccionar tema -----
+  // ----- Panel -----
   const panel = document.getElementById('panel');
-  function setHash(slug) {
-    history.replaceState(null, '', slug ? '#' + slug : location.pathname + location.search);
+  function setHash(id) {
+    history.replaceState(null, '', id ? '#' + id : location.pathname + location.search);
   }
 
-  function seleccionar(tema) {
+  function bindPanel() {
+    panel.querySelectorAll('[data-ir]').forEach(el => {
+      el.addEventListener('click', () => {
+        const n = nodoPorId.get(el.dataset.ir);
+        if (n) { seleccionar(n); centrar(n); }
+      });
+    });
+    panel.querySelectorAll('.chip[data-filtro]').forEach(el => {
+      el.addEventListener('click', () => {
+        const sel = el.dataset.filtro === 'sabio' ? selSabio : selConcepto;
+        sel.value = el.dataset.valor;
+        actualizar();
+      });
+    });
+  }
+
+  function seleccionar(nodo) {
+    if (nodo.esEntidad) return seleccionarEntidad(nodo);
+    const tema = nodo;
     seleccion = tema;
     setHash(tema.slug);
     actualizar();
 
-    // Conexiones agrupadas por tema vecino (un bloque por vecino, con todas sus vías)
+    // Conexiones agrupadas por vecino (un bloque por vecino, con todas sus vías)
     const conexionesTema = links.filter(l => l.source.id === tema.id || l.target.id === tema.id);
     const porVecino = new Map();
     conexionesTema.forEach(c => {
-      const otherSlug = c.source.id === tema.id ? c.target.id : c.source.id;
-      if (!porVecino.has(otherSlug)) porVecino.set(otherSlug, []);
-      porVecino.get(otherSlug).push(c);
+      const otherId = c.source.id === tema.id ? c.target.id : c.source.id;
+      if (!porVecino.has(otherId)) porVecino.set(otherId, []);
+      porVecino.get(otherId).push(c);
     });
 
     const vecinosOrdenados = [...porVecino.entries()].sort((a, b) => {
       const edA = a[1].some(c => c.categoria === 'editorial') ? 1 : 0;
       const edB = b[1].some(c => c.categoria === 'editorial') ? 1 : 0;
       if (edA !== edB) return edB - edA;
+      // entidades después de los temas
+      const entA = a[0].includes(':') ? 1 : 0;
+      const entB = b[0].includes(':') ? 1 : 0;
+      if (entA !== entB) return entA - entB;
       return b[1].length - a[1].length;
     });
 
@@ -885,22 +1088,23 @@
 
     const badge = (c) => {
       if (c.categoria === 'editorial') return `<span class="via-badge editorial">editorial · ${c.tipo}</span>`;
-      const etiqueta = { 'co-sabio': 'sabio', 'co-pasuk': 'pasuk', 'co-concepto': 'concepto' }[c.tipo] || c.tipo;
+      if (c.esEnt) return `<span class="via-badge ${c.tipo}">${kindInfo[kindPorTipo[c.tipo]].etiqueta}</span>`;
+      const etiqueta = kindInfo[kindPorTipo[c.tipo]].etiqueta;
       return `<span class="via-badge ${c.tipo}">${etiqueta} · ${nombre(c.via)}</span>`;
     };
 
-    const renderVecino = ([otherSlug, cs]) => {
-      const otherTema = temaPorSlug[otherSlug];
-      const otherTitulo = otherTema ? otherTema.titulo : otherSlug;
-      const tipoPrincipal = cs.some(c => c.categoria === 'editorial') ? cs.find(c => c.categoria === 'editorial').tipo : cs[0].tipo;
-      return `<div class="conexion ${tipoPrincipal}" data-slug="${otherSlug}">
-        <div class="conexion-titulo">${otherTitulo}</div>
+    const renderVecino = ([otherId, cs]) => {
+      const otro = nodoPorId.get(otherId);
+      const otroTitulo = otro ? otro.titulo : otherId;
+      const tipoPrincipal = cs.some(c => c.categoria === 'editorial') ? 'editorial' : cs[0].tipo;
+      return `<div class="conexion ${tipoPrincipal === 'editorial' ? 'editorial' : cs[0].tipo}" data-ir="${otherId}">
+        <div class="conexion-titulo">${otroTitulo}</div>
         <div class="via-badges">${cs.map(badge).join('')}</div>
       </div>`;
     };
 
     const conexionesHtml = vecinosOrdenados.length
-      ? `<div class="conexiones-bloque"><h4>Temas conectados (${vecinosOrdenados.length})</h4>${vecinosOrdenados.map(renderVecino).join('')}</div>`
+      ? `<div class="conexiones-bloque"><h4>Conectado con (${vecinosOrdenados.length})</h4>${vecinosOrdenados.map(renderVecino).join('')}</div>`
       : '';
 
     panel.innerHTML = `
@@ -916,21 +1120,61 @@
       ${conexionesHtml}
       ${tema.estado === 'listo' ? `<a class="ver-diagrama" href="./#${tema.slug}">→ Ver diagrama interactivo</a>` : ''}
     `;
+    bindPanel();
+  }
 
-    // listeners del panel (sin inline handlers)
-    panel.querySelectorAll('.conexion[data-slug]').forEach(el => {
-      el.addEventListener('click', () => {
-        const t = nodes.find(n => n.id === el.dataset.slug);
-        if (t) { seleccionar(t); centrar(t); }
-      });
-    });
-    panel.querySelectorAll('.chip[data-filtro]').forEach(el => {
-      el.addEventListener('click', () => {
-        const sel = el.dataset.filtro === 'sabio' ? selSabio : selConcepto;
-        sel.value = el.dataset.valor;
-        actualizar();
-      });
-    });
+  function seleccionarEntidad(ent) {
+    seleccion = ent;
+    setHash(ent.id);
+    actualizar();
+
+    const K = kindInfo[ent.kind];
+    const ficha = (entidadFicha[ent.kind] || {})[ent.slug] || {};
+    const temas = [...vecinosDe(ent.id)]
+      .map(id => nodoPorId.get(id))
+      .filter(t => t && t.esTema)
+      .sort((a, b) => (a.orden || 0) - (b.orden || 0));
+
+    const metaFila = (k, v) => v ? `<span class="meta-k">${k}</span><span class="meta-v">${v}</span>` : '';
+    let fichaHtml = '';
+    if (ent.kind === 'sabios') {
+      fichaHtml = metaFila('generación', ficha.generacion)
+        + metaFila('lugar', ficha.lugar)
+        + metaFila('maestro', ficha.maestro ? nombre(ficha.maestro) : '')
+        + metaFila('alias', (ficha.alias || []).join(' · '));
+    } else if (ent.kind === 'pesukim') {
+      fichaHtml = metaFila('referencia', ficha.ref);
+    }
+    const hebreoHtml = ent.kind === 'conceptos' && ficha.hebreo ? `<p class="hebreo">${ficha.hebreo}</p>` : '';
+    const pasukHtml = ent.kind === 'pesukim' && ficha.texto
+      ? `<p class="hebreo">${ficha.texto}</p>` + (ficha.traduccion ? `<p class="subtitulo">«${ficha.traduccion}»</p>` : '')
+      : '';
+
+    const temasHtml = temas.map(t =>
+      `<div class="conexion ${K.tipo}" data-ir="${t.id}">
+        <div class="conexion-titulo">${t.titulo}</div>
+        <div class="conexion-tipo">daf ${(t.dapim || []).join(' · ')} · ${t.grupo}</div>
+      </div>`
+    ).join('');
+
+    const filtro = ent.kind === 'sabios' ? 'sabio' : (ent.kind === 'conceptos' ? 'concepto' : null);
+    const filtroChip = filtro
+      ? `<div style="margin-bottom:1rem;"><span class="chip" data-filtro="${filtro}" data-valor="${ent.slug}">⊙ filtrar temas por ${K.etiqueta === 'sabio' ? 'este sabio' : 'este concepto'}</span></div>`
+      : '';
+
+    panel.innerHTML = `
+      <div class="tag ${ent.kind}">${K.etiqueta}</div>
+      <h3>${ent.titulo}</h3>
+      ${hebreoHtml}
+      ${pasukHtml}
+      <div class="meta">
+        <span class="meta-k">aparece en</span><span class="meta-v">${temas.length} temas</span>
+        ${fichaHtml}
+      </div>
+      ${filtroChip}
+      <div class="conexiones-bloque"><h4>Temas donde aparece</h4>${temasHtml}</div>
+    `;
+    bindPanel();
   }
 
   function mostrarConexion(c) {
@@ -938,9 +1182,9 @@
     setHash(null);
     actualizar();
     linkSel.classed('activo', d => d === c);
-    const srcSlug = c.source.id, tgtSlug = c.target.id;
-    const src = temaPorSlug[srcSlug];
-    const tgt = temaPorSlug[tgtSlug];
+    const srcId = c.source.id, tgtId = c.target.id;
+    const src = nodoPorId.get(srcId);
+    const tgt = nodoPorId.get(tgtId);
     const titulo = c.categoria === 'editorial' ? `Puente editorial: ${c.tipo}` : `Co-referencia: ${nombre(c.via)}`;
     panel.innerHTML = `
       <div class="tag">${c.categoria === 'editorial' ? 'TÉCNICA EDITORIAL' : 'CO-REFERENCIA'}</div>
@@ -948,34 +1192,45 @@
       <p class="subtitulo">une <strong>${src.titulo}</strong> con <strong>${tgt.titulo}</strong></p>
       ${c.texto ? `<p style="font-family: var(--font-display); font-style: italic; line-height: 1.6; font-size: 0.95rem;">${c.texto.replace(/\n/g, ' ')}</p>` : ''}
       <div style="margin-top: 1rem;" class="chips">
-        <span class="chip" data-slug="${srcSlug}">← ${src.titulo}</span>
-        <span class="chip" data-slug="${tgtSlug}">${tgt.titulo} →</span>
+        <span class="chip" data-ir="${srcId}">← ${src.titulo}</span>
+        <span class="chip" data-ir="${tgtId}">${tgt.titulo} →</span>
       </div>
     `;
-    panel.querySelectorAll('.chip[data-slug]').forEach(el => {
-      el.addEventListener('click', () => {
-        const t = nodes.find(n => n.id === el.dataset.slug);
-        if (t) { seleccionar(t); centrar(t); }
-      });
-    });
+    bindPanel();
   }
 
+  const MENSAJE_VACIO = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.</p>`;
+  function panelVacio() { panel.innerHTML = MENSAJE_VACIO; }
   function limpiarPanel() {
     seleccion = null;
     hoverId = null;
     setHash(null);
     actualizar();
-    panel.innerHTML = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>También puedes llegar aquí desde cualquier diagrama del scroll con su link «ver en la red».</p>`;
+    panelVacio();
   }
 
-  // ----- Deep-link: red.html#slug selecciona y centra el tema -----
+  // ----- Arranque -----
+  construirDatos();
+  render();
+
+  // Pre-asentar el layout para que el grafo aparezca ya estable
+  simulation.stop();
+  for (let i = 0; i < 180; i++) simulation.tick();
+  tick();
+  simulation.restart().alpha(0.05);
+
+  // ----- Deep-link: #slug (tema) o #kind:slug (entidad) -----
   function abrirDesdeHash() {
-    const slug = decodeURIComponent(location.hash.replace('#', ''));
-    if (!slug) return;
-    const tema = nodes.find(n => n.id === slug);
-    if (tema) {
-      seleccionar(tema);
-      centrar(tema);
+    const id = decodeURIComponent(location.hash.replace('#', ''));
+    if (!id) return;
+    if (id.includes(':')) {
+      const kind = id.split(':')[0];
+      if (kindInfo[kind]) activarKind(kind);
+    }
+    const nodo = nodoPorId.get(id);
+    if (nodo) {
+      seleccionar(nodo);
+      centrar(nodo);
     }
   }
   window.addEventListener('hashchange', abrirDesdeHash);
