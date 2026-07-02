@@ -154,8 +154,8 @@
     color: var(--pergamino);
   }
 
-  /* aristas de la cadena ya recorrida */
-  .link.recorrida {
+  /* aristas de la cadena ya recorrida / del camino encontrado */
+  .link.recorrida, .link.camino {
     stroke-opacity: 1 !important;
     stroke-width: 3.5 !important;
   }
@@ -684,7 +684,7 @@
           <summary>Grupos temáticos</summary>
           <div id="leyenda-grupos-lista"></div>
         </details>
-        <div class="nota">pasa el cursor sobre un nodo para ver su vecindario · el número dentro del nodo es su cantidad de conexiones</div>
+        <div class="nota">pasa el cursor sobre un nodo para ver su vecindario · el número dentro del nodo es su cantidad de conexiones · shift-click en un segundo nodo traza el camino entre ambos</div>
       </div>
 
       <div class="info" id="info-stats"></div>
@@ -694,7 +694,8 @@
       <p class="vacio">
         Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>
         Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>
-        Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.
+        Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.<br><br>
+        <strong>Shift-click</strong> en un segundo nodo traza el camino más corto entre ambos. Y «▶ recorrido» narra la cadena editorial del perek completa.
       </p>
     </aside>
   </div>
@@ -994,7 +995,15 @@
     nodeSel
       .on('mouseenter', (event, d) => { hoverId = d.id; actualizar(); })
       .on('mouseleave', () => { hoverId = null; actualizar(); })
-      .on('click', (event, d) => { event.stopPropagation(); seleccionar(d); });
+      .on('click', (event, d) => {
+        event.stopPropagation();
+        if (event.shiftKey) {
+          // shift-click: camino desde el nodo seleccionado (o el final del camino previo)
+          const origen = (camino && nodoPorId.get(camino.ruta[camino.ruta.length - 1])) || seleccion;
+          if (origen && origen.id !== d.id) { mostrarCamino(origen, d); return; }
+        }
+        seleccionar(d);
+      });
 
     hitSel.on('click', (event, d) => {
       event.stopPropagation();
@@ -1023,6 +1032,7 @@
       setHash(null);
       panelVacio();
     }
+    camino = null; // el grafo cambió: un camino previo puede ya no existir
     render();
     if (recorrido) pintarRecorrido(ordenados[recorrido.i]);
     else actualizar();
@@ -1053,7 +1063,7 @@
   }
 
   function actualizar() {
-    if (recorrido) return; // el recorrido controla las clases mientras está activo
+    if (recorrido || camino) return; // esos modos controlan las clases mientras están activos
     const foco = hoverId || (seleccion && seleccion.id) || null;
     nodeSel.classed('dim', d => {
       if (!pasaFiltros(d)) return true;
@@ -1277,6 +1287,97 @@
     else iniciarRecorrido();
   });
 
+  // ----- Caminos: shift-click une dos nodos por la ruta más corta -----
+  let camino = null; // { ruta: [ids] }
+
+  function calcularCamino(aId, bId) {
+    if (aId === bId) return [aId];
+    const prev = new Map([[aId, null]]);
+    let frontera = [aId];
+    while (frontera.length) {
+      const siguiente = [];
+      for (const id of frontera) {
+        for (const v of vecinosDe(id)) {
+          if (prev.has(v)) continue;
+          prev.set(v, id);
+          if (v === bId) {
+            const ruta = [v];
+            let p = id;
+            while (p !== null) { ruta.unshift(p); p = prev.get(p); }
+            return ruta;
+          }
+          siguiente.push(v);
+        }
+      }
+      frontera = siguiente;
+    }
+    return null;
+  }
+
+  function salirCamino() {
+    if (!camino) return;
+    camino = null;
+    linkSel.classed('camino', false);
+  }
+
+  function pintarCamino(ruta) {
+    const enRuta = new Set(ruta);
+    const pares = new Set();
+    for (let i = 1; i < ruta.length; i++) pares.add([ruta[i - 1], ruta[i]].sort().join('|'));
+    const esDelCamino = d => pares.has([d.source.id, d.target.id].sort().join('|'));
+    nodeSel
+      .classed('dim', d => !enRuta.has(d.id))
+      .classed('activo', d => d.id === ruta[0] || d.id === ruta[ruta.length - 1]);
+    linkSel
+      .classed('activo', false)
+      .classed('hover', false)
+      .classed('camino', esDelCamino)
+      .classed('apagado', d => !esDelCamino(d));
+  }
+
+  function mostrarCamino(a, b) {
+    if (recorrido) salirRecorrido();
+    seleccion = null;
+    setHash(null);
+    const ruta = calcularCamino(a.id, b.id);
+    if (!ruta) {
+      salirCamino();
+      actualizar();
+      panel.innerHTML = `<div class="tag">camino</div>
+        <h3>Sin camino</h3>
+        <p class="vacio">No hay ruta entre <strong>${a.titulo}</strong> y <strong>${b.titulo}</strong> en la vista actual.</p>`;
+      return;
+    }
+    camino = { ruta };
+    pintarCamino(ruta);
+
+    let pasosHtml = '';
+    for (let i = 1; i < ruta.length; i++) {
+      const hasta = nodoPorId.get(ruta[i]);
+      const de = nodoPorId.get(ruta[i - 1]);
+      const ls = links.filter(l =>
+        (l.source.id === de.id && l.target.id === hasta.id) ||
+        (l.source.id === hasta.id && l.target.id === de.id));
+      const badges = ls.map(badgeDe).join('');
+      pasosHtml += `<div class="conexion ${ls[0] ? ls[0].tipo : ''}" data-ir="${hasta.id}">
+        <div class="conexion-titulo">${i}. ${hasta.titulo}</div>
+        <div class="via-badges">${badges}</div>
+      </div>`;
+    }
+
+    panel.innerHTML = `
+      <div class="tag">camino · ${ruta.length - 1} ${ruta.length - 1 === 1 ? 'paso' : 'pasos'}</div>
+      <h3>${a.titulo} → ${b.titulo}</h3>
+      <p class="subtitulo">la ruta más corta en la vista actual — cada paso muestra qué une a los dos nodos</p>
+      <div class="conexiones-bloque">
+        <div class="conexion" data-ir="${a.id}"><div class="conexion-titulo">0. ${a.titulo}</div></div>
+        ${pasosHtml}
+      </div>
+      <p class="vacio" style="margin-top:0.75rem; font-size:0.8rem;">shift-click en otro nodo continúa el camino desde <strong>${b.titulo}</strong></p>
+    `;
+    bindPanel();
+  }
+
   // ----- Panel -----
   const panel = document.getElementById('panel');
   function setHash(id) {
@@ -1330,6 +1431,14 @@
     });
   }
 
+  // badge de una conexión (compartido por panel de tema y de camino)
+  const badgeDe = (c) => {
+    if (c.categoria === 'editorial') return `<span class="via-badge editorial">editorial · ${c.tipo}</span>`;
+    if (c.esEnt) return `<span class="via-badge ${c.tipo}">${kindInfo[kindPorTipo[c.tipo]].etiqueta}</span>`;
+    const etiqueta = kindInfo[kindPorTipo[c.tipo]].etiqueta;
+    return `<span class="via-badge ${c.tipo}">${etiqueta} · ${nombre(c.via)}</span>`;
+  };
+
   const ensayoHtml = (kind, slug, abierto = false) =>
     `<details class="panel-ensayo" data-nota="notas/${kind}/${slug}.html"${abierto ? ' open' : ''}>
       <summary>✦ leer el ensayo</summary>
@@ -1338,6 +1447,7 @@
 
   function seleccionar(nodo) {
     if (recorrido) salirRecorrido();
+    salirCamino();
     if (nodo.esEntidad) return seleccionarEntidad(nodo);
     const tema = nodo;
     seleccion = tema;
@@ -1372,20 +1482,13 @@
     ).join('');
     const pesukimChips = (tema.pesukim || []).map(p => `<span class="chip">${nombre(p)}</span>`).join('');
 
-    const badge = (c) => {
-      if (c.categoria === 'editorial') return `<span class="via-badge editorial">editorial · ${c.tipo}</span>`;
-      if (c.esEnt) return `<span class="via-badge ${c.tipo}">${kindInfo[kindPorTipo[c.tipo]].etiqueta}</span>`;
-      const etiqueta = kindInfo[kindPorTipo[c.tipo]].etiqueta;
-      return `<span class="via-badge ${c.tipo}">${etiqueta} · ${nombre(c.via)}</span>`;
-    };
-
     const renderVecino = ([otherId, cs]) => {
       const otro = nodoPorId.get(otherId);
       const otroTitulo = otro ? otro.titulo : otherId;
       const tipoPrincipal = cs.some(c => c.categoria === 'editorial') ? 'editorial' : cs[0].tipo;
       return `<div class="conexion ${tipoPrincipal === 'editorial' ? 'editorial' : cs[0].tipo}" data-ir="${otherId}">
         <div class="conexion-titulo">${otroTitulo}</div>
-        <div class="via-badges">${cs.map(badge).join('')}</div>
+        <div class="via-badges">${cs.map(badgeDe).join('')}</div>
       </div>`;
     };
 
@@ -1467,6 +1570,7 @@
 
   function mostrarConexion(c) {
     if (recorrido) salirRecorrido();
+    salirCamino();
     seleccion = null;
     setHash(null);
     actualizar();
@@ -1488,10 +1592,11 @@
     bindPanel();
   }
 
-  const MENSAJE_VACIO = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.</p>`;
+  const MENSAJE_VACIO = `<p class="vacio">Click en cualquier nodo para ver su detalle, sus conexiones, y un link al diagrama.<br><br>Click en una línea para ver qué une los dos temas (sabio compartido, pasuk citado, etc.).<br><br>Con «nodos extra» puedes materializar sabios, conceptos y pesukim como nodos: cada uno se conecta con todos los temas donde aparece.<br><br><strong>Shift-click</strong> en un segundo nodo traza el camino más corto entre ambos. Y «▶ recorrido» narra la cadena editorial del perek completa.</p>`;
   function panelVacio() { panel.innerHTML = MENSAJE_VACIO; }
   function limpiarPanel() {
     if (recorrido) { salirRecorrido(); return; }
+    if (camino) { salirCamino(); actualizar(); panelVacio(); return; }
     seleccion = null;
     hoverId = null;
     setHash(null);
