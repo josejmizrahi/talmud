@@ -18,10 +18,12 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const { marked } = require('marked');
 
 const ROOT = path.join(__dirname, '..');
 const VAULT = path.join(ROOT, 'vault');
 const OUT = path.join(ROOT, 'diagramas', 'manifest.json');
+const NOTAS = path.join(ROOT, 'notas');
 
 const PEREK = 'Berajot · perek 1 · mishná 1:1';
 const DESCRIPCION =
@@ -51,9 +53,51 @@ function readVaultDir(subdir) {
       const content = fs.readFileSync(path.join(dir, f), 'utf-8');
       const fm = parseFrontmatter(content);
       if (!fm) return null;
-      return { _file: f, ...fm };
+      const body = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
+      return { _file: f, _body: body, ...fm };
     })
     .filter(Boolean);
+}
+
+/* ---------- Notas: cuerpo markdown → HTML navegable ---------- */
+
+/**
+ * Convierte [[slug]] y [[slug|texto]] en anclas con data-kind/data-slug.
+ * El destino se resuelve contra los cuatro conjuntos de slugs; un slug
+ * desconocido queda como énfasis simple (sin link roto).
+ */
+function resolverWikilinks(md, resolver) {
+  return md.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (m, target, label) => {
+    const slug = target.trim();
+    const destino = resolver(slug);
+    const texto = (label || (destino && destino.label) || slug.replace(/-/g, ' ')).trim();
+    if (!destino) return `<em>${texto}</em>`;
+    return `<a class="wiki" data-kind="${destino.kind}" data-slug="${slug}">${texto}</a>`;
+  });
+}
+
+function renderNota(body, resolver) {
+  if (!body) return null;
+  // quitar el h1 inicial: el título ya lo pone la interfaz
+  const sinTitulo = body.replace(/^#\s[^\n]*\n+/, '');
+  const conLinks = resolverWikilinks(sinTitulo, resolver);
+  const html = marked.parse(conLinks, { mangle: false, headerIds: false });
+  return `<div class="nota-md">\n${html}</div>\n`;
+}
+
+function escribirNotas(coleccion, subdir, resolver) {
+  const dir = path.join(NOTAS, subdir);
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+  let n = 0;
+  for (const item of coleccion) {
+    const html = renderNota(item._body, resolver);
+    if (!html) continue;
+    fs.writeFileSync(path.join(dir, `${item.slug}.html`), html);
+    item.nota = true;
+    n++;
+  }
+  return n;
 }
 
 /* ---------- Auto-completar entradas faltantes ---------- */
@@ -200,9 +244,24 @@ function main() {
   console.log(`      ${conexiones.filter(e => e.tipo === 'co-pasuk').length} por pasuk compartido`);
   console.log(`      ${conexiones.filter(e => e.tipo === 'co-concepto').length} por concepto compartido`);
 
+  // Notas HTML navegables desde el cuerpo markdown del vault
+  const destinos = new Map();
+  temas.forEach(t => destinos.set(t.slug, { kind: 'temas', label: t.titulo }));
+  sabios.forEach(s => !destinos.has(s.slug) && destinos.set(s.slug, { kind: 'sabios', label: s.nombre }));
+  conceptos.forEach(c => !destinos.has(c.slug) && destinos.set(c.slug, { kind: 'conceptos', label: c.nombre }));
+  pesukim.forEach(p => !destinos.has(p.slug) && destinos.set(p.slug, { kind: 'pesukim', label: p.ref || p.nombre }));
+  const resolver = slug => destinos.get(slug) || null;
+
+  const notasEscritas =
+    escribirNotas(temas, 'temas', resolver) +
+    escribirNotas(sabios, 'sabios', resolver) +
+    escribirNotas(pesukim, 'pesukim', resolver) +
+    escribirNotas(conceptos, 'conceptos', resolver);
+  console.log(`  · ${notasEscritas} notas HTML escritas en notas/`);
+
   // Limpiar campos internos antes de serializar
   const clean = arr => arr.map(o => {
-    const { _file, _inferred, ...rest } = o;
+    const { _file, _inferred, _body, ...rest } = o;
     return rest;
   });
 

@@ -473,6 +473,33 @@
     border-radius: 3px;
   }
   .red-panel .ver-diagrama:hover { background: var(--sepia); }
+
+  .red-panel .panel-ensayo {
+    margin-top: 1rem;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--rojo);
+    border-radius: 4px;
+  }
+  .red-panel .panel-ensayo summary {
+    cursor: pointer;
+    user-select: none;
+    padding: 0.55rem 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+  }
+  .red-panel .panel-ensayo summary:hover { color: var(--rojo); }
+  .red-panel .panel-ensayo[open] summary { border-bottom: 1px dashed var(--pergamino-sombra); }
+  .red-panel .panel-ensayo .ensayo-cuerpo { padding: 0.75rem 0.95rem; }
+  .red-panel .panel-ensayo .ensayo-cuerpo .nota-md { font-size: 0.88rem; }
+  .red-panel .panel-ensayo .cargando {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
 </style>
 </head>
 <body>
@@ -1049,7 +1076,44 @@
         actualizar();
       });
     });
+    // ensayo del vault: carga perezosa al abrir
+    async function cargarEnsayo(det) {
+      if (det.dataset.cargado) return;
+      det.dataset.cargado = '1';
+      const cuerpo = det.querySelector('.ensayo-cuerpo');
+      try {
+        const resp = await fetch(det.dataset.nota);
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        cuerpo.innerHTML = await resp.text();
+        // wikilinks navegan dentro del grafo
+        cuerpo.querySelectorAll('a.wiki').forEach(a => {
+          a.addEventListener('click', () => {
+            const { kind, slug } = a.dataset;
+            if (kind === 'temas') {
+              const t = nodoPorId.get(slug);
+              if (t) { seleccionar(t); centrar(t); }
+            } else {
+              activarKind(kind);
+              const ent = nodoPorId.get(kind + ':' + slug);
+              if (ent) { seleccionar(ent); centrar(ent); }
+            }
+          });
+        });
+      } catch (err) {
+        cuerpo.innerHTML = '<p class="cargando">No se pudo cargar el ensayo (' + err.message + ')</p>';
+      }
+    }
+    panel.querySelectorAll('.panel-ensayo[data-nota]').forEach(det => {
+      det.addEventListener('toggle', () => { if (det.open) cargarEnsayo(det); });
+      if (det.open) cargarEnsayo(det);
+    });
   }
+
+  const ensayoHtml = (kind, slug, abierto = false) =>
+    `<details class="panel-ensayo" data-nota="notas/${kind}/${slug}.html"${abierto ? ' open' : ''}>
+      <summary>✦ leer el ensayo</summary>
+      <div class="ensayo-cuerpo"><p class="cargando">Cargando…</p></div>
+    </details>`;
 
   function seleccionar(nodo) {
     if (nodo.esEntidad) return seleccionarEntidad(nodo);
@@ -1117,6 +1181,7 @@
         ${tema.pesukim && tema.pesukim.length ? `<span class="meta-k">pesukim</span><span class="meta-v"><div class="chips">${pesukimChips}</div></span>` : ''}
         ${tema.conceptos && tema.conceptos.length ? `<span class="meta-k">conceptos</span><span class="meta-v"><div class="chips">${conceptosChips}</div></span>` : ''}
       </div>
+      ${tema.nota ? ensayoHtml('temas', tema.slug) : ''}
       ${conexionesHtml}
       ${tema.estado === 'listo' ? `<a class="ver-diagrama" href="./#${tema.slug}">→ Ver diagrama interactivo</a>` : ''}
     `;
@@ -1171,6 +1236,7 @@
         <span class="meta-k">aparece en</span><span class="meta-v">${temas.length} temas</span>
         ${fichaHtml}
       </div>
+      ${ficha.nota ? ensayoHtml(ent.kind, ent.slug, true) : ''}
       ${filtroChip}
       <div class="conexiones-bloque"><h4>Temas donde aparece</h4>${temasHtml}</div>
     `;

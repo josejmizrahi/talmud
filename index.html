@@ -282,6 +282,36 @@
   }
   .diagrama-conexiones .conx-red:hover { background: var(--dorado); color: var(--pergamino); }
 
+  /* Ensayo del tema (nota del vault) */
+  .diagrama-ensayo {
+    margin-top: 1rem;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--rojo);
+    border-radius: 4px;
+  }
+  .diagrama-ensayo summary {
+    cursor: pointer;
+    user-select: none;
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sepia);
+  }
+  .diagrama-ensayo summary:hover { color: var(--rojo); }
+  .diagrama-ensayo[open] summary { border-bottom: 1px dashed var(--pergamino-sombra); }
+  .diagrama-ensayo .ensayo-cuerpo {
+    padding: 1rem 1.5rem 1.25rem;
+    max-width: 72ch;
+  }
+  .diagrama-ensayo .cargando {
+    color: var(--sepia);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
   /* Navegación inter-diagrama */
   .diagrama-nav {
     margin-top: 1rem;
@@ -466,6 +496,11 @@
         <p class="cargando">Cargando…</p>
       </div>
       ${interconexionesHtml(d)}
+      ${d.nota ? `
+      <details class="diagrama-ensayo" data-nota="notas/temas/${d.slug}.html">
+        <summary>✦ leer el ensayo del tema</summary>
+        <div class="ensayo-cuerpo"><p class="cargando">Cargando…</p></div>
+      </details>` : ''}
       <div class="diagrama-nav">
         ${prev ? `<a href="#${prev.slug}">← ${prev.titulo}</a>` : '<span class="vacio"></span>'}
         ${next ? `<a href="#${next.slug}">${next.titulo} →</a>` : '<span class="vacio"></span>'}
@@ -492,6 +527,27 @@
       frame.innerHTML = '<p class="error">No se pudo cargar ' + src + ' (' + err.message + ')</p>';
     }
   }
+
+  // Ensayos del vault: carga perezosa al abrir el desplegable
+  document.querySelectorAll('.diagrama-ensayo[data-nota]').forEach(det => {
+    det.addEventListener('toggle', async () => {
+      if (!det.open || det.dataset.cargado) return;
+      det.dataset.cargado = '1';
+      const cuerpo = det.querySelector('.ensayo-cuerpo');
+      try {
+        const resp = await fetch(det.dataset.nota + '?' + cacheVersion);
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        cuerpo.innerHTML = await resp.text();
+        // wikilinks: temas van al scroll, entidades a la red
+        cuerpo.querySelectorAll('a.wiki').forEach(a => {
+          const { kind, slug } = a.dataset;
+          a.href = kind === 'temas' ? '#' + slug : 'red.html#' + kind + ':' + slug;
+        });
+      } catch (err) {
+        cuerpo.innerHTML = '<p class="error">No se pudo cargar el ensayo (' + err.message + ')</p>';
+      }
+    });
+  });
 })();
 </script>
 

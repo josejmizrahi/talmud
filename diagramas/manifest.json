@@ -36,7 +36,8 @@
       "puente_desde": {
         "tipo": "apertura",
         "texto": "Apertura del Talmud Bavli — primera mishná, primera palabra: מאימתי\n(\"¿desde cuándo?\"). El editor no encontró un puente porque no hay\ntema previo.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "vigilias-noche",
@@ -73,7 +74,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "La mishná dice que R. Eliezer marca el fin del zman shema en\n\"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA).\nLa guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre\ncuántas vigilias tiene la noche en total? Se necesita esa\naritmética para saber a qué hora termina exactamente el zman.\nLa palabra אשמורה de la mishná dispara la sugyá entera.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "r-yose-ruina",
@@ -102,7 +104,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "tres-razones-ruina",
@@ -131,7 +134,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "R. Yose en la narrativa anterior dice que aprendió tres cosas, y la\nPRIMERA es \"אֵין נִכְנָסִין לְחוּרְבָּה\" — no se entra a una ruina.\nLa guemará inmediatamente pregunta: ¿pero POR QUÉ exactamente?\nEsa pregunta lanza la sugyá completa de las tres razones\n(chashad, mafolet, mazikin). El editor une las dos piezas por la\nAGENDA HALÁJICA que la narrativa abre pero no cierra: R. Yose dio\nla conclusión halájica; el stam haShas la fundamenta dialécticamente\ncon la baraita tanu rabanan que viene a continuación.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "noche-de-david",
@@ -171,7 +175,8 @@
       "puente_desde": {
         "tipo": "palabra-puente",
         "texto": "La sugyá anterior estableció que R. Eliezer fija el inicio del zman shema\nen \"tzeit hakojavim\" y el límite máximo en \"ad chatzot\" (hasta la medianoche).\nLa palabra חֲצוֹת (medianoche) dispara la guemará: ¿cómo sabía el rey David\nexactamente a qué hora era la medianoche? La pregunta conecta la halajá\npráctica del zman shema con la vida nocturna del rey-poeta.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "gobierno-tripartito",
@@ -212,7 +217,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama anterior estableció que David se despertaba a medianoche\ncon el kinor y estudiaba Torah hasta el alba. La sugyá inmediatamente\npregunta: ¿y qué hacía después? Tan pronto como amanecía, los sabios\nde Israel entraban a verle. Esta es la transición narrativa exacta —\nde la noche íntima de Torah a la gestión pública del reino.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "david-chasid",
@@ -247,7 +253,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "Los diagramas #5 y #6 establecieron a David como el rey-tzadik:\ndespertando a medianoche, consultando tres instituciones antes de\ncada guerra. Pero el siguiente verso de Tehilim 86:2 le pone título\npropio — חָסִיד אָנִי, «soy un chasid». La guemará pregunta: ¿cómo\nosa un REY llamarse chasid? La fórmula apologética «¿no soy chasid?»\nabre dos justificaciones — una nocturna (el madrugador) y otra\ndiurna (las manos manchadas). Misma fórmula, dos pruebas distintas.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "miedo-al-pecado",
@@ -287,7 +294,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama anterior estableció que David se llamó חָסִיד apoyándose\nen su ministerio halájico. La guemará continúa explorando la\nPSICOLOGÍA INTERIOR del chasid davídico: a pesar de todos sus\nméritos (madrugar, examinar niddah, consultar a Mefivoshet), David\nSEGUÍA TEMIENDO no merecer el olam ha-ba. La fórmula לוּלֵא\n(«si no fuera que…») expresa ese pavor radical. La sugyá se\nextiende a Yaakov y a Ezra como paralelos del mismo principio.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "cerca-y-trabajador",
@@ -319,7 +327,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #5-8 exploraron la dimensión INTERIOR de la noche\ndavídica (kinor · gobierno · chesed · temor al pecado). Ahora la\nsugyá vuelve al pshat de la mishná inicial: «¿hasta cuándo se\nrecita el shema de arvit?». El maestro nos lleva de la psicología\na la ESTRUCTURA halájica — ¿por qué los chajamim dijeron «ad\nchatzot» si la Torah permite «hasta amud hashachar»? La respuesta\nrevela el mecanismo de la SAYAG (cerca rabínica) y se ilustra con\nla baraita de los hijos de Rabban Gamliel.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "semijat-geula-tefila",
@@ -355,7 +364,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #9 trató la ESTRUCTURA EXTERNA de la noche litúrgica\n(cuándo recitar shema — la cerca de chatzot). Ahora la sugyá se\nmueve a la ESTRUCTURA INTERNA del rezo: el orden y la conexión\nentre brachot. La pregunta es ya no «¿hasta cuándo?» sino «¿en\nqué orden?». La fórmula R. Yojanan «¿quién es ben olam ha-ba?» se\nconvierte en clave: pegar la bracha de geulá con la amidá tiene\nvalor cósmico. Y esta enseñanza VUELVE en 6b y en 9b — es uno de\nlos temas que el editor recorre tres veces.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "ashrei-olam-haba",
@@ -392,7 +402,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #10 estableció la fórmula de R. Yojanan: «¿quién es\nben olam ha-ba? — el que junta geulá a tefilá». Inmediatamente\ndespués, la guemará trae OTRA fórmula con la misma estructura, de\notro amora: R. Eliezer ben Avina dice «todo el que recita Tehilá\nle-David tres veces al día está seguro de ser ben olam ha-ba».\nMisma fórmula, otra técnica litúrgica. El editor agrupa por\ncadena-fórmula — el lector descubre que ASHREI es una segunda vía\nparalela a la semijá.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "escala-angeles",
@@ -428,7 +439,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #10 y #11 dieron dos vías «públicas» al olam ha-ba\n(semijá y Ashrei). Ahora la sugyá vuelve al espacio íntimo — la\ncama, el momento del sueño, la vulnerabilidad nocturna que el\nrezo institucional no cubre. R. Yehoshua ben Levi establece una\nTERCERA práctica: kriat shema AL HA-MITÁ (sobre la cama),\nprivada, después de la sinagoga. La sugyá despliega la mitología\nangélica que protege ese espacio.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "escalera-yetzer",
@@ -459,7 +471,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #12 estableció el ritual del shema sobre la cama y la\ninvocación de los ángeles cardinales. Pero hay un peligro que los\nángeles no neutralizan: el yetzer hará INTERIOR. La sugyá continúa\ninmediatamente con la enseñanza de Reish Lakish (citada por R. Levi\nbar Jama) — una ESCALERA progresiva de cuatro escalones para\nvencer la mala inclinación. La conexión es exacta: el shema sobre\nla cama es UNO de los escalones, pero hay otros tres más arriba y\nuno más abajo. El editor expande el inventario de técnicas íntimas.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "yisurim-shel-ahava",
@@ -502,7 +515,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #13 estableció la escalera contra el yetzer hará — la\nlucha INTERIOR contra el deseo. Pero hay un sufrimiento que NO\nproviene del propio yetzer: el dolor que HKBH envía. La sugyá\npasa de la auto-disciplina al sufrimiento RECIBIDO. Reish Lakish\ncerró con «recordar el día de la muerte»; ahora la guemará explora\nel más difícil de los temas — ¿por qué sufren los justos? La\ntransición es de la muerte como recurso espiritual al sufrimiento\ncomo enigma teológico.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "tres-regalos",
@@ -537,7 +551,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #14 incluyó la baraita de Rashbi sobre los tres regalos\ncomo UN elemento entre varios en la sugyá amplia del sufrimiento.\nPero la baraita merece una exposición independiente: cada uno de\nlos tres regalos se prueba con una técnica exegética DISTINTA, y\nel orden Torá → Tierra → Olam Ha-Ba revela la jerarquía rabínica\nde los bienes supremos. La sugyá previa explora la TENSIÓN del\nsufrimiento; esta enseñanza expone su PRODUCTIVIDAD.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "tefila-y-cama",
@@ -568,7 +583,8 @@
       "puente_desde": {
         "tipo": "agav-orcheih",
         "texto": "Los diagramas #13-15 trataron la lucha contra el yetzer y la\ndoctrina del sufrimiento — temas de gran envergadura espiritual.\nAhora la sugyá baja a lo MÁS pequeño: la dirección de la cama y la\nposición exacta del orador en tefilá. La transición es agav-orcheih\n(«de paso»): la mención del shema sobre la cama en diagramas\nprevios dispara la cita de Aba Binyamin sobre las dos preocupaciones\nde su vida. El editor demuestra que la grandeza espiritual NO está\nsolo en las grandes doctrinas sino también en la atención metódica\nal detalle minúsculo.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "mazikin-invisibles",
@@ -600,7 +616,8 @@
       "puente_desde": {
         "tipo": "mismo-orador",
         "texto": "El diagrama #16 trajo dos enseñanzas de Aba Binyamin sobre la\nposición física de la tefilá y la cama. La sugyá continúa con\nOTRA enseñanza del mismo Aba Binyamin — sobre los seres\ninvisibles que pueblan el espacio del rezo y del sueño. El editor\nagrupa por MISMO ORADOR: tres enseñanzas de Aba Binyamin\nconsecutivas, todas sobre la geografía espiritual del cuerpo y su\nentorno. Las dos primeras eran sobre dirección y posición; la\ntercera revela QUIÉN MÁS habita ese espacio.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "beit-knesset",
@@ -646,7 +663,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #16-17 establecieron la sensibilidad del espacio\nsagrado: dirección de la cama, mazikin invisibles, la geometría\ncosmológica. Si el ESPACIO importa así de minuciosamente, ¿cuál\nes entonces EL ESPACIO POR EXCELENCIA del servicio a HKBH? La\nsugyá responde con un tema MAYOR que recorre cinco daf (6a, 6b,\n7b, 8a, 8b): el BEIT KNESSET es el lugar privilegiado donde la\nShejiná se concentra, donde la tefilá se hace eficaz, donde la\ncomunidad transforma la oración individual en evento cósmico.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "hkbh-reza-tefilin",
@@ -686,7 +704,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #18 estableció la doctrina del beit knesset: el lugar\ndonde la Shejiná se concentra y recibe la tefilá del hombre. La\nsugyá inmediatamente pega una doctrina especular: si el hombre\nreza A HKBH, ¿qué hace HKBH? La sorprendente respuesta del editor:\nHKBH TAMBIÉN reza. Y se enoja. Y usa tefilín. El editor agrupa por\ncadena-fórmula — la enseñanza sobre el lugar privilegiado del rezo\nhumano dispara la reflexión sobre el espejo divino. La teología\nrabínica refinada del antropomorfismo.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "moshe-tres-cosas",
@@ -722,7 +741,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #19 reveló que HKBH mismo reza para que su rajamim\nvenza a su din. Si HKBH prefiere la misericordia, ¿por qué\nentonces el justo sufre y el malvado prospera? La sugyá continúa\ninmediatamente con la enseñanza más famosa sobre la TEODICEA: las\ntres peticiones de Moshé. La conexión es exacta — desde la\nteología del default divino misericordioso a la pregunta más\nintratable: si así son las cosas, ¿por qué el mundo no lo refleja?\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "david-y-avshalom",
@@ -759,7 +779,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #20 dejó la tensión irresuelta sobre la teodicea —\nR. Meir sostiene que las vías de HKBH son MISTERIOSAS, no\nsistematizables. La sugyá inmediatamente trae UN CASO concreto\ndonde la teodicea opera de manera ENIGMÁTICA: David, al huir de\nAvshalom su hijo, escribe «MIZMOR» (cántico) en lugar de «KINÁ»\n(lamento). ¿Cómo se canta en medio de la tragedia? El editor pega\nel caso por cadena-fórmula: la tercera petición de Moshé (la\nteodicea) se ilustra con la respuesta DAVÍDICA al sufrimiento.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "provocar-rashaim",
@@ -795,7 +816,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #21 mostró a David enfrentando la tragedia de\nAvshalom — un rasha tarbut ra'á dentro de su propia casa. Surge\nnaturalmente la pregunta práctica: ¿puede el justo PROVOCAR\nactivamente a los rashaim? ¿Confrontar el mal? ¿O debe siempre\nhuir y refugiarse en mizmorim? La sugyá responde con una halajá\nmatizada: SÍ se puede, pero con discernimiento del momento.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "akiva-medos-gamliel-persas",
@@ -823,7 +845,8 @@
       "puente_desde": {
         "tipo": "cadena-formula",
         "texto": "El diagrama #22 estableció que se PERMITE provocar a los rashaim\n— la dimensión confrontacional del judaísmo. Ahora la sugyá ofrece\nel COMPLEMENTO necesario: cuando hay VIRTUD entre las naciones,\nel judaísmo la RECONOCE Y APRENDE. R. Akiva y R. Gamliel — dos de\nlas figuras más grandes del tanaitismo — declaran abiertamente\n«amo» (אוהב אני) ciertas costumbres de los Medos y los Persas.\nLa dialéctica completa: confrontación cuando hay mal, aprendizaje\ncuando hay bien.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "shema-dos-veces",
@@ -855,7 +878,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #23 mostró el judaísmo aprendiendo de las naciones —\nsu dimensión cultural más abierta. Ahora la sugyá VUELVE al\ncentro halájico del perek: la mishná del שמע. El editor cierra\nel perek con un retorno al tema inicial — pero ahora desde una\nperspectiva refinada por todo lo aprendido. R. Shimon bar Yojai\npropone una halajá audaz: hay momentos en que el judío recita\nshema DOS VECES dentro de una misma «noche» — una para cumplir\nla obligación nocturna, otra para cumplir la diurna. La frontera\nentre noche y día se vuelve halájicamente FLEXIBLE.\n"
-      }
+      },
+      "nota": true
     },
     {
       "slug": "pesaj-y-zman-shema",
@@ -892,7 +916,8 @@
       "puente_desde": {
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #24 mostró la halajá flexible de R. Shimon bar Yojai\nsobre el zman shema — dos recitaciones en una noche. El perek\nAHORA cierra con una sugyá que TRANSFORMA la pregunta inicial.\nEl zman shema arvit (#1) tenía como horizonte estructural el zman\nde COMER EL KORBAN PESAJ. ¿Hasta cuándo se puede comer? Esta es\nla disputa entre R. Elazar ben Azaria y R. Akiva. El perek\ncompleta su trayectoria desde la mishná inicial sobre el shema\nhasta el korban paradigmático. La estructura es PERFECTA — el\ncierre retorna al inicio, pero ampliado a su forma más universal.\n"
-      }
+      },
+      "nota": true
     }
   ],
   "sabios": [
@@ -904,7 +929,8 @@
       "alias": [
         "Eliyahu HaTishbi",
         "זכור לטוב"
-      ]
+      ],
+      "nota": true
     },
     {
       "slug": "r-eliezer",
@@ -914,14 +940,16 @@
       "maestro": "rabban-yojanan-ben-zakai",
       "alias": [
         "R. Eliezer haGadol"
-      ]
+      ],
+      "nota": true
     },
     {
       "slug": "r-yose",
       "nombre": "R. Yose ben Halafta",
       "generacion": "tana 4 (post-destrucción)",
       "lugar": "Tzippori (Galilea)",
-      "maestro": "r-akiva"
+      "maestro": "r-akiva",
+      "nota": true
     },
     {
       "slug": "rabbi-yehuda-hanasi",
@@ -932,7 +960,8 @@
       "alias": [
         "Rabbi",
         "Rabbeinu HaKadosh"
-      ]
+      ],
+      "nota": true
     },
     {
       "slug": "r-akiva",
@@ -1143,7 +1172,8 @@
       "capitulo": 119,
       "versiculo": 62,
       "texto": "חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לְךָ עַל מִשְׁפְּטֵי צִדְקֶךָ",
-      "traduccion": "A la medianoche me levanto para alabarte por tus juicios justos"
+      "traduccion": "A la medianoche me levanto para alabarte por tus juicios justos",
+      "nota": true
     },
     {
       "slug": "yirmiyahu-25-30",
@@ -1152,7 +1182,8 @@
       "capitulo": 25,
       "versiculo": 30,
       "texto": "ה׳ מִמָּרוֹם יִשְׁאַג וּמִמְּעוֹן קָדְשׁוֹ יִתֵּן קוֹלוֹ שָׁאֹג יִשְׁאַג עַל נָוֵהוּ",
-      "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada"
+      "traduccion": "Hashem desde lo alto rugirá, y desde su santa morada dará su voz; rugiendo rugirá sobre su morada",
+      "nota": true
     },
     {
       "slug": "tehilim-145",
@@ -1351,21 +1382,25 @@
     {
       "slug": "chashad",
       "nombre": "Chashad (sospecha)",
-      "hebreo": "חֲשָׁד"
+      "hebreo": "חֲשָׁד",
+      "nota": true
     },
     {
       "slug": "lamento-bet-hamikdash",
-      "nombre": "Lamento por el Bet HaMikdash"
+      "nombre": "Lamento por el Bet HaMikdash",
+      "nota": true
     },
     {
       "slug": "mafolet",
       "nombre": "Mafolet (derrumbe)",
-      "hebreo": "מַפּוֹלֶת"
+      "hebreo": "מַפּוֹלֶת",
+      "nota": true
     },
     {
       "slug": "mazikin",
       "nombre": "Mazikin (demonios)",
-      "hebreo": "מַזִּיקִין"
+      "hebreo": "מַזִּיקִין",
+      "nota": true
     },
     {
       "slug": "tzniut",

@@ -8,6 +8,7 @@
     "manifest": "node scripts/generate-manifest.js"
   },
   "devDependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "marked": "^18.0.5"
   }
 }

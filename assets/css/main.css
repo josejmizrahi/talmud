@@ -1542,3 +1542,89 @@ footer {
 .sugya-continua:hover {
   color: var(--rojo);
 }
+
+/* ===== Notas del vault (ensayos renderizados en notas/) ===== */
+
+.nota-md {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--tinta);
+}
+.nota-md p, .nota-md li, .nota-md blockquote, .nota-md td, .nota-md h2, .nota-md h3 {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
+.nota-md h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--tinta);
+  margin: 1.4rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed var(--pergamino-sombra);
+}
+.nota-md h3 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--tinta-suave);
+  margin: 1.1rem 0 0.4rem;
+}
+.nota-md blockquote {
+  margin: 0.9rem 0;
+  padding: 0.7rem 1rem;
+  background: rgba(184,134,11,0.05);
+  border-right: 3px solid var(--dorado);
+  border-left: none;
+  border-radius: 4px 0 0 4px;
+  font-family: 'Frank Ruhl Libre', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+.nota-md blockquote p { margin: 0 0 0.4rem; }
+.nota-md blockquote p:last-child { margin-bottom: 0; }
+.nota-md ul, .nota-md ol { padding-inline-start: 1.3rem; margin: 0.6rem 0; }
+.nota-md li { margin-bottom: 0.3rem; }
+.nota-md hr {
+  border: none;
+  border-top: 1px dashed var(--pergamino-sombra);
+  margin: 1.4rem 0;
+}
+.nota-md table {
+  border-collapse: collapse;
+  margin: 0.9rem 0;
+  font-size: 0.87rem;
+  width: 100%;
+}
+.nota-md th, .nota-md td {
+  border: 1px solid var(--pergamino-sombra);
+  padding: 0.4rem 0.6rem;
+  vertical-align: top;
+}
+.nota-md th {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sepia);
+  background: rgba(255,255,255,0.4);
+  font-weight: 500;
+}
+.nota-md code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: rgba(107,68,35,0.08);
+  padding: 0.05em 0.35em;
+  border-radius: 3px;
+}
+.nota-md a.wiki {
+  color: var(--rojo);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rojo);
+  cursor: pointer;
+}
+.nota-md a.wiki:hover {
+  background: rgba(139,26,26,0.07);
+}
