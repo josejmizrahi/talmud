@@ -1,0 +1,374 @@
+<div class="jizk-interactivo">
+<style>
+  .jizk-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .jizk-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .jizk-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .jizk-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .jizk-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .jizk-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .jizk-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .jizk-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .jizk-diagrama svg { width: 100%; height: auto; display: block; }
+  .jizk-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .jizk-nodo:hover rect { stroke-width: 2 !important; }
+  .jizk-nodo:hover circle { stroke-width: 2.5 !important; }
+  .jizk-nodo.activa rect { stroke-width: 2.5 !important; }
+  .jizk-nodo.activa circle { stroke-width: 3 !important; }
+  .jizk-nodo.dim { opacity: 0.32; }
+  .jizk-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .jizk-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .jizk-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .jizk-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .jizk-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .jizk-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .jizk-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="jizk-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>sentencia · decreto</span>
+  <span><span class="swatch dorado"></span>tefilá · la espada</span>
+  <span><span class="swatch azul"></span>pesukim · el muro</span>
+  <span><span class="swatch verde"></span>decisiones aprobadas</span>
+  <span><span class="swatch sepia"></span>decisiones rechazadas</span>
+</div>
+
+<div class="jizk-diagrama">
+<svg viewBox="0 0 720 1440" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10a-10b: Jizkiyahu y la espada en el cuello · la tefilá contra la profecía · las seis decisiones del rey</title>
+
+<defs>
+  <marker id="flecha-jz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-jz-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Jizkiyahu · la espada en el cuello</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10a-10b · la tefilá contra la profecía · seis decisiones de un rey</text>
+
+<!-- ============================================================ -->
+<!-- 1 · LA PESHARÁ DE HKBH                                       -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PESHARÁ DE HKBH · RAV HAMNUNA · KOHELET 8:1</text>
+
+<g class="jizk-nodo" data-id="peshara">
+  <rect x="60" y="86" width="600" height="150" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="110" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f">מִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר</text>
+  <text x="360" y="128" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¿Quién como el Sabio, que sabe hacer peshará (compromiso) entre dos tzadikim?»</text>
+
+  <rect x="78" y="140" width="276" height="56" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="216" y="158" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="600">Jizkiyahu · «que venga él a mí»</text>
+  <text x="216" y="174" text-anchor="middle" font-size="9" fill="#3d2f23">precedente: Eliyahu fue a Ajav</text>
+  <text x="216" y="188" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el profeta camina hacia el rey</text>
+
+  <rect x="366" y="140" width="276" height="56" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="504" y="158" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="600">Yeshayahu · «que venga él a mí»</text>
+  <text x="504" y="174" text-anchor="middle" font-size="9" fill="#3d2f23">precedente: Yehoram fue a Elisha</text>
+  <text x="504" y="188" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el rey camina hacia el profeta</text>
+
+  <text x="360" y="222" text-anchor="middle" font-size="10" fill="#1e3a5f" font-style="italic" font-weight="600">HKBH trae yisurim sobre Jizkiyahu y le dice al profeta: ve a visitar al enfermo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 2 · LA SENTENCIA DOBLE                                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="236" x2="360" y2="254" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-jz)"/>
+
+<text x="60" y="266" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA SENTENCIA DOBLE · YESHAYAHU 38:1</text>
+
+<g class="jizk-nodo" data-id="sentencia">
+  <rect x="60" y="276" width="600" height="150" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="300" text-anchor="middle" font-size="12.5" direction="rtl" fill="#8b1a1a">צַו לְבֵיתֶךָ — כִּי מֵת אַתָּה וְלֹא תִחְיֶה</text>
+  <text x="360" y="320" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">מֵת אַתָּה — בָּעוֹלָם הַזֶּה · וְלֹא תִחְיֶה — לָעוֹלָם הַבָּא</text>
+  <text x="360" y="338" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«muerto tú» — en este mundo · «y no vivirás» — en el mundo que viene</text>
+
+  <line x1="80" y1="350" x2="640" y2="350" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="78" y="368" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">causa</tspan> · porque no te ocupaste de la procreación (פריה ורביה)</text>
+  <text x="78" y="384" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">defensa</tspan> · «vi con ruaj hakodesh que mis hijos serían malvados» (Menashé)</text>
+  <text x="360" y="404" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">בַּהֲדֵי כַּבְשֵׁי דְרַחֲמָנָא לְמָה לָךְ?</text>
+  <text x="360" y="420" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">«¿qué haces tú con los secretos del Misericordioso? lo ordenado, hazlo»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 3 · EL PEDIDO Y EL PORTAZO                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="426" x2="360" y2="444" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-jz)"/>
+
+<text x="60" y="456" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PEDIDO Y EL PORTAZO · «YA FUE DECRETADO»</text>
+
+<g class="jizk-nodo" data-id="portazo">
+  <rect x="60" y="466" width="600" height="106" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="78" y="490" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">el pedido</tspan> · «dame a tu hija — quizás el mérito de ambos engendre hijos dignos»</text>
+  <text x="78" y="508" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">la respuesta</tspan> · «ya fue decretado sobre ti» — la puerta profética se cierra</text>
+  <text x="360" y="534" text-anchor="middle" font-size="12.5" direction="rtl" fill="#8b1a1a">בֶּן אָמוֹץ, כַּלֵּה נְבוּאָתְךָ וָצֵא!</text>
+  <text x="360" y="554" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¡Hijo de Amotz, termina tu profecía y sal!» — el rey expulsa al profeta</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 4 · LA ESPADA · NODO CENTRAL                                 -->
+<!-- ============================================================ -->
+<line x1="360" y1="572" x2="360" y2="590" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-jz-gold)"/>
+
+<text x="60" y="602" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESPADA · TRADICIÓN DE LA CASA DE DAVID · NÚCLEO</text>
+
+<g class="jizk-nodo" data-id="espada">
+  <rect x="60" y="612" width="600" height="164" rx="6" fill="rgba(184,134,11,0.13)" stroke="#b8860b" stroke-width="2.2"/>
+  <!-- espada decorativa -->
+  <line x1="290" y1="630" x2="430" y2="630" stroke="#b8860b" stroke-width="1.5" opacity="0.7"/>
+  <line x1="418" y1="624" x2="418" y2="636" stroke="#b8860b" stroke-width="1.5" opacity="0.7"/>
+  <path d="M290,630 L282,627 L282,633 z" fill="#b8860b" opacity="0.7"/>
+
+  <text x="360" y="656" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">כָּךְ מְקוּבְּלַנִי מִבֵּית אֲבִי אַבָּא —</text>
+  <text x="360" y="678" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אֲפִילּוּ חֶרֶב חַדָּה מוּנַּחַת עַל צַוָּארוֹ שֶׁל אָדָם</text>
+  <text x="360" y="700" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">אַל יִמְנַע עַצְמוֹ מִן הָרַחֲמִים</text>
+  <text x="360" y="722" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Así lo recibí de la casa del padre de mi padre: aunque una espada afilada descanse</text>
+  <text x="360" y="737" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">sobre el cuello del hombre — que no se abstenga de la misericordia»</text>
+  <text x="78" y="758" font-size="9" fill="#6b4423">R. Yojanan y R. Eliezer · ״הֵן יִקְטְלֵנִי לוֹ אֲיַחֵל״ (Iyov 13:15)</text>
+  <text x="78" y="771" font-size="9" fill="#6b4423">R. Janan · aunque el baal hajalomot te diga que mañana mueres — reza</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 5 · EL MURO Y «LO BUENO ANTE TUS OJOS»                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="776" x2="360" y2="794" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-jz)"/>
+
+<text x="60" y="806" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL MURO · YESHAYAHU 38:2-3 · LA TEFILÁ DEL REY</text>
+
+<g class="jizk-nodo" data-id="muro">
+  <rect x="60" y="816" width="290" height="152" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="838" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">¿Qué es el kir?</text>
+  <text x="205" y="860" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">וַיַּסֵּב חִזְקִיָּהוּ פָּנָיו אֶל הַקִּיר</text>
+  <text x="78" y="880" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#1e3a5f">Reish Lakish</tspan> · rezó מִקִּירוֹת לִבּוֹ,</text>
+  <text x="78" y="894" font-size="9.5" fill="#3d2f23">desde los muros de su corazón</text>
+  <text x="78" y="914" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#1e3a5f">R. Levi</tspan> · sobre asuntos del muro:</text>
+  <text x="78" y="928" font-size="9" fill="#3d2f23">la Shunamit hizo UNA pared — le reviviste</text>
+  <text x="78" y="942" font-size="9" fill="#3d2f23">al hijo; mi antepasado recubrió el Heijal</text>
+  <text x="78" y="956" font-size="9" fill="#6b4423" font-style="italic">de plata y oro — cuánto más</text>
+</g>
+
+<g class="jizk-nodo" data-id="hatov">
+  <rect x="370" y="816" width="290" height="152" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.3"/>
+  <text x="515" y="838" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">¿Qué bien hizo?</text>
+  <text x="515" y="860" text-anchor="middle" font-size="10.5" direction="rtl" fill="#b8860b">וְהַטּוֹב בְּעֵינֶיךָ עָשִׂיתִי</text>
+  <text x="388" y="880" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#b8860b">Rav Yehuda beshem Rav</tspan> ·</text>
+  <text x="388" y="894" font-size="9.5" fill="#3d2f23">pegó geulá a tefilá</text>
+  <text x="388" y="914" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#b8860b">R. Levi</tspan> · escondió el Séfer Refuot,</text>
+  <text x="388" y="928" font-size="9" fill="#3d2f23">el Libro de los Remedios — para que</text>
+  <text x="388" y="942" font-size="9" fill="#3d2f23">los enfermos volvieran a rezar</text>
+  <text x="388" y="956" font-size="9" fill="#6b4423" font-style="italic">la salud sin tefilá era demasiado fácil</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 6 · LAS SEIS DECISIONES DEL REY                              -->
+<!-- ============================================================ -->
+<line x1="205" y1="968" x2="205" y2="984" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-jz)"/>
+<line x1="515" y1="968" x2="515" y2="984" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-jz)"/>
+
+<text x="60" y="998" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LAS SEIS DECISIONES DEL REY · ¿LOS SABIOS APROBARON?</text>
+
+<g class="jizk-nodo" data-id="decisiones">
+  <rect x="60" y="1008" width="600" height="182" rx="6" fill="rgba(30,107,90,0.04)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="205" y="1032" text-anchor="middle" font-size="10.5" fill="#2d6b4e" font-weight="700">הוֹדוּ לוֹ · aprobaron ✓</text>
+  <text x="515" y="1032" text-anchor="middle" font-size="10.5" fill="#6b4423" font-weight="700">לֹא הוֹדוּ לוֹ · no aprobaron ✗</text>
+
+  <rect x="80" y="1044" width="270" height="30" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="96" y="1063" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="700">✓</tspan> escondió el Séfer Refuot</text>
+
+  <rect x="80" y="1082" width="270" height="30" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="96" y="1101" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="700">✓</tspan> trituró la serpiente de cobre</text>
+
+  <rect x="80" y="1120" width="270" height="30" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="96" y="1139" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="700">✓</tspan> arrastró los huesos de su padre Ajaz</text>
+
+  <rect x="370" y="1044" width="270" height="30" rx="4" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="386" y="1063" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="700">✗</tspan> tapó las aguas del Guijón</text>
+
+  <rect x="370" y="1082" width="270" height="30" rx="4" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="386" y="1101" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="700">✗</tspan> cortó las puertas del Heijal para Ashur</text>
+
+  <rect x="370" y="1120" width="270" height="30" rx="4" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="0.8"/>
+  <text x="386" y="1139" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="700">✗</tspan> intercaló Nisán en Nisán</text>
+
+  <text x="360" y="1174" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">un rey audaz que decide solo · tres veces acertó con los sabios, tres veces no</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 7 · EL QUIASMO DEL MÉRITO                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="1190" x2="360" y2="1208" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-jz)"/>
+
+<text x="60" y="1220" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL QUIASMO DEL MÉRITO · R. YOJANAN BESHEM R. YOSE BEN ZIMRA</text>
+
+<g class="jizk-nodo" data-id="quiasmo">
+  <rect x="60" y="1230" width="600" height="188" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1252" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">quien cuelga de su propio zjut → responden por zjut ajeno · y viceversa</text>
+
+  <rect x="78" y="1264" width="276" height="94" rx="4" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="0.9"/>
+  <text x="216" y="1284" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="700">Jizkiyahu · invoca zjut PROPIO</text>
+  <text x="216" y="1304" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">זְכָר נָא אֵת אֲשֶׁר הִתְהַלַּכְתִּי לְפָנֶיךָ</text>
+  <text x="216" y="1322" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">respondido por zjut AJENO:</text>
+  <text x="216" y="1340" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">וּלְמַעַן דָּוִד עַבְדִּי</text>
+
+  <rect x="366" y="1264" width="276" height="94" rx="4" fill="rgba(30,58,95,0.05)" stroke="#1e3a5f" stroke-width="0.9"/>
+  <text x="504" y="1284" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700">Moshé · invoca zjut AJENO</text>
+  <text x="504" y="1304" text-anchor="middle" font-size="10" direction="rtl" fill="#3d2f23">זְכֹר לְאַבְרָהָם לְיִצְחָק וּלְיִשְׂרָאֵל</text>
+  <text x="504" y="1322" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">respondido por zjut PROPIO:</text>
+  <text x="504" y="1340" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">לוּלֵי מֹשֶׁה בְחִירוֹ</text>
+
+  <line x1="216" y1="1362" x2="504" y2="1376" stroke="#6b4423" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="504" y1="1362" x2="216" y2="1376" stroke="#6b4423" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <text x="360" y="1400" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">R. Yehoshua ben Levi · hasta el shalom le supo amargo — ״הִנֵּה לְשָׁלוֹם מַר לִי מָר״</text>
+</g>
+
+</svg>
+</div>
+
+<div class="jizk-panel" id="jizk-panel">
+  <p class="jizk-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'peshara': {
+      titulo: 'La peshará de HKBH · dos tzadikim y un impasse',
+      hebreo: 'מִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר',
+      traduccion: '«¿Quién como el Sabio, que sabe hacer peshará entre dos tzadikim?» (Kohelet 8:1)',
+      explicacion: 'Rav Hamnuna lee Kohelet 8:1 como elogio de HKBH: ¿quién como Él, que sabe hacer PESHARÁ — compromiso, arbitraje — entre dos tzadikim? Los dos tzadikim son Jizkiyahu, el rey, e Yeshayahu, el profeta. Y el conflicto entre ellos es de PROTOCOLO.\n\nJizkiyahu dijo: que venga Yeshayahu a mí — porque así encontramos que Eliyahu fue a Ajav. Si el profeta más grande fue al rey más malvado, con más razón debe venir el profeta al rey justo.\n\nYeshayahu dijo: que venga Jizkiyahu a mí — porque así encontramos que Yehoram ben Ajav fue a Elisha. Si un rey malvado fue al profeta, con más razón debe ir el rey justo.\n\nCada uno tiene precedente bíblico. Cada uno tiene razón. Ninguno cede — no por soberbia personal, sino porque cada uno defiende el HONOR de su institución: la corona y la profecía.\n\n¿Qué hizo HKBH? La pesharádivina es quirúrgica: trajo YISURIM (sufrimientos, enfermedad) sobre Jizkiyahu, y le dijo a Yeshayahu: ve a VISITAR AL ENFERMO. Así el profeta va al rey — pero no por protocolo real, sino por bikur jolim, la mitzvá de visitar enfermos. Nadie cede su honor institucional; ambos obedecen otra cosa.\n\nEl precio del impasse lo paga el cuerpo del rey. La sugyá inaugura así su tema central: los yisurim como instrumento — el sufrimiento que abre la escena donde la tefilá vencerá a la profecía.'
+    },
+    'sentencia': {
+      titulo: 'La sentencia doble · muerte en los dos mundos',
+      hebreo: 'כִּי מֵת אַתָּה וְלֹא תִחְיֶה — מֵת אַתָּה בָּעוֹלָם הַזֶּה, וְלֹא תִחְיֶה לָעוֹלָם הַבָּא',
+      traduccion: '«Porque muerto estás y no vivirás» — muerto en este mundo, sin vida en el mundo que viene (Yeshayahu 38:1)',
+      explicacion: 'Yeshayahu llega al lecho del rey y pronuncia la sentencia más dura del Tanaj: צַו לְבֵיתֶךָ — «ordena tu casa, porque muerto estás y no vivirás». La guemará nota la REDUNDANCIA: si está muerto, obviamente no vivirá. ¿Por qué el doble lenguaje?\n\nLa lectura rabínica: מֵת אַתָּה — muerto EN ESTE MUNDO. וְלֹא תִחְיֶה — y no vivirás EN EL MUNDO QUE VIENE. Doble condena: muerte física Y exclusión del olam haba. Para un tzadik como Jizkiyahu, la segunda es infinitamente peor que la primera.\n\n¿Por qué tanto? — pregunta el rey. Respuesta: מִשּׁוּם דְּלָא עָסְקַתְּ בִּפְרִיָּה וּרְבִיָּה — porque no te ocupaste de la procreación. El rey que salvó a Yehudá de Ashur es condenado por lo que NO hizo: no engendró.\n\nJizkiyahu tiene defensa, y es una defensa PROFÉTICA: vi con ruaj hakodesh que de mí saldrían hijos malvados — y efectivamente su hijo será Menashé, el rey más idólatra de la historia de Yehudá. Se abstuvo de engendrar por cálculo espiritual: mejor no traer al mundo a quien lo destruirá.\n\nLa réplica de Yeshayahu es uno de los principios más profundos del pensamiento rabínico: בַּהֲדֵי כַּבְשֵׁי דְרַחֲמָנָא לְמָה לָךְ — «¿qué haces tú con los secretos del Misericordioso?». Lo que se te ORDENÓ, hazlo; lo que le plazca a HKBH, que Él lo haga. El hombre no gobierna las consecuencias últimas de sus mitzvot. La previsión profética NO exime de la obligación presente. Ni siquiera el ruaj hakodesh autoriza a desobedecer un mandamiento por miedo al futuro.'
+    },
+    'portazo': {
+      titulo: 'El pedido y el portazo · «termina tu profecía y sal»',
+      hebreo: 'בֶּן אָמוֹץ, כַּלֵּה נְבוּאָתְךָ וָצֵא!',
+      traduccion: '«¡Hijo de Amotz, termina tu profecía y sal!»',
+      explicacion: 'Aceptada la réplica, Jizkiyahu intenta reparar: הַשְׁתָּא הַב לִי בְּרַתָּךְ — «ahora dame a tu hija; quizás el mérito mío y el tuyo juntos hagan que salgan de mí hijos dignos». El rey propone unir las dos casas — la corona de David y la profecía de Amotz — para torcer el destino genético que vio.\n\nYeshayahu responde: כְּבָר נִגְזְרָה עָלֶיךָ גְּזֵירָה — «ya fue decretado sobre ti». Ya no hay nada que hacer; el decreto está sellado.\n\nY aquí la narrativa da su giro. El rey moribundo, condenado en los dos mundos, se incorpora y EXPULSA al profeta: בֶּן אָמוֹץ, כַּלֵּה נְבוּאָתְךָ וָצֵא — «¡hijo de Amotz, termina tu profecía y sal!». Nótese la dureza: no lo llama por su nombre ni por su título; lo llama «hijo de Amotz», como reduciéndolo a portador de un mensaje ajeno.\n\nEl portazo NO es negación de la profecía — Jizkiyahu no duda de que Yeshayahu dice la verdad. Es un rechazo de la CONCLUSIÓN: que un decreto sellado obligue a dejar de rezar. El profeta ya dijo lo suyo; que termine y salga. Ahora empieza otra cosa — la conversación directa del rey con HKBH, sin mediador.\n\nEste momento define la arquitectura teológica de toda la sugyá: la profecía DESCRIBE el decreto; la tefilá lo DISPUTA. Son dos canales distintos, y el segundo no se cierra cuando el primero pronuncia sentencia.'
+    },
+    'espada': {
+      titulo: 'La espada en el cuello · la tradición de la casa de David',
+      hebreo: 'אֲפִילּוּ חֶרֶב חַדָּה מוּנַּחַת עַל צַוָּארוֹ שֶׁל אָדָם — אַל יִמְנַע עַצְמוֹ מִן הָרַחֲמִים',
+      traduccion: '«Aunque una espada afilada descanse sobre el cuello del hombre — que no se abstenga de la misericordia»',
+      explicacion: 'El corazón de la sugyá — y una de las frases más citadas de todo el Talmud. Jizkiyahu justifica su portazo con una TRADICIÓN FAMILIAR: כָּךְ מְקוּבְּלַנִי מִבֵּית אֲבִי אַבָּא — «así lo recibí de la casa del padre de mi padre», es decir, de la casa de DAVID: aunque una espada afilada esté apoyada sobre el cuello de un hombre, que no se abstenga de pedir misericordia.\n\nLa imagen es precisa. No una espada lejana, no un peligro abstracto: la hoja YA está sobre el cuello. Es el último instante posible, cuando toda esperanza racional se agotó. Incluso AHÍ — dice la tradición davídica — la tefilá sigue abierta. El decreto puede estar firmado y sellado; la misericordia no tiene cerradura.\n\n¿Por qué esta tradición es davídica? Porque David vivió exactamente eso: vio al ángel con la espada desenvainada sobre Yerushalaim (Shmuel II 24) y REZÓ. La casa de David es la dinastía que nunca acepta la puerta cerrada — el mismo ADN espiritual que el diagrama de David y Avshalom mostró en el mizmor dentro de la kiná.\n\nLa guemará suma dos refuerzos. R. Yojanan y R. Eliezer dijeron ambos: incluso cuando la espada está sobre el cuello, que no se abstenga — como dice Iyov: הֵן יִקְטְלֵנִי לוֹ אֲיַחֵל, «aunque me mate, en Él esperaré» (Iyov 13:15). La esperanza no depende del pronóstico.\n\nY R. Janan agrega la versión onírica: aunque el BAAL HAJALOMOT — el dueño de los sueños — le diga a un hombre que mañana muere, que no se abstenga de la misericordia. Ningún canal de anuncio del futuro — profeta, sueño, sentencia — clausura el canal de la tefilá. Es la doctrina entera en una imagen: la espada mide la desesperación; la tefilá la desborda.'
+    },
+    'muro': {
+      titulo: 'El muro · desde los muros del corazón',
+      hebreo: 'וַיַּסֵּב חִזְקִיָּהוּ פָּנָיו אֶל הַקִּיר וַיִּתְפַּלֵּל',
+      traduccion: '«Y volvió Jizkiyahu su rostro hacia el muro, y rezó» (Yeshayahu 38:2)',
+      explicacion: 'Expulsado el profeta, el versículo muestra al rey a solas: volvió su rostro AL MURO y rezó. La guemará pregunta: ¿qué es este KIR, este muro?\n\nReish Lakish lo lee hacia adentro: rezó מִקִּירוֹת לִבּוֹ — «desde los MUROS DE SU CORAZÓN». El kir físico es espejo del kir interior. Jizkiyahu no reza con fórmulas: reza desde las paredes más hondas de sí mismo, desde el interior del interior. La tefilá que disputa un decreto sellado no puede ser superficial — tiene que salir del muro maestro del corazón.\n\nR. Levi lo lee hacia la memoria: rezó SOBRE ASUNTOS DEL MURO. Le dijo a HKBH: Ribonó shel olam — la Shunamit hizo UNA pared pequeña en su azotea para el profeta Elisha, y le reviviste a su hijo. Mi antepasado (Shlomó) recubrió el HEIJAL ENTERO de plata y oro — ¿cuánto más deberías revivirme a mí? Es un kal vajomer arquitectónico: de la pared única de una mujer al Templo entero de una dinastía.\n\nLas dos lecturas no compiten — se complementan. Una define la INTENSIDAD de la tefilá (desde los muros del corazón); la otra define su CONTENIDO (el mérito acumulado en muros construidos para HKBH). El rey acorralado usa las dos: profundidad interior y memoria dinástica.\n\nY nótese la inversión escénica: el rostro que se aparta del profeta —del mensajero del decreto— es el mismo rostro que se vuelve hacia el muro, hacia el lugar donde no hay nadie. La tefilá empieza exactamente donde la mediación termina.'
+    },
+    'hatov': {
+      titulo: '«Lo bueno ante Tus ojos» · geulá-tefilá y el Séfer Refuot',
+      hebreo: 'וְהַטּוֹב בְּעֵינֶיךָ עָשִׂיתִי',
+      traduccion: '«Y lo bueno ante Tus ojos hice» (Yeshayahu 38:3)',
+      explicacion: 'En su tefilá, Jizkiyahu dice: «recuerda que anduve ante Ti con verdad y corazón íntegro, וְהַטּוֹב בְּעֵינֶיךָ עָשִׂיתִי — y LO BUENO ANTE TUS OJOS hice». La guemará pregunta: ¿a qué acto concreto se refiere?\n\nRav Yehuda en nombre de Rav: que PEGÓ GEULÁ A TEFILÁ — unió la bendición de la redención con la amidá, sin interrupción entre ambas. Es notable que este mérito sea exactamente la práctica que el perek viene discutiendo desde 9b con los vatikin: la halajá cotidiana de la liturgia, proyectada hacia atrás hasta el rey de Yehudá. El mérito que salva a Jizkiyahu no es una hazaña única — es una DISCIPLINA diaria de estructura de la tefilá.\n\nR. Levi: que ESCONDIÓ EL SÉFER REFUOT — el Libro de los Remedios. Existía un libro donde estaba escrita la cura de cada enfermedad; el enfermo consultaba, se curaba, y nunca levantaba los ojos al Cielo. Jizkiyahu lo escondió PARA QUE LOS ENFERMOS VOLVIERAN A REZAR — para que la enfermedad recuperara su función de convocatoria.\n\nLa audacia de esta segunda lectura es enorme: el rey RETIRÓ un bien médico real para restaurar un bien espiritual. Y los sabios lo APROBARON (primera fila de la tabla de decisiones). La lógica es la de toda la sugyá: la salud automática, sin tefilá, empobrece al hombre; la cura debe pasar por la relación con Quien cura.\n\nLas dos respuestas convergen en un mismo retrato: el «bien ante Tus ojos» de Jizkiyahu es siempre lo mismo — poner la TEFILÁ en el centro del sistema, en la liturgia (geulá-tefilá) y en la vida (el libro escondido). Por eso puede reclamar ese mérito justo ahora, cuando su vida depende de que la tefilá funcione.'
+    },
+    'decisiones': {
+      titulo: 'Las seis decisiones del rey · tres ✓ y tres ✗',
+      hebreo: 'שִׁשָּׁה דְּבָרִים עָשָׂה חִזְקִיָּהוּ — עַל שְׁלֹשָׁה הוֹדוּ לוֹ, וְעַל שְׁלֹשָׁה לֹא הוֹדוּ לוֹ',
+      traduccion: 'Seis cosas hizo Jizkiyahu: en tres le dieron la razón, en tres no',
+      explicacion: 'La baraita hace el balance de un reinado audaz: seis decisiones tomadas por iniciativa propia — tres aprobadas por los sabios, tres no.\n\nLAS TRES APROBADAS (הוֹדוּ לוֹ):\n\n1 · ESCONDIÓ EL SÉFER REFUOT — el Libro de los Remedios (ver nodo anterior). Retiró la cura automática para que los enfermos volvieran a rezar.\n\n2 · TRITURÓ LA SERPIENTE DE COBRE — el nejushtán que Moshé mismo había hecho en el desierto (Bamidbar 21). Cuando el pueblo empezó a quemarle incienso como a un ídolo, Jizkiyahu lo pulverizó (Melajim II 18:4). Ni la reliquia más sagrada — obra de Moshé — sobrevive a su conversión en idolatría.\n\n3 · ARRASTRÓ LOS HUESOS DE SU PADRE AJAZ — en lugar de darle sepultura real, arrastró sus restos en una cama de sogas. Deshonró públicamente a su propio padre idólatra: la kapará (expiación) de Ajaz y la advertencia a los reyes futuros valen más que el honor filial.\n\nLAS TRES NO APROBADAS (לֹא הוֹדוּ לוֹ):\n\n4 · TAPÓ LAS AGUAS DEL GUIJÓN — desvió el manantial para dejar sin agua al sitiador Sanjeriv. Cálculo militar razonable — pero debió confiar en HKBH, que ya había prometido defender la ciudad.\n\n5 · CORTÓ LAS PUERTAS DEL HEIJAL — arrancó el oro de las puertas del Templo para pagar tributo al rey de Ashur. Compró tiempo despojando el santuario: los sabios no aprobaron.\n\n6 · INTERCALÓ NISÁN EN NISÁN — agregó un mes al año DESPUÉS de comenzado Nisán, para retrasar Pésaj. Pero la halajá fija el límite: זֶה הַחֹדֶשׁ — una vez llegado Nisán, ya no se intercala.\n\nEl patrón es revelador: las tres aprobadas son audacias EN FAVOR de la relación directa con HKBH (menos automatismo, menos ídolo, menos honra vacía); las tres rechazadas son audacias que la SUSTITUYEN por cálculo humano — militar, diplomático, calendárico. El mismo rey, la misma osadía; lo que cambia es hacia dónde apunta.'
+    },
+    'quiasmo': {
+      titulo: 'El quiasmo del mérito · zjut propio y zjut ajeno',
+      hebreo: 'כׇּל הַתּוֹלֶה בִּזְכוּת עַצְמוֹ — תּוֹלִין לוֹ בִּזְכוּת אֲחֵרִים',
+      traduccion: 'Quien cuelga su tefilá de su propio mérito — se la responden por mérito ajeno; y viceversa',
+      explicacion: 'R. Yojanan en nombre de R. Yose ben Zimra cierra la sugyá con una simetría perfecta — un quiasmo del mérito:\n\nQUIEN CUELGA DE SU PROPIO ZJUT → le responden por ZJUT AJENO. Jizkiyahu rezó invocando su propio andar: זְכָר נָא — «recuerda que anduve ante Ti con verdad» (Yeshayahu 38:3). Fue respondido — pero por el mérito de OTRO: וְגַנּוֹתִי אֶל הָעִיר הַזֹּאת לְהוֹשִׁיעָהּ לְמַעֲנִי וּלְמַעַן דָּוִד עַבְדִּי — «defenderé esta ciudad por Mí y POR DAVID MI SIERVO» (Melajim II 19:34). Invocó su propia integridad; la respuesta llegó firmada por su antepasado.\n\nQUIEN CUELGA DE ZJUT AJENO → le responden por el PROPIO. Moshé, ante el becerro de oro, invocó a los avot: זְכֹר לְאַבְרָהָם לְיִצְחָק וּלְיִשְׂרָאֵל — «recuerda a Avraham, a Itzjak y a Israel» (Shemot 32:13). Y fue respondido por SU PROPIO mérito: לוּלֵי מֹשֶׁה בְחִירוֹ — «si no fuera por Moshé Su elegido, que se paró en la brecha» (Tehilim 106:23).\n\nLa lógica del quiasmo: la humildad se premia con el propio nombre; la auto-invocación se responde con el nombre de otro. Quien se apoya en otros demuestra que su mérito es real (y el Cielo lo proclama); quien se apoya en sí mismo necesita que lo sostenga un mérito más grande que el suyo. El sistema corrige suavemente la postura de cada uno.\n\nY el epílogo amargo de R. Yehoshua ben Levi: incluso el shalom que le enviaron le supo amargo — הִנֵּה לְשָׁלוֹם מַר לִי מָר, «he aquí, para paz — amargo me fue, amargo» (Yeshayahu 38:17). Jizkiyahu ganó quince años, ganó la ciudad, venció al decreto — y aun así el sabor de haber colgado de un mérito ajeno no se le fue de la boca. La victoria de la tefilá es real; también lo es su costo.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.jizk-interactivo')
+    : document.querySelector('.jizk-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#jizk-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.jizk-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="jizk-panel-header">' +
+        '<p class="jizk-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="jizk-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="jizk-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="jizk-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.jizk-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.jizk-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="jizk-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
