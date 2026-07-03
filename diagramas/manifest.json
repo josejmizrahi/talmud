@@ -1,6 +1,6 @@
 {
-  "perek": "Berajot · perek 1 · mishná 1:1",
-  "descripcion": "Diagramas temáticos del primer perek de Berajot (mishná 1:1). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
+  "perek": "Berajot · perek 1 · מאימתי",
+  "descripcion": "Diagramas temáticos del primer perek de Berajot (dapim 2a–12a). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
   "diagramas": [
     {
       "slug": "zman-shema-arvit",
@@ -918,6 +918,534 @@
         "texto": "El diagrama #24 mostró la halajá flexible de R. Shimon bar Yojai\nsobre el zman shema — dos recitaciones en una noche. El perek\nAHORA cierra con una sugyá que TRANSFORMA la pregunta inicial.\nEl zman shema arvit (#1) tenía como horizonte estructural el zman\nde COMER EL KORBAN PESAJ. ¿Hasta cuándo se puede comer? Esta es\nla disputa entre R. Elazar ben Azaria y R. Akiva. El perek\ncompleta su trayectoria desde la mishná inicial sobre el shema\nhasta el korban paradigmático. La estructura es PERFECTA — el\ncierre retorna al inicio, pero ampliado a su forma más universal.\n"
       },
       "nota": true
+    },
+    {
+      "slug": "rejush-gadol-doble-aneni",
+      "orden": 26,
+      "titulo": "El botín de Egipto y el doble aneni",
+      "subtitulo": "la promesa cumplida a la fuerza · Eliyahu pide dos veces",
+      "dapim": [
+        "9b"
+      ],
+      "grupo": "La gran sugyá del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/rejush-gadol-doble-aneni.html",
+      "sabios": [
+        "r-ami",
+        "reish-lakish",
+        "r-abahu"
+      ],
+      "sabios_biblicos": [
+        "moshe",
+        "eliyahu-hanavi"
+      ],
+      "pesukim": [
+        "bereshit-15-14",
+        "shemot-3-14",
+        "shemot-12-36",
+        "melajim-i-18-37",
+        "tehilim-68-13"
+      ],
+      "conceptos": [
+        "yetziat-mitzrayim",
+        "rejush-gadol",
+        "promesa-divina",
+        "ehyeh-asher-ehyeh",
+        "maase-jeshafim"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "El diagrama #25 cerró la sugyá del zman con el korban pesaj y\nmakat bechorot — la noche misma de YETZIAT MITZRAYIM. El editor\nno suelta esa noche: la guemará sigue con las agadot del éxodo.\n¿Por qué HKBH insistió en que Israel pidiera los objetos de\nEgipto? Para que \"aquel tzadik\" (Avraham) no dijera: la promesa\nde esclavitud se cumplió, la de riqueza no. La salida de Egipto\nes la palabra-puente que arrastra al editor de la halajá del\npesaj a la teología de las promesas.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "zman-shema-shajarit",
+      "orden": 27,
+      "titulo": "El zman de kriat shma de shajarit",
+      "subtitulo": "entre celeste y blanco · lobo y perro · hasta tres horas",
+      "dapim": [
+        "9b",
+        "10b"
+      ],
+      "grupo": "El shema de la mañana",
+      "estado": "listo",
+      "diagrama": "diagramas/zman-shema-shajarit.html",
+      "sabios": [
+        "r-eliezer",
+        "r-yehoshua",
+        "r-meir",
+        "r-akiva",
+        "ajerim",
+        "rav-huna",
+        "abaye",
+        "r-yojanan",
+        "rav-yehuda",
+        "shmuel",
+        "rav-jisda",
+        "mar-ukva",
+        "r-mani"
+      ],
+      "pesukim": [],
+      "conceptos": [
+        "zman-shema",
+        "tekhelet-lavan",
+        "hanetz-hajama",
+        "shalosh-shaot",
+        "amud-hashachar",
+        "estudio-tora"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Todo el perek hasta aquí giró sobre la mishná 1:1 — el shema\nde ARVIT. La segunda mishná es su espejo exacto: מֵאֵימָתַי\nקוֹרִין אֶת שְׁמַע בְּשַׁחֲרִית — ¿desde cuándo se lee el shema\nde la MAÑANA? La misma pregunta (¿desde cuándo?), el mismo\nproblema (señales naturales para marcar tiempo halájico),\npero ahora con la luz creciente en lugar de la oscuridad.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "vatikin-hanetz",
+      "orden": 28,
+      "titulo": "Vatikin · el shema con el amanecer",
+      "subtitulo": "sonreír todo el día · cómo pegar geulá a tefilá",
+      "dapim": [
+        "9b"
+      ],
+      "grupo": "El shema de la mañana",
+      "estado": "listo",
+      "diagrama": "diagramas/vatikin-hanetz.html",
+      "sabios": [
+        "r-yojanan",
+        "r-zeira",
+        "r-yose-ben-elyakim",
+        "rav-beruna",
+        "r-ila",
+        "ula",
+        "r-elazar",
+        "rav-ashi"
+      ],
+      "pesukim": [
+        "tehilim-72-5",
+        "tehilim-51-17",
+        "tehilim-19-15"
+      ],
+      "conceptos": [
+        "vatikin",
+        "hanetz-hajama",
+        "geula",
+        "tefila",
+        "hefsek",
+        "hashkiveinu",
+        "semijat-geula-tefila"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "Abaye acaba de decir en la sugyá del zman: \"para kriat shema,\ncomo los VATIKIN\" — y cita a R. Yojanan: וָתִיקִין הָיוּ\nגּוֹמְרִין אוֹתָהּ עִם הָנֵץ הַחַמָּה. El editor toma esa\nfórmula y despliega la sugyá entera de los vatikin: quiénes\nson, qué pasuk los sostiene, y qué recompensa tiene quien\nlogra su proeza — pegar la geulá a la tefilá con el sol\nsaliendo.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "beruria-biryonim-minim",
+      "orden": 29,
+      "titulo": "Beruria · que mueran los pecados, no los pecadores",
+      "subtitulo": "los biryonim del barrio · dos minim refutados",
+      "dapim": [
+        "10a"
+      ],
+      "grupo": "El rey David",
+      "estado": "listo",
+      "diagrama": "diagramas/beruria-biryonim-minim.html",
+      "sabios": [
+        "r-meir",
+        "beruria",
+        "r-abahu",
+        "r-yojanan"
+      ],
+      "sabios_biblicos": [
+        "david"
+      ],
+      "pesukim": [
+        "tehilim-104-35",
+        "yeshayahu-54-1",
+        "tehilim-3-1",
+        "tehilim-2-1",
+        "tehilim-111-8"
+      ],
+      "conceptos": [
+        "teshuva",
+        "minim",
+        "smujin",
+        "rebelion-filial",
+        "gog-umagog",
+        "shpil-leseifei-dikra"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "La sugyá anterior terminó citando el pasuk exacto: David no\ndijo Halleluyá hasta ver la caída de los reshaim — יִתַּמּוּ\nחַטָּאִים מִן הָאָרֶץ וּרְשָׁעִים עוֹד אֵינָם. El editor\ninmediatamente cuenta la historia donde ESE MISMO PASUK es\nreleído: R. Meir reza por la muerte de los biryonim apoyándose\nen él, y Beruria lo corrige desde la gramática. La fórmula\ncompartida encadena las dos piezas.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "cinco-mundos-david",
+      "orden": 30,
+      "titulo": "Los cinco mundos de David",
+      "subtitulo": "barji nafshi · el alma que se parece a su Creador",
+      "dapim": [
+        "10a"
+      ],
+      "grupo": "El rey David",
+      "estado": "listo",
+      "diagrama": "diagramas/cinco-mundos-david.html",
+      "sabios": [
+        "r-yojanan",
+        "r-shimon-bar-yojai",
+        "r-abahu",
+        "rav-yehuda",
+        "rav-matna",
+        "rabba-bar-rav-sheila",
+        "rav-shimi-bar-ukva",
+        "r-shimon-ben-pazi"
+      ],
+      "sabios_biblicos": [
+        "david"
+      ],
+      "pesukim": [
+        "mishlei-31-26",
+        "tehilim-103-1",
+        "tehilim-103-2",
+        "tehilim-104-35",
+        "tehilim-104-1",
+        "shmuel-i-2-2"
+      ],
+      "conceptos": [
+        "barji-nafshi",
+        "neshama",
+        "shira",
+        "yom-hamita",
+        "tzniut"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "Beruria corrigió la lectura de יִתַּמּוּ חַטָּאִים. El editor\nahora revela dónde vive ese pasuk en la biografía espiritual\nde David: es el CUARTO de los cinco בָּרְכִי נַפְשִׁי — la\nshirá que David dijo al ver la caída de los reshaim. La misma\nfórmula, por tercera vez consecutiva, teje la cadena: cita,\ncorrección, y ahora contexto vital.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "jizkiyahu-espada-cuello",
+      "orden": 31,
+      "titulo": "Jizkiyahu · la espada en el cuello",
+      "subtitulo": "la tefilá contra la profecía · seis decisiones de un rey",
+      "dapim": [
+        "10a",
+        "10b"
+      ],
+      "grupo": "Tefilá contra el decreto",
+      "estado": "listo",
+      "diagrama": "diagramas/jizkiyahu-espada-cuello.html",
+      "sabios": [
+        "rav-hamnuna",
+        "r-yojanan",
+        "r-eliezer",
+        "r-janan",
+        "reish-lakish",
+        "r-levi",
+        "rav-yehuda",
+        "rav",
+        "r-yose-ben-zimra",
+        "r-yehoshua-ben-levi"
+      ],
+      "sabios_biblicos": [
+        "jizkiyahu",
+        "yeshayahu",
+        "moshe",
+        "david"
+      ],
+      "pesukim": [
+        "kohelet-8-1",
+        "yeshayahu-38-1",
+        "yeshayahu-38-2",
+        "yeshayahu-38-3",
+        "iyov-13-15",
+        "melajim-ii-19-34",
+        "tehilim-106-23"
+      ],
+      "conceptos": [
+        "tefila",
+        "geula",
+        "yisurim",
+        "gzar-din",
+        "jerev-jada",
+        "zjut-atzmo-zjut-ajerim",
+        "sefer-refuot",
+        "lulei",
+        "olam-haba"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "David abrió su boca בְחָכְמָה — y el editor salta a Kohelet:\nמִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר. ¿Quién es sabio\ncomo HKBH, que sabe hacer PESHARÁ (compromiso) entre dos\ntzadikim — entre Jizkiyahu e Yeshayahu? La palabra jojmá\nengancha el elogio de David con la historia del rey que venció\na la profecía rezando.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "shunamit-huesped",
+      "orden": 32,
+      "titulo": "La Shunamit y el huésped sabio",
+      "subtitulo": "una pared pequeña · hospedar es ofrecer el tamid",
+      "dapim": [
+        "10b"
+      ],
+      "grupo": "El espacio sagrado",
+      "estado": "listo",
+      "diagrama": "diagramas/shunamit-huesped.html",
+      "sabios": [
+        "rav",
+        "shmuel",
+        "abaye",
+        "r-yitzjak",
+        "r-yojanan",
+        "r-yose-bar-janina",
+        "r-eliezer-ben-yaakov"
+      ],
+      "sabios_biblicos": [
+        "elisha",
+        "shmuel-haramati"
+      ],
+      "pesukim": [
+        "melajim-ii-4-9",
+        "melajim-ii-4-10",
+        "shmuel-i-7-17"
+      ],
+      "conceptos": [
+        "hajnasat-orjim",
+        "talmid-jajam",
+        "korban-tamid",
+        "kedusha",
+        "tzniut"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "Jizkiyahu rezó girado אֶל הַקִּיר, y R. Levi explicó que\ninvocaba el KIR de la Shunamit: \"ella hizo una sola pared\npequeña y le reviviste al hijo\". El editor ahora abre ese\nepisodio completo: נַעֲשֶׂה נָא עֲלִיַּת קִיר קְטַנָּה. La\npalabra קיר es el gozne — del muro del rey moribundo a la\npared de la mujer hospitalaria.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "tefila-desde-lo-bajo",
+      "orden": 33,
+      "titulo": "Rezar desde lo bajo",
+      "subtitulo": "ni en alto · pies alineados · no comas antes de rezar",
+      "dapim": [
+        "10b"
+      ],
+      "grupo": "Halajá personal",
+      "estado": "listo",
+      "diagrama": "diagramas/tefila-desde-lo-bajo.html",
+      "sabios": [
+        "r-yose-bar-janina",
+        "r-eliezer-ben-yaakov",
+        "r-yitzjak",
+        "r-yojanan"
+      ],
+      "pesukim": [
+        "tehilim-130-1",
+        "tehilim-102-1",
+        "yejezkel-1-7",
+        "vayikra-19-26",
+        "melajim-i-14-9"
+      ],
+      "conceptos": [
+        "tefila",
+        "makom-namuj",
+        "kavanat-raglayim",
+        "gaava",
+        "keva-y-kavaná"
+      ],
+      "puente_desde": {
+        "tipo": "mismo-orador",
+        "texto": "La enseñanza de la hospitalidad venía de R. Yosei bar Janina\nen nombre de R. Eliezer ben Yaakov. El editor encadena TRES\nenseñanzas más con exactamente la misma cadena de transmisión\n— וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי\nאֱלִיעֶזֶר בֶּן יַעֲקֹב — todas sobre la postura del cuerpo\nante la tefilá. El mismo orador agrupa la unidad, como Aba\nBinyamin en 5b-6a.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "postura-shema-hillel-shammai",
+      "orden": 34,
+      "titulo": "Beit Shammai vs Beit Hillel · la postura del shema",
+      "subtitulo": "R. Tarfon entre bandidos · el precio de ser más estricto",
+      "dapim": [
+        "10b",
+        "11a"
+      ],
+      "grupo": "La casa de Hillel y Shammai",
+      "estado": "listo",
+      "diagrama": "diagramas/postura-shema-hillel-shammai.html",
+      "sabios": [
+        "r-tarfon",
+        "r-yishmael-ben-elisha",
+        "r-elazar-ben-azaria",
+        "rav-papa",
+        "rav-yejezkel",
+        "rav-yosef",
+        "rav-najman-bar-yitzjak"
+      ],
+      "pesukim": [
+        "devarim-6-7"
+      ],
+      "conceptos": [
+        "beit-hillel",
+        "beit-shammai",
+        "shokhbeicha-vekumecha",
+        "osek-bemitzva-patur",
+        "tirda",
+        "listim"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Cerrada la pregunta del CUÁNDO (halajá como R. Yehoshua, hasta\ntres horas), la mishná 1:3 pregunta el CÓMO: ¿en qué postura\nse lee el shema? Beit Shammai lee ובשכבך ובקומך literalmente\n— acostado de noche, de pie de mañana. Beit Hillel lo lee como\nmarcador de TIEMPO — cada uno lee כדרכו, como está. Es la\nmisma frase de la Torá que fundó el perek entero, ahora\ndisputada en su sentido corporal.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "yotzer-or-ahava-rabba",
+      "orden": 35,
+      "titulo": "Yotzer or · las berajot del shema",
+      "subtitulo": "mencionar la noche en el día · dos antes, una después",
+      "dapim": [
+        "11a",
+        "11b"
+      ],
+      "grupo": "Las berajot del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/yotzer-or-ahava-rabba.html",
+      "sabios": [
+        "rav-oshaya",
+        "rava",
+        "abaye",
+        "rav-yehuda",
+        "shmuel",
+        "r-elazar"
+      ],
+      "pesukim": [
+        "yeshayahu-45-7",
+        "yirmiyahu-31-3"
+      ],
+      "conceptos": [
+        "yotzer-or",
+        "ahava-rabba",
+        "midat-yom-balayla",
+        "lishana-mealya",
+        "berajot-shema"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Resuelto el CUÁNDO (mishná 1:2) y el CÓMO (mishná 1:3), la\nmishná 1:4 pregunta por el MARCO: ¿qué berajot rodean al\nshema? בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת\nלְאַחֲרֶיהָ, וּבָעֶרֶב שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם\nלְאַחֲרֶיהָ. La secuencia de las tres mishnayot construye la\nliturgia completa: tiempo → postura → bendiciones.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "birkat-hatora",
+      "orden": 36,
+      "titulo": "Birkat haTorá",
+      "subtitulo": "¿qué estudio exige berajá? · digámoslas todas",
+      "dapim": [
+        "11b"
+      ],
+      "grupo": "Las berajot del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/birkat-hatora.html",
+      "sabios": [
+        "rav-yehuda",
+        "shmuel",
+        "rav-huna",
+        "r-elazar",
+        "r-yojanan",
+        "rava",
+        "rav-jiya-bar-ashi",
+        "rav",
+        "rav-hamnuna"
+      ],
+      "pesukim": [],
+      "conceptos": [
+        "birkat-hatora",
+        "estudio-tora",
+        "mikra-mishna-talmud",
+        "ahava-rabba"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "La segunda berajá del shema es AHAVA RABBA — y Shmuel deduce\nde ahí una halajá enorme: quien ya dijo ahava rabba quedó\nexento de birkat haTorá, porque esa berajá YA habla del regalo\nde la Torá. La misma fórmula que cerró la sugyá anterior abre\nesta: ¿qué es \"estudiar Torá\" a efectos de bendecir?\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "tamid-aseret-hadibrot",
+      "orden": 37,
+      "titulo": "El Tamid y los Diez Mandamientos",
+      "subtitulo": "la liturgia de los kohanim · lo que los minim cancelaron",
+      "dapim": [
+        "11b",
+        "12a"
+      ],
+      "grupo": "Las berajot del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/tamid-aseret-hadibrot.html",
+      "sabios": [
+        "rav-yehuda",
+        "shmuel",
+        "reish-lakish",
+        "r-natan",
+        "rabba-bar-bar-jana",
+        "rav-jisda",
+        "ameimar",
+        "rav-ashi",
+        "r-jelbo"
+      ],
+      "conceptos": [
+        "aseret-hadibrot",
+        "minim",
+        "mishmar",
+        "avodat-hamikdash",
+        "berajot-shema",
+        "ahava-rabba"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "¿Cuál era la בְּרָכָה אַחַת que el encargado pedía a los\nkohanim en el Mikdash? Rav Yehuda en nombre de Shmuel: AHAVA\nRABBA — otra vez la misma berajá. La fórmula que exime de\nbirkat haTorá y precede al shema resulta ser también la\nberajá matinal de los kohanim del Tamid. Tres sugyot\nconsecutivas colgadas de la misma frase.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "emet-veyatziv-jitum",
+      "orden": 38,
+      "titulo": "Emet veYatziv · todo sigue al jitum",
+      "subtitulo": "vino que era cerveza · inclinarse en baruj, erguirse en el Nombre",
+      "dapim": [
+        "12a"
+      ],
+      "grupo": "Las berajot del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/emet-veyatziv-jitum.html",
+      "sabios": [
+        "rav",
+        "r-yojanan",
+        "rabba-bar-jinnana-sava",
+        "shmuel",
+        "jiya-bar-rav"
+      ],
+      "pesukim": [
+        "tehilim-92-3",
+        "tehilim-146-8",
+        "malaji-2-5"
+      ],
+      "conceptos": [
+        "hakol-holej-ajar-hajitum",
+        "emet-veyatziv",
+        "emet-veemuna",
+        "korea-zokef",
+        "berajot-shema",
+        "jesed-y-emuna"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La gemará vuelve a la última cláusula de la mishná 1:4:\nמָקוֹם שֶׁאָמְרוּ לְהַאֲרִיךְ אֵינוֹ רַשַּׁאי לְקַצֵּר. ¿Qué\ndefine a una berajá — su apertura o su cierre? El caso de\nprueba usa las berajot recién estudiadas: el que abrió con\nyotzer or y cerró con maariv aravim. El perek cierra su\ntramo litúrgico preguntando dónde vive la esencia de una\nbendición.\n"
+      },
+      "nota": true
     }
   ],
   "sabios": [
@@ -1008,12 +1536,76 @@
       "nombre": "Abaye"
     },
     {
+      "slug": "r-meir",
+      "nombre": "R Meir"
+    },
+    {
+      "slug": "beruria",
+      "nombre": "Beruria"
+    },
+    {
+      "slug": "r-abahu",
+      "nombre": "R Abahu"
+    },
+    {
+      "slug": "shmuel",
+      "nombre": "Shmuel"
+    },
+    {
+      "slug": "rav-huna",
+      "nombre": "Rav Huna"
+    },
+    {
+      "slug": "r-elazar",
+      "nombre": "R Elazar"
+    },
+    {
+      "slug": "rava",
+      "nombre": "Rava"
+    },
+    {
+      "slug": "rav-jiya-bar-ashi",
+      "nombre": "Rav Jiya Bar Ashi"
+    },
+    {
+      "slug": "rav-hamnuna",
+      "nombre": "Rav Hamnuna"
+    },
+    {
       "slug": "r-yehoshua",
       "nombre": "R Yehoshua"
     },
     {
+      "slug": "r-shimon-bar-yojai",
+      "nombre": "R Shimon Bar Yojai"
+    },
+    {
+      "slug": "rav-matna",
+      "nombre": "Rav Matna"
+    },
+    {
+      "slug": "rabba-bar-rav-sheila",
+      "nombre": "Rabba Bar Rav Sheila"
+    },
+    {
+      "slug": "rav-shimi-bar-ukva",
+      "nombre": "Rav Shimi Bar Ukva"
+    },
+    {
+      "slug": "r-shimon-ben-pazi",
+      "nombre": "R Shimon Ben Pazi"
+    },
+    {
       "slug": "r-yehoshua-ben-levi",
       "nombre": "R Yehoshua Ben Levi"
+    },
+    {
+      "slug": "rabba-bar-jinnana-sava",
+      "nombre": "Rabba Bar Jinnana Sava"
+    },
+    {
+      "slug": "jiya-bar-rav",
+      "nombre": "Jiya Bar Rav"
     },
     {
       "slug": "rav-yitzjak",
@@ -1048,16 +1640,20 @@
       "nombre": "R Yishmael Ben Elisha"
     },
     {
+      "slug": "r-janan",
+      "nombre": "R Janan"
+    },
+    {
+      "slug": "r-levi",
+      "nombre": "R Levi"
+    },
+    {
+      "slug": "r-yose-ben-zimra",
+      "nombre": "R Yose Ben Zimra"
+    },
+    {
       "slug": "aba-binyamin",
       "nombre": "Aba Binyamin"
-    },
-    {
-      "slug": "rav-huna",
-      "nombre": "Rav Huna"
-    },
-    {
-      "slug": "rava",
-      "nombre": "Rava"
     },
     {
       "slug": "r-yose-bar-zimra",
@@ -1066,10 +1662,6 @@
     {
       "slug": "tana-devei-r-yishmael",
       "nombre": "Tana Devei R Yishmael"
-    },
-    {
-      "slug": "r-meir",
-      "nombre": "R Meir"
     },
     {
       "slug": "rav-oshaya",
@@ -1096,32 +1688,72 @@
       "nombre": "R Elazar Ben Azaria"
     },
     {
-      "slug": "r-yose-ben-zimra",
-      "nombre": "R Yose Ben Zimra"
+      "slug": "r-tarfon",
+      "nombre": "R Tarfon"
     },
     {
-      "slug": "r-zera",
-      "nombre": "R Zera"
+      "slug": "rav-papa",
+      "nombre": "Rav Papa"
+    },
+    {
+      "slug": "rav-yejezkel",
+      "nombre": "Rav Yejezkel"
     },
     {
       "slug": "r-ami",
       "nombre": "R Ami"
     },
     {
+      "slug": "r-zera",
+      "nombre": "R Zera"
+    },
+    {
       "slug": "r-asi",
       "nombre": "R Asi"
     },
     {
-      "slug": "r-shimon-bar-yojai",
-      "nombre": "R Shimon Bar Yojai"
+      "slug": "r-yose-bar-janina",
+      "nombre": "R Yose Bar Janina"
+    },
+    {
+      "slug": "r-eliezer-ben-yaakov",
+      "nombre": "R Eliezer Ben Yaakov"
+    },
+    {
+      "slug": "r-natan",
+      "nombre": "R Natan"
+    },
+    {
+      "slug": "rabba-bar-bar-jana",
+      "nombre": "Rabba Bar Bar Jana"
+    },
+    {
+      "slug": "ameimar",
+      "nombre": "Ameimar"
+    },
+    {
+      "slug": "r-jelbo",
+      "nombre": "R Jelbo"
     },
     {
       "slug": "tanu-rabanan",
       "nombre": "Tanu Rabanan"
     },
     {
-      "slug": "r-natan",
-      "nombre": "R Natan"
+      "slug": "r-yose-ben-elyakim",
+      "nombre": "R Yose Ben Elyakim"
+    },
+    {
+      "slug": "rav-beruna",
+      "nombre": "Rav Beruna"
+    },
+    {
+      "slug": "r-ila",
+      "nombre": "R Ila"
+    },
+    {
+      "slug": "ula",
+      "nombre": "Ula"
     },
     {
       "slug": "rav-yitzjak-bar-shmuel",
@@ -1134,10 +1766,6 @@
     {
       "slug": "r-janina",
       "nombre": "R Janina"
-    },
-    {
-      "slug": "r-elazar",
-      "nombre": "R Elazar"
     },
     {
       "slug": "r-yaakov-bar-idi",
@@ -1162,6 +1790,18 @@
     {
       "slug": "r-yehuda",
       "nombre": "R Yehuda"
+    },
+    {
+      "slug": "ajerim",
+      "nombre": "Ajerim"
+    },
+    {
+      "slug": "mar-ukva",
+      "nombre": "Mar Ukva"
+    },
+    {
+      "slug": "r-mani",
+      "nombre": "R Mani"
     }
   ],
   "pesukim": [
@@ -1214,28 +1854,72 @@
       "nombre": "Tehilim 69 14"
     },
     {
-      "slug": "devarim-6-7",
-      "nombre": "Devarim 6 7"
+      "slug": "tehilim-104-35",
+      "nombre": "Tehilim 104 35"
     },
     {
-      "slug": "tehilim-86-2",
-      "nombre": "Tehilim 86 2"
+      "slug": "yeshayahu-54-1",
+      "nombre": "Yeshayahu 54 1"
     },
     {
       "slug": "tehilim-3-1",
       "nombre": "Tehilim 3 1"
     },
     {
-      "slug": "tehilim-3-2",
-      "nombre": "Tehilim 3 2"
-    },
-    {
       "slug": "tehilim-2-1",
       "nombre": "Tehilim 2 1"
     },
     {
+      "slug": "tehilim-111-8",
+      "nombre": "Tehilim 111 8"
+    },
+    {
+      "slug": "devarim-6-7",
+      "nombre": "Devarim 6 7"
+    },
+    {
+      "slug": "mishlei-31-26",
+      "nombre": "Mishlei 31 26"
+    },
+    {
+      "slug": "tehilim-103-1",
+      "nombre": "Tehilim 103 1"
+    },
+    {
+      "slug": "tehilim-103-2",
+      "nombre": "Tehilim 103 2"
+    },
+    {
+      "slug": "tehilim-104-1",
+      "nombre": "Tehilim 104 1"
+    },
+    {
+      "slug": "shmuel-i-2-2",
+      "nombre": "Shmuel I 2 2"
+    },
+    {
+      "slug": "tehilim-86-2",
+      "nombre": "Tehilim 86 2"
+    },
+    {
+      "slug": "tehilim-3-2",
+      "nombre": "Tehilim 3 2"
+    },
+    {
       "slug": "shmuel-ii-12-11",
       "nombre": "Shmuel Ii 12 11"
+    },
+    {
+      "slug": "tehilim-92-3",
+      "nombre": "Tehilim 92 3"
+    },
+    {
+      "slug": "tehilim-146-8",
+      "nombre": "Tehilim 146 8"
+    },
+    {
+      "slug": "malaji-2-5",
+      "nombre": "Malaji 2 5"
     },
     {
       "slug": "tehilim-4-5",
@@ -1264,6 +1948,34 @@
     {
       "slug": "divrei-hayamim-i-17-21",
       "nombre": "Divrei Hayamim I 17 21"
+    },
+    {
+      "slug": "kohelet-8-1",
+      "nombre": "Kohelet 8 1"
+    },
+    {
+      "slug": "yeshayahu-38-1",
+      "nombre": "Yeshayahu 38 1"
+    },
+    {
+      "slug": "yeshayahu-38-2",
+      "nombre": "Yeshayahu 38 2"
+    },
+    {
+      "slug": "yeshayahu-38-3",
+      "nombre": "Yeshayahu 38 3"
+    },
+    {
+      "slug": "iyov-13-15",
+      "nombre": "Iyov 13 15"
+    },
+    {
+      "slug": "melajim-ii-19-34",
+      "nombre": "Melajim Ii 19 34"
+    },
+    {
+      "slug": "tehilim-106-23",
+      "nombre": "Tehilim 106 23"
     },
     {
       "slug": "tehilim-91-7",
@@ -1338,8 +2050,60 @@
       "nombre": "Mishlei 23 17"
     },
     {
+      "slug": "bereshit-15-14",
+      "nombre": "Bereshit 15 14"
+    },
+    {
+      "slug": "shemot-3-14",
+      "nombre": "Shemot 3 14"
+    },
+    {
+      "slug": "shemot-12-36",
+      "nombre": "Shemot 12 36"
+    },
+    {
+      "slug": "melajim-i-18-37",
+      "nombre": "Melajim I 18 37"
+    },
+    {
+      "slug": "tehilim-68-13",
+      "nombre": "Tehilim 68 13"
+    },
+    {
       "slug": "tehilim-19-15",
       "nombre": "Tehilim 19 15"
+    },
+    {
+      "slug": "melajim-ii-4-9",
+      "nombre": "Melajim Ii 4 9"
+    },
+    {
+      "slug": "melajim-ii-4-10",
+      "nombre": "Melajim Ii 4 10"
+    },
+    {
+      "slug": "shmuel-i-7-17",
+      "nombre": "Shmuel I 7 17"
+    },
+    {
+      "slug": "tehilim-130-1",
+      "nombre": "Tehilim 130 1"
+    },
+    {
+      "slug": "tehilim-102-1",
+      "nombre": "Tehilim 102 1"
+    },
+    {
+      "slug": "yejezkel-1-7",
+      "nombre": "Yejezkel 1 7"
+    },
+    {
+      "slug": "vayikra-19-26",
+      "nombre": "Vayikra 19 26"
+    },
+    {
+      "slug": "melajim-i-14-9",
+      "nombre": "Melajim I 14 9"
     },
     {
       "slug": "tehilim-17-14",
@@ -1366,6 +2130,14 @@
       "nombre": "Mishlei 6 23"
     },
     {
+      "slug": "tehilim-72-5",
+      "nombre": "Tehilim 72 5"
+    },
+    {
+      "slug": "tehilim-51-17",
+      "nombre": "Tehilim 51 17"
+    },
+    {
       "slug": "shoftim-7-19",
       "nombre": "Shoftim 7 19"
     },
@@ -1376,6 +2148,14 @@
     {
       "slug": "mishlei-3-12",
       "nombre": "Mishlei 3 12"
+    },
+    {
+      "slug": "yeshayahu-45-7",
+      "nombre": "Yeshayahu 45 7"
+    },
+    {
+      "slug": "yirmiyahu-31-3",
+      "nombre": "Yirmiyahu 31 3"
     }
   ],
   "conceptos": [
@@ -1467,6 +2247,46 @@
       "nombre": "Tefila Be Tzibur"
     },
     {
+      "slug": "teshuva",
+      "nombre": "Teshuva"
+    },
+    {
+      "slug": "minim",
+      "nombre": "Minim"
+    },
+    {
+      "slug": "smujin",
+      "nombre": "Smujin"
+    },
+    {
+      "slug": "rebelion-filial",
+      "nombre": "Rebelion Filial"
+    },
+    {
+      "slug": "gog-umagog",
+      "nombre": "Gog Umagog"
+    },
+    {
+      "slug": "shpil-leseifei-dikra",
+      "nombre": "Shpil Leseifei Dikra"
+    },
+    {
+      "slug": "birkat-hatora",
+      "nombre": "Birkat Hatora"
+    },
+    {
+      "slug": "estudio-tora",
+      "nombre": "Estudio Tora"
+    },
+    {
+      "slug": "mikra-mishna-talmud",
+      "nombre": "Mikra Mishna Talmud"
+    },
+    {
+      "slug": "ahava-rabba",
+      "nombre": "Ahava Rabba"
+    },
+    {
       "slug": "sayag",
       "nombre": "Sayag"
     },
@@ -1485,6 +2305,22 @@
     {
       "slug": "takana",
       "nombre": "Takana"
+    },
+    {
+      "slug": "barji-nafshi",
+      "nombre": "Barji Nafshi"
+    },
+    {
+      "slug": "neshama",
+      "nombre": "Neshama"
+    },
+    {
+      "slug": "shira",
+      "nombre": "Shira"
+    },
+    {
+      "slug": "yom-hamita",
+      "nombre": "Yom Hamita"
     },
     {
       "slug": "chasid",
@@ -1519,12 +2355,28 @@
       "nombre": "Mizmor Vs Kina"
     },
     {
-      "slug": "rebelion-filial",
-      "nombre": "Rebelion Filial"
+      "slug": "hakol-holej-ajar-hajitum",
+      "nombre": "Hakol Holej Ajar Hajitum"
     },
     {
-      "slug": "gog-umagog",
-      "nombre": "Gog Umagog"
+      "slug": "emet-veyatziv",
+      "nombre": "Emet Veyatziv"
+    },
+    {
+      "slug": "emet-veemuna",
+      "nombre": "Emet Veemuna"
+    },
+    {
+      "slug": "korea-zokef",
+      "nombre": "Korea Zokef"
+    },
+    {
+      "slug": "berajot-shema",
+      "nombre": "Berajot Shema"
+    },
+    {
+      "slug": "jesed-y-emuna",
+      "nombre": "Jesed Y Emuna"
     },
     {
       "slug": "keriat-shema-al-hamita",
@@ -1557,14 +2409,6 @@
     {
       "slug": "yetzer-hara",
       "nombre": "Yetzer Hara"
-    },
-    {
-      "slug": "estudio-tora",
-      "nombre": "Estudio Tora"
-    },
-    {
-      "slug": "yom-hamita",
-      "nombre": "Yom Hamita"
     },
     {
       "slug": "sanedrin",
@@ -1603,6 +2447,38 @@
       "nombre": "Antropomorfismo"
     },
     {
+      "slug": "tefila",
+      "nombre": "Tefila"
+    },
+    {
+      "slug": "geula",
+      "nombre": "Geula"
+    },
+    {
+      "slug": "yisurim",
+      "nombre": "Yisurim"
+    },
+    {
+      "slug": "gzar-din",
+      "nombre": "Gzar Din"
+    },
+    {
+      "slug": "jerev-jada",
+      "nombre": "Jerev Jada"
+    },
+    {
+      "slug": "zjut-atzmo-zjut-ajerim",
+      "nombre": "Zjut Atzmo Zjut Ajerim"
+    },
+    {
+      "slug": "sefer-refuot",
+      "nombre": "Sefer Refuot"
+    },
+    {
+      "slug": "lulei",
+      "nombre": "Lulei"
+    },
+    {
       "slug": "invisibilidad-como-misericordia",
       "nombre": "Invisibilidad Como Misericordia"
     },
@@ -1617,10 +2493,6 @@
     {
       "slug": "puntos-masoreticos",
       "nombre": "Puntos Masoreticos"
-    },
-    {
-      "slug": "lulei",
-      "nombre": "Lulei"
     },
     {
       "slug": "teodicea",
@@ -1667,6 +2539,30 @@
       "nombre": "Makat Bechorot"
     },
     {
+      "slug": "beit-hillel",
+      "nombre": "Beit Hillel"
+    },
+    {
+      "slug": "beit-shammai",
+      "nombre": "Beit Shammai"
+    },
+    {
+      "slug": "shokhbeicha-vekumecha",
+      "nombre": "Shokhbeicha Vekumecha"
+    },
+    {
+      "slug": "osek-bemitzva-patur",
+      "nombre": "Osek Bemitzva Patur"
+    },
+    {
+      "slug": "tirda",
+      "nombre": "Tirda"
+    },
+    {
+      "slug": "listim",
+      "nombre": "Listim"
+    },
+    {
       "slug": "rashaim",
       "nombre": "Rashaim"
     },
@@ -1707,12 +2603,24 @@
       "nombre": "Tefilá Ketzará"
     },
     {
-      "slug": "geula",
-      "nombre": "Geula"
+      "slug": "yetziat-mitzrayim",
+      "nombre": "Yetziat Mitzrayim"
     },
     {
-      "slug": "tefila",
-      "nombre": "Tefila"
+      "slug": "rejush-gadol",
+      "nombre": "Rejush Gadol"
+    },
+    {
+      "slug": "promesa-divina",
+      "nombre": "Promesa Divina"
+    },
+    {
+      "slug": "ehyeh-asher-ehyeh",
+      "nombre": "Ehyeh Asher Ehyeh"
+    },
+    {
+      "slug": "maase-jeshafim",
+      "nombre": "Maase Jeshafim"
     },
     {
       "slug": "hashkiveinu",
@@ -1727,16 +2635,52 @@
       "nombre": "Shema"
     },
     {
-      "slug": "shokhbeicha-vekumecha",
-      "nombre": "Shokhbeicha Vekumecha"
-    },
-    {
       "slug": "boundary-times",
       "nombre": "Boundary Times"
     },
     {
       "slug": "tichdic-tov",
       "nombre": "Tichdic Tov"
+    },
+    {
+      "slug": "hajnasat-orjim",
+      "nombre": "Hajnasat Orjim"
+    },
+    {
+      "slug": "talmid-jajam",
+      "nombre": "Talmid Jajam"
+    },
+    {
+      "slug": "korban-tamid",
+      "nombre": "Korban Tamid"
+    },
+    {
+      "slug": "kedusha",
+      "nombre": "Kedusha"
+    },
+    {
+      "slug": "aseret-hadibrot",
+      "nombre": "Aseret Hadibrot"
+    },
+    {
+      "slug": "mishmar",
+      "nombre": "Mishmar"
+    },
+    {
+      "slug": "avodat-hamikdash",
+      "nombre": "Avodat Hamikdash"
+    },
+    {
+      "slug": "makom-namuj",
+      "nombre": "Makom Namuj"
+    },
+    {
+      "slug": "kavanat-raglayim",
+      "nombre": "Kavanat Raglayim"
+    },
+    {
+      "slug": "gaava",
+      "nombre": "Gaava"
     },
     {
       "slug": "mejitzá",
@@ -1775,6 +2719,18 @@
       "nombre": "Kal Vajomer"
     },
     {
+      "slug": "vatikin",
+      "nombre": "Vatikin"
+    },
+    {
+      "slug": "hanetz-hajama",
+      "nombre": "Hanetz Hajama"
+    },
+    {
+      "slug": "semijat-geula-tefila",
+      "nombre": "Semijat Geula Tefila"
+    },
+    {
       "slug": "vigilias",
       "nombre": "Vigilias"
     },
@@ -1785,10 +2741,6 @@
     {
       "slug": "signos-terrestres",
       "nombre": "Signos Terrestres"
-    },
-    {
-      "slug": "yisurim",
-      "nombre": "Yisurim"
     },
     {
       "slug": "bitul-tora",
@@ -1807,6 +2759,18 @@
       "nombre": "Nejamat Avelim"
     },
     {
+      "slug": "yotzer-or",
+      "nombre": "Yotzer Or"
+    },
+    {
+      "slug": "midat-yom-balayla",
+      "nombre": "Midat Yom Balayla"
+    },
+    {
+      "slug": "lishana-mealya",
+      "nombre": "Lishana Mealya"
+    },
+    {
       "slug": "zman-shema",
       "nombre": "Zman Shema"
     },
@@ -1821,6 +2785,14 @@
     {
       "slug": "kohanim-terumá",
       "nombre": "Kohanim Terumá"
+    },
+    {
+      "slug": "tekhelet-lavan",
+      "nombre": "Tekhelet Lavan"
+    },
+    {
+      "slug": "shalosh-shaot",
+      "nombre": "Shalosh Shaot"
     }
   ],
   "conexiones": [
@@ -2017,6 +2989,110 @@
       "peso": 3
     },
     {
+      "from": "pesaj-y-zman-shema",
+      "to": "rejush-gadol-doble-aneni",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "El diagrama #25 cerró la sugyá del zman con el korban pesaj y\nmakat bechorot — la noche misma de YETZIAT MITZRAYIM. El editor\nno suelta esa noche: la guemará sigue con las agadot del éxodo.\n¿Por qué HKBH insistió en que Israel pidiera los objetos de\nEgipto? Para que \"aquel tzadik\" (Avraham) no dijera: la promesa\nde esclavitud se cumplió, la de riqueza no. La salida de Egipto\nes la palabra-puente que arrastra al editor de la halajá del\npesaj a la teología de las promesas.\n",
+      "peso": 3
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "zman-shema-shajarit",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Todo el perek hasta aquí giró sobre la mishná 1:1 — el shema\nde ARVIT. La segunda mishná es su espejo exacto: מֵאֵימָתַי\nקוֹרִין אֶת שְׁמַע בְּשַׁחֲרִית — ¿desde cuándo se lee el shema\nde la MAÑANA? La misma pregunta (¿desde cuándo?), el mismo\nproblema (señales naturales para marcar tiempo halájico),\npero ahora con la luz creciente en lugar de la oscuridad.\n",
+      "peso": 3
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "vatikin-hanetz",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "Abaye acaba de decir en la sugyá del zman: \"para kriat shema,\ncomo los VATIKIN\" — y cita a R. Yojanan: וָתִיקִין הָיוּ\nגּוֹמְרִין אוֹתָהּ עִם הָנֵץ הַחַמָּה. El editor toma esa\nfórmula y despliega la sugyá entera de los vatikin: quiénes\nson, qué pasuk los sostiene, y qué recompensa tiene quien\nlogra su proeza — pegar la geulá a la tefilá con el sol\nsaliendo.\n",
+      "peso": 3
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "beruria-biryonim-minim",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "La sugyá anterior terminó citando el pasuk exacto: David no\ndijo Halleluyá hasta ver la caída de los reshaim — יִתַּמּוּ\nחַטָּאִים מִן הָאָרֶץ וּרְשָׁעִים עוֹד אֵינָם. El editor\ninmediatamente cuenta la historia donde ESE MISMO PASUK es\nreleído: R. Meir reza por la muerte de los biryonim apoyándose\nen él, y Beruria lo corrige desde la gramática. La fórmula\ncompartida encadena las dos piezas.\n",
+      "peso": 3
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "cinco-mundos-david",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "Beruria corrigió la lectura de יִתַּמּוּ חַטָּאִים. El editor\nahora revela dónde vive ese pasuk en la biografía espiritual\nde David: es el CUARTO de los cinco בָּרְכִי נַפְשִׁי — la\nshirá que David dijo al ver la caída de los reshaim. La misma\nfórmula, por tercera vez consecutiva, teje la cadena: cita,\ncorrección, y ahora contexto vital.\n",
+      "peso": 3
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "David abrió su boca בְחָכְמָה — y el editor salta a Kohelet:\nמִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר. ¿Quién es sabio\ncomo HKBH, que sabe hacer PESHARÁ (compromiso) entre dos\ntzadikim — entre Jizkiyahu e Yeshayahu? La palabra jojmá\nengancha el elogio de David con la historia del rey que venció\na la profecía rezando.\n",
+      "peso": 3
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "shunamit-huesped",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "Jizkiyahu rezó girado אֶל הַקִּיר, y R. Levi explicó que\ninvocaba el KIR de la Shunamit: \"ella hizo una sola pared\npequeña y le reviviste al hijo\". El editor ahora abre ese\nepisodio completo: נַעֲשֶׂה נָא עֲלִיַּת קִיר קְטַנָּה. La\npalabra קיר es el gozne — del muro del rey moribundo a la\npared de la mujer hospitalaria.\n",
+      "peso": 3
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "editorial",
+      "tipo": "mismo-orador",
+      "texto": "La enseñanza de la hospitalidad venía de R. Yosei bar Janina\nen nombre de R. Eliezer ben Yaakov. El editor encadena TRES\nenseñanzas más con exactamente la misma cadena de transmisión\n— וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי\nאֱלִיעֶזֶר בֶּן יַעֲקֹב — todas sobre la postura del cuerpo\nante la tefilá. El mismo orador agrupa la unidad, como Aba\nBinyamin en 5b-6a.\n",
+      "peso": 3
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Cerrada la pregunta del CUÁNDO (halajá como R. Yehoshua, hasta\ntres horas), la mishná 1:3 pregunta el CÓMO: ¿en qué postura\nse lee el shema? Beit Shammai lee ובשכבך ובקומך literalmente\n— acostado de noche, de pie de mañana. Beit Hillel lo lee como\nmarcador de TIEMPO — cada uno lee כדרכו, como está. Es la\nmisma frase de la Torá que fundó el perek entero, ahora\ndisputada en su sentido corporal.\n",
+      "peso": 3
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Resuelto el CUÁNDO (mishná 1:2) y el CÓMO (mishná 1:3), la\nmishná 1:4 pregunta por el MARCO: ¿qué berajot rodean al\nshema? בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת\nלְאַחֲרֶיהָ, וּבָעֶרֶב שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם\nלְאַחֲרֶיהָ. La secuencia de las tres mishnayot construye la\nliturgia completa: tiempo → postura → bendiciones.\n",
+      "peso": 3
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "La segunda berajá del shema es AHAVA RABBA — y Shmuel deduce\nde ahí una halajá enorme: quien ya dijo ahava rabba quedó\nexento de birkat haTorá, porque esa berajá YA habla del regalo\nde la Torá. La misma fórmula que cerró la sugyá anterior abre\nesta: ¿qué es \"estudiar Torá\" a efectos de bendecir?\n",
+      "peso": 3
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "¿Cuál era la בְּרָכָה אַחַת que el encargado pedía a los\nkohanim en el Mikdash? Rav Yehuda en nombre de Shmuel: AHAVA\nRABBA — otra vez la misma berajá. La fórmula que exime de\nbirkat haTorá y precede al shema resulta ser también la\nberajá matinal de los kohanim del Tamid. Tres sugyot\nconsecutivas colgadas de la misma frase.\n",
+      "peso": 3
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La gemará vuelve a la última cláusula de la mishná 1:4:\nמָקוֹם שֶׁאָמְרוּ לְהַאֲרִיךְ אֵינוֹ רַשַּׁאי לְקַצֵּר. ¿Qué\ndefine a una berajá — su apertura o su cierre? El caso de\nprueba usa las berajot recién estudiadas: el que abrió con\nyotzer or y cerró con maariv aravim. El perek cierra su\ntramo litúrgico preguntando dónde vive la esencia de una\nbendición.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -2089,6 +3165,54 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-arvit",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "zman-shema",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
       "from": "vigilias-noche",
       "to": "r-yose-ruina",
       "categoria": "co-referencia",
@@ -2142,6 +3266,54 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-natan",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
       "peso": 1
     },
     {
@@ -2241,11 +3413,67 @@
       "peso": 1
     },
     {
+      "from": "noche-de-david",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-oshaya",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
       "from": "gobierno-tripartito",
       "to": "david-chasid",
       "categoria": "co-referencia",
       "tipo": "co-pasuk",
       "via": "tehilim-119-62",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
       "peso": 1
     },
     {
@@ -2259,6 +3487,14 @@
     {
       "from": "david-chasid",
       "to": "escala-angeles",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "david-chasid",
+      "to": "jizkiyahu-espada-cuello",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua-ben-levi",
@@ -2369,6 +3605,94 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "lulei",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "cerca-y-trabajador",
       "to": "akiva-medos-gamliel-persas",
       "categoria": "co-referencia",
@@ -2414,6 +3738,46 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
       "peso": 1
     },
     {
@@ -2505,6 +3869,166 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "rejush-gadol-doble-aneni",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-19-15",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "geula",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hashkiveinu",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "geula",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -2561,6 +4085,94 @@
       "peso": 1
     },
     {
+      "from": "ashrei-olam-haba",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-najman-bar-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "escala-angeles",
       "to": "escalera-yetzer",
       "categoria": "co-referencia",
@@ -2609,6 +4221,14 @@
       "peso": 1
     },
     {
+      "from": "escala-angeles",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
       "from": "escalera-yetzer",
       "to": "tefila-y-cama",
       "categoria": "co-referencia",
@@ -2619,6 +4239,54 @@
     {
       "from": "escalera-yetzer",
       "to": "beit-knesset",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "rejush-gadol-doble-aneni",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yom-hamita",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "tamid-aseret-hadibrot",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "reish-lakish",
@@ -2729,6 +4397,134 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yisurim",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tres-regalos",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -2742,6 +4538,22 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "gezera-shava",
+      "peso": 1
+    },
+    {
+      "from": "tres-regalos",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "tres-regalos",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
       "peso": 1
     },
     {
@@ -2761,11 +4573,115 @@
       "peso": 1
     },
     {
+      "from": "tefila-y-cama",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
       "from": "mazikin-invisibles",
       "to": "beit-knesset",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-huna",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "keva-y-kavaná",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-huna",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
       "peso": 1
     },
     {
@@ -2833,6 +4749,238 @@
       "peso": 1
     },
     {
+      "from": "beit-knesset",
+      "to": "rejush-gadol-doble-aneni",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "hkbh-reza-tefilin",
       "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
@@ -2889,6 +5037,118 @@
       "peso": 1
     },
     {
+      "from": "hkbh-reza-tefilin",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yishmael-ben-elisha",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "moshe-tres-cosas",
       "to": "david-y-avshalom",
       "categoria": "co-referencia",
@@ -2899,6 +5159,94 @@
     {
       "from": "moshe-tres-cosas",
       "to": "provocar-rashaim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "emet-veyatziv-jitum",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -2921,6 +5269,254 @@
       "peso": 1
     },
     {
+      "from": "david-y-avshalom",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-3-1",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-2-1",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "rebelion-filial",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "gog-umagog",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-ben-zimra",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "akiva-medos-gamliel-persas",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -2937,11 +5533,963 @@
       "peso": 1
     },
     {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tzniut",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tzniut",
+      "peso": 1
+    },
+    {
       "from": "shema-dos-veces",
       "to": "pesaj-y-zman-shema",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shokhbeicha-vekumecha",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "zman-shema-shajarit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "amud-hashachar",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "vatikin-hanetz",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hanetz-hajama",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-huna",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "beruria-biryonim-minim",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "geula",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "cinco-mundos-david",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "tehilim-104-35",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "minim",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tzniut",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "shunamit-huesped",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-hamnuna",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-bar-janina",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer-ben-yaakov",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yitzjak",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefila-desde-lo-bajo",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "yotzer-or-ahava-rabba",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ahava-rabba",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "berajot-shema",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ahava-rabba",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "berajot-shema",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tamid-aseret-hadibrot",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ahava-rabba",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "berajot-shema",
       "peso": 1
     }
   ]

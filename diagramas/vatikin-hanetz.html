@@ -1,0 +1,341 @@
+<div class="vatik-interactivo">
+<style>
+  .vatik-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .vatik-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .vatik-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .vatik-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .vatik-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .vatik-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .vatik-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .vatik-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .vatik-diagrama svg { width: 100%; height: auto; display: block; }
+  .vatik-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .vatik-nodo:hover rect { stroke-width: 2 !important; }
+  .vatik-nodo:hover path.vatik-sol { stroke-width: 2.5 !important; }
+  .vatik-nodo.activa rect { stroke-width: 2.5 !important; }
+  .vatik-nodo.activa path.vatik-sol { stroke-width: 3 !important; }
+  .vatik-nodo.dim { opacity: 0.32; }
+  .vatik-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .vatik-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .vatik-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .vatik-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .vatik-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .vatik-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .vatik-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="vatik-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la costura geulá–tefilá</span>
+  <span><span class="swatch azul"></span>los pesukim</span>
+  <span><span class="swatch verde"></span>recompensa · alegría</span>
+  <span><span class="swatch rojo"></span>objeción · hefsek</span>
+  <span><span class="swatch sepia"></span>coda · los 18 salmos</span>
+</div>
+
+<div class="vatik-diagrama">
+<svg viewBox="0 0 720 1140" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 9b: los vatikin · el shema termina con hanetz hajama · la costura geulá-tefilá al amanecer</title>
+
+<defs>
+  <marker id="flecha-vk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-vk-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <radialGradient id="vatik-alba" cx="50%" cy="100%" r="90%">
+    <stop offset="0%" stop-color="#b8860b" stop-opacity="0.30"/>
+    <stop offset="55%" stop-color="#b8860b" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#b8860b" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Vatikin · la costura del amanecer</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 9b · el shema termina EXACTAMENTE cuando el sol rompe — y la amidá empieza con el primer rayo</text>
+
+<!-- ============================================================ -->
+<!-- LA PRÁCTICA · EL ARCO DEL SOL SALIENTE                       -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PRÁCTICA · R. YOJANAN · הָנֵץ הַחַמָּה</text>
+
+<g class="vatik-nodo" data-id="practica">
+  <rect x="60" y="86" width="600" height="228" rx="6" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">וָתִיקִין הָיוּ גּוֹמְרִין אוֹתָהּ עִם הָנֵץ הַחַמָּה</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«los vatikin la terminaban [la kriat shema] con el brote del sol»</text>
+
+  <!-- resplandor del alba -->
+  <rect x="230" y="160" width="260" height="94" fill="url(#vatik-alba)"/>
+  <!-- arco de sol saliente sobre el horizonte -->
+  <path class="vatik-sol" d="M 316 254 A 44 44 0 0 1 404 254" fill="rgba(184,134,11,0.28)" stroke="#b8860b" stroke-width="2"/>
+  <!-- rayos -->
+  <line x1="360" y1="196" x2="360" y2="180" stroke="#b8860b" stroke-width="1.4"/>
+  <line x1="326" y1="208" x2="314" y2="196" stroke="#b8860b" stroke-width="1.2"/>
+  <line x1="394" y1="208" x2="406" y2="196" stroke="#b8860b" stroke-width="1.2"/>
+  <line x1="304" y1="236" x2="288" y2="230" stroke="#b8860b" stroke-width="1.2"/>
+  <line x1="416" y1="236" x2="432" y2="230" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="360" y="242" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="700">הָנֵץ</text>
+
+  <!-- horizonte -->
+  <line x1="80" y1="254" x2="640" y2="254" stroke="#6b4423" stroke-width="1.2"/>
+
+  <!-- izquierda: shema terminando -->
+  <rect x="80" y="164" width="180" height="66" rx="4" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="170" y="184" text-anchor="middle" font-size="10.5" fill="#1e3a5f" font-weight="600">קְרִיאַת שְׁמַע</text>
+  <text x="170" y="200" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">termina en la oscuridad final</text>
+  <text x="170" y="215" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">cierra con גָּאַל יִשְׂרָאֵל</text>
+
+  <!-- derecha: amidá empezando -->
+  <rect x="460" y="164" width="180" height="66" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="550" y="184" text-anchor="middle" font-size="10.5" fill="#b8860b" font-weight="600">תְּפִלָּה · עֲמִידָה</text>
+  <text x="550" y="200" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">empieza con el primer rayo</text>
+  <text x="550" y="215" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">וְנִמְצָא מִתְפַּלֵּל בַּיּוֹם</text>
+
+  <!-- la costura: línea dorada que atraviesa el sol -->
+  <line x1="260" y1="197" x2="312" y2="197" stroke="#b8860b" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#flecha-vk-gold)"/>
+  <line x1="408" y1="197" x2="458" y2="197" stroke="#b8860b" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#flecha-vk-gold)"/>
+
+  <text x="360" y="278" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">כְּדֵי שֶׁיִּסְמוֹךְ גְּאוּלָּה לִתְפִלָּה — וְנִמְצָא מִתְפַּלֵּל בַּיּוֹם</text>
+  <text x="360" y="298" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la COSTURA exacta: geulá pegada a tefilá con el sol rompiendo entre ambas</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PASUK Y LA RECOMPENSA · LADO A LADO                       -->
+<!-- ============================================================ -->
+<line x1="205" y1="314" x2="205" y2="336" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-vk)"/>
+<line x1="515" y1="314" x2="515" y2="336" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-vk)"/>
+
+<text x="60" y="330" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PASUK</text>
+<text x="430" y="330" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RECOMPENSA</text>
+
+<g class="vatik-nodo" data-id="pasuk">
+  <rect x="60" y="340" width="290" height="118" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="362" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Zeira · el fundamento</text>
+  <text x="205" y="386" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">יִירָאוּךָ עִם שָׁמֶשׁ וְלִפְנֵי יָרֵחַ דּוֹר דּוֹרִים</text>
+  <text x="205" y="406" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«que te teman CON el sol…» (Tehilim 72:5)</text>
+  <text x="205" y="426" text-anchor="middle" font-size="9" fill="#6b4423">עִם שָׁמֶשׁ — no «después del sol»:</text>
+  <text x="205" y="442" text-anchor="middle" font-size="9" fill="#6b4423">el temor del Cielo coincide con el sol mismo</text>
+</g>
+
+<g class="vatik-nodo" data-id="recompensa">
+  <rect x="370" y="340" width="290" height="118" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="515" y="362" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">R. Yosei ben Elyakim · Yerushalayim</text>
+  <text x="515" y="386" text-anchor="middle" font-size="10.5" direction="rtl" fill="#2d6b4e">כָּל הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה</text>
+  <text x="515" y="404" text-anchor="middle" font-size="10.5" direction="rtl" fill="#2d6b4e">אֵינוֹ נִזּוֹק כָּל הַיּוֹם כּוּלּוֹ</text>
+  <text x="515" y="424" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«no sufre daño en todo el día entero»</text>
+  <text x="515" y="442" text-anchor="middle" font-size="9" fill="#6b4423">en nombre de la kehilá kadisha de Yerushalayim</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA OBJECIÓN DE R. ZEIRA · EL MIRTO AL PALACIO                -->
+<!-- ============================================================ -->
+<line x1="515" y1="458" x2="515" y2="478" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-vk)"/>
+
+<text x="60" y="490" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OBJECIÓN · «YO PEGUÉ Y FUI DAÑADO»</text>
+
+<g class="vatik-nodo" data-id="objecion">
+  <rect x="60" y="500" width="600" height="120" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="78" y="522" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">R. Zeira objeta desde su propia vida</text>
+  <text x="78" y="542" font-size="9.5" fill="#3d2f23">«¡yo pegué geulá a tefilá — y fui dañado: me obligaron a llevar el mirto al palacio del rey!»</text>
+  <line x1="78" y1="552" x2="642" y2="552" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+  <text x="78" y="572" font-size="9.5" fill="#3d2f23" font-weight="600">La respuesta: eso NO fue daño — fue privilegio. Porque R. Yojanan enseñó:</text>
+  <text x="360" y="592" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">לְעוֹלָם יִשְׁתַּדֵּל אָדָם לָרוּץ לִקְרַאת מַלְכֵי יִשְׂרָאֵל</text>
+  <text x="360" y="610" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">correr a ver a los reyes — hasta los gentiles — para DISTINGUIR cuando llegue la redención</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RAV BERUNA · LA SONRISA DE UN DÍA ENTERO                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="620" x2="360" y2="640" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-vk)"/>
+
+<text x="60" y="652" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RAV BERUNA · שָׂמֵחַ בְּמִצְוֺת</text>
+
+<g class="vatik-nodo" data-id="beruna">
+  <rect x="60" y="662" width="600" height="112" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="686" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">זִימְנָא חֲדָא סְמַךְ גְּאוּלָּה לִתְפִלָּה — וְלָא פְּסֵיק חוּכָא מִפּוּמֵּיהּ כּוּלֵּיהּ יוֹמָא</text>
+  <text x="360" y="706" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«una sola vez pegó geulá a tefilá — y la risa no se apartó de su boca el día entero»</text>
+  <line x1="100" y1="716" x2="620" y2="716" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+  <text x="360" y="736" text-anchor="middle" font-size="9.5" fill="#3d2f23">R. Ila a Ula: «cuando subas a Bavel, saluda a mi hermano Rav Beruna FRENTE A TODA LA JABURA —</text>
+  <text x="360" y="754" text-anchor="middle" font-size="9.5" fill="#2d6b4e">גָּדוֹל הוּא וְשָׂמֵחַ בְּמִצְוֺת · es un gran hombre que se alegra en las mitzvot»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PROBLEMA TÉCNICO · ¿HEFSEK?                               -->
+<!-- ============================================================ -->
+<line x1="360" y1="774" x2="360" y2="794" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-vk)"/>
+
+<text x="60" y="806" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PROBLEMA TÉCNICO · ¿ה׳ שְׂפָתַי תִּפְתָּח ES HEFSEK?</text>
+
+<g class="vatik-nodo" data-id="hefsek">
+  <rect x="60" y="816" width="600" height="146" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="78" y="838" font-size="10" fill="#3d2f23">Si antes de la amidá se recita ה׳ שְׂפָתַי תִּפְתָּח (Tehilim 51:17) — ¿no interrumpe eso la costura?</text>
+  <!-- dos respuestas -->
+  <rect x="78" y="850" width="276" height="66" rx="4" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <text x="96" y="868" font-size="10" fill="#8b1a1a" font-weight="600">R. Elazar</text>
+  <text x="96" y="884" font-size="9" fill="#3d2f23">que ese pasuk se diga</text>
+  <text x="96" y="898" font-size="9" fill="#3d2f23">solo en MINJÁ</text>
+  <rect x="366" y="850" width="276" height="66" rx="4" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.1"/>
+  <text x="384" y="868" font-size="10" fill="#2d6b4e" font-weight="600">Rav Ashi · la resolución</text>
+  <text x="624" y="884" text-anchor="end" font-size="9.5" direction="rtl" fill="#2d6b4e">כֵּיוָן דְּקַבְעוּהָ רַבָּנַן בִּתְפִלָּה</text>
+  <text x="624" y="900" text-anchor="end" font-size="9.5" direction="rtl" fill="#2d6b4e">כִּתְפִלָּה אֲרִיכְתָּא דָּמְיָא</text>
+  <text x="360" y="936" text-anchor="middle" font-size="9.5" fill="#3d2f23">«como los rabinos lo FIJARON en la tefilá — es como TEFILÁ EXTENDIDA», no interrupción</text>
+  <text x="360" y="952" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">paralelo nocturno: הַשְׁכִּיבֵנוּ = גְּאוּלָּה אֲרִיכְתָּא (ver el diagrama de semijat geulá-tefilá)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CODA · LOS DIECIOCHO SALMOS                                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="962" x2="360" y2="982" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-vk)"/>
+
+<text x="60" y="994" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CODA · יִהְיוּ לְרָצוֹן · LOS DIECIOCHO SALMOS</text>
+
+<g class="vatik-nodo" data-id="coda">
+  <rect x="60" y="1004" width="600" height="118" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1028" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ</text>
+  <text x="360" y="1048" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«sean gratos los dichos de mi boca…» (Tehilim 19:15) — al FINAL de la amidá</text>
+  <text x="360" y="1070" text-anchor="middle" font-size="9.5" fill="#3d2f23">porque David lo dijo después de DIECIOCHO parashiyot — como las dieciocho berajot</text>
+  <text x="360" y="1088" text-anchor="middle" font-size="9.5" fill="#6b4423">(¿no son diecinueve? — אַשְׁרֵי הָאִישׁ y לָמָּה רָגְשׁוּ son UNA SOLA parashá)</text>
+  <text x="360" y="1108" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la coda espeja la apertura: un pasuk de David cose el principio y otro cose el final</text>
+</g>
+
+</svg>
+</div>
+
+<div class="vatik-panel" id="vatik-panel">
+  <p class="vatik-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'practica': {
+      titulo: 'La práctica de los vatikin · la costura del amanecer',
+      hebreo: 'וָתִיקִין הָיוּ גּוֹמְרִין אוֹתָהּ עִם הָנֵץ הַחַמָּה — כְּדֵי שֶׁיִּסְמוֹךְ גְּאוּלָּה לִתְפִלָּה וְנִמְצָא מִתְפַּלֵּל בַּיּוֹם',
+      traduccion: '«Los vatikin la terminaban con el brote del sol — para pegar geulá a tefilá, y resulta que reza de día»',
+      explicacion: 'R. Yojanan describe la proeza de los VATIKIN — los escrupulosos, los madrugadores del alma. Su práctica convierte el amanecer en una costura litúrgica de precisión quirúrgica:\n\n  · empiezan la kriat shema todavía en la penumbra\n  · calculan el ritmo para que la bracha de גָּאַל יִשְׂרָאֵל termine EXACTAMENTE cuando el sol rompe el horizonte (הָנֵץ הַחַמָּה — el «brote» del sol, como una planta que germina)\n  · y la amidá empieza con el PRIMER RAYO\n\nEl diagrama pone el sol en el centro porque el sol ES la costura: a su izquierda queda la noche del shema (que pertenece al mundo de la geulá — la redención recitada), a su derecha el día de la amidá (la petición presente). La juntura de las dos brachot coincide con la juntura cósmica de la noche y el día.\n\nLa fórmula tiene DOS logros simultáneos:\n\n  1. סְמִיכַת גְּאוּלָּה לִתְפִלָּה — pegar geulá a tefilá sin ninguna interrupción (la misma regla que en arvit hace a alguien ben olam ha-ba, Berajot 4b)\n\n  2. וְנִמְצָא מִתְפַּלֵּל בַּיּוֹם — «y resulta que reza DE DÍA»: la amidá cae dentro del día halájico desde su primer instante posible\n\nLa palabra וָתִיקִין viene de la raíz de «firme, probado, veterano»: no son un grupo social identificable sino una CATEGORÍA ESPIRITUAL — los que aman la mitzvá con tal precisión que sincronizan su liturgia con la mecánica celeste. Este es el punto máximo de la sugyá del zman de kriat shema: después de discutir los límites tardíos, el editor muestra el IDEAL.'
+    },
+    'pasuk': {
+      titulo: 'El pasuk · R. Zeira · «que te teman CON el sol»',
+      hebreo: 'יִירָאוּךָ עִם שָׁמֶשׁ וְלִפְנֵי יָרֵחַ דּוֹר דּוֹרִים',
+      traduccion: '«Que te teman con el sol, y ante la luna, generación tras generación» (Tehilim 72:5)',
+      explicacion: 'R. Zeira encuentra el fundamento bíblico de la práctica: Tehilim 72:5, del salmo de Shlomó sobre el rey ideal.\n\nLa lectura se apoya en una sola preposición: עִם שָׁמֶשׁ — «CON el sol». No dice «después del sol», ni «durante el día», sino CON — en simultaneidad exacta.\n\n  · יִירָאוּךָ — «que te TEMAN»: el temor del Cielo es la kriat shema, el acto de aceptar el yugo del Reino\n  · עִם שָׁמֶשׁ — ese temor debe COINCIDIR con el sol: cuando el sol brota, el shema culmina\n\nLa preposición se vuelve programa litúrgico: el pasuk no manda rezar «de mañana» en general — manda una SINCRONIZACIÓN. El temor de Cielo y el sol deben aparecer juntos sobre el horizonte.\n\n(La segunda mitad del pasuk — וְלִפְנֵי יָרֵחַ, «ante la luna» — sirve en otras lecturas para la tefilá de la tarde/noche; aquí la guemará usa la primera mitad.)\n\nEs el patrón clásico de la sugyá: una práctica de piedad extrema (los vatikin) no se queda como costumbre privada — R. Zeira le encuentra RAÍZ EN EL PASUK, y con eso la convierte en ideal normativo con respaldo bíblico. La halajá posterior conserva este ideal: tefilat vatikin sigue siendo, hasta hoy, la forma más alabada de rezar shajarit.'
+    },
+    'recompensa': {
+      titulo: 'La recompensa · «no sufre daño en todo el día»',
+      hebreo: 'כָּל הַסּוֹמֵךְ גְּאוּלָּה לִתְפִלָּה אֵינוֹ נִזּוֹק כָּל הַיּוֹם כּוּלּוֹ',
+      traduccion: '«Todo el que pega geulá a tefilá, no sufre daño en todo el día entero»',
+      explicacion: 'R. Yosei ben Elyakim testifica EN NOMBRE DE la kehilá kadisha de Yerushalayim — la «santa comunidad de Jerusalén». La atribución no es decorativa: es una TRADICIÓN COMUNITARIA de la ciudad santa, no la opinión de un individuo.\n\nLa promesa es concreta y temporal: quien logra la costura — pegar geulá a tefilá — queda PROTEGIDO durante ese día entero. אֵינוֹ נִזּוֹק — «no es dañado».\n\nNote la lógica de la recompensa: es MEDIDA POR MEDIDA temporal.\n\n  · la costura se hace en el primer instante del día (hanetz)\n  · la protección cubre el día ENTERO que ese instante inaugura\n  · quien ancla el amanecer en la geulá, tiene el día anclado en la protección divina\n\nLa doctrina complementa la de Berajot 4b (quien pega geulá a tefilá en ARVIT es ben olam ha-ba): allí la recompensa es escatológica (mundo venidero), aquí es cotidiana (el día sin daño). El arvit mira al fin de los tiempos; el shajarit mira al día que empieza.\n\nY es exactamente esta promesa — formulada en términos verificables: «no sufre daño» — la que R. Zeira va a poner a prueba con su propia biografía en el nodo siguiente. La guemará no teme exponer sus promesas a la experiencia.'
+    },
+    'objecion': {
+      titulo: 'La objeción de R. Zeira · el mirto al palacio',
+      hebreo: 'לְעוֹלָם יִשְׁתַּדֵּל אָדָם לָרוּץ לִקְרַאת מַלְכֵי יִשְׂרָאֵל',
+      traduccion: '«Siempre debe esforzarse el hombre en correr al encuentro de los reyes de Israel»',
+      explicacion: 'R. Zeira — el mismo que trajo el pasuk de los vatikin — objeta la promesa de protección DESDE SU PROPIA VIDA:\n\n  «¡Yo pegué geulá a tefilá — y fui dañado! Me obligaron a llevar el mirto (אֲסָא) al palacio del rey.»\n\nLe impusieron una carga de servicio real (angariá): cargar ramas de mirto hasta el palacio. Trabajo forzado para un sabio — aparentemente, un daño en el mismo día de su costura perfecta. La promesa parece refutada por el testimonio de un testigo insospechable.\n\nLa respuesta de la guemará desarma la objeción invirtiendo la categoría: eso NO fue daño — fue PRIVILEGIO. Deberías incluso PAGAR por ver el palacio. Porque R. Yojanan enseñó:\n\n  לְעוֹלָם יִשְׁתַּדֵּל אָדָם לָרוּץ לִקְרַאת מַלְכֵי יִשְׂרָאֵל — «siempre corra el hombre al encuentro de los reyes de Israel»\n\n  וְלֹא לִקְרַאת מַלְכֵי יִשְׂרָאֵל בִּלְבַד — y no solo de los reyes de Israel, sino TAMBIÉN de los reyes de las naciones\n\n¿Por qué? שֶׁאִם יִזְכֶּה — para que, si merece ver la redención, pueda DISTINGUIR entre los reyes de Israel y los reyes del mundo. Quien vio la gloria de los imperios con sus propios ojos podrá medir cuánto mayor es la gloria del Rey Mashiaj.\n\nLa lección epistemológica es fina: el «daño» no es una categoría objetiva. Lo que R. Zeira vivió como carga era, bajo la descripción correcta, un acceso privilegiado al palacio — un ensayo para reconocer la geulá. La promesa de la kehilá kadisha queda intacta: al que pega geulá a tefilá no le pasa nada MALO; a veces le pasa algo bueno disfrazado.'
+    },
+    'beruna': {
+      titulo: 'Rav Beruna · la sonrisa de un día entero',
+      hebreo: 'זִימְנָא חֲדָא סְמַךְ גְּאוּלָּה לִתְפִלָּה — וְלָא פְּסֵיק חוּכָא מִפּוּמֵּיהּ כּוּלֵּיהּ יוֹמָא',
+      traduccion: '«Una vez pegó geulá a tefilá — y la risa no se apartó de su boca el día entero»',
+      explicacion: 'La sugyá culmina con una de las imágenes más luminosas del perek. R. Ila le encarga a Ula, que baja a Bavel:\n\n  «Cuando llegues, saluda a mi hermano Rav Beruna FRENTE A TODA LA JABURA (בְּמַעֲמַד כָּל הַחֲבוּרָה) — porque es un gran hombre y SE ALEGRA EN LAS MITZVOT (גָּדוֹל הוּא וְשָׂמֵחַ בְּמִצְוֺת).»\n\n¿Y cuál es la prueba de su grandeza? No un tratado, no una halajá famosa, no un milagro:\n\n  UNA SOLA VEZ (זִימְנָא חֲדָא) logró pegar geulá a tefilá como los vatikin — y la risa no se apartó de su boca EL DÍA ENTERO.\n\nVarias cosas notables:\n\n  1. UNA SOLA VEZ. La proeza de los vatikin es tan difícil — despertar antes del alba, calcular el ritmo exacto, acertar el instante del hanetz — que incluso un gran amora la logró una vez en la vida. La sugyá es honesta sobre la dificultad del ideal.\n\n  2. LA MEDIDA DE LA RECOMPENSA. La promesa oficial era «no sufre daño todo el día» — protección. Lo que Rav Beruna recibió fue ALEGRÍA todo el día. La simetría es exacta: un día de costura = un día de sonrisa. La alegría es la versión positiva de la protección.\n\n  3. LA DEFINICIÓN DE GRANDEZA. שָׂמֵחַ בְּמִצְוֺת — «se alegra en las mitzvot» — se convierte en título honorífico digno de saludo público ante toda la jabura. La grandeza no se mide solo por el conocimiento sino por la CAPACIDAD DE ALEGRARSE en el servicio.\n\nRav Beruna es la respuesta viviente a la objeción de R. Zeira: la recompensa de la costura no es un escudo mágico externo — es un estado del alma. Quien empieza el día cosiendo su oración a la redención camina el resto del día dentro de esa costura, y eso se le nota en la boca.'
+    },
+    'hefsek': {
+      titulo: 'El problema técnico · ¿ה׳ שפתי תפתח es hefsek?',
+      hebreo: 'כֵּיוָן דְּקַבְעוּהָ רַבָּנַן בִּתְפִלָּה — כִּתְפִלָּה אֲרִיכְתָּא דָּמְיָא',
+      traduccion: '«Como los rabinos lo fijaron en la tefilá — es como tefilá extendida»',
+      explicacion: 'La guemará detecta una contradicción interna en el propio R. Yojanan:\n\n  · por un lado exige PEGAR geulá a tefilá — nada en medio\n  · por otro lado enseña que antes de la amidá se dice ה׳ שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ — «Hashem, abre mis labios y mi boca dirá Tu alabanza» (Tehilim 51:17)\n\n¿No es ese pasuk exactamente un הֶפְסֵק — una interrupción entre גָּאַל יִשְׂרָאֵל y la amidá? La costura tendría un hilo extraño metido en medio.\n\nDOS RESPUESTAS:\n\n  1. R. ELAZAR: que ese pasuk se diga solo en MINJÁ. En la tefilá de la tarde no hay geulá previa que pegar (no hay kriat shema con sus brachot antes de minjá), así que el pasuk no interrumpe nada. En shajarit y arvit, no se diría. — Una solución por EVASIÓN: reparte los elementos para que nunca choquen.\n\n  2. RAV ASHI (la resolución aceptada): se dice SIEMPRE, incluso en shajarit — porque כֵּיוָן דְּקַבְעוּהָ רַבָּנַן בִּתְפִלָּה, «como los rabinos lo FIJARON en la tefilá», כִּתְפִלָּה אֲרִיכְתָּא דָּמְיָא — «es como TEFILÁ EXTENDIDA». El pasuk no está ENTRE la geulá y la amidá: ES el comienzo de la amidá. La fijación rabínica lo anexó al bloque.\n\nEl paralelo nocturno sella el argumento: así como הַשְׁכִּיבֵנוּ en arvit no interrumpe porque es גְּאוּלָּה אֲרִיכְתָּא — geulá extendida (Berajot 4b, ver el diagrama de semijat geulá-tefilá) — así ה׳ שפתי תפתח no interrumpe porque es tefilá extendida.\n\nLa simetría es perfecta: de noche, el bloque de GEULÁ se estira hacia adelante para absorber a hashkivenu; de mañana, el bloque de TEFILÁ se estira hacia atrás para absorber al pasuk. La categoría de EXTENSIÓN (אֲרִיכְתָּא) disuelve el hefsek en ambas direcciones: lo que los sabios fijan dentro de una unidad litúrgica SE VUELVE parte de su tejido.'
+    },
+    'coda': {
+      titulo: 'Coda · יהיו לרצון y los dieciocho salmos',
+      hebreo: 'יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ',
+      traduccion: '«Sean gratos los dichos de mi boca y la meditación de mi corazón ante Ti» (Tehilim 19:15)',
+      explicacion: 'La sugyá cierra con la pregunta espejo: si ה׳ שפתי תפתח abre la amidá, ¿por qué יִהְיוּ לְרָצוֹן — también un pasuk de David — se dice al FINAL?\n\nLa respuesta es una aritmética midráshica exquisita: porque DAVID MISMO lo dijo después de DIECIOCHO parashiyot — יהיו לרצון es el cierre del salmo 19, y hasta ahí David había pronunciado dieciocho capítulos del Tehilim. Como la amidá tiene DIECIOCHO berajot (shemoné esré), el pasuk que selló los dieciocho salmos de David sella las dieciocho berajot del que reza.\n\nLa objeción inmediata: ¡pero son DIECINUEVE salmos, no dieciocho! (El salmo 19 es el decimonoveno.)\n\nLa resolución: אַשְׁרֵי הָאִישׁ (salmo 1) y לָמָּה רָגְשׁוּ (salmo 2) son UNA SOLA parashá — empiezan y terminan como una unidad, así que la cuenta de David da exactamente dieciocho.\n\n(La guemará añade el dato paralelo: David dijo 103 parashiyot sin pronunciar «¡Halleluyá!» — hasta que vio la caída de los reshaim, en תהלים 104: יִתַּמּוּ חַטָּאִים.)\n\nLa coda espeja la apertura con precisión de artesano:\n\n  · la amidá EMPIEZA con un pasuk de David (ה׳ שפתי תפתח, Tehilim 51) — tefilá extendida hacia atrás\n  · la amidá TERMINA con un pasuk de David (יהיו לרצון, Tehilim 19) — el sello que David puso a sus propios dieciocho\n\nLa oración entera queda ENMARCADA por el salmista: quien reza la amidá entra y sale por puertas de David. Y el número dieciocho — las berajot, las parashiyot — teje la oración del individuo con la del dulce cantor de Israel. La costura de los vatikin (geulá con tefilá, noche con día) se replica en miniatura: todo el arte de la liturgia es saber qué se cose con qué.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.vatik-interactivo')
+    : document.querySelector('.vatik-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#vatik-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.vatik-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="vatik-panel-header">' +
+        '<p class="vatik-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="vatik-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="vatik-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="vatik-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.vatik-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.vatik-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="vatik-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>

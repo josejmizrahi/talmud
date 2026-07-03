@@ -25,9 +25,9 @@ const VAULT = path.join(ROOT, 'vault');
 const OUT = path.join(ROOT, 'diagramas', 'manifest.json');
 const NOTAS = path.join(ROOT, 'notas');
 
-const PEREK = 'Berajot · perek 1 · mishná 1:1';
+const PEREK = 'Berajot · perek 1 · מאימתי';
 const DESCRIPCION =
-  'Diagramas temáticos del primer perek de Berajot (mishná 1:1). ' +
+  'Diagramas temáticos del primer perek de Berajot (dapim 2a–12a). ' +
   'Cada tema captura una sugyá completa, incluso si vuelve a aparecer ' +
   'en daf posteriores. Orden cronológico de primera aparición.';
 
