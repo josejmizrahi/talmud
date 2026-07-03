@@ -1,0 +1,338 @@
+<div class="shuna-interactivo">
+<style>
+  .shuna-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .shuna-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .shuna-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .shuna-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .shuna-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .shuna-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .shuna-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .shuna-diagrama svg { width: 100%; height: auto; display: block; }
+  .shuna-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .shuna-nodo:hover rect { stroke-width: 2 !important; }
+  .shuna-nodo:hover polygon { stroke-width: 2 !important; }
+  .shuna-nodo.activa rect { stroke-width: 2.5 !important; }
+  .shuna-nodo.activa polygon { stroke-width: 2.5 !important; }
+  .shuna-nodo.dim { opacity: 0.32; }
+  .shuna-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .shuna-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .shuna-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .shuna-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .shuna-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .shuna-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .shuna-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="shuna-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>la arquitectura · aliyat kir</span>
+  <span><span class="swatch azul"></span>señales de kedushá · reconocimiento</span>
+  <span><span class="swatch verde"></span>dos modelos · Elisha / Shmuel</span>
+  <span><span class="swatch dorado"></span>la equivalencia tamid</span>
+</div>
+
+<div class="shuna-diagrama">
+<svg viewBox="0 0 720 1170" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10b: la casa de la Shunamit · la aliyat kir con sus cuatro objetos · la mujer reconoce al huésped · hospedar es ofrecer el tamid</title>
+
+<defs>
+  <marker id="flecha-sh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-sh-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La casa de la Shunamit · hospedar es ofrecer el tamid</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10b · una pared pequeña para el profeta — y el midrash de la hospitalidad</text>
+
+<!-- ============================================================ -->
+<!-- LA ALIYAT KIR · LA HABITACIÓN ESQUEMÁTICA                    -->
+<!-- ============================================================ -->
+<text x="60" y="74" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ALIYAT KIR · MELAJIM II 4:10 · DISPUTA RAV / SHMUEL</text>
+
+<g class="shuna-nodo" data-id="aliyat-kir">
+  <!-- techo: la lectura kir = kirui -->
+  <polygon points="90,196 360,122 630,196" fill="rgba(107,68,35,0.10)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="168" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">una lectura: ático descubierto al que pusieron TECHO (kir = kirui)</text>
+
+  <!-- las paredes de la aliyá -->
+  <rect x="90" y="196" width="540" height="340" rx="2" fill="rgba(107,68,35,0.05)" stroke="#6b4423" stroke-width="1.6"/>
+  <!-- la pared divisoria: la lectura kir = pared literal -->
+  <line x1="360" y1="252" x2="360" y2="536" stroke="#6b4423" stroke-width="1" stroke-dasharray="5,3" opacity="0.35"/>
+
+  <text x="360" y="222" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">נַעֲשֶׂה נָּא עֲלִיַּת קִיר קְטַנָּה וְנָשִׂים לוֹ שָׁם מִטָּה וְשֻׁלְחָן וְכִסֵּא וּמְנוֹרָה</text>
+  <text x="360" y="240" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«hagamos una pequeña aliyá de pared, y pongámosle allí cama, mesa, silla y lámpara»</text>
+
+  <!-- la casa de la Shunamit: base -->
+  <rect x="90" y="536" width="540" height="66" rx="2" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="225" y="558" text-anchor="middle" font-size="9.5" fill="#3d2f23">otra lectura: una <tspan font-style="italic">ajsadra</tspan> grande</text>
+  <text x="225" y="572" text-anchor="middle" font-size="9.5" fill="#3d2f23">que DIVIDIERON EN DOS (kir = pared)</text>
+  <text x="495" y="558" text-anchor="middle" font-size="10.5" direction="rtl" fill="#6b4423">מְעוּלָּה שֶׁבַּבָּתִּים</text>
+  <text x="495" y="572" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«la mejor de las habitaciones» (aliyat = meulá)</text>
+  <text x="360" y="592" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la casa de la Shunamit · Rav y Shmuel disputan la arquitectura — coinciden en la generosidad</text>
+</g>
+
+<!-- LOS CUATRO OBJETOS DENTRO DE LA HABITACIÓN -->
+
+<!-- מטה · la cama -->
+<g class="shuna-nodo" data-id="mita">
+  <rect x="110" y="256" width="240" height="110" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="230" y="280" text-anchor="middle" font-size="14" direction="rtl" fill="#1e3a5f">מִטָּה</text>
+  <!-- icono: cama con almohada -->
+  <rect x="175" y="296" width="110" height="14" rx="2" fill="none" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="180" y="288" width="24" height="8" rx="2" fill="rgba(30,58,95,0.15)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <line x1="179" y1="310" x2="179" y2="322" stroke="#1e3a5f" stroke-width="1.2"/>
+  <line x1="281" y1="310" x2="281" y2="322" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="230" y="340" text-anchor="middle" font-size="9" fill="#3d2f23">la sábana de lino: nunca vio</text>
+  <text x="230" y="352" text-anchor="middle" font-size="9" fill="#3d2f23">una mancha de <tspan font-weight="600">keri</tspan></text>
+  <text x="230" y="362" text-anchor="middle" font-size="8" fill="#1e3a5f" font-style="italic">señal de kedushá</text>
+</g>
+
+<!-- שלחן · la mesa -->
+<g class="shuna-nodo" data-id="shuljan">
+  <rect x="370" y="256" width="240" height="110" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="490" y="280" text-anchor="middle" font-size="14" direction="rtl" fill="#1e3a5f">שֻׁלְחָן</text>
+  <!-- icono: mesa -->
+  <line x1="440" y1="298" x2="540" y2="298" stroke="#1e3a5f" stroke-width="2"/>
+  <line x1="448" y1="298" x2="448" y2="322" stroke="#1e3a5f" stroke-width="1.2"/>
+  <line x1="532" y1="298" x2="532" y2="322" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="490" y="340" text-anchor="middle" font-size="9" fill="#3d2f23">nunca vio pasar una <tspan font-weight="600">mosca</tspan></text>
+  <text x="490" y="352" text-anchor="middle" font-size="9" fill="#3d2f23">por su mesa</text>
+  <text x="490" y="362" text-anchor="middle" font-size="8" fill="#1e3a5f" font-style="italic">señal de kedushá</text>
+</g>
+
+<!-- כסא · la silla -->
+<g class="shuna-nodo" data-id="kise">
+  <rect x="110" y="380" width="240" height="110" rx="4" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="230" y="404" text-anchor="middle" font-size="14" direction="rtl" fill="#6b4423">כִסֵּא</text>
+  <!-- icono: silla -->
+  <line x1="216" y1="412" x2="216" y2="440" stroke="#6b4423" stroke-width="1.5"/>
+  <line x1="216" y1="428" x2="246" y2="428" stroke="#6b4423" stroke-width="2"/>
+  <line x1="220" y1="428" x2="220" y2="446" stroke="#6b4423" stroke-width="1.2"/>
+  <line x1="244" y1="428" x2="244" y2="446" stroke="#6b4423" stroke-width="1.2"/>
+  <text x="230" y="464" text-anchor="middle" font-size="9" fill="#3d2f23">un lugar propio para sentarse:</text>
+  <text x="230" y="476" text-anchor="middle" font-size="9" fill="#3d2f23">el huésped no está de paso</text>
+  <text x="230" y="486" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">el mínimo digno de habitación</text>
+</g>
+
+<!-- מנורה · la lámpara -->
+<g class="shuna-nodo" data-id="menora">
+  <rect x="370" y="380" width="240" height="110" rx="4" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="490" y="404" text-anchor="middle" font-size="14" direction="rtl" fill="#6b4423">מְנוֹרָה</text>
+  <!-- icono: lámpara con llama -->
+  <line x1="490" y1="420" x2="490" y2="444" stroke="#6b4423" stroke-width="1.5"/>
+  <line x1="478" y1="446" x2="502" y2="446" stroke="#6b4423" stroke-width="1.5"/>
+  <ellipse cx="490" cy="415" rx="4" ry="6" fill="rgba(184,134,11,0.35)" stroke="#b8860b" stroke-width="0.8"/>
+  <text x="490" y="464" text-anchor="middle" font-size="9" fill="#3d2f23">luz propia: autonomía para</text>
+  <text x="490" y="476" text-anchor="middle" font-size="9" fill="#3d2f23">estudiar y rezar de noche</text>
+  <text x="490" y="486" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">el mínimo digno de habitación</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL RECONOCIMIENTO                                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="602" x2="360" y2="620" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+
+<text x="60" y="632" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL RECONOCIMIENTO · R. YOSEI BAR JANINA</text>
+
+<g class="shuna-nodo" data-id="reconocimiento">
+  <rect x="60" y="642" width="600" height="124" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="666" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">הִנֵּה נָא יָדַעְתִּי כִּי אִישׁ אֱלֹהִים קָדוֹשׁ הוּא</text>
+  <text x="360" y="686" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«he aquí que yo sé que es un hombre de Elokim, kadosh» (Melajim II 4:9)</text>
+  <text x="360" y="708" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">מכאן שהאשה מכרת באורחין יותר מן האיש</text>
+  <text x="78" y="728" font-size="9.5" fill="#3d2f23">de aquí: <tspan font-weight="600">la mujer reconoce a los huéspedes más que el hombre</tspan> — y lo supo por los detalles domésticos</text>
+  <text x="78" y="746" font-size="9" fill="#6b4423" font-style="italic">y la precisión: הוא קדוש — ÉL es kadosh; su asistente Guejazí אינו קדוש (luego la agarraría בְּהוֹד יָפְיָהּ)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RECIBIR O NO RECIBIR                                         -->
+<!-- ============================================================ -->
+<line x1="360" y1="766" x2="360" y2="784" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+
+<text x="60" y="796" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RECIBIR O NO RECIBIR · ABAYE / R. YITZJAK</text>
+
+<g class="shuna-nodo" data-id="recibir">
+  <rect x="60" y="806" width="600" height="150" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="830" text-anchor="middle" font-size="11.5" direction="rtl" fill="#2d6b4e">הרוצה להנות יהנה — ושאינו רוצה להנות אל יהנה</text>
+  <text x="360" y="848" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«el que quiere disfrutar, que disfrute; el que no quiere disfrutar, que no disfrute»</text>
+
+  <rect x="80" y="860" width="270" height="82" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="215" y="880" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">como Elisha</text>
+  <text x="215" y="898" text-anchor="middle" font-size="9" fill="#3d2f23">aceptó la aliyá y los cuatro objetos</text>
+  <text x="215" y="912" text-anchor="middle" font-size="9" fill="#3d2f23">recibir la generosidad con dignidad</text>
+  <text x="215" y="930" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">y así honró a quien lo hospedaba</text>
+
+  <rect x="370" y="860" width="270" height="82" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="505" y="880" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">como Shmuel HaRamati</text>
+  <text x="505" y="898" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">וּתְשׁוּבָתוֹ הָרָמָתָה כִּי שָׁם בֵּיתוֹ</text>
+  <text x="505" y="914" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«y su regreso era a Ramá, pues allí estaba su casa»</text>
+  <text x="505" y="930" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">R. Yojanan: a donde fuera — su casa iba con él</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL NODO CULMINANTE · TAMID                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="956" x2="360" y2="974" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-sh-gold)"/>
+
+<text x="60" y="986" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA EQUIVALENCIA · R. YOSEI BAR JANINA BESHEM R. ELIEZER BEN YAAKOV</text>
+
+<g class="shuna-nodo" data-id="tamid">
+  <rect x="60" y="996" width="600" height="152" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="1022" text-anchor="middle" font-size="14" direction="rtl" fill="#1a1410">עוֹבֵר עָלֵינוּ תָּמִיד</text>
+  <text x="360" y="1040" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«pasa ante nosotros TAMID (constantemente)» — la palabra תמיד del pasuk se vuelve el korban tamid</text>
+  <text x="360" y="1064" text-anchor="middle" font-size="11.5" direction="rtl" fill="#b8860b">כָּל הַמְאָרֵחַ תַּלְמִיד חָכָם בְּתוֹךְ בֵּיתוֹ וּמְהַנֵּהוּ מִנְּכָסָיו</text>
+  <text x="360" y="1084" text-anchor="middle" font-size="11.5" direction="rtl" fill="#b8860b">מַעֲלֶה עָלָיו הַכָּתוּב כְּאִילּוּ מַקְרִיב תְּמִידִין</text>
+  <text x="360" y="1106" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«quien hospeda a un talmid jajam en su casa y le hace gozar de sus bienes —</text>
+  <text x="360" y="1122" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">el versículo se lo cuenta como si ofreciera los korbanot tamid»</text>
+  <text x="360" y="1140" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">la mesa doméstica como mizbeaj · ver #beit-knesset — la casa como espacio sagrado</text>
+</g>
+
+</svg>
+</div>
+
+<div class="shuna-panel" id="shuna-panel">
+  <p class="shuna-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'aliyat-kir': {
+      titulo: 'La aliyat kir · disputa Rav y Shmuel',
+      hebreo: 'נַעֲשֶׂה נָּא עֲלִיַּת קִיר קְטַנָּה וְנָשִׂים לוֹ שָׁם מִטָּה וְשֻׁלְחָן וְכִסֵּא וּמְנוֹרָה',
+      traduccion: '«Hagamos una pequeña aliyá de pared, y pongámosle allí cama, mesa, silla y lámpara» (Melajim II 4:10)',
+      explicacion: 'El puente desde la sugyá anterior es la palabra קִיר. Jizkiyahu rezó girado אֶל הַקִּיר, y R. Levi explicó que invocaba el KIR de la Shunamit: «ella hizo una sola pared pequeña y le reviviste al hijo». El editor ahora abre ese episodio completo — del muro del rey moribundo a la pared de la mujer hospitalaria.\n\n¿Qué era exactamente la עֲלִיַּת קִיר? Rav y Shmuel disputan:\n\n  · UNA LECTURA: era un ÁTICO DESCUBIERTO al que le pusieron techo. La palabra קִיר se lee como קֵירוּי (kirui, techado) — «aliyat kir» = el piso alto que TECHARON para el profeta. El techo del diagrama representa esta lectura.\n\n  · OTRA LECTURA: era una AJSADRA GRANDE (galería/porche amplio) que DIVIDIERON EN DOS con una pared literal. Aquí קִיר es pared en sentido llano — construyeron un muro para crear una habitación privada. La línea punteada vertical del diagrama representa esta lectura.\n\nY la palabra עֲלִיַּת también se disputa: para uno significa PISO ALTO (aliyá literal, arriba); para el otro es מְעוּלָּה שֶׁבַּבָּתִּים — «la MEJOR de las habitaciones» (aliyat = meulá, excelente).\n\nLa disputa arquitectónica no es trivial. Ambas lecturas coinciden en lo esencial: la Shunamit hizo una OBRA — modificó su casa físicamente para hacer lugar al huésped. La hospitalidad rabínica no es prestar un rincón sobrante; es RECONSTRUIR el espacio propio en función del otro. Sea techo nuevo o pared nueva, la casa quedó distinta después de la decisión de hospedarlo.\n\nY el adjetivo קְטַנָּה («pequeña») guarda la otra mitad de la lección: no hizo un palacio. Hizo lo SUFICIENTE — una habitación digna con sus cuatro objetos. La generosidad eficaz no es lujo; es adecuación a la necesidad real del huésped.'
+    },
+    'mita': {
+      titulo: 'La mitá · la sábana que nunca vio keri',
+      hebreo: 'מִטָּה',
+      traduccion: 'La cama — el primer objeto de la aliyá',
+      explicacion: 'El primer objeto de la lista del pasuk: una CAMA. El lugar de descanso propio es la base de la dignidad del huésped — no duerme en el suelo, no comparte el espacio de la familia, tiene su intimidad.\n\nPero la cama guarda además una de las dos SEÑALES DE KEDUSHÁ. Cuando la guemará pregunta cómo supo la Shunamit que Elisha era kadosh, Rav y Shmuel (otra vez ellos) dan dos respuestas — y una es esta: la SÁBANA DE LINO que ella tendía sobre su cama NUNCA vio una mancha de keri (emisión seminal).\n\nEl detalle es notable por varias razones:\n\n  · Es un dato que SOLO quien lava la ropa puede conocer. La señal de kedushá no se ve en la sinagoga ni en el discurso público — se ve en el lavadero. Por eso es la MUJER quien lo detecta.\n\n  · El lino (פשתן) es la tela que marca: en lino blanco cualquier mancha se nota. La Shunamit eligió — o la guemará imagina — el material que hace VISIBLE la pureza o su ausencia.\n\n  · La kedushá del cuerpo dormido: el keri ocurre sin voluntad, durmiendo. Que Elisha nunca lo tuviera indica una pureza que alcanza hasta el nivel INVOLUNTARIO — el cuerpo entero, incluso inconsciente, está alineado.\n\nLa lección general: la santidad verdadera se verifica en los detalles domésticos e íntimos, no en la actuación pública. El diagrama pinta este nodo de azul — es una de las dos evidencias con las que la mujer construyó su diagnóstico: אִישׁ אֱלֹהִים קָדוֹשׁ הוּא.'
+    },
+    'shuljan': {
+      titulo: 'El shulján · la mesa que nunca vio una mosca',
+      hebreo: 'שֻׁלְחָן',
+      traduccion: 'La mesa — el segundo objeto de la aliyá',
+      explicacion: 'El segundo objeto: una MESA propia. El huésped no come de las sobras ni depende de los horarios de la familia — tiene su lugar de comida, su autonomía alimentaria.\n\nY la mesa guarda la segunda SEÑAL DE KEDUSHÁ: la Shunamit NUNCA vio una MOSCA pasar por la mesa de Elisha.\n\nLa mosca es el signo universal de la comida descuidada — donde hay restos, migas, suciedad, hay moscas. Que la mesa del profeta no las atrajera indica algo más que limpieza: indica que su relación con la comida era de una pureza tal que ni siquiera el insecto más insistente del mundo antiguo encontraba nada que reclamar.\n\nAlgunas lecturas ven aquí un pequeño milagro (la kedushá repele físicamente la impureza); otras, una observación hiperbólica de la disciplina extrema del profeta en su mesa. En ambos casos, el punto estructural es el mismo que en la cama:\n\n  · La señal es DOMÉSTICA — se observa sirviendo la comida, no en el ámbito público.\n  · La señal es ACUMULATIVA — «nunca vio» implica observación repetida, atención sostenida en el tiempo.\n  · La señal está al alcance de quien ATIENDE la casa — por eso la mujer la detecta antes y mejor.\n\nCama y mesa forman el par de evidencias: la pureza del cuerpo dormido (keri) y la pureza del cuerpo que come (mosca). Noche y día, lo involuntario y lo cotidiano. Con esos dos datos la Shunamit emite un diagnóstico que la guemará valida como correcto y preciso.'
+    },
+    'kise': {
+      titulo: 'El kisé · un lugar propio para sentarse',
+      hebreo: 'כִסֵּא',
+      traduccion: 'La silla — el tercer objeto de la aliyá',
+      explicacion: 'El tercer objeto: una SILLA. Sobre este objeto la guemará no cuelga ninguna derashá específica — y ese silencio también enseña.\n\nLa silla completa el MÍNIMO DIGNO de habitación. La cama es para la noche; la mesa para comer; la silla es para EL RESTO del tiempo: para sentarse a estudiar, para recibir a quien viene a consultarlo, para simplemente ESTAR. Un huésped sin silla está siempre de paso — o acostado o comiendo o de pie para irse. La silla dice: puedes quedarte, puedes habitar, este espacio es tuyo también cuando no lo estás usando para una función.\n\nEn la imaginación rabínica posterior, los cuatro objetos de la Shunamit (מטה, שלחן, כסא, מנורה) se volvieron la lista canónica del equipamiento del huésped — lo que una casa hospitalaria provee. No es una lista de lujo: es la lista de la AUTONOMÍA. Cada objeto le ahorra al huésped tener que pedir, depender, interrumpir la vida de la familia:\n\n  · cama — no pide dónde dormir\n  · mesa — no pide dónde comer\n  · silla — no pide dónde estar\n  · lámpara — no pide luz\n\nLa hospitalidad perfecta es la que hace INNECESARIO pedir. La Shunamit no espera los pedidos de Elisha — los anticipa todos en el diseño mismo de la habitación. Anticipar la necesidad ajena antes de que se formule: esa es la forma más alta de atención al otro, y es la misma capacidad de OBSERVACIÓN que después le permitirá diagnosticar la kedushá del profeta.'
+    },
+    'menora': {
+      titulo: 'La menorá · luz propia',
+      hebreo: 'מְנוֹרָה',
+      traduccion: 'La lámpara — el cuarto objeto de la aliyá',
+      explicacion: 'El cuarto objeto: una LÁMPARA. Como con la silla, la guemará no deriva de ella una enseñanza específica — pero su lugar en la lista es elocuente.\n\nLa lámpara extiende la autonomía del huésped a la NOCHE. Sin luz propia, el día del huésped termina cuando la familia apaga sus lámparas. Con la menorá, Elisha puede velar: estudiar de noche, rezar, escribir, recibir la palabra profética a la hora que llegue. La Shunamit no solo le dio un espacio — le dio TIEMPO, las horas nocturnas que la luz rescata de la oscuridad.\n\nPara un hombre de Torá, la lámpara es el objeto más cargado de la lista: la tradición asocia la noche con el estudio (el que estudia de noche, un hilo de jésed lo acompaña de día), y la luz de la lámpara con la Torá misma — כִּי נֵר מִצְוָה וְתוֹרָה אוֹר. Darle una menorá al profeta es equipar su servicio, no solo su descanso.\n\nHay también un eco con el final de la sugyá: los cuatro objetos culminan en la equivalencia del TAMID (ver el nodo dorado). En el Mikdash, junto al korban tamid diario, ardía la נֵר תָּמִיד — la lámpara perpetua. La habitación de la Shunamit, con su mesa que será mizbeaj y su lámpara encendida, se deja leer como un pequeño santuario doméstico: la casa que hospeda a un talmid jajam reproduce, en miniatura, la estructura del Templo.'
+    },
+    'reconocimiento': {
+      titulo: 'El reconocimiento · la mujer reconoce al huésped',
+      hebreo: 'הִנֵּה נָא יָדַעְתִּי כִּי אִישׁ אֱלֹהִים קָדוֹשׁ הוּא',
+      traduccion: '«He aquí que yo sé que es un hombre de Elokim, kadosh» (Melajim II 4:9)',
+      explicacion: 'Antes de proponer la construcción, la Shunamit le dice a su marido este versículo. R. Yosei bar Janina extrae de él una enseñanza general:\n\n  מכאן שהאשה מכרת באורחין יותר מן האיש\n  «de aquí: la mujer reconoce a los huéspedes más que el hombre»\n\nLa observación es precisa en el texto bíblico: es ELLA quien emite el diagnóstico («yo sé que es kadosh»), no el marido — aunque ambos lo veían pasar. ¿Por qué ella sabe y él no?\n\nLa guemará responde con las dos señales domésticas (ver los nodos de la cama y la mesa): la sábana sin keri, la mesa sin moscas. Son datos que se recogen ATENDIENDO la casa — lavando, sirviendo, ordenando. El conocimiento de la mujer no es intuición mística: es OBSERVACIÓN EMPÍRICA acumulada en el terreno que ella administra. El marido ve al profeta pasar; ella ve lo que el profeta deja — y en lo que deja (o no deja) está la evidencia.\n\nY la guemará subraya la PRECISIÓN del diagnóstico: הוא קדוש — ÉL es kadosh, y con el pronombre enfático viene la exclusión: וּמשרתו אינו קדוש — su asistente NO lo es. La Shunamit no santificó el paquete completo «profeta + séquito»; distinguió entre el maestro y Guejazí. La guemará confirma que acertó: Guejazí después la agarraría בְּהוֹד יָפְיָהּ (por el esplendor de su belleza) — conducta que ningún kadosh tendría.\n\nEl reconocimiento fino — distinguir kedushá real de proximidad a la kedushá — es la capacidad que la sugyá celebra en ella. Estar cerca del kadosh no santifica; Guejazí compartía techo, mesa y camino con Elisha y no era kadosh. La santidad no se contagia por cercanía: se verifica en la conducta, detalle por detalle.'
+    },
+    'recibir': {
+      titulo: 'Recibir o no recibir · Elisha y Shmuel HaRamati',
+      hebreo: 'הרוצה להנות יהנה — ושאינו רוצה להנות אל יהנה',
+      traduccion: '«El que quiere disfrutar, que disfrute; el que no quiere disfrutar, que no disfrute»',
+      explicacion: 'Abaye (algunos dicen R. Yitzjak) extrae del episodio una halajá de conducta para el LADO DEL HUÉSPED: ¿debe el sabio aceptar lo que le ofrecen?\n\nLa respuesta es sorprendentemente liberal: HAY DOS MODELOS LEGÍTIMOS.\n\n  MODELO 1 · COMO ELISHA — הרוצה להנות יהנה. El que quiere disfrutar de lo que le ofrecen, que disfrute. Elisha aceptó la aliyá, la cama, la mesa, la silla y la lámpara. Comía de la mesa de la Shunamit cada vez que pasaba. Y NO hay en ello mengua de su kedushá — el mismo capítulo que registra su aceptación registra su santidad.\n\n  MODELO 2 · COMO SHMUEL HARAMATI — ושאינו רוצה להנות אל יהנה. El que no quiere disfrutar, que no disfrute — como el profeta Shmuel, de quien dice el pasuk: וּתְשׁוּבָתוֹ הָרָמָתָה כִּי שָׁם בֵּיתוֹ («y su regreso era a Ramá, pues allí estaba su casa», Shmuel I 7:17). R. Yojanan lo lee así: כל מקום שהלך — שם ביתו עמו: a donde fuera, SU CASA IBA CON ÉL. Shmuel recorría todo Israel juzgando al pueblo y no aceptaba hospedaje: llevaba consigo su tienda y sus provisiones para no depender de nadie.\n\nLo notable es que la guemará NO jerarquiza. No dice «Shmuel era más grande» ni «Elisha era más humano». Ambas son formas legítimas de DIGNIDAD ante la generosidad ajena:\n\n  · Elisha dignifica al ANFITRIÓN: aceptar es honrar a quien da. Su aceptación le permitió a la Shunamit el mérito inmenso que el nodo dorado describe.\n  · Shmuel dignifica su INDEPENDENCIA: no cargar a nadie, no deber nada, servir al pueblo sin que el pueblo lo mantenga.\n\nLa halajá deja la elección al temperamento de cada sabio. Lo que NO es legítimo es el tercer modelo tácito: aceptar con desprecio, o rechazar con soberbia. Recibir bien y no recibir bien — ambos requieren la misma delicadeza.'
+    },
+    'tamid': {
+      titulo: 'La equivalencia · hospedar es ofrecer el tamid',
+      hebreo: 'כָּל הַמְאָרֵחַ תַּלְמִיד חָכָם בְּתוֹךְ בֵּיתוֹ וּמְהַנֵּהוּ מִנְּכָסָיו — מַעֲלֶה עָלָיו הַכָּתוּב כְּאִילּוּ מַקְרִיב תְּמִידִין',
+      traduccion: '«Quien hospeda a un talmid jajam en su casa y le hace gozar de sus bienes — el versículo se lo cuenta como si ofreciera los korbanot tamid»',
+      explicacion: 'El nodo culminante de la sugyá — y una de las derashot más audaces del capítulo.\n\nLa Shunamit justifica su propuesta ante el marido con la frase: אִישׁ אֱלֹהִים... עֹבֵר עָלֵינוּ תָּמִיד — «un hombre de Elokim... pasa ante nosotros TAMID (constantemente)». En el sentido llano, תָּמִיד es un adverbio: pasa siempre, con regularidad.\n\nPero R. Yosei bar Janina, en nombre de R. Eliezer ben Yaakov, escucha en esa palabra OTRA cosa: תָּמִיד es también el nombre del KORBAN TAMID — el sacrificio diario perpetuo del Mikdash, la ofrenda de la mañana y la de la tarde que estructuraban todo el servicio del Templo. Y de esa doble lectura nace la equivalencia:\n\n  · quien hospeda a un talmid jajam EN SU CASA (בתוך ביתו — adentro, no en el granero)\n  · y le hace GOZAR de sus bienes (ומהנהו מנכסיו — no solo techo: comida, uso real de lo propio)\n  · el versículo se lo cuenta COMO SI OFRECIERA LOS TEMIDIN — el sacrificio perpetuo\n\nLa transformación es total: la MESA DOMÉSTICA se vuelve MIZBEAJ (altar). Lo que la Shunamit le sirve a Elisha en la mesa de la aliyá tiene, en el cómputo divino, el estatus de la ofrenda diaria del Templo.\n\n¿Por qué el TAMID y no otro korban? Porque el tamid es la ofrenda de la CONSTANCIA — no la ofrenda extraordinaria de la fiesta ni la expiatoria de la culpa, sino la del servicio diario, invariable, sostenido. Y eso es exactamente la hospitalidad de la Shunamit: עֹבֵר עָלֵינוּ תָּמִיד — no un banquete único sino una mesa servida CADA VEZ que el profeta pasa. La hospitalidad meritoria no es el gesto grandioso: es la regularidad.\n\nLa derashá tiene además una dimensión histórica: dicha por amoraim que vivían SIN Templo, es una respuesta a la pregunta «¿cómo se ofrece el tamid cuando no hay mizbeaj?». Respuesta: hospedando al talmid jajam. La casa hospitalaria SUSTITUYE al Mikdash destruido; la mesa compartida continúa el servicio interrumpido (ver #beit-knesset — la casa como espacio sagrado).\n\nY así se cierra el arco de la sugyá: comenzó con una pared pequeña (קיר קטנה) y termina en el Templo. La Shunamit, que solo quiso darle una habitación digna a un hombre santo, resulta haber estado ofreciendo — sin saberlo — el sacrificio perpetuo. La palabra תמיד que ella dijo como adverbio, el Cielo la contó como korban.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.shuna-interactivo')
+    : document.querySelector('.shuna-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#shuna-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.shuna-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="shuna-panel-header">' +
+        '<p class="shuna-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="shuna-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="shuna-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="shuna-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.shuna-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.shuna-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="shuna-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
