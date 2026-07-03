@@ -1,0 +1,345 @@
+<div class="yotzer-interactivo">
+<style>
+  .yotzer-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .yotzer-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .yotzer-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .yotzer-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .yotzer-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .yotzer-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .yotzer-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .yotzer-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .yotzer-diagrama svg { width: 100%; height: auto; display: block; }
+  .yotzer-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .yotzer-nodo:hover rect { stroke-width: 2 !important; }
+  .yotzer-nodo:hover circle { stroke-width: 2.5 !important; }
+  .yotzer-nodo.activa rect { stroke-width: 2.5 !important; }
+  .yotzer-nodo.activa circle { stroke-width: 3 !important; }
+  .yotzer-nodo.dim { opacity: 0.32; }
+  .yotzer-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .yotzer-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .yotzer-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .yotzer-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .yotzer-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .yotzer-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .yotzer-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="yotzer-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>la mishná · el marco 2+1 / 2+2</span>
+  <span><span class="swatch dorado"></span>la luz · yotzer or · Rava</span>
+  <span><span class="swatch rojo"></span>la objeción · ¿noga?</span>
+  <span><span class="swatch azul"></span>la noche · Abaye</span>
+  <span><span class="swatch verde"></span>ahava · la segunda berajá</span>
+</div>
+
+<div class="yotzer-diagrama">
+<svg viewBox="0 0 720 1250" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 11a-11b: yotzer or · mencionar la noche en el día · la respuesta anti-dualista de Rava · ahava rabba vs ahavat olam</title>
+
+<defs>
+  <marker id="flecha-yo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-yo-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Yotzer or · las berajot del shema</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 11a-11b · mishná 1:4 — mencionar la noche en el día</text>
+
+<!-- ============================================================ -->
+<!-- LA MISHNÁ · EL MARCO 2+1 / 2+2                              -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MISHNÁ 1:4 · LA ARQUITECTURA DE LAS BERAJOT</text>
+
+<g class="yotzer-nodo" data-id="mishna">
+  <rect x="60" y="86" width="600" height="150" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.6"/>
+  <text x="360" y="110" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת לְאַחֲרֶיהָ, וּבָעֶרֶב שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם לְאַחֲרֶיהָ</text>
+  <text x="360" y="128" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«en la mañana bendice DOS antes y UNA después · en la noche DOS antes y DOS después»</text>
+
+  <!-- Mini-esquema: shajar -->
+  <text x="100" y="166" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b" font-weight="700">שַׁחַר</text>
+  <rect x="150" y="150" width="110" height="26" rx="4" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="0.9"/>
+  <text x="205" y="167" text-anchor="middle" font-size="9.5" fill="#3d2f23">2 לְפָנֶיהָ</text>
+  <line x1="264" y1="163" x2="292" y2="163" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-yo)"/>
+  <rect x="296" y="150" width="120" height="26" rx="4" fill="rgba(107,68,35,0.14)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="356" y="167" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">שְׁמַע</text>
+  <line x1="420" y1="163" x2="448" y2="163" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-yo)"/>
+  <rect x="452" y="150" width="110" height="26" rx="4" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="0.9"/>
+  <text x="507" y="167" text-anchor="middle" font-size="9.5" fill="#3d2f23">1 לְאַחֲרֶיהָ</text>
+
+  <!-- Mini-esquema: maariv -->
+  <text x="100" y="204" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f" font-weight="700">עֶרֶב</text>
+  <rect x="150" y="188" width="110" height="26" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.9"/>
+  <text x="205" y="205" text-anchor="middle" font-size="9.5" fill="#3d2f23">2 לְפָנֶיהָ</text>
+  <line x1="264" y1="201" x2="292" y2="201" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-yo)"/>
+  <rect x="296" y="188" width="120" height="26" rx="4" fill="rgba(107,68,35,0.14)" stroke="#6b4423" stroke-width="1.1"/>
+  <text x="356" y="205" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">שְׁמַע</text>
+  <line x1="420" y1="201" x2="448" y2="201" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-yo)"/>
+  <rect x="452" y="188" width="110" height="26" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="0.9"/>
+  <text x="507" y="205" text-anchor="middle" font-size="9.5" fill="#3d2f23">2 לְאַחֲרֶיהָ</text>
+
+  <text x="360" y="228" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">una larga y una corta · donde dijeron alargar, no se acorta</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PASUK · RAV OSHAYA · YESHAYAHU 45:7                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="236" x2="360" y2="254" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yo-gold)"/>
+
+<text x="60" y="266" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">¿CUÁL ES LA PRIMERA BERAJÁ? · RAV OSHAYA · YESHAYAHU 45:7</text>
+
+<g class="yotzer-nodo" data-id="pasuk">
+  <rect x="60" y="276" width="600" height="96" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="302" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ, עֹשֶׂה שָׁלוֹם וּבוֹרֵא רָע</text>
+  <text x="360" y="322" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«el que forma la LUZ y crea la OSCURIDAD, el que hace la paz y crea el mal» (Yeshayahu 45:7)</text>
+  <text x="360" y="342" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la berajá matutina se abre con este pasuk — ¿por qué mencionar la OSCURIDAD en plena mañana?</text>
+  <text x="360" y="360" text-anchor="middle" font-size="8.5" fill="#6b4423">yotzer or es la primera de las dos berajot previas al shema de shajarit</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA OBJECIÓN · ¿QUE DIGA NOGA?                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="372" x2="360" y2="390" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-yo)"/>
+
+<text x="60" y="402" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OBJECIÓN · ¿QUE DIGA NOGA? · Y EL COLAPSO DE «ASÍ ESTÁ ESCRITO»</text>
+
+<g class="yotzer-nodo" data-id="objecion">
+  <rect x="60" y="412" width="600" height="128" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="436" text-anchor="middle" font-size="11.5" direction="rtl" fill="#8b1a1a">לֵימָא יוֹצֵר אוֹר וּבוֹרֵא נוֹגַהּ?</text>
+  <text x="360" y="453" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«¿que diga: el que forma la luz y crea el RESPLANDOR?» — primera respuesta: כְּדִכְתִיב, así está escrito</text>
+
+  <line x1="80" y1="464" x2="640" y2="464" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="482" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="600">pero la respuesta COLAPSA enseguida:</text>
+  <text x="230" y="502" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">el pasuk dice: וּבוֹרֵא רָע</text>
+  <text x="490" y="502" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">la berajá dice: וּבוֹרֵא הַכֹּל</text>
+  <line x1="300" y1="498" x2="420" y2="498" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="360" y="521" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">¡לִישָּׁנָא מְעַלְּיָא — eufemismo! ya NO seguimos el pasuk al pie de la letra</text>
+  <text x="360" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">si editamos el «mal», ¿por qué no editamos la «oscuridad»?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESPUESTA DE RAVA · EL CÍRCULO DÍA/NOCHE                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="540" x2="360" y2="558" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-yo-gold)"/>
+
+<text x="60" y="570" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESPUESTA DE RAVA · DOCTRINA ANTI-DUALISTA</text>
+
+<g class="yotzer-nodo" data-id="rava">
+  <rect x="60" y="580" width="600" height="254" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="604" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">כְּדֵי לְהַזְכִּיר מִדַּת יוֹם בַּלַּיְלָה וּמִדַּת לַיְלָה בַּיּוֹם</text>
+  <text x="360" y="622" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«para mencionar la medida del DÍA en la noche y la medida de la NOCHE en el día»</text>
+
+  <!-- Círculo día/noche -->
+  <path d="M 360,668 A 60 60 0 0 0 360,788 Z" fill="rgba(184,134,11,0.30)" stroke="#b8860b" stroke-width="1.6"/>
+  <path d="M 360,668 A 60 60 0 0 1 360,788 Z" fill="rgba(30,58,95,0.82)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="326" y="733" text-anchor="middle" font-size="11" direction="rtl" fill="#6b4423" font-weight="700">יוֹם</text>
+  <text x="394" y="733" text-anchor="middle" font-size="11" direction="rtl" fill="#f0e6d2" font-weight="700">לַיְלָה</text>
+  <!-- rayos del día -->
+  <line x1="318" y1="686" x2="326" y2="694" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+  <line x1="310" y1="726" x2="320" y2="726" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+  <line x1="318" y1="766" x2="326" y2="758" stroke="#b8860b" stroke-width="1" opacity="0.7"/>
+  <!-- estrellas de la noche -->
+  <circle cx="400" cy="692" r="1.4" fill="#f0e6d2" opacity="0.8"/>
+  <circle cx="410" cy="748" r="1.4" fill="#f0e6d2" opacity="0.8"/>
+  <circle cx="388" cy="762" r="1.1" fill="#f0e6d2" opacity="0.7"/>
+
+  <!-- Anotación izquierda: la noche en el día -->
+  <text x="150" y="700" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">en el DÍA · yotzer or</text>
+  <text x="150" y="715" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">וּבוֹרֵא חֹשֶׁךְ</text>
+  <text x="150" y="730" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">la oscuridad entra en la</text>
+  <text x="150" y="742" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">berajá de la mañana</text>
+  <path d="M 218,720 Q 260,712 298,700" fill="none" stroke="#1e3a5f" stroke-width="1.1" stroke-dasharray="4,2" marker-end="url(#flecha-yo)"/>
+
+  <!-- Anotación derecha: el día en la noche -->
+  <text x="570" y="700" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="600">en la NOCHE · maariv aravim</text>
+  <text x="570" y="715" text-anchor="middle" font-size="9.5" direction="rtl" fill="#b8860b">גּוֹלֵל אוֹר מִפְּנֵי חֹשֶׁךְ</text>
+  <text x="570" y="730" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">la luz entra en la</text>
+  <text x="570" y="742" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">berajá de la noche</text>
+  <path d="M 502,720 Q 460,712 422,700" fill="none" stroke="#b8860b" stroke-width="1.1" stroke-dasharray="4,2" marker-end="url(#flecha-yo-gold)"/>
+
+  <text x="360" y="812" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600" font-family="'Cormorant Garamond', serif" font-style="italic">el Dios de la luz ES el de la oscuridad — ningún poder rival gobierna la mitad del ciclo</text>
+  <text x="360" y="827" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">contra los minim dualistas · un solo Creador para el círculo entero</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ABAYE · LA MEDIDA DEL DÍA EN LA NOCHE                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="834" x2="360" y2="852" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-yo)"/>
+
+<text x="60" y="864" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ABAYE · ¿CUÁL ES LA MEDIDA DEL DÍA EN LA NOCHE?</text>
+
+<g class="yotzer-nodo" data-id="abaye">
+  <rect x="60" y="874" width="600" height="110" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="900" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f">גּוֹלֵל אוֹר מִפְּנֵי חֹשֶׁךְ וְחֹשֶׁךְ מִפְּנֵי אוֹר</text>
+  <text x="360" y="920" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«el que ARROLLA la luz ante la oscuridad y la oscuridad ante la luz»</text>
+  <text x="360" y="944" text-anchor="middle" font-size="9.5" fill="#3d2f23">la frase de MAARIV ARAVIM nombra a la luz en plena noche — el arrollar mutuo de los dos dominios</text>
+  <text x="360" y="966" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el ciclo no es batalla entre dos poderes: es UNA mano que enrolla el pergamino del cielo en ambos sentidos</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA SEGUNDA BERAJÁ · AHAVA RABBA VS AHAVAT OLAM               -->
+<!-- ============================================================ -->
+<line x1="360" y1="984" x2="360" y2="1002" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-yo)"/>
+
+<text x="60" y="1014" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA SEGUNDA BERAJÁ · EL AMOR ANTES DEL SHEMA</text>
+
+<g class="yotzer-nodo" data-id="ahava">
+  <rect x="60" y="1024" width="600" height="192" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="1048" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿Cuál es la segunda berajá antes del shema? — la majloket del amor</text>
+
+  <rect x="80" y="1062" width="270" height="76" rx="5" fill="rgba(30,107,90,0.09)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="215" y="1084" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">אַהֲבָה רַבָּה</text>
+  <text x="215" y="1102" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«amor abundante»</text>
+  <text x="215" y="1118" text-anchor="middle" font-size="8.5" fill="#6b4423">Rav Yehuda en nombre de Shmuel</text>
+  <text x="215" y="1131" text-anchor="middle" font-size="8.5" fill="#6b4423">y así enseñó R. Elazar a su hijo R. Pedat</text>
+
+  <rect x="370" y="1062" width="270" height="76" rx="5" fill="rgba(30,107,90,0.04)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="505" y="1084" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">אַהֲבַת עוֹלָם</text>
+  <text x="505" y="1102" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«amor eterno»</text>
+  <text x="505" y="1118" text-anchor="middle" font-size="8.5" fill="#6b4423">los rabanan · por el pasuk</text>
+  <text x="505" y="1131" text-anchor="middle" font-size="8.5" fill="#6b4423">de Yirmiyahu 31:3</text>
+
+  <text x="360" y="1160" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">וְאַהֲבַת עוֹלָם אֲהַבְתִּיךְ, עַל כֵּן מְשַׁכְתִּיךָ חָסֶד</text>
+  <text x="360" y="1177" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«con amor eterno te amé, por eso te atraje con jésed» (Yirmiyahu 31:3)</text>
+  <text x="360" y="1198" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-style="italic" font-weight="600">la declaración de AMOR precede a la declaración de FE</text>
+</g>
+
+</svg>
+</div>
+
+<div class="yotzer-panel" id="yotzer-panel">
+  <p class="yotzer-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'mishna': {
+      titulo: 'La mishná 1:4 · la arquitectura 2+1 / 2+2',
+      hebreo: 'בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת לְאַחֲרֶיהָ, וּבָעֶרֶב שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם לְאַחֲרֶיהָ',
+      traduccion: '«En la mañana bendice dos antes y una después; en la noche, dos antes y dos después»',
+      explicacion: 'La secuencia de las tres primeras mishnayot del perek construye la liturgia completa del shema por capas: la mishná 1:2 resolvió el CUÁNDO (los tiempos de la recitación), la 1:3 el CÓMO (la postura — Bet Shammai vs Bet Hillel), y ahora la 1:4 pregunta por el MARCO: ¿qué berajot RODEAN al shema?\n\nLa arquitectura es asimétrica y precisa:\n\n  · SHAJAR (mañana): DOS berajot antes (yotzer or + ahava rabba) y UNA después (emet veyatziv)\n  · MAARIV (noche): DOS antes (maariv aravim + ahavat olam) y DOS después (emet veemuná + hashkivenu)\n\nEl shema nunca aparece desnudo. Siempre llega ENMARCADO — precedido por berajot sobre la creación y el amor, seguido por berajot sobre la redención. La declaración de fe está engastada en un anillo litúrgico que la contextualiza: antes de decir «HKBH es uno», el rezador ya ha dicho «HKBH crea el ciclo entero» y «HKBH nos ama».\n\nLa mishná añade una regla formal: אַחַת אֲרוּכָּה וְאַחַת קְצָרָה — «una larga y una corta». Y el principio de inmutabilidad: donde los sabios dijeron alargar, no está permitido acortar; donde dijeron acortar, no está permitido alargar. La liturgia NO es materia de improvisación individual — es arquitectura fijada, con proporciones deliberadas.\n\nLa guemará de 11a-11b tomará este marco y preguntará por el CONTENIDO: ¿cuáles son exactamente esas berajot? ¿Y por qué dicen lo que dicen? La primera sorpresa llega de inmediato: la berajá matutina menciona la OSCURIDAD.'
+    },
+    'pasuk': {
+      titulo: 'Rav Oshaya · el pasuk de Yeshayahu 45:7',
+      hebreo: 'יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ, עֹשֶׂה שָׁלוֹם וּבוֹרֵא רָע',
+      traduccion: '«El que forma la luz y crea la oscuridad, el que hace la paz y crea el mal» (Yeshayahu 45:7)',
+      explicacion: 'Rav Oshaya identifica la primera berajá de la mañana: se abre con el pasuk de Yeshayahu 45:7 — «yotzer or uvore jóshej», el que forma la luz Y crea la oscuridad.\n\nEl contexto original del pasuk es significativo: Yeshayahu 45 está dirigido a Koresh (Ciro), el rey persa. Y la Persia del profeta es la cuna del DUALISMO religioso — la doctrina de dos poderes cósmicos, uno de la luz y otro de la tiniebla, en guerra eterna. El pasuk es una declaración polémica dirigida precisamente contra esa cosmología: UN SOLO Dios forma la luz y crea la oscuridad, hace la paz y crea el mal. No hay dos tronos.\n\nLos sabios eligieron ESTE pasuk — el más anti-dualista del Tanaj — como apertura de la primera berajá del día. La elección no es casual, como la guemará va a demostrar.\n\nPero la elección genera una pregunta inmediata: es de mañana. El sol está saliendo. El rezador celebra la luz. ¿Por qué la berajá matutina lo obliga a nombrar la OSCURIDAD — el dominio que precisamente acaba de retirarse? Parece litúrgicamente contraintuitivo: como brindar por la salud mencionando la enfermedad.\n\nLa guemará formula la objeción con una alternativa concreta: que diga otra cosa.'
+    },
+    'objecion': {
+      titulo: 'La objeción · ¿que diga noga? · el colapso de «así está escrito»',
+      hebreo: 'לֵימָא יוֹצֵר אוֹר וּבוֹרֵא נוֹגַהּ? · וּבוֹרֵא רָע ←→ וּבוֹרֵא הַכֹּל',
+      traduccion: '«¿Que diga: el que forma la luz y crea el resplandor?» — pero el pasuk dice «crea el mal» y la berajá dice «crea TODO»',
+      explicacion: 'La guemará propone la alternativa: que la berajá diga יוֹצֵר אוֹר וּבוֹרֵא נוֹגַהּ — «el que forma la luz y crea el RESPLANDOR». Dos términos luminosos, coherentes con la mañana. Nada de oscuridad en la berajá del alba.\n\nPRIMERA RESPUESTA: כְּדִכְתִיב — «así está escrito». La berajá cita el pasuk de Yeshayahu, y el pasuk dice «jóshej». No editamos la Escritura.\n\nPero la respuesta COLAPSA con una sola observación. Miremos el FINAL del mismo pasuk:\n\n  · el pasuk dice: וּבוֹרֵא רָע — «y crea el MAL»\n  · la berajá dice: וּבוֹרֵא הַכֹּל — «y crea TODO»\n\n¡לִישָּׁנָא מְעַלְּיָא — eufemismo! Los sabios que fijaron la berajá SÍ editaron el pasuk: sustituyeron «el mal» por «todo», porque no se abre el día nombrando el mal. La liturgia no es cita literal — es cita CURADA.\n\nY entonces la objeción se vuelve devastadora: si tenemos licencia editorial — si ya demostramos que podemos suavizar el pasuk — ¿por qué NO suavizamos también la oscuridad? ¿Por qué «ra» se convierte en «hakol» pero «jóshej» permanece intacto?\n\nLa asimetría editorial exige una razón POSITIVA. La oscuridad no quedó en la berajá por inercia textual — quedó porque alguien QUISO que quedara. ¿Quién y para qué? La respuesta es de Rava, y es una de las declaraciones teológicas más precisas del perek.'
+    },
+    'rava': {
+      titulo: 'La respuesta de Rava · mencionar la noche en el día',
+      hebreo: 'כְּדֵי לְהַזְכִּיר מִדַּת יוֹם בַּלַּיְלָה וּמִדַּת לַיְלָה בַּיּוֹם',
+      traduccion: '«Para mencionar la medida del día en la noche y la medida de la noche en el día»',
+      explicacion: 'Rava revela el propósito: la oscuridad está en la berajá matutina A PROPÓSITO. La liturgia fue diseñada para que cada mitad del ciclo mencione a la otra: la medida del DÍA en la noche, la medida de la NOCHE en el día.\n\nEsto es DOCTRINA ANTI-DUALISTA en forma litúrgica.\n\nEl dualismo — la herejía de los minim que la guemará tiene a la vista — divide el cosmos en dos jurisdicciones: un dios de la luz que gobierna el día y un poder de la tiniebla que gobierna la noche. Bajo esa cosmología, cada berajá sería un acto de culto TERRITORIAL: de mañana se alaba al señor de la luz; de noche, se aplaca al señor de la sombra.\n\nLa liturgia rabínica sabotea esa lectura DESDE DENTRO. Cada berajá cruza deliberadamente la frontera:\n\n  · en pleno DÍA, el rezador dice «uvore JÓSHEJ» — el Dios al que alabo ahora, en la luz, es el mismo que crea la oscuridad\n  · en plena NOCHE, dice «golel OR mipnei jóshej» — el Dios de esta oscuridad es el mismo que arrolla la luz\n\nEl círculo día/noche del diagrama lo ilustra: las dos mitades forman UNA figura, y las flechas cruzan de un dominio al otro. No hay frontera cósmica que la berajá no atraviese. El Dios de la luz ES el de la oscuridad; ningún poder rival gobierna la mitad del ciclo.\n\nPor eso «jóshej» NO se eufemiza aunque «ra» sí: el mal se suaviza por delicadeza litúrgica (lishana mealya), pero la oscuridad DEBE pronunciarse, porque su mención es el punto doctrinal entero. Quitar la oscuridad de la berajá matutina sería precisamente concederle al dualismo su premisa — que la luz y la tiniebla no se nombran juntas.\n\nLa teología se vuelve hábito: el judío que reza dos veces al día repite, sin necesidad de argumentar, la refutación del dualismo. La liturgia es el catecismo más eficaz — no se estudia, se PRONUNCIA, cada día, al amanecer y al anochecer.'
+    },
+    'abaye': {
+      titulo: 'Abaye · la medida del día en la noche',
+      hebreo: 'גּוֹלֵל אוֹר מִפְּנֵי חֹשֶׁךְ וְחֹשֶׁךְ מִפְּנֵי אוֹר',
+      traduccion: '«El que arrolla la luz ante la oscuridad y la oscuridad ante la luz»',
+      explicacion: 'La respuesta de Rava tiene dos mitades. La medida de la NOCHE en el día es evidente: «uvore jóshej» en yotzer or. Pero ¿cuál es la medida del DÍA en la noche? ¿Dónde menciona la berajá nocturna a la luz?\n\nAbaye señala la frase de MAARIV ARAVIM: גּוֹלֵל אוֹר מִפְּנֵי חֹשֶׁךְ וְחֹשֶׁךְ מִפְּנֵי אוֹר — «el que arrolla la luz ante la oscuridad y la oscuridad ante la luz». Ahí está: la palabra «or» pronunciada en plena noche.\n\nLa imagen del verbo גּוֹלֵל merece atención: es el verbo de ENROLLAR un pergamino — el mismo que se usa para el sefer Torá. El cielo es un rollo, y HKBH lo enrolla en ambos sentidos: al atardecer arrolla la luz para dejar paso a la oscuridad; al alba arrolla la oscuridad para dejar paso a la luz.\n\nLa imagen es anti-dualista por su propia mecánica:\n\n  · NO hay batalla — la luz no es «derrotada» por la tiniebla al anochecer, ni la tiniebla «vencida» al alba\n  · hay UNA MANO — el mismo sujeto realiza ambos movimientos; el verbo tiene un solo agente\n  · el ciclo es ORDEN, no guerra — la alternancia día/noche no es el frente de combate de dos poderes sino la respiración regular de una sola creación\n\nAsí, la simetría de Rava queda completa: yotzer or nombra la oscuridad en la mañana; maariv aravim nombra la luz en la noche. Cada berajá lleva incrustada la mitad opuesta del ciclo, y las dos juntas dibujan el círculo completo bajo un solo Creador.'
+    },
+    'ahava': {
+      titulo: 'La segunda berajá · ahava rabba vs ahavat olam',
+      hebreo: 'אַהֲבָה רַבָּה · אַהֲבַת עוֹלָם — וְאַהֲבַת עוֹלָם אֲהַבְתִּיךְ, עַל כֵּן מְשַׁכְתִּיךָ חָסֶד',
+      traduccion: '«Amor abundante · amor eterno — con amor eterno te amé, por eso te atraje con jésed» (Yirmiyahu 31:3)',
+      explicacion: 'La guemará pasa a la SEGUNDA berajá previa al shema — y la majloket es sobre el nombre del amor.\n\nRAV YEHUDA EN NOMBRE DE SHMUEL: se dice אַהֲבָה רַבָּה — «amor ABUNDANTE». Y la tradición tiene cadena: así le enseñó R. Elazar a su hijo R. Pedat — la fórmula se transmite de padre a hijo, como corresponde a una berajá sobre el amor.\n\nLOS RABANAN: se dice אַהֲבַת עוֹלָם — «amor ETERNO», y traen prueba del pasuk de Yirmiyahu 31:3: «וְאַהֲבַת עוֹלָם אֲהַבְתִּיךְ, עַל כֵּן מְשַׁכְתִּיךָ חָסֶד» — «con amor eterno te amé, por eso te atraje con jésed». Si el profeta ya acuñó la expresión, la berajá la adopta.\n\nLa diferencia entre las dos fórmulas es de énfasis: «rabba» mide la INTENSIDAD del amor (abundante, desbordante — el amor manifestado en el presente); «olam» mide su DURACIÓN (eterno, anterior y posterior a todo — el amor como constante histórica). La liturgia posterior resolverá la majloket salomónicamente: ahava rabba en shajarit, ahavat olam en maariv — las dos fórmulas conservadas, cada una en su mitad del ciclo.\n\nPero lo decisivo es la FUNCIÓN de la berajá, cualquiera sea su nombre: es la última palabra que el rezador pronuncia ANTES del shema. La secuencia litúrgica dice algo que ningún tratado de teología dice mejor:\n\n  1. primero la CREACIÓN — yotzer or: un solo Dios para el ciclo entero\n  2. después el AMOR — ahava: ese Dios nos ama, y por amor nos dio la Torá\n  3. solo entonces la FE — shema: la declaración de la unicidad\n\nLa declaración de amor PRECEDE a la declaración de fe. El shema no se recita en el vacío: se recita como respuesta de alguien que acaba de ser declarado amado. El pasuk de Yirmiyahu da la dinámica exacta: «te amé, POR ESO te atraje» — la iniciativa es divina, el amor es primero, la adhesión humana es respuesta.\n\nDe esta berajá se deriva además una consecuencia halájica (11b): quien ya dijo ahava rabba queda EXIMIDO de birkat haTorá — porque la berajá del amor incluye el agradecimiento por la Torá. Ver la nota sobre birkat haTorá.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.yotzer-interactivo')
+    : document.querySelector('.yotzer-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#yotzer-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.yotzer-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="yotzer-panel-header">' +
+        '<p class="yotzer-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="yotzer-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="yotzer-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="yotzer-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.yotzer-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.yotzer-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="yotzer-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
