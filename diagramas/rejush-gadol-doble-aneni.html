@@ -1,0 +1,385 @@
+<div class="rejush-interactivo">
+<style>
+  .rejush-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .rejush-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .rejush-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .rejush-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .rejush-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .rejush-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .rejush-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .rejush-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .rejush-diagrama svg { width: 100%; height: auto; display: block; }
+  .rejush-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .rejush-nodo:hover rect { stroke-width: 2 !important; }
+  .rejush-nodo:hover circle { stroke-width: 2.5 !important; }
+  .rejush-nodo.activa rect { stroke-width: 2.5 !important; }
+  .rejush-nodo.activa circle { stroke-width: 3 !important; }
+  .rejush-nodo.dim { opacity: 0.32; }
+  .rejush-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .rejush-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .rejush-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .rejush-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .rejush-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .rejush-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .rejush-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="rejush-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la promesa divina</span>
+  <span><span class="swatch rojo"></span>protesta · edición humana</span>
+  <span><span class="swatch verde"></span>cumplimiento a la fuerza</span>
+  <span><span class="swatch azul"></span>el doble aneni</span>
+  <span><span class="swatch sepia"></span>convergencia</span>
+</div>
+
+<div class="rejush-diagrama">
+<svg viewBox="0 0 720 900" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 9b: el rejush gadol, Ehyeh asher Ehyeh y el doble aneni de Eliyahu — tres promesas dobles que convergen</title>
+
+<defs>
+  <marker id="flecha-rj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-rj-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El botín de Egipto y el doble aneni · promesas que se cumplen dos veces</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 9b · el rejush gadol de Avraham · la promesa editada de Moshé · el Carmel de Eliyahu</text>
+
+<!-- CABECERAS DE LAS TRES RAMAS -->
+<text x="129" y="78" text-anchor="middle" font-size="9" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1">RAMA A · REJUSH GADOL</text>
+<text x="360" y="78" text-anchor="middle" font-size="9" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1">RAMA B · PROMESA EDITADA</text>
+<text x="591" y="78" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1">RAMA C · DOBLE ANENI</text>
+
+<!-- ============================================================ -->
+<!-- RAMA A · EL REJUSH GADOL                                     -->
+<!-- ============================================================ -->
+
+<g class="rejush-nodo" data-id="promesa-avraham">
+  <rect x="18" y="88" width="222" height="140" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="129" y="108" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">La promesa con dos mitades</text>
+  <text x="129" y="128" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">״וַעֲבָדוּם וְעִנּוּ אֹתָם״</text>
+  <text x="129" y="142" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">esclavitud — קִייֵּם בָּהֶם · cumplida</text>
+  <text x="129" y="162" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">״וְאַחֲרֵי כֵן יֵצְאוּ בִּרְכֻשׁ גָּדוֹל״</text>
+  <text x="129" y="176" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">riqueza — לֹא קִייֵּם בָּהֶם · pendiente</text>
+  <text x="129" y="196" text-anchor="middle" font-size="8.5" fill="#3d2f23">que no diga «aquel tzadik»:</text>
+  <text x="129" y="210" text-anchor="middle" font-size="8.5" fill="#3d2f23">la mitad oscura sí, la luminosa no</text>
+</g>
+
+<line x1="129" y1="228" x2="129" y2="244" stroke="#3d2f23" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="mashal-prisionero">
+  <rect x="18" y="248" width="222" height="132" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="129" y="268" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">El mashal del prisionero</text>
+  <text x="129" y="290" text-anchor="middle" font-size="9" fill="#1a1410" font-style="italic">«sáquenme HOY de la cárcel</text>
+  <text x="129" y="304" text-anchor="middle" font-size="9" fill="#1a1410" font-style="italic">y no pido nada»</text>
+  <text x="129" y="326" text-anchor="middle" font-size="8.5" fill="#3d2f23">para el esclavo, la libertad inmediata</text>
+  <text x="129" y="340" text-anchor="middle" font-size="8.5" fill="#3d2f23">vale más que la plata de mañana</text>
+  <text x="129" y="360" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">Israel NO quería el botín</text>
+</g>
+
+<line x1="129" y1="380" x2="129" y2="396" stroke="#3d2f23" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="vayashilum">
+  <rect x="18" y="400" width="222" height="132" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="129" y="420" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Vayashilum · a la fuerza</text>
+  <text x="129" y="442" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">וַיַּשְׁאִלוּם</text>
+  <text x="129" y="460" text-anchor="middle" font-size="8.5" fill="#3d2f23">R. Ami: בעל כרחם — a la fuerza</text>
+  <text x="129" y="480" text-anchor="middle" font-size="8.5" fill="#2d6b4e">¿a la fuerza de EGIPTO?</text>
+  <text x="129" y="494" text-anchor="middle" font-size="8.5" fill="#2d6b4e">¿a la fuerza de ISRAEL?</text>
+  <text x="129" y="512" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">(por el peso de la carga)</text>
+</g>
+
+<line x1="129" y1="532" x2="129" y2="548" stroke="#3d2f23" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="vaciado">
+  <rect x="18" y="552" width="222" height="150" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="129" y="572" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">El vaciado de Egipto</text>
+  <text x="129" y="594" text-anchor="middle" font-size="9" fill="#2d6b4e" font-weight="600">R. Ami:</text>
+  <text x="129" y="610" text-anchor="middle" font-size="9" fill="#1a1410" font-style="italic">como una trampa SIN GRANO</text>
+  <text x="129" y="632" text-anchor="middle" font-size="9" fill="#2d6b4e" font-weight="600">Reish Lakish:</text>
+  <text x="129" y="648" text-anchor="middle" font-size="9" fill="#1a1410" font-style="italic">como un mar SIN PECES</text>
+  <text x="129" y="670" text-anchor="middle" font-size="8.5" fill="#3d2f23">el cumplimiento fue TOTAL:</text>
+  <text x="129" y="684" text-anchor="middle" font-size="8.5" fill="#3d2f23">la promesa quedó saldada con exceso</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RAMA B · EHYEH ASHER EHYEH                                   -->
+<!-- ============================================================ -->
+
+<g class="rejush-nodo" data-id="ehyeh">
+  <rect x="250" y="88" width="220" height="180" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="360" y="108" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Ehyeh asher Ehyeh</text>
+  <text x="360" y="130" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">אֶהְיֶה אֲשֶׁר אֶהְיֶה</text>
+  <text x="360" y="152" text-anchor="middle" font-size="9" direction="rtl" fill="#b8860b">אֲנִי הָיִיתִי עִמָּכֶם בְּשִׁעְבּוּד זֶה</text>
+  <text x="360" y="168" text-anchor="middle" font-size="9" direction="rtl" fill="#b8860b">וַאֲנִי אֶהְיֶה עִמָּכֶם בְּשִׁעְבּוּד מַלְכֻיוֹת</text>
+  <text x="360" y="188" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«Yo estuve con ustedes en esta esclavitud</text>
+  <text x="360" y="202" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">y estaré en la esclavitud de los imperios»</text>
+  <text x="360" y="226" text-anchor="middle" font-size="8.5" fill="#b8860b">HKBH anuncia a Moshé las</text>
+  <text x="360" y="240" text-anchor="middle" font-size="8.5" fill="#b8860b">esclavitudes FUTURAS junto</text>
+  <text x="360" y="254" text-anchor="middle" font-size="8.5" fill="#b8860b">con la redención presente</text>
+</g>
+
+<line x1="360" y1="268" x2="360" y2="284" stroke="#8b1a1a" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="daya-letzara">
+  <rect x="250" y="288" width="220" height="180" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="308" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Moshé protesta</text>
+  <text x="360" y="332" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">דַּיָּה לַצָּרָה בִּשְׁעָתָהּ</text>
+  <text x="360" y="352" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«basta a la angustia con su hora»</text>
+  <text x="360" y="378" text-anchor="middle" font-size="8.5" fill="#8b1a1a">¿de qué sirve anunciar HOY las</text>
+  <text x="360" y="392" text-anchor="middle" font-size="8.5" fill="#8b1a1a">esclavitudes de MAÑANA a un</text>
+  <text x="360" y="406" text-anchor="middle" font-size="8.5" fill="#8b1a1a">pueblo aún encadenado?</text>
+  <text x="360" y="430" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">el profeta EDITA el mensaje divino</text>
+  <text x="360" y="444" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">por misericordia pastoral</text>
+</g>
+
+<line x1="360" y1="468" x2="360" y2="484" stroke="#b8860b" stroke-width="1.1" marker-end="url(#flecha-rj-gold)"/>
+
+<g class="rejush-nodo" data-id="ehyeh-shelajani">
+  <rect x="250" y="488" width="220" height="180" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="360" y="508" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">HKBH acepta la edición</text>
+  <text x="360" y="532" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם</text>
+  <text x="360" y="552" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«EHYEH me envió a ustedes»</text>
+  <text x="360" y="576" text-anchor="middle" font-size="8.5" fill="#3d2f23">un solo Ehyeh, no dos:</text>
+  <text x="360" y="590" text-anchor="middle" font-size="8.5" fill="#3d2f23">el anuncio del sufrimiento futuro</text>
+  <text x="360" y="604" text-anchor="middle" font-size="8.5" fill="#3d2f23">se SUPRIME del mensaje público</text>
+  <text x="360" y="628" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">la promesa sigue íntegra en el cielo,</text>
+  <text x="360" y="642" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">pero se COMUNICA a la medida</text>
+  <text x="360" y="656" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">del que la escucha</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RAMA C · EL DOBLE ANENI                                      -->
+<!-- ============================================================ -->
+
+<g class="rejush-nodo" data-id="pregunta-abahu">
+  <rect x="480" y="88" width="222" height="170" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="591" y="108" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La pregunta de R. Abahu</text>
+  <text x="591" y="132" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">עֲנֵנִי · עֲנֵנִי</text>
+  <text x="591" y="152" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«respóndeme, respóndeme»</text>
+  <text x="591" y="176" text-anchor="middle" font-size="8.5" fill="#1e3a5f">¿por qué Eliyahu dijo DOS veces</text>
+  <text x="591" y="190" text-anchor="middle" font-size="8.5" fill="#1e3a5f">aneni en el monte Carmel?</text>
+  <text x="591" y="214" text-anchor="middle" font-size="8.5" fill="#3d2f23">(Melajim I 18:37 — el duelo</text>
+  <text x="591" y="228" text-anchor="middle" font-size="8.5" fill="#3d2f23">contra los profetas del Baal)</text>
+  <text x="591" y="246" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">ninguna palabra profética sobra</text>
+</g>
+
+<line x1="591" y1="258" x2="591" y2="274" stroke="#1e3a5f" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="aneni-fuego">
+  <rect x="480" y="278" width="222" height="170" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <circle cx="512" cy="310" r="17" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="512" y="316" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="545" y="306" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Aneni · el hecho</text>
+  <text x="545" y="322" font-size="9" fill="#3d2f23" font-style="italic">que baje el fuego</text>
+  <text x="591" y="352" text-anchor="middle" font-size="9" fill="#1a1410">que descienda fuego del cielo</text>
+  <text x="591" y="366" text-anchor="middle" font-size="9" fill="#1a1410">y consuma el sacrificio</text>
+  <text x="591" y="390" text-anchor="middle" font-size="8.5" fill="#3d2f23">el MILAGRO en sí:</text>
+  <text x="591" y="404" text-anchor="middle" font-size="8.5" fill="#3d2f23">el evento visible, público,</text>
+  <text x="591" y="418" text-anchor="middle" font-size="8.5" fill="#3d2f23">innegable ante todo el pueblo</text>
+  <text x="591" y="436" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">primera respuesta: el HECHO</text>
+</g>
+
+<line x1="591" y1="448" x2="591" y2="464" stroke="#1e3a5f" stroke-width="1.1" marker-end="url(#flecha-rj)"/>
+
+<g class="rejush-nodo" data-id="aneni-keshafim">
+  <rect x="480" y="468" width="222" height="170" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <circle cx="512" cy="500" r="17" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="512" y="506" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="545" y="496" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Aneni · el sentido</text>
+  <text x="545" y="512" font-size="9" fill="#3d2f23" font-style="italic">que no digan brujería</text>
+  <text x="591" y="542" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">מַעֲשֵׂה כְשָׁפִים</text>
+  <text x="591" y="562" text-anchor="middle" font-size="8.5" fill="#3d2f23">que nadie pueda explicar el fuego</text>
+  <text x="591" y="576" text-anchor="middle" font-size="8.5" fill="#3d2f23">como un truco de hechicería</text>
+  <text x="591" y="600" text-anchor="middle" font-size="8.5" fill="#1e3a5f">el milagro debe cerrar TODA</text>
+  <text x="591" y="614" text-anchor="middle" font-size="8.5" fill="#1e3a5f">explicación alternativa</text>
+  <text x="591" y="630" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">segunda respuesta: la INTERPRETACIÓN</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- CONVERGENCIA                                                  -->
+<!-- ============================================================ -->
+<path d="M 129 702 L 129 726 L 360 726" fill="none" stroke="#6b4423" stroke-width="1.1"/>
+<path d="M 591 638 L 591 726 L 360 726" fill="none" stroke="#6b4423" stroke-width="1.1"/>
+<line x1="360" y1="668" x2="360" y2="746" stroke="#6b4423" stroke-width="1.3" marker-end="url(#flecha-rj)"/>
+
+<text x="60" y="742" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CONVERGENCIA · LA ESTRUCTURA DOBLE</text>
+
+<g class="rejush-nodo" data-id="convergencia">
+  <rect x="60" y="750" width="600" height="120" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="774" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La promesa divina necesita DOS cumplimientos: el hecho y su interpretación</text>
+  <text x="360" y="798" text-anchor="middle" font-size="9.5" fill="#3d2f23">RAMA A — no basta salir de Egipto: hay que salir CON el rejush gadol, para que la promesa se SEPA cumplida</text>
+  <text x="360" y="816" text-anchor="middle" font-size="9.5" fill="#3d2f23">RAMA B — la promesa verdadera puede ser EDITADA en su anuncio sin dejar de ser verdadera</text>
+  <text x="360" y="834" text-anchor="middle" font-size="9.5" fill="#3d2f23">RAMA C — no basta que baje el fuego: hay que cerrar la lectura de מעשה כשפים</text>
+  <text x="360" y="856" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">cumplir la promesa · y que se sepa cumplida — la palabra divina se completa en la percepción humana</text>
+</g>
+
+</svg>
+</div>
+
+<div class="rejush-panel" id="rejush-panel">
+  <p class="rejush-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'promesa-avraham': {
+      titulo: 'La promesa con dos mitades · que no diga aquel tzadik',
+      hebreo: '״וַעֲבָדוּם וְעִנּוּ אֹתָם״ — קִייֵּם בָּהֶם · ״וְאַחֲרֵי כֵן יֵצְאוּ בִּרְכֻשׁ גָּדוֹל״ — לֹא קִייֵּם בָּהֶם',
+      traduccion: '«Los esclavizarán y los afligirán — lo cumplió en ellos · Después saldrán con gran riqueza — no lo cumplió en ellos»',
+      explicacion: 'La coda agádica de la gran sugyá del shema abre con un problema de CONTABILIDAD PROFÉTICA. La promesa a Avraham en el pacto entre las partes (Bereshit 15:13-14) tiene DOS mitades inseparables:\n\n  · La mitad OSCURA — וַעֲבָדוּם וְעִנּוּ אֹתָם: «los esclavizarán y los afligirán»\n  · La mitad LUMINOSA — וְאַחֲרֵי כֵן יֵצְאוּ בִּרְכֻשׁ גָּדוֹל: «y después saldrán con gran riqueza»\n\nEn la noche del éxodo, la primera mitad está sobradamente cumplida: 210 años de esclavitud y aflicción. Pero la segunda está a punto de quedar SIN CUMPLIR — Israel quiere salir ya, sin detenerse a pedir nada.\n\nY aquí la guemará pone en boca de HKBH un motivo asombroso: que no diga «aquel tzadik» — Avraham — que la mitad oscura de la profecía se cumplió con precisión y la mitad luminosa se quedó en palabras.\n\nLa teología implícita es audaz: HKBH se OBLIGA a sí mismo ante su propia palabra. La promesa no es retórica de consuelo — es DEUDA contraída. Y el acreedor es la memoria de Avraham: si la cuenta no cierra, el pacto entero queda bajo sospecha.\n\nPor eso HKBH INSISTE (דַּבֶּר־נָא — «por favor, habla») en que Israel pida los objetos de Egipto. No porque Israel los necesite. No porque los quiera. Sino para CERRAR LA CUENTA de la promesa — para que las dos mitades queden igualmente cumplidas y la palabra divina quede íntegra ante la historia.'
+    },
+    'mashal-prisionero': {
+      titulo: 'El mashal del prisionero · Israel no quería el botín',
+      hebreo: 'הוֹצִיאֵנִי הַיּוֹם — וְאֵינִי מְבַקֵּשׁ כְּלוּם',
+      traduccion: '«Sáquenme hoy — y no pido nada»',
+      explicacion: 'La guemará ilustra la resistencia de Israel con un mashal penetrante: un hombre está preso, y le dicen que mañana lo sacarán de la cárcel y le darán mucha plata. Su respuesta: «sáquenme HOY — y no pido nada».\n\nEl mashal captura una verdad psicológica que la promesa patriarcal no contempla: para el esclavo, la LIBERTAD INMEDIATA vale más que toda la riqueza prometida para después. El tiempo del que sufre no es el tiempo de la promesa.\n\nDos perspectivas chocan aquí:\n\n  · LA PERSPECTIVA DE LA PROMESA (la de Avraham, la de HKBH): la salida debe ser CON rejush gadol, porque así fue pactada. La riqueza es parte del cumplimiento.\n\n  · LA PERSPECTIVA DEL ESCLAVO (la de Israel en Egipto): la riqueza es un ESTORBO. Cada hora de demora para cargar vasos de plata es una hora más de Egipto.\n\nEl mashal explica por qué HKBH tiene que ROGAR (דַּבֶּר־נָא) que Israel pida el botín: los beneficiarios de la promesa NO la quieren. La promesa luminosa se cumple contra la voluntad de sus destinatarios.\n\nEsta es una idea profunda sobre las promesas divinas: se cumplen por la LÓGICA INTERNA de la palabra divina, no por el deseo humano del momento. Israel quería solo la mitad de la promesa; HKBH cumple la promesa ENTERA, porque su fidelidad no se mide por lo que el hombre pide sino por lo que la palabra dijo.'
+    },
+    'vayashilum': {
+      titulo: 'Vayashilum · a la fuerza — ¿de quién?',
+      hebreo: 'וַיַּשְׁאִלוּם — בְּעַל כׇּרְחָם',
+      traduccion: '«Y les dieron lo pedido — a la fuerza»',
+      explicacion: 'Sobre el versículo וַיַּשְׁאִלוּם (Shemot 12:36) — «y les dieron lo que pedían» — dice R. Ami: בְּעַל כׇּרְחָם, A LA FUERZA. Pero la guemará registra una ambigüedad deliciosa: ¿a la fuerza DE QUIÉN?\n\n  · UNOS DICEN: a la fuerza de EGIPTO. Los egipcios, quebrados por las plagas y aterrados por la muerte de los primogénitos, entregaron sus objetos contra su voluntad. El «préstamo» fue una expropiación bajo pánico.\n\n  · OTROS DICEN: a la fuerza de ISRAEL. Los propios israelitas cargaron el botín contra su voluntad — por el PESO DE LA CARGA. Cada familia salía al desierto cargando plata, oro y vestidos que no había pedido tener, mientras lo único que quería llevar era su libertad y su masa sin leudar.\n\nLa segunda lectura es la más sorprendente y la que conecta con el mashal del prisionero: el cumplimiento de la promesa luminosa fue una IMPOSICIÓN sobre los redimidos. Israel salió de Egipto obligado a ser rico.\n\nLa ambigüedad es teológicamente productiva: en ambas lecturas, NADIE quería la transacción. Ni Egipto quería dar, ni Israel quería recibir. La única voluntad que se cumple en וישאלום es la de la PROMESA — la palabra dicha a Avraham siglos antes, que se abre paso a la fuerza entre las reticencias de todos los actores humanos.\n\nEl rejush gadol no es un premio deseado: es una CLÁUSULA CONTRACTUAL ejecutada.'
+    },
+    'vaciado': {
+      titulo: 'El vaciado · trampa sin grano, mar sin peces',
+      hebreo: 'כִּמְצוּדָה שֶׁאֵין בָּהּ דָּגָן · כִּמְצוּלָה שֶׁאֵין בָּהּ דָּגִים',
+      traduccion: 'Como trampa sin grano · como profundidad sin peces',
+      explicacion: 'Dos imágenes rematan la rama del rejush gadol, midiendo CUÁNTO se cumplió la promesa:\n\n  · R. AMI: vaciaron Egipto como una TRAMPA SIN GRANO — la trampa de aves que ya no tiene cebo. Está montada, pero no queda nada dentro que atraiga.\n\n  · REISH LAKISH: como un MAR SIN PECES (מְצוּלָה — la profundidad del agua) — el mar sigue ahí, enorme, pero su interior está VACÍO de lo que lo hacía valioso.\n\nLas dos imágenes comparten una estructura: el CONTINENTE permanece y el CONTENIDO desaparece. Egipto sigue existiendo como país después del éxodo — sus ciudades, su río, su corte. Pero su riqueza interior se fue con Israel.\n\nLa gradación entre los dos sabios es fina: la trampa sin grano aún puede reponerse — se le pone cebo nuevo. El mar sin peces es un vaciamiento más radical: lo que se fue no se repone.\n\n¿Por qué importa medir el vaciado? Porque cierra la CONTABILIDAD abierta en el primer nodo. La promesa decía רְכֻשׁ גָּדוֹל — riqueza GRANDE. Si Israel hubiera salido con algunas joyas, la promesa se habría cumplido con mezquindad, y «aquel tzadik» aún tendría motivo de queja. El vaciado TOTAL — hasta la última moneda, como trampa sin grano, como mar sin peces — garantiza que la mitad luminosa se cumplió con la misma precisión desbordante que la mitad oscura.\n\nLa promesa no solo se cumple: se cumple de manera VERIFICABLE, medible, narrable. Y esa verificabilidad es el puente hacia la convergencia final de la sugyá.'
+    },
+    'ehyeh': {
+      titulo: 'Ehyeh asher Ehyeh · la promesa que anuncia demasiado',
+      hebreo: 'אֲנִי הָיִיתִי עִמָּכֶם בְּשִׁעְבּוּד זֶה · וַאֲנִי אֶהְיֶה עִמָּכֶם בְּשִׁעְבּוּד מַלְכֻיוֹת',
+      traduccion: '«Yo estuve con ustedes en esta esclavitud · y Yo estaré con ustedes en la esclavitud de los imperios»',
+      explicacion: 'La segunda rama toma el nombre divino de la zarza ardiente (Shemot 3:14): אֶהְיֶה אֲשֶׁר אֶהְיֶה — «Seré el que seré». La guemará lee la duplicación del verbo como una promesa DOBLE en el tiempo:\n\n  · PRIMER EHYEH: Yo estoy con ustedes en ESTA esclavitud — la de Egipto, la presente\n  · SEGUNDO EHYEH: Yo estaré con ustedes en la esclavitud de los IMPERIOS — Babilonia, Persia, Grecia, Roma... todas las servidumbres futuras\n\nLeída así, la promesa es inmensa: HKBH garantiza su presencia en TODOS los exilios por venir. Es la promesa de acompañamiento más amplia de la Torá — ningún sufrimiento futuro encontrará al pueblo solo.\n\nPero la promesa tiene un problema de FORMATO: para prometer compañía en las esclavitudes futuras, hay que ANUNCIAR las esclavitudes futuras. El consuelo lleva dentro una noticia devastadora: habrá más exilios. El pueblo que aún no ha salido de Egipto recibiría, junto con su liberación, el catálogo de sus próximas cadenas.\n\nEste es el nudo de la rama B: una promesa VERDADERA y BUENA puede ser, en su anuncio, CRUEL. La verdad completa dicha en el momento equivocado no consuela — aplasta.\n\nAquí la estructura se conecta con la rama A: allá la promesa tenía dos mitades (oscura y luminosa) que debían cumplirse ambas; acá la promesa tiene dos tiempos (presente y futuro) — y la pregunta es si deben ANUNCIARSE ambos.'
+    },
+    'daya-letzara': {
+      titulo: 'Daya letzará bishatá · Moshé edita el mensaje',
+      hebreo: 'דַּיָּה לַצָּרָה בִּשְׁעָתָהּ',
+      traduccion: '«Basta a la angustia con su hora»',
+      explicacion: 'Moshé escucha la promesa doble — «estaré con ellos en esta esclavitud y en las esclavitudes de los imperios» — y PROTESTA ante HKBH:\n\n  דַּיָּה לַצָּרָה בִּשְׁעָתָהּ — «basta a la angustia con su hora»\n\nCada tzará tiene suficiente con su propio momento. El pueblo que todavía carga ladrillos en Egipto NO necesita saber que después de esta esclavitud vendrán otras. Anunciar el sufrimiento futuro al que sufre ahora es duplicar su carga sin darle ninguna herramienta.\n\nLa audacia del momento es extraordinaria. Moshé — en su PRIMERA conversación con HKBH, en la zarza, antes de ninguna experiencia profética — se atreve a hacer CRÍTICA EDITORIAL del mensaje divino. No discute su verdad: discute su OPORTUNIDAD. No dice «eso es falso»; dice «eso no se dice AHORA».\n\nEl principio que Moshé formula se volvió proverbial en el judaísmo: דיה לצרה בשעתה es la regla de oro de la pastoral del sufrimiento. Al que está en la angustia se le da lo que su hora necesita — no el panorama completo del dolor por venir.\n\nObserva el paralelo con la rama A: allá Israel decía «sáquenme hoy y no pido nada» — el presente del que sufre no quiere el futuro prometido (la riqueza). Acá Moshé dice «basta a la angustia con su hora» — el presente del que sufre no debe cargar el futuro anunciado (los exilios). En ambas ramas, el TIEMPO HUMANO del sufrimiento entra en tensión con el TIEMPO TOTAL de la palabra divina, que abarca siglos.'
+    },
+    'ehyeh-shelajani': {
+      titulo: 'Ehyeh shelajani · HKBH acepta la edición',
+      hebreo: 'כֹּה תֹאמַר לִבְנֵי יִשְׂרָאֵל — אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם',
+      traduccion: '«Así dirás a los hijos de Israel: EHYEH me envió a ustedes»',
+      explicacion: 'Y aquí lo inaudito: HKBH le da la razón a Moshé. La respuesta divina (Shemot 3:14) reformula el mensaje:\n\n  «Así dirás a los hijos de Israel: אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם — EHYEH me envió a ustedes»\n\nUn solo Ehyeh. No «Ehyeh asher Ehyeh» — no la fórmula doble que anunciaba las esclavitudes futuras. El nombre completo queda para la conversación entre HKBH y Moshé; el mensaje PÚBLICO lleva solo la promesa del presente: Yo estoy con ustedes en ESTA angustia.\n\nLas implicaciones son enormes:\n\n  1. LA PROMESA NO SE ANULA — SE EDITA. HKBH sigue comprometido con todos los exilios futuros. El segundo Ehyeh sigue vigente en el cielo. Lo que cambia es su COMUNICACIÓN: se suprime del anuncio, no del compromiso.\n\n  2. LA PALABRA DIVINA ADMITE REDACCIÓN HUMANA. El profeta no es un altavoz pasivo — es un EDITOR responsable, que conoce a su audiencia y calibra el mensaje. Y HKBH honra esa mediación.\n\n  3. LA MISERICORDIA OPERA SOBRE LA FORMA, no solo sobre el contenido. Hay una compasión que consiste en QUÉ se hace, y otra que consiste en QUÉ se dice y cuándo. La segunda es la que Moshé enseña aquí.\n\nEsta es la segunda cara de la estructura doble de la sugyá: en la rama A, la promesa debía cumplirse ENTERA aunque nadie la quisiera. En la rama B, la promesa puede anunciarse A MEDIAS por compasión. El cumplimiento es innegociable; el ANUNCIO es editable. La fidelidad divina está en los hechos; la ternura divina, en las palabras.'
+    },
+    'pregunta-abahu': {
+      titulo: 'La pregunta de R. Abahu · ¿por qué dos veces aneni?',
+      hebreo: 'עֲנֵנִי ה׳ עֲנֵנִי',
+      traduccion: '«Respóndeme, HaShem, respóndeme» (Melajim I 18:37)',
+      explicacion: 'La tercera rama salta del Sinaí al monte Carmel. En el duelo contra los 450 profetas del Baal, Eliyahu reza sobre su altar empapado de agua — y su plegaria contiene una repetición: עֲנֵנִי ה׳ עֲנֵנִי, «respóndeme, HaShem, respóndeme».\n\nR. Abahu hace la pregunta del lector talmúdico entrenado: ¿por qué DOS veces? En la lectura rabínica ninguna palabra de la Escritura sobra. Si Eliyahu dijo aneni dos veces, PIDIÓ DOS COSAS DISTINTAS.\n\nEl contexto hace la pregunta más aguda. El Carmel es el experimento teológico público más dramático del Tanaj: dos altares, dos toros, y la prueba pactada — «el dios que responda con FUEGO, ese es Dios». Los profetas del Baal danzan y se sajan durante horas: nada. Eliyahu moja su altar tres veces, para que el milagro sea inconfundible, y entonces reza.\n\nEn ese momento culminante, cada palabra cuenta. Eliyahu no está repitiendo por énfasis emocional — está formulando una petición con DOS CLÁUSULAS, porque sabe que un milagro tiene dos maneras de fallar:\n\n  · puede NO OCURRIR — y entonces el Baal gana\n  · puede ocurrir y ser MAL INTERPRETADO — y entonces el fuego mismo se vuelve argumento contra HKBH\n\nLa respuesta de R. Abahu (los dos nodos siguientes) despliega estas dos cláusulas — y con ellas, la misma estructura doble que gobierna toda la sugyá.'
+    },
+    'aneni-fuego': {
+      titulo: 'Primer aneni · que baje el fuego',
+      hebreo: 'עֲנֵנִי — שֶׁתֵּרֵד אֵשׁ מִן הַשָּׁמַיִם',
+      traduccion: '«Respóndeme — que baje fuego del cielo»',
+      explicacion: 'El PRIMER aneni pide el hecho: que descienda fuego del cielo y consuma el sacrificio.\n\nEsta es la petición obvia, la que el duelo del Carmel exige por sus propias reglas. Sin fuego no hay nada: ni prueba, ni victoria, ni retorno del pueblo. El primer aneni pide que el MILAGRO OCURRA.\n\nY ocurre con desmesura (Melajim I 18:38): el fuego de HaShem cae y consume el toro, la leña, las piedras, el polvo — y lame hasta el agua de la zanja. Un fuego que quema PIEDRAS y AGUA: el hecho es total, público, presenciado por todo Israel reunido.\n\nEn la estructura de la sugyá, este primer aneni corresponde al CUMPLIMIENTO de las otras ramas:\n\n  · en la rama A: que Israel efectivamente salga con el rejush gadol — el hecho prometido\n  · en la rama B: que HKBH efectivamente esté con el pueblo en su angustia — la presencia real\n  · en la rama C: que el fuego efectivamente baje — el evento\n\nPero la sugyá entera enseña que el hecho, por sí solo, NO BASTA. Un hecho sin interpretación asegurada queda a merced de sus espectadores. La salida de Egipto sin botín habría dejado la promesa en entredicho; el fuego del Carmel sin la segunda petición habría dejado el milagro expuesto a la lectura escéptica. Por eso Eliyahu no se detiene en el primer aneni — sabe que el milagro tiene todavía un flanco abierto.'
+    },
+    'aneni-keshafim': {
+      titulo: 'Segundo aneni · que no digan maasé keshafim',
+      hebreo: 'עֲנֵנִי — שֶׁלֹּא יֹאמְרוּ מַעֲשֵׂה כְשָׁפִים הֵם',
+      traduccion: '«Respóndeme — que no digan: es obra de brujería»',
+      explicacion: 'El SEGUNDO aneni es la genialidad de la lectura de R. Abahu: Eliyahu pide que, una vez bajado el fuego, NADIE PUEDA DECIR que fue מַעֲשֵׂה כְשָׁפִים — obra de brujería.\n\nEliyahu conoce a su audiencia. Vive en la generación de Izével, saturada de magos y profetas paganos. Un fuego que baja del cielo es impresionante — pero un ilusionista hábil también impresiona. Si el pueblo puede archivar el milagro como «truco», el Carmel entero fue inútil: el hecho habrá ocurrido y la verdad habrá perdido.\n\nEl segundo aneni pide entonces algo más sutil que un milagro: pide el CIERRE DE LAS EXPLICACIONES ALTERNATIVAS. Que el evento venga acompañado de la certeza interior de su origen. Y el versículo muestra la petición concedida: el pueblo cae sobre su rostro y grita ה׳ הוּא הָאֱלֹהִים — «HaShem es Dios» — no «qué gran mago es Eliyahu».\n\nLa distinción es válida para toda epistemología religiosa: ningún hecho, por espectacular que sea, INTERPRETA por sí mismo. Entre el evento y su sentido hay un salto — y ese salto puede fallar. Eliyahu reza por las dos orillas del salto: por el hecho (primer aneni) y por su recepción (segundo aneni).\n\nEsta es exactamente la estructura del rejush gadol: HKBH no se conforma con sacar a Israel de Egipto (el hecho) — insiste en el botín para que la promesa se SEPA cumplida (la interpretación). El milagro necesita dos respuestas porque la verdad, en el mundo humano, siempre necesita dos victorias: ocurrir y ser reconocida.'
+    },
+    'convergencia': {
+      titulo: 'Convergencia · el hecho y su interpretación',
+      hebreo: 'לְקַיֵּים · וְשֶׁיִּוָּדַע שֶׁנִּתְקַיֵּים',
+      traduccion: 'Cumplir · y que se sepa cumplido',
+      explicacion: 'Las tres ramas de Berajot 9b dibujan una sola estructura teológica: LA PROMESA DIVINA NECESITA DOS CUMPLIMIENTOS — el hecho, y su interpretación.\n\n  RAMA A — EL REJUSH GADOL: no basta que Israel salga de Egipto. Debe salir CON gran riqueza, aunque nadie la quiera y haya que imponerla a la fuerza, para que la promesa a Avraham quede VERIFICABLEMENTE cumplida — vaciada como trampa sin grano, como mar sin peces. El hecho (la salida) requiere su certificado (el botín).\n\n  RAMA B — LA PROMESA EDITADA: el compromiso divino con todos los exilios futuros es íntegro, pero su ANUNCIO se recorta por misericordia — daya letzará bishatá. Aquí la interpretación opera ANTES del hecho: lo que el pueblo debe saber se calibra a lo que el pueblo puede cargar. El cumplimiento es innegociable; la comunicación es editable.\n\n  RAMA C — EL DOBLE ANENI: el fuego debe bajar (hecho) Y debe quedar cerrada la lectura de maasé keshafim (interpretación). Eliyahu reza dos veces porque la victoria de la verdad exige dos respuestas.\n\nLa doctrina que emerge: en el mundo humano, ningún acto divino está completo hasta que es RECONOCIDO como tal. La palabra de HKBH opera en dos registros — el de los eventos y el de su sentido — y la sugyá muestra a HKBH atendiendo escrupulosamente a ambos: insiste en el botín por la memoria de Avraham, acepta la edición de Moshé por el corazón del pueblo, responde dos veces a Eliyahu por los ojos de Israel.\n\nEs un cierre perfecto para la gran sugyá del shema: el shema mismo es eso — el pueblo declarando, dos veces al día, que RECONOCE. El hecho de la unidad divina es eterno; su interpretación se cumple cada mañana y cada noche en la boca del que recita.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.rejush-interactivo')
+    : document.querySelector('.rejush-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#rejush-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.rejush-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="rejush-panel-header">' +
+        '<p class="rejush-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="rejush-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="rejush-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="rejush-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.rejush-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.rejush-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="rejush-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
