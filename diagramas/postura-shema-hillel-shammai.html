@@ -1,0 +1,352 @@
+<div class="postura-interactivo">
+<style>
+  .postura-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .postura-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .postura-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .postura-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .postura-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .postura-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .postura-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .postura-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .postura-diagrama svg { width: 100%; height: auto; display: block; }
+  .postura-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .postura-nodo:hover rect { stroke-width: 2.2 !important; }
+  .postura-nodo.activa rect { stroke-width: 2.8 !important; }
+  .postura-nodo.dim { opacity: 0.32; }
+  .postura-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .postura-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .postura-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .postura-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .postura-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .postura-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .postura-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="postura-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>el pasuk disputado</span>
+  <span><span class="swatch azul"></span>Beit Shammai</span>
+  <span><span class="swatch verde"></span>Beit Hillel</span>
+  <span><span class="swatch rojo"></span>peligro · veredictos</span>
+  <span><span class="swatch violeta"></span>el teatro de los maestros</span>
+</div>
+
+<div class="postura-diagrama">
+<svg viewBox="0 0 720 1150" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10b-11a: Beit Shammai vs Beit Hillel sobre la postura del shema · R. Tarfon entre bandidos · la escalada de veredictos · el teatro de R. Yishmael y R. Elazar ben Azaria</title>
+
+<defs>
+  <marker id="flecha-post" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-post-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La postura del shema · dos casas leen el mismo versículo</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10b-11a · mishná 1:3 · ¿la frase describe POSTURAS o marca HORAS?</text>
+
+<!-- ============================================================ -->
+<!-- EL PASUK CENTRAL                                             -->
+<!-- ============================================================ -->
+<text x="360" y="76" text-anchor="middle" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PASUK DISPUTADO · DEVARIM 6:7</text>
+
+<g class="postura-nodo" data-id="pasuk">
+  <rect x="180" y="86" width="360" height="94" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="118" text-anchor="middle" font-size="17" direction="rtl" fill="#1a1410" font-weight="600">וּבְשָׁכְבְּךָ וּבְקוּמֶךָ</text>
+  <text x="360" y="140" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«al acostarte y al levantarte»</text>
+  <text x="360" y="160" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la misma frase que fundó el perek entero · ahora disputada en su sentido corporal</text>
+</g>
+
+<!-- Flechas hacia las dos casas -->
+<line x1="270" y1="180" x2="195" y2="216" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-post)"/>
+<line x1="450" y1="180" x2="525" y2="216" stroke="#1e6b5a" stroke-width="1.2" marker-end="url(#flecha-post)"/>
+
+<!-- ============================================================ -->
+<!-- COLUMNA BEIT SHAMMAI (AZUL) · COLUMNA BEIT HILLEL (VERDE)    -->
+<!-- ============================================================ -->
+<text x="40" y="216" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">BEIT SHAMMAI · POSTURAS</text>
+<text x="680" y="216" text-anchor="end" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">BEIT HILLEL · HORAS</text>
+
+<!-- BS: shejivá mamash -->
+<g class="postura-nodo" data-id="bs-postura">
+  <rect x="40" y="226" width="310" height="132" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="195" y="248" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La lectura literal</text>
+  <text x="195" y="272" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1e3a5f">בִּשְׁעַת שְׁכִיבָה שְׁכִיבָה מַמָּשׁ</text>
+  <text x="195" y="290" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«en la hora de acostarse — acostado LITERALMENTE»</text>
+  <text x="58" y="314" font-size="9.5" fill="#3d2f23">· de noche → RECOSTADO</text>
+  <text x="58" y="330" font-size="9.5" fill="#3d2f23">· de mañana → DE PIE</text>
+  <text x="58" y="348" font-size="9" fill="#6b4423" font-style="italic">la frase describe el CUERPO del lector</text>
+</g>
+
+<!-- BH: kedarkó -->
+<g class="postura-nodo" data-id="bh-kedarko">
+  <rect x="370" y="226" width="310" height="132" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.4"/>
+  <text x="525" y="248" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">La lectura temporal</text>
+  <text x="525" y="272" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1e6b5a">כׇּל אָדָם קוֹרֵא כְּדַרְכּוֹ</text>
+  <text x="525" y="290" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«cada uno lee COMO ESTÁ» — porque dice וּבְלֶכְתְּךָ בַדֶּרֶךְ</text>
+  <text x="525" y="314" text-anchor="middle" font-size="10" direction="rtl" fill="#1e6b5a">בְּשָׁעָה שֶׁבְּנֵי אָדָם שׁוֹכְבִים וּבְשָׁעָה שֶׁבְּנֵי אָדָם עוֹמְדִים</text>
+  <text x="525" y="332" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">cuando la gente se acuesta · cuando la gente se levanta</text>
+  <text x="525" y="348" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la frase marca el RELOJ, no el cuerpo</text>
+</g>
+
+<!-- BS: exenciones -->
+<g class="postura-nodo" data-id="bs-exenciones">
+  <rect x="40" y="378" width="310" height="188" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="195" y="400" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">¿Y qué hace BS con וּבְלֶכְתְּךָ? · exenciones</text>
+  <text x="195" y="422" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">בְּשִׁבְתְּךָ — פְּרָט לְעוֹסֵק בְּמִצְוָה</text>
+  <text x="195" y="440" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">וּבְלֶכְתְּךָ — פְּרָט לְחָתָן</text>
+  <text x="58" y="462" font-size="9.5" fill="#3d2f23">Rav Papa: כִּי דֶּרֶךְ — מָה דֶּרֶךְ רְשׁוּת</text>
+  <text x="58" y="478" font-size="9" fill="#6b4423" font-style="italic">como el camino: lo VOLUNTARIO obliga; la mitzvá exime</text>
+  <text x="58" y="500" font-size="9.5" fill="#3d2f23">· desposa VIRGEN → exento (טִרְדָּא דְמִצְוָה)</text>
+  <text x="58" y="516" font-size="9.5" fill="#3d2f23">· desposa viuda → obligado</text>
+  <text x="58" y="532" font-size="9.5" fill="#3d2f23">· perdió su barco en el mar → obligado</text>
+  <text x="58" y="550" font-size="9" fill="#6b4423" font-style="italic">la angustia del barco es טִרְדָּא דִרְשׁוּת — no exime</text>
+</g>
+
+<!-- BH: baraita coreográfica -->
+<g class="postura-nodo" data-id="bh-baraita">
+  <rect x="370" y="378" width="310" height="188" rx="6" fill="rgba(30,107,90,0.06)" stroke="#1e6b5a" stroke-width="1.3"/>
+  <text x="525" y="400" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">La baraita de BH · coreografía de libertad</text>
+  <text x="525" y="426" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">עוֹמְדִין וְקוֹרִין</text>
+  <text x="525" y="446" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">יוֹשְׁבִין וְקוֹרִין</text>
+  <text x="525" y="466" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">מַטִּין וְקוֹרִין</text>
+  <text x="525" y="486" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">הוֹלְכִין בַּדֶּרֶךְ וְקוֹרִין</text>
+  <text x="525" y="506" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">עוֹשִׂין בִּמְלַאכְתָּן וְקוֹרִין</text>
+  <text x="525" y="530" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">de pie · sentados · recostados · caminando · TRABAJANDO</text>
+  <text x="525" y="550" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el shema entra en cualquier postura de la vida real</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- R. TARFON ENTRE LOS BANDIDOS                                 -->
+<!-- ============================================================ -->
+<line x1="195" y1="566" x2="330" y2="602" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-post-rojo)"/>
+<line x1="525" y1="566" x2="390" y2="602" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-post-rojo)"/>
+
+<text x="40" y="600" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PRECIO DE SER MÁS ESTRICTO · R. TARFON · 10B</text>
+
+<g class="postura-nodo" data-id="tarfon">
+  <rect x="40" y="610" width="640" height="140" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="634" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">R. Tarfon entre los bandidos</text>
+  <text x="360" y="658" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">אֲנִי הָיִיתִי בָּא בַּדֶּרֶךְ, וְהִטֵּתִי לִקְרוֹת כְּדִבְרֵי בֵּית שַׁמַּאי</text>
+  <text x="360" y="678" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">וְסִכַּנְתִּי בְּעַצְמִי מִפְּנֵי הַלִּסְטִים</text>
+  <text x="360" y="698" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">se recostó en plena ruta para leer como Beit Shammai — y casi lo matan los listim</text>
+  <text x="360" y="720" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">כְּדַי הָיִיתָ לָחוּב בְּעַצְמְךָ, שֶׁעָבַרְתָּ עַל דִּבְרֵי בֵּית הִלֵּל</text>
+  <text x="360" y="738" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">los sabios: «MERECÍAS perder la vida por transgredir las palabras de Beit Hillel»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESCALADA DE VEREDICTOS                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="750" x2="360" y2="768" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-post-rojo)"/>
+
+<text x="40" y="782" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALADA · ¿QUÉ PASA SI ALGUIEN ACTUÓ COMO BEIT SHAMMAI? · 11A</text>
+
+<g class="postura-nodo" data-id="veredicto-yejezkel">
+  <rect x="40" y="792" width="200" height="118" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="140" y="814" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">Rav Yejezkel</text>
+  <text x="140" y="842" text-anchor="middle" font-size="13" direction="rtl" fill="#8b1a1a">עָשָׂה</text>
+  <text x="140" y="862" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«hizo» — es válido</text>
+  <text x="140" y="884" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el más indulgente:</text>
+  <text x="140" y="898" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">cumplió bediavad</text>
+</g>
+
+<g class="postura-nodo" data-id="veredicto-yosef">
+  <rect x="260" y="792" width="200" height="118" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="360" y="814" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">Rav Yosef</text>
+  <text x="360" y="842" text-anchor="middle" font-size="13" direction="rtl" fill="#8b1a1a">לֹא עָשָׂה וְלֹא כְלוּם</text>
+  <text x="360" y="862" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«no hizo nada» — inválido</text>
+  <text x="360" y="884" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">prueba de la sucá:</text>
+  <text x="360" y="898" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">quien hace como BS no cumple</text>
+</g>
+
+<g class="postura-nodo" data-id="veredicto-najman">
+  <rect x="480" y="792" width="200" height="118" rx="6" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="580" y="814" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">Rav Najman bar Yitzjak</text>
+  <text x="580" y="842" text-anchor="middle" font-size="13" direction="rtl" fill="#8b1a1a" font-weight="700">חַיָּיב מִיתָה</text>
+  <text x="580" y="862" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«merece la MUERTE»</text>
+  <text x="580" y="884" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el más severo:</text>
+  <text x="580" y="898" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">como le pasó a R. Tarfon</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL TEATRO DE LOS MAESTROS                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="910" x2="360" y2="928" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-post)"/>
+
+<text x="40" y="942" font-size="9.5" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL TEATRO DE LOS MAESTROS · R. YISHMAEL Y R. ELAZAR BEN AZARIA · 11A</text>
+
+<g class="postura-nodo" data-id="teatro">
+  <rect x="40" y="952" width="640" height="150" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.5"/>
+  <text x="360" y="976" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">Al llegar el zman, se INVIERTEN</text>
+  <text x="200" y="1000" text-anchor="middle" font-size="9.5" fill="#3d2f23">R. Yishmael: recostado → SE YERGUE</text>
+  <text x="520" y="1000" text-anchor="middle" font-size="9.5" fill="#3d2f23">R. Elazar b. Azaria: erguido → SE RECUESTA</text>
+  <line x1="310" y1="996" x2="410" y2="996" stroke="#5a3a8a" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="360" y="1022" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">el mashal de la barba: «no me la dejé crecer para ti» — la razón profunda de Yishmael:</text>
+  <text x="360" y="1046" text-anchor="middle" font-size="11.5" direction="rtl" fill="#5a3a8a">שֶׁמָּא יִרְאוּ הַתַּלְמִידִים וְיִקְבְּעוּ הֲלָכָה לְדוֹרוֹת</text>
+  <text x="360" y="1066" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«no sea que los alumnos vean y fijen la halajá PARA LAS GENERACIONES»</text>
+  <text x="360" y="1088" text-anchor="middle" font-size="9" fill="#5a3a8a" font-style="italic">cada gesto de un maestro es jurisprudencia en potencia</text>
+</g>
+
+<text x="360" y="1132" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">La estrictez fuera de lugar no es piedad: es transgresión · la halajá quedó como Beit Hillel — כְּדַרְכּוֹ</text>
+
+</svg>
+</div>
+
+<div class="postura-panel" id="postura-panel">
+  <p class="postura-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'pasuk': {
+      titulo: 'El pasuk disputado · Devarim 6:7',
+      hebreo: 'וּבְשָׁכְבְּךָ וּבְקוּמֶךָ',
+      traduccion: '«al acostarte y al levantarte»',
+      explicacion: 'La mishná 1:3 convierte esta frase de la Torá en un duelo hermenéutico con consecuencias de vida o muerte.\n\nEs la MISMA frase que fundó el perek entero: de ella salió el CUÁNDO del shema (los zmanim de arvit y shajarit, diagramas anteriores). Cerrada esa pregunta — halajá como R. Yehoshua, hasta tres horas — la mishná pregunta ahora el CÓMO: ¿en qué POSTURA se lee el shema?\n\nLa ambigüedad es real y está en el texto mismo:\n\n  · Lectura CORPORAL: «al acostarte» = en posición acostada; «al levantarte» = en posición de pie. La frase describe el CUERPO del lector.\n\n  · Lectura TEMPORAL: «al acostarte» = en la hora en que la gente se acuesta; «al levantarte» = en la hora en que la gente se levanta. La frase marca el RELOJ.\n\nBeit Shammai toma la primera; Beit Hillel la segunda. De un lado sale una halajá de posturas obligatorias; del otro, una halajá de libertad corporal dentro de horarios fijos.\n\nLo notable es que ambas casas leen el MISMO versículo con total seriedad — la disputa no es sobre si la Torá obliga, sino sobre QUÉ obliga exactamente. Y el desenlace de la sugyá mostrará que elegir mal entre las dos lecturas puede costar la vida.'
+    },
+    'bs-postura': {
+      titulo: 'Beit Shammai · la lectura literal',
+      hebreo: 'בִּשְׁעַת שְׁכִיבָה שְׁכִיבָה מַמָּשׁ',
+      traduccion: '«en la hora de acostarse — acostado literalmente»',
+      explicacion: 'Beit Shammai lee ובשכבך ובקומך como descripción de POSTURAS: la Torá no solo dice cuándo leer, sino CÓMO debe estar el cuerpo.\n\n  · De NOCHE (ubshojbeja): todos deben RECOSTARSE para leer — יַטּוּ וְיִקְרְאוּ.\n  · De MAÑANA (uvkumeja): todos deben ponerse DE PIE — יַעַמְדוּ.\n\nLa lógica es de fidelidad máxima a la letra: si la Torá dice «al acostarte», la mímica corporal del acostarse es parte de la mitzvá. El shema nocturno se lee en la postura del que se acuesta; el matutino en la postura del que se levanta. El cuerpo entero ESCENIFICA el versículo.\n\nHay una coherencia estética en la posición de Beit Shammai: el shema no es solo recitación — es un acto corporal total, una coreografía obligatoria que alinea el cuerpo con la palabra. La estrictez tiene su belleza.\n\nPero el precio es alto: la halajá de Beit Shammai INTERRUMPE la vida. El que camina debe detenerse y recostarse; el que trabaja debe abandonar su labor y adoptar la postura. Y como mostrará R. Tarfon, recostarse en un camino de noche puede ser literalmente mortal.\n\nQueda además una pregunta exegética: si ובשכבך ובקומך describe posturas, ¿qué hace Beit Shammai con la frase vecina — ובלכתך בדרך, «al andar por el camino»? ¿Se puede leer caminando o no? Su respuesta está en el nodo de las exenciones.'
+    },
+    'bs-exenciones': {
+      titulo: 'El midrash del camino · las exenciones de Beit Shammai',
+      hebreo: 'בְּשִׁבְתְּךָ — פְּרָט לְעוֹסֵק בְּמִצְוָה · וּבְלֶכְתְּךָ — פְּרָט לְחָתָן',
+      traduccion: '«al sentarte» — excluye al ocupado en una mitzvá · «al andar» — excluye al novio',
+      explicacion: 'Beit Hillel usaba ובלכתך בדרך como prueba de que se lee en cualquier postura. ¿Qué hace Beit Shammai con esa frase? La convierte en la fuente de las EXENCIONES del shema:\n\n  · בְּשִׁבְתְּךָ («al sentarte») — excluye al עוֹסֵק בְּמִצְוָה, el ocupado en una mitzvá.\n  · וּבְלֶכְתְּךָ («al andar») — excluye al חָתָן, el novio.\n\nRav Papa formula el principio: כִּי דֶּרֶךְ — מָה דֶּרֶךְ רְשׁוּת. Como el camino: así como andar por el camino es un acto VOLUNTARIO (reshut), la Torá obliga al que está en lo voluntario — y EXIME al que anda en una mitzvá. El principio general: העוסק במצוה פטור מן המצוה — el ocupado en una mitzvá está exento de otra mitzvá.\n\nDe ahí la casuística del novio:\n\n  · Quien desposa VIRGEN → EXENTO. Está טְרִיד — preocupado, absorbido — por la mitzvá misma de la primera unión. Es טִרְדָּא דְמִצְוָה: preocupación de mitzvá, y exime.\n\n  · Quien desposa VIUDA → OBLIGADO. No hay la misma טרדה halájicamente relevante.\n\n  · ¿Y el que perdió su BARCO en el mar? Está tan angustiado como el novio — o más. Pero su preocupación es טִרְדָּא דִרְשׁוּת: preocupación por asunto voluntario/mundano. Sigue OBLIGADO. El duelo económico — incluso el duelo mismo — no exime del shema.\n\nLa distinción es quirúrgica: no se mide la INTENSIDAD de la preocupación (el del barco quizá sufre más que el novio), sino su FUENTE. Solo la preocupación generada por una mitzvá exime de otra mitzvá. La angustia mundana, por real que sea, no desconecta al judío de su obligación.'
+    },
+    'bh-kedarko': {
+      titulo: 'Beit Hillel · cada uno lee como está',
+      hebreo: 'כׇּל אָדָם קוֹרֵא כְּדַרְכּוֹ',
+      traduccion: '«cada persona lee según su manera» — como está',
+      explicacion: 'Beit Hillel desarma la lectura corporal con una sola frase del mismo versículo: וּבְלֶכְתְּךָ בַדֶּרֶךְ — «al andar por el camino». ¡La Torá misma contempla leer el shema CAMINANDO! Si la frase describiera posturas obligatorias, «al andar» obligaría a leer en movimiento — absurdo dentro del esquema de Shammai.\n\nPor tanto ובשכבך ובקומך no describe el cuerpo: marca las HORAS —\n\n  בְּשָׁעָה שֶׁבְּנֵי אָדָם שׁוֹכְבִים — en la hora en que la gente se ACUESTA (la noche)\n  וּבְשָׁעָה שֶׁבְּנֵי אָדָם עוֹמְדִים — en la hora en que la gente se LEVANTA (la mañana)\n\nEl versículo es un RELOJ social, no una coreografía. Fija el cuándo por la conducta general de la humanidad («cuando la gente se acuesta»), y deja el cómo en libertad total: כְּדַרְכּוֹ — cada uno como está, en la postura en que la vida lo encuentre.\n\nLa diferencia de fondo entre las dos casas es una filosofía de la mitzvá:\n\n  · Para Beit Shammai, la mitzvá INTERRUMPE la vida: hay que detenerse, cambiar de postura, escenificar el versículo.\n  · Para Beit Hillel, la mitzvá se INSERTA en la vida: el shema entra en el flujo cotidiano sin romperlo — el caminante lee caminando, el trabajador trabajando.\n\nEsta es la misma lectura temporal de ובשכבך que fundó los zmanim del perek (diagramas #1-#2): Beit Hillel es consistente con la estructura entera de la masejta. Y la halajá quedó como Beit Hillel — con una severidad sorprendente contra quien elija la otra opción, como muestra el resto del diagrama.'
+    },
+    'bh-baraita': {
+      titulo: 'La baraita de Beit Hillel · coreografía de libertad',
+      hebreo: 'עוֹמְדִין וְקוֹרִין · יוֹשְׁבִין וְקוֹרִין · מַטִּין וְקוֹרִין · הוֹלְכִין בַּדֶּרֶךְ וְקוֹרִין · עוֹשִׂין בִּמְלַאכְתָּן וְקוֹרִין',
+      traduccion: 'De pie y leen · sentados y leen · recostados y leen · andando por el camino y leen · haciendo su trabajo y leen',
+      explicacion: 'La baraita despliega la posición de Beit Hillel como una CINTA de escenas — cinco posturas, cinco veces el verbo וְקוֹרִין («y leen»):\n\n  1. עוֹמְדִין וְקוֹרִין — de pie y leen\n  2. יוֹשְׁבִין וְקוֹרִין — sentados y leen\n  3. מַטִּין וְקוֹרִין — recostados y leen\n  4. הוֹלְכִין בַּדֶּרֶךְ וְקוֹרִין — andando por el camino y leen\n  5. עוֹשִׂין בִּמְלַאכְתָּן וְקוֹרִין — haciendo su TRABAJO y leen\n\nLa repetición retórica es deliberada: el estribillo וקורין martillea que en TODAS las posturas se lee. La lista no es exhaustiva por casualidad — recorre el espectro completo de la vida corporal: reposo vertical, reposo sentado, reposo horizontal, movimiento, y el punto culminante: el TRABAJO.\n\nEl quinto caso es el más radical. Ni siquiera hace falta interrumpir la מְלָאכָה: el artesano puede recitar el shema mientras sus manos siguen en la labor. La aceptación del yugo del Cielo no compite con la vida productiva — la atraviesa.\n\nNótese que la lista de Beit Hillel INCLUYE el recostarse (מַטִּין): recostado también se puede leer. La libertad de Beit Hillel contiene la postura de Beit Shammai como una opción entre cinco. Lo que Beit Hillel rechaza no es recostarse — es la OBLIGACIÓN de recostarse.\n\nPor eso el pecado de R. Tarfon (nodo rojo) es sutil: recostarse per se estaba permitido. Lo que lo condena es haberse recostado COMO ACTO DE ADHESIÓN a Beit Shammai — convertir la opción en obligación, tratando la halajá rechazada como norma. La coreografía de libertad no admite que se la renuncie en nombre de una estrictez derogada.'
+    },
+    'tarfon': {
+      titulo: 'R. Tarfon entre los bandidos',
+      hebreo: 'אֲנִי הָיִיתִי בָּא בַּדֶּרֶךְ, וְהִטֵּתִי לִקְרוֹת כְּדִבְרֵי בֵּית שַׁמַּאי, וְסִכַּנְתִּי בְּעַצְמִי מִפְּנֵי הַלִּסְטִים',
+      traduccion: '«Yo venía por el camino, y me recosté para leer según las palabras de Beit Shammai, y me puse en peligro por los bandidos»',
+      explicacion: 'La mishná misma trae el testimonio dramático. R. Tarfon — discípulo de la casa de HILLEL — venía de camino de noche. Llegó el momento del shema y decidió ser «más estricto»: en lugar de leer caminando (como le permitía su propia escuela), se RECOSTÓ en plena ruta, como exige Beit Shammai.\n\nY casi lo matan. Un hombre tendido e inmóvil en un camino nocturno es presa perfecta para los לִסְטִים — los bandidos que infestaban las rutas de Judea. וְסִכַּנְתִּי בְּעַצְמִי — «me puse en peligro a mí mismo».\n\nR. Tarfon cuenta el episodio quizá esperando reconocimiento por su celo. La respuesta de los sabios es una bofetada:\n\n  כְּדַי הָיִיתָ לָחוּב בְּעַצְמְךָ, שֶׁעָבַרְתָּ עַל דִּבְרֵי בֵּית הִלֵּל\n  «MERECÍAS perder la vida, porque transgrediste las palabras de Beit Hillel»\n\nNo lo consuelan. No dicen «qué bueno que te salvaste». Dicen: el peligro que corriste era MERECIDO — no a pesar de tu piedad, sino A CAUSA de ella.\n\nLa enseñanza es una de las más incisivas del perek: LA ESTRICTEZ FUERA DE LUGAR NO ES PIEDAD — ES TRANSGRESIÓN. Una vez que la halajá quedó como Beit Hillel, actuar como Beit Shammai no es «cumplir según todos»: es rebelión contra la halajá establecida. La jumrá (estrictez) unilateral socava el sistema mismo que le da sentido a cualquier norma.\n\nHay también una ironía estructural: R. Tarfon se recostó por fidelidad al versículo según Shammai — y el episodio prueba empíricamente a Hillel: la Torá dice ובלכתך בדרך porque en el camino se lee CAMINANDO. El camino real, con sus bandidos reales, es exactamente el escenario para el que la lectura de Beit Hillel fue diseñada.'
+    },
+    'veredicto-yejezkel': {
+      titulo: 'Rav Yejezkel · «hizo» — es válido',
+      hebreo: 'עָשָׂה כְּדִבְרֵי בֵּית שַׁמַּאי — עָשָׂה',
+      traduccion: '«Si hizo según las palabras de Beit Shammai — hizo (es válido)»',
+      explicacion: 'La gemará de 11a pregunta qué estatus tiene, después del veredicto contra R. Tarfon, la acción de quien actuó como Beit Shammai. Tres amoraím responden en escalada — y este es el peldaño más indulgente.\n\nRav Yejezkel enseña: עָשָׂה כְּדִבְרֵי בֵּית שַׁמַּאי — עָשָׂה. Quien hizo como Beit Shammai — HIZO: su lectura del shema es válida, cumplió la mitzvá (al menos bediavad, después del hecho).\n\nLa lógica de la indulgencia: Beit Shammai no es una opinión cualquiera — es una de las dos grandes casas, con tradición y razones propias. אלו ואלו דברי אלהים חיים — «estas y estas son palabras del Dios vivo». Aunque la halajá quedó como Hillel, la posición de Shammai conserva dignidad de Torá: quien la siguió no leyó «mal», leyó según una escuela legítima derrotada.\n\nEn este esquema, la norma «halajá como Beit Hillel» fija lo que se DEBE hacer lejatjilá (de entrada), pero no anula retroactivamente el valor de la acción hecha según Shammai.\n\nEs la única de las tres opiniones que salva algo del acto. Las dos siguientes — Rav Yosef y Rav Najman bar Yitzjak — cierran esa puerta con severidad creciente, hasta llegar a la fórmula extrema: merece la muerte.'
+    },
+    'veredicto-yosef': {
+      titulo: 'Rav Yosef · «no hizo nada» — la prueba de la sucá',
+      hebreo: 'עָשָׂה כְּדִבְרֵי בֵּית שַׁמַּאי — לֹא עָשָׂה וְלֹא כְלוּם',
+      traduccion: '«Si hizo según Beit Shammai — no hizo nada en absoluto»',
+      explicacion: 'Rav Yosef sube un peldaño: quien actuó como Beit Shammai לֹא עָשָׂה וְלֹא כְלוּם — NO HIZO NADA EN ABSOLUTO. Su lectura del shema es NULA: no cumplió la mitzvá ni siquiera bediavad. Debe volver a leer.\n\nY trae la PRUEBA DE LA SUCÁ. La mishná de Sucá relata: los ancianos de Beit Shammai y de Beit Hillel visitaron a R. Yojanán ben haJoraní, y lo encontraron sentado con la cabeza y la mayor parte del cuerpo dentro de la sucá, pero con la mesa dentro de la casa (postura válida para Hillel, inválida para Shammai). Los de Beit Shammai le dijeron: si así te has comportado siempre — לֹא קִיַּימְתָּ מִצְוַת סוּכָּה מִיָּמֶיךָ: «no has cumplido la mitzvá de sucá EN TU VIDA».\n\nEl argumento de Rav Yosef es de simetría: así como Beit Shammai declara NULO retroactivamente lo hecho según Beit Hillel (¡toda una vida de sucot anulada!), así, una vez fijada la halajá como Hillel, lo hecho según Shammai es NULO. Las casas no se tratan mutuamente como «opciones válidas» — cada una considera la práctica de la otra inexistente halájicamente. Fijada la halajá, esa nulidad opera contra Shammai.\n\nLa consecuencia práctica es seria: el que leyó el shema recostado «por estrictez de Shammai» tiene que volver a leerlo. Su acto piadoso no solo fue peligroso (Tarfon) — fue VACÍO. No existe.\n\nEntre la validez de Rav Yejezkel y la pena capital de Rav Najman bar Yitzjak, Rav Yosef ocupa el centro exacto: el acto no merece castigo por sí mismo, pero tampoco cuenta. Es un cero halájico.'
+    },
+    'veredicto-najman': {
+      titulo: 'Rav Najman bar Yitzjak · «merece la muerte»',
+      hebreo: 'עָשָׂה כְּדִבְרֵי בֵּית שַׁמַּאי — חַיָּיב מִיתָה',
+      traduccion: '«Si hizo según Beit Shammai — merece la muerte»',
+      explicacion: 'El tercer peldaño es vertiginoso. Rav Najman bar Yitzjak: quien actuó como Beit Shammai — חַיָּיב מִיתָה, MERECE LA MUERTE.\n\nSu prueba es la propia mishná de R. Tarfon: los sabios le dijeron כְּדַי הָיִיתָ לָחוּב בְּעַצְמְךָ — «merecías perder la vida». No dijeron «no cumpliste» ni «vuelve a leer»: dijeron que la muerte que casi encuentra en el camino habría sido MERECIDA. La formulación de los sabios no es retórica — es un veredicto.\n\n¿Cómo entender semejante severidad por... recostarse a leer el shema?\n\nLa clave: el pecado no es la postura — es la REBELIÓN. Una vez que la halajá quedó fijada como Beit Hillel (por la bat kol de Yavne: הלכה כבית הלל), actuar públicamente como Beit Shammai es desafiar el mecanismo mismo de decisión halájica. Es el pecado del זָקֵן מַמְרֵא — el sabio rebelde que enseña contra el tribunal — en miniatura. Si cada quien sigue la escuela derrotada que prefiere, no hay halajá: hay dos Torás, dos pueblos.\n\nLa escalada completa (עשה → לא עשה ולא כלום → חייב מיתה) muestra a la gemará midiendo la gravedad exacta de la jumrá ilegítima:\n\n  · Rav Yejezkel la tolera (válida bediavad)\n  · Rav Yosef la anula (cero halájico)\n  · Rav Najman bar Yitzjak la criminaliza (rebelión capital)\n\nEl mensaje agregado de la sugyá es inequívoco: ser «más estricto» contra la halajá establecida no es un extra de piedad — es, en su lectura más severa, un delito contra la unidad de la Torá. Exactamente lo que le dijeron a R. Tarfon.'
+    },
+    'teatro': {
+      titulo: 'El teatro de R. Yishmael y R. Elazar ben Azaria',
+      hebreo: 'שֶׁמָּא יִרְאוּ הַתַּלְמִידִים וְיִקְבְּעוּ הֲלָכָה לְדוֹרוֹת',
+      traduccion: '«No sea que vean los alumnos y fijen la halajá para las generaciones»',
+      explicacion: 'La baraita final es una escena de teatro halájico. R. Yishmael (ben Elisha) y R. Elazar ben Azaria estaban juntos: Yishmael RECOSTADO, Elazar ERGUIDO. Llegó el zman del shema — y los dos se INVIRTIERON:\n\n  · R. Elazar ben Azaria SE RECOSTÓ (adoptando la postura de Beit Shammai)\n  · R. Yishmael SE IRGUIÓ (abandonando la postura en que ya estaba)\n\nElazar protesta con el MASHAL DE LA BARBA: es como uno a quien le dicen «tu barba está crecida» y responde «que sea contra los destructores» — «no me la dejé crecer para ti». Es decir: yo me recosté para cumplir como Beit Shammai, ¡y tú, que YA estabas recostado (postura válida también para Hillel), te levantaste justo para contradecirme!\n\nLa respuesta de R. Yishmael es la joya de la sugyá: yo me erguí — y tú te recostaste. Yo actué según Beit Hillel; peor aún: si me quedaba recostado, שֶׁמָּא יִרְאוּ הַתַּלְמִידִים וְיִקְבְּעוּ הֲלָכָה לְדוֹרוֹת — «no sea que los alumnos VEAN y FIJEN la halajá PARA LAS GENERACIONES».\n\nR. Yishmael estaba recostado por comodidad — postura perfectamente válida según Beit Hillel (מַטִּין וְקוֹרִין). Pero si los alumnos lo veían recostado JUNTO a Elazar recostándose deliberadamente, leerían la escena como dos maestros practicando Beit Shammai — y fijarían esa halajá para siempre. Por eso tuvo que levantarse: no porque su postura fuera inválida, sino porque su postura SIGNIFICABA en ese contexto.\n\nLa lección final del diagrama: CADA GESTO DE UN MAESTRO ES JURISPRUDENCIA EN POTENCIA. Los alumnos no aprenden solo de lo que el maestro dice — aprenden de cómo se sienta, cuándo se levanta, en qué postura lee. El cuerpo del sabio es un texto que las generaciones leerán como precedente. R. Yishmael sacrifica su comodidad (¡y su postura legítima!) para que el registro visual que queda en los alumnos sea inequívocamente la halajá de Beit Hillel.\n\nAsí cierra la sugyá el círculo: empezó con dos casas disputando si el versículo habla del cuerpo, y termina mostrando que el cuerpo del maestro — recostado o erguido — es él mismo halajá viva (ver también el diagrama de shema-dos-veces: R. Yishmael y la flexibilidad del zman).'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.postura-interactivo')
+    : document.querySelector('.postura-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#postura-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.postura-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="postura-panel-header">' +
+        '<p class="postura-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="postura-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="postura-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="postura-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.postura-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.postura-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="postura-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
