@@ -1,0 +1,353 @@
+<div class="tefbajo-interactivo">
+<style>
+  .tefbajo-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .tefbajo-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .tefbajo-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .tefbajo-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .tefbajo-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .tefbajo-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .tefbajo-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .tefbajo-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .tefbajo-diagrama svg { width: 100%; height: auto; display: block; }
+  .tefbajo-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .tefbajo-nodo:hover rect { stroke-width: 2 !important; }
+  .tefbajo-nodo:hover circle { stroke-width: 2.5 !important; }
+  .tefbajo-nodo.activa rect { stroke-width: 2.5 !important; }
+  .tefbajo-nodo.activa circle { stroke-width: 3 !important; }
+  .tefbajo-nodo.dim { opacity: 0.32; }
+  .tefbajo-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .tefbajo-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .tefbajo-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .tefbajo-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .tefbajo-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .tefbajo-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .tefbajo-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="tefbajo-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>cadena de transmisión</span>
+  <span><span class="swatch rojo"></span>lo alto · la soberbia</span>
+  <span><span class="swatch azul"></span>los pies angelicales</span>
+  <span><span class="swatch verde"></span>antes de comer</span>
+  <span><span class="swatch sepia"></span>doctrina · geografía vertical</span>
+</div>
+
+<div class="tefbajo-diagrama">
+<svg viewBox="0 0 720 1300" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10b: rezar desde lo bajo · ni en alto · los pies como un solo pie · no comas antes de rezar</title>
+
+<defs>
+  <marker id="flecha-tb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-tb-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <!-- Eje vertical: de la soberbia (arriba) a la humildad (abajo) -->
+  <linearGradient id="grad-eje-tb" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#8b1a1a" stop-opacity="0.85"/>
+    <stop offset="55%" stop-color="#6b4423" stop-opacity="0.7"/>
+    <stop offset="100%" stop-color="#2d6b4e" stop-opacity="0.85"/>
+  </linearGradient>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Rezar desde lo bajo · tres halajot del cuerpo orante</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10b · la geografía vertical y temporal de la tefilá</text>
+
+<!-- ============================================================ -->
+<!-- CADENA DE TRANSMISIÓN · EL MISMO ORADOR                      -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CADENA DE TRANSMISIÓN · EL MISMO ORADOR · 10B</text>
+
+<g class="tefbajo-nodo" data-id="cadena">
+  <rect x="60" y="86" width="600" height="94" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Y dijo R. Yosei bar Janina en nombre de R. Eliezer ben Yaakov…» — tres veces la MISMA cadena</text>
+  <text x="360" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23">la ו de וְאָמַר encadena: hospitalidad → no en alto → los pies → no comas antes</text>
+  <text x="360" y="168" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">el mismo orador agrupa la unidad — técnica editorial idéntica a Aba Binyamin en 5b-6a</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL EJE VERTICAL                                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="180" x2="360" y2="200" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tb-gold)"/>
+
+<text x="60" y="216" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL EJE VERTICAL DEL ORANTE · ALTURA vs PROFUNDIDAD</text>
+
+<!-- Eje: de lo alto (soberbia) a lo bajo (humildad) -->
+<text x="105" y="248" text-anchor="middle" font-size="11" fill="#8b1a1a" font-weight="700">גָּבוֹהַּ</text>
+<text x="105" y="263" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">altura · soberbia</text>
+<line x1="105" y1="272" x2="105" y2="1058" stroke="url(#grad-eje-tb)" stroke-width="2.5" marker-end="url(#flecha-tb)"/>
+<text x="105" y="1082" text-anchor="middle" font-size="11" fill="#2d6b4e" font-weight="700">מַעֲמַקִּים</text>
+<text x="105" y="1097" text-anchor="middle" font-size="8.5" fill="#2d6b4e" font-style="italic">profundidad · humildad</text>
+<!-- Marcas del eje -->
+<line x1="97" y1="345" x2="113" y2="345" stroke="#8b1a1a" stroke-width="1.2"/>
+<line x1="113" y1="345" x2="150" y2="345" stroke="#8b1a1a" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="97" y1="620" x2="113" y2="620" stroke="#1e3a5f" stroke-width="1.2"/>
+<line x1="113" y1="620" x2="150" y2="620" stroke="#1e3a5f" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="97" y1="890" x2="113" y2="890" stroke="#2d6b4e" stroke-width="1.2"/>
+<line x1="113" y1="890" x2="150" y2="890" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+<!-- ============================================================ -->
+<!-- HALAJÁ 1 · NO EN ALTO                                        -->
+<!-- ============================================================ -->
+<g class="tefbajo-nodo" data-id="no-en-alto">
+  <rect x="150" y="240" width="510" height="212" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="168" y="264" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">1 · No desde lo alto</text>
+
+  <!-- Figura esquemática: orante sobre banquito, tachado -->
+  <g opacity="0.9">
+    <rect x="560" y="330" width="56" height="14" rx="2" fill="none" stroke="#8b1a1a" stroke-width="1.2"/>
+    <line x1="566" y1="344" x2="566" y2="360" stroke="#8b1a1a" stroke-width="1.2"/>
+    <line x1="610" y1="344" x2="610" y2="360" stroke="#8b1a1a" stroke-width="1.2"/>
+    <circle cx="588" cy="284" r="9" fill="none" stroke="#8b1a1a" stroke-width="1.3"/>
+    <line x1="588" y1="293" x2="588" y2="322" stroke="#8b1a1a" stroke-width="1.3"/>
+    <line x1="588" y1="322" x2="580" y2="330" stroke="#8b1a1a" stroke-width="1.3"/>
+    <line x1="588" y1="322" x2="596" y2="330" stroke="#8b1a1a" stroke-width="1.3"/>
+    <line x1="552" y1="270" x2="624" y2="366" stroke="#8b1a1a" stroke-width="2"/>
+    <line x1="624" y1="270" x2="552" y2="366" stroke="#8b1a1a" stroke-width="2"/>
+    <text x="588" y="382" text-anchor="middle" font-size="8" fill="#8b1a1a" font-style="italic">ni silla · ni banquito</text>
+  </g>
+
+  <text x="420" y="288" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">אַל יַעֲמוֹד אָדָם בְּמָקוֹם גָּבוֹהַּ וְיִתְפַּלֵּל</text>
+  <text x="420" y="306" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">אֶלָּא בְּמָקוֹם נָמוּךְ וְיִתְפַּלֵּל</text>
+  <text x="168" y="326" font-size="9.5" fill="#3d2f23" font-style="italic">«no se pare uno en lugar alto a rezar — sino en lugar bajo»</text>
+  <text x="168" y="346" font-size="9.5" fill="#3d2f23">la razón: לְפִי שֶׁאֵין גַּבְהוּת לִפְנֵי הַמָּקוֹם — «no hay altivez ante el Makom»</text>
+  <text x="168" y="370" font-size="9.5" fill="#8b1a1a" font-weight="600">pesukim gemelos:</text>
+  <text x="168" y="388" font-size="10" direction="rtl" fill="#8b1a1a">מִמַּעֲמַקִּים קְרָאתִיךָ ה׳ (תה׳ קל:א)</text>
+  <text x="168" y="406" font-size="10" direction="rtl" fill="#8b1a1a">תְּפִלָּה לְעָנִי כִי יַעֲטֹף (תה׳ קב:א)</text>
+  <text x="168" y="426" font-size="9" fill="#6b4423" font-style="italic">«desde las profundidades te llamé» · «oración del pobre, del envuelto»</text>
+  <text x="168" y="442" font-size="9" fill="#6b4423" font-style="italic">la profundidad es el punto de partida acústico de la voz humana hacia el cielo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- HALAJÁ 2 · LOS PIES COMO UN SOLO PIE                         -->
+<!-- ============================================================ -->
+<line x1="405" y1="452" x2="405" y2="470" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tb)"/>
+
+<g class="tefbajo-nodo" data-id="pies">
+  <rect x="150" y="474" width="510" height="196" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="168" y="498" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2 · Los pies como un solo pie</text>
+
+  <!-- Figura esquemática: dos pies → un solo pie recto -->
+  <g opacity="0.9">
+    <rect x="548" y="516" width="14" height="40" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.2"/>
+    <rect x="572" y="516" width="14" height="40" rx="4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.2"/>
+    <line x1="594" y1="536" x2="614" y2="536" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-tb)"/>
+    <rect x="622" y="512" width="18" height="48" rx="4" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="1.5"/>
+    <text x="594" y="578" text-anchor="middle" font-size="8" fill="#1e3a5f" font-style="italic">dos pies → un solo pie</text>
+    <text x="594" y="592" text-anchor="middle" font-size="8" fill="#1e3a5f" font-style="italic">רֶגֶל יְשָׁרָה</text>
+  </g>
+
+  <text x="350" y="522" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">הַמִּתְפַּלֵּל צָרִיךְ שֶׁיְּכַוֵּין אֶת רַגְלָיו</text>
+  <text x="168" y="542" font-size="9.5" fill="#3d2f23" font-style="italic">«el que reza debe alinear sus pies»</text>
+  <text x="350" y="566" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">שֶׁנֶּאֱמַר: וְרַגְלֵיהֶם רֶגֶל יְשָׁרָה (יחז׳ א:ז)</text>
+  <text x="168" y="586" font-size="9.5" fill="#3d2f23" font-style="italic">«y sus piernas — una pierna recta» (Yejezkel 1:7, los ángeles de la merkavá)</text>
+  <text x="168" y="610" font-size="9.5" fill="#3d2f23">el cuerpo del orante se conforma a la fisiología angelical:</text>
+  <text x="168" y="626" font-size="9.5" fill="#3d2f23">sin pasos, sin caminar — pura presencia vertical</text>
+  <text x="168" y="648" font-size="9" fill="#6b4423" font-style="italic">en la amidá el humano imita al ángel: un ser que no va a ninguna parte porque ya está delante</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- HALAJÁ 3 · NO COMAS ANTES DE REZAR                           -->
+<!-- ============================================================ -->
+<line x1="405" y1="670" x2="405" y2="688" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tb)"/>
+
+<g class="tefbajo-nodo" data-id="no-comas">
+  <rect x="150" y="692" width="510" height="168" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="168" y="716" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">3 · No comas sobre tu sangre</text>
+
+  <!-- Figura esquemática: plato antes que orante, orden invertido -->
+  <g opacity="0.9">
+    <ellipse cx="572" cy="746" rx="24" ry="8" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.2"/>
+    <text x="572" y="768" text-anchor="middle" font-size="8" fill="#2d6b4e" font-style="italic">el plato</text>
+    <text x="600" y="792" text-anchor="middle" font-size="10" fill="#2d6b4e">⇣ después</text>
+    <circle cx="628" cy="816" r="7" fill="none" stroke="#2d6b4e" stroke-width="1.2"/>
+    <line x1="628" y1="823" x2="628" y2="842" stroke="#2d6b4e" stroke-width="1.2"/>
+    <text x="600" y="856" text-anchor="middle" font-size="8" fill="#2d6b4e" font-style="italic">primero la tefilá</text>
+  </g>
+
+  <text x="350" y="740" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">לֹא תֹאכְלוּ עַל הַדָּם (ויקרא יט:כו)</text>
+  <text x="168" y="760" font-size="9.5" fill="#3d2f23" font-style="italic">«no comeréis sobre la sangre» — la derashá relee:</text>
+  <text x="350" y="784" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">לֹא תֹאכְלוּ קוֹדֶם שֶׁתִּתְפַּלְּלוּ עַל דִּמְכֶם</text>
+  <text x="168" y="804" font-size="9.5" fill="#3d2f23" font-style="italic">«no coman ANTES de haber rezado por su sangre»</text>
+  <text x="168" y="826" font-size="9.5" fill="#3d2f23">R. Yitzjak en nombre de R. Yojanan, en la misma cadena —</text>
+  <text x="168" y="842" font-size="9" fill="#6b4423" font-style="italic">la vida (la sangre) se pide ANTES de alimentarla · el orden de la mañana es teología</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA VERSIÓN FILOSA · GAVEJA → GUEEJA                          -->
+<!-- ============================================================ -->
+<line x1="405" y1="860" x2="405" y2="878" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-tb)"/>
+
+<g class="tefbajo-nodo" data-id="gaava">
+  <rect x="150" y="882" width="510" height="178" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5" stroke-dasharray="5,2"/>
+  <text x="168" y="906" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La versión filosa · el ego desayunó primero</text>
+  <text x="405" y="930" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">וְאֹתִי הִשְׁלַכְתָּ אַחֲרֵי גַוֶּךָ (מל״א יד:ט)</text>
+  <text x="168" y="950" font-size="9.5" fill="#3d2f23" font-style="italic">«y a Mí me arrojaste detrás de tu espalda» — sobre quien come y bebe y DESPUÉS reza</text>
+  <text x="405" y="974" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a">אַל תִּקְרֵי גַּוֶּיךָ אֶלָּא גֵּאֶיךָ</text>
+  <text x="168" y="994" font-size="9.5" fill="#3d2f23" font-style="italic">no leas <tspan font-weight="600">gavja</tspan> («tu espalda») sino <tspan font-weight="600">gueeja</tspan> («tu soberbia»)</text>
+  <text x="405" y="1018" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">אָמַר הַקָּדוֹשׁ בָּרוּךְ הוּא: לְאַחַר שֶׁנִּתְגָּאָה זֶה — קִבֵּל עָלָיו מַלְכוּת שָׁמַיִם</text>
+  <text x="168" y="1038" font-size="9.5" fill="#3d2f23" font-style="italic">«dijo HKBH: ¿después de engreírse este — recién entonces acepta el yugo del reino de los Cielos?»</text>
+  <text x="405" y="1052" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">el desayuno antes de la tefilá es un manifiesto de prioridades</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META · LA GEOGRAFÍA VERTICAL                        -->
+<!-- ============================================================ -->
+<line x1="360" y1="1060" x2="360" y2="1108" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tb)"/>
+
+<text x="60" y="1122" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA GEOGRAFÍA VERTICAL Y TEMPORAL DE LA TEFILÁ</text>
+
+<g class="tefbajo-nodo" data-id="doctrina">
+  <rect x="60" y="1132" width="600" height="140" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1154" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Rezar es BAJAR · el cuerpo entero se coloca en el mapa</text>
+  <text x="78" y="1176" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1176" font-size="9.5" fill="#3d2f23">EN EL ESPACIO — no en alto sino en lo bajo: la humildad tiene coordenadas físicas</text>
+  <text x="78" y="1192" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1192" font-size="9.5" fill="#3d2f23">EN LA POSTURA — los pies como un solo pie: el cuerpo imita al ángel de la merkavá</text>
+  <text x="78" y="1208" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1208" font-size="9.5" fill="#3d2f23">EN EL TIEMPO — la tefilá antes de la comida: el orden de los actos revela las prioridades</text>
+  <text x="78" y="1224" font-size="9.5" fill="#3d2f23">4.</text>
+  <text x="100" y="1224" font-size="9.5" fill="#3d2f23">el enemigo común de las tres halajot es la GAAVÁ — la altivez ante el Makom</text>
+  <text x="78" y="1240" font-size="9.5" fill="#3d2f23">5.</text>
+  <text x="100" y="1240" font-size="9.5" fill="#3d2f23">מִמַּעֲמַקִּים — la profundidad no es obstáculo de la voz: es su punto de partida</text>
+  <text x="360" y="1262" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">tres micro-halajot del cuerpo · la misma sensibilidad del detalle que Aba Binyamin en 5b-6a</text>
+</g>
+
+</svg>
+</div>
+
+<div class="tefbajo-panel" id="tefbajo-panel">
+  <p class="tefbajo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'cadena': {
+      titulo: 'La cadena de transmisión · el mismo orador',
+      hebreo: 'וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב',
+      traduccion: '«Y dijo R. Yosei bar Janina en nombre de R. Eliezer ben Yaakov»',
+      explicacion: 'La enseñanza anterior — la de la hospitalidad — venía de R. Yosei bar Janina en nombre de R. Eliezer ben Yaakov. El editor de la guemará encadena ahora TRES enseñanzas más con EXACTAMENTE la misma cadena de transmisión, marcadas por la letra ו de וְאָמַר («Y dijo…»).\n\nLa conjunción no es decorativa. Es una TÉCNICA EDITORIAL: el «mismo orador» funciona como hilo que agrupa materiales dispersos en una UNIDAD temática. Cuando el lector ve por tercera vez «וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב», entiende que está dentro de una serie deliberada, no de una acumulación casual.\n\nEl mismo procedimiento apareció en 5b-6a con Aba Binyamin: sus enseñanzas (tefilá y cama, rezar en pareja, los mazikin invisibles, la tefilá detrás de la sinagoga) se encadenaron por el nombre del orador, y la serie completa formó una doctrina coherente sobre la oración.\n\nAquí la serie tiene su propio tema unificador: LA POSTURA DEL CUERPO ANTE LA TEFILÁ. Las tres enseñanzas encadenadas responden a tres preguntas físicas:\n\n  1. ¿DÓNDE me paro? — no en alto, sino en lo bajo\n  2. ¿CÓMO me paro? — con los pies alineados como un solo pie\n  3. ¿CUÁNDO rezo? — antes de comer, no después\n\nLas tres son halajot del CUERPO orante — espacio, postura, tiempo. La cadena de transmisión convierte tres detalles técnicos en una geografía completa: el mapa vertical y temporal de la persona que se presenta ante el Makom.\n\nLa figura de R. Eliezer ben Yaakov añade peso: la tradición talmúdica dice de él מִשְׁנַת רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב קַב וְנָקִי — «la enseñanza de R. Eliezer ben Yaakov es poca pero limpia» (poca en cantidad, impecable en autoridad). Las halajot que llegan por su nombre se consideran especialmente confiables.'
+    },
+    'no-en-alto': {
+      titulo: 'No desde lo alto · desde las profundidades',
+      hebreo: 'אַל יַעֲמוֹד אָדָם בְּמָקוֹם גָּבוֹהַּ וְיִתְפַּלֵּל, אֶלָּא בְּמָקוֹם נָמוּךְ וְיִתְפַּלֵּל',
+      traduccion: '«No se pare uno en lugar alto a rezar, sino en lugar bajo»',
+      explicacion: 'La primera halajá de la serie fija la COORDENADA VERTICAL del orante: no rezar desde un lugar elevado. La guemará precisa que la prohibición incluye elevaciones domésticas mínimas — ni sobre una silla, ni sobre un banquito, ni en lugar alto.\n\nLa razón declarada es teológica, no práctica:\n\n  לְפִי שֶׁאֵין גַּבְהוּת לִפְנֵי הַמָּקוֹם\n  «porque no hay altivez ante el Makom»\n\nEl juego de palabras es preciso: מָקוֹם («lugar») es también el nombre divino ha-Makom («el Lugar», el Omnipresente). El que se para en un מָקוֹם גָּבוֹהַּ (lugar alto) para hablar con ha-Makom comete una contradicción espacial: usa la altura física como plataforma ante Aquel frente a quien NO HAY altura.\n\nEl pasuk fuente es Tehilim 130:1:\n\n  מִמַּעֲמַקִּים קְרָאתִיךָ ה׳\n  «Desde las profundidades te llamé, Hashem»\n\nEl versículo no dice «a pesar de estar en las profundidades» — dice DESDE las profundidades. La profundidad no es un obstáculo que la voz debe vencer: es el PUNTO DE PARTIDA ACÚSTICO correcto de la voz humana hacia el cielo. La tefilá auténtica se lanza desde abajo.\n\nEl pasuk gemelo es Tehilim 102:1:\n\n  תְּפִלָּה לְעָנִי כִי יַעֲטֹף\n  «Oración del pobre, cuando se envuelve (desfallece)»\n\nLa oración por excelencia es la del ANÍ — el pobre, el envuelto, el que no tiene desde dónde mirar hacia abajo a nadie. El Salterio titula así un salmo entero: la pobreza y el abatimiento no descalifican la tefilá — la DEFINEN.\n\nLa halajá tiene codificación posterior (Shulján Aruj OC 90:1-2) con sus matices: se permite rezar sobre una elevación si es amplia y estable como un piso propio (una plataforma fija, la bimá). Lo prohibido es la ELEVACIÓN COMO GESTO — subirse a algo para rezar desde arriba.\n\nLa lección de fondo: la humildad NO es solo un estado interior. Tiene COORDENADAS FÍSICAS. El cuerpo que baja enseña al alma dónde está parada.'
+    },
+    'pies': {
+      titulo: 'Los pies como un solo pie · imitar a los ángeles',
+      hebreo: 'הַמִּתְפַּלֵּל צָרִיךְ שֶׁיְּכַוֵּין אֶת רַגְלָיו, שֶׁנֶּאֱמַר: וְרַגְלֵיהֶם רֶגֶל יְשָׁרָה',
+      traduccion: '«El que reza debe alinear sus pies, como está dicho: y sus piernas — una pierna recta»',
+      explicacion: 'La segunda halajá fija la POSTURA: el que reza debe יְכַוֵּין אֶת רַגְלָיו — «alinear sus pies», juntarlos hasta que parezcan UNO SOLO.\n\nEl pasuk fuente es Yejezkel 1:7, de la visión de la merkavá (el carro divino):\n\n  וְרַגְלֵיהֶם רֶגֶל יְשָׁרָה\n  «y sus piernas — UNA pierna recta»\n\nEl versículo describe a las jayot, los seres angelicales que portan el trono. El detalle anatómico es extraordinario: el texto usa el SINGULAR (רֶגֶל, una pierna) para describir las piernas (plural) de los ángeles. Sus piernas son funcionalmente UNA — recta, vertical, sin articulación de paso.\n\nLa derashá extrae la halajá por imitación: en la amidá, el humano debe conformar su cuerpo a la FISIOLOGÍA ANGELICAL. Pies juntos, paralelos, como un solo pie.\n\n¿Qué significa la anatomía del ángel?\n\n  1. SIN PASOS. Dos piernas existen para CAMINAR — para ir de un lugar a otro. El ángel de la merkavá no camina: no tiene adónde ir porque ya está donde debe estar, ante la Presencia. Su pierna única es la anulación anatómica del desplazamiento.\n\n  2. PURA PRESENCIA VERTICAL. La pierna recta (יְשָׁרָה) es un eje: el ángel es un ser completamente ERGUIDO hacia lo alto, sin la dispersión lateral del paso humano.\n\n  3. SIN AGENDA PROPIA. El que puede caminar puede irse. El que junta los pies renuncia — durante la amidá — a la capacidad de desplazamiento. Declara con el cuerpo: no tengo otro lugar adonde ir; estoy enteramente AQUÍ.\n\nLa combinación con la primera halajá es elocuente: el orante está ABAJO (lugar bajo, humildad) pero ERGUIDO Y UNIFICADO (un solo pie, verticalidad angelical). No es el abatimiento del que se arrastra — es la verticalidad humilde del que se presenta.\n\nLa halajá quedó codificada (Shulján Aruj OC 95:1) y es práctica universal hasta hoy: al comenzar la amidá se juntan los pies, y así permanecen hasta el final. Cada judío que reza reproduce, tres veces al día, la anatomía de los ángeles de Yejezkel.'
+    },
+    'no-comas': {
+      titulo: 'No comas sobre tu sangre · primero la tefilá',
+      hebreo: 'לֹא תֹאכְלוּ עַל הַדָּם — לֹא תֹאכְלוּ קוֹדֶם שֶׁתִּתְפַּלְּלוּ עַל דִּמְכֶם',
+      traduccion: '«No comeréis sobre la sangre — no coman antes de haber rezado por su sangre»',
+      explicacion: 'La tercera halajá fija el TIEMPO: no comer antes de la tefilá de la mañana. La transmite R. Yitzjak en nombre de R. Yojanan, dentro de la misma cadena editorial.\n\nEl pasuk fuente es Vayikrá 19:26:\n\n  לֹא תֹאכְלוּ עַל הַדָּם\n  «No comeréis sobre la sangre»\n\nEn su contexto bíblico, el versículo prohíbe prácticas relacionadas con comer carne junto a la sangre (o comer del animal antes de que muera del todo — hay varias lecturas halájicas). Pero la derashá lo relee con una audacia característica:\n\n  לֹא תֹאכְלוּ קוֹדֶם שֶׁתִּתְפַּלְּלוּ עַל דִּמְכֶם\n  «No coman ANTES de haber rezado POR SU SANGRE»\n\nLa palabra עַל («sobre») se lee como «antes de rezar por» — y הַדָּם («la sangre») se convierte en דִּמְכֶם («SU sangre», la del propio comensal). La sangre es, en el lenguaje de la Torá, la VIDA misma (כִּי הַדָּם הוּא הַנָּפֶשׁ). Rezar «por tu sangre» es rezar por tu vida.\n\nLa lógica resultante es una jerarquía temporal:\n\n  1. Primero se PIDE la vida (tefilá)\n  2. Después se ALIMENTA la vida (desayuno)\n\nComer primero invierte el orden ontológico: trata la vida como un hecho autosuficiente que no necesita ser pedido — solo mantenido. La tefilá previa reconoce que la vida es RECIBIDA cada mañana, no poseída.\n\nEl orden de los actos de la mañana es, así, teología practicada. No se trata de ayunar ni de mortificación: se trata de SECUENCIA. El mismo desayuno, comido después de la amidá, es un acto de criatura agradecida; comido antes, es un manifiesto de prioridades donde el cuerpo se sirve primero y el Cielo espera turno.\n\nLa halajá quedó codificada (Shulján Aruj OC 89:3): está prohibido comer antes de la tefilá de shajarit, con excepciones para agua, medicinas y casos de necesidad. La versión más filosa de esta enseñanza — el nodo siguiente — explica POR QUÉ el Talmud considera este detalle tan grave.'
+    },
+    'gaava': {
+      titulo: 'La versión filosa · no leas «tu espalda» sino «tu soberbia»',
+      hebreo: 'אַל תִּקְרֵי גַּוֶּיךָ אֶלָּא גֵּאֶיךָ',
+      traduccion: '«No leas gavja (tu espalda) sino gueeja (tu soberbia)»',
+      explicacion: 'Sobre quien come y bebe y DESPUÉS reza, la guemará aplica un versículo devastador. Es la palabra de Hashem a Yerovam por boca del profeta Ajiyá (Melajim I 14:9):\n\n  וְאֹתִי הִשְׁלַכְתָּ אַחֲרֵי גַוֶּךָ\n  «Y a Mí me arrojaste detrás de tu espalda»\n\nEl versículo original acusa al rey idólatra de haber puesto a Dios LITERALMENTE a sus espaldas — lo último, lo postergado, lo que queda atrás. Aplicarlo al que desayuna antes de rezar es ya una acusación fuerte: tu orden matutino pone a Dios detrás de tu espalda.\n\nPero la derashá da un paso más con la técnica de אַל תִּקְרֵי («no leas…»):\n\n  אַל תִּקְרֵי גַּוֶּיךָ אֶלָּא גֵּאֶיךָ\n  no leas גַּוֶּיךָ (gavja, «tu espalda») sino גֵּאֶיךָ (gueeja, «tu soberbia»)\n\nLas dos palabras comparten esqueleto consonántico; la re-vocalización transforma la anatomía en diagnóstico moral. Lo que el versículo describe ya no es una POSICIÓN (Dios detrás del cuerpo) sino una CAUSA (Dios detrás del ego). Comer primero no es distracción ni apetito — es GAAVÁ, soberbia.\n\nY entonces la guemará pone la queja en boca del mismo HKBH:\n\n  אָמַר הַקָּדוֹשׁ בָּרוּךְ הוּא: לְאַחַר שֶׁנִּתְגָּאָה זֶה — קִבֵּל עָלָיו מַלְכוּת שָׁמַיִם\n  «Dijo el Santo, bendito sea: ¿después de que este se engrió — recién entonces acepta sobre sí el yugo del reino de los Cielos?»\n\nLa ironía es quirúrgica. El que reza después de desayunar SÍ acepta el reino de los Cielos — pero lo acepta en segundo turno. El קבלת עול מלכות שמים (aceptación del yugo del reino) del shemá pierde su sentido si llega DESPUÉS de que el ego ya se sirvió. Un rey al que se le rinde homenaje después del propio banquete no fue tratado como rey.\n\nEl ego desayunó primero: esa es la traducción exacta de la acusación. La halajá del «no comas antes de rezar» resulta ser, en el fondo, la misma halajá que «no reces desde lo alto»: las dos combaten la GAAVÁ — una en el espacio (la altura), otra en el tiempo (el primer turno). La serie entera de R. Yosei bar Janina es un solo tratado contra la altivez ante el Makom.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la geografía vertical y temporal de la tefilá',
+      hebreo: 'מִמַּעֲמַקִּים קְרָאתִיךָ',
+      traduccion: '«Desde las profundidades te llamé»',
+      explicacion: 'Las tres halajot encadenadas forman un solo mapa: la GEOGRAFÍA del cuerpo orante — dónde, cómo y cuándo se coloca la persona ante el Makom.\n\nLAS TRES COORDENADAS:\n\n  1. ESPACIO (vertical) — no en alto sino en lo bajo. La humildad deja de ser sentimiento y se vuelve ALTITUD: el orante correcto está literalmente más abajo. מִמַּעֲמַקִּים — la voz sube mejor desde las profundidades.\n\n  2. POSTURA (anatómica) — los pies alineados como un solo pie. El cuerpo imita a los ángeles de la merkavá: sin pasos, sin desplazamiento posible, pura presencia vertical. Abajo pero ERGUIDO.\n\n  3. TIEMPO (secuencial) — la tefilá ANTES de la comida. El primer acto del día declara la primera prioridad del día. Pedir la vida antes de alimentarla.\n\nEL ENEMIGO COMÚN:\n\nLas tres halajot combaten lo mismo: la GAAVÁ, la altivez. La primera en su forma espacial (usar la altura como plataforma), la tercera en su forma temporal (darse el primer turno a uno mismo). Y la segunda ofrece el antídoto positivo: la verticalidad SIN soberbia del ángel — erguido no porque se eleva, sino porque está enteramente presente.\n\nLa fórmula que gobierna la serie es אֵין גַּבְהוּת לִפְנֵי הַמָּקוֹם — «no hay altivez ante el Makom». Ante el Lugar por excelencia, todos los lugares altos quedan anulados.\n\nLA TÉCNICA EDITORIAL:\n\nLa unidad se sostiene por el MISMO ORADOR: tres veces וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב. Es el mismo procedimiento que agrupó las enseñanzas de Aba Binyamin en 5b-6a: el editor usa la cadena de transmisión como pegamento temático. Reconocer la técnica cambia la lectura — no son tres dichos sueltos, es un TRATADO en miniatura sobre el cuerpo que reza.\n\nLA SENSIBILIDAD DE FONDO:\n\nComo en la baraita de Aba Binyamin (las dos preocupaciones «de toda una vida»), la grandeza espiritual se juega en detalles minúsculos: unos centímetros de altura, la distancia entre dos pies, el orden entre dos actos matutinos. La halajá del detalle: lo micro es el canal de lo macro. El que baja del banquito, junta los pies y posterga el desayuno ha reordenado — con tres gestos triviales — su posición entera en el cosmos.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.tefbajo-interactivo')
+    : document.querySelector('.tefbajo-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#tefbajo-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.tefbajo-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="tefbajo-panel-header">' +
+        '<p class="tefbajo-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="tefbajo-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="tefbajo-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="tefbajo-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.tefbajo-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.tefbajo-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="tefbajo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
