@@ -1,0 +1,357 @@
+<div class="beruria-interactivo">
+<style>
+  .beruria-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .beruria-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .beruria-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .beruria-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .beruria-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .beruria-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .beruria-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .beruria-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .beruria-leyenda .sepia   { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .beruria-diagrama svg { width: 100%; height: auto; display: block; }
+  .beruria-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .beruria-nodo:hover rect { stroke-width: 2 !important; }
+  .beruria-nodo:hover circle { stroke-width: 2.5 !important; }
+  .beruria-nodo.activa rect { stroke-width: 2.5 !important; }
+  .beruria-nodo.activa circle { stroke-width: 3 !important; }
+  .beruria-nodo.dim { opacity: 0.32; }
+  .beruria-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--violeta);
+    min-height: 130px;
+  }
+  .beruria-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .beruria-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .beruria-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .beruria-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .beruria-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .beruria-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="beruria-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>lectura burda · el ataque</span>
+  <span><span class="swatch violeta"></span>Beruria · lectura fina</span>
+  <span><span class="swatch azul"></span>R. Abahu · smujin</span>
+  <span><span class="swatch dorado"></span>el método · final del versículo</span>
+  <span><span class="swatch verde"></span>resultado · teshuvá</span>
+  <span><span class="swatch sepia"></span>doctrina</span>
+</div>
+
+<div class="beruria-diagrama">
+<svg viewBox="0 0 720 1320" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10a: Beruria y los biryonim · dos minim refutados · el método «baja al final del versículo»</title>
+
+<defs>
+  <marker id="flecha-be" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-be-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Que mueran los pecados, no los pecadores</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10a · tres escenas de lectura fina contra lectura burda</text>
+
+<!-- ============================================================ -->
+<!-- LA CINTA CENTRAL · EL MÉTODO                                 -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL MÉTODO COMPARTIDO · LA CINTA QUE ATRAVIESA LAS TRES ESCENAS</text>
+
+<g class="beruria-nodo" data-id="metodo">
+  <rect x="60" y="86" width="600" height="74" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="14" direction="rtl" fill="#1a1410">שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«baja al final del versículo» — el pasuk entero decide, no el fragmento citado</text>
+  <text x="360" y="150" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la misma herramienta derrota a un esposo tana y a dos minim</text>
+</g>
+
+<!-- cinta vertical dorada que atraviesa las tres escenas -->
+<line x1="360" y1="160" x2="360" y2="1160" stroke="#b8860b" stroke-width="2" stroke-dasharray="7,5" opacity="0.45"/>
+
+<!-- ============================================================ -->
+<!-- ESCENA 1 · LOS BIRYONIM DEL BARRIO                           -->
+<!-- ============================================================ -->
+<text x="60" y="192" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 1 · LOS BIRYONIM DEL BARRIO · BERURIA CORRIGE A R. MEIR</text>
+
+<g class="beruria-nodo" data-id="s1-ataque">
+  <rect x="60" y="202" width="600" height="86" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="224" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La lectura burda · R. Meir reza para que mueran</text>
+  <text x="642" y="248" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a">יִתַּמּוּ חַטָּאִים מִן הָאָרֶץ</text>
+  <text x="78" y="266" font-size="9.5" fill="#3d2f23" font-style="italic">unos matones (biryonim) lo atormentaban · él pide misericordia PARA QUE MUERAN</text>
+  <text x="78" y="281" font-size="9" fill="#6b4423" font-style="italic">apoya su oración en Tehilim 104:35 — leído como «que se acaben los pecadores»</text>
+</g>
+
+<line x1="205" y1="288" x2="205" y2="306" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-be)"/>
+<line x1="515" y1="288" x2="515" y2="306" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-be)"/>
+
+<g class="beruria-nodo" data-id="s1-gramatica">
+  <rect x="60" y="310" width="290" height="110" rx="6" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <text x="205" y="332" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">Beruria · la gramática</text>
+  <text x="205" y="356" text-anchor="middle" font-size="11" direction="rtl" fill="#5a3a8a">מִי כְּתִיב ״חוֹטְאִים״? ״חַטָּאִים״ כְּתִיב!</text>
+  <text x="78" y="376" font-size="9.5" fill="#3d2f23" font-style="italic">¿dice el pasuk jotim (pecadores)?</text>
+  <text x="78" y="391" font-size="9.5" fill="#3d2f23" font-style="italic">dice JATAIM — pecados</text>
+  <text x="78" y="408" font-size="8.5" fill="#6b4423" font-style="italic">una vocal separa al pecador de su pecado</text>
+</g>
+
+<g class="beruria-nodo" data-id="s1-seifa">
+  <rect x="370" y="310" width="290" height="110" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="515" y="332" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Beruria · el final del verso</text>
+  <text x="515" y="356" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b">וּרְשָׁעִים עוֹד אֵינָם</text>
+  <text x="388" y="376" font-size="9.5" fill="#3d2f23" font-style="italic">«y ya no habrá reshaim» — si mueren,</text>
+  <text x="388" y="391" font-size="9.5" fill="#3d2f23" font-style="italic">¿cómo «ya no habrá»? → reza por su teshuvá</text>
+  <text x="388" y="408" font-size="8.5" fill="#6b4423" font-style="italic">שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא aplicado por Beruria</text>
+</g>
+
+<line x1="205" y1="420" x2="205" y2="436" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="515" y1="420" x2="515" y2="436" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="205" y1="436" x2="515" y2="436" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="360" y1="436" x2="360" y2="450" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-be)"/>
+
+<g class="beruria-nodo" data-id="s1-resultado">
+  <rect x="60" y="454" width="600" height="70" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="478" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e">בְּעָא רַחֲמֵי עִלָּוַיְהוּ, וַהֲדַרוּ בִּתְשׁוּבָה</text>
+  <text x="360" y="498" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«pidió misericordia por ellos — y volvieron en teshuvá»</text>
+  <text x="360" y="514" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la oración correcta apunta al pecado, no al pecador</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ESCENA 2 · EL MIN Y LA ESTÉRIL                               -->
+<!-- ============================================================ -->
+<text x="60" y="556" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 2 · EL MIN Y LA ESTÉRIL · YESHAYAHU 54:1</text>
+
+<g class="beruria-nodo" data-id="s2-ataque">
+  <rect x="60" y="566" width="600" height="86" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="588" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La lectura burda · un min se burla ante Beruria</text>
+  <text x="642" y="612" text-anchor="end" font-size="11" direction="rtl" fill="#8b1a1a">רָנִּי עֲקָרָה לֹא יָלָדָה</text>
+  <text x="78" y="630" font-size="9.5" fill="#3d2f23" font-style="italic">«canta, estéril que no dio a luz» — ¿cantar PORQUE no parió?</text>
+  <text x="78" y="645" font-size="9" fill="#6b4423" font-style="italic">el min lee el fragmento aislado como absurdo: celebrar la esterilidad</text>
+</g>
+
+<line x1="360" y1="652" x2="360" y2="670" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-be)"/>
+
+<g class="beruria-nodo" data-id="s2-respuesta">
+  <rect x="60" y="674" width="600" height="112" rx="6" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <text x="78" y="696" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">Beruria · «necio, baja al final del verso»</text>
+  <text x="642" y="696" text-anchor="end" font-size="11.5" direction="rtl" fill="#5a3a8a">שָׁטְיָא</text>
+  <text x="360" y="722" text-anchor="middle" font-size="11.5" direction="rtl" fill="#5a3a8a">כִּי רַבִּים בְּנֵי שׁוֹמֵמָה</text>
+  <text x="78" y="744" font-size="9.5" fill="#3d2f23" font-style="italic">«porque son más los hijos de la desolada» — la estéril es KNÉSET ISRAEL</text>
+  <text x="78" y="760" font-size="9.5" fill="#3d2f23" font-style="italic">canta por no haber parido hijos para el Guehinom — כְּוָותַיְיכוּ, «como ustedes»</text>
+  <text x="78" y="776" font-size="8.5" fill="#6b4423" font-style="italic">el mismo método de la escena 1 · esta vez con estocada final al atacante</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ESCENA 3 · EL MIN Y EL ORDEN DE LOS SALMOS                   -->
+<!-- ============================================================ -->
+<text x="60" y="818" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 3 · EL MIN Y EL ORDEN DE LOS SALMOS · R. ABAHU</text>
+
+<g class="beruria-nodo" data-id="s3-ataque">
+  <rect x="60" y="828" width="600" height="86" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="850" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La lectura burda · «el libro está desordenado»</text>
+  <text x="78" y="872" font-size="9.5" fill="#3d2f23" font-style="italic">el salmo de David huyendo de AVSHALOM (Tehilim 3) aparece ANTES</text>
+  <text x="78" y="887" font-size="9.5" fill="#3d2f23" font-style="italic">que el de la huida de SHAÚL (Tehilim 57) — cronológicamente invertidos</text>
+  <text x="78" y="904" font-size="9" fill="#6b4423" font-style="italic">el min asume que el orden solo puede ser cronológico · si no, es error</text>
+</g>
+
+<line x1="360" y1="914" x2="360" y2="932" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-be)"/>
+
+<g class="beruria-nodo" data-id="s3-smujin">
+  <rect x="60" y="936" width="600" height="108" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="958" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Abahu · ustedes no interpretan SMUJIN; nosotros sí</text>
+  <text x="360" y="984" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1e3a5f">סְמוּכִים לָעַד לְעוֹלָם</text>
+  <text x="78" y="1006" font-size="9.5" fill="#3d2f23" font-style="italic">R. Yojanan: «firmes por siempre jamás» (Tehilim 111:8) — las YUXTAPOSICIONES</text>
+  <text x="78" y="1021" font-size="9.5" fill="#3d2f23" font-style="italic">de versos son Torá interpretable · la vecindad de dos textos SIGNIFICA</text>
+  <text x="78" y="1036" font-size="8.5" fill="#6b4423" font-style="italic">el orden no es cronológico — es semántico · el editor del Salterio enseña con la posición</text>
+</g>
+
+<line x1="360" y1="1044" x2="360" y2="1062" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-be-gold)"/>
+
+<g class="beruria-nodo" data-id="s3-gog">
+  <rect x="60" y="1066" width="600" height="98" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.4"/>
+  <text x="78" y="1088" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">¿Por qué Avshalom (cap. 3) junto a Gog uMagog (cap. 2)?</text>
+  <text x="78" y="1110" font-size="9.5" fill="#3d2f23" font-style="italic">para responder al escéptico: «¿acaso hay esclavo que se rebele contra su amo?»</text>
+  <text x="78" y="1126" font-size="9.5" fill="#3d2f23" font-style="italic">— ¿acaso hay HIJO que se rebele contra su PADRE? Lo hubo. También lo otro habrá.</text>
+  <text x="78" y="1144" font-size="8.5" fill="#6b4423" font-style="italic">la rebelión filial de Avshalom como prueba teológica de que Gog uMagog vendrá</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- DOCTRINA META                                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="1164" x2="360" y2="1180" stroke="#6b4423" stroke-width="1" marker-end="url(#flecha-be)"/>
+
+<text x="60" y="1192" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOCTRINA META · LA LECTURA FINA COMO DEFENSA</text>
+
+<g class="beruria-nodo" data-id="doctrina">
+  <rect x="60" y="1202" width="600" height="100" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1224" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">El pasuk entero decide · el fragmento engaña</text>
+  <text x="78" y="1246" font-size="9.5" fill="#3d2f23">1.</text>
+  <text x="100" y="1246" font-size="9.5" fill="#3d2f23">la lectura burda produce oraciones crueles (R. Meir) y burlas vacías (los minim)</text>
+  <text x="78" y="1262" font-size="9.5" fill="#3d2f23">2.</text>
+  <text x="100" y="1262" font-size="9.5" fill="#3d2f23">Beruria — la única mujer con voz halájica del perek — corrige incluso a su esposo tana</text>
+  <text x="78" y="1278" font-size="9.5" fill="#3d2f23">3.</text>
+  <text x="100" y="1278" font-size="9.5" fill="#3d2f23">smujin: hasta el ORDEN de los capítulos es texto interpretable · nada en el canon es azar</text>
+  <text x="360" y="1296" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">tres ataques · una herramienta · שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא</text>
+</g>
+
+</svg>
+</div>
+
+<div class="beruria-panel" id="beruria-panel">
+  <p class="beruria-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'metodo': {
+      titulo: 'El método · «baja al final del versículo»',
+      hebreo: 'שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא',
+      traduccion: '«Baja al final del versículo»',
+      explicacion: 'Las tres escenas de Berajot 10a están cosidas por UNA SOLA herramienta hermenéutica: שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא — «baja al final del versículo». El principio es simple y devastador: el que cita un FRAGMENTO de pasuk para apoyar su posición está obligado a leer el pasuk ENTERO. El final del verso corrige, invierte o ridiculiza la lectura parcial.\n\nEn la escena 1, Beruria lo aplica contra su propio esposo: R. Meir cita el comienzo de Tehilim 104:35 para rezar por la muerte de los biryonim, y el final del verso (וּרְשָׁעִים עוֹד אֵינָם) demuestra que la petición correcta es la teshuvá. En la escena 2, lo aplica contra un min que se burla de Yeshayahu 54:1 — el final del verso convierte la burla en autorretrato del burlador. En la escena 3, R. Abahu extiende el mismo principio a escala MACRO: no solo el final del verso significa — también la POSICIÓN de un capítulo junto a otro (smujin) es texto interpretable.\n\nLa doctrina implícita: el texto sagrado es un TODO ORGÁNICO. No hay fragmento autónomo. Quien recorta, distorsiona. La defensa contra la mala lectura — venga de un tana piadoso o de un hereje hostil — es siempre la misma: seguir leyendo.'
+    },
+    's1-ataque': {
+      titulo: 'La lectura burda · R. Meir reza para que mueran',
+      hebreo: 'יִתַּמּוּ חַטָּאִים מִן הָאָרֶץ',
+      traduccion: '«Que se acaben los jataim de la tierra» (Tehilim 104:35)',
+      explicacion: 'Unos biryonim — matones de barrio — atormentaban a R. Meir. Su reacción: pedir misericordia PARA QUE MURIERAN. La oración se apoya en el pasuk exacto con el que terminó la sugyá anterior: יִתַּמּוּ חַטָּאִים מִן הָאָרֶץ — «que se acaben los jataim de la tierra» (Tehilim 104:35), leído como «que se acaben los PECADORES».\n\nLo notable es QUIÉN comete la lectura burda: no un ignorante, no un hereje — R. MEIR, uno de los tanaim más grandes de la historia, el maestro cuyas opiniones anónimas llenan la Mishná. El editor de la guemará elige mostrar que la lectura interesada no es patrimonio de los enemigos de la Torá: el dolor y la rabia hacen leer mal INCLUSO al sabio.\n\nLa oración de R. Meir no es absurda: tiene apoyo textual aparente, y la tradición conoce oraciones contra los enemigos. Pero es una lectura al servicio de la emoción — el texto usado como arma para lo que uno ya quería. Exactamente lo que harán los dos minim en las escenas siguientes. La simetría es deliberada y audaz: el editor pone al tana y a los herejes del mismo lado del error metodológico.'
+    },
+    's1-gramatica': {
+      titulo: 'Beruria · la corrección gramatical',
+      hebreo: 'מִי כְּתִיב ״חוֹטְאִים״? ״חַטָּאִים״ כְּתִיב!',
+      traduccion: '«¿Acaso está escrito jotim (pecadores)? ¡Está escrito jataim (pecados)!»',
+      explicacion: 'Beruria detiene a su esposo con un argumento de GRAMÁTICA PURA: ¿dice el pasuk חוֹטְאִים (jotim, pecadores — participio activo, las personas que pecan)? No: dice חַטָּאִים (jataim, pecados — el sustantivo, los actos mismos).\n\nUna diferencia de vocalización separa dos teologías enteras. Si el pasuk pide el fin de los PECADORES, la oración de R. Meir es legítima: que mueran los matones. Si pide el fin de los PECADOS, la oración correcta es otra: que desaparezca el pecado DE ellos — que dejen de ser lo que son sin dejar de existir.\n\nLa distinción es quirúrgica: separa al agente de su acto. El biryon no ES su violencia; la TIENE. Y lo que se tiene, se puede soltar. Sobre esa grieta gramatical se apoya toda la doctrina de la teshuvá: el pecador es reformable precisamente porque no se identifica con su pecado.\n\nEl detalle histórico es enorme: quien hace esta corrección es BERURIA — la única mujer del perek (y una de las poquísimas del Talmud entero) que argumenta con herramientas técnicas de sabio: dicción del texto, gramática, lectura contextual. Y su interlocutor no es un alumno: es R. Meir. La guemará registra sin incomodidad que ella tenía razón y él no.'
+    },
+    's1-seifa': {
+      titulo: 'Beruria · el final del verso',
+      hebreo: 'וּרְשָׁעִים עוֹד אֵינָם',
+      traduccion: '«Y los reshaim ya no serán» (Tehilim 104:35)',
+      explicacion: 'La gramática sola podría discutirse — hay lecturas midráshicas que leen חַטָּאִים como «pecadores». Por eso Beruria añade el segundo argumento, el decisivo: שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא — baja al FINAL del versículo: וּרְשָׁעִים עוֹד אֵינָם, «y los reshaim YA NO SERÁN».\n\nSu lectura del final: si los pecadores simplemente MUEREN, el verso falla — mueren estos reshaim, pero el mundo sigue produciendo reshaim nuevos. ¿Cómo se cumple «ya no habrá reshaim»? Solo de una manera: si los pecados CESAN — si los que eran reshaim hacen teshuvá y DEJAN DE SERLO. El final del verso no describe una masacre: describe una transformación. Los reshaim «ya no son» porque ya no son RESHAIM.\n\nLa conclusión práctica de Beruria: אֶלָּא בְּעִי רַחֲמֵי עֲלַוְיְהוּ — reza POR ellos, no CONTRA ellos. Pide que hagan teshuvá.\n\nEs la misma herramienta que ella usará contra el min en la escena 2 y que R. Abahu ampliará en la 3. El pasuk citado a medias servía a la rabia; el pasuk completo enseña misericordia. La diferencia entre una oración de muerte y una de redención es, literalmente, seguir leyendo una línea más.'
+    },
+    's1-resultado': {
+      titulo: 'El resultado · rezó por ellos y volvieron en teshuvá',
+      hebreo: 'בְּעָא רַחֲמֵי עִלָּוַיְהוּ, וַהֲדַרוּ בִּתְשׁוּבָה',
+      traduccion: '«Pidió misericordia por ellos — y volvieron en teshuvá»',
+      explicacion: 'R. Meir acepta la corrección de su esposa — otro detalle extraordinario que la guemará registra sin comentario — y cambia su oración: pide misericordia POR los biryonim. Y funciona: וַהֲדַרוּ בִּתְשׁוּבָה — volvieron en teshuvá.\n\nEl cierre narrativo valida empíricamente la lectura de Beruria. No es solo que su gramática fuera mejor: su oración PRODUJO lo que la de R. Meir no podía producir. La muerte de los matones habría vaciado el barrio; su teshuvá lo reparó. El verso se cumplió en su sentido pleno: los pecados cesaron, y los reshaim «ya no fueron» — porque se volvieron otra cosa.\n\nLa doctrina destilada: la oración correcta apunta al PECADO, no al PECADOR. Rezar por la destrucción del enemigo es teológicamente perezoso — trata el mal como si fuera idéntico a las personas que lo cometen. Rezar por su transformación es más difícil y más exacto.\n\nHay también una lección sobre la eficacia de la plegaria: el Cielo respondió a la oración FINA, no a la burda. La calidad hermenéutica de la petición — su fidelidad al texto completo — es parte de lo que la hace escuchable. Leer bien y rezar bien resultan ser la misma disciplina.'
+    },
+    's2-ataque': {
+      titulo: 'El min se burla · «canta, estéril»',
+      hebreo: 'רָנִּי עֲקָרָה לֹא יָלָדָה',
+      traduccion: '«Canta, estéril que no dio a luz» (Yeshayahu 54:1)',
+      explicacion: 'Un min — un hereje, probablemente un polemista sectario o cristiano temprano — aborda a Beruria con una burla textual: el profeta dice רָנִּי עֲקָרָה לֹא יָלָדָה, «canta, estéril que no dio a luz». ¿Cantar PORQUE no parió? ¿Qué clase de texto celebra la esterilidad? La escritura de ustedes es absurda.\n\nEl ataque tiene la misma estructura que el error de R. Meir en la escena 1: se cita un FRAGMENTO de verso, se lo lee aislado y en su sentido más plano, y se construye sobre él una conclusión. R. Meir construyó una oración cruel; el min construye una burla. El método defectuoso es idéntico — solo cambia la intención.\n\nHay probablemente un filo polémico adicional: en la literatura sectaria de la época, la «estéril» de Yeshayahu 54 se usaba como figura de la iglesia (la que no paría según la carne) contra Israel. El min puede estar provocando a Beruria con un verso que su propio grupo releía contra los judíos.\n\nElegir a BERURIA como blanco resultó ser un error táctico notable: el min escogió para su burla textual a la persona del perek más entrenada en lectura fina.'
+    },
+    's2-respuesta': {
+      titulo: 'Beruria responde · «necio, baja al final del verso»',
+      hebreo: 'שָׁטְיָא · שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא · כִּי רַבִּים בְּנֵי שׁוֹמֵמָה',
+      traduccion: '«Necio — baja al final del verso: porque son más los hijos de la desolada»',
+      explicacion: 'La respuesta de Beruria abre con un insulto técnico: שָׁטְיָא — «necio». No es (solo) descortesía: es un diagnóstico. El error del min no es de información sino de MÉTODO — leyó medio verso y se detuvo. Y la receta es la misma que le dio a su esposo: שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא, baja al final del verso.\n\nEl final dice: כִּי רַבִּים בְּנֵי שׁוֹמֵמָה — «porque son MÁS los hijos de la desolada que los de la desposada». El verso entero no celebra la esterilidad: promete que la estéril tendrá MÁS hijos que la fecunda. La «estéril» es una figura — y Beruria la identifica: KNÉSET ISRAEL, la congregación de Israel, desolada en el exilio pero destinada a la multiplicación.\n\nY entonces la estocada: ¿por qué «canta» la estéril ya AHORA? Porque no ha parido hijos para el GUEHINOM — כְּוָותַיְיכוּ, «como ustedes». La esterilidad aparente de Israel es limpieza: no producir hijos destinados a la perdición ya es motivo de canto.\n\nBeruria no se limita a neutralizar la burla — la DEVUELVE. El verso que el min usó contra Israel termina describiendo al propio min como hijo del Guehinom. La lectura fina no es solo defensa: bien ejecutada, convierte el arma del atacante en su propia refutación.'
+    },
+    's3-ataque': {
+      titulo: 'El min a R. Abahu · «el libro está desordenado»',
+      hebreo: 'מִזְמוֹר לְדָוִד בְּבָרְחוֹ מִפְּנֵי אַבְשָׁלוֹם בְּנוֹ',
+      traduccion: '«Salmo de David al huir de Avshalom su hijo» (Tehilim 3:1)',
+      explicacion: 'La tercera escena cambia de protagonista pero no de estructura. Otro min desafía a R. Abahu (amora de Cesarea, veterano de las polémicas con los cristianos de su ciudad) con un problema de ORDEN: el salmo sobre David huyendo de AVSHALOM es Tehilim 3 — pero la rebelión de Avshalom fue al FINAL de la vida de David. La huida de SHAÚL, que fue en su juventud, aparece recién en Tehilim 57. El libro pone después lo que pasó antes. ¿No está desordenado el famoso libro de ustedes?\n\nEl ataque es más sofisticado que el de la escena 2: ya no es un fragmento de verso leído a medias, sino una observación estructural correcta — la cronología efectivamente está invertida. Lo burdo no es el dato sino la PREMISA: que el único orden legítimo de un libro es el cronológico, y que cualquier desviación es error editorial.\n\nEs la versión macro de la misma pereza hermenéutica: quedarse en la superficie (el orden aparente) y no preguntar si la anomalía SIGNIFICA algo. Igual que el fragmento de verso exigía leer hasta el final, la anomalía de orden exige leer la POSICIÓN como texto. Eso es exactamente lo que R. Abahu va a responder.'
+    },
+    's3-smujin': {
+      titulo: 'R. Abahu · ustedes no interpretan smujin; nosotros sí',
+      hebreo: 'סְמוּכִים לָעַד לְעוֹלָם',
+      traduccion: '«Firmes / yuxtapuestos por siempre jamás» (Tehilim 111:8)',
+      explicacion: 'La respuesta de R. Abahu es primero una declaración de método: אַתּוּן דְּלָא דָּרְשִׁיתוּן סְמוּכִין — «ustedes, que NO interpretan smujin (yuxtaposiciones), tienen dificultad; NOSOTROS, que las interpretamos, no». La cronología invertida no es un error a explicar sino un dato a LEER: cuando el editor del Salterio pone un capítulo junto a otro, la vecindad misma enseña.\n\nEl apoyo textual lo da R. Yojanan, con un juego de palabras exquisito: סְמוּכִים לָעַד לְעוֹלָם, «firmes por siempre jamás» (Tehilim 111:8). La palabra סְמוּכִים significa «firmes, sostenidos» — pero es la misma raíz de smujin, «yuxtapuestos». Releído: las YUXTAPOSICIONES son válidas por siempre jamás — la contigüidad de dos textos es Torá interpretable con plena autoridad.\n\nLa doctrina es radical: en el canon NADA es azar — ni las palabras, ni las letras, ni siquiera el ORDEN de los capítulos. El editor enseña con la posición igual que el profeta con la frase. Un libro sagrado tiene dos textos: el que dicen sus versos y el que dice su arquitectura.\n\nLa distinción «ustedes no / nosotros sí» marca además la frontera exacta entre las dos comunidades lectoras: comparten el MISMO libro, pero no el mismo método — y por eso no leen el mismo libro.'
+    },
+    's3-gog': {
+      titulo: 'Avshalom junto a Gog uMagog · la prueba del hijo rebelde',
+      hebreo: 'לָמָּה נִסְמְכָה פָּרָשַׁת אַבְשָׁלוֹם לְפָרָשַׁת גּוֹג וּמָגוֹג',
+      traduccion: '¿Por qué se yuxtapuso la sección de Avshalom a la de Gog uMagog?',
+      explicacion: 'Demostrado el método, R. Abahu lo EJECUTA sobre el caso exacto que el min impugnó: ¿por qué el salmo de Avshalom (Tehilim 3) está junto al de GOG UMAGOG (Tehilim 2, «¿por qué se agitan las naciones?» — leído como la guerra escatológica de las naciones contra el Mashíaj)?\n\nLa respuesta es un diálogo hipotético: si alguien te dice — ¿acaso HAY esclavo que se rebele contra su amo? ¿Puede creerse que las naciones enteras se alzarán contra el Rey del mundo? — respóndele: ¿acaso hay HIJO que se rebele contra su PADRE? Eso también parece imposible... y sin embargo LO HUBO — Avshalom contra David. También lo otro habrá.\n\nLa yuxtaposición funciona como argumento teológico: la rebelión más antinatural imaginable (el hijo contra el padre que lo ama) YA OCURRIÓ y está documentada en el capítulo 3; por lo tanto la rebelión cósmica del capítulo 2, por inverosímil que parezca, TAMBIÉN ocurrirá. La historia de David funciona como precedente empírico de la escatología.\n\nY con esto la refutación del min queda completa: el «desorden» que él señaló como defecto es exactamente donde el libro guarda su enseñanza más fina. La anomalía no era error — era el subrayado del editor. Lo que la lectura burda llama errata, la lectura fina lo llama midrash.'
+    },
+    'doctrina': {
+      titulo: 'Doctrina meta · la lectura fina como defensa',
+      hebreo: 'שְׁפֵיל לְסֵיפֵיהּ דִּקְרָא',
+      traduccion: 'El pasuk entero decide · el fragmento engaña',
+      explicacion: 'Las tres escenas forman una sola lección con tres calibres.\n\n1. LA LECTURA BURDA ES TRANSVERSAL. La comete un tana santo movido por el dolor (R. Meir), un burlador de mala fe (el min de la estéril) y un polemista sofisticado (el min del orden). El error no distingue piadosos de herejes: citar fragmentos al servicio de lo que uno ya siente es la tentación universal del lector. Por eso la corrección de Beruria a su esposo y su respuesta al min usan LA MISMA fórmula — la guemará iguala deliberadamente los dos casos.\n\n2. BERURIA. Es la única mujer con voz halájica del perek — y una de las muy pocas del Talmud que argumenta con las herramientas técnicas del bet midrash: dicción (jotim/jataim), contexto (el final del verso), identificación de figuras (la estéril = Knéset Israel). La guemará no la presenta como excepción pintoresca sino como la MEJOR lectora de las tres escenas: corrige a R. Meir y él acepta; aplasta al min y no hay réplica. Su violeta en este diagrama marca eso: una autoridad hermenéutica propia.\n\n3. LA ESCALADA DEL MÉTODO. Escena 1: el final del VERSO corrige la lectura del comienzo. Escena 2: el final del verso más la identificación de la FIGURA. Escena 3: ya no el interior del verso sino el ORDEN de los capítulos — smujin. El principio crece de la microgramática a la macroestructura: en el canon todo significa, desde la vocal de חַטָּאִים hasta la posición de Tehilim 3 junto a Tehilim 2.\n\nLa cinta dorada que atraviesa el diagrama es esa única herramienta: contra la oración cruel, contra la burla y contra la impugnación estructural, la defensa es la misma — seguir leyendo hasta el final.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.beruria-interactivo')
+    : document.querySelector('.beruria-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#beruria-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.beruria-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="beruria-panel-header">' +
+        '<p class="beruria-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="beruria-panel-hebreo" dir="rtl">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="beruria-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="beruria-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.beruria-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.beruria-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="beruria-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
