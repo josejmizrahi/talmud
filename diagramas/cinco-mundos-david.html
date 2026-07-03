@@ -1,0 +1,385 @@
+<div class="cincom-interactivo">
+<style>
+  .cincom-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .cincom-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .cincom-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .cincom-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .cincom-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .cincom-leyenda .violeta { background: rgba(94,53,120,0.12);  border-color: var(--violeta); }
+  .cincom-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .cincom-diagrama svg { width: 100%; height: auto; display: block; }
+  .cincom-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .cincom-nodo:hover rect { stroke-width: 2 !important; }
+  .cincom-nodo:hover circle { stroke-width: 2.5 !important; }
+  .cincom-nodo.activa rect { stroke-width: 2.5 !important; }
+  .cincom-nodo.activa circle { stroke-width: 3 !important; }
+  .cincom-nodo.dim { opacity: 0.32; }
+  .cincom-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .cincom-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .cincom-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .cincom-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .cincom-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .cincom-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .cincom-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="cincom-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>las cinco shirot · בָּרְכִי נַפְשִׁי</span>
+  <span><span class="swatch verde"></span>pruebas · Rav Yehuda · Rav Matna · Rabba b. R. Sheila</span>
+  <span><span class="swatch violeta"></span>el midrash del Artista</span>
+  <span><span class="swatch azul"></span>el alma · las cinco semejanzas</span>
+</div>
+
+<div class="cincom-diagrama">
+<svg viewBox="0 0 720 1150" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 10a: los cinco mundos de David y su shirá · el Artista sin igual · las cinco semejanzas del alma con su Creador</title>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Los cinco mundos de David · el alma que se parece a su Creador</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 10a · «habitó cinco mundos y en cada uno dijo shirá»</text>
+
+<!-- ============================================================ -->
+<!-- APERTURA · R. YOJANAN BESHEM R. SHIMON BAR YOJAI            -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">APERTURA · R. YOJANAN BESHEM R. SHIMON BAR YOJAI · MISHLEI 31:26</text>
+
+<g class="cincom-nodo" data-id="apertura">
+  <rect x="60" y="86" width="600" height="82" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="110" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">פִּיהָ פָּתְחָה בְחָכְמָה</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Su boca abrió con sabiduría» (Mishlei 31:26) — Shlomó habla de su padre David,</text>
+  <text x="360" y="146" text-anchor="middle" font-size="11" direction="rtl" fill="#3d2f23">שֶׁדָּר בַּחֲמִשָּׁה עוֹלָמִים וְאָמַר שִׁירָה</text>
+  <text x="360" y="162" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">que habitó cinco mundos — y en cada uno dijo shirá</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL ARCO DE VIDA · CINCO MUNDOS                              -->
+<!-- ============================================================ -->
+<text x="60" y="196" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ARCO DE VIDA · CINCO ESTACIONES · CINCO BARJI NAFSHI</text>
+
+<!-- Arco (órbita de la vida): del vientre al día de la muerte -->
+<path d="M 110 430 Q 360 160 610 430" fill="none" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.7"/>
+<text x="72" y="470" font-size="9" fill="#6b4423" font-style="italic">antes de nacer</text>
+<text x="576" y="470" font-size="9" fill="#6b4423" font-style="italic">después del morir</text>
+
+<!-- Mundo 1 · el vientre -->
+<g class="cincom-nodo" data-id="mundo-1">
+  <circle cx="110" cy="430" r="48" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="110" y="416" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">1</text>
+  <text x="110" y="434" text-anchor="middle" font-size="10.5" fill="#1a1410" font-weight="600">el vientre</text>
+  <text x="110" y="448" text-anchor="middle" font-size="9.5" fill="#3d2f23">materno</text>
+  <text x="110" y="498" text-anchor="middle" font-size="9.5" direction="rtl" fill="#6b4423">בָּרְכִי נַפְשִׁי... וְכָל קְרָבַי</text>
+  <text x="110" y="512" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Tehilim 103:1</text>
+</g>
+
+<!-- Mundo 2 · el aire del mundo -->
+<g class="cincom-nodo" data-id="mundo-2">
+  <circle cx="235" cy="325" r="48" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="235" y="311" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">2</text>
+  <text x="235" y="329" text-anchor="middle" font-size="10.5" fill="#1a1410" font-weight="600">el aire</text>
+  <text x="235" y="343" text-anchor="middle" font-size="9.5" fill="#3d2f23">del mundo</text>
+  <text x="235" y="393" text-anchor="middle" font-size="9.5" direction="rtl" fill="#6b4423">בָּרְכוּ ה׳ מַלְאָכָיו</text>
+  <text x="235" y="407" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">mira estrellas y constelaciones</text>
+</g>
+
+<!-- Mundo 3 · el pecho materno · con prueba verde -->
+<g class="cincom-nodo" data-id="mundo-3">
+  <circle cx="360" cy="290" r="48" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="276" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">3</text>
+  <text x="360" y="294" text-anchor="middle" font-size="10.5" fill="#1a1410" font-weight="600">el pecho</text>
+  <text x="360" y="308" text-anchor="middle" font-size="9.5" fill="#3d2f23">de su madre</text>
+  <rect x="284" y="204" width="152" height="34" rx="4" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="360" y="218" text-anchor="middle" font-size="8.5" fill="#2d6b4e" font-weight="600">R. Abahu · דַּדִּים בִּמְקוֹם בִּינָה</text>
+  <text x="360" y="231" text-anchor="middle" font-size="8" fill="#2d6b4e" font-style="italic">Rav Yehuda · Rav Matna: ¿por qué ahí?</text>
+  <text x="360" y="358" text-anchor="middle" font-size="9.5" direction="rtl" fill="#6b4423">וְאַל תִּשְׁכְּחִי כָּל גְּמוּלָיו</text>
+</g>
+
+<!-- Mundo 4 · la caída de los reshaim -->
+<g class="cincom-nodo" data-id="mundo-4">
+  <circle cx="485" cy="325" r="48" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="485" y="311" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">4</text>
+  <text x="485" y="329" text-anchor="middle" font-size="10.5" fill="#1a1410" font-weight="600">la caída de</text>
+  <text x="485" y="343" text-anchor="middle" font-size="9.5" fill="#3d2f23">los reshaim</text>
+  <text x="485" y="393" text-anchor="middle" font-size="9.5" direction="rtl" fill="#6b4423">יִתַּמּוּ חַטָּאִים... הַלְלוּיָהּ</text>
+  <text x="485" y="407" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el PRIMER halleluyá del Tehilim</text>
+</g>
+
+<!-- Mundo 5 · el día de la muerte · con prueba verde -->
+<g class="cincom-nodo" data-id="mundo-5">
+  <circle cx="610" cy="430" r="48" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="610" y="416" text-anchor="middle" font-size="15" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">5</text>
+  <text x="610" y="434" text-anchor="middle" font-size="10.5" fill="#1a1410" font-weight="600">el día de</text>
+  <text x="610" y="448" text-anchor="middle" font-size="9.5" fill="#3d2f23">la muerte</text>
+  <rect x="522" y="334" width="176" height="34" rx="4" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="610" y="348" text-anchor="middle" font-size="8.5" fill="#2d6b4e" font-weight="600">Rabba bar Rav Sheila prueba:</text>
+  <text x="610" y="361" text-anchor="middle" font-size="8.5" direction="rtl" fill="#2d6b4e">תַּסְתִּיר פָּנֶיךָ יִבָּהֵלוּן</text>
+  <text x="610" y="498" text-anchor="middle" font-size="9.5" direction="rtl" fill="#6b4423">הוֹד וְהָדָר לָבָשְׁתָּ</text>
+  <text x="610" y="512" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Tehilim 104:1</text>
+</g>
+
+<text x="360" y="540" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">cinco mundos = una biografía completa · desde las entrañas que lo formaron hasta el vestirse de esplendor al morir</text>
+
+<!-- ============================================================ -->
+<!-- EL ARTISTA SIN IGUAL · MIDRASH VIOLETA                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="550" x2="360" y2="568" stroke="#5e3578" stroke-width="1.2"/>
+
+<text x="60" y="582" font-size="9.5" fill="#5e3578" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ARTISTA SIN IGUAL · RAV SHIMI BAR UKVA ANTE R. SHIMON BEN PAZI</text>
+
+<g class="cincom-nodo" data-id="artista">
+  <rect x="60" y="592" width="600" height="118" rx="6" fill="rgba(94,53,120,0.08)" stroke="#5e3578" stroke-width="1.5"/>
+  <text x="360" y="616" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">מִדַּת בָּשָׂר וָדָם צָר צוּרָה עַל גַּבֵּי הַכּוֹתֶל וְאֵינוֹ יָכוֹל לְהָטִיל בָּהּ רוּחַ וּנְשָׁמָה</text>
+  <text x="360" y="636" text-anchor="middle" font-size="11.5" direction="rtl" fill="#5e3578" font-weight="500">וְהַקָּדוֹשׁ בָּרוּךְ הוּא צָר צוּרָה בְּתוֹךְ צוּרָה</text>
+  <text x="360" y="656" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">el humano pinta sobre el muro y no puede insuflarle espíritu — HKBH forma una forma DENTRO de otra forma</text>
+  <text x="360" y="680" text-anchor="middle" font-size="11" direction="rtl" fill="#5e3578">אֵין צוּר כֵּאלֹהֵינוּ — אֵין צַיָּר כֵּאלֹהֵינוּ</text>
+  <text x="360" y="698" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">Jana (Shmuel I 2:2): no hay Roca — no hay ARTISTA — como nuestro Dios</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL ESPEJO · LAS CINCO SEMEJANZAS DEL ALMA                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="710" x2="360" y2="728" stroke="#1e3a5f" stroke-width="1.2"/>
+
+<text x="60" y="742" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ESPEJO · ¿FRENTE A QUIÉN DIJO DAVID LOS CINCO BARJI NAFSHI?</text>
+
+<!-- Encabezados de la tabla espejo -->
+<text x="205" y="768" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5e3578" font-weight="700">HKBH</text>
+<text x="515" y="768" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">la neshamá</text>
+<line x1="360" y1="756" x2="360" y2="1004" stroke="#6b4423" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.7"/>
+
+<!-- Semejanza 1 -->
+<g class="cincom-nodo" data-id="espejo-1">
+  <rect x="60" y="778" width="290" height="40" rx="4" fill="rgba(94,53,120,0.07)" stroke="#5e3578" stroke-width="1"/>
+  <rect x="370" y="778" width="290" height="40" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="205" y="796" text-anchor="middle" font-size="10" fill="#3d2f23">llena todo el mundo</text>
+  <text x="205" y="811" text-anchor="middle" font-size="9" direction="rtl" fill="#5e3578">מָלֵא כָל הָעוֹלָם</text>
+  <text x="515" y="796" text-anchor="middle" font-size="10" fill="#3d2f23">llena todo el cuerpo</text>
+  <text x="515" y="811" text-anchor="middle" font-size="9" direction="rtl" fill="#1e3a5f">מְלֵאָה אֶת כָּל הַגּוּף</text>
+</g>
+
+<!-- Semejanza 2 -->
+<g class="cincom-nodo" data-id="espejo-2">
+  <rect x="60" y="826" width="290" height="40" rx="4" fill="rgba(94,53,120,0.07)" stroke="#5e3578" stroke-width="1"/>
+  <rect x="370" y="826" width="290" height="40" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="205" y="844" text-anchor="middle" font-size="10" fill="#3d2f23">ve y no es visto</text>
+  <text x="205" y="859" text-anchor="middle" font-size="9" direction="rtl" fill="#5e3578">רוֹאֶה וְאֵינוֹ נִרְאֶה</text>
+  <text x="515" y="844" text-anchor="middle" font-size="10" fill="#3d2f23">ve y no es vista</text>
+  <text x="515" y="859" text-anchor="middle" font-size="9" direction="rtl" fill="#1e3a5f">רוֹאָה וְאֵינָהּ נִרְאֵית</text>
+</g>
+
+<!-- Semejanza 3 -->
+<g class="cincom-nodo" data-id="espejo-3">
+  <rect x="60" y="874" width="290" height="40" rx="4" fill="rgba(94,53,120,0.07)" stroke="#5e3578" stroke-width="1"/>
+  <rect x="370" y="874" width="290" height="40" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="205" y="892" text-anchor="middle" font-size="10" fill="#3d2f23">nutre al mundo entero</text>
+  <text x="205" y="907" text-anchor="middle" font-size="9" direction="rtl" fill="#5e3578">זָן אֶת כָּל הָעוֹלָם</text>
+  <text x="515" y="892" text-anchor="middle" font-size="10" fill="#3d2f23">nutre al cuerpo entero</text>
+  <text x="515" y="907" text-anchor="middle" font-size="9" direction="rtl" fill="#1e3a5f">זָנָה אֶת כָּל הַגּוּף</text>
+</g>
+
+<!-- Semejanza 4 -->
+<g class="cincom-nodo" data-id="espejo-4">
+  <rect x="60" y="922" width="290" height="40" rx="4" fill="rgba(94,53,120,0.07)" stroke="#5e3578" stroke-width="1"/>
+  <rect x="370" y="922" width="290" height="40" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="205" y="940" text-anchor="middle" font-size="10" fill="#3d2f23">es puro</text>
+  <text x="205" y="955" text-anchor="middle" font-size="9" direction="rtl" fill="#5e3578">טָהוֹר</text>
+  <text x="515" y="940" text-anchor="middle" font-size="10" fill="#3d2f23">es pura</text>
+  <text x="515" y="955" text-anchor="middle" font-size="9" direction="rtl" fill="#1e3a5f">טְהוֹרָה</text>
+</g>
+
+<!-- Semejanza 5 -->
+<g class="cincom-nodo" data-id="espejo-5">
+  <rect x="60" y="970" width="290" height="40" rx="4" fill="rgba(94,53,120,0.07)" stroke="#5e3578" stroke-width="1"/>
+  <rect x="370" y="970" width="290" height="40" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="205" y="988" text-anchor="middle" font-size="10" fill="#3d2f23">habita en cámaras interiores</text>
+  <text x="205" y="1003" text-anchor="middle" font-size="9" direction="rtl" fill="#5e3578">יוֹשֵׁב בְּחַדְרֵי חֲדָרִים</text>
+  <text x="515" y="988" text-anchor="middle" font-size="10" fill="#3d2f23">habita en cámaras interiores</text>
+  <text x="515" y="1003" text-anchor="middle" font-size="9" direction="rtl" fill="#1e3a5f">יוֹשֶׁבֶת בְּחַדְרֵי חֲדָרִים</text>
+</g>
+
+<!-- Cierre -->
+<line x1="360" y1="1018" x2="360" y2="1034" stroke="#b8860b" stroke-width="1.2"/>
+
+<g class="cincom-nodo" data-id="cierre">
+  <rect x="60" y="1042" width="600" height="84" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="1068" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">יָבֹא מִי שֶׁיֵּשׁ בּוֹ חֲמִשָּׁה דְבָרִים הַלָּלוּ</text>
+  <text x="360" y="1088" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">וִישַׁבֵּחַ לְמִי שֶׁיֵּשׁ בּוֹ חֲמִשָּׁה דְבָרִים הַלָּלוּ</text>
+  <text x="360" y="1110" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">que venga quien tiene estas cinco cosas — y alabe a Quien tiene estas cinco cosas · la shirá es un espejo ontológico</text>
+</g>
+
+</svg>
+</div>
+
+<div class="cincom-panel" id="cincom-panel">
+  <p class="cincom-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'apertura': {
+      titulo: 'La apertura · Shlomó habla de David',
+      hebreo: 'פִּיהָ פָּתְחָה בְחָכְמָה... שֶׁדָּר בַּחֲמִשָּׁה עוֹלָמִים וְאָמַר שִׁירָה',
+      traduccion: '«Su boca abrió con sabiduría» (Mishlei 31:26) — David, que habitó cinco mundos y dijo shirá',
+      explicacion: 'R. Yojanan en nombre de R. Shimon bar Yojai lee el elogio de la Eshet Jayil (Mishlei 31:26) como palabras de Shlomó sobre SU PADRE DAVID.\n\n¿Por qué «su boca abrió con sabiduría» describe a David? Porque David hizo algo único: HABITÓ CINCO MUNDOS — cinco condiciones existenciales radicalmente distintas — y en CADA UNA dijo shirá.\n\nLa sabiduría de la boca de David no es elocuencia. Es la capacidad de encontrar, en cada estación de la existencia — incluso en el vientre antes de nacer, incluso en el día de morir — un motivo específico de alabanza.\n\nLos cinco «mundos» no son lugares: son ESTADOS. El vientre, el aire del mundo, el pecho materno, la visión de la justicia divina, la muerte. Cada uno tiene su propio בָּרְכִי נַפְשִׁי — su propio «bendice, alma mía» — anclado en Tehilim 103 y 104.\n\nLa estructura es una biografía espiritual completa: el midrash recorre la vida entera de un ser humano y muestra que NO HAY TRAMO SIN CANTO. La shirá no es un género para momentos altos: es la respuesta adecuada a la existencia como tal.'
+    },
+    'mundo-1': {
+      titulo: 'Mundo 1 · el vientre materno',
+      hebreo: 'בָּרְכִי נַפְשִׁי אֶת ה׳ וְכָל קְרָבַי אֶת שֵׁם קָדְשׁוֹ',
+      traduccion: '«Bendice, alma mía, a Hashem — y todas mis entrañas a Su santo nombre» (Tehilim 103:1)',
+      explicacion: 'El primer mundo es el más sorprendente: David dijo shirá EN EL VIENTRE de su madre, antes de nacer.\n\nLa prueba está en la letra del versículo: וְכָל קְרָבַי — «y todas mis ENTRAÑAS». La palabra קְרָבַי (kravai) significa literalmente los órganos internos, el interior del cuerpo. El midrash lee: David agradece CON las entrañas — y POR las entrañas — que lo formaron. La shirá del vientre agradece al lugar mismo donde fue tejido.\n\nEl feto habita un «mundo» completo: oscuro, acuático, cerrado — y sin embargo suficiente para la alabanza. Antes de haber visto nada, antes de haber recibido nada del mundo exterior, ya hay motivo de canto: el puro hecho de estar siendo FORMADO.\n\nEste primer mundo enlaza directamente con el midrash del Artista que sigue: HKBH צָר צוּרָה בְּתוֹךְ צוּרָה — forma una forma dentro de otra forma. El vientre es el taller del tzayar divino, y David canta desde adentro del taller.'
+    },
+    'mundo-2': {
+      titulo: 'Mundo 2 · el aire del mundo · las estrellas',
+      hebreo: 'בָּרְכוּ ה׳ מַלְאָכָיו... בָּרְכוּ ה׳ כָּל צְבָאָיו',
+      traduccion: '«Bendecid a Hashem, Sus ángeles... bendecid a Hashem, todos Sus ejércitos» (Tehilim 103:20-21)',
+      explicacion: 'El segundo mundo: David NACE, sale al aire del mundo — y lo primero que hace es MIRAR HACIA ARRIBA.\n\nVio las estrellas y las constelaciones (כוכבים ומזלות) y dijo shirá — pero no una shirá sobre sí mismo: una CONVOCATORIA. «Bendecid a Hashem, Sus ángeles... todos Sus ejércitos». El recién llegado invita a los veteranos del cosmos — los ejércitos celestes que llevan alabando desde la creación — a bendecir junto con él.\n\nEl gesto es de una humildad enorme: el primer acto del nacido no es celebrar su propia llegada sino RECONOCER LA INMENSIDAD que lo precede. El mundo al que uno nace ya estaba cantando; nacer es sumarse a un coro en marcha.\n\nEl contraste con el mundo 1 es deliberado: en el vientre, la shirá era íntima (mis entrañas); al nacer, la shirá se vuelve cósmica (Sus ejércitos). Cada mundo tiene la escala de alabanza que le corresponde.'
+    },
+    'mundo-3': {
+      titulo: 'Mundo 3 · el pecho materno · דדים במקום בינה',
+      hebreo: 'וְאַל תִּשְׁכְּחִי כָּל גְּמוּלָיו',
+      traduccion: '«Y no olvides todos Sus favores» (Tehilim 103:2)',
+      explicacion: 'El tercer mundo: David mamó del pecho de su madre, miró los pechos — y dijo shirá: «no olvides todos Sus גְּמוּלָיו». La palabra גְּמוּלָיו (favores/retribuciones) resuena con גְּמוּלֵי מֵחָלָב — los «destetados de leche». El favor concreto que David canta es la LACTANCIA misma.\n\n¿Qué tiene de extraordinario? R. Abahu lo explica: HKBH puso los pechos de la mujer בִּמְקוֹם בִּינָה — «en el lugar del entendimiento», junto al corazón — a diferencia de los animales, donde están abajo, junto a las patas.\n\n¿Y por qué ahí? Dos respuestas amoraicas:\n\n  · RAV YEHUDA: para que el lactante NO MIRE LA ERVÁ — la anatomía humana protege la mirada del bebé desde su primer alimento.\n\n  · RAV MATNA: para que NO MAME JUNTO AL LUGAR DE LA INMUNDICIA — que el alimento no venga contaminado por la proximidad de lo sucio.\n\nAmbas respuestas leen el CUERPO como diseño moral: la ubicación de los pechos es una decisión del Artista con intención de tzniut y de pureza. El bebé humano, a diferencia del animal, es alimentado cara a cara, a la altura del corazón y del entendimiento.\n\nLa shirá del tercer mundo agradece un favor que nadie nota: la GEOMETRÍA de la misericordia, inscrita en la anatomía.'
+    },
+    'mundo-4': {
+      titulo: 'Mundo 4 · la caída de los reshaim · el primer halleluyá',
+      hebreo: 'יִתַּמּוּ חַטָּאִים מִן הָאָרֶץ וּרְשָׁעִים עוֹד אֵינָם... הַלְלוּיָהּ',
+      traduccion: '«Que se acaben los pecados de la tierra, y los malvados ya no sean... ¡Halleluyá!» (Tehilim 104:35)',
+      explicacion: 'El cuarto mundo: David vio la CAÍDA DE LOS RESHAIM — el momento en que la maldad se agota — y dijo shirá.\n\nEl dato editorial es precioso: este הַלְלוּיָהּ es el PRIMER halleluyá de todo el libro de Tehilim. En 103 salmos previos David nunca usó la palabra. La reservó para este momento: cuando los pecados se terminan de la tierra.\n\nEs el mismo versículo que Beruria corrigió (Berajot 10a, justo antes): se lee יִתַּמּוּ חַטָּאִים — que se acaben los PECADOS (jataím), no los pecadores (jotím). Cuando los pecados cesan, los reshaim «ya no son» — no porque mueran, sino porque dejan de ser reshaim. El halleluyá inaugural del Tehilim celebra la desaparición del MAL, no de los malvados.\n\nA diferencia de los otros cuatro mundos — vientre, aire, pecho, muerte, que son estaciones biológicas — este mundo es MORAL: la visión de la justicia divina completándose. La biografía espiritual de David incluye, como un mundo en sí mismo, el momento en que uno ve al mal agotarse. También eso merece su propio canto — y el más alto de todos.'
+    },
+    'mundo-5': {
+      titulo: 'Mundo 5 · el día de la muerte',
+      hebreo: 'הוֹד וְהָדָר לָבָשְׁתָּ',
+      traduccion: '«De esplendor y majestad te has vestido» (Tehilim 104:1)',
+      explicacion: 'El quinto mundo: David miró EL DÍA DE LA MUERTE — יוֹם הַמִּיתָה — y dijo shirá: «Bendice, alma mía, a Hashem... de esplendor y majestad te has vestido».\n\n¿De dónde sabemos que este versículo habla de la muerte? RABBA BAR RAV SHEILA lo prueba del FINAL del mismo salmo (104:29): תַּסְתִּיר פָּנֶיךָ יִבָּהֵלוּן — «escondes Tu rostro: se aterran; recoges su aliento: expiran y al polvo vuelven». El salmo 104 entero culmina en la muerte de las criaturas; por tanto su apertura — el esplendor y la majestad — también pertenece a ese horizonte.\n\nLa audacia teológica: el día de morir es descrito como un VESTIRSE DE GALA. הוֹד וְהָדָר — esplendor y majestad — es vocabulario de coronación. La muerte no es despojo sino investidura: el alma que regresa se viste, no se desnuda.\n\nHasta el morir es un mundo que merece canto. La biografía de las cinco shirot queda así enmarcada por dos oscuridades — el vientre antes de la vida y la muerte después de ella — y David canta EN AMBAS. El arco se cierra donde empezó: en la mano del Artista que forma y que recoge.'
+    },
+    'artista': {
+      titulo: 'El Artista sin igual · צר צורה בתוך צורה',
+      hebreo: 'מִדַּת בָּשָׂר וָדָם צָר צוּרָה עַל גַּבֵּי הַכּוֹתֶל... וְהַקָּדוֹשׁ בָּרוּךְ הוּא צָר צוּרָה בְּתוֹךְ צוּרָה',
+      traduccion: 'El de carne y hueso pinta una forma sobre el muro... y HKBH forma una forma dentro de otra forma',
+      explicacion: 'Rav Shimi bar Ukva (que servía ante R. Shimon ben Pazi) transmite el midrash que fundamenta todo el pasaje.\n\nLA COMPARACIÓN:\n\n  · El artista humano — מִדַּת בָּשָׂר וָדָם — pinta una forma SOBRE EL MURO: superficie plana, exterior, inerte. Y por más perfecta que sea su figura, וְאֵינוֹ יָכוֹל לְהָטִיל בָּהּ רוּחַ וּנְשָׁמָה — no puede echarle espíritu ni alma, ni entrañas ni intestinos.\n\n  · HKBH — צָר צוּרָה בְּתוֹךְ צוּרָה: forma una forma DENTRO de otra forma. El feto dentro del vientre. Una obra tridimensional, interior, viva — y le insufla רוּחַ וּנְשָׁמָה, espíritu y alma, קְרָבַיִם וּבְנֵי מֵעַיִם, entrañas e intestinos.\n\nLa diferencia no es de grado sino de dimensión: el arte humano decora superficies; el arte divino crea INTERIORIDADES — y dentro de la interioridad, otra interioridad más: el alma dentro del cuerpo dentro del vientre.\n\nPor eso cantó Jana (Shmuel I 2:2): אֵין צוּר כֵּאלֹהֵינוּ — «no hay Roca como nuestro Dios». Y la guemará relee: אֵין צַיָּר כֵּאלֹהֵינוּ — no hay TZAYAR, no hay ARTISTA, como nuestro Dios. El juego צוּר/צַיָּר convierte el nombre divino «Roca» en el título «Pintor»: la solidez de Dios ES su arte.\n\nQue sea Jana quien lo canta no es casual: la madre estéril que recibió un hijo conoce desde adentro el taller del Artista. Y el midrash conecta con el mundo 1 de David: la shirá del vientre es el canto de la obra al Artista, desde dentro de la obra misma.'
+    },
+    'espejo-1': {
+      titulo: 'Semejanza 1 · llena todo',
+      hebreo: 'מַה הַקָּדוֹשׁ בָּרוּךְ הוּא מָלֵא כָל הָעוֹלָם — אַף נְשָׁמָה מְלֵאָה אֶת כָּל הַגּוּף',
+      traduccion: 'Como HKBH llena todo el mundo — así el alma llena todo el cuerpo',
+      explicacion: 'Primera semejanza del espejo: la OMNIPRESENCIA.\n\nHKBH llena todo el mundo — no hay lugar vacío de Su presencia (מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ). Y el alma llena todo el cuerpo: no reside en un órgano, no tiene «asiento» localizable. Está entera en cada miembro — en la mano que escribe y en el pie que camina — sin dividirse.\n\nLa analogía enseña en ambas direcciones:\n\n  · Del alma hacia HKBH: así como sabes que estás vivo entero aunque no puedas señalar DÓNDE está tu alma, así el mundo está lleno de su Creador aunque no puedas señalarlo.\n\n  · De HKBH hacia el alma: la relación del alma con el cuerpo es una miniatura de la relación de Dios con el mundo. El cuerpo es el «mundo» del alma; el mundo es el «cuerpo» de la presencia divina.\n\nEsta primera semejanza establece la lógica de toda la serie: el alma es el único objeto de la experiencia humana que se comporta COMO Dios — y por eso es la única capacitada para alabarlo con conocimiento de causa.'
+    },
+    'espejo-2': {
+      titulo: 'Semejanza 2 · ve y no es vista',
+      hebreo: 'מָה הַקָּדוֹשׁ בָּרוּךְ הוּא רוֹאֶה וְאֵינוֹ נִרְאֶה — אַף נְשָׁמָה רוֹאָה וְאֵינָהּ נִרְאֵית',
+      traduccion: 'Como HKBH ve y no es visto — así el alma ve y no es vista',
+      explicacion: 'Segunda semejanza: la ASIMETRÍA DE LA VISIÓN.\n\nHKBH ve todo y no es visto por nadie. Y el alma: es ella la que VE — el ojo es solo instrumento; el que mira a través del ojo es el alma — y sin embargo nadie ha visto un alma. Ni el cirujano que abre el cuerpo la encuentra.\n\nLa semejanza responde de antemano a la objeción del escéptico: «¿cómo voy a servir a un Dios que no veo?». Respuesta: tú mismo eres operado por algo que ve sin ser visto. Tu propia visión es la prueba de que existe visión invisible.\n\nHay un eco directo del midrash del Artista: el pintor humano hace figuras QUE SE VEN pero no ven; HKBH hace lo inverso — un alma QUE VE pero no se ve. La obra maestra del tzayar divino es precisamente lo invisible.\n\nEl paralelo con la sugyá de los mazikin invisibles (Berajot 6a) es notable: el judaísmo rabínico insiste en que lo real excede lo visible — hacia abajo (mazikin) y hacia arriba (el alma, y su Creador).'
+    },
+    'espejo-3': {
+      titulo: 'Semejanza 3 · nutre',
+      hebreo: 'מָה הַקָּדוֹשׁ בָּרוּךְ הוּא זָן אֶת כָּל הָעוֹלָם כֻּלּוֹ — אַף נְשָׁמָה זָנָה אֶת כָּל הַגּוּף',
+      traduccion: 'Como HKBH nutre al mundo entero — así el alma nutre al cuerpo entero',
+      explicacion: 'Tercera semejanza: la NUTRICIÓN.\n\nHKBH es הַזָּן אֶת הָעוֹלָם כֻּלּוֹ — el que sustenta al mundo entero (la primera berajá de Birkat HaMazon). Y el alma nutre al cuerpo entero: mientras el alma está, el cuerpo se mantiene, digiere, se repara, crece. En el momento en que el alma parte, el mismo cuerpo con los mismos órganos comienza a descomponerse.\n\nLa vida no es una propiedad de la materia — es un SUMINISTRO constante. El cuerpo no «tiene» vida; la RECIBE del alma a cada instante, igual que el mundo no «tiene» existencia sino que la recibe de su Creador a cada instante.\n\nEsta semejanza dialoga con el mundo 3 de David — el pecho materno. Allí David cantó la nutrición VISIBLE (la leche, colocada con sabiduría junto al corazón); aquí el alma replica la nutrición INVISIBLE. La madre que amamanta es imagen del alma que sostiene — y ambas son imagen del זָן אֶת הַכֹּל.'
+    },
+    'espejo-4': {
+      titulo: 'Semejanza 4 · puro',
+      hebreo: 'מָה הַקָּדוֹשׁ בָּרוּךְ הוּא טָהוֹר — אַף נְשָׁמָה טְהוֹרָה',
+      traduccion: 'Como HKBH es puro — así el alma es pura',
+      explicacion: 'Cuarta semejanza: la PUREZA.\n\nHKBH es puro — ninguna impureza lo toca, ningún contacto lo contamina. Y el alma es pura: אֱלֹהַי, נְשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה הִיא — «Dios mío, el alma que pusiste en mí es PURA», dice la berajá matinal.\n\nLa afirmación es más radical de lo que parece: el alma habita un cuerpo que come, enferma, peca, se contamina — y sin embargo ELLA no se ensucia. Como HKBH, que llena un mundo lleno de impurezas sin contaminarse, el alma atraviesa la biografía entera del cuerpo — sus errores incluidos — y permanece limpia en su núcleo.\n\nDe aquí la doctrina de la teshuvá: el retorno es posible porque hay ADÓNDE volver — un núcleo que nunca se manchó. El pecado se adhiere a las capas exteriores de la persona, no a su alma.\n\nY otra vez el eco del mundo 3: Rav Matna explicó que los pechos están junto al corazón para que el bebé no mame «junto al lugar de la inmundicia». El diseño del Artista separa alimento y suciedad en el cuerpo — como separó pureza y contaminación en la estructura del alma.'
+    },
+    'espejo-5': {
+      titulo: 'Semejanza 5 · cámaras interiores',
+      hebreo: 'מָה הַקָּדוֹשׁ בָּרוּךְ הוּא יוֹשֵׁב בְּחַדְרֵי חֲדָרִים — אַף נְשָׁמָה יוֹשֶׁבֶת בְּחַדְרֵי חֲדָרִים',
+      traduccion: 'Como HKBH habita en cámaras interiores — así el alma habita en cámaras interiores',
+      explicacion: 'Quinta y última semejanza: la INTERIORIDAD.\n\nHKBH habita בְּחַדְרֵי חֲדָרִים — en «cámaras de cámaras», en el interior del interior. No en la superficie del mundo sino en su recinto más recóndito. Y el alma igual: no está en la piel ni en los miembros visibles, sino en lo más interior de lo interior del cuerpo.\n\nLa expresión duplicada — jadrei jadarim, cámaras DE cámaras — es la misma lógica que צָר צוּרָה בְּתוֹךְ צוּרָה, forma dentro de forma. La interioridad divina no es un escondite: es una ANIDACIÓN infinita. Siempre hay un adentro más adentro.\n\nEsta semejanza cierra la serie con una consecuencia práctica para la avodá: a Dios no se lo encuentra saliendo sino ENTRANDO. El camino hacia el que habita en cámaras interiores pasa por las cámaras interiores propias — por el alma, que vive en el mismo tipo de recinto.\n\nCinco semejanzas, cinco mundos, cinco barji nafshi: la aritmética del pasaje es deliberada. David dijo CINCO alabanzas porque el alma se parece a su Creador en CINCO cosas.'
+    },
+    'cierre': {
+      titulo: 'El cierre · la shirá como espejo ontológico',
+      hebreo: 'יָבֹא מִי שֶׁיֵּשׁ בּוֹ חֲמִשָּׁה דְבָרִים הַלָּלוּ וִישַׁבֵּחַ לְמִי שֶׁיֵּשׁ בּוֹ חֲמִשָּׁה דְבָרִים הַלָּלוּ',
+      traduccion: 'Que venga quien tiene estas cinco cosas — y alabe a Quien tiene estas cinco cosas',
+      explicacion: 'La conclusión de la sugyá responde la pregunta con la que empezó el espejo: ¿FRENTE A QUIÉN dijo David los cinco barji nafshi? — לֹא אֲמָרָן דָּוִד אֶלָּא כְּנֶגֶד הַקָּדוֹשׁ בָּרוּךְ הוּא וּכְנֶגֶד נְשָׁמָה: frente a HKBH Y frente al alma.\n\nCada בָּרְכִי נַפְשִׁי es literalmente eso: «bendice, ALMA MÍA». David no le habla a su boca ni a su corazón — convoca específicamente a la neshamá. ¿Por qué ella? Porque SOLO ELLA está calificada:\n\n  · llena su recinto — como Él llena el Suyo\n  · ve sin ser vista — como Él\n  · nutre su mundo — como Él\n  · es pura — como Él\n  · habita cámaras interiores — como Él\n\nYAVÓ MI... — «que VENGA quien tiene estas cinco cosas y alabe a Quien tiene estas cinco cosas». La alabanza no es un cumplido lanzado hacia lo desconocido: es un RECONOCIMIENTO entre semejantes. El alma alaba a Dios como un espejo «alaba» al rostro: reflejándolo.\n\nEsto reordena todo el pasaje hacia atrás:\n\n  · Los CINCO MUNDOS de David son cinco estaciones donde el alma, atravesando el cuerpo (vientre, nacimiento, lactancia, justicia, muerte), reconoce en cada una la firma de su Semejante.\n\n  · El MIDRASH DEL ARTISTA explica por qué existe tal semejanza: el que forma «forma dentro de forma» dejó, dentro de la forma, algo de Sí.\n\n  · Y la SHIRÁ resulta ser un espejo ontológico: cantar no es adular a Dios — es que lo más divino que hay en el ser humano reconozca su origen.\n\nLa biografía de David — del vientre a la muerte — es entonces la biografía de un alma que nunca dejó de reconocer. En cinco mundos distintos, la misma voz: בָּרְכִי נַפְשִׁי אֶת ה׳.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.cincom-interactivo')
+    : document.querySelector('.cincom-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#cincom-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.cincom-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="cincom-panel-header">' +
+        '<p class="cincom-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="cincom-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="cincom-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="cincom-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.cincom-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.cincom-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="cincom-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
