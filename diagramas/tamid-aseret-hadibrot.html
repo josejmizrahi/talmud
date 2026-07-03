@@ -1,0 +1,360 @@
+<div class="tamid-interactivo">
+<style>
+  .tamid-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .tamid-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .tamid-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .tamid-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .tamid-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .tamid-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .tamid-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .tamid-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .tamid-diagrama svg { width: 100%; height: auto; display: block; }
+  .tamid-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .tamid-nodo:hover rect { stroke-width: 2 !important; }
+  .tamid-nodo:hover circle { stroke-width: 2.5 !important; }
+  .tamid-nodo.activa rect { stroke-width: 2.5 !important; }
+  .tamid-nodo.activa circle { stroke-width: 3 !important; }
+  .tamid-nodo.dim { opacity: 0.32; }
+  .tamid-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .tamid-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .tamid-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .tamid-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .tamid-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .tamid-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .tamid-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="tamid-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>secuencia del Mikdash</span>
+  <span><span class="swatch azul"></span>las berajot</span>
+  <span><span class="swatch verde"></span>concordia del mishmar</span>
+  <span><span class="swatch rojo"></span>la cancelación</span>
+  <span><span class="swatch sepia"></span>moraleja</span>
+</div>
+
+<div class="tamid-diagrama">
+<svg viewBox="0 0 720 960" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 11b-12a: el shema en el Beit HaMikdash · la mishná de Tamid · los Diez Mandamientos cancelados por la querella de los minim</title>
+
+<defs>
+  <marker id="flecha-tm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-tm-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-tm-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El Tamid y los Diez Mandamientos</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 11b-12a · la liturgia de los kohanim · lo que los minim cancelaron</text>
+
+<!-- ============================================================ -->
+<!-- ACTO 1 · LA SECUENCIA DEL MIKDASH · MISHNÁ DE TAMID          -->
+<!-- ============================================================ -->
+<text x="24" y="78" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ACTO 1 · LA SECUENCIA DEL MIKDASH · MISHNÁ DE TAMID · 11B</text>
+
+<!-- El encargado -->
+<g class="tamid-nodo" data-id="memuneh">
+  <rect x="24" y="90" width="204" height="122" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="126" y="112" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">La orden del encargado</text>
+  <text x="126" y="134" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">אָמַר לָהֶם הַמְמוּנֶּה:</text>
+  <text x="126" y="152" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">בָּרְכוּ בְּרָכָה אַחַת!</text>
+  <text x="126" y="172" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«¡bendigan una berajá!»</text>
+  <text x="126" y="190" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">וְהֵם בֵּרְכוּ · y ellos bendijeron</text>
+</g>
+
+<line x1="228" y1="151" x2="252" y2="151" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tm-gold)"/>
+
+<!-- [1] Berajá ajat: la disputa -->
+<g class="tamid-nodo" data-id="beraja-ajat">
+  <rect x="258" y="90" width="204" height="122" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="360" y="112" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">[1] ¿cuál berajá?</text>
+  <text x="360" y="132" text-anchor="middle" font-size="9.5" fill="#3d2f23">Shmuel: <tspan direction="rtl" fill="#1e3a5f">אַהֲבָה רַבָּה</tspan></text>
+  <text x="360" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23">Reish Lakish: <tspan direction="rtl" fill="#1e3a5f">יוֹצֵר אוֹר</tspan></text>
+  <text x="360" y="168" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">…pero fue מִכְּלָלָא — por inferencia</text>
+  <text x="360" y="186" text-anchor="middle" font-size="8.5" direction="rtl" fill="#6b4423">בְּרָכוֹת אֵין מְעַכְּבוֹת זוֹ אֶת זוֹ</text>
+  <text x="360" y="202" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">¿o solo el ORDEN no bloquea? — queda en el aire</text>
+</g>
+
+<line x1="462" y1="151" x2="486" y2="151" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tm-gold)"/>
+
+<!-- [2] Aseret HaDibrot -->
+<g class="tamid-nodo" data-id="aseret">
+  <rect x="492" y="90" width="204" height="122" rx="6" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="2"/>
+  <text x="594" y="112" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">[2] los Diez Mandamientos</text>
+  <text x="594" y="138" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">וְקָרְאוּ עֲשֶׂרֶת הַדִּבְּרוֹת</text>
+  <text x="594" y="160" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«y leyeron los Diez Mandamientos»</text>
+  <text x="594" y="180" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">cada mañana · antes del shema</text>
+  <text x="594" y="196" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">el texto que después será borrado ↓</text>
+</g>
+
+<!-- Retorno serpentina: de [2] baja y vuelve a la izquierda -->
+<line x1="594" y1="212" x2="594" y2="230" stroke="#b8860b" stroke-width="1.2"/>
+<line x1="594" y1="230" x2="126" y2="230" stroke="#b8860b" stroke-width="1.2"/>
+<line x1="126" y1="230" x2="126" y2="246" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tm-gold)"/>
+
+<!-- [3] Las tres parashiyot -->
+<g class="tamid-nodo" data-id="parashiyot">
+  <rect x="24" y="250" width="204" height="122" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="126" y="272" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">[3] las tres parashiyot</text>
+  <text x="126" y="296" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">״שְׁמַע״</text>
+  <text x="126" y="316" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">״וְהָיָה אִם שָׁמוֹעַ״</text>
+  <text x="126" y="336" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">״וַיֹּאמֶר״</text>
+  <text x="126" y="358" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el mismo shema que rezamos hoy</text>
+</g>
+
+<line x1="228" y1="311" x2="252" y2="311" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tm-gold)"/>
+
+<!-- [4] Tres berajot al pueblo -->
+<g class="tamid-nodo" data-id="berajot-pueblo">
+  <rect x="258" y="250" width="204" height="122" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="360" y="272" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">[4] tres berajot al pueblo</text>
+  <text x="360" y="292" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">וּבֵרְכוּ אֶת הָעָם שָׁלֹשׁ בְּרָכוֹת</text>
+  <text x="360" y="314" text-anchor="middle" font-size="9.5" fill="#3d2f23">1 · <tspan direction="rtl" fill="#1e3a5f">אֱמֶת וְיַצִּיב</tspan></text>
+  <text x="360" y="332" text-anchor="middle" font-size="9.5" fill="#3d2f23">2 · <tspan direction="rtl" fill="#1e3a5f">עֲבוֹדָה</tspan></text>
+  <text x="360" y="350" text-anchor="middle" font-size="9.5" fill="#3d2f23">3 · <tspan direction="rtl" fill="#1e3a5f">בִּרְכַּת כֹּהֲנִים</tspan></text>
+</g>
+
+<line x1="462" y1="311" x2="486" y2="311" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-tm-gold)"/>
+
+<!-- [5] Shabat: la berajá del mishmar -->
+<g class="tamid-nodo" data-id="mishmar">
+  <rect x="492" y="250" width="204" height="122" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.6"/>
+  <text x="594" y="272" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">[5] en Shabat · una más</text>
+  <text x="594" y="292" text-anchor="middle" font-size="9" fill="#3d2f23">el mishmar saliente al entrante (R. Jelbo):</text>
+  <text x="594" y="312" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">מִי שֶׁשִּׁכֵּן אֶת שְׁמוֹ בַּבַּיִת הַזֶּה</text>
+  <text x="594" y="330" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">הוּא יַשְׁכִּין בֵּינֵיכֶם אַהֲבָה וְאַחְוָה</text>
+  <text x="594" y="348" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">וְשָׁלוֹם וְרֵעוּת</text>
+  <text x="594" y="364" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">amor · hermandad · paz · amistad</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ACTO 2 · LA CANCELACIÓN                                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="380" x2="360" y2="400" stroke="#8b1a1a" stroke-width="1.4" marker-end="url(#flecha-tm-rojo)"/>
+
+<text x="60" y="416" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ACTO 2 · LA CANCELACIÓN · RAV YEHUDA AMAR SHMUEL · BARAITA DE R. NATAN · 12A</text>
+
+<g class="tamid-nodo" data-id="cancelacion">
+  <rect x="60" y="428" width="600" height="118" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.8" stroke-dasharray="6,3"/>
+  <text x="360" y="454" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">אַף בִּגְבוּלִין בִּקְּשׁוּ לִקְרוֹת כֵּן</text>
+  <text x="360" y="476" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">אֶלָּא שֶׁכְּבָר בִּטְּלוּם מִפְּנֵי תַּרְעוֹמֶת הַמִּינִין</text>
+  <text x="360" y="498" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«También fuera del Mikdash quisieron leer así — pero ya los habían cancelado por la querella de los minim»</text>
+  <text x="360" y="518" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">para que los herejes no dijeran: «SOLO esto fue dado en Sinaí»</text>
+  <text x="360" y="534" text-anchor="middle" font-size="8.5" fill="#8b1a1a">lo confirma R. Natan en baraita</text>
+</g>
+
+<!-- Dos intentos de restauración -->
+<line x1="205" y1="546" x2="205" y2="566" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-tm-rojo)"/>
+<line x1="515" y1="546" x2="515" y2="566" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-tm-rojo)"/>
+
+<text x="60" y="582" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">DOS INTENTOS DE RESTAURACIÓN · DOS VETOS</text>
+
+<!-- Sura -->
+<g class="tamid-nodo" data-id="sura">
+  <rect x="60" y="594" width="290" height="132" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="205" y="616" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">SURA</text>
+  <text x="205" y="636" text-anchor="middle" font-size="9.5" fill="#3d2f23">Rabba bar bar Jana quiso</text>
+  <text x="205" y="652" text-anchor="middle" font-size="9.5" fill="#3d2f23">instituir los Diez Mandamientos</text>
+  <text x="205" y="674" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">← Rav Jisda lo frenó:</text>
+  <text x="205" y="698" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">כְּבָר בִּטְּלוּם</text>
+  <text x="205" y="716" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«ya los cancelaron»</text>
+</g>
+
+<!-- Neharde'a -->
+<g class="tamid-nodo" data-id="nehardea">
+  <rect x="370" y="594" width="290" height="132" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="515" y="616" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">NEHARDE'A</text>
+  <text x="515" y="636" text-anchor="middle" font-size="9.5" fill="#3d2f23">Ameimar quiso</text>
+  <text x="515" y="652" text-anchor="middle" font-size="9.5" fill="#3d2f23">instituir los Diez Mandamientos</text>
+  <text x="515" y="674" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">← Rav Ashi lo frenó:</text>
+  <text x="515" y="698" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">כְּבָר בִּטְּלוּם</text>
+  <text x="515" y="716" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«ya los cancelaron»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MORALEJA                                                     -->
+<!-- ============================================================ -->
+<line x1="205" y1="726" x2="205" y2="744" stroke="#3d2f23" stroke-width="1"/>
+<line x1="515" y1="726" x2="515" y2="744" stroke="#3d2f23" stroke-width="1"/>
+<line x1="205" y1="744" x2="515" y2="744" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="744" x2="360" y2="760" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-tm)"/>
+
+<text x="60" y="774" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MORALEJA · LA TEOLOGÍA DEFENSIVA PODA EL REZO</text>
+
+<g class="tamid-nodo" data-id="moraleja">
+  <rect x="60" y="786" width="600" height="102" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="810" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La polémica con los minim le costó a la liturgia su texto más sagrado</text>
+  <text x="78" y="834" font-size="9.5" fill="#3d2f23">· en el Mikdash, los Diez Mandamientos se leían CADA MAÑANA junto al shema</text>
+  <text x="78" y="850" font-size="9.5" fill="#3d2f23">· fuera del Mikdash quisieron hacer lo mismo — y la querella herética lo impidió</text>
+  <text x="78" y="866" font-size="9.5" fill="#3d2f23">· dos generaciones intentaron restaurarlos (Sura, Neharde'a) — dos veces el mismo veto</text>
+  <text x="360" y="884" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">a veces la teología defensiva poda el rezo · lo que se borra por polémica no vuelve</text>
+</g>
+
+<!-- Nota final de escala -->
+<text x="360" y="920" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">La mishná de Tamid es la única ventana textual al shema tal como se recitaba dentro del Beit HaMikdash.</text>
+<text x="360" y="938" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">Tres sugyot consecutivas cuelgan de la misma frase: «berajá ajat» — y una decisión editorial borró el Sinaí del sidur.</text>
+
+</svg>
+</div>
+
+<div class="tamid-panel" id="tamid-panel">
+  <p class="tamid-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'memuneh': {
+      titulo: 'La orden del encargado · el servicio matinal del mishmar',
+      hebreo: 'אָמַר לָהֶם הַמְמוּנֶּה: בָּרְכוּ בְּרָכָה אַחַת! וְהֵם בֵּרְכוּ',
+      traduccion: '«Les dijo el encargado: ¡bendigan una berajá! Y ellos bendijeron»',
+      explicacion: 'La guemará de Berajot 11b cita una mishná de OTRO tractado — Tamid — que describe el servicio matinal de los kohanim en el Beit HaMikdash. Es un documento litúrgico de primer orden: la única ventana textual al shema tal como se recitaba DENTRO del Templo.\n\nLa escena: los kohanim del mishmar (la guardia semanal) han terminado los primeros trabajos del sacrificio diario. Antes de continuar, se reúnen en la Lishkat HaGazit y el memuné — el encargado, el oficial que coordina el servicio — les da la orden litúrgica: בָּרְכוּ בְּרָכָה אַחַת, «¡bendigan una berajá!».\n\nLa formulación es notable por su ECONOMÍA: la mishná NO dice cuál berajá. Da por supuesto que los kohanim saben. Esa elipsis — «una berajá», sin nombre — es precisamente lo que la guemará explotará: ¿CUÁL era esa berajá? La pregunta viajó de ciudad en ciudad sin respuesta hasta llegar a Rav Yehuda (ver nodo [1]).\n\nLa estructura del servicio que sigue es exactamente la del shema con sus berajot que conocemos: una berajá antes, las tres parashiyot, berajot después. El shema comunitario NO nació en la sinagoga — nació en el Mikdash, como parte del servicio sacrificial. La sinagoga heredó y adaptó una liturgia sacerdotal.'
+    },
+    'beraja-ajat': {
+      titulo: '[1] ¿Cuál era la berajá ajat? · la disputa',
+      hebreo: 'מַאי בְּרָכָה אַחַת? … אַהֲבָה רַבָּה · יוֹצֵר אוֹר — מִכְּלָלָא',
+      traduccion: '¿Cuál es la «berajá ajat»? Ahava rabba · yotzer or — por inferencia',
+      explicacion: 'La pregunta viajó sin respuesta de ciudad en ciudad hasta llegar a Rav Yehuda, quien respondió en nombre de Shmuel: la berajá ajat era AHAVA RABBA — otra vez la misma berajá que domina las dos sugyot anteriores. La fórmula que exime de birkat haTorá y que precede al shema resulta ser TAMBIÉN la berajá matinal de los kohanim del Tamid. Tres sugyot consecutivas colgadas de la misma frase.\n\nPero había otra tradición: de REISH LAKISH se citó que la berajá era YOTZER OR (la berajá de la luz). La disputa parecía frontal — hasta que vino Rav Yitzjak bar Yosef a desarmarla: Reish Lakish nunca lo dijo EXPLÍCITAMENTE. Se le atribuyó מִכְּלָלָא — POR INFERENCIA.\n\n¿Cuál era la inferencia? Reish Lakish había enseñado que de «berajá ajat» se aprende que בְּרָכוֹת אֵין מְעַכְּבוֹת זוֹ אֶת זוֹ — «las berajot no se bloquean entre sí»: quien dijo una sola berajá (y no las dos), cumplió. De ahí se dedujo: si los kohanim decían UNA berajá y era válido, y esa una era yotzer or (la primera del par), entonces Reish Lakish debía sostener que la berajá ajat era yotzer or.\n\nY aquí la guemará hace pura ARQUEOLOGÍA DIALÉCTICA: ¿es válida la inferencia? Quizás Reish Lakish solo quiso decir que el ORDEN no bloquea — que decirlas invertidas no invalida — y no que una sola baste. Si es así, no se puede deducir nada sobre cuál era la berajá del Mikdash. La inferencia QUEDA EN EL AIRE: la guemará documenta el razonamiento, lo cuestiona, y no lo resuelve. Un ejemplo perfecto de cómo el Talmud distingue entre lo que un sabio DIJO y lo que se INFIRIÓ de él.'
+    },
+    'aseret': {
+      titulo: '[2] Los Diez Mandamientos · leídos cada mañana',
+      hebreo: 'וְקָרְאוּ עֲשֶׂרֶת הַדִּבְּרוֹת',
+      traduccion: '«Y leyeron los Diez Mandamientos»',
+      explicacion: 'El dato explosivo de la mishná de Tamid: en el Beit HaMikdash, los Diez Mandamientos se leían CADA MAÑANA, como parte del servicio diario, inmediatamente antes de las tres parashiyot del shema.\n\nLa lógica de su inclusión es evidente: los Aseret HaDibrot son el núcleo de la revelación del Sinaí — el texto que TODO el pueblo escuchó directamente. Leerlos junto al shema cada día era renovar diariamente la experiencia del Sinaí: primero la palabra dicha por HKBH a todo Israel, después la aceptación del yugo del Reino en el shema.\n\nDe hecho, esta práctica está documentada MÁS ALLÁ del Talmud: el papiro Nash (siglo II a.e.c., Egipto) contiene precisamente los Diez Mandamientos seguidos del shema — evidencia material de que la secuencia dibrot + shema era una unidad litúrgica real, no solo del Mikdash.\n\nEse es el peso dramático de este nodo: el texto MÁS sagrado de la revelación tenía su lugar en el rezo diario — y una decisión rabínica posterior lo BORRÓ (Acto 2). Cuando hoy rezamos el shema sin los Diez Mandamientos, rezamos una liturgia podada: el hueco donde estuvo el Sinaí sigue ahí, invisible.'
+    },
+    'parashiyot': {
+      titulo: '[3] Las tres parashiyot · el shema del Mikdash',
+      hebreo: '״שְׁמַע״ · ״וְהָיָה אִם שָׁמוֹעַ״ · ״וַיֹּאמֶר״',
+      traduccion: '«Shemá» · «Vehayá im shamoa» · «Vayomer»',
+      explicacion: 'Después de los Diez Mandamientos, los kohanim recitaban las TRES PARASHIYOT del shema — exactamente las mismas tres que componen el shema hasta hoy:\n\n  1 · שְׁמַע (Devarim 6:4-9) — la unidad de HKBH y el amor con todo el corazón\n  2 · וְהָיָה אִם שָׁמוֹעַ (Devarim 11:13-21) — la aceptación del yugo de las mitzvot y la doctrina de la retribución\n  3 · וַיֹּאמֶר (Bamidbar 15:37-41) — los tzitzit y la salida de Egipto\n\nEste es el testimonio histórico más importante de la mishná de Tamid: el shema de tres parashiyot ya estaba PLENAMENTE FORMADO en tiempos del Segundo Templo. No es una construcción rabínica posterior a la destrucción — es una liturgia que los kohanim recitaban dentro del recinto sagrado mientras el Tamid se ofrecía.\n\nLa continuidad es exacta en las parashiyot — y la RUPTURA es exacta en lo que las precedía: en el Mikdash, antes del shema venían los Diez Mandamientos; en nuestra liturgia, no. El shema sobrevivió intacto a la destrucción; los dibrot no sobrevivieron a la polémica.'
+    },
+    'berajot-pueblo': {
+      titulo: '[4] Tres berajot al pueblo',
+      hebreo: 'וּבֵרְכוּ אֶת הָעָם שָׁלֹשׁ בְּרָכוֹת: אֱמֶת וְיַצִּיב · עֲבוֹדָה · בִּרְכַּת כֹּהֲנִים',
+      traduccion: '«Y bendijeron al pueblo tres berajot: emet veyatziv, avodá, birkat kohanim»',
+      explicacion: 'La secuencia del Mikdash cierra con tres berajot que los kohanim pronunciaban CON EL PUEBLO — es decir, en su nombre y para su beneficio:\n\n  1 · אֱמֶת וְיַצִּיב — la berajá que sigue al shema, la confirmación de que todo lo recitado es «verdadero y firme». La misma berajá que hoy une el shema con la amidá.\n\n  2 · עֲבוֹדָה — la berajá por el SERVICIO mismo: que HKBH acepte la avodá de Israel. Es el antepasado de la berajá de retzé de nuestra amidá. En el Mikdash tenía sentido literal: se pronunciaba mientras el servicio sacrificial estaba efectivamente ocurriendo.\n\n  3 · בִּרְכַּת כֹּהֲנִים — la bendición sacerdotal (Bamidbar 6:24-26), pronunciada por los kohanim con las manos alzadas, tal como pervive en nuestra liturgia.\n\nLa estructura completa del servicio — berajá antes, shema, berajot después — es el ESQUELETO exacto del rezo matinal actual. La mishná de Tamid demuestra que la sinagoga no inventó su liturgia: la heredó del Mikdash, adaptando lo sacrificial (avodá literal) a lo verbal (avodá del corazón).'
+    },
+    'mishmar': {
+      titulo: '[5] En Shabat · la berajá del mishmar saliente',
+      hebreo: 'מִי שֶׁשִּׁכֵּן אֶת שְׁמוֹ בַּבַּיִת הַזֶּה — הוּא יַשְׁכִּין בֵּינֵיכֶם אַהֲבָה וְאַחְוָה וְשָׁלוֹם וְרֵעוּת',
+      traduccion: '«Quien hizo morar Su nombre en esta Casa — haga morar entre ustedes amor, hermandad, paz y amistad»',
+      explicacion: 'En Shabat, la secuencia ganaba una berajá más. R. Jelbo explica cuál: el mishmar SALIENTE se la decía al mishmar ENTRANTE.\n\nEl contexto: los kohanim servían en el Mikdash por turnos semanales (mishmarot). Cada Shabat, una guardia terminaba su semana y otra comenzaba. El momento del relevo — dos grupos de kohanim cruzándose en el recinto sagrado — recibió su propia fórmula litúrgica:\n\n«Quien hizo morar Su nombre en esta Casa — haga morar entre ustedes אַהֲבָה (amor), אַחְוָה (hermandad), שָׁלוֹם (paz) y רֵעוּת (amistad)».\n\nLa berajá tiene una arquitectura teológica precisa: el verbo es el mismo — שִׁכֵּן / יַשְׁכִּין, «hacer morar». Así como HKBH hizo MORAR (shikén) Su nombre en el Templo, que haga MORAR (yashkín) la concordia entre los kohanim. La Shejiná en la Casa y la concordia entre los hombres son la misma operación divina en dos planos.\n\nY hay una lección social discreta: el punto más delicado de una institución es el RELEVO — el momento en que un grupo entrega el poder y el privilegio a otro. Precisamente ahí, la liturgia del Mikdash insertó una plegaria de concordia. El turno saliente no se despide con nostalgia ni rivalidad, sino bendiciendo la unidad de los que llegan.'
+    },
+    'cancelacion': {
+      titulo: 'La cancelación · la querella de los minim',
+      hebreo: 'אַף בִּגְבוּלִין בִּקְּשׁוּ לִקְרוֹת כֵּן, אֶלָּא שֶׁכְּבָר בִּטְּלוּם מִפְּנֵי תַּרְעוֹמֶת הַמִּינִין',
+      traduccion: '«También fuera del Mikdash quisieron leer así — pero ya los habían cancelado por la querella de los minim»',
+      explicacion: 'Rav Yehuda en nombre de Shmuel documenta el drama: אַף בִּגְבוּלִין — «también en las fronteras», es decir, FUERA del Mikdash, en las comunidades — quisieron leer los Diez Mandamientos cada día junto al shema, tal como se hacía en el Templo. Era lo natural: extender la liturgia sacerdotal a todo el pueblo.\n\nPero ya los habían CANCELADO — מִפְּנֵי תַּרְעוֹמֶת הַמִּינִין, «por la querella de los minim». Una baraita de R. Natan lo confirma y explicita el peligro: para que los herejes no dijeran a los ignorantes «SOLO esto fue dado a Moshé en Sinaí».\n\nEl argumento herético funcionaba así: si los Diez Mandamientos ocupan un lugar litúrgico privilegiado — leídos cada día, destacados sobre el resto de la Torá — entonces SOLO ellos son palabra divina directa. El resto (las mitzvot, la Torá oral, todo el edificio halájico) sería agregado humano prescindible. Es el argumento clásico de las corrientes que aceptaban una revelación mínima y descartaban la ley: dame el decálogo y quédate con el resto.\n\nLa respuesta rabínica fue quirúrgica y dolorosa: quitar los Diez Mandamientos del rezo diario. Si su prominencia litúrgica alimentaba la herejía, la prominencia debía desaparecer. NO se degradó su santidad — se les negó el ESCENARIO. La igualdad de toda la Torá quedó protegida al precio de silenciar diariamente su página más célebre.'
+    },
+    'sura': {
+      titulo: 'Primer intento · Rabba bar bar Jana en Sura',
+      hebreo: 'סְבוּר לְמִקְבְּעִינְהוּ בְּסוּרָא — אֲמַר לְהוּ רַב חִסְדָּא: כְּבָר בִּטְּלוּם',
+      traduccion: 'Pensaron instituirlos en Sura — les dijo Rav Jisda: «ya los cancelaron»',
+      explicacion: 'Primera escena de restauración fallida: RABBA BAR BAR JANA — el gran viajero y narrador del Talmud — quiso instituir la lectura diaria de los Diez Mandamientos en SURA, la academia fundada por Rav en Babilonia.\n\nEl impulso es comprensible: la mishná de Tamid estaba ahí, canónica, describiendo los dibrot como parte del servicio diario. ¿Por qué no recuperar en la gran academia babilónica lo que el Mikdash practicaba? Restaurar los dibrot era restaurar un fragmento del Templo perdido.\n\nPero RAV JISDA lo frenó con dos palabras: כְּבָר בִּטְּלוּם — «YA los cancelaron». El perfecto es decisivo: no «están cancelados» (estado discutible) sino «ya los cancelaron» (acto histórico consumado). La cancelación no fue una costumbre que se pueda revertir localmente — fue una DECISIÓN tomada frente a un peligro, y mientras la razón del decreto siga concebible, el decreto permanece.\n\nLa escena enseña algo sobre la maquinaria halájica: ni siquiera un sabio del calibre de Rabba bar bar Jana, ni siquiera con una mishná explícita como precedente, puede reabrir unilateralmente lo que una generación anterior cerró por motivo de polémica. El texto queda canónico en el estudio — y vetado en el rezo.'
+    },
+    'nehardea': {
+      titulo: 'Segundo intento · Ameimar en Neharde\'a',
+      hebreo: 'סְבַר לְמִקְבְּעִינְהוּ בִּנְהַרְדְּעָא — אֲמַר לֵיהּ רַב אָשֵׁי: כְּבָר בִּטְּלוּם',
+      traduccion: 'Pensó instituirlos en Neharde\'a — le dijo Rav Ashi: «ya los cancelaron»',
+      explicacion: 'Segunda escena, generaciones más tarde, y el guion se REPITE palabra por palabra: AMEIMAR — amora tardío, líder de Neharde\'a — quiso instituir la lectura diaria de los Diez Mandamientos en su ciudad. Y RAV ASHI — el editor del Talmud Bavli — lo frenó con la misma fórmula exacta: כְּבָר בִּטְּלוּם, «ya los cancelaron».\n\nLa repetición literal es el mensaje. El Talmud pudo registrar un solo intento; registró DOS, en ciudades distintas (Sura, Neharde\'a) y épocas distintas, con el mismo desenlace verbal. El efecto narrativo es de puerta que se cierra dos veces: la restauración de los dibrot no es una idea que fracasó una vez por circunstancias — es una idea ESTRUCTURALMENTE bloqueada.\n\nQue el segundo veto venga de Rav Ashi le da peso editorial: el redactor final del Talmud es también, dentro del relato, el guardián de la cancelación. La decisión tomada contra los minim de la época del Segundo Templo sigue vigente en la Babilonia del siglo V, cuando aquellos minim concretos ya no existían. El decreto sobrevivió a su ocasión — y así quedó codificado: hasta hoy, los Diez Mandamientos no forman parte del rezo diario obligatorio, y la halajá posterior (Rambam, Shulján Aruj) mantiene la cautela contra darles escenario litúrgico destacado.'
+    },
+    'moraleja': {
+      titulo: 'Moraleja · la teología defensiva poda el rezo',
+      hebreo: 'תַּרְעוֹמֶת הַמִּינִין',
+      traduccion: 'La querella de los minim',
+      explicacion: 'La sugyá entera cuenta una sola historia con dos actos: el Mikdash rezaba los Diez Mandamientos cada mañana (Acto 1) — y la liturgia posterior los perdió para siempre (Acto 2). Entre ambos actos media una decisión: la polémica con los minim.\n\nLo notable es QUÉ se sacrificó y POR QUÉ:\n\n  · Lo sacrificado: el texto más sagrado de la revelación — las únicas palabras que todo Israel escuchó directamente en Sinaí.\n\n  · La razón: no una duda sobre su santidad, sino el USO que los herejes hacían de su prominencia. El privilegio litúrgico de los dibrot se había vuelto munición contra el resto de la Torá.\n\nLa lección es incómoda y honesta: A VECES LA TEOLOGÍA DEFENSIVA PODA EL REZO. La liturgia no es solo expresión de amor a HKBH — es también un campo de batalla doctrinal, y sus textos pueden ser removidos por consideraciones estratégicas. Los rabinos prefirieron un sidur mutilado a una Torá jerarquizada por los herejes.\n\nY la segunda lección, la de Sura y Neharde\'a: lo que se borra por polémica NO VUELVE fácilmente. Dos intentos de restauración, dos vetos idénticos. La cancelación defensiva tiende a sobrevivir a la amenaza que la justificó — porque nadie puede garantizar que la amenaza no renazca. El hueco donde estuvo el Sinaí sigue en nuestro rezo matinal, y la sugyá de Berajot 12a es su acta de defunción: el Talmud registra con precisión lo que la liturgia perdió, para que al menos el ESTUDIO conserve lo que el REZO tuvo que soltar.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.tamid-interactivo')
+    : document.querySelector('.tamid-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#tamid-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.tamid-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="tamid-panel-header">' +
+        '<p class="tamid-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="tamid-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="tamid-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="tamid-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.tamid-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.tamid-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="tamid-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
