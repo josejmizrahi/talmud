@@ -1,0 +1,336 @@
+<div class="birkat-interactivo">
+<style>
+  .birkat-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .birkat-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .birkat-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .birkat-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .birkat-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .birkat-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .birkat-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .birkat-diagrama svg { width: 100%; height: auto; display: block; }
+  .birkat-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .birkat-nodo:hover rect { stroke-width: 2 !important; }
+  .birkat-nodo:hover circle { stroke-width: 2.5 !important; }
+  .birkat-nodo.activa rect { stroke-width: 2.5 !important; }
+  .birkat-nodo.activa circle { stroke-width: 3 !important; }
+  .birkat-nodo.dim { opacity: 0.32; }
+  .birkat-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .birkat-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .birkat-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .birkat-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .birkat-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .birkat-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .birkat-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="birkat-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>la exención por amor</span>
+  <span><span class="swatch azul"></span>escalera de opiniones</span>
+  <span><span class="swatch verde"></span>las tres fórmulas</span>
+  <span><span class="swatch dorado"></span>Rava · veredicto acumulativo</span>
+</div>
+
+<div class="birkat-diagrama">
+<svg viewBox="0 0 720 1210" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 11b: birkat haTorá · qué estudio exige berajá · la escalera de opiniones · las tres fórmulas · digámoslas todas</title>
+
+<defs>
+  <marker id="flecha-bt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-bt-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-bt-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d6b4e"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Birkat haTorá · ¿qué estudio exige berajá?</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 11b · una taxonomía del estudio y una colección de fórmulas</text>
+
+<!-- ============================================================ -->
+<!-- MARCO · LA EXENCIÓN POR AMOR                                 -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MARCO · LA EXENCIÓN POR AMOR · RAV YEHUDA AMAR SHMUEL</text>
+
+<g class="birkat-nodo" data-id="exencion">
+  <rect x="60" y="86" width="600" height="104" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">הִשְׁכִּים לִשְׁנוֹת — עַד שֶׁלֹּא קָרָא קְרִיאַת שְׁמַע צָרִיךְ לְבָרֵךְ</text>
+  <text x="360" y="132" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">מִשֶּׁקָּרָא — אֵינוֹ צָרִיךְ, שֶׁכְּבָר נִפְטַר בְּ״אַהֲבָה רַבָּה״</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«El que madrugó a estudiar: antes del shema bendice · después del shema, ya no — ahava rabba lo cubrió»</text>
+  <text x="360" y="176" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">la declaración de amor CONTIENE la gratitud por la Torá · de aquí nace la pregunta: ¿qué es «estudiar»?</text>
+</g>
+
+<line x1="360" y1="190" x2="360" y2="210" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-bt)"/>
+
+<!-- ============================================================ -->
+<!-- PIEZA 1 · LA ESCALERA DE OPINIONES                           -->
+<!-- ============================================================ -->
+<text x="60" y="224" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PIEZA 1 · LA ESCALERA DE OPINIONES · CADA PELDAÑO INCLUYE MÁS</text>
+
+<!-- Marco general de la escalera -->
+<rect x="52" y="234" width="616" height="452" rx="8" fill="rgba(107,68,35,0.04)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+
+<!-- Conectores de escalera (de peldaño en peldaño, ascendiendo) -->
+<line x1="150" y1="592" x2="184" y2="560" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#flecha-bt)"/>
+<line x1="184" y1="508" x2="218" y2="476" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#flecha-bt)"/>
+<line x1="218" y1="424" x2="252" y2="390" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="3,2" marker-end="url(#flecha-bt-gold)"/>
+
+<!-- PELDAÑO 4 (superior) · RAVA · dorado -->
+<g class="birkat-nodo" data-id="rava">
+  <circle cx="222" cy="304" r="16" fill="rgba(184,134,11,0.20)" stroke="#b8860b" stroke-width="2.5"/>
+  <text x="222" y="310" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">4</text>
+  <rect x="252" y="258" width="408" height="118" rx="5" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="270" y="280" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Rava · también el talmud</text>
+  <text x="642" y="280" text-anchor="end" font-size="11" direction="rtl" fill="#b8860b">אַף לְתַלְמוּד צָרִיךְ לְבָרֵךְ</text>
+  <text x="270" y="300" font-size="10" fill="#3d2f23" font-style="italic">hasta la dialéctica más abstracta exige berajá — TODO el edificio es Torá</text>
+  <text x="270" y="318" font-size="9" fill="#6b4423" font-family="'JetBrains Mono', monospace">מקרא ✓ · מדרש ✓ · משנה ✓ · תלמוד ✓</text>
+  <text x="270" y="338" font-size="9.5" fill="#3d2f23">prueba práctica: Rav Jiya bar Ashi vio muchas veces a Rav lavarse las manos,</text>
+  <text x="270" y="352" font-size="9.5" fill="#3d2f23">BENDECIR, y recién entonces enseñar el capítulo del סִפְרָא דְּבֵי רַב</text>
+  <text x="270" y="368" font-size="9" fill="#b8860b" font-style="italic">peldaño superior · la halajá quedó como Rava</text>
+</g>
+
+<!-- PELDAÑO 3 · R. YOJANAN -->
+<g class="birkat-nodo" data-id="r-yojanan">
+  <circle cx="188" cy="424" r="16" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2.5"/>
+  <text x="188" y="430" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">3</text>
+  <rect x="218" y="386" width="408" height="76" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="236" y="408" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Yojanan · también la mishná</text>
+  <text x="608" y="408" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f">אַף לְמִשְׁנָה</text>
+  <text x="236" y="428" font-size="10" fill="#3d2f23" font-style="italic">la ley codificada también es Torá — pero el talmud (dialéctica) aún no</text>
+  <text x="236" y="446" font-size="9" fill="#6b4423" font-family="'JetBrains Mono', monospace">מקרא ✓ · מדרש ✓ · משנה ✓ · תלמוד ✗</text>
+</g>
+
+<!-- PELDAÑO 2 · R. ELAZAR -->
+<g class="birkat-nodo" data-id="r-elazar">
+  <circle cx="154" cy="508" r="16" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2.5"/>
+  <text x="154" y="514" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <rect x="184" y="470" width="408" height="76" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="202" y="492" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Elazar · también el midrash</text>
+  <text x="574" y="492" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f">אַף לְמִדְרָשׁ</text>
+  <text x="202" y="512" font-size="10" fill="#3d2f23" font-style="italic">la interpretación del versículo también es Torá — la mishná todavía no</text>
+  <text x="202" y="530" font-size="9" fill="#6b4423" font-family="'JetBrains Mono', monospace">מקרא ✓ · מדרש ✓ · משנה ✗ · תלמוד ✗</text>
+</g>
+
+<!-- PELDAÑO 1 (inferior) · RAV HUNA -->
+<g class="birkat-nodo" data-id="rav-huna">
+  <circle cx="120" cy="592" r="16" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2.5"/>
+  <text x="120" y="598" text-anchor="middle" font-size="13" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <rect x="150" y="554" width="408" height="76" rx="5" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="168" y="576" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rav Huna · solo mikrá</text>
+  <text x="540" y="576" text-anchor="end" font-size="11" direction="rtl" fill="#1e3a5f">לְמִקְרָא צָרִיךְ לְבָרֵךְ</text>
+  <text x="168" y="596" font-size="10" fill="#3d2f23" font-style="italic">solo la lectura del texto bíblico exige berajá</text>
+  <text x="168" y="614" font-size="9" fill="#6b4423" font-family="'JetBrains Mono', monospace">מקרא ✓ · מדרש ✗ · משנה ✗ · תלמוד ✗</text>
+</g>
+
+<text x="360" y="668" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">cuatro peldaños ascendentes e INCLUSIVOS: cada opinión abarca las anteriores y agrega un piso más</text>
+
+<line x1="360" y1="686" x2="360" y2="706" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-bt-green)"/>
+
+<!-- ============================================================ -->
+<!-- PIEZA 2 · LAS TRES FÓRMULAS                                  -->
+<!-- ============================================================ -->
+<text x="60" y="720" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PIEZA 2 · LAS TRES FÓRMULAS · ¿QUÉ BERAJÁ SE DICE?</text>
+
+<!-- FÓRMULA 1 · SHMUEL -->
+<g class="birkat-nodo" data-id="formula-shmuel">
+  <rect x="60" y="730" width="600" height="88" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="78" y="752" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">1 · Shmuel · ocuparse</text>
+  <text x="642" y="774" text-anchor="end" font-size="11.5" direction="rtl" fill="#2d6b4e">אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לַעֲסוֹק בְּדִבְרֵי תוֹרָה</text>
+  <text x="78" y="794" font-size="10" fill="#3d2f23" font-style="italic">«…que nos santificó con Sus mitzvot y nos ordenó OCUPARNOS de las palabras de la Torá»</text>
+  <text x="78" y="810" font-size="9" fill="#6b4423" font-style="italic">לַעֲסוֹק — ocuparse, no solo leer: el estudio como oficio de vida</text>
+</g>
+
+<line x1="360" y1="818" x2="360" y2="834" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-bt-green)"/>
+
+<!-- FÓRMULA 2 · R. YOJANAN · HAAREV NA -->
+<g class="birkat-nodo" data-id="formula-yojanan">
+  <rect x="60" y="838" width="600" height="104" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="78" y="860" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">2 · R. Yojanan · haarev na · la dulzura</text>
+  <text x="642" y="882" text-anchor="end" font-size="11.5" direction="rtl" fill="#2d6b4e">הַעֲרֵב נָא ה׳ אֱלֹהֵינוּ אֶת דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִיפִיּוֹת עַמְּךָ בֵּית יִשְׂרָאֵל…</text>
+  <text x="642" y="902" text-anchor="end" font-size="11" direction="rtl" fill="#2d6b4e">בָּרוּךְ אַתָּה ה׳ הַמְלַמֵּד תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל</text>
+  <text x="78" y="922" font-size="10" fill="#3d2f23" font-style="italic">«Haz DULCES, HaShem, las palabras de Tu Torá en nuestra boca y en la boca de Tu pueblo…»</text>
+  <text x="78" y="936" font-size="9" fill="#6b4423" font-style="italic">no pide entender ni cumplir — pide que la Torá SEPA BIEN, en nosotros y en nuestros descendientes</text>
+</g>
+
+<line x1="360" y1="942" x2="360" y2="958" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-bt-green)"/>
+
+<!-- FÓRMULA 3 · RAV HAMNUNA -->
+<g class="birkat-nodo" data-id="formula-hamnuna">
+  <rect x="60" y="962" width="600" height="88" rx="5" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="78" y="984" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">3 · Rav Hamnuna · la elección</text>
+  <text x="642" y="1006" text-anchor="end" font-size="11.5" direction="rtl" fill="#2d6b4e">אֲשֶׁר בָּחַר בָּנוּ מִכָּל הָעַמִּים וְנָתַן לָנוּ אֶת תּוֹרָתוֹ</text>
+  <text x="78" y="1026" font-size="10" fill="#3d2f23" font-style="italic">«…que nos eligió de entre todos los pueblos y nos dio Su Torá»</text>
+  <text x="78" y="1042" font-size="9" fill="#6b4423" font-style="italic">y la gemará la corona: זוֹ הִיא מְעוּלָּה שֶׁבַּבְּרָכוֹת — la más excelente de las berajot</text>
+</g>
+
+<line x1="360" y1="1050" x2="360" y2="1070" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-bt-gold)"/>
+
+<!-- ============================================================ -->
+<!-- EL VEREDICTO EDITORIAL · DIGÁMOSLAS TODAS                    -->
+<!-- ============================================================ -->
+<text x="60" y="1084" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL VEREDICTO EDITORIAL · LA GEMARÁ NO ELIGE — ACUMULA</text>
+
+<g class="birkat-nodo" data-id="veredicto">
+  <rect x="60" y="1094" width="600" height="100" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="1124" text-anchor="middle" font-size="14" direction="rtl" fill="#1a1410">הִלְכָּךְ לֵימְרִינְהוּ לְכוּלְּהוּ</text>
+  <text x="360" y="1148" text-anchor="middle" font-size="11" fill="#3d2f23" font-style="italic">«Por eso: digámoslas TODAS»</text>
+  <text x="360" y="1168" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">las tres fórmulas sobreviven juntas en el sidur hasta hoy · el amor al estudio no se economiza</text>
+  <text x="360" y="1184" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">ocuparse (Shmuel) + dulzura (R. Yojanan) + elección (Rav Hamnuna) = birkot haTorá completas</text>
+</g>
+
+</svg>
+</div>
+
+<div class="birkat-panel" id="birkat-panel">
+  <p class="birkat-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'exencion': {
+      titulo: 'El marco · la exención por amor',
+      hebreo: 'הִשְׁכִּים לִשְׁנוֹת — עַד שֶׁלֹּא קָרָא קְרִיאַת שְׁמַע צָרִיךְ לְבָרֵךְ, מִשֶּׁקָּרָא — אֵינוֹ צָרִיךְ לְבָרֵךְ, שֶׁכְּבָר נִפְטַר בְּ״אַהֲבָה רַבָּה״',
+      traduccion: '«El que madrugó a estudiar: antes de leer el shema debe bendecir; después de leerlo, ya no — porque quedó exento con ahava rabba»',
+      explicacion: 'Rav Yehuda en nombre de Shmuel abre la sugyá con una halajá sorprendente: el que madrugó a estudiar ANTES del shema bendice birkat haTorá; el que estudia DESPUÉS del shema ya no necesita bendecir.\n\n¿Por qué? Porque la segunda berajá del shema — AHAVA RABBA, la declaración de amor que cerró la sugyá anterior — YA habla del regalo de la Torá. Quien la dijo, ya agradeció. La declaración de amor CONTIENE la gratitud por la Torá; repetir la berajá sería redundante.\n\nLa lección estructural es enorme: las berajot no son etiquetas mecánicas pegadas a actos — son CONTENIDOS. Una berajá cubre a otra si su contenido la incluye. Ahava rabba, al pedir «pon en nuestro corazón entender y estudiar», funciona como birkat haTorá encubierta.\n\nY de esta exención nace la pregunta que organiza toda la sugyá: si hay que bendecir antes de estudiar… ¿qué cuenta como ESTUDIAR? ¿Solo leer el texto bíblico? ¿También interpretarlo? ¿También la ley oral? ¿También la dialéctica? La escalera de opiniones que sigue es la respuesta — una taxonomía completa del estudio judío.'
+    },
+    'rav-huna': {
+      titulo: 'Peldaño 1 · Rav Huna · solo mikrá',
+      hebreo: 'לְמִקְרָא צָרִיךְ לְבָרֵךְ',
+      traduccion: '«Para mikrá (lectura bíblica) hay que bendecir»',
+      explicacion: 'El peldaño más bajo de la escalera: Rav Huna sostiene que SOLO la lectura del texto bíblico — mikrá — exige berajá. Midrash, mishná y talmud quedan fuera.\n\nLa lógica es restrictiva pero coherente: la berajá agradece por la Torá, y «Torá» en su sentido más estricto es el TEXTO REVELADO — las palabras mismas del Tanaj. Todo lo demás (interpretación, codificación, dialéctica) sería elaboración HUMANA sobre ese texto: valiosa, obligatoria incluso, pero no «Torá» a efectos de la berajá.\n\nEsta posición dibuja una frontera nítida entre el documento divino y su procesamiento rabínico. Es la definición MINIMALISTA de Torá.\n\nEn la tabla del estudio: מקרא ✓ · מדרש ✗ · משנה ✗ · תלמוד ✗.\n\nLa escalera que sigue va a ir borrando esa frontera, peldaño a peldaño, hasta que Rava declare que TODO el edificio — hasta la discusión más abstracta — es Torá revelada que merece bendición.'
+    },
+    'r-elazar': {
+      titulo: 'Peldaño 2 · R. Elazar · también el midrash',
+      hebreo: 'אַף לְמִדְרָשׁ צָרִיךְ לְבָרֵךְ',
+      traduccion: '«También para midrash hay que bendecir»',
+      explicacion: 'R. Elazar sube un peldaño: no solo el texto bíblico — también el MIDRASH exige berajá.\n\nEl midrash es la interpretación del versículo: las derashot que extraen halajá y sentido de las palabras del Tanaj. R. Elazar lo incluye porque el midrash trabaja DIRECTAMENTE sobre el texto revelado — es lectura intensificada, no material independiente. Quien hace midrash sigue teniendo el versículo delante; solo que lo lee con más profundidad.\n\nPero la mishná queda fuera: la ley codificada, formulada en lenguaje propio y sin citar versículos, ya sería — para esta opinión — un género DESPRENDIDO del texto, y por tanto fuera del alcance de la berajá.\n\nEn la tabla: מקרא ✓ · מדרש ✓ · משנה ✗ · תלמוד ✗.\n\nLa escalera es INCLUSIVA: cada opinión acepta todo lo del peldaño anterior y agrega un piso más. La disputa no es sobre qué es valioso — todo lo es — sino sobre dónde termina la «Torá» que la berajá agradece.'
+    },
+    'r-yojanan': {
+      titulo: 'Peldaño 3 · R. Yojanan · también la mishná',
+      hebreo: 'אַף לְמִשְׁנָה צָרִיךְ לְבָרֵךְ',
+      traduccion: '«También para mishná hay que bendecir»',
+      explicacion: 'R. Yojanan sube otro peldaño: también la MISHNÁ — la ley oral codificada — exige berajá.\n\nAunque la mishná se formula en lenguaje propio y no cita versículos, es el CONTENIDO de la revelación: la halajá que Israel recibió junto con el texto. Para R. Yojanan, la Torá no es solo el documento — es el sistema normativo completo tal como quedó fijado. Quien estudia mishná estudia Torá en sentido pleno.\n\nPero R. Yojanan todavía traza una frontera: el TALMUD — la dialéctica, el análisis de las razones, la comparación de fuentes, lo que los amoraim hacen todo el día — quedaría fuera. Sería la actividad HUMANA alrededor del contenido revelado, no el contenido mismo.\n\nEn la tabla: מקרא ✓ · מדרש ✓ · משנה ✓ · תלמוד ✗.\n\nHay una ironía deliberada: R. Yojanan, uno de los constructores máximos del talmud como género, excluye su propia actividad de la definición de «Torá». El último peldaño — Rava — va a corregir precisamente eso.'
+    },
+    'rava': {
+      titulo: 'Peldaño 4 · Rava · también el talmud · TODO es Torá',
+      hebreo: 'אַף לְתַלְמוּד צָרִיךְ לְבָרֵךְ',
+      traduccion: '«También para talmud hay que bendecir»',
+      explicacion: 'El peldaño superior, y la halajá definitiva: Rava declara que TAMBIÉN EL TALMUD — la dialéctica, el análisis, la discusión de las razones — exige berajá.\n\nCon esto la escalera se completa: מקרא ✓ · מדרש ✓ · משנה ✓ · תלמוד ✓. No queda ningún género de estudio fuera. TODO el edificio es Torá: desde la letra del versículo hasta la objeción más abstracta de la guemará. La actividad intelectual humana sobre la revelación ES revelación continuada — y merece la misma gratitud.\n\nY la sugyá no lo deja en teoría — trae la PRUEBA PRÁCTICA: Rav Jiya bar Ashi cuenta que muchas veces se paró ante Rav para estudiar el capítulo en el סִפְרָא דְּבֵי רַב (el Sifra, midrash halájico de la academia de Rav — estudio dialéctico, no lectura bíblica). Y Rav, cada vez, se lavaba las manos, BENDECÍA, y recién entonces enseñaba.\n\nEl testimonio es doblemente valioso:\n\n  · Es CONDUCTA, no opinión — lo que un maestro HACÍA, repetidamente («muchas veces»)\n  · El material era del género más «avanzado» de la escalera — y aun así Rav bendecía\n\nLa práctica decide la disputa. Por eso el peldaño de Rava es dorado: es el veredicto. Hasta hoy, birkat haTorá se dice cada mañana ANTES de cualquier estudio — sea un versículo, una mishná o una página de guemará.'
+    },
+    'formula-shmuel': {
+      titulo: 'Fórmula 1 · Shmuel · «ocuparse de las palabras de la Torá»',
+      hebreo: 'אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לַעֲסוֹק בְּדִבְרֵי תוֹרָה',
+      traduccion: '«…que nos santificó con Sus mitzvot y nos ordenó ocuparnos de las palabras de la Torá»',
+      explicacion: 'Resuelto QUÉ estudio exige berajá, la sugyá pasa a la segunda pregunta: ¿QUÉ berajá se dice? Shmuel abre con la fórmula más clásica — el molde estándar de las berajot sobre mitzvot («que nos santificó con Sus mitzvot y nos ordenó…») aplicado al estudio.\n\nPero la palabra elegida es reveladora: לַעֲסוֹק — OCUPARSE. No dice «leer» (לקרוא) ni «estudiar» (ללמוד): dice ocuparse, el verbo del oficio y del negocio (עסק).\n\nLa elección verbal codifica una antropología del estudio:\n\n  · El estudio NO es un acto puntual — es una OCUPACIÓN, un estado permanente\n  · Uno se ocupa de la Torá como se ocupa de su oficio: con las manos, con el tiempo, con la vida\n  · La berajá no agradece por un texto — agradece por una FORMA DE VIDA\n\nAdemás, «ocuparse» resuelve elegantemente el problema de la escalera: quien se OCUPA de la Torá lo hace igual leyendo mikrá que discutiendo talmud. El verbo abarca todos los peldaños de una vez.\n\nEsta fórmula es hoy la PRIMERA de las birkot haTorá del rezo matutino — exactamente como Shmuel la formuló.'
+    },
+    'formula-yojanan': {
+      titulo: 'Fórmula 2 · R. Yojanan · haarev na · que sea dulce',
+      hebreo: 'הַעֲרֵב נָא ה׳ אֱלֹהֵינוּ אֶת דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִיפִיּוֹת עַמְּךָ בֵּית יִשְׂרָאֵל… בָּרוּךְ אַתָּה ה׳ הַמְלַמֵּד תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל',
+      traduccion: '«Haz dulces, HaShem nuestro Dios, las palabras de Tu Torá en nuestra boca y en la boca de Tu pueblo, la casa de Israel… Bendito eres Tú, HaShem, que enseña Torá a Su pueblo Israel»',
+      explicacion: 'R. Yojanan agrega la fórmula más audaz de las tres: el HAAREV NA. El verbo הַעֲרֵב viene de עָרֵב — dulce, placentero. La petición no es entender la Torá, ni cumplirla, ni recordarla. Es que SEPA BIEN: que las palabras de la Torá sean DULCES en nuestra boca.\n\nLa audacia teológica es doble:\n\n  1. Trata el GUSTO por el estudio como algo que se puede pedir a HKBH. El placer intelectual no es un accidente psicológico — es un DON otorgable. Se puede rezar por disfrutar la guemará.\n\n  2. La dulzura pedida es COLECTIVA y TRANSGENERACIONAL: «en nuestra boca Y en la boca de Tu pueblo, la casa de Israel» — y el texto completo sigue con los descendientes. No basta que a mí me guste estudiar: la petición es que a TODO el pueblo, y a sus hijos, la Torá les sepa dulce.\n\nLa jatimá (sello final) también es única: הַמְלַמֵּד תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל — «que ENSEÑA Torá a Su pueblo». En presente. HKBH no dio la Torá una vez en el Sinaí — la sigue enseñando, cada día, a cada estudiante. El maestro de la clase de guemará es, en última instancia, Él.\n\nEsta fórmula es hoy la SEGUNDA berajá del rezo matutino — el puente entre el mandato (Shmuel) y la elección (Rav Hamnuna).'
+    },
+    'formula-hamnuna': {
+      titulo: 'Fórmula 3 · Rav Hamnuna · la elección · la más excelente',
+      hebreo: 'אֲשֶׁר בָּחַר בָּנוּ מִכָּל הָעַמִּים וְנָתַן לָנוּ אֶת תּוֹרָתוֹ',
+      traduccion: '«…que nos eligió de entre todos los pueblos y nos dio Su Torá»',
+      explicacion: 'Rav Hamnuna aporta la tercera fórmula: la berajá de la ELECCIÓN. «Que nos eligió de entre todos los pueblos y nos dio Su Torá».\n\nAquí el marco cambia de escala. Shmuel hablaba del mandato (nos ordenó ocuparnos); R. Yojanan, de la experiencia (que sea dulce). Rav Hamnuna habla de la HISTORIA CÓSMICA: la Torá es el signo de la elección de Israel. Recibirla no fue un evento educativo — fue el acto por el cual HKBH distinguió a este pueblo de todos los demás.\n\nY la guemará añade el juicio de calidad: זוֹ הִיא מְעוּלָּה שֶׁבַּבְּרָכוֹת — «esta es la MÁS EXCELENTE de las berajot». ¿Por qué la más excelente? Porque contiene a la vez la elección Y el regalo: quién nos eligió, de entre quiénes, y qué nos dio. En una sola frase está toda la relación entre HKBH e Israel.\n\nEsta es exactamente la berajá que se dice hasta hoy al SUBIR A LA TORÁ en la sinagoga — la que todo judío pronuncia en su aliyá. La fórmula «más excelente» quedó reservada para el momento más público del encuentro con el texto.\n\nTres fórmulas, tres teologías del estudio: el mandato, la dulzura, la elección. La guemará podría elegir una… y no lo hace.'
+    },
+    'veredicto': {
+      titulo: 'El veredicto editorial · digámoslas todas',
+      hebreo: 'הִלְכָּךְ לֵימְרִינְהוּ לְכוּלְּהוּ',
+      traduccion: '«Por eso: digámoslas todas»',
+      explicacion: 'El remate de la sugyá es una sola palabra de decisión editorial: הִלְכָּךְ — «por eso» — לֵימְרִינְהוּ לְכוּלְּהוּ — «digámoslas TODAS».\n\nLa gemará tenía tres fórmulas rivales sobre la mesa. El procedimiento halájico normal sería elegir: descartar dos, canonizar una. Y en cambo el editor hace lo contrario: ACUMULA. Las tres fórmulas se recitan en secuencia, una tras otra, cada mañana.\n\nLa decisión es un manifiesto en miniatura:\n\n  1. LAS TRES TEOLOGÍAS SON VERDADERAS A LA VEZ. El estudio es mandato (Shmuel), es dulzura pedida (R. Yojanan), es signo de elección (Rav Hamnuna). Elegir una empobrecería la berajá.\n\n  2. EL AMOR NO SE ECONOMIZA. Ante el regalo de la Torá, la actitud correcta no es la eficiencia litúrgica («con una berajá basta») sino la abundancia: si hay tres maneras de agradecer, se usan las tres.\n\n  3. LA ACUMULACIÓN ES EL MÉTODO DE LA GUEMARÁ. Como en la escalera de opiniones — donde cada peldaño INCLUYE los anteriores — aquí las fórmulas se suman en vez de competir. La sugyá entera es inclusiva: todo el estudio es Torá, todas las berajot se dicen.\n\nY el veredicto SOBREVIVIÓ: abre cualquier sidur en birkot haShajar y ahí están, las tres, en el orden de Berajot 11b — laasok bedivrei Torá, haarev na, asher bajar banu. Diecisiete siglos después, cada mañana, el pueblo sigue diciéndolas todas.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.birkat-interactivo')
+    : document.querySelector('.birkat-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#birkat-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.birkat-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="birkat-panel-header">' +
+        '<p class="birkat-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="birkat-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="birkat-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="birkat-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.birkat-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.birkat-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="birkat-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
