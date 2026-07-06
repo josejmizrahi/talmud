@@ -1,0 +1,329 @@
+<div class="orden3-interactivo">
+<style>
+  .orden3-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .orden3-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .orden3-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .orden3-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .orden3-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .orden3-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .orden3-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .orden3-diagrama svg { width: 100%; height: auto; display: block; }
+  .orden3-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .orden3-nodo:hover rect { stroke-width: 2 !important; }
+  .orden3-nodo:hover circle { stroke-width: 2.5 !important; }
+  .orden3-nodo.activa rect { stroke-width: 2.5 !important; }
+  .orden3-nodo.activa circle { stroke-width: 3 !important; }
+  .orden3-nodo.dim { opacity: 0.32; }
+  .orden3-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .orden3-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .orden3-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .orden3-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .orden3-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .orden3-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .orden3-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="orden3-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch azul"></span>las tres parashiyot</span>
+  <span><span class="swatch dorado"></span>R. Yehoshua ben Korjá · el yugo del Reino</span>
+  <span><span class="swatch verde"></span>la escalera de R. Shimon bar Yojai</span>
+  <span><span class="swatch sepia"></span>la armonización · una razón y otra más</span>
+</div>
+
+<div class="orden3-diagrama">
+<svg viewBox="0 0 720 1030" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13a y 14b: por qué shema va primero · el yugo del Reino antes que el yugo de las mitzvot · la escalera pedagógica de R. Shimon bar Yojai</title>
+
+<defs>
+  <marker id="flecha-o3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1e3a5f"/>
+  </marker>
+  <marker id="flecha-o3-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-o3-sepia" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#6b4423"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Por qué shema va primero · la lógica del montaje litúrgico</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13a (mishná) y 14b (baraita) · tres parashiyot, dos sistemas de razones</text>
+
+<!-- ============================================================ -->
+<!-- LOS TRES BLOQUES + SISTEMA 1 · R. YEHOSHUA BEN KORJÁ         -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ORDEN LITÚRGICO</text>
+<text x="660" y="76" text-anchor="end" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SISTEMA 1 · R. YEHOSHUA BEN KORJÁ · 13A</text>
+
+<!-- BLOQUE 1 · SHEMA -->
+<g class="orden3-nodo" data-id="shema">
+  <rect x="60" y="88" width="330" height="100" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <circle cx="90" cy="116" r="13" fill="rgba(184,134,11,0.20)" stroke="#b8860b" stroke-width="2"/>
+  <text x="90" y="121" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">1</text>
+  <text x="370" y="120" text-anchor="end" font-size="15" direction="rtl" fill="#1e3a5f" font-weight="700">שְׁמַע</text>
+  <text x="112" y="142" font-size="10" fill="#3d2f23" font-style="italic">«Escucha, Israel» · Devarim 6:4–9</text>
+  <text x="112" y="160" font-size="9.5" fill="#b8860b" font-style="italic">el yugo del Reino de los Cielos · עוֹל מַלְכוּת שָׁמַיִם</text>
+  <text x="112" y="176" font-size="9" fill="#6b4423">en la liturgia, PRIMERO — aunque en la Torá no viene primero</text>
+</g>
+
+<line x1="225" y1="188" x2="225" y2="226" stroke="#1e3a5f" stroke-width="1.4" marker-end="url(#flecha-o3)"/>
+
+<!-- RAZÓN 1 · EL YUGO -->
+<g class="orden3-nodo" data-id="yugo">
+  <rect x="420" y="130" width="240" height="128" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="540" y="152" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">¿por qué שְׁמַע antes de וְהָיָה?</text>
+  <text x="540" y="174" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">כְּדֵי שֶׁיְּקַבֵּל עָלָיו עוֹל</text>
+  <text x="540" y="190" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">מַלְכוּת שָׁמַיִם תְּחִלָּה</text>
+  <text x="540" y="212" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">primero el yugo del REINO,</text>
+  <text x="540" y="227" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">después el yugo de las MITZVOT</text>
+  <text x="540" y="246" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">nadie acepta órdenes de un Rey que no reconoció</text>
+</g>
+<line x1="420" y1="194" x2="248" y2="204" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#flecha-o3-gold)"/>
+
+<!-- BLOQUE 2 · VEHAYA -->
+<g class="orden3-nodo" data-id="vehaya">
+  <rect x="60" y="230" width="330" height="100" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <circle cx="90" cy="258" r="13" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2"/>
+  <text x="90" y="263" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="370" y="262" text-anchor="end" font-size="15" direction="rtl" fill="#1e3a5f" font-weight="700">וְהָיָה אִם שָׁמוֹעַ</text>
+  <text x="112" y="284" font-size="10" fill="#3d2f23" font-style="italic">«Y será, si escuchan» · Devarim 11:13–21</text>
+  <text x="112" y="302" font-size="9.5" fill="#1e3a5f" font-style="italic">el yugo de las mitzvot · עוֹל מִצְוֹת</text>
+  <text x="112" y="318" font-size="9" fill="#6b4423">rige de DÍA y de NOCHE (el estudio de la Torá)</text>
+</g>
+
+<line x1="225" y1="330" x2="225" y2="368" stroke="#1e3a5f" stroke-width="1.4" marker-end="url(#flecha-o3)"/>
+
+<!-- RAZÓN 2 · DÍA Y NOCHE -->
+<g class="orden3-nodo" data-id="dia-noche">
+  <rect x="420" y="286" width="240" height="128" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="540" y="308" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">¿por qué וְהָיָה antes de וַיֹּאמֶר?</text>
+  <text x="540" y="330" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">שֶׁ״וְהָיָה״ נוֹהֵג בֵּין בַּיּוֹם וּבֵין בַּלַּיְלָה</text>
+  <text x="540" y="346" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">״וַיֹּאמֶר״ אֵינוֹ נוֹהֵג אֶלָּא בַּיּוֹם</text>
+  <text x="540" y="368" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">והיה rige de día Y de noche ·</text>
+  <text x="540" y="383" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">ויאמר (tzitzit) SOLO de día</text>
+  <text x="540" y="402" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">lo de vigencia mayor precede a lo de vigencia menor</text>
+</g>
+<line x1="420" y1="350" x2="248" y2="348" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#flecha-o3-gold)"/>
+
+<!-- BLOQUE 3 · VAYOMER -->
+<g class="orden3-nodo" data-id="vayomer">
+  <rect x="60" y="372" width="330" height="100" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <circle cx="90" cy="400" r="13" fill="rgba(30,58,95,0.18)" stroke="#1e3a5f" stroke-width="2"/>
+  <text x="90" y="405" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">3</text>
+  <text x="370" y="404" text-anchor="end" font-size="15" direction="rtl" fill="#1e3a5f" font-weight="700">וַיֹּאמֶר</text>
+  <text x="112" y="426" font-size="10" fill="#3d2f23" font-style="italic">«Y dijo» · Bamidbar 15:37–41 · tzitzit</text>
+  <text x="112" y="444" font-size="9.5" fill="#1e3a5f" font-style="italic">la mitzvá concreta · el recordatorio visible</text>
+  <text x="112" y="460" font-size="9" fill="#6b4423">rige SOLO de día — y en la Torá viene ANTES que las otras dos</text>
+</g>
+
+<line x1="360" y1="480" x2="360" y2="502" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-o3)"/>
+
+<!-- ============================================================ -->
+<!-- SISTEMA 2 · LA ESCALERA DE R. SHIMON BAR YOJAI · 14B         -->
+<!-- ============================================================ -->
+<text x="60" y="516" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SISTEMA 2 · BARAITA DE R. SHIMON BAR YOJAI · 14B · LA ESCALERA PEDAGÓGICA</text>
+
+<g class="orden3-nodo" data-id="escalera">
+  <rect x="60" y="526" width="600" height="308" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="550" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">de lo más completo a lo más simple: 3 → 2 → 1 dimensiones del pacto</text>
+
+  <!-- Columna 1 · SHEMA · 3 marcas -->
+  <rect x="86" y="570" width="172" height="228" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="172" y="592" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">שְׁמַע</text>
+  <rect x="102" y="606" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="172" y="624" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לִלְמוֹד ✓</text>
+  <text x="172" y="642" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">aprender · וְשִׁנַּנְתָּם</text>
+  <rect x="102" y="660" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="172" y="678" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לְלַמֵּד ✓</text>
+  <text x="172" y="696" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">enseñar · לְבָנֶיךָ</text>
+  <rect x="102" y="714" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="172" y="732" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לַעֲשׂוֹת ✓</text>
+  <text x="172" y="750" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">hacer · וּקְשַׁרְתָּם, וּכְתַבְתָּם</text>
+  <text x="172" y="782" text-anchor="middle" font-size="14" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">3</text>
+
+  <!-- Columna 2 · VEHAYA · 2 marcas -->
+  <rect x="274" y="570" width="172" height="228" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="360" y="592" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">וְהָיָה אִם שָׁמוֹעַ</text>
+  <rect x="290" y="606" width="140" height="46" rx="3" fill="none" stroke="#2d6b4e" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
+  <text x="360" y="632" text-anchor="middle" font-size="9" fill="#6b4423" opacity="0.6">— aprender ✗ —</text>
+  <rect x="290" y="660" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="360" y="678" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לְלַמֵּד ✓</text>
+  <text x="360" y="696" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">enseñar · וְלִמַּדְתֶּם</text>
+  <rect x="290" y="714" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="360" y="732" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לַעֲשׂוֹת ✓</text>
+  <text x="360" y="750" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">hacer · tefilín, mezuzá</text>
+  <text x="360" y="782" text-anchor="middle" font-size="14" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">2</text>
+
+  <!-- Columna 3 · VAYOMER · 1 marca -->
+  <rect x="462" y="570" width="172" height="228" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="548" y="592" text-anchor="middle" font-size="12" direction="rtl" fill="#2d6b4e" font-weight="700">וַיֹּאמֶר</text>
+  <rect x="478" y="606" width="140" height="46" rx="3" fill="none" stroke="#2d6b4e" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
+  <text x="548" y="632" text-anchor="middle" font-size="9" fill="#6b4423" opacity="0.6">— aprender ✗ —</text>
+  <rect x="478" y="660" width="140" height="46" rx="3" fill="none" stroke="#2d6b4e" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.4"/>
+  <text x="548" y="686" text-anchor="middle" font-size="9" fill="#6b4423" opacity="0.6">— enseñar ✗ —</text>
+  <rect x="478" y="714" width="140" height="46" rx="3" fill="rgba(30,107,90,0.14)" stroke="#2d6b4e" stroke-width="0.8"/>
+  <text x="548" y="732" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">לַעֲשׂוֹת ✓</text>
+  <text x="548" y="750" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">hacer · tzitzit</text>
+  <text x="548" y="782" text-anchor="middle" font-size="14" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">1</text>
+
+  <text x="360" y="820" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la pendiente desciende: completo → parcial → mínimo · el orden litúrgico ES esa pendiente</text>
+</g>
+
+<line x1="360" y1="842" x2="360" y2="864" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-o3-sepia)"/>
+
+<!-- ============================================================ -->
+<!-- LA ARMONIZACIÓN · JADÁ VE'OD KAAMAR                          -->
+<!-- ============================================================ -->
+<text x="60" y="878" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ARMONIZACIÓN · ¿NO BASTABA UNA RAZÓN? · EL TALMUD APILA</text>
+
+<g class="orden3-nodo" data-id="jada-veod">
+  <rect x="60" y="888" width="600" height="118" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.6"/>
+  <text x="360" y="914" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">וְתִיפּוֹק לֵיהּ מִדְּרַבִּי יְהוֹשֻׁעַ בֶּן קׇרְחָה?</text>
+  <text x="360" y="938" text-anchor="middle" font-size="13.5" direction="rtl" fill="#6b4423" font-weight="700">חֲדָא וְעוֹד קָאָמַר</text>
+  <text x="360" y="962" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¿y no se deduce ya de R. Yehoshua ben Korjá? — dijo una razón Y OTRA MÁS»</text>
+  <text x="360" y="982" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">el Talmud no elige entre buenas razones: las apila · teología (el yugo) + pedagogía (la escalera)</text>
+  <text x="360" y="998" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">como en birkat haTorá — «digámoslas todas»</text>
+</g>
+
+</svg>
+</div>
+
+<div class="orden3-panel" id="orden3-panel">
+  <p class="orden3-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'shema': {
+      titulo: 'Bloque 1 · שְׁמַע · el yugo del Reino',
+      hebreo: 'שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד',
+      traduccion: '«Escucha, Israel: HaShem es nuestro Dios, HaShem es Uno» (Devarim 6:4–9)',
+      explicacion: 'El primer bloque del shema litúrgico: la parashá de Devarim 6:4–9. Su contenido es la DECLARACIÓN — la unidad de HaShem, el amor con todo el corazón, y las prácticas que fijan esa declaración en el cuerpo y la casa: repetirla a los hijos (וְשִׁנַּנְתָּם), atarla al brazo y la cabeza (וּקְשַׁרְתָּם — tefilín), escribirla en las puertas (וּכְתַבְתָּם — mezuzá).\n\nEn el lenguaje de la mishná, recitar esta parashá es aceptar עוֹל מַלְכוּת שָׁמַיִם — el YUGO DEL REINO DE LOS CIELOS. No es todavía ninguna mitzvá concreta: es el acto previo a todas — reconocer al Rey.\n\nEl dato estructural que dispara toda la sugyá: este bloque NO es el primero en la Torá. Las tres parashiyot ni siquiera están juntas — dos en Devarim (capítulos 6 y 11), una en Bamidbar (capítulo 15, que en el orden bíblico viene ANTES que las otras dos). La liturgia las cosió en un orden propio.\n\nEse orden no-bíblico es una decisión editorial que exige justificación. La mishná pregunta explícitamente: לָמָּה קָדְמָה פָּרָשַׁת שְׁמַע — ¿por qué shema va primero? Las dos respuestas (R. Yehoshua ben Korjá en 13a, R. Shimon bar Yojai en 14b) son los dos sistemas de flechas de este diagrama.'
+    },
+    'vehaya': {
+      titulo: 'Bloque 2 · וְהָיָה אִם שָׁמוֹעַ · el yugo de las mitzvot',
+      hebreo: 'וְהָיָה אִם שָׁמֹעַ תִּשְׁמְעוּ אֶל מִצְוֺתַי',
+      traduccion: '«Y será, si escuchan Mis mandamientos…» (Devarim 11:13–21)',
+      explicacion: 'El segundo bloque: Devarim 11:13–21. Su tema ya no es la declaración de fe sino sus CONSECUENCIAS: si escuchan los mandamientos — lluvia a su tiempo, cosecha, saciedad; si no — sequía y exilio. Es la parashá del pacto en acción: mandamiento, recompensa, castigo.\n\nPor eso la mishná la llama עוֹל מִצְוֹת — el YUGO DE LAS MITZVOT. Aquí el orante pasa de reconocer al Rey a aceptar Sus órdenes concretas.\n\nDos datos alimentan las dos razones del orden:\n\n  1. Viene DESPUÉS de shema (razón de R. Yehoshua ben Korjá): las órdenes presuponen al Rey. La secuencia Reino → mandamientos es lógica, no cronológica.\n\n  2. Viene ANTES de vayomer (segunda cláusula de la misma respuesta): esta parashá rige בֵּין בַּיּוֹם וּבֵין בַּלַּיְלָה — de día y de noche — porque contiene el estudio de la Torá (enseñar a los hijos), obligación sin horario. Vayomer (tzitzit) rige solo de día. Lo de vigencia total precede a lo de vigencia parcial.\n\nEn la escalera de R. Shimon bar Yojai, este bloque es el peldaño intermedio: tiene enseñar + hacer, pero ya no la dimensión completa de aprender que caracteriza a shema. Dos sistemas distintos — y ambos lo colocan exactamente en el medio.'
+    },
+    'vayomer': {
+      titulo: 'Bloque 3 · וַיֹּאמֶר · tzitzit · solo de día',
+      hebreo: 'וַיֹּאמֶר ה׳ אֶל מֹשֶׁה… וְעָשׂוּ לָהֶם צִיצִת',
+      traduccion: '«Y dijo HaShem a Moshé… que se hagan tzitzit» (Bamidbar 15:37–41)',
+      explicacion: 'El tercer bloque: Bamidbar 15:37–41 — la parashá de TZITZIT. Su contenido es una mitzvá única y concreta: los flecos en las esquinas del vestido, «para que los vean y recuerden todos los mandamientos». Cierra con la salida de Egipto — la razón histórica de toda la relación.\n\nSu posición final tiene dos justificaciones convergentes:\n\n  1. R. Yehoshua ben Korjá: rige אֵינוֹ נוֹהֵג אֶלָּא בַּיּוֹם — SOLO DE DÍA. El tzitzit depende de la vista («para que los VEAN»), y de noche no se ve. Una mitzvá de vigencia parcial va después de las de vigencia total.\n\n  2. R. Shimon bar Yojai: contiene SOLO la dimensión de hacer — לַעֲשׂוֹת. Ni aprender ni enseñar: únicamente la acción. Es el peldaño mínimo de la escalera.\n\nHay una ironía estructural deliberada: en el orden de la Torá, esta parashá (Bamidbar) viene ANTES que las otras dos (Devarim). La liturgia la movió al final. El shema recitado no es una cita de la Torá — es un MONTAJE con lógica propia: del Reino al mandamiento a la acción; de lo completo a lo mínimo.\n\nY sin embargo el bloque «mínimo» carga el ancla de todo: la salida de Egipto, la memoria fundante. Lo último no es lo menos importante — es lo más concreto.'
+    },
+    'yugo': {
+      titulo: 'Razón 1 · el yugo del Reino antes que el yugo de las mitzvot',
+      hebreo: 'כְּדֵי שֶׁיְּקַבֵּל עָלָיו עוֹל מַלְכוּת שָׁמַיִם תְּחִלָּה, וְאַחַר כָּךְ מְקַבֵּל עָלָיו עוֹל מִצְוֹת',
+      traduccion: '«Para que acepte sobre sí el yugo del Reino de los Cielos primero, y después acepte sobre sí el yugo de las mitzvot»',
+      explicacion: 'La respuesta de R. Yehoshua ben Korjá en la mishná (13a) a la pregunta לָמָּה קָדְמָה — ¿por qué shema va primero?\n\nLa fórmula distingue dos YUGOS:\n\n  · עוֹל מַלְכוּת שָׁמַיִם — el yugo del Reino de los Cielos: reconocer que HaShem es Rey. Es la parashá de shema.\n  · עוֹל מִצְוֹת — el yugo de las mitzvot: aceptar Sus órdenes concretas. Es la parashá de vehaya im shamoa.\n\nEl orden es de LÓGICA POLÍTICA elemental: nadie acepta mandamientos de un Rey que aún no reconoció. La orden solo obliga si viene de una autoridad aceptada. Primero la soberanía, después la legislación.\n\nLa palabra יְקַבֵּל («acepte») es decisiva: la recitación del shema NO es informativa sino PERFORMATIVA. El orante no describe que Dios es Uno — ACEPTA un yugo, cada mañana y cada noche, de nuevo. La metáfora del yugo (el arnés del buey) es deliberadamente corporal: uno se somete a ser dirigido.\n\nY la secuencia se repite en escala menor: וְהָיָה antes de וַיֹּאמֶר porque el segundo bloque rige de día y de noche (contiene Torá, sin horario) y el tercero (tzitzit) solo de día. Doble criterio en una sola respuesta: primero jerarquía teológica (Reino → mitzvot), después alcance temporal (siempre → solo de día).\n\nEl orden litúrgico resulta ser un MANIFIESTO comprimido: así se estructura la vida religiosa — soberanía, mandamiento, práctica.'
+    },
+    'dia-noche': {
+      titulo: 'Razón 1b · de día y de noche antes que solo de día',
+      hebreo: 'שֶׁ״וְהָיָה אִם שָׁמוֹעַ״ נוֹהֵג בֵּין בַּיּוֹם וּבֵין בַּלַּיְלָה, ״וַיֹּאמֶר״ אֵינוֹ נוֹהֵג אֶלָּא בַּיּוֹם',
+      traduccion: '«Porque vehaya im shamoa rige tanto de día como de noche; vayomer no rige más que de día»',
+      explicacion: 'La segunda cláusula de la respuesta de R. Yehoshua ben Korjá: explicado por qué shema encabeza, falta explicar por qué וְהָיָה precede a וַיֹּאמֶר. La respuesta cambia de criterio — ya no jerarquía de yugos sino ALCANCE TEMPORAL.\n\n  · וְהָיָה אִם שָׁמוֹעַ rige בֵּין בַּיּוֹם וּבֵין בַּלַּיְלָה — de día Y de noche. ¿Por qué? Porque contiene וְלִמַּדְתֶּם אֹתָם אֶת בְּנֵיכֶם — el ESTUDIO de la Torá, obligación sin horario: «meditarás en ella de día y de noche».\n\n  · וַיֹּאמֶר rige אֵינוֹ נוֹהֵג אֶלָּא בַּיּוֹם — solo de día. El tzitzit depende de la VISTA (וּרְאִיתֶם אֹתוֹ — «y lo verán»), y la noche no es tiempo de ver. De ahí, de hecho, la halajá de la mishná 1:2: el shema de la mañana se lee desde que se distingue entre el azul y el blanco — el criterio del tzitzit.\n\nEl principio ordenador: LO DE VIGENCIA TOTAL PRECEDE A LO DE VIGENCIA PARCIAL. Una obligación que no se apaga nunca tiene precedencia litúrgica sobre una que rige solo la mitad del ciclo.\n\nNótese la elegancia del sistema completo: el primer par (shema → vehaya) se ordena por CONTENIDO teológico; el segundo par (vehaya → vayomer) por EXTENSIÓN temporal. Dos criterios heterogéneos que producen un solo orden coherente — señal de que el editor de la liturgia trabajaba con más de una vara de medir, exactamente lo que la gemará en 14b va a hacer explícito con חֲדָא וְעוֹד קָאָמַר.'
+    },
+    'escalera': {
+      titulo: 'La escalera de R. Shimon bar Yojai · aprender, enseñar, hacer',
+      hebreo: 'בְּדִין הוּא שֶׁתִּקְדּוֹם שְׁמַע… שֶׁיֵּשׁ בָּהּ לִלְמוֹד וּלְלַמֵּד וְלַעֲשׂוֹת',
+      traduccion: '«Es justo que shema preceda… porque contiene aprender, enseñar y hacer»',
+      explicacion: 'La baraita de R. Shimon bar Yojai (14b) ofrece un segundo sistema completo para el mismo orden — ya no teológico sino PEDAGÓGICO. Cada parashá se mide por cuántas de las tres dimensiones del pacto contiene:\n\n  · לִלְמוֹד — APRENDER: recibir la Torá uno mismo\n  · לְלַמֵּד — ENSEÑAR: transmitirla a otros\n  · לַעֲשׂוֹת — HACER: cumplirla en actos\n\nLa cuenta por parashá:\n\n  שְׁמַע — LAS TRES: aprender y enseñar (וְשִׁנַּנְתָּם לְבָנֶיךָ — «las repetirás a tus hijos») y hacer (וּקְשַׁרְתָּם, וּכְתַבְתָּם — tefilín y mezuzá). Puntaje: 3.\n\n  וְהָיָה אִם שָׁמוֹעַ — DOS: enseñar (וְלִמַּדְתֶּם אֹתָם אֶת בְּנֵיכֶם) y hacer (tefilín, mezuzá). Puntaje: 2.\n\n  וַיֹּאמֶר — UNA: solo hacer (וְעָשׂוּ לָהֶם צִיצִת). Ni aprender ni enseñar. Puntaje: 1.\n\nEl orden litúrgico resulta ser una PENDIENTE DESCENDENTE: 3 → 2 → 1. De la parashá más completa a la más simple; del pacto en todas sus dimensiones al acto mínimo.\n\nLa lectura pedagógica es poderosa: cada mañana el orante RECORRE esa pendiente. Empieza en la totalidad (aprender-enseñar-hacer), pasa por la transmisión (enseñar-hacer) y aterriza en la práctica desnuda (hacer). La liturgia enseña, con su propia estructura, que la vida religiosa completa incluye las tres dimensiones — y que incluso quien solo llega a «hacer» sigue dentro del shema.\n\nPero esta razón llega cuando la mishná YA había respondido con el yugo del Reino. La gemará nota la redundancia — y su solución es el último nodo del diagrama.'
+    },
+    'jada-veod': {
+      titulo: 'La armonización · una razón y otra más',
+      hebreo: 'וְתִיפּוֹק לֵיהּ מִדְּרַבִּי יְהוֹשֻׁעַ בֶּן קׇרְחָה — חֲדָא וְעוֹד קָאָמַר',
+      traduccion: '«¿Y que lo deduzca de R. Yehoshua ben Korjá? — Dijo una razón, y otra más»',
+      explicacion: 'La gemará hace la pregunta editorial obligada: si R. Yehoshua ben Korjá ya explicó el orden (el yugo del Reino primero), ¿para qué necesita R. Shimon bar Yojai una segunda razón? וְתִיפּוֹק לֵיהּ — «¿y que lo deduzca de» lo ya dicho?\n\nLa respuesta es una fórmula de dos palabras que es todo un método: חֲדָא וְעוֹד קָאָמַר — «dijo UNA razón Y OTRA MÁS».\n\nLas dos razones no compiten — se APILAN. Y no son intercambiables, porque operan en registros distintos:\n\n  · R. Yehoshua ben Korjá da la razón TEOLÓGICA: la jerarquía de los yugos — Reino antes que mandamientos, vigencia total antes que parcial.\n\n  · R. Shimon bar Yojai da la razón PEDAGÓGICA: la completitud decreciente — tres dimensiones, luego dos, luego una.\n\nUn mismo orden, dos lógicas independientes que convergen. Para el editor del Talmud eso no es redundancia — es ROBUSTEZ. Un orden justificado por dos sistemas distintos está doblemente fundado.\n\nEl paralelo con birkat haTorá (11b) es exacto: allí, ante tres fórmulas rivales de berajá, el veredicto fue הִלְכָּךְ לֵימְרִינְהוּ לְכוּלְּהוּ — «digámoslas todas». Aquí, ante dos razones para un orden, el veredicto es «dijo una y otra más». El método es el mismo: el Talmud NO ECONOMIZA razones. Ante algo valioso — una berajá, un orden litúrgico — la abundancia de justificaciones es virtud, no defecto.\n\nEl resultado final: el orden shema → vehaya → vayomer queda como manifiesto doble. Teológico: Reino → mandamiento → acción. Pedagógico: completo → parcial → mínimo. Cada mañana, el orante recorre ambas pendientes a la vez.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.orden3-interactivo')
+    : document.querySelector('.orden3-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#orden3-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.orden3-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="orden3-panel-header">' +
+        '<p class="orden3-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="orden3-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="orden3-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="orden3-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.orden3-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.orden3-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="orden3-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
