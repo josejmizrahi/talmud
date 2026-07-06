@@ -1,0 +1,334 @@
+<div class="melej-interactivo">
+<style>
+  .melej-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .melej-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .melej-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .melej-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .melej-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .melej-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .melej-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .melej-diagrama svg { width: 100%; height: auto; display: block; }
+  .melej-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .melej-nodo:hover rect { stroke-width: 2 !important; }
+  .melej-nodo:hover circle { stroke-width: 9 !important; }
+  .melej-nodo:hover path.melej-arco { stroke-width: 17 !important; }
+  .melej-nodo.activa rect { stroke-width: 2.5 !important; }
+  .melej-nodo.activa circle { stroke-width: 10 !important; }
+  .melej-nodo.activa path.melej-arco { stroke-width: 18 !important; }
+  .melej-nodo.dim { opacity: 0.32; }
+  .melej-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .melej-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .melej-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .melej-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .melej-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .melej-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .melej-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="melej-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch verde"></span>miniatura · Rav Sheshet</span>
+  <span><span class="swatch azul"></span>todo el año</span>
+  <span><span class="swatch dorado"></span>los diez días · la halajá</span>
+  <span><span class="swatch rojo"></span>la disputa</span>
+</div>
+
+<div class="melej-diagrama">
+<svg viewBox="0 0 720 1340" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 12b: haMelej haKadosh · los diez días entre Rosh HaShaná y Yom Kipur · la caña y la serpiente · vehiljeta keRabba</title>
+
+<defs>
+  <marker id="flecha-mk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-mk-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">HaMelej haKadosh · los diez días en que Dios se corona</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 12b · el calendario interior de la amidá — diez días al año, Dios cambia de título</text>
+
+<!-- ============================================================ -->
+<!-- MINIATURA · RAV SHESHET · LA CAÑA Y LA SERPIENTE             -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MINIATURA · RAV SHESHET · LA COREOGRAFÍA DEL KOREA VEZOKEF</text>
+
+<g class="melej-nodo" data-id="rav-sheshet">
+  <rect x="60" y="86" width="600" height="140" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">רַב שֵׁשֶׁת, כִּי כָּרַע — כָּרַע כְּחִיזְרָא · כִּי קָא זָקֵיף — זָקֵיף כְּחִיוְיָא</text>
+  <text x="360" y="130" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«al inclinarse — se inclinaba como una caña · al erguirse — se erguía como una serpiente»</text>
+
+  <!-- la caña: baja de golpe, una diagonal seca -->
+  <circle cx="176" cy="152" r="7" fill="none" stroke="#2d6b4e" stroke-width="1.6"/>
+  <line x1="181" y1="157" x2="216" y2="192" stroke="#2d6b4e" stroke-width="2"/>
+  <line x1="150" y1="192" x2="216" y2="192" stroke="#2d6b4e" stroke-width="0.8" opacity="0.5"/>
+  <text x="255" y="168" font-size="10" direction="rtl" fill="#2d6b4e" font-weight="700">כְּחִיזְרָא</text>
+  <text x="255" y="184" font-size="8.5" fill="#3d2f23" font-style="italic">baja DE GOLPE, como la caña</text>
+  <text x="255" y="197" font-size="8.5" fill="#6b4423" font-style="italic">la reverencia no se regatea</text>
+
+  <!-- la serpiente: sube lenta, en ondas -->
+  <path d="M 452 194 C 470 194 466 176 484 176 C 502 176 498 158 516 158" fill="none" stroke="#2d6b4e" stroke-width="2"/>
+  <circle cx="522" cy="154" r="7" fill="none" stroke="#2d6b4e" stroke-width="1.6"/>
+  <line x1="440" y1="198" x2="530" y2="198" stroke="#2d6b4e" stroke-width="0.8" opacity="0.5"/>
+  <text x="620" y="168" text-anchor="end" font-size="10" direction="rtl" fill="#2d6b4e" font-weight="700">כְּחִיוְיָא</text>
+  <text x="637" y="184" text-anchor="end" font-size="8.5" fill="#3d2f23" font-style="italic">sube LENTO, como la serpiente</text>
+  <text x="637" y="197" text-anchor="end" font-size="8.5" fill="#6b4423" font-style="italic">que no parezca que inclinarse pesa</text>
+
+  <text x="360" y="218" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la coreografía perfecta del כורע וזוקף — cierre corporal del tema anterior (#38)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL AÑO · RABBA BAR JINNANA SAVA BESHEM RAV                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="226" x2="360" y2="246" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-mk-gold)"/>
+
+<text x="60" y="258" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CALENDARIO DE LA AMIDÁ · RABBA BAR JINNANA SAVA MISHMEIH DERAV</text>
+
+<!-- el anillo del año -->
+<g class="melej-nodo" data-id="anio">
+  <circle cx="360" cy="420" r="105" fill="none" stroke="#1e3a5f" stroke-width="8" opacity="0.85"/>
+  <rect x="50" y="560" width="300" height="180" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="200" y="584" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Todo el año</text>
+  <text x="200" y="604" text-anchor="middle" font-size="9.5" direction="rtl" fill="#3d2f23">כָּל הַשָּׁנָה כּוּלָּהּ אָדָם מִתְפַּלֵּל</text>
+  <text x="200" y="628" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f" font-weight="700">״הָאֵל הַקָּדוֹשׁ״</text>
+  <text x="200" y="644" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«el Dios santo»</text>
+  <text x="200" y="668" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">״מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט״</text>
+  <text x="200" y="684" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«Rey que ama la justicia y el derecho»</text>
+  <text x="200" y="710" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la santidad como atributo · la soberanía</text>
+  <text x="200" y="724" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">amando el juicio — desde lejos</text>
+</g>
+
+<!-- el arco dorado: los diez días -->
+<g class="melej-nodo" data-id="diez-dias">
+  <path class="melej-arco" d="M 320.7 322.6 A 105 105 0 0 1 399.3 322.6" fill="none" stroke="#b8860b" stroke-width="14"/>
+  <rect x="370" y="560" width="300" height="180" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="520" y="584" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Los diez días</text>
+  <text x="520" y="604" text-anchor="middle" font-size="9.5" direction="rtl" fill="#3d2f23">חוּץ מֵעֲשָׂרָה יָמִים שֶׁבֵּין רֹאשׁ הַשָּׁנָה וְיוֹם הַכִּפּוּרִים</text>
+  <text x="520" y="628" text-anchor="middle" font-size="12" direction="rtl" fill="#b8860b" font-weight="700">״הַמֶּלֶךְ הַקָּדוֹשׁ״</text>
+  <text x="520" y="644" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«el Rey santo»</text>
+  <text x="520" y="668" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b" font-weight="700">״הַמֶּלֶךְ הַמִּשְׁפָּט״</text>
+  <text x="520" y="684" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«el Rey del juicio»</text>
+  <text x="520" y="710" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">aseret yemei teshuvá — la soberanía</text>
+  <text x="520" y="724" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">se revela JUZGANDO, aquí y ahora</text>
+</g>
+
+<!-- rótulos del anillo (no clickeables) -->
+<text x="308" y="306" text-anchor="end" font-size="9" fill="#b8860b" font-weight="600">Rosh HaShaná</text>
+<text x="412" y="306" text-anchor="start" font-size="9" fill="#b8860b" font-weight="600">Yom Kipur</text>
+<text x="360" y="412" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">הַשָּׁנָה</text>
+<text x="360" y="430" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">el año de la amidá</text>
+<text x="360" y="448" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">diez días de coronación en lo alto del círculo</text>
+
+<!-- conexiones anillo → cajas -->
+<line x1="278" y1="493" x2="215" y2="554" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#flecha-mk)"/>
+<line x1="415" y1="330" x2="505" y2="554" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#flecha-mk-gold)"/>
+
+<!-- ============================================================ -->
+<!-- LA DISPUTA · R. ELAZAR                                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="740" x2="360" y2="760" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-mk)"/>
+
+<text x="60" y="772" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA DISPUTA · R. ELAZAR DISCREPA</text>
+
+<g class="melej-nodo" data-id="r-elazar">
+  <rect x="60" y="782" width="600" height="96" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4" stroke-dasharray="5,2"/>
+  <text x="360" y="806" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">R. Elazar · no hace falta cambiar el título</text>
+  <text x="360" y="830" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">אֲפִילּוּ אָמַר ״הָאֵל הַקָּדוֹשׁ״ — יָצָא</text>
+  <text x="360" y="848" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«aun quien dijo haEl haKadosh — cumplió»</text>
+  <text x="360" y="868" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">su prueba: un pasuk que habla del día del juicio ¡y aun así dice haEl!</text>
+</g>
+
+<line x1="360" y1="878" x2="360" y2="896" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-mk)"/>
+
+<g class="melej-nodo" data-id="pasuk">
+  <rect x="60" y="902" width="600" height="102" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="926" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La prueba · Yeshayahu 5:16</text>
+  <text x="360" y="952" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1e3a5f">וַיִּגְבַּה ה׳ צְבָאוֹת בַּמִּשְׁפָּט וְהָאֵל הַקָּדוֹשׁ נִקְדָּשׁ בִּצְדָקָה</text>
+  <text x="360" y="972" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Se elevó Hashem de los ejércitos en el JUICIO — y el Dios santo fue santificado en la justicia»</text>
+  <text x="360" y="992" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">bamishpat = los días del juicio · y el versículo dice הָאֵל — no הַמֶּלֶךְ</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESOLUCIÓN                                                 -->
+<!-- ============================================================ -->
+<line x1="360" y1="1004" x2="360" y2="1024" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-mk)"/>
+
+<text x="60" y="1036" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESOLUCIÓN · DOS AMORAÍM TOMAN PARTIDO</text>
+
+<g class="melej-nodo" data-id="rav-yosef">
+  <rect x="50" y="1046" width="300" height="118" rx="6" fill="rgba(139,26,26,0.05)" stroke="#8b1a1a" stroke-width="1.4" stroke-dasharray="5,2"/>
+  <text x="200" y="1070" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Rav Yosef · como R. Elazar</text>
+  <text x="200" y="1094" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">״הָאֵל הַקָּדוֹשׁ״ וּ״מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט״</text>
+  <text x="200" y="1112" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">se reza igual que todo el año</text>
+  <text x="200" y="1130" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">no hay que cambiar el título:</text>
+  <text x="200" y="1144" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">haEl ya contiene todo</text>
+</g>
+
+<g class="melej-nodo" data-id="rabba">
+  <rect x="370" y="1046" width="300" height="118" rx="6" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="520" y="1070" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Rabba · como Rav</text>
+  <text x="520" y="1094" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">״הַמֶּלֶךְ הַקָּדוֹשׁ״ וְ״הַמֶּלֶךְ הַמִּשְׁפָּט״</text>
+  <text x="520" y="1112" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">en los diez días el título CAMBIA</text>
+  <text x="520" y="1130" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la teología del día exige</text>
+  <text x="520" y="1144" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">nombrar al Rey que juzga</text>
+</g>
+
+<line x1="200" y1="1164" x2="330" y2="1198" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-mk-gold)"/>
+<line x1="520" y1="1164" x2="390" y2="1198" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-mk-gold)"/>
+
+<g class="melej-nodo" data-id="halaja">
+  <rect x="60" y="1204" width="600" height="110" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="1238" text-anchor="middle" font-size="16" direction="rtl" fill="#b8860b" font-weight="700" letter-spacing="1">וְהִלְכְתָא כְּרַבָּה</text>
+  <text x="360" y="1260" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«y la halajá es como Rabba»</text>
+  <text x="360" y="1282" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">así reza todo Israel hasta hoy: diez días al año, la liturgia corona —</text>
+  <text x="360" y="1298" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">y un error en esas palabras invalida la amidá: el título es la teología del día</text>
+</g>
+
+</svg>
+</div>
+
+<div class="melej-panel" id="melej-panel">
+  <p class="melej-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'rav-sheshet': {
+      titulo: 'La miniatura · Rav Sheshet, la caña y la serpiente',
+      hebreo: 'רַב שֵׁשֶׁת, כִּי כָּרַע — כָּרַע כְּחִיזְרָא · כִּי קָא זָקֵיף — זָקֵיף כְּחִיוְיָא',
+      traduccion: '«Rav Sheshet, al inclinarse — se inclinaba como una caña · al erguirse — se erguía como una serpiente»',
+      explicacion: 'Antes de entrar en el tema nuevo, el editor cierra el anterior con una miniatura corporal. El diagrama #38 terminó con la regla de Rav — korea beVaruj, zokef baShem, inclinarse en «baruj» y erguirse en el Nombre. Ahora la guemará muestra CÓMO lo hacía un maestro concreto: Rav Sheshet.\n\nDos imágenes animales, una para cada mitad del gesto:\n\n  · כְּחִיזְרָא — COMO UNA CAÑA. Al inclinarse, bajaba DE GOLPE — como una caña que se quiebra en un solo movimiento, sin etapas, sin vacilación. La reverencia no se regatea: el que se somete a HKBH no negocia el descenso centímetro a centímetro. La prontitud del cuerpo ES la sinceridad de la sumisión.\n\n  · כְּחִיוְיָא — COMO UNA SERPIENTE. Al erguirse, subía LENTO — como una serpiente que se yergue por tramos, gradualmente, sin prisa. ¿Por qué? Para que NO PAREZCA que inclinarse le pesa. El que se levanta de un salto delata que la reverencia le resultaba una carga de la que se libera con alivio. El que sube despacio muestra que estar doblado ante Dios no le incomodaba.\n\nLa asimetría es toda la enseñanza: RÁPIDO hacia abajo, LENTO hacia arriba. Exactamente lo contrario del instinto — el cuerpo natural baja con pereza y sube con alivio. La coreografía de Rav Sheshet invierte el instinto: entusiasmo en el descenso, serenidad en el ascenso.\n\nHay además una ironía deliberada en que el maestro de esta coreografía VISUAL sea Rav Sheshet — que era CIEGO. El sabio que no podía ver su propia postura la había perfeccionado hasta volverse el modelo citado por la guemará. La reverencia no se hace para el ojo ajeno: se hace ante Dios, y el ciego la ejecuta perfecta.\n\nCon el cuerpo ya educado — cómo bajar, cómo subir — el editor pasa a la siguiente enseñanza de la cadena de Rabba bar Jinnana Sava: qué PALABRAS deben cambiar cuando cambia el calendario.'
+    },
+    'anio': {
+      titulo: 'Todo el año · haEl haKadosh',
+      hebreo: 'כָּל הַשָּׁנָה כּוּלָּהּ אָדָם מִתְפַּלֵּל ״הָאֵל הַקָּדוֹשׁ״, ״מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט״',
+      traduccion: '«Todo el año la persona reza: el Dios santo · Rey que ama la justicia y el derecho»',
+      explicacion: 'El anillo azul es el año entero de la amidá. Rabba bar Jinnana Sava — el MISMO ORADOR del diagrama #38, citando al MISMO maestro, Rav — enseña la fórmula de régimen ordinario: durante todo el año, la tercera berajá de la amidá sella הָאֵל הַקָּדוֹשׁ («el Dios santo»), y la berajá del juicio sella מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט («Rey que ama la justicia y el derecho»).\n\nLos dos títulos ordinarios tienen una teología precisa:\n\n  · הָאֵל הַקָּדוֹשׁ — la santidad como ATRIBUTO ESENCIAL. «El Dios santo» describe lo que Dios ES, en abstracto, siempre. Es un título de esencia, no de actividad: verdadero el 1 de Nisán y el 15 de Av, verdadero en cualquier instante del cosmos.\n\n  · מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט — la soberanía AMANDO el juicio, no ejerciéndolo. Durante el año, Dios es Rey que AMA la justicia — la aprecia, la valora, la quiere en el mundo. Pero el tribunal no está en sesión. La relación con el juicio es de afecto, no de ejecución.\n\nEsta es la fórmula de los 354 días ordinarios del calendario. Y su misma estabilidad es lo que hace significativa la excepción: si el título fuera siempre el mismo, no diría nada del tiempo. Porque hay un régimen ordinario, los diez días dorados pueden DECIR algo al cambiar.\n\nLa liturgia funciona aquí como un calendario teológico: las palabras de la amidá no solo alaban — INFORMAN en qué tiempo del año espiritual se está parado. El que atiende a su propia tefilá sabe, por el título que pronuncia, si el tribunal celeste está o no en sesión.'
+    },
+    'diez-dias': {
+      titulo: 'Los diez días · haMelej haKadosh',
+      hebreo: 'חוּץ מֵעֲשָׂרָה יָמִים שֶׁבֵּין רֹאשׁ הַשָּׁנָה וְיוֹם הַכִּפּוּרִים, שֶׁמִּתְפַּלֵּל ״הַמֶּלֶךְ הַקָּדוֹשׁ״ וְ״הַמֶּלֶךְ הַמִּשְׁפָּט״',
+      traduccion: '«Excepto los diez días entre Rosh HaShaná y Yom Kipur, en que reza: el Rey santo · el Rey del juicio»',
+      explicacion: 'El arco dorado en lo alto del anillo: los עֲשֶׂרֶת יְמֵי תְּשׁוּבָה, los diez días entre Rosh HaShaná y Yom Kipur. En ese tramo — y solo en ese tramo — los dos títulos cambian:\n\n  · הָאֵל הַקָּדוֹשׁ se convierte en הַמֶּלֶךְ הַקָּדוֹשׁ — «el DIOS santo» pasa a ser «el REY santo»\n  · מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט se convierte en הַמֶּלֶךְ הַמִּשְׁפָּט — el Rey que AMABA el juicio pasa a ser «el Rey DEL juicio»\n\n¿Por qué? Porque en esos días la soberanía se revela JUZGANDO. Rosh HaShaná es, en la teología rabínica, el día de la coronación: el shofar es trompeta de entronización, y el mundo entero pasa ante el Rey. Y un rey se demuestra rey precisamente cuando su tribunal está en sesión. Durante el año Dios ama la justicia desde lejos; en los diez días la EJERCE — el libro está abierto, cada criatura pasa delante del trono, y el veredicto se firma en Yom Kipur.\n\nLos dos cambios son el mismo movimiento gramatical: de lo abstracto a lo ejecutivo.\n\n  · De EL (Dios, título de esencia) a MELEJ (Rey, título de RELACIÓN — no hay rey sin súbditos, no hay rey sin juicio activo)\n  · De «ohev mishpat» (que ama el juicio) a «haMishpat» (DEL juicio — el juicio como su actividad presente, en curso, ahora)\n\nLa proporción visual del arco es fiel al calendario: diez días de ~354 — un tramo brevísimo del anillo. Pero es el tramo más denso: el momento en que el título de Dios y la situación del que reza coinciden exactamente. El resto del año se puede hablar DE Dios; en los diez días se está DELANTE del Juez.\n\nEsta es la enseñanza de Rabba bar Jinnana Sava en nombre de Rav. Pero no quedó sin oposición — R. Elazar discrepa, y la disputa baja en rojo.'
+    },
+    'r-elazar': {
+      titulo: 'R. Elazar · aun quien dijo haEl — cumplió',
+      hebreo: 'אֲפִילּוּ אָמַר ״הָאֵל הַקָּדוֹשׁ״ — יָצָא',
+      traduccion: '«Aun quien dijo el Dios santo — cumplió»',
+      explicacion: 'R. Elazar discrepa de la regla de Rav: aun quien en los diez días dijo הָאֵל הַקָּדוֹשׁ — la fórmula de todo el año — יָצָא, CUMPLIÓ su obligación. No hace falta cambiar el título.\n\nLa posición tiene su propia lógica teológica: los títulos de Dios no son contraseñas de temporada. הָאֵל («el Dios») es un nombre TOTAL — contiene en sí toda la realeza, todo el juicio, toda la santidad. El que dice haEl en los días del juicio no dijo nada FALSO: dijo un nombre verdadero de Dios, verdadero también en Tishrei. ¿Desde cuándo una verdad deja de servir por el calendario?\n\nY R. Elazar no argumenta en abstracto — trae una PRUEBA de Yeshayahu 5:16 (el nodo azul, abajo): un versículo que describe explícitamente el escenario del juicio y que, sin embargo, llama a Dios הָאֵל y no הַמֶּלֶךְ. Si el profeta pudo decir haEl en pleno contexto de mishpat, el que reza también puede.\n\nLa estructura de la disputa es un clásico de la halajá litúrgica:\n\n  · RAV exige CORRESPONDENCIA: las palabras deben reflejar el momento teológico. Días de juicio → título de Juez. La fórmula es un espejo del calendario.\n  · R. ELAZAR exige solo VERDAD: las palabras deben ser verdaderas de Dios. Y haEl es siempre verdadera. La fórmula no necesita sincronizarse — necesita no mentir.\n\n¿Precisión estacional o verdad intemporal? La guemará no lo decide en este nivel: hará falta que una generación posterior — Rav Yosef y Rabba, abajo — tome partido, y que el editor final firme el veredicto.'
+    },
+    'pasuk': {
+      titulo: 'La prueba de R. Elazar · Yeshayahu 5:16',
+      hebreo: 'וַיִּגְבַּה ה׳ צְבָאוֹת בַּמִּשְׁפָּט וְהָאֵל הַקָּדוֹשׁ נִקְדָּשׁ בִּצְדָקָה',
+      traduccion: '«Se elevó Hashem de los ejércitos en el juicio, y el Dios santo fue santificado en la justicia» (Yeshayahu 5:16)',
+      explicacion: 'La prueba de R. Elazar es un versículo leído con lupa. Yeshayahu 5:16 dice: «Se elevó Hashem de los ejércitos בַּמִּשְׁפָּט — EN EL JUICIO — y הָאֵל הַקָּדוֹשׁ — el DIOS santo — fue santificado en la justicia».\n\nLa fuerza del argumento está en la conjunción de las dos mitades:\n\n  · La primera mitad establece el CONTEXTO: בַּמִּשְׁפָּט, «en el juicio». El versículo habla del momento en que Dios se eleva juzgando — para la lectura rabínica, אֵימָתַי (¿cuándo?): en los días del juicio, entre Rosh HaShaná y Yom Kipur.\n  · La segunda mitad da el TÍTULO: y en ese preciso escenario, el profeta escribe וְהָאֵל הַקָּדוֹשׁ — «el DIOS santo». No haMelej. HaEl.\n\nEs decir: la Escritura misma, describiendo exactamente el escenario que según Rav exige decir «haMelej», usa «haEl». Si el título haEl fuera inadecuado para los días del juicio, el versículo sería el primero en evitarlo. El pasuk es el testigo perfecto de R. Elazar: haEl FUNCIONA en Tishrei.\n\nLa ironía es que el mismo versículo es también el gran texto de la posición contraria — léase entero: Dios se ELEVA en el juicio, se SANTIFICA en la justicia. Es el pasuk que enseña que la santidad de Dios se manifiesta al mundo precisamente CUANDO JUZGA — la intuición profunda detrás del cambio de título de Rav. Los dos lados de la disputa caben dentro de las mismas diez palabras de Yeshayahu: R. Elazar lee el TÍTULO (dice haEl), Rav lee el CONTENIDO (la santidad se revela en el mishpat).\n\nUn detalle para la memoria litúrgica: este versículo quedó incrustado en la propia amidá de los Yamim Noraim — la tercera berajá de esos días lo cita entero justo antes de sellar «haMelej haKadosh». El pasuk que probaba «haEl» termina sirviendo de antesala al sello «haMelej»: la disputa entera quedó rezada dentro de la berajá.'
+    },
+    'rav-yosef': {
+      titulo: 'Rav Yosef · como R. Elazar',
+      hebreo: 'רַב יוֹסֵף אָמַר: ״הָאֵל הַקָּדוֹשׁ״ וּ״מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט״',
+      traduccion: 'Rav Yosef dijo: «el Dios santo» y «Rey que ama la justicia y el derecho»',
+      explicacion: 'La disputa entre Rav y R. Elazar baja una generación y se encarna en la pareja clásica de Pumbedita: Rav Yosef y Rabba — los dos colegas que la guemará hace discutir en decenas de sugyot.\n\nRav Yosef toma partido por R. ELAZAR: también en los diez días se dice הָאֵל הַקָּדוֹשׁ y מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט — las fórmulas de todo el año, sin cambio alguno.\n\nSu posición hereda la lógica de R. Elazar y la convierte en práctica: la liturgia no necesita un interruptor estacional. HaEl es un nombre siempre verdadero; el versículo de Yeshayahu prueba que sirve incluso en el contexto del juicio; y la uniformidad tiene su propia virtud — una fórmula única, sin ocasiones de error, sin necesidad de repetir la amidá por una palabra.\n\nHay algo conmovedor en que sea precisamente RAV YOSEF quien defienda la fórmula estable. La tradición lo llama סִינַי — «Sinaí» — el maestro cuya grandeza era la PRESERVACIÓN exacta de lo recibido, frente a Rabba, el עוֹקֵר הָרִים, «arrancador de montañas», el dialéctico agudo. El conservador de fórmulas defiende la fórmula única; el dialéctico defiende la distinción fina entre los tiempos.\n\nPero esta vez la halajá no siguió a Sinaí. El nodo dorado final registra el veredicto: וְהִלְכְתָא כְּרַבָּה — la ley es como su colega. La caja de Rav Yosef queda dibujada con borde discontinuo: una posición legítima, argumentada, derrotada.'
+    },
+    'rabba': {
+      titulo: 'Rabba · como Rav',
+      hebreo: 'רַבָּה אָמַר: ״הַמֶּלֶךְ הַקָּדוֹשׁ״ וְ״הַמֶּלֶךְ הַמִּשְׁפָּט״',
+      traduccion: 'Rabba dijo: «el Rey santo» y «el Rey del juicio»',
+      explicacion: 'Rabba toma partido por RAV: en los diez días entre Rosh HaShaná y Yom Kipur se dice הַמֶּלֶךְ הַקָּדוֹשׁ y הַמֶּלֶךְ הַמִּשְׁפָּט. El título CAMBIA, porque el tiempo cambió.\n\nLa posición de Rabba es una tesis sobre qué es la tefilá: no un catálogo de verdades intemporales sobre Dios, sino un acto situado EN EL TIEMPO. El que reza en los diez días no está describiendo a Dios en general — está parado ante un tribunal EN SESIÓN. Decir «haEl haKadosh» en esos días no es falso… pero es hablar de otra cosa. Es describir al Rey en abstracto mientras el Rey, en concreto, está juzgando al que habla.\n\nPor eso la palabra debe ser הַמֶּלֶךְ: el título de RELACIÓN. «Rey» no es un atributo que Dios tenga a solas — es un vínculo que existe solo si hay súbditos que lo reconocen. En los días en que la soberanía se revela juzgando, la liturgia debe realizar el reconocimiento: coronar. La amidá de los diez días es un acto de coronación diaria — tres veces al día, Israel repite la entronización de Rosh HaShaná.\n\nY nótese la simetría editorial: Rabba sostiene la posición de RAV — y la cadena entera de esta sugyá viene de Rabba bar Jinnana Sava בְּשֵׁם RAV. La enseñanza vuelve a casa: lo que Rav enseñó, un Rabba lo transmitió y otro Rabba lo defendió hasta convertirlo en ley.\n\nEl arco dorado del anillo — los diez días — es la posición de Rabba hecha calendario. Y la firma final del editor la vuelve irrevocable.'
+    },
+    'halaja': {
+      titulo: 'El veredicto · vehiljeta keRabba',
+      hebreo: 'וְהִלְכְתָא כְּרַבָּה',
+      traduccion: '«Y la halajá es como Rabba»',
+      explicacion: 'Dos palabras del editor final cierran la sugyá: וְהִלְכְתָא כְּרַבָּה — «y la halajá es como Rabba». Es la fórmula de veredicto de los saboraim: cuando la disputa quedó en tablas argumentales, el corpus firma explícitamente quién queda como ley.\n\nLa ley, entonces: diez días al año — de Rosh HaShaná a Yom Kipur — la amidá cambia sus títulos. הַמֶּלֶךְ הַקָּדוֹשׁ en la tercera berajá; הַמֶּלֶךְ הַמִּשְׁפָּט en la berajá del juicio. Así reza todo Israel HASTA HOY: el majzor de los Yamim Noraim y el sidur de los diez días llevan impresa esta línea de Berajot 12b. Pocas disputas del Talmud tienen un resultado tan audible — cada Tishrei, en cada minyán del mundo, la voz del jazán pronuncia el veredicto de esta página.\n\nY la halajá posterior extrajo la consecuencia más dura: quien en los diez días dijo הָאֵל הַקָּדוֹשׁ — VUELVE AL PRINCIPIO de la amidá. El error en el título no es un defecto estético que se perdona: invalida la berajá. ¿Por qué tanta severidad por una palabra? Porque — como enseñó el diagrama #38 con el jitum — la esencia de una berajá VIVE en su fórmula de sello. El título no es un adorno del contenido: ES el contenido. Decir «haEl» cuando el día exige «haMelej» es rezar la teología de otro día — como sellar «yotzer or» en la noche.\n\nEl cierre de la sugyá completa así el arco del perek litúrgico: el #38 enseñó que todo sigue al sello y que el cuerpo se dobla en baruj; esta sugyá enseña que el sello mismo tiene calendario. La tefilá judía queda calibrada en tres ejes a la vez — la PALABRA exacta (el título), el TIEMPO exacto (los diez días), el CUERPO exacto (la caña y la serpiente de Rav Sheshet). Y sobre los tres, la firma editorial: vehiljeta keRabba — diez días al año, la liturgia corona.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.melej-interactivo')
+    : document.querySelector('.melej-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#melej-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.melej-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="melej-panel-header">' +
+        '<p class="melej-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="melej-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="melej-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="melej-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.melej-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.melej-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="melej-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
