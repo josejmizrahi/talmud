@@ -1,0 +1,347 @@
+<div class="ejad-interactivo">
+<style>
+  .ejad-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .ejad-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .ejad-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .ejad-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .ejad-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .ejad-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .ejad-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .ejad-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .ejad-diagrama svg { width: 100%; height: auto; display: block; }
+  .ejad-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .ejad-nodo:hover rect { stroke-width: 2 !important; }
+  .ejad-nodo:hover circle { stroke-width: 2.5 !important; }
+  .ejad-nodo.activa rect { stroke-width: 2.5 !important; }
+  .ejad-nodo.activa circle { stroke-width: 3 !important; }
+  .ejad-nodo.dim { opacity: 0.32; }
+  .ejad-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .ejad-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .ejad-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .ejad-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .ejad-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .ejad-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .ejad-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="ejad-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>el ejad · su coronación</span>
+  <span><span class="swatch azul"></span>las opiniones · cómo alargar</span>
+  <span><span class="swatch verde"></span>el shema de Rabbi</span>
+  <span><span class="swatch sepia"></span>el primer verso como fortaleza</span>
+  <span><span class="swatch rojo"></span>perakdan · boca arriba</span>
+</div>
+
+<div class="ejad-diagrama">
+<svg viewBox="0 0 720 1372" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13b: el ejad prolongado · coronarlo arriba, abajo y a los cuatro vientos · el shema de Rabbi · el primer verso como fortaleza</title>
+
+<defs>
+  <marker id="flecha-ej" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-ej-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El ejad prolongado · cuánto dura una palabra</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13b · la última palabra del primer verso — y el shema entero comprimido en un verso</text>
+
+<!-- ============================================================ -->
+<!-- LA PALABRA · אחד CON SUS TRES LETRAS                        -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PALABRA · TRES LETRAS · UNA DURA MÁS QUE LAS OTRAS</text>
+
+<g class="ejad-nodo" data-id="ejad">
+  <rect x="60" y="86" width="600" height="176" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.8"/>
+  <!-- las tres letras: א (derecha) ח (centro) ד (izquierda, alargada) -->
+  <text x="490" y="176" text-anchor="middle" font-size="58" fill="#3d2f23" font-family="'Frank Ruhl Libre', serif">א</text>
+  <text x="368" y="176" text-anchor="middle" font-size="58" fill="#3d2f23" font-family="'Frank Ruhl Libre', serif">ח</text>
+  <!-- la dálet alargada gráficamente -->
+  <text x="218" y="178" text-anchor="middle" font-size="76" fill="#b8860b" font-weight="700" font-family="'Frank Ruhl Libre', serif" transform="scale(1.25,1) translate(-44,0)">ד</text>
+  <line x1="130" y1="188" x2="300" y2="188" stroke="#b8860b" stroke-width="1.5" stroke-dasharray="4,3" marker-start="url(#flecha-ej-gold)"/>
+  <!-- etiquetas bajo cada letra -->
+  <text x="490" y="210" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">alef · sin duración</text>
+  <text x="368" y="210" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">jet · no apurarla (Rav Ashi)</text>
+  <text x="215" y="210" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic" font-weight="600">DÁLET · aquí se alarga (Rav Aja bar Yaakov)</text>
+  <text x="360" y="234" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד</text>
+  <text x="360" y="252" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la última palabra del primer verso · una sola palabra puede durar — pero ¿cuánto?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ALARGAR EL EJAD · SUMAJOS + LA TÉCNICA                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="262" x2="360" y2="280" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-ej)"/>
+
+<text x="60" y="292" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ALARGAR EL EJAD · LA PROMESA Y LA TÉCNICA</text>
+
+<g class="ejad-nodo" data-id="sumajos">
+  <rect x="60" y="302" width="290" height="130" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="324" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Sumajos · la promesa</text>
+  <text x="205" y="348" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">כׇּל הַמַּאֲרִיךְ בְּ״אֶחָד״</text>
+  <text x="205" y="366" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">מַאֲרִיכִין לוֹ יָמָיו וּשְׁנוֹתָיו</text>
+  <text x="78" y="388" font-size="9.5" fill="#3d2f23" font-style="italic">«quien alarga el ejad —</text>
+  <text x="78" y="402" font-size="9.5" fill="#3d2f23" font-style="italic">le alargan sus días y sus años»</text>
+  <text x="78" y="420" font-size="9" fill="#6b4423">medida por medida: duración por duración</text>
+</g>
+
+<g class="ejad-nodo" data-id="dalet-jet">
+  <rect x="370" y="302" width="290" height="130" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="515" y="324" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La técnica · dónde y dónde no</text>
+  <text x="515" y="348" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">וּבְדָלֶ״ת</text>
+  <text x="388" y="364" font-size="9.5" fill="#3d2f23" font-style="italic">Rav Aja bar Yaakov: «en la dálet»</text>
+  <text x="515" y="386" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">וּבִלְבַד שֶׁלֹּא יַחְטוֹף בְּחֵי״ת</text>
+  <text x="388" y="402" font-size="9.5" fill="#3d2f23" font-style="italic">Rav Ashi: «con tal de no apurar la jet»</text>
+  <text x="388" y="420" font-size="9" fill="#6b4423">alargar el final sin tragarse el medio</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL LÍMITE · LA CORONACIÓN EN SEIS DIRECCIONES               -->
+<!-- ============================================================ -->
+<line x1="205" y1="432" x2="205" y2="448" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-ej-gold)"/>
+<line x1="515" y1="432" x2="515" y2="448" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-ej-gold)"/>
+<line x1="205" y1="448" x2="515" y2="448" stroke="#b8860b" stroke-width="1"/>
+<line x1="360" y1="448" x2="360" y2="462" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-ej-gold)"/>
+
+<text x="60" y="474" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL LÍMITE · R. YIRMEYA ANTE R. JIYA BAR ABA · LA CORONACIÓN</text>
+
+<g class="ejad-nodo" data-id="coronacion">
+  <rect x="60" y="484" width="600" height="238" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="506" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">כֵּיוָן דְּאַמְלֵיכְתֵּיהּ לְמַעְלָה וּלְמַטָּה וּלְאַרְבַּע רוּחוֹת הַשָּׁמַיִם — תּוּ לָא צְרִיכַתְּ</text>
+  <text x="360" y="524" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«una vez que Lo coronaste arriba, abajo y a los cuatro vientos del cielo — no necesitas más»</text>
+
+  <!-- cruz de seis direcciones alrededor del ejad -->
+  <circle cx="360" cy="622" r="30" fill="rgba(184,134,11,0.18)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="631" text-anchor="middle" font-size="20" fill="#1a1410" font-weight="700">אֶחָד</text>
+  <!-- arriba / abajo -->
+  <line x1="360" y1="586" x2="360" y2="552" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-ej-gold)"/>
+  <line x1="360" y1="658" x2="360" y2="692" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-ej-gold)"/>
+  <text x="360" y="546" text-anchor="middle" font-size="9.5" fill="#6b4423">לְמַעְלָה · arriba</text>
+  <text x="360" y="704" text-anchor="middle" font-size="9.5" fill="#6b4423">לְמַטָּה · abajo</text>
+  <!-- los cuatro vientos -->
+  <line x1="326" y1="622" x2="248" y2="622" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-ej-gold)"/>
+  <line x1="394" y1="622" x2="472" y2="622" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-ej-gold)"/>
+  <line x1="336" y1="600" x2="272" y2="566" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#flecha-ej-gold)"/>
+  <line x1="384" y1="644" x2="448" y2="678" stroke="#b8860b" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#flecha-ej-gold)"/>
+  <text x="196" y="626" text-anchor="middle" font-size="9.5" fill="#6b4423">viento · oeste</text>
+  <text x="524" y="626" text-anchor="middle" font-size="9.5" fill="#6b4423">viento · este</text>
+  <text x="238" y="558" text-anchor="middle" font-size="9.5" fill="#6b4423">viento · norte</text>
+  <text x="482" y="690" text-anchor="middle" font-size="9.5" fill="#6b4423">viento · sur</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA KAVANÁ MÍNIMA · R. MEIR + RAVA                           -->
+<!-- ============================================================ -->
+<line x1="360" y1="722" x2="360" y2="738" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-ej)"/>
+
+<text x="60" y="750" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA KAVANÁ MÍNIMA · R. MEIR · RAVA FIJA LA HALAJÁ</text>
+
+<g class="ejad-nodo" data-id="kavana">
+  <rect x="60" y="760" width="600" height="96" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="360" y="782" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">עַד ״עַל לְבָבֶךָ״ — צְרִיכָה כַּוָּנַת הַלֵּב · אָמַר רָבָא: הֲלָכָה כְּרַבִּי מֵאִיר</text>
+  <text x="360" y="800" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">R. Meir: la kavaná del corazón se exige hasta el final del primer verso · Rava: la halajá es como R. Meir</text>
+  <text x="360" y="822" text-anchor="middle" font-size="9.5" fill="#3d2f23">seis palabras de concentración absoluta — el resto es recitación</text>
+  <text x="360" y="842" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el mismo verso que se corona entero en el ejad es el único tramo donde el corazón es obligatorio</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL SHEMA DE RABBI · LA MANO SOBRE LA CARA                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="856" x2="360" y2="872" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-ej)"/>
+
+<text x="60" y="884" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL SHEMA DE RABBI · UN VERSO Y UNA MANO SOBRE LOS OJOS</text>
+
+<g class="ejad-nodo" data-id="shema-rabbi">
+  <rect x="60" y="894" width="600" height="186" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="916" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד — זוֹ קְרִיאַת שְׁמַע שֶׁל רַבִּי</text>
+  <text x="360" y="934" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«este verso — este es el shema de Rabbi Yehuda HaNasi»</text>
+  <line x1="80" y1="946" x2="640" y2="946" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+  <text x="78" y="966" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="600">Rav a R. Jiya:</tspan> «nunca lo vi aceptar sobre sí el yugo del reino de los Cielos»</text>
+  <text x="360" y="988" text-anchor="middle" font-size="10.5" direction="rtl" fill="#2d6b4e">בַּר פַּחֲתֵי · בְּשָׁעָה שֶׁמַּעֲבִיר יָדָיו עַל פָּנָיו — מְקַבֵּל עָלָיו עוֹל מַלְכוּת שָׁמַיִם</text>
+  <text x="360" y="1006" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«hijo de nobles — cuando se pasa las manos por la cara, ahí acepta el yugo del Cielo»</text>
+  <line x1="80" y1="1018" x2="640" y2="1018" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+  <text x="78" y="1038" font-size="9.5" fill="#3d2f23"><tspan fill="#2d6b4e" font-weight="600">¿Completaba después?</tspan> Bar Kappara: NO — por eso enseñaba siempre un tema con yetziat mitzrayim</text>
+  <text x="78" y="1056" font-size="9.5" fill="#3d2f23">R. Shimon berabbi (su hijo): SÍ — volvía a las parashiyot cuando terminaba la clase</text>
+  <text x="78" y="1070" font-size="9" fill="#6b4423" font-style="italic">el gesto de la mano sobre los ojos que hacemos hasta hoy nace aquí</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PRIMER VERSO COMO FORTALEZA                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="1080" x2="360" y2="1096" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-ej)"/>
+
+<text x="60" y="1108" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PRIMER VERSO COMO FORTALEZA · SUEÑO Y VIGILIA</text>
+
+<g class="ejad-nodo" data-id="pasuka-kama">
+  <rect x="60" y="1118" width="600" height="112" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="78" y="1140" font-size="9.5" fill="#3d2f23"><tspan fill="#6b4423" font-weight="600">Rav:</tspan> quien dijo el primer verso y lo venció el sueño — cumplió (יָצָא)</text>
+  <text x="360" y="1166" text-anchor="middle" font-size="11" direction="rtl" fill="#6b4423">בִּפְסוּקָא קַמָּא צַעֲרַן — טְפֵי לָא תְּצַעֲרַן</text>
+  <text x="360" y="1184" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">Rav Najman a su esclavo Daru: «en el primer verso — molestame; más allá, no me molestes»</text>
+  <text x="360" y="1206" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">despertame aunque duela: seis palabras valen el dolor · el resto puede decirse dormido</text>
+  <text x="360" y="1220" text-anchor="middle" font-size="9" fill="#6b4423">todo el edificio se sostiene sobre el primer verso dicho despierto</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PERAKDAN · BOCA ARRIBA NO SE LEE                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="1230" x2="360" y2="1246" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-ej)"/>
+
+<text x="60" y="1258" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">PERAKDAN · LA POSTURA PROHIBIDA</text>
+
+<g class="ejad-nodo" data-id="perakdan">
+  <rect x="60" y="1268" width="600" height="96" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="1290" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">פְּרַקְדָּן לֹא יִקְרָא קְרִיאַת שְׁמַע</text>
+  <text x="360" y="1308" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">Rav Yosef: «el que está boca arriba no lea el shema»</text>
+  <text x="360" y="1330" text-anchor="middle" font-size="9.5" fill="#3d2f23"><tspan fill="#8b1a1a" font-weight="600">R. Yehoshua ben Levi</tspan> maldecía (לַיֵּיט) a quien duerme boca arriba</text>
+  <text x="360" y="1350" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la aceptación del yugo exige una postura — el cuerpo también recita</text>
+</g>
+
+</svg>
+</div>
+
+<div class="ejad-panel" id="ejad-panel">
+  <p class="ejad-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'ejad': {
+      titulo: 'La palabra · אֶחָד · tres letras, una duración',
+      hebreo: 'שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד',
+      traduccion: 'Escucha Israel: HaShem nuestro Dios, HaShem es UNO',
+      explicacion: 'Las dos sugyot anteriores excavaron las primeras palabras del verso — shema, vehayu, hadevarim. El editor se queda ahora en la ÚLTIMA palabra: אֶחָד.\n\nLa palabra tiene tres letras, y la sugyá les asigna papeles fonéticos distintos:\n\n  · א (alef) — vocal apenas articulada, sin duración propia\n  · ח (jet) — la sílaba «e-JA»: NO debe apurarse (Rav Ashi)\n  · ד (dálet) — la consonante final: AQUÍ vive la prolongación (Rav Aja bar Yaakov)\n\nEn el diagrama, la dálet aparece gráficamente ALARGADA — porque eso es exactamente lo que hace el recitador: sostiene la ד final del ejad mientras el pensamiento recorre el cosmos.\n\nLa pregunta que abre la sugyá es insólita en su concreción: ¿CUÁNTO puede durar una sola palabra? No es una pregunta retórica. El ejad es la única palabra de la liturgia judía cuya DURACIÓN es objeto de halajá — hay un mínimo (la coronación completa) y un máximo (no más que eso).\n\nEsta es la sugyá más musical del perek: trata del TEMPO de la fe. La unidad de Dios no se afirma solo con contenido — se afirma con tiempo, con respiración, con la física de una consonante sostenida.'
+    },
+    'sumajos': {
+      titulo: 'Sumajos · quien alarga el ejad, le alargan los días',
+      hebreo: 'כׇּל הַמַּאֲרִיךְ בְּ״אֶחָד״ — מַאֲרִיכִין לוֹ יָמָיו וּשְׁנוֹתָיו',
+      traduccion: '«Todo el que alarga el ejad — le alargan sus días y sus años»',
+      explicacion: 'Sumajos (Symmachos, discípulo de R. Meir) formula la promesa con una simetría perfecta: הַמַּאֲרִיךְ / מַאֲרִיכִין — el que ALARGA / le ALARGAN. El mismo verbo, en las dos direcciones.\n\nLa lógica es medida por medida (midá kenegued midá): quien le regala DURACIÓN a la proclamación de la unidad divina, recibe DURACIÓN en su propia vida. El tiempo invertido en el ejad vuelve como tiempo vivido.\n\nHay una teología implícita en esta ecuación:\n\n  1. EL TIEMPO ES LA MONEDA DE LA KAVANÁ. No se pide alargar cualquier palabra — solo el ejad. Porque el ejad es la palabra cuyo CONTENIDO (la unidad que abarca todo) exige más tiempo del que una sílaba normal permite.\n\n  2. LA RECOMPENSA NO ES SIMBÓLICA. La guemará lo toma en serio: días y años literales. La declaración de la unidad conecta con la fuente de la vida — prolongarla es prolongarse.\n\n  3. PERO LA PROMESA NECESITA TÉCNICA. Alargar ¿dónde? ¿cómo? ¿hasta cuándo? Las tres precisiones siguientes (Rav Aja bar Yaakov, Rav Ashi, R. Yirmeya) convierten la promesa en halajá practicable.\n\nSin las precisiones, la promesa de Sumajos podría degenerar en competencia de apnea. Con ellas, se vuelve lo que es: una coreografía exacta del pensamiento dentro de una consonante.'
+    },
+    'dalet-jet': {
+      titulo: 'La técnica · en la dálet, sin apurar la jet',
+      hebreo: 'וּבְדָלֶ״ת · וּבִלְבַד שֶׁלֹּא יַחְטוֹף בְּחֵי״ת',
+      traduccion: '«Y en la dálet · con tal de no apurar la jet»',
+      explicacion: 'Dos amoraím precisan la mecánica fonética del alargamiento:\n\nRAV AJA BAR YAAKOV — וּבְדָלֶ״ת: la prolongación va EN LA DÁLET, la consonante final. No en la alef (que no tiene cuerpo sonoro), no en la vocal. La dálet es donde la palabra termina — y donde puede no terminar. Sostener la ד es sostener el borde de la palabra, impedir que el ejad se cierre antes de que el pensamiento haya completado su recorrido.\n\nEs también un dato numérico que la tradición explota: la ד vale 4 — los cuatro vientos que habrá que coronar. La letra que se alarga CONTIENE el mapa de la coronación.\n\nRAV ASHI — וּבִלְבַד שֶׁלֹּא יַחְטוֹף בְּחֵי״ת: con tal de NO APURAR la jet. El verbo יַחְטוֹף significa «arrebatar, agarrar con prisa». El peligro técnico: quien está ansioso por llegar a la dálet larga se TRAGA la sílaba anterior — pronuncia «ejád» comiéndose la ח, o deforma la vocal para correr al final.\n\nLa corrección de Rav Ashi es profundamente musical: el alargamiento del final NO justifica la deformación del medio. Cada letra debe recibir su articulación plena; solo entonces la última puede extenderse.\n\nLa lección conjunta: la intensidad espiritual no exime de la precisión. El fervor que atropella la jet para lucirse en la dálet no es kavaná — es prisa disfrazada. La palabra entera, bien dicha, y ENTONCES la prolongación.'
+    },
+    'coronacion': {
+      titulo: 'El límite · coronarlo arriba, abajo y a los cuatro vientos',
+      hebreo: 'כֵּיוָן דְּאַמְלֵיכְתֵּיהּ לְמַעְלָה וּלְמַטָּה וּלְאַרְבַּע רוּחוֹת הַשָּׁמַיִם — תּוּ לָא צְרִיכַתְּ',
+      traduccion: '«Una vez que Lo coronaste arriba, abajo y a los cuatro vientos del cielo — no necesitas más»',
+      explicacion: 'R. Yirmeya estaba sentado ante R. Jiya bar Aba, y vio que ALARGABA DEMASIADO el ejad. Le dijo: una vez que Lo coronaste (דְּאַמְלֵיכְתֵּיהּ — el verbo de hacer REY) arriba, abajo y a los cuatro vientos del cielo — תּוּ לָא צְרִיכַתְּ, no necesitas más.\n\nEsta es la enseñanza central de la sugyá, y redefine qué ES la prolongación:\n\nLA PROLONGACIÓN NO ES DURACIÓN — ES GEOMETRÍA.\n\nMientras la dálet suena, el pensamiento debe recorrer SEIS DIRECCIONES: arriba (לְמַעְלָה), abajo (לְמַטָּה), y los cuatro vientos del cielo (וּלְאַרְבַּע רוּחוֹת הַשָּׁמַיִם) — norte, sur, este, oeste. Es el diagrama de la cruz de seis brazos alrededor del ejad: la totalidad del espacio tridimensional, coronada.\n\nDe aquí se siguen las dos caras del límite:\n\n  1. HAY UN MÍNIMO — la dálet debe durar lo que dura UNA coronación completa del cosmos. Menos que eso es un ejad trunco: un Rey coronado solo en algunas provincias.\n\n  2. HAY UN MÁXIMO — y esto es lo que R. Yirmeya corrige. Más allá de la sexta dirección, el alargamiento es ruido. El cosmos ya está coronado; sostener la nota no añade reino. תּוּ לָא צְרִיכַתְּ.\n\nLa palabra אֶחָד se vuelve así un ACTO DE ENTRONIZACIÓN medido: no un sonido largo, sino un gesto mental con contenido exacto y por tanto con duración exacta. El ejad debe durar exactamente una coronación del cosmos — ni una dirección menos, ni un segundo más.\n\nEsta kavaná quedó codificada en la halajá (Shulján Aruj OC 61:6) y es la que el recitador realiza hasta hoy en cada shema.'
+    },
+    'kavana': {
+      titulo: 'La kavaná mínima · R. Meir y la halajá de Rava',
+      hebreo: 'עַד ״עַל לְבָבֶךָ״ — צְרִיכָה כַּוָּנַת הַלֵּב · הֲלָכָה כְּרַבִּי מֵאִיר',
+      traduccion: 'Hasta «sobre tu corazón» se exige la kavaná del corazón · la halajá es como R. Meir',
+      explicacion: 'La sugyá cierra la cuestión que venía abierta desde el inicio del perek: ¿HASTA DÓNDE se exige la kavaná?\n\nR. MEIR: la kavanat halev — la intención del corazón — se exige hasta el FINAL DEL PRIMER VERSO. La derashá juega con las palabras de la Torá: עַל לְבָבֶךָ («sobre tu corazón») — hasta ahí, el corazón.\n\nRAVA fija: הֲלָכָה כְּרַבִּי מֵאִיר — la halajá es como R. Meir.\n\nEl resultado es una arquitectura de dos niveles:\n\n  1. SEIS PALABRAS DE CONCENTRACIÓN ABSOLUTA — shema · Israel · HaShem · Elokeinu · HaShem · ejad. En este tramo, la kavaná no es ideal piadoso: es CONDICIÓN DE VALIDEZ. Sin corazón, no hay shema.\n\n  2. EL RESTO ES RECITACIÓN — las parashiyot completas deben decirse, pero la distracción no las invalida. El corazón puede descansar; la boca continúa.\n\nLa decisión de Rava es realista y por eso es misericordiosa: exigir concentración absoluta durante todo el shema produciría fracaso universal. Exigirla en seis palabras produce SEIS PALABRAS REALES.\n\nY nótese la coherencia con la sugyá del ejad: el tramo de kavaná obligatoria TERMINA exactamente en la palabra que se alarga. La dálet prolongada es la última frontera del corazón — el punto donde la concentración obligatoria culmina en coronación cósmica y luego se relaja. Todo el sistema converge en la misma palabra.'
+    },
+    'shema-rabbi': {
+      titulo: 'El shema de Rabbi · un verso y una mano sobre la cara',
+      hebreo: 'זוֹ קְרִיאַת שְׁמַע שֶׁל רַבִּי · בְּשָׁעָה שֶׁמַּעֲבִיר יָדָיו עַל פָּנָיו מְקַבֵּל עָלָיו עוֹל מַלְכוּת שָׁמַיִם',
+      traduccion: '«Este es el shema de Rabbi · cuando se pasa las manos por la cara, acepta sobre sí el yugo del reino de los Cielos»',
+      explicacion: 'La consecuencia más espectacular de la halajá de R. Meir: si la kavaná solo es obligatoria en el primer verso, entonces el primer verso ES el shema en su núcleo. Y la guemará lo muestra con el caso supremo:\n\nשְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד — זוֹ קְרִיאַת שְׁמַע שֶׁל רַבִּי: este verso, solo, es el shema de Rabbi Yehuda HaNasi — el redactor de la Mishná, el hombre más ocupado de su generación, que no interrumpía su clase pública para recitar el shema completo.\n\nRAV LE CONFIESA A R. JIYA: «nunca lo vi aceptar sobre sí el yugo del reino de los Cielos». La observación es casi escandalosa — ¿el príncipe de Israel no dice el shema?\n\nLA RESPUESTA DE R. JIYA: בַּר פַּחֲתֵי — «hijo de nobles» (apelativo afectuoso). CUANDO SE PASA LAS MANOS POR LA CARA — ahí acepta el yugo. En medio de la clase, un gesto de un segundo: la mano sobre los ojos, el primer verso con kavaná total, y la clase continúa.\n\nEl shema entero, comprimido en un verso y un gesto. Y ese gesto — la mano sobre los ojos al decir shema Israel — es EL QUE HACEMOS HASTA HOY (Shulján Aruj OC 61:5): cada judío que se cubre los ojos repite el shema de Rabbi.\n\nLA DISPUTA FINAL: ¿completaba después las parashiyot?\n\n  · BAR KAPPARA: NO — y por eso Rabbi buscaba enseñar siempre un tema que incluyera yetziat mitzrayim (la salida de Egipto), para cumplir la mención obligatoria dentro de su propia clase.\n  · R. SHIMON BERABBI (su hijo): SÍ — cuando terminaba la clase, volvía y completaba.\n\nSegún Bar Kappara, la Torá misma que Rabbi enseñaba funcionaba como su shema extendido: el estudio absorbía la liturgia. Según su hijo, la liturgia recuperaba sus derechos al terminar el estudio. En ambas versiones, el núcleo queda intacto: seis palabras, una mano, el yugo aceptado.'
+    },
+    'pasuka-kama': {
+      titulo: 'El primer verso como fortaleza · sueño y vigilia',
+      hebreo: 'בִּפְסוּקָא קַמָּא צַעֲרַן — טְפֵי לָא תְּצַעֲרַן',
+      traduccion: '«En el primer verso — molestame; más allá, no me molestes»',
+      explicacion: 'Dos enseñanzas prueban que el primer verso es la fortaleza — la línea que se defiende a cualquier costo, mientras el resto puede rendirse al sueño:\n\n1 · RAV: quien dijo el primer verso y LO VENCIÓ EL SUEÑO — cumplió (יָצָא). El shema recitado en duermevela es válido, CON UNA CONDICIÓN: que el primer verso haya sido dicho despierto. La vigilia es obligatoria exactamente donde la kavaná es obligatoria; después, el que dormita mientras murmura las parashiyot sigue cumpliendo.\n\n2 · RAV NAJMAN A SU ESCLAVO DARU: בִּפְסוּקָא קַמָּא צַעֲרַן — «en el primer verso, MOLESTAME». El verbo צַעֲרַן es fuerte: causame dolor, sacudime, despertame aunque duela. Y la segunda mitad: טְפֵי לָא תְּצַעֲרַן — «más allá, no me molestes».\n\nLa instrucción de Rav Najman es la halajá de R. Meir convertida en orden doméstica. Un amoraím exhausto, al borde del sueño, calcula exactamente cuánta vigilia debe comprarle su esclavo a golpes: SEIS PALABRAS. Esas seis palabras valen el dolor del despertar forzado. La séptima ya no.\n\nLa imagen es inolvidable porque es fisiológicamente honesta: el Talmud no finge que los sabios recitaban con éxtasis pleno cada noche. Reconoce el cansancio, lo negocia — y en la negociación revela la jerarquía real: hay un núcleo innegociable (el primer verso, despierto, con corazón) y una periferia flexible (todo lo demás).\n\nTodo el edificio del shema se sostiene sobre seis palabras dichas con el mundo entero coronado — y con los ojos abiertos.'
+    },
+    'perakdan': {
+      titulo: 'Perakdan · boca arriba no se lee',
+      hebreo: 'פְּרַקְדָּן לֹא יִקְרָא קְרִיאַת שְׁמַע · לַיֵּיט אַמַּאן דְּגָנֵי אַפַּרְקִיד',
+      traduccion: '«El que está boca arriba no lea el shema · maldecía a quien duerme boca arriba»',
+      explicacion: 'El cierre de la sugyá baja del corazón al CUERPO: la postura también recita.\n\nRAV YOSEF: פְּרַקְדָּן לֹא יִקְרָא קְרִיאַת שְׁמַע — el perakdan (el que yace boca arriba, con el rostro al cielo) no debe leer el shema. La guemará matiza: acostado DE LADO se puede leer (Beit Hillel permite recitar בשכבך en la posición en que uno está); pero boca arriba, no.\n\n¿Por qué? La postura del perakdan es problemática en dos niveles:\n\n  1. PARA LEER — es una postura de indolencia y de exhibición: recitar la entronización del Rey despatarrado hacia arriba contradice el contenido del texto. Quien acepta un yugo no lo hace tumbado panza arriba.\n\n  2. PARA DORMIR — y aquí sube el voltaje: R. YEHOSHUA BEN LEVI MALDECÍA (לַיֵּיט) a quien duerme boca arriba. La postura misma, aun sin shema, le parecía indigna e indecente (la guemará en otros lugares añade razones de recato y de salud).\n\nEl contraste con los nodos anteriores completa el arco de la sugyá:\n\n  · el sueño NO invalida (Rav: si venció al recitador tras el primer verso, cumplió)\n  · la postura SÍ invalida (boca arriba no se lee ni medio dormido ni despierto)\n\nEs decir: la halajá perdona la debilidad (el cansancio vence a cualquiera) pero no perdona el DESALIÑO (la postura se elige). El shema tolera al agotado; no tolera al displicente.\n\nLa sugyá que empezó midiendo la duración de una consonante termina midiendo el ángulo de un cuerpo: desde la dálet prolongada hasta la posición al dormir, la aceptación del yugo ocupa el tiempo, el espacio, el corazón y la espalda del que la pronuncia.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.ejad-interactivo')
+    : document.querySelector('.ejad-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#ejad-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.ejad-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="ejad-panel-header">' +
+        '<p class="ejad-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="ejad-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="ejad-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="ejad-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.ejad-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.ejad-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="ejad-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
