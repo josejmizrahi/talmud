@@ -12,7 +12,7 @@
       "nombre": "היה קורא",
       "titulo": "perek 2 · Hayá Koré",
       "dapim": "13a–17b",
-      "estado": "en curso"
+      "estado": "completo"
     }
   },
   "diagramas": [
@@ -1705,6 +1705,531 @@
       },
       "perek": 1,
       "nota": true
+    },
+    {
+      "slug": "kavana-del-shema",
+      "orden": 44,
+      "perek": 2,
+      "titulo": "Si dirigió su corazón",
+      "subtitulo": "mishná 2:1 · ¿las mitzvot necesitan kavaná? · hasta dónde",
+      "dapim": [
+        "13a",
+        "13b"
+      ],
+      "grupo": "La kavaná",
+      "estado": "listo",
+      "diagrama": "diagramas/kavana-del-shema.html",
+      "sabios": [
+        "r-eliezer",
+        "r-akiva",
+        "r-aja",
+        "rav-yehuda",
+        "r-yojanan",
+        "rabba-bar-bar-jana",
+        "rav-zutra",
+        "r-yoshiya"
+      ],
+      "conceptos": [
+        "kavana",
+        "mitzvot-tzrijot-kavana",
+        "kore-lehagia",
+        "shema"
+      ],
+      "puente_desde": {
+        "tipo": "apertura-de-perek",
+        "texto": "El hadran cerró Meeimatai con los nombres agrandados de los\navot. El perek 2 abre con una escena nueva: הָיָה קוֹרֵא\nבַּתּוֹרָה וְהִגִּיעַ זְמַן הַמִּקְרָא — alguien YA está\nleyendo la Torá cuando el zman del shema lo alcanza. Si el\nperek 1 preguntó CUÁNDO se lee, el perek 2 pregunta QUÉ HACE\nque una lectura sea lectura: la kavaná. אִם כִּוֵּון לִבּוֹ\n— יָצָא.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "shema-en-cualquier-idioma",
+      "orden": 45,
+      "perek": 2,
+      "titulo": "El shema en cualquier idioma",
+      "subtitulo": "Rabbi vs los jajamim · como están escritas vs como se oyen",
+      "dapim": [
+        "13a"
+      ],
+      "grupo": "La kavaná",
+      "estado": "listo",
+      "diagrama": "diagramas/shema-en-cualquier-idioma.html",
+      "sabios": [
+        "rabbi-yehuda-hanasi",
+        "jajamim"
+      ],
+      "pesukim": [
+        "devarim-6-4",
+        "devarim-6-6"
+      ],
+      "conceptos": [
+        "lashon-hakodesh",
+        "bejol-lashon",
+        "lemaprea",
+        "shema"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La misma gemará de la kavaná pasa a la lengua: los mismos dos\ntérminos del pasuk — שְׁמַע y וְהָיוּ — se reparten entre\nRabbi y los jajamim para decidir si el shema se dice solo en\nhebreo o en cualquier idioma. Cada palabra del primer verso\nes un yacimiento halájico: de ahí salen el idioma, el orden\ny la audibilidad.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "el-ejad-prolongado",
+      "orden": 46,
+      "perek": 2,
+      "titulo": "El ejad prolongado",
+      "subtitulo": "coronarlo arriba, abajo y a los cuatro vientos · el shema de Rabbi",
+      "dapim": [
+        "13b"
+      ],
+      "grupo": "La kavaná",
+      "estado": "listo",
+      "diagrama": "diagramas/el-ejad-prolongado.html",
+      "sabios": [
+        "sumajos",
+        "rav-aja-bar-yaakov",
+        "rav-ashi",
+        "r-yirmeya",
+        "r-jiya-bar-aba",
+        "r-meir",
+        "rava",
+        "rabbi-yehuda-hanasi",
+        "rav",
+        "r-jiya",
+        "rav-najman",
+        "rav-yosef",
+        "r-yehoshua-ben-levi"
+      ],
+      "conceptos": [
+        "ejad",
+        "kavana",
+        "maljut-shamayim",
+        "pasuka-kama",
+        "shema"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "Las dos sugyot anteriores excavaron las palabras del primer\nverso — shema, vehayu, hadevarim. El editor se queda ahora en\nla ÚLTIMA palabra de ese verso: אֶחָד. La fórmula שְׁמַע\nיִשְׂרָאֵל ה' אֱלֹהֵינוּ ה' אֶחָד es el hilo que encadena\ntoda la secuencia: cuánta kavaná (hasta ahí), qué idioma, y\nahora — cuánto tiempo puede durar una sola palabra.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "saludos-en-el-shema",
+      "orden": 47,
+      "perek": 2,
+      "titulo": "Saludar en medio del shema",
+      "subtitulo": "por respeto y por miedo · hallel, meguilá y el que ayuna",
+      "dapim": [
+        "13b",
+        "14a"
+      ],
+      "grupo": "El decoro de la tefilá",
+      "estado": "listo",
+      "diagrama": "diagramas/saludos-en-el-shema.html",
+      "sabios": [
+        "r-meir",
+        "rav-yehuda",
+        "r-jiya",
+        "rabba",
+        "ravina",
+        "r-ami",
+        "r-asi"
+      ],
+      "conceptos": [
+        "kavod",
+        "yira",
+        "hefsek",
+        "bein-haperakim",
+        "pirsumei-nisa",
+        "taanit"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La mishná 2:1 sigue: בַּפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד\nוּמֵשִׁיב, וּבָאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה. Tras el\nprimer verso y su kavaná absoluta, la mishná legisla el shema\ncomo espacio SOCIAL: ¿quién puede entrar en él? El saludo —\nla moneda mínima de la vida comunitaria — se pesa contra la\ncontinuidad de la declaración de fe.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "nada-antes-de-rezar",
+      "orden": 48,
+      "perek": 2,
+      "titulo": "Nada antes de la tefilá",
+      "subtitulo": "el saludo madrugador como altar · tus asuntos pueden esperar",
+      "dapim": [
+        "14a"
+      ],
+      "grupo": "El decoro de la tefilá",
+      "estado": "listo",
+      "diagrama": "diagramas/nada-antes-de-rezar.html",
+      "sabios": [
+        "rav",
+        "shmuel",
+        "rav-sheshet",
+        "r-aba",
+        "r-yona",
+        "r-zeira",
+        "rav-idi-bar-avin",
+        "r-yojanan"
+      ],
+      "pesukim": [
+        "yeshayahu-2-22",
+        "tehilim-85-14",
+        "mishlei-19-23"
+      ],
+      "conceptos": [
+        "tefila",
+        "bama",
+        "gaava",
+        "suenos",
+        "estudio-tora"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "La mishná permitió el saludo DENTRO del shema — por respeto,\npor miedo. El editor engancha con la otra cara: el saludo\nANTES de la tefilá. שְׁאִילַת שָׁלוֹם es la palabra-puente:\nRav enseña que quien saluda a su amigo antes de haber rezado\nconvirtió al amigo en una bamá — un altar prohibido. El mismo\ngesto que la mishná pesaba en gramos, aquí se vuelve\nidolatría en potencia.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "emet-sin-pausa",
+      "orden": 49,
+      "perek": 2,
+      "titulo": "Emet sin pausa",
+      "subtitulo": "Hashem Eloheijem emet · el tzitzit abreviado de Eretz Yisrael",
+      "dapim": [
+        "14a",
+        "14b"
+      ],
+      "grupo": "El decoro de la tefilá",
+      "estado": "listo",
+      "diagrama": "diagramas/emet-sin-pausa.html",
+      "sabios": [
+        "r-abahu",
+        "r-yojanan",
+        "rav-yehuda",
+        "rabba",
+        "rav-yosef",
+        "abaye",
+        "rav-papa",
+        "rav-kahana",
+        "rav",
+        "jiya-bar-rav"
+      ],
+      "pesukim": [
+        "yirmiyahu-10-10"
+      ],
+      "conceptos": [
+        "emet-veyatziv",
+        "hefsek",
+        "parashat-tzitzit",
+        "yetziat-mitzrayim",
+        "minhag-eretz-yisrael"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La gemará vuelve a la última costura de la mishná: אֵלּוּ הֵן\nבֵּין הַפְּרָקִים — y R. Yehuda que prohíbe interrumpir entre\nוַיֹּאמֶר y אֱמֶת וְיַצִּיב. R. Abahu beshem R. Yojanan fija\nla halajá como él: la palabra אֱמֶת debe quedar pegada a\nאֱלֹהֵיכֶם, porque el pasuk dice וַה' אֱלֹהִים אֱמֶת. La\ncostura geulá-tefilá del perek 1 tiene aquí su gemela en\nminiatura.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "por-que-shema-primero",
+      "orden": 50,
+      "perek": 2,
+      "titulo": "Por qué shema va primero",
+      "subtitulo": "el yugo del Reino antes que el yugo de las mitzvot",
+      "dapim": [
+        "13a",
+        "14b"
+      ],
+      "grupo": "Las tres parashiyot",
+      "estado": "listo",
+      "diagrama": "diagramas/por-que-shema-primero.html",
+      "sabios": [
+        "r-yehoshua-ben-korja",
+        "r-shimon-bar-yojai"
+      ],
+      "pesukim": [
+        "devarim-6-7"
+      ],
+      "conceptos": [
+        "ol-maljut-shamayim",
+        "ol-mitzvot",
+        "shema",
+        "parashat-tzitzit",
+        "lilmod-lelamed-laasot"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La mishná 2:1 cerró con la pregunta estructural: לָמָּה\nקָדְמָה פָּרָשַׁת שְׁמַע — ¿por qué las parashiyot del shema\nse recitan en un orden que NO es el de la Torá? La gemará en\n14b la retoma con la baraita de R. Shimon bar Yojai. Tras\nlas costuras (emet sin pausa), el editor examina el orden\nmismo de los bloques cosidos.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "yugo-completo-tefilin",
+      "orden": 51,
+      "perek": 2,
+      "titulo": "El yugo completo",
+      "subtitulo": "shema sin tefilín es testimonio falso · agua, tierra y mizbeaj",
+      "dapim": [
+        "14b",
+        "15a"
+      ],
+      "grupo": "Las tres parashiyot",
+      "estado": "listo",
+      "diagrama": "diagramas/yugo-completo-tefilin.html",
+      "sabios": [
+        "rav",
+        "ula",
+        "r-jiya-bar-aba",
+        "r-yojanan",
+        "rava",
+        "ravina",
+        "rav-jisda"
+      ],
+      "pesukim": [
+        "tehilim-26-6"
+      ],
+      "conceptos": [
+        "tefilin",
+        "ol-maljut-shamayim",
+        "maljut-shamayim-shlema",
+        "netilat-yadayim",
+        "mizbeaj"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "R. Yehoshua ben Korjá dio la fórmula — עוֹל מַלְכוּת שָׁמַיִם\nתְּחִלָּה — y el editor la persigue: Rav ordenó su mañana por\nella (lavarse, shema, tefilín, tefilá), Ula juzga con ella al\nque lee sin tefilín, y R. Yojanan la corona definiendo la\nמַלְכוּת שָׁמַיִם שְׁלֵמָה, el yugo COMPLETO. La misma fórmula\ntres veces, en escalada.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "oirse-y-pronunciar",
+      "orden": 52,
+      "perek": 2,
+      "titulo": "Oírse y pronunciar",
+      "subtitulo": "mishná 2:3 · el sordo que habla · enfriar el Guehinom",
+      "dapim": [
+        "15a",
+        "15b"
+      ],
+      "grupo": "La voz y la letra",
+      "estado": "listo",
+      "diagrama": "diagramas/oirse-y-pronunciar.html",
+      "sabios": [
+        "r-yose",
+        "rav-yehuda",
+        "r-elazar-ben-azaria",
+        "r-meir",
+        "rav-jisda",
+        "rav-yosef",
+        "r-tavi",
+        "r-yoshiya",
+        "rava",
+        "r-jama-bar-janina"
+      ],
+      "pesukim": [
+        "devarim-6-4",
+        "mishlei-30-16",
+        "tehilim-68-15"
+      ],
+      "conceptos": [
+        "lo-hishmia-leozno",
+        "dikduk-otiyot",
+        "jeresh",
+        "tjiyat-hametim",
+        "guehinom"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Mishná 2:3: הַקּוֹרֵא אֶת שְׁמַע וְלֹא הִשְׁמִיעַ לְאָזְנוֹ —\nיָצָא; רַבִּי יוֹסֵי אוֹמֵר לֹא יָצָא. Tras el orden de las\nparashiyot y el yugo completo, la mishná baja al grano de la\nvoz: ¿el shema debe OÍRSE? ¿debe PRONUNCIARSE letra por\nletra? La palabra שמע, una vez más, es el campo de batalla.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "errores-y-regresos",
+      "orden": 53,
+      "perek": 2,
+      "titulo": "El que se equivoca, vuelve",
+      "subtitulo": "escritura íntegra · a dónde regresar · la jupá de R. Elazar",
+      "dapim": [
+        "15b",
+        "16a"
+      ],
+      "grupo": "La voz y la letra",
+      "estado": "listo",
+      "diagrama": "diagramas/errores-y-regresos.html",
+      "sabios": [
+        "rav-oshaya",
+        "rava",
+        "rav-ovadia",
+        "r-jama-bar-janina",
+        "r-ami",
+        "r-asi",
+        "r-elazar",
+        "r-yojanan"
+      ],
+      "pesukim": [
+        "devarim-6-9",
+        "devarim-11-19",
+        "bamidbar-24-6"
+      ],
+      "conceptos": [
+        "ktav-tam",
+        "mezuza",
+        "kara-vetaa",
+        "estudio-tora",
+        "tahara"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "La sugyá del dikduk celebró la palabra bien separada. El\neditor encadena con la letra bien ESCRITA: וּכְתַבְתָּם —\nכְּתָב תָּם, escritura íntegra. De la boca que pronuncia\ncompleto a la mano que escribe completo — y de ahí al que se\nequivoca leyendo y necesita saber a dónde volver. La raíz\nתם (íntegro/completo) es el hilo.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "obreros-en-el-arbol",
+      "orden": 54,
+      "perek": 2,
+      "titulo": "El shema en la copa del árbol",
+      "subtitulo": "mishná 2:4 · los obreros rezan donde trabajan",
+      "dapim": [
+        "16a"
+      ],
+      "grupo": "El shema en el mundo",
+      "estado": "listo",
+      "diagrama": "diagramas/obreros-en-el-arbol.html",
+      "sabios": [
+        "rav-mari",
+        "rava",
+        "rav-sheshet",
+        "rabban-gamliel",
+        "r-yehoshua"
+      ],
+      "conceptos": [
+        "umanin",
+        "kavana",
+        "tefila",
+        "meein-shmone-esre",
+        "birkat-hamazon"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Mishná 2:4: הָאוּמָּנִין קוֹרִין בְּרֹאשׁ הָאִילָן וּבְרֹאשׁ\nהַנִּדְבָּךְ. Tras la voz y la letra, la mishná saca el shema\ndel beit midrash y lo sube a un andamio: los obreros lo\nrecitan en la copa del árbol, en la hilera del muro en\nconstrucción — lo que NO pueden hacer con la tefilá. La\nkavaná recién legislada se mide ahora contra el mundo del\ntrabajo.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "rabban-gamliel-excepciones",
+      "orden": 55,
+      "perek": 2,
+      "titulo": "Las tres excepciones de Rabban Gamliel",
+      "subtitulo": "leyó, se bañó, aceptó consuelos · Tavi el esclavo",
+      "dapim": [
+        "16a",
+        "16b",
+        "17b"
+      ],
+      "grupo": "El shema en el mundo",
+      "estado": "listo",
+      "diagrama": "diagramas/rabban-gamliel-excepciones.html",
+      "sabios": [
+        "rabban-gamliel",
+        "rabban-shimon-ben-gamliel",
+        "r-eliezer",
+        "r-yose",
+        "r-yojanan",
+        "rav-shisha"
+      ],
+      "conceptos": [
+        "jatan",
+        "ol-maljut-shamayim",
+        "avelut",
+        "istenis",
+        "tavi",
+        "yuhara"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "La mishná 2:5 retoma al jatan del perek 1 (exento del shema\nla primera noche) — y lo estrella contra un maestro: מַעֲשֶׂה\nבְּרַבָּן גַּמְלִיאֵל שֶׁנָּשָׂא אִשָּׁה וְקָרָא לַיְלָה\nהָרִאשׁוֹנָה. Rabban Gamliel hace exactamente lo que su\npropia enseñanza exime. Tres mishnayot seguidas lo muestran\ndesobedeciéndose a sí mismo — y explicándose.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "tefilot-de-los-sabios",
+      "orden": 56,
+      "perek": 2,
+      "titulo": "Las tefilot personales de los sabios",
+      "subtitulo": "lo que cada uno decía al terminar la amidá",
+      "dapim": [
+        "16b",
+        "17a"
+      ],
+      "grupo": "Las tefilot personales",
+      "estado": "listo",
+      "diagrama": "diagramas/tefilot-de-los-sabios.html",
+      "sabios": [
+        "r-elazar",
+        "r-yojanan",
+        "r-zeira",
+        "r-jiya",
+        "rav",
+        "rabbi-yehuda-hanasi",
+        "rav-safra",
+        "r-alexandri",
+        "rava",
+        "mar-bar-ravina",
+        "rav-sheshet",
+        "rav-hamnuna"
+      ],
+      "conceptos": [
+        "tefila",
+        "yetzer-hara",
+        "shibud-maljuyot",
+        "vidui",
+        "taanit"
+      ],
+      "puente_desde": {
+        "tipo": "mismo-orador",
+        "texto": "R. Elazar acaba de enseñar (16b): כֵּן אֲבָרֶכְךָ בְחַיָּי —\nesto es el shema; בְּשִׁמְךָ אֶשָּׂא כַפָּי — esto es la\ntefilá. Y el editor pregunta en silencio: ¿y DESPUÉS de la\ntefilá, qué? La respuesta es una galería: la tefilá personal\nque cada sabio agregaba al terminar la amidá — empezando por\nel mismo R. Elazar. El orador del puente abre la colección.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "dichos-y-despedidas",
+      "orden": 57,
+      "perek": 2,
+      "titulo": "Dichos de los sabios y el hadran",
+      "subtitulo": "uno que hace mucho y uno que hace poco · las coronas de los tzadikim",
+      "dapim": [
+        "17a",
+        "17b"
+      ],
+      "grupo": "Las tefilot personales",
+      "estado": "listo",
+      "diagrama": "diagramas/dichos-y-despedidas.html",
+      "sabios": [
+        "r-meir",
+        "r-yojanan",
+        "abaye",
+        "rava",
+        "rav",
+        "rav-yehuda",
+        "rav-ashi",
+        "r-yojanan-ben-zakai",
+        "janina-ben-dosa"
+      ],
+      "conceptos": [
+        "marglot",
+        "olam-haba",
+        "teshuva",
+        "estudio-tora",
+        "shalom",
+        "hadran"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "De las tefilot que cada sabio decía tras la amidá, el editor\npasa a la fórmula gemela: מַרְגְּלָא בְּפוּמֵּיהּ — \"era\nperla en su boca\": el dicho habitual de cada maestro. La\ncolección continúa con el mismo molde (nombre + su texto\nfijo) y desemboca en las despedidas del beit midrash y el\nhadran del perek.\n"
+      },
+      "nota": true
     }
   ],
   "sabios": [
@@ -1895,12 +2420,80 @@
       "nombre": "R Yehoshua Ben Levi"
     },
     {
-      "slug": "rabba-bar-jinnana-sava",
-      "nombre": "Rabba Bar Jinnana Sava"
+      "slug": "rav-ashi",
+      "nombre": "Rav Ashi"
+    },
+    {
+      "slug": "r-yojanan-ben-zakai",
+      "nombre": "R Yojanan Ben Zakai"
+    },
+    {
+      "slug": "janina-ben-dosa",
+      "nombre": "Janina Ben Dosa"
+    },
+    {
+      "slug": "sumajos",
+      "nombre": "Sumajos"
+    },
+    {
+      "slug": "rav-aja-bar-yaakov",
+      "nombre": "Rav Aja Bar Yaakov"
+    },
+    {
+      "slug": "r-yirmeya",
+      "nombre": "R Yirmeya"
+    },
+    {
+      "slug": "r-jiya-bar-aba",
+      "nombre": "R Jiya Bar Aba"
+    },
+    {
+      "slug": "r-jiya",
+      "nombre": "R Jiya"
+    },
+    {
+      "slug": "rav-najman",
+      "nombre": "Rav Najman"
+    },
+    {
+      "slug": "rabba",
+      "nombre": "Rabba"
+    },
+    {
+      "slug": "rav-papa",
+      "nombre": "Rav Papa"
+    },
+    {
+      "slug": "rav-kahana",
+      "nombre": "Rav Kahana"
     },
     {
       "slug": "jiya-bar-rav",
       "nombre": "Jiya Bar Rav"
+    },
+    {
+      "slug": "rabba-bar-jinnana-sava",
+      "nombre": "Rabba Bar Jinnana Sava"
+    },
+    {
+      "slug": "rav-oshaya",
+      "nombre": "Rav Oshaya"
+    },
+    {
+      "slug": "rav-ovadia",
+      "nombre": "Rav Ovadia"
+    },
+    {
+      "slug": "r-jama-bar-janina",
+      "nombre": "R Jama Bar Janina"
+    },
+    {
+      "slug": "r-ami",
+      "nombre": "R Ami"
+    },
+    {
+      "slug": "r-asi",
+      "nombre": "R Asi"
     },
     {
       "slug": "rav-yitzjak",
@@ -1921,10 +2514,6 @@
     {
       "slug": "rav-sheshet",
       "nombre": "Rav Sheshet"
-    },
-    {
-      "slug": "rabba",
-      "nombre": "Rabba"
     },
     {
       "slug": "r-yose-baraita",
@@ -1951,6 +2540,22 @@
       "nombre": "R Yose Ben Zimra"
     },
     {
+      "slug": "r-aja",
+      "nombre": "R Aja"
+    },
+    {
+      "slug": "rabba-bar-bar-jana",
+      "nombre": "Rabba Bar Bar Jana"
+    },
+    {
+      "slug": "rav-zutra",
+      "nombre": "Rav Zutra"
+    },
+    {
+      "slug": "r-yoshiya",
+      "nombre": "R Yoshiya"
+    },
+    {
       "slug": "aba-binyamin",
       "nombre": "Aba Binyamin"
     },
@@ -1963,16 +2568,20 @@
       "nombre": "Tana Devei R Yishmael"
     },
     {
-      "slug": "rav-oshaya",
-      "nombre": "Rav Oshaya"
+      "slug": "r-aba",
+      "nombre": "R Aba"
+    },
+    {
+      "slug": "r-yona",
+      "nombre": "R Yona"
     },
     {
       "slug": "r-zeira",
       "nombre": "R Zeira"
     },
     {
-      "slug": "rav-ashi",
-      "nombre": "Rav Ashi"
+      "slug": "rav-idi-bar-avin",
+      "nombre": "Rav Idi Bar Avin"
     },
     {
       "slug": "rav-aja-bar-bizna",
@@ -1983,28 +2592,40 @@
       "nombre": "R Shimon Jasida"
     },
     {
-      "slug": "r-tarfon",
-      "nombre": "R Tarfon"
+      "slug": "rav-mari",
+      "nombre": "Rav Mari"
     },
     {
-      "slug": "rav-papa",
-      "nombre": "Rav Papa"
+      "slug": "r-tavi",
+      "nombre": "R Tavi"
+    },
+    {
+      "slug": "r-yehoshua-ben-korja",
+      "nombre": "R Yehoshua Ben Korja"
+    },
+    {
+      "slug": "r-tarfon",
+      "nombre": "R Tarfon"
     },
     {
       "slug": "rav-yejezkel",
       "nombre": "Rav Yejezkel"
     },
     {
-      "slug": "r-ami",
-      "nombre": "R Ami"
+      "slug": "rabban-shimon-ben-gamliel",
+      "nombre": "Rabban Shimon Ben Gamliel"
+    },
+    {
+      "slug": "rav-shisha",
+      "nombre": "Rav Shisha"
+    },
+    {
+      "slug": "ravina",
+      "nombre": "Ravina"
     },
     {
       "slug": "r-zera",
       "nombre": "R Zera"
-    },
-    {
-      "slug": "r-asi",
-      "nombre": "R Asi"
     },
     {
       "slug": "r-yose-bar-janina",
@@ -2019,16 +2640,24 @@
       "nombre": "R Natan"
     },
     {
-      "slug": "rabba-bar-bar-jana",
-      "nombre": "Rabba Bar Bar Jana"
-    },
-    {
       "slug": "ameimar",
       "nombre": "Ameimar"
     },
     {
       "slug": "r-jelbo",
       "nombre": "R Jelbo"
+    },
+    {
+      "slug": "rav-safra",
+      "nombre": "Rav Safra"
+    },
+    {
+      "slug": "r-alexandri",
+      "nombre": "R Alexandri"
+    },
+    {
+      "slug": "mar-bar-ravina",
+      "nombre": "Mar Bar Ravina"
     },
     {
       "slug": "tanu-rabanan",
@@ -2053,10 +2682,6 @@
     {
       "slug": "rav-yitzjak-bar-shmuel",
       "nombre": "Rav Yitzjak Bar Shmuel"
-    },
-    {
-      "slug": "r-jiya-bar-aba",
-      "nombre": "R Jiya Bar Aba"
     },
     {
       "slug": "r-janina",
@@ -2261,6 +2886,10 @@
       "nombre": "Shmuel Ii 12 11"
     },
     {
+      "slug": "yirmiyahu-10-10",
+      "nombre": "Yirmiyahu 10 10"
+    },
+    {
       "slug": "tehilim-92-3",
       "nombre": "Tehilim 92 3"
     },
@@ -2271,6 +2900,18 @@
     {
       "slug": "malaji-2-5",
       "nombre": "Malaji 2 5"
+    },
+    {
+      "slug": "devarim-6-9",
+      "nombre": "Devarim 6 9"
+    },
+    {
+      "slug": "devarim-11-19",
+      "nombre": "Devarim 11 19"
+    },
+    {
+      "slug": "bamidbar-24-6",
+      "nombre": "Bamidbar 24 6"
     },
     {
       "slug": "tehilim-4-5",
@@ -2365,6 +3006,18 @@
       "nombre": "Shemot 33 19"
     },
     {
+      "slug": "yeshayahu-2-22",
+      "nombre": "Yeshayahu 2 22"
+    },
+    {
+      "slug": "tehilim-85-14",
+      "nombre": "Tehilim 85 14"
+    },
+    {
+      "slug": "mishlei-19-23",
+      "nombre": "Mishlei 19 23"
+    },
+    {
       "slug": "tehilim-119-147",
       "nombre": "Tehilim 119 147"
     },
@@ -2375,6 +3028,18 @@
     {
       "slug": "shemot-11-4",
       "nombre": "Shemot 11 4"
+    },
+    {
+      "slug": "devarim-6-4",
+      "nombre": "Devarim 6 4"
+    },
+    {
+      "slug": "mishlei-30-16",
+      "nombre": "Mishlei 30 16"
+    },
+    {
+      "slug": "tehilim-68-15",
+      "nombre": "Tehilim 68 15"
     },
     {
       "slug": "shemot-12-8",
@@ -2427,6 +3092,10 @@
     {
       "slug": "tehilim-19-15",
       "nombre": "Tehilim 19 15"
+    },
+    {
+      "slug": "devarim-6-6",
+      "nombre": "Devarim 6 6"
     },
     {
       "slug": "melajim-ii-4-9",
@@ -2535,6 +3204,10 @@
     {
       "slug": "yirmiyahu-31-3",
       "nombre": "Yirmiyahu 31 3"
+    },
+    {
+      "slug": "tehilim-26-6",
+      "nombre": "Tehilim 26 6"
     }
   ],
   "conceptos": [
@@ -2786,12 +3459,44 @@
       "nombre": "Mizmor Vs Kina"
     },
     {
-      "slug": "hakol-holej-ajar-hajitum",
-      "nombre": "Hakol Holej Ajar Hajitum"
+      "slug": "marglot",
+      "nombre": "Marglot"
+    },
+    {
+      "slug": "shalom",
+      "nombre": "Shalom"
+    },
+    {
+      "slug": "ejad",
+      "nombre": "Ejad"
+    },
+    {
+      "slug": "kavana",
+      "nombre": "Kavana"
+    },
+    {
+      "slug": "maljut-shamayim",
+      "nombre": "Maljut Shamayim"
+    },
+    {
+      "slug": "pasuka-kama",
+      "nombre": "Pasuka Kama"
     },
     {
       "slug": "emet-veyatziv",
       "nombre": "Emet Veyatziv"
+    },
+    {
+      "slug": "hefsek",
+      "nombre": "Hefsek"
+    },
+    {
+      "slug": "minhag-eretz-yisrael",
+      "nombre": "Minhag Eretz Yisrael"
+    },
+    {
+      "slug": "hakol-holej-ajar-hajitum",
+      "nombre": "Hakol Holej Ajar Hajitum"
     },
     {
       "slug": "emet-veemuna",
@@ -2808,6 +3513,22 @@
     {
       "slug": "jesed-y-emuna",
       "nombre": "Jesed Y Emuna"
+    },
+    {
+      "slug": "ktav-tam",
+      "nombre": "Ktav Tam"
+    },
+    {
+      "slug": "mezuza",
+      "nombre": "Mezuza"
+    },
+    {
+      "slug": "kara-vetaa",
+      "nombre": "Kara Vetaa"
+    },
+    {
+      "slug": "tahara",
+      "nombre": "Tahara"
     },
     {
       "slug": "keriat-shema-al-hamita",
@@ -2866,10 +3587,6 @@
       "nombre": "Aseret Yemei Teshuva"
     },
     {
-      "slug": "maljut-shamayim",
-      "nombre": "Maljut Shamayim"
-    },
-    {
       "slug": "tefilin-shel-hkbh",
       "nombre": "Tefilin Shel Hkbh"
     },
@@ -2922,6 +3639,14 @@
       "nombre": "Lulei"
     },
     {
+      "slug": "mitzvot-tzrijot-kavana",
+      "nombre": "Mitzvot Tzrijot Kavana"
+    },
+    {
+      "slug": "kore-lehagia",
+      "nombre": "Kore Lehagia"
+    },
+    {
       "slug": "invisibilidad-como-misericordia",
       "nombre": "Invisibilidad Como Misericordia"
     },
@@ -2950,6 +3675,18 @@
       "nombre": "Dios Mistery"
     },
     {
+      "slug": "bama",
+      "nombre": "Bama"
+    },
+    {
+      "slug": "gaava",
+      "nombre": "Gaava"
+    },
+    {
+      "slug": "suenos",
+      "nombre": "Suenos"
+    },
+    {
       "slug": "arpa-de-david",
       "nombre": "Arpa De David"
     },
@@ -2966,6 +3703,38 @@
       "nombre": "Knor Shel David"
     },
     {
+      "slug": "umanin",
+      "nombre": "Umanin"
+    },
+    {
+      "slug": "meein-shmone-esre",
+      "nombre": "Meein Shmone Esre"
+    },
+    {
+      "slug": "birkat-hamazon",
+      "nombre": "Birkat Hamazon"
+    },
+    {
+      "slug": "lo-hishmia-leozno",
+      "nombre": "Lo Hishmia Leozno"
+    },
+    {
+      "slug": "dikduk-otiyot",
+      "nombre": "Dikduk Otiyot"
+    },
+    {
+      "slug": "jeresh",
+      "nombre": "Jeresh"
+    },
+    {
+      "slug": "tjiyat-hametim",
+      "nombre": "Tjiyat Hametim"
+    },
+    {
+      "slug": "guehinom",
+      "nombre": "Guehinom"
+    },
+    {
       "slug": "korban-pesaj",
       "nombre": "Korban Pesaj"
     },
@@ -2980,6 +3749,14 @@
     {
       "slug": "makat-bechorot",
       "nombre": "Makat Bechorot"
+    },
+    {
+      "slug": "ol-maljut-shamayim",
+      "nombre": "Ol Maljut Shamayim"
+    },
+    {
+      "slug": "lilmod-lelamed-laasot",
+      "nombre": "Lilmod Lelamed Laasot"
     },
     {
       "slug": "beit-hillel",
@@ -3046,6 +3823,26 @@
       "nombre": "Tefilá Ketzará"
     },
     {
+      "slug": "jatan",
+      "nombre": "Jatan"
+    },
+    {
+      "slug": "avelut",
+      "nombre": "Avelut"
+    },
+    {
+      "slug": "istenis",
+      "nombre": "Istenis"
+    },
+    {
+      "slug": "tavi",
+      "nombre": "Tavi"
+    },
+    {
+      "slug": "yuhara",
+      "nombre": "Yuhara"
+    },
+    {
       "slug": "rejush-gadol",
       "nombre": "Rejush Gadol"
     },
@@ -3062,12 +3859,28 @@
       "nombre": "Maase Jeshafim"
     },
     {
-      "slug": "hashkiveinu",
-      "nombre": "Hashkiveinu"
+      "slug": "kavod",
+      "nombre": "Kavod"
     },
     {
-      "slug": "hefsek",
-      "nombre": "Hefsek"
+      "slug": "yira",
+      "nombre": "Yira"
+    },
+    {
+      "slug": "bein-haperakim",
+      "nombre": "Bein Haperakim"
+    },
+    {
+      "slug": "pirsumei-nisa",
+      "nombre": "Pirsumei Nisa"
+    },
+    {
+      "slug": "taanit",
+      "nombre": "Taanit"
+    },
+    {
+      "slug": "hashkiveinu",
+      "nombre": "Hashkiveinu"
     },
     {
       "slug": "boundary-times",
@@ -3076,6 +3889,18 @@
     {
       "slug": "tichdic-tov",
       "nombre": "Tichdic Tov"
+    },
+    {
+      "slug": "lashon-hakodesh",
+      "nombre": "Lashon Hakodesh"
+    },
+    {
+      "slug": "bejol-lashon",
+      "nombre": "Bejol Lashon"
+    },
+    {
+      "slug": "lemaprea",
+      "nombre": "Lemaprea"
     },
     {
       "slug": "hajnasat-orjim",
@@ -3114,10 +3939,6 @@
       "nombre": "Kavanat Raglayim"
     },
     {
-      "slug": "gaava",
-      "nombre": "Gaava"
-    },
-    {
       "slug": "mejitzá",
       "nombre": "Mejitzá"
     },
@@ -3128,6 +3949,10 @@
     {
       "slug": "banim-zecharim",
       "nombre": "Banim Zecharim"
+    },
+    {
+      "slug": "vidui",
+      "nombre": "Vidui"
     },
     {
       "slug": "dialectica-talmudica",
@@ -3208,6 +4033,22 @@
     {
       "slug": "lishana-mealya",
       "nombre": "Lishana Mealya"
+    },
+    {
+      "slug": "tefilin",
+      "nombre": "Tefilin"
+    },
+    {
+      "slug": "maljut-shamayim-shlema",
+      "nombre": "Maljut Shamayim Shlema"
+    },
+    {
+      "slug": "netilat-yadayim",
+      "nombre": "Netilat Yadayim"
+    },
+    {
+      "slug": "mizbeaj",
+      "nombre": "Mizbeaj"
     },
     {
       "slug": "zman-shema",
@@ -3572,6 +4413,118 @@
       "peso": 3
     },
     {
+      "from": "avram-es-avraham",
+      "to": "kavana-del-shema",
+      "categoria": "editorial",
+      "tipo": "apertura-de-perek",
+      "texto": "El hadran cerró Meeimatai con los nombres agrandados de los\navot. El perek 2 abre con una escena nueva: הָיָה קוֹרֵא\nבַּתּוֹרָה וְהִגִּיעַ זְמַן הַמִּקְרָא — alguien YA está\nleyendo la Torá cuando el zman del shema lo alcanza. Si el\nperek 1 preguntó CUÁNDO se lee, el perek 2 pregunta QUÉ HACE\nque una lectura sea lectura: la kavaná. אִם כִּוֵּון לִבּוֹ\n— יָצָא.\n",
+      "peso": 3
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La misma gemará de la kavaná pasa a la lengua: los mismos dos\ntérminos del pasuk — שְׁמַע y וְהָיוּ — se reparten entre\nRabbi y los jajamim para decidir si el shema se dice solo en\nhebreo o en cualquier idioma. Cada palabra del primer verso\nes un yacimiento halájico: de ahí salen el idioma, el orden\ny la audibilidad.\n",
+      "peso": 3
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "el-ejad-prolongado",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "Las dos sugyot anteriores excavaron las palabras del primer\nverso — shema, vehayu, hadevarim. El editor se queda ahora en\nla ÚLTIMA palabra de ese verso: אֶחָד. La fórmula שְׁמַע\nיִשְׂרָאֵל ה' אֱלֹהֵינוּ ה' אֶחָד es el hilo que encadena\ntoda la secuencia: cuánta kavaná (hasta ahí), qué idioma, y\nahora — cuánto tiempo puede durar una sola palabra.\n",
+      "peso": 3
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "saludos-en-el-shema",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La mishná 2:1 sigue: בַּפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד\nוּמֵשִׁיב, וּבָאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה. Tras el\nprimer verso y su kavaná absoluta, la mishná legisla el shema\ncomo espacio SOCIAL: ¿quién puede entrar en él? El saludo —\nla moneda mínima de la vida comunitaria — se pesa contra la\ncontinuidad de la declaración de fe.\n",
+      "peso": 3
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "nada-antes-de-rezar",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "La mishná permitió el saludo DENTRO del shema — por respeto,\npor miedo. El editor engancha con la otra cara: el saludo\nANTES de la tefilá. שְׁאִילַת שָׁלוֹם es la palabra-puente:\nRav enseña que quien saluda a su amigo antes de haber rezado\nconvirtió al amigo en una bamá — un altar prohibido. El mismo\ngesto que la mishná pesaba en gramos, aquí se vuelve\nidolatría en potencia.\n",
+      "peso": 3
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "emet-sin-pausa",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La gemará vuelve a la última costura de la mishná: אֵלּוּ הֵן\nבֵּין הַפְּרָקִים — y R. Yehuda que prohíbe interrumpir entre\nוַיֹּאמֶר y אֱמֶת וְיַצִּיב. R. Abahu beshem R. Yojanan fija\nla halajá como él: la palabra אֱמֶת debe quedar pegada a\nאֱלֹהֵיכֶם, porque el pasuk dice וַה' אֱלֹהִים אֱמֶת. La\ncostura geulá-tefilá del perek 1 tiene aquí su gemela en\nminiatura.\n",
+      "peso": 3
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "por-que-shema-primero",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La mishná 2:1 cerró con la pregunta estructural: לָמָּה\nקָדְמָה פָּרָשַׁת שְׁמַע — ¿por qué las parashiyot del shema\nse recitan en un orden que NO es el de la Torá? La gemará en\n14b la retoma con la baraita de R. Shimon bar Yojai. Tras\nlas costuras (emet sin pausa), el editor examina el orden\nmismo de los bloques cosidos.\n",
+      "peso": 3
+    },
+    {
+      "from": "por-que-shema-primero",
+      "to": "yugo-completo-tefilin",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "R. Yehoshua ben Korjá dio la fórmula — עוֹל מַלְכוּת שָׁמַיִם\nתְּחִלָּה — y el editor la persigue: Rav ordenó su mañana por\nella (lavarse, shema, tefilín, tefilá), Ula juzga con ella al\nque lee sin tefilín, y R. Yojanan la corona definiendo la\nמַלְכוּת שָׁמַיִם שְׁלֵמָה, el yugo COMPLETO. La misma fórmula\ntres veces, en escalada.\n",
+      "peso": 3
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "oirse-y-pronunciar",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Mishná 2:3: הַקּוֹרֵא אֶת שְׁמַע וְלֹא הִשְׁמִיעַ לְאָזְנוֹ —\nיָצָא; רַבִּי יוֹסֵי אוֹמֵר לֹא יָצָא. Tras el orden de las\nparashiyot y el yugo completo, la mishná baja al grano de la\nvoz: ¿el shema debe OÍRSE? ¿debe PRONUNCIARSE letra por\nletra? La palabra שמע, una vez más, es el campo de batalla.\n",
+      "peso": 3
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "errores-y-regresos",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "La sugyá del dikduk celebró la palabra bien separada. El\neditor encadena con la letra bien ESCRITA: וּכְתַבְתָּם —\nכְּתָב תָּם, escritura íntegra. De la boca que pronuncia\ncompleto a la mano que escribe completo — y de ahí al que se\nequivoca leyendo y necesita saber a dónde volver. La raíz\nתם (íntegro/completo) es el hilo.\n",
+      "peso": 3
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "obreros-en-el-arbol",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Mishná 2:4: הָאוּמָּנִין קוֹרִין בְּרֹאשׁ הָאִילָן וּבְרֹאשׁ\nהַנִּדְבָּךְ. Tras la voz y la letra, la mishná saca el shema\ndel beit midrash y lo sube a un andamio: los obreros lo\nrecitan en la copa del árbol, en la hilera del muro en\nconstrucción — lo que NO pueden hacer con la tefilá. La\nkavaná recién legislada se mide ahora contra el mundo del\ntrabajo.\n",
+      "peso": 3
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "La mishná 2:5 retoma al jatan del perek 1 (exento del shema\nla primera noche) — y lo estrella contra un maestro: מַעֲשֶׂה\nבְּרַבָּן גַּמְלִיאֵל שֶׁנָּשָׂא אִשָּׁה וְקָרָא לַיְלָה\nהָרִאשׁוֹנָה. Rabban Gamliel hace exactamente lo que su\npropia enseñanza exime. Tres mishnayot seguidas lo muestran\ndesobedeciéndose a sí mismo — y explicándose.\n",
+      "peso": 3
+    },
+    {
+      "from": "rabban-gamliel-excepciones",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "editorial",
+      "tipo": "mismo-orador",
+      "texto": "R. Elazar acaba de enseñar (16b): כֵּן אֲבָרֶכְךָ בְחַיָּי —\nesto es el shema; בְּשִׁמְךָ אֶשָּׂא כַפָּי — esto es la\ntefilá. Y el editor pregunta en silencio: ¿y DESPUÉS de la\ntefilá, qué? La respuesta es una galería: la tefilá personal\nque cada sabio agregaba al terminar la amidá — empezando por\nel mismo R. Elazar. El orador del puente abre la colección.\n",
+      "peso": 3
+    },
+    {
+      "from": "tefilot-de-los-sabios",
+      "to": "dichos-y-despedidas",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "De las tefilot que cada sabio decía tras la amidá, el editor\npasa a la fórmula gemela: מַרְגְּלָא בְּפוּמֵּיהּ — \"era\nperla en su boca\": el dicho habitual de cada maestro. La\ncolección continúa con el mismo molde (nombre + su texto\nfijo) y desemboca en las despedidas del beit midrash y el\nhadran del perek.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -3708,6 +4661,86 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-arvit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "jajamim",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
       "from": "vigilias-noche",
       "to": "r-yose-ruina",
       "categoria": "co-referencia",
@@ -3820,6 +4853,70 @@
       "peso": 1
     },
     {
+      "from": "vigilias-noche",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "vigilias-noche",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
       "from": "r-yose-ruina",
       "to": "tres-razones-ruina",
       "categoria": "co-referencia",
@@ -3841,6 +4938,22 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "bat-kol",
+      "peso": 1
+    },
+    {
+      "from": "r-yose-ruina",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "r-yose-ruina",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
       "peso": 1
     },
     {
@@ -3980,6 +5093,102 @@
       "peso": 1
     },
     {
+      "from": "noche-de-david",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-oshaya",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "noche-de-david",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
       "from": "gobierno-tripartito",
       "to": "david-chasid",
       "categoria": "co-referencia",
@@ -4020,6 +5229,30 @@
       "peso": 1
     },
     {
+      "from": "gobierno-tripartito",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
       "from": "david-chasid",
       "to": "semijat-geula-tefila",
       "categoria": "co-referencia",
@@ -4049,6 +5282,14 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "vergueza-halajica",
+      "peso": 1
+    },
+    {
+      "from": "david-chasid",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
       "peso": 1
     },
     {
@@ -4252,6 +5493,78 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "miedo-al-pecado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "cerca-y-trabajador",
       "to": "akiva-medos-gamliel-persas",
       "categoria": "co-referencia",
@@ -4350,6 +5663,54 @@
     {
       "from": "cerca-y-trabajador",
       "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "rabban-gamliel-excepciones",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-eliezer",
@@ -4620,6 +5981,158 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-asi",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-asi",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -4772,6 +6285,78 @@
       "peso": 1
     },
     {
+      "from": "ashrei-olam-haba",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "escala-angeles",
       "to": "escalera-yetzer",
       "categoria": "co-referencia",
@@ -4825,6 +6410,30 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "escala-angeles",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
       "peso": 1
     },
     {
@@ -4889,6 +6498,38 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetzer-hara",
+      "peso": 1
+    },
+    {
+      "from": "escalera-yetzer",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
       "peso": 1
     },
     {
@@ -5148,6 +6789,166 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya-bar-aba",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya-bar-aba",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
       "from": "tres-regalos",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -5174,6 +6975,22 @@
     {
       "from": "tres-regalos",
       "to": "jizkiyahu-espada-cuello",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
+      "from": "tres-regalos",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "tres-regalos",
+      "to": "dichos-y-despedidas",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "olam-haba",
@@ -5252,6 +7069,30 @@
       "peso": 1
     },
     {
+      "from": "tefila-y-cama",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
       "from": "mazikin-invisibles",
       "to": "beit-knesset",
       "categoria": "co-referencia",
@@ -5326,6 +7167,78 @@
     {
       "from": "mazikin-invisibles",
       "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "dichos-y-despedidas",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rava",
@@ -5652,6 +7565,190 @@
       "peso": 1
     },
     {
+      "from": "beit-knesset",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
       "from": "hkbh-reza-tefilin",
       "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
@@ -5844,6 +7941,118 @@
       "peso": 1
     },
     {
+      "from": "hkbh-reza-tefilin",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "moshe-tres-cosas",
       "to": "david-y-avshalom",
       "categoria": "co-referencia",
@@ -5950,6 +8159,102 @@
     {
       "from": "moshe-tres-cosas",
       "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "dichos-y-despedidas",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -6140,6 +8445,118 @@
       "peso": 1
     },
     {
+      "from": "david-y-avshalom",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "provocar-rashaim",
       "to": "zman-shema-shajarit",
       "categoria": "co-referencia",
@@ -6276,6 +8693,118 @@
       "peso": 1
     },
     {
+      "from": "provocar-rashaim",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "akiva-medos-gamliel-persas",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -6313,6 +8842,30 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "tzniut",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "akiva-medos-gamliel-persas",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
       "peso": 1
     },
     {
@@ -6364,6 +8917,70 @@
       "peso": 1
     },
     {
+      "from": "shema-dos-veces",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "shema-dos-veces",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
       "from": "pesaj-y-zman-shema",
       "to": "zman-shema-shajarit",
       "categoria": "co-referencia",
@@ -6390,6 +9007,22 @@
     {
       "from": "pesaj-y-zman-shema",
       "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "oirse-y-pronunciar",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-elazar-ben-azaria",
@@ -6441,6 +9074,38 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
       "peso": 1
     },
     {
@@ -6668,6 +9333,238 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-shajarit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-akiva",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
       "from": "vatikin-hanetz",
       "to": "beruria-biryonim-minim",
       "categoria": "co-referencia",
@@ -6796,6 +9693,166 @@
       "peso": 1
     },
     {
+      "from": "vatikin-hanetz",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "ula",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
       "from": "beruria-biryonim-minim",
       "to": "cinco-mundos-david",
       "categoria": "co-referencia",
@@ -6900,6 +9957,118 @@
       "peso": 1
     },
     {
+      "from": "beruria-biryonim-minim",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "teshuva",
+      "peso": 1
+    },
+    {
       "from": "cinco-mundos-david",
       "to": "jizkiyahu-espada-cuello",
       "categoria": "co-referencia",
@@ -6985,6 +10154,126 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-abahu",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-shimon-bar-yojai",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
       "peso": 1
     },
     {
@@ -7132,6 +10421,222 @@
       "peso": 1
     },
     {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-hamnuna",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "olam-haba",
+      "peso": 1
+    },
+    {
       "from": "shunamit-huesped",
       "to": "tefila-desde-lo-bajo",
       "categoria": "co-referencia",
@@ -7260,6 +10765,142 @@
       "peso": 1
     },
     {
+      "from": "shunamit-huesped",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "tefila-desde-lo-bajo",
       "to": "birkat-hatora",
       "categoria": "co-referencia",
@@ -7292,6 +10933,102 @@
       "peso": 1
     },
     {
+      "from": "tefila-desde-lo-bajo",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "gaava",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "postura-shema-hillel-shammai",
       "to": "hamelej-hakadosh",
       "categoria": "co-referencia",
@@ -7316,6 +11053,54 @@
       "peso": 1
     },
     {
+      "from": "postura-shema-hillel-shammai",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-papa",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
       "from": "yotzer-or-ahava-rabba",
       "to": "birkat-hatora",
       "categoria": "co-referencia",
@@ -7420,6 +11205,150 @@
       "peso": 1
     },
     {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-oshaya",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
       "from": "birkat-hatora",
       "to": "tamid-aseret-hadibrot",
       "categoria": "co-referencia",
@@ -7505,6 +11434,270 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-hamnuna",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
       "peso": 1
     },
     {
@@ -7529,6 +11722,94 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "minim",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba-bar-bar-jana",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
       "peso": 1
     },
     {
@@ -7580,6 +11861,142 @@
       "peso": 1
     },
     {
+      "from": "emet-veyatziv-jitum",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "shmuel",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "jiya-bar-rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "emet-veyatziv",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
       "from": "hamelej-hakadosh",
       "to": "verguenza-de-shaul",
       "categoria": "co-referencia",
@@ -7604,6 +12021,342 @@
       "peso": 1
     },
     {
+      "from": "hamelej-hakadosh",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "maljut-shamayim",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "teshuva",
+      "peso": 1
+    },
+    {
       "from": "balak-y-tzitzit",
       "to": "ben-zoma-noches",
       "categoria": "co-referencia",
@@ -7620,11 +12373,1187 @@
       "peso": 1
     },
     {
+      "from": "balak-y-tzitzit",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "parashat-tzitzit",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ol-mitzvot",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "parashat-tzitzit",
+      "peso": 1
+    },
+    {
       "from": "ben-zoma-noches",
       "to": "avram-es-avraham",
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "ikar-tafel",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "jajamim",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shibud-maljuyot",
+      "peso": 1
+    },
+    {
+      "from": "avram-es-avraham",
+      "to": "kavana-del-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "avram-es-avraham",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "avram-es-avraham",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hadran",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "shema-en-cualquier-idioma",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "kavana",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yoshiya",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "kavana",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "kavana-del-shema",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "el-ejad-prolongado",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-pasuk",
+      "via": "devarim-6-4",
+      "peso": 1
+    },
+    {
+      "from": "shema-en-cualquier-idioma",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "saludos-en-el-shema",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "nada-antes-de-rezar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya-bar-aba",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "kavana",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabbi-yehuda-hanasi",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "el-ejad-prolongado",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-ashi",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "hefsek",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "ravina",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-ami",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-asi",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jiya",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "taanit",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "saludos-en-el-shema",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "emet-sin-pausa",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-zeira",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "nada-antes-de-rezar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "por-que-shema-primero",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "parashat-tzitzit",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "abaye",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-sin-pausa",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "por-que-shema-primero",
+      "to": "yugo-completo-tefilin",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ol-maljut-shamayim",
+      "peso": 1
+    },
+    {
+      "from": "por-que-shema-primero",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ol-maljut-shamayim",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-jisda",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "oirse-y-pronunciar",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ol-maljut-shamayim",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yugo-completo-tefilin",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "errores-y-regresos",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-jama-bar-janina",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-meir",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "oirse-y-pronunciar",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yehuda",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "obreros-en-el-arbol",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "errores-y-regresos",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "estudio-tora",
+      "peso": 1
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "rabban-gamliel-excepciones",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabban-gamliel",
+      "peso": 1
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-sheshet",
+      "peso": 1
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "obreros-en-el-arbol",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "rabban-gamliel-excepciones",
+      "to": "tefilot-de-los-sabios",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "rabban-gamliel-excepciones",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefilot-de-los-sabios",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefilot-de-los-sabios",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "tefilot-de-los-sabios",
+      "to": "dichos-y-despedidas",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
       "peso": 1
     }
   ]

@@ -34,7 +34,7 @@ const DESCRIPCION =
 // Metadatos por perek (los temas declaran `perek:` en su frontmatter; default 1)
 const PERAKIM = {
   1: { nombre: 'מאימתי', titulo: 'perek 1 · Meeimatai', dapim: '2a–13a', estado: 'completo' },
-  2: { nombre: 'היה קורא', titulo: 'perek 2 · Hayá Koré', dapim: '13a–17b', estado: 'en curso' },
+  2: { nombre: 'היה קורא', titulo: 'perek 2 · Hayá Koré', dapim: '13a–17b', estado: 'completo' },
 };
 
 /* ---------- Lectura del vault ---------- */
