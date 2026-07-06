@@ -1,0 +1,331 @@
+<div class="antesrezar-interactivo">
+<style>
+  .antesrezar-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .antesrezar-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .antesrezar-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .antesrezar-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .antesrezar-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .antesrezar-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .antesrezar-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .antesrezar-diagrama svg { width: 100%; height: auto; display: block; }
+  .antesrezar-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .antesrezar-nodo:hover rect { stroke-width: 2 !important; }
+  .antesrezar-nodo:hover circle { stroke-width: 2.5 !important; }
+  .antesrezar-nodo.activa rect { stroke-width: 2.5 !important; }
+  .antesrezar-nodo.activa circle { stroke-width: 3 !important; }
+  .antesrezar-nodo.dim { opacity: 0.32; }
+  .antesrezar-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .antesrezar-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .antesrezar-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .antesrezar-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .antesrezar-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .antesrezar-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .antesrezar-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="antesrezar-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>la bamá · lo prohibido</span>
+  <span><span class="swatch azul"></span>los pesukim · la armonización</span>
+  <span><span class="swatch dorado"></span>la tefilá primero</span>
+  <span><span class="swatch verde"></span>la coda de los sueños</span>
+</div>
+
+<div class="antesrezar-diagrama">
+<svg viewBox="0 0 720 1010" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 14a: nada antes de la tefilá · el saludo madrugador como altar · tus asuntos pueden esperar · la coda de los sueños</title>
+
+<defs>
+  <marker id="flecha-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-ar-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-ar-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Nada antes de la tefilá · dos caminos al amanecer</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 14a · antes de dirigirte a Dios, no te dirijas a nadie más</text>
+
+<!-- ============================================================ -->
+<!-- EL AMANECER · LA CAMA Y LOS DOS CAMINOS (escena decorativa)  -->
+<!-- ============================================================ -->
+<g opacity="0.95">
+  <!-- horizonte -->
+  <line x1="120" y1="172" x2="600" y2="172" stroke="#6b4423" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <!-- sol naciente -->
+  <path d="M124,172 A26,26 0 0 1 176,172 Z" fill="rgba(184,134,11,0.25)" stroke="#b8860b" stroke-width="1.3"/>
+  <line x1="150" y1="138" x2="150" y2="126" stroke="#b8860b" stroke-width="1.2"/>
+  <line x1="126" y1="148" x2="117" y2="140" stroke="#b8860b" stroke-width="1.2"/>
+  <line x1="174" y1="148" x2="183" y2="140" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="150" y="190" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">el amanecer</text>
+  <!-- la cama -->
+  <line x1="320" y1="128" x2="320" y2="172" stroke="#3d2f23" stroke-width="1.4"/>
+  <rect x="320" y="148" width="92" height="14" rx="2" fill="rgba(107,68,35,0.10)" stroke="#3d2f23" stroke-width="1.3"/>
+  <rect x="324" y="139" width="20" height="9" rx="2" fill="rgba(107,68,35,0.14)" stroke="#3d2f23" stroke-width="1"/>
+  <line x1="326" y1="162" x2="326" y2="172" stroke="#3d2f23" stroke-width="1.3"/>
+  <line x1="406" y1="162" x2="406" y2="172" stroke="#3d2f23" stroke-width="1.3"/>
+  <text x="366" y="190" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la cama · al despertar</text>
+</g>
+
+<!-- camino rojo: hacia el amigo / los asuntos -->
+<path d="M314,158 C262,168 224,192 208,218" fill="none" stroke="#8b1a1a" stroke-width="1.6" marker-end="url(#flecha-ar-rojo)"/>
+<text x="212" y="152" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">hacia el amigo · tus asuntos</text>
+<text x="212" y="166" text-anchor="middle" font-size="9" direction="rtl" fill="#8b1a1a">אָסוּר</text>
+
+<!-- camino dorado: hacia la tefilá — baja por el margen derecho -->
+<path d="M418,152 C570,140 692,196 692,330 L692,520 C692,572 678,592 662,602" fill="none" stroke="#b8860b" stroke-width="1.6" stroke-dasharray="6,3" marker-end="url(#flecha-ar-gold)"/>
+<text x="560" y="128" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">hacia la tefilá · primero</text>
+<text x="560" y="142" text-anchor="middle" font-size="9" direction="rtl" fill="#b8860b">צֶדֶק לְפָנָיו יְהַלֵּךְ</text>
+
+<!-- ============================================================ -->
+<!-- EL SALUDO COMO ALTAR · RAV Y SHMUEL                          -->
+<!-- ============================================================ -->
+<text x="60" y="214" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL SALUDO COMO ALTAR · RAV Y SHMUEL · 14A</text>
+
+<!-- Rav -->
+<g class="antesrezar-nodo" data-id="rav">
+  <rect x="60" y="224" width="290" height="190" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="205" y="248" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Rav · el saludo como altar</text>
+  <text x="205" y="272" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">כׇּל הַנּוֹתֵן שָׁלוֹם לַחֲבֵרוֹ קוֹדֶם שֶׁיִּתְפַּלֵּל</text>
+  <text x="205" y="290" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">כְּאִילּוּ עֲשָׂאוֹ בָּמָה</text>
+  <text x="205" y="308" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«como si le hubiera hecho una bamá»</text>
+  <text x="78" y="330" font-size="9" fill="#1e3a5f" font-weight="600">el pasuk · Yeshayahu 2:22:</text>
+  <text x="205" y="348" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">חִדְלוּ לָכֶם מִן הָאָדָם אֲשֶׁר נְשָׁמָה בְּאַפּוֹ</text>
+  <text x="205" y="364" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">כִּי בַמֶּה נֶחְשָׁב הוּא · אַל תִּקְרֵי בַּמֶּה אֶלָּא בָּמָה</text>
+  <text x="78" y="384" font-size="8.5" fill="#6b4423" font-style="italic">no leas «¿en qué [es estimado]?» — lee «altar»</text>
+  <text x="78" y="400" font-size="8.5" fill="#6b4423" font-style="italic">madrugar hacia un humano = construirle un altar</text>
+</g>
+
+<!-- Shmuel -->
+<g class="antesrezar-nodo" data-id="shmuel">
+  <rect x="370" y="224" width="290" height="190" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="515" y="248" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Shmuel · la lectura directa</text>
+  <text x="515" y="278" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">בַּמֶּה חֲשַׁבְתּוֹ לָזֶה וְלֹא לָאֱלוֹהַּ</text>
+  <text x="515" y="300" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«¿en qué lo estimaste a él — y no a Dios?»</text>
+  <text x="388" y="326" font-size="9" fill="#3d2f23">sin al-tikrei: el pasuk se lee tal como está,</text>
+  <text x="388" y="342" font-size="9" fill="#3d2f23">y la pregunta בַּמֶּה ya contiene la acusación</text>
+  <text x="388" y="366" font-size="8.5" fill="#6b4423" font-style="italic">dos vías exegéticas — la misma conclusión:</text>
+  <text x="388" y="382" font-size="8.5" fill="#6b4423" font-style="italic">el saludo madrugador puso al amigo</text>
+  <text x="388" y="396" font-size="8.5" fill="#6b4423" font-style="italic">en el lugar de Dios</text>
+</g>
+
+<!-- convergencia hacia la armonización -->
+<line x1="205" y1="414" x2="205" y2="428" stroke="#3d2f23" stroke-width="1"/>
+<line x1="515" y1="414" x2="515" y2="428" stroke="#3d2f23" stroke-width="1"/>
+<line x1="205" y1="428" x2="515" y2="428" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="428" x2="360" y2="444" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-ar)"/>
+
+<!-- ============================================================ -->
+<!-- LA ARMONIZACIÓN · RAV SHESHET OBJETA · R. ABA RESUELVE       -->
+<!-- ============================================================ -->
+<g class="antesrezar-nodo" data-id="r-aba">
+  <rect x="60" y="448" width="600" height="118" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="472" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La armonización · Rav Sheshet objeta, R. Aba resuelve</text>
+  <text x="78" y="492" font-size="9.5" fill="#3d2f23">Rav Sheshet: ¡la mishná permite saludar en los perakim — מִפְּנֵי הַכָּבוֹד!</text>
+  <text x="360" y="516" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">תַּרְגְּמַהּ רַבִּי אַבָּא: בְּמַשְׁכִּים לְפִתְחוֹ</text>
+  <text x="78" y="536" font-size="9.5" fill="#3d2f23" font-style="italic">«lo tradujo R. Aba: [la prohibición es] del que madruga a su puerta»</text>
+  <text x="78" y="554" font-size="9" fill="#6b4423" font-style="italic">cruzarse por el camino es humano · peregrinar a la puerta del otro antes de rezar es culto</text>
+</g>
+
+<line x1="360" y1="566" x2="360" y2="582" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-ar)"/>
+
+<!-- ============================================================ -->
+<!-- TUS ASUNTOS PUEDEN ESPERAR · LA SEGUNDA BAMÁ                 -->
+<!-- ============================================================ -->
+<text x="60" y="596" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">TUS ASUNTOS PUEDEN ESPERAR · LA SEGUNDA BAMÁ</text>
+
+<!-- R. Yona beshem R. Zeira -->
+<g class="antesrezar-nodo" data-id="r-yona">
+  <rect x="60" y="606" width="290" height="180" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="205" y="630" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">R. Yona beshem R. Zeira</text>
+  <text x="205" y="654" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">כׇּל הָעוֹשֶׂה חֲפָצָיו קוֹדֶם שֶׁיִּתְפַּלֵּל</text>
+  <text x="205" y="672" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">כְּאִלּוּ בָּנָה בָּמָה</text>
+  <text x="205" y="690" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«quien hace sus asuntos antes de rezar —</text>
+  <text x="205" y="704" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">como si construyera una bamá»</text>
+  <text x="78" y="728" font-size="9.5" fill="#3d2f23">la autocorrección: — ¿«bamá» dijiste?</text>
+  <text x="205" y="750" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">לָא — אָסוּר קָאָמֵינָא</text>
+  <text x="205" y="770" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">«no: dije prohibido» · la tradición se corrige hacia la sobriedad</text>
+</g>
+
+<!-- Rav Idi bar Avin -->
+<g class="antesrezar-nodo" data-id="rav-idi">
+  <rect x="370" y="606" width="290" height="180" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="515" y="630" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Rav Idi bar Avin · primero el tzedek</text>
+  <text x="515" y="654" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">צֶדֶק לְפָנָיו יְהַלֵּךְ</text>
+  <text x="515" y="672" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">וְיָשֵׂם לְדֶרֶךְ פְּעָמָיו</text>
+  <text x="515" y="690" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">Tehilim 85:14 — primero el tzedek, después el camino</text>
+  <text x="388" y="714" font-size="9.5" fill="#b8860b" font-weight="600">y la promesa inversa:</text>
+  <text x="515" y="736" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b">הַקָּדוֹשׁ בָּרוּךְ הוּא עוֹשֶׂה לוֹ חֲפָצָיו</text>
+  <text x="388" y="756" font-size="9" fill="#3d2f23" font-style="italic">quien reza y DESPUÉS sale al camino —</text>
+  <text x="388" y="770" font-size="9" fill="#3d2f23" font-style="italic">HKBH le hace sus asuntos</text>
+</g>
+
+<!-- convergencia hacia la coda -->
+<line x1="205" y1="786" x2="205" y2="800" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="515" y1="786" x2="515" y2="800" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="205" y1="800" x2="515" y2="800" stroke="#2d6b4e" stroke-width="1"/>
+<line x1="360" y1="800" x2="360" y2="814" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-ar)"/>
+
+<!-- ============================================================ -->
+<!-- CODA · LOS SIETE DÍAS SIN SUEÑO                              -->
+<!-- ============================================================ -->
+<text x="60" y="828" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CODA · LA MISMA VOZ · LOS SIETE DÍAS SIN SUEÑO</text>
+
+<g class="antesrezar-nodo" data-id="coda-suenos">
+  <rect x="60" y="838" width="600" height="150" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="862" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Mishlei 19:23 — el mismo pasuk, amenaza y promesa</text>
+  <line x1="360" y1="874" x2="360" y2="966" stroke="#2d6b4e" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.6"/>
+  <!-- mitad izquierda: la amenaza -->
+  <text x="205" y="892" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">וְשָׂבֵעַ יָלִין בַּל יִפָּקֶד רָע</text>
+  <text x="205" y="910" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">אַל תִּקְרֵי שָׂבֵעַ אֶלָּא שֶׁבַע</text>
+  <text x="205" y="930" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">no leas «saciado» sino «siete»:</text>
+  <text x="205" y="944" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">siete noches sin ser visitado por un sueño</text>
+  <text x="205" y="962" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">— se llama רַע, malo</text>
+  <!-- mitad derecha: la promesa -->
+  <text x="515" y="892" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">כׇּל הַמַּשְׂבִּיעַ עַצְמוֹ מִדִּבְרֵי תוֹרָה וְלָן</text>
+  <text x="515" y="910" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">אֵין מְבַשְּׂרִין אוֹתוֹ בְּשׂוֹרוֹת רָעוֹת</text>
+  <text x="515" y="930" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">R. Yojanan: quien se acuesta saciado de Torá</text>
+  <text x="515" y="944" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">— no le anuncian malas noticias</text>
+  <text x="515" y="962" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">— la lectura como promesa</text>
+  <text x="360" y="980" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">también la noche tiene su decoro: con qué te acuestas decide qué te visita</text>
+</g>
+
+</svg>
+</div>
+
+<div class="antesrezar-panel" id="antesrezar-panel">
+  <p class="antesrezar-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'rav': {
+      titulo: 'Rav · el saludo que construye un altar',
+      hebreo: 'כׇּל הַנּוֹתֵן שָׁלוֹם לַחֲבֵרוֹ קוֹדֶם שֶׁיִּתְפַּלֵּל — כְּאִילּוּ עֲשָׂאוֹ בָּמָה',
+      traduccion: '«Quien saluda a su amigo antes de haber rezado — es como si le hubiera hecho una bamá»',
+      explicacion: 'La mishná acababa de pesar el saludo DENTRO del shema — cuándo se permite por respeto, cuándo por miedo. El editor engancha ahora la otra cara de la misma moneda: el saludo ANTES de la tefilá. שְׁאִילַת שָׁלוֹם es la palabra-puente.\n\nRav no dice que el saludo madrugador sea descortesía ni distracción. Dice algo mucho más fuerte: כְּאִילּוּ עֲשָׂאוֹ בָּמָה — «como si le hubiera hecho una bamá», un altar de los prohibidos, de los que compiten con el Templo. El amigo saludado se convierte en objeto de CULTO.\n\nEl pasuk fuente es Yeshayahu 2:22:\n\n  חִדְלוּ לָכֶם מִן הָאָדָם אֲשֶׁר נְשָׁמָה בְּאַפּוֹ · כִּי בַמֶּה נֶחְשָׁב הוּא\n  «Apartaos del hombre cuyo aliento está en su nariz — pues ¿en qué (bamé) es estimado?»\n\nY la derashá opera con la técnica de אַל תִּקְרֵי: no leas בַּמֶּה (bamé, «¿en qué?») sino בָּמָה (bamá, «altar»). Las mismas letras, otra vocalización — y la pregunta retórica se vuelve diagnóstico: el hombre al que madrugaste ES considerado un altar.\n\nLa lógica de fondo: el amanecer es el momento en que se decide la PRIMERA dirección del día. El aliento del hombre está «en su nariz» — frágil, prestado, recibido cada mañana. Dirigir el primer gesto del día hacia quien tiene el aliento prestado, antes que hacia Quien lo presta, es invertir el orden del culto. No hace falta incienso para construir un altar: basta madrugar hacia la persona equivocada.'
+    },
+    'shmuel': {
+      titulo: 'Shmuel · la lectura directa',
+      hebreo: 'בַּמֶּה חֲשַׁבְתּוֹ לָזֶה וְלֹא לָאֱלוֹהַּ',
+      traduccion: '«¿En qué lo estimaste a él — y no a Dios?»',
+      explicacion: 'Shmuel llega a la misma conclusión que Rav, pero por un camino exegético distinto — y la diferencia es instructiva.\n\nRav necesitó el אַל תִּקְרֵי: re-vocalizar בַּמֶּה como בָּמָה para extraer el altar del versículo. Shmuel lee el pasuk TAL COMO ESTÁ: בַּמֶּה נֶחְשָׁב הוּא — «¿en qué es estimado?». Y responde con su propia pregunta: בַּמֶּה חֲשַׁבְתּוֹ לָזֶה וְלֹא לָאֱלוֹהַּ — «¿en qué lo estimaste a ESTE y no a Dios?».\n\nPara Shmuel la acusación ya está en la superficie del versículo. Quien madruga hacia su amigo hizo un cálculo de estima — decidió, con los pies, a quién considera primero. El pasuk pregunta «¿en qué es estimado el hombre?» y el madrugador respondió con su conducta: «en más que Dios».\n\nLas dos vías convergen:\n\n  · Rav: el gesto CONSTRUYE algo — un altar (imagen cúltica)\n  · Shmuel: el gesto REVELA algo — una jerarquía de estima (imagen psicológica)\n\nLa guemará conserva ambas porque juntas completan el cuadro: el problema del saludo madrugador es a la vez objetivo (erige una bamá en el mundo) y subjetivo (delata dónde está el corazón). El primer movimiento de la mañana no es neutro — es una declaración teológica hecha con el cuerpo.'
+    },
+    'r-aba': {
+      titulo: 'La armonización · «el que madruga a su puerta»',
+      hebreo: 'תַּרְגְּמַהּ רַבִּי אַבָּא: בְּמַשְׁכִּים לְפִתְחוֹ',
+      traduccion: '«Lo tradujo R. Aba: [la prohibición es] del que madruga a su puerta»',
+      explicacion: 'Rav Sheshet objeta desde la mishná misma: ¡acabamos de aprender que EN LOS PERAKIM se saluda מִפְּנֵי הַכָּבוֹד, por respeto! Si la mishná permite saludar incluso en medio de las berajot del shema — ¿cómo puede Rav prohibir el saludo antes de la tefilá?\n\nR. Aba resuelve con una precisión que salva las dos fuentes: לָא אֲמַרַן אֶלָּא בְּמַשְׁכִּים לְפִתְחוֹ — la prohibición se dijo solo del que MADRUGA A LA PUERTA del otro.\n\nLa distinción es de geografía moral:\n\n  · CRUZARSE: si te encuentras con alguien camino a la sinagoga, devolver el saludo es humano — eso permite la mishná\n  · PEREGRINAR: levantarse temprano, salir de casa y presentarse ante la PUERTA del otro antes de haberse presentado ante Dios — eso es lo prohibido\n\nLa palabra clave es מַשְׁכִּים — «el que madruga». Es el mismo verbo de la devoción: uno madruga al beit hakenéset, madruga al estudio. Madrugar es el gesto litúrgico por excelencia, la ofrenda de la primera hora. Por eso madrugar A LA PUERTA DE UN HOMBRE es tan grave: no es un saludo casual, es una LITURGIA con destinatario equivocado. La puerta del otro se vuelve santuario, la visita se vuelve peregrinación.\n\nLa armonización de R. Aba convierte la aparente contradicción en un mapa fino: no se prohíbe la cortesía — se prohíbe el culto. La halajá posterior (Shulján Aruj OC 89:2) codifica exactamente esta línea: no ir a la puerta del prójimo a saludarlo antes de shajarit, aunque devolver un saludo encontrado se permite.'
+    },
+    'r-yona': {
+      titulo: 'R. Yona beshem R. Zeira · tus asuntos pueden esperar',
+      hebreo: 'כׇּל הָעוֹשֶׂה חֲפָצָיו קוֹדֶם שֶׁיִּתְפַּלֵּל — כְּאִלּוּ בָּנָה בָּמָה · לָא, אָסוּר קָאָמֵינָא',
+      traduccion: '«Quien hace sus asuntos antes de rezar — como si construyera una bamá» · «No: dije "prohibido"»',
+      explicacion: 'La segunda prohibición del amanecer amplía la primera: no solo el saludo al amigo — también TUS PROPIOS ASUNTOS (חֲפָצָיו) esperan a la tefilá. Quien despacha sus negocios antes de rezar, dice R. Yona en nombre de R. Zeira, es כְּאִלּוּ בָּנָה בָּמָה — como si construyera una bamá.\n\nLa simetría con Rav es exacta: madrugar hacia el amigo hace del AMIGO un altar; madrugar hacia tus asuntos hace de TUS ASUNTOS un altar. El ídolo no necesita ser otra persona — puede ser tu propia agenda.\n\nPero entonces viene el momento más singular de la sugyá. Le preguntan: בָּמָה אֲמַרְתְּ — ¿dijiste «bamá»? Y R. Yona (o R. Zeira) se AUTOCORRIGE: לָא — אָסוּר קָאָמֵינָא. «No: dije PROHIBIDO».\n\nLa tradición se corrige hacia la sobriedad. La imagen de la bamá es potente pero inflacionaria — y la guemará documenta el gesto de un sabio que retira la hipérbole y deja la halajá desnuda: אסור, prohibido, sin metáfora. Es una lección de método: la retórica sirve para despertar, pero la norma debe poder sostenerse sin ella.\n\nEl contraste con el nodo de Rav es deliberado: allá la imagen del altar QUEDÓ (con pasuk y al-tikrei que la respaldan); acá la imagen se RETIRA y queda el issur escueto, apoyado en el pasuk de Tehilim que trae el nodo siguiente. Dos registros del mismo decoro: el saludo madrugador merece la teología del altar; los asuntos propios, la prosa seca de lo prohibido.'
+    },
+    'rav-idi': {
+      titulo: 'Rav Idi bar Avin · primero el tzedek, después el camino',
+      hebreo: 'צֶדֶק לְפָנָיו יְהַלֵּךְ וְיָשֵׂם לְדֶרֶךְ פְּעָמָיו',
+      traduccion: '«El tzedek irá delante de él — y pondrá sus pasos en el camino» (Tehilim 85:14)',
+      explicacion: 'Rav Idi bar Avin aporta la FUENTE del issur — y con ella, su reverso luminoso.\n\nEl pasuk es Tehilim 85:14: צֶדֶק לְפָנָיו יְהַלֵּךְ וְיָשֵׂם לְדֶרֶךְ פְּעָמָיו. La derashá lee el versículo como una SECUENCIA obligada:\n\n  1. PRIMERO: צֶדֶק לְפָנָיו יְהַלֵּךְ — el tzedek (la tefilá, presentarse justo delante de Él) camina delante\n  2. DESPUÉS: וְיָשֵׂם לְדֶרֶךְ פְּעָמָיו — recién entonces pone sus pasos en el camino\n\nEl orden gramatical del versículo se vuelve orden halájico de la mañana: la tefilá va ANTES que el camino, antes que los חֲפָצִים, antes que el primer negocio del día.\n\nY la guemará añade la promesa inversa, la cara dorada de la prohibición: כׇּל הַמִּתְפַּלֵּל וְאַחַר כָּךְ יוֹצֵא לַדֶּרֶךְ — quien reza y DESPUÉS sale al camino — הַקָּדוֹשׁ בָּרוּךְ הוּא עוֹשֶׂה לוֹ חֲפָצָיו: HKBH le hace sus asuntos. El mismo versículo lo dice: si el tzedek va delante, es DIOS quien «pone sus pasos en el camino» — el sujeto de la segunda mitad cambia, y los asuntos del madrugador piadoso pasan a manos más altas.\n\nLa economía espiritual es exacta: los asuntos hechos ANTES de la tefilá son una bamá (o simplemente asur); los mismos asuntos, después de la tefilá, los gestiona el Cielo. No se pierde nada por esperar — se gana un socio. El diagrama pinta este camino en dorado: es la única salida de la cama que no construye altares.'
+    },
+    'coda-suenos': {
+      titulo: 'Coda · los siete días sin sueño',
+      hebreo: 'וְשָׂבֵעַ יָלִין בַּל יִפָּקֶד רָע · אַל תִּקְרֵי שָׂבֵעַ אֶלָּא שֶׁבַע',
+      traduccion: '«Y saciado se acuesta, no será visitado por el mal» — no leas «saciado» (savea) sino «siete» (sheva)',
+      explicacion: 'La misma voz — R. Yona en nombre de R. Zeira — cierra la unidad con una enseñanza que parece de otro tema y no lo es: כׇּל הַלָּן שִׁבְעַת יָמִים בְּלֹא חֲלוֹם נִקְרָא רַע — quien pasa siete noches sin un sueño se llama «malo».\n\nEl pasuk es Mishlei 19:23: וְשָׂבֵעַ יָלִין בַּל יִפָּקֶד רָע — «y saciado se acuesta, no será visitado por el mal». La derashá re-vocaliza: אַל תִּקְרֵי שָׂבֵעַ אֶלָּא שֶׁבַע — no leas שָׂבֵעַ (savea, «saciado») sino שֶׁבַע (sheva, «siete»). Y reordena la sintaxis: quien SIETE noches se acuesta בַּל יִפָּקֶד — sin ser «visitado» (por un sueño) — ese es רָע. El sueño nocturno es una visita del Cielo; siete noches sin visita significan que ya no vale la pena visitarlo.\n\nR. Yojanan replica leyendo el MISMO pasuk como promesa: כׇּל הַמַּשְׂבִּיעַ עַצְמוֹ מִדִּבְרֵי תוֹרָה וְלָן — quien se SACIA (ahora sí שָׂבֵעַ, literal) de palabras de Torá y se acuesta — אֵין מְבַשְּׂרִין אוֹתוֹ בְּשׂוֹרוֹת רָעוֹת: no le anuncian malas noticias. La amenaza y la promesa comparten las mismas letras; la diferencia la pone lo que hiciste antes de acostarte.\n\n¿Por qué esta coda aquí? Porque completa el arco del día. La sugyá legisló el AMANECER: con qué gesto sales de la cama (tefilá antes que el amigo, antes que los asuntos). La coda legisla el ANOCHECER: con qué te metes en la cama (saciado de Torá o no). El decoro previo a la tefilá y el decoro previo al sueño son la misma doctrina: los umbrales del día — despertar y dormir — pertenecen a Dios, y lo que pongas en ellos decide si lo que te visita es una bamá o una berajá.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.antesrezar-interactivo')
+    : document.querySelector('.antesrezar-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#antesrezar-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.antesrezar-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="antesrezar-panel-header">' +
+        '<p class="antesrezar-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="antesrezar-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="antesrezar-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="antesrezar-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.antesrezar-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.antesrezar-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="antesrezar-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
