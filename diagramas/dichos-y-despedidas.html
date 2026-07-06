@@ -1,0 +1,377 @@
+<div class="dichos-interactivo">
+<style>
+  .dichos-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .dichos-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .dichos-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .dichos-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .dichos-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .dichos-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .dichos-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .dichos-diagrama svg { width: 100%; height: auto; display: block; }
+  .dichos-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .dichos-nodo:hover rect { stroke-width: 2 !important; }
+  .dichos-nodo:hover circle { stroke-width: 2.5 !important; }
+  .dichos-nodo.activa rect { stroke-width: 2.5 !important; }
+  .dichos-nodo.activa circle { stroke-width: 3 !important; }
+  .dichos-nodo.dim { opacity: 0.32; }
+  .dichos-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .dichos-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .dichos-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .dichos-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .dichos-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .dichos-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .dichos-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="dichos-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch azul"></span>la perla de cada boca</span>
+  <span><span class="swatch dorado"></span>el remate igualador · el hadran</span>
+  <span><span class="swatch verde"></span>las despedidas del beit midrash</span>
+  <span><span class="swatch violeta"></span>las mujeres · Janina ben Dosa</span>
+</div>
+
+<div class="dichos-diagrama">
+<svg viewBox="0 0 720 1350" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 17a-17b: marglá befumeih — el dicho de cada sabio — las promesas, las despedidas del beit midrash y el hadran del perek 2</title>
+
+<defs>
+  <marker id="flecha-di" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-di-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Dichos de los sabios y el hadran · lo que cada boca repetía</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 17a-17b · מַרְגְּלָא בְּפוּמֵּיהּ · las despedidas del beit midrash · el cierre del perek 2</text>
+
+<!-- ============================================================ -->
+<!-- VITRINA 1 · MARGLÁ BEFUMEIH                                  -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VITRINA 1 · מרגלא בפומיה · LA PERLA DE CADA BOCA</text>
+
+<!-- R. Meir -->
+<g class="dichos-nodo" data-id="r-meir">
+  <rect x="60" y="86" width="290" height="128" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Meir · estudia con todo el corazón</text>
+  <text x="205" y="130" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">גְּמוֹר בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ</text>
+  <text x="205" y="148" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">שְׁמוֹר פִּיךָ מִכָּל חֵטְא</text>
+  <text x="78" y="168" font-size="9" fill="#3d2f23" font-style="italic">estudia con todo el corazón · guarda tu boca</text>
+  <text x="78" y="182" font-size="9" fill="#3d2f23" font-style="italic">de todo pecado —</text>
+  <text x="78" y="200" font-size="9.5" fill="#6b4423" font-weight="600">«y Yo estaré contigo en todo lugar»</text>
+</g>
+
+<!-- Rabanan de Yavne -->
+<g class="dichos-nodo" data-id="yavne">
+  <rect x="370" y="86" width="290" height="128" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="515" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Los rabanan de Yavne · dos criaturas</text>
+  <text x="515" y="130" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">אֲנִי בְּרִיָּה וַחֲבֵרִי בְּרִיָּה</text>
+  <text x="388" y="150" font-size="9" fill="#3d2f23" font-style="italic">yo soy criatura y mi compañero es criatura:</text>
+  <text x="388" y="164" font-size="9" fill="#3d2f23" font-style="italic">yo trabajo en la ciudad, él en el campo —</text>
+  <text x="388" y="178" font-size="9" fill="#3d2f23" font-style="italic">ni él presume de mi oficio ni yo del suyo</text>
+  <text x="388" y="200" font-size="9" fill="#6b4423">y el remate que nivela todo el edificio ↓</text>
+</g>
+
+<!-- líneas hacia el remate -->
+<line x1="205" y1="214" x2="205" y2="230" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-di-gold)"/>
+<line x1="515" y1="214" x2="515" y2="230" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-di-gold)"/>
+
+<!-- REMATE IGUALADOR · nodo dorado central -->
+<g class="dichos-nodo" data-id="remate">
+  <rect x="110" y="234" width="500" height="88" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="260" text-anchor="middle" font-size="13" direction="rtl" fill="#b8860b" font-weight="700">אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט</text>
+  <text x="360" y="282" text-anchor="middle" font-size="13" direction="rtl" fill="#b8860b" font-weight="700">וּבִלְבַד שֶׁיְּכַוֵּין לִבּוֹ לַשָּׁמַיִם</text>
+  <text x="360" y="306" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«uno que hace mucho y uno que hace poco — con tal de que dirija su corazón al Cielo»</text>
+</g>
+
+<line x1="205" y1="322" x2="205" y2="340" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-di)"/>
+<line x1="515" y1="322" x2="515" y2="340" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-di)"/>
+
+<!-- Abaye -->
+<g class="dichos-nodo" data-id="abaye">
+  <rect x="60" y="344" width="290" height="136" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="366" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Abaye · la respuesta suave</text>
+  <text x="205" y="388" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">מַעֲנֶה רַךְ מֵשִׁיב חֵמָה</text>
+  <text x="78" y="408" font-size="9" fill="#3d2f23" font-style="italic">la respuesta suave aplaca la ira ·</text>
+  <text x="78" y="422" font-size="9" fill="#3d2f23" font-style="italic">multiplica la paz con todo hombre —</text>
+  <text x="78" y="438" font-size="9.5" fill="#6b4423" font-weight="600">hasta con el gentil en el mercado</text>
+  <text x="78" y="456" font-size="8.5" fill="#6b4423" font-style="italic">de R. Yojanan ben Zakai nadie logró jamás</text>
+  <text x="78" y="469" font-size="8.5" fill="#6b4423" font-style="italic">saludarlo primero — ni el gentil del mercado</text>
+</g>
+
+<!-- Rava -->
+<g class="dichos-nodo" data-id="rava">
+  <rect x="370" y="344" width="290" height="136" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="515" y="366" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rava · el fin de la sabiduría</text>
+  <text x="515" y="388" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">תַּכְלִית חָכְמָה</text>
+  <text x="515" y="406" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">תְּשׁוּבָה וּמַעֲשִׂים טוֹבִים</text>
+  <text x="388" y="426" font-size="9" fill="#3d2f23" font-style="italic">el fin de la sabiduría: teshuvá y buenas</text>
+  <text x="388" y="440" font-size="9" fill="#3d2f23" font-style="italic">acciones — que uno no lea y estudie</text>
+  <text x="388" y="454" font-size="9" fill="#3d2f23" font-style="italic">y patee a su padre y a su maestro</text>
+  <text x="388" y="470" font-size="8.5" fill="#6b4423" font-style="italic">quien estudia shelo lishmá — mejor no creado</text>
+</g>
+
+<line x1="360" y1="480" x2="360" y2="498" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-di)"/>
+
+<!-- Rav · las coronas -->
+<g class="dichos-nodo" data-id="rav-coronas">
+  <rect x="60" y="502" width="600" height="168" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="524" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rav · el olam habá · la más famosa de las perlas</text>
+  <text x="360" y="546" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">הָעוֹלָם הַבָּא אֵין בּוֹ לֹא אֲכִילָה וְלֹא שְׁתִיָּה</text>
+  <text x="360" y="565" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">אֶלָּא צַדִּיקִים יוֹשְׁבִין וְעַטְרוֹתֵיהֶם בְּרָאשֵׁיהֶם וְנֶהֱנִים מִזִּיו הַשְּׁכִינָה</text>
+  <!-- tres tzadikim sentados, coronas en la cabeza -->
+  <path d="M235,596 l3,-11 l7,7 l7,-9 l7,9 l7,-7 l3,11 z" fill="rgba(184,134,11,0.25)" stroke="#b8860b" stroke-width="1"/>
+  <circle cx="252" cy="612" r="12" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <path d="M343,596 l3,-11 l7,7 l7,-9 l7,9 l7,-7 l3,11 z" fill="rgba(184,134,11,0.25)" stroke="#b8860b" stroke-width="1"/>
+  <circle cx="360" cy="612" r="12" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <path d="M451,596 l3,-11 l7,7 l7,-9 l7,9 l7,-7 l3,11 z" fill="rgba(184,134,11,0.25)" stroke="#b8860b" stroke-width="1"/>
+  <circle cx="468" cy="612" r="12" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.1"/>
+  <text x="360" y="644" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">sin comer ni beber, sin celos ni odio: los tzadikim sentados, coronas en la cabeza,</text>
+  <text x="360" y="659" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">gozando del resplandor de la Shejiná</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- VITRINA 2 · PROMESAS Y DESPEDIDAS                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="670" x2="360" y2="688" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-di)"/>
+
+<text x="60" y="702" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">VITRINA 2 · LAS PROMESAS Y LAS DESPEDIDAS</text>
+
+<!-- Las mujeres -->
+<g class="dichos-nodo" data-id="mujeres">
+  <rect x="60" y="712" width="600" height="104" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <text x="360" y="736" text-anchor="middle" font-size="12" direction="rtl" fill="#5a3a8a" font-weight="700">גְּדוֹלָה הַבְטָחָה שֶׁהִבְטִיחָן הַקָּדוֹשׁ בָּרוּךְ הוּא לְנָשִׁים יוֹתֵר מִן הָאֲנָשִׁים</text>
+  <text x="360" y="756" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«mayor es la promesa que hizo HKBH a las mujeres que a los hombres»</text>
+  <text x="360" y="778" text-anchor="middle" font-size="9.5" fill="#3d2f23">¿y con qué merecen? — llevando a los hijos a la sinagoga, enviando a los maridos al beit midrash</text>
+  <text x="360" y="796" text-anchor="middle" font-size="9.5" fill="#5a3a8a" font-weight="600">y ESPERÁNDOLOS · el mérito de quien hace posible el estudio ajeno</text>
+</g>
+
+<line x1="205" y1="816" x2="205" y2="834" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-di)"/>
+<line x1="515" y1="816" x2="515" y2="834" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-di)"/>
+
+<!-- Despedida de la casa de R. Ami -->
+<g class="dichos-nodo" data-id="r-ami">
+  <rect x="60" y="838" width="290" height="128" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="205" y="860" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Al salir de la casa de R. Ami</text>
+  <text x="205" y="884" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">עוֹלָמְךָ תִּרְאֶה בְּחַיֶּיךָ</text>
+  <text x="78" y="906" font-size="9" fill="#3d2f23" font-style="italic">«que veas tu mundo en tu vida,</text>
+  <text x="78" y="920" font-size="9" fill="#3d2f23" font-style="italic">y tu final sea para la vida del olam habá»</text>
+  <text x="78" y="940" font-size="8.5" fill="#6b4423" font-style="italic">que tus ojos brillen con la luz de la Torá ·</text>
+  <text x="78" y="953" font-size="8.5" fill="#6b4423" font-style="italic">la bendición del que se va del beit midrash</text>
+</g>
+
+<!-- Despedida de la casa de Rav Jisda -->
+<g class="dichos-nodo" data-id="alufeinu">
+  <rect x="370" y="838" width="290" height="128" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="515" y="860" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Al salir de la casa de Rav Jisda</text>
+  <text x="515" y="884" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e">אַלּוּפֵינוּ מְסֻבָּלִים</text>
+  <text x="388" y="906" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«nuestros líderes cargados» (Tehilim 144:14) —</text>
+  <text x="388" y="920" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">que nuestro grupo no produzca</text>
+  <text x="515" y="940" text-anchor="middle" font-size="9" fill="#2d6b4e" font-weight="600">ni un Ajitofel · ni un Doeg · ni un Guejazí</text>
+  <text x="515" y="955" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la Torá sin maasim tovim es peligrosa</text>
+</g>
+
+<line x1="360" y1="966" x2="360" y2="984" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-di)"/>
+
+<!-- La bat kol del Jorev -->
+<g class="dichos-nodo" data-id="janina">
+  <rect x="60" y="988" width="600" height="112" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <text x="360" y="1010" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">La bat kol diaria desde el monte Jorev</text>
+  <text x="360" y="1032" text-anchor="middle" font-size="11.5" direction="rtl" fill="#5a3a8a">כָּל הָעוֹלָם כּוּלּוֹ נִזּוֹנִין בִּשְׁבִיל חֲנִינָא בְּנִי</text>
+  <text x="360" y="1052" text-anchor="middle" font-size="11.5" direction="rtl" fill="#5a3a8a">וַחֲנִינָא בְּנִי דַּי לוֹ בְּקַב חָרוּבִין מֵעֶרֶב שַׁבָּת לְעֶרֶב שַׁבָּת</text>
+  <text x="360" y="1074" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«el mundo entero se sustenta por Janina mi hijo — y a Janina mi hijo le basta</text>
+  <text x="360" y="1089" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">un kav de algarrobas de víspera a víspera de Shabat»</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL HADRAN · CIERRE CEREMONIAL DEL PEREK 2                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="1100" x2="360" y2="1118" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-di-gold)"/>
+
+<text x="60" y="1132" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL HADRAN · EL PEREK DE LA KAVANÁ LLEGA A SU FIN</text>
+
+<g class="dichos-nodo" data-id="hadran">
+  <rect x="60" y="1142" width="600" height="184" rx="8" fill="rgba(184,134,11,0.09)" stroke="#b8860b" stroke-width="2"/>
+  <rect x="70" y="1152" width="580" height="164" rx="5" fill="none" stroke="#b8860b" stroke-width="0.7" stroke-dasharray="1,3"/>
+  <!-- viñeta ornamental superior -->
+  <line x1="230" y1="1172" x2="330" y2="1172" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="1176" text-anchor="middle" font-size="12" fill="#b8860b">❦</text>
+  <line x1="390" y1="1172" x2="490" y2="1172" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="1210" text-anchor="middle" font-size="23" direction="rtl" fill="#b8860b" font-weight="700">הֲדַרַן עֲלָךְ הָיָה קוֹרֵא</text>
+  <text x="360" y="1232" text-anchor="middle" font-size="11" fill="#3d2f23" font-style="italic" font-family="'Cormorant Garamond', serif">«Volveremos a ti, El que estaba leyendo»</text>
+  <text x="360" y="1260" text-anchor="middle" font-size="9.5" fill="#3d2f23">el perek abrió con el lector sorprendido por el zman — ¿le vale la lectura sin kavaná? —</text>
+  <text x="360" y="1276" text-anchor="middle" font-size="9.5" fill="#3d2f23">y cierra con las palabras que cada sabio nunca soltaba: la kavaná hecha vida entera</text>
+  <text x="360" y="1296" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">entre la kavaná mínima (seis palabras) y la máxima (toda una vida de dichos) — la lectura vale lo que el corazón que la dirige</text>
+  <!-- viñeta ornamental inferior -->
+  <line x1="270" y1="1310" x2="340" y2="1310" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="1314" text-anchor="middle" font-size="10" fill="#b8860b">✦</text>
+  <line x1="380" y1="1310" x2="450" y2="1310" stroke="#b8860b" stroke-width="0.6"/>
+</g>
+
+</svg>
+</div>
+
+<div class="dichos-panel" id="dichos-panel">
+  <p class="dichos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'r-meir': {
+      titulo: 'R. Meir · estudia con todo tu corazón — y Yo estaré contigo',
+      hebreo: 'גְּמוֹר בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ לָדַעַת אֶת דְּרָכַי … שְׁמוֹר פִּיךָ מִכָּל חֵטְא … וַאֲנִי אֶהְיֶה עִמְּךָ בְּכָל מָקוֹם',
+      traduccion: '«Estudia con todo tu corazón y con toda tu alma para conocer Mis caminos… guarda tu boca de todo pecado… y Yo estaré contigo en todo lugar»',
+      explicacion: 'Tras la galería de tefilot personales (lo que cada sabio AÑADÍA a su rezo), el editor abre la fórmula gemela: מַרְגְּלָא בְּפוּמֵּיהּ — «era PERLA en su boca». No lo que rezaban: lo que REPETÍAN. El dicho que un maestro llevaba siempre encima, pulido por años de repetición, como una perla que la boca no suelta.\n\nLa perla de R. Meir es un programa completo en tres movimientos:\n\n  1. גְּמוֹר בְּכָל לְבָבְךָ — estudia con TODO tu corazón y con toda tu alma. El lenguaje es deliberadamente el del shemá (בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ): el estudio reclama la misma totalidad que el amor a Dios. En el perek de la kavaná, R. Meir aplica al estudio la vara del shemá.\n\n  2. שְׁמוֹר פִּיךָ מִכָּל חֵטְא — guarda tu boca de todo pecado, purifícate de toda culpa. El órgano del estudio (la boca que repite) es el mismo órgano del pecado (la boca que calumnia). Quien estudia con la boca debe custodiarla también fuera del estudio.\n\n  3. וַאֲנִי אֶהְיֶה עִמְּךָ בְּכָל מָקוֹם — y la promesa: Yo estaré contigo EN TODO LUGAR. La presencia divina no queda encerrada en el beit midrash — acompaña al que cumplió las dos condiciones a donde vaya.\n\nLa estructura es de pacto en miniatura: dos cláusulas humanas, una divina. Y es coherente con el perek entero: no el volumen del estudio sino su dirección interior (todo el corazón) es lo que activa la promesa.'
+    },
+    'yavne': {
+      titulo: 'Los rabanan de Yavne · yo soy criatura y mi compañero es criatura',
+      hebreo: 'אֲנִי בְּרִיָּה וַחֲבֵרִי בְּרִיָּה, אֲנִי מְלַאכְתִּי בָּעִיר וְהוּא מְלַאכְתּוֹ בַּשָּׂדֶה',
+      traduccion: '«Yo soy criatura y mi compañero es criatura; mi trabajo está en la ciudad y el suyo en el campo»',
+      explicacion: 'La segunda perla no es de un maestro sino de una ESCUELA: los rabanan de Yavne — la academia que reconstruyó el judaísmo después de la destrucción del Templo. Y su dicho habitual es, sorprendentemente, una meditación sobre la IGUALDAD.\n\nEl hablante es el talmid jajam; el «compañero» es el am haaretz, el trabajador del campo. Y la secuencia desarma toda jerarquía posible paso a paso:\n\n  · אֲנִי בְּרִיָּה וַחֲבֵרִי בְּרִיָּה — yo soy criatura y él es criatura. El punto de partida es la ONTOLOGÍA compartida: antes que sabio o campesino, ambos son obra del mismo Creador.\n\n  · Yo trabajo en la ciudad, él en el campo. No «yo estudio y él trabaja» — AMBOS tienen מְלַאכְתּוֹ, su trabajo. El estudio es un oficio entre oficios.\n\n  · Yo madrugo para mi trabajo, él madruga para el suyo. La misma disciplina, el mismo esfuerzo.\n\n  · Como él no presume de mi oficio (לֹא מִתְגַּדֵּר), yo no presumo del suyo. La humildad es RECÍPROCA: el campesino no pretende dictaminar halajá, y el sabio no pretende saber arar.\n\n¿Y si dijeras: «yo hago MUCHO (Torá) y él hace POCO»? Ahí entra el remate — el nodo dorado — que responde con la enseñanza más democrática del perek. Que ESTA fuera la perla diaria de Yavne dice algo enorme: la academia que monopolizó la autoridad rabínica repetía cada día un antídoto contra su propia arrogancia.'
+    },
+    'remate': {
+      titulo: 'El remate igualador · uno que hace mucho y uno que hace poco',
+      hebreo: 'אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט וּבִלְבַד שֶׁיְּכַוֵּין לִבּוֹ לַשָּׁמַיִם',
+      traduccion: '«Uno que hace mucho y uno que hace poco — con tal de que dirija su corazón al Cielo»',
+      explicacion: 'El remate del dicho de Yavne es la frase que NIVELA todo el edificio del mérito religioso — y por eso está en el centro del diagrama, en dorado.\n\nLa objeción imaginada era la última defensa de la jerarquía: «está bien, ambos somos criaturas, ambos trabajamos — pero yo hago MUCHO (páginas de guemará) y él hace POCO (un capítulo de shemá al día)». La respuesta: שָׁנִינוּ — «aprendimos» (es enseñanza tannaítica establecida, no improvisación):\n\n  אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט — UNO es el que hace mucho y UNO el que hace poco. La palabra אֶחָד repetida los declara equivalentes ante el Cielo.\n\n  וּבִלְבַד שֶׁיְּכַוֵּין לִבּוֹ לַשָּׁמַיִם — con UNA sola condición: que dirija su corazón al Cielo.\n\nLa métrica divina no cuenta VOLUMEN — mide DIRECCIÓN. La kavaná no es un requisito más entre otros: es el único denominador que convierte cualquier cantidad en ofrenda válida.\n\nY aquí el remate se revela como la tesis del perek ENTERO. El perek 2 abrió preguntando si el que leía la Torá sin intención cumplió el shemá; estableció que la kavaná mínima indispensable son seis palabras (el primer versículo); permitió a los obreros recitar sobre el árbol y al recién casado no recitar. Todo el perek fue una negociación entre la cantidad exigible y el corazón disponible. El remate de Yavne es su fórmula final: la cantidad es negociable — la dirección del corazón, jamás. La kavaná del perek, democratizada.'
+    },
+    'abaye': {
+      titulo: 'Abaye · la respuesta suave — hasta con el gentil del mercado',
+      hebreo: 'מַעֲנֶה רַךְ מֵשִׁיב חֵמָה … וּמַרְבֶּה שָׁלוֹם עִם כָּל אָדָם וַאֲפִילּוּ עִם גּוֹי בַּשּׁוּק',
+      traduccion: '«La respuesta suave aplaca la ira… y multiplica la paz con todo hombre — hasta con el gentil en el mercado»',
+      explicacion: 'La perla de Abaye es un programa de PAZ en expansión concéntrica. Comienza: לְעוֹלָם יְהֵא אָדָם עָרוּם בְּיִרְאָה — sea el hombre ASTUTO en el temor del Cielo: la piedad necesita inteligencia práctica, no solo fervor. Y la astucia central es la del versículo de Mishlei: מַעֲנֶה רַךְ מֵשִׁיב חֵמָה — la respuesta SUAVE hace retroceder la ira.\n\nLuego los círculos: multiplica la paz con tus hermanos, con tus parientes, עִם כָּל אָדָם — con TODO hombre — וַאֲפִילּוּ עִם גּוֹי בַּשּׁוּק — HASTA con el gentil en el mercado. La progresión es deliberada: la paz fácil (la familia) es solo el entrenamiento; la prueba real es el extraño, el de otra fe, en el lugar más áspero de la ciudad — el mercado, donde se regatea, se empuja y se grita.\n\n¿El premio? Ser amado arriba, querido abajo y aceptado por las criaturas.\n\nY la guemará sella el dicho con el ejemplo vivo: de R. Yojanan ben Zakai se dijo que NADIE logró jamás saludarlo primero — לֹא הִקְדִּימוֹ אָדָם שָׁלוֹם מֵעוֹלָם — ni siquiera el gentil del mercado. El maestro que salvó el judaísmo de la destrucción (el mismo de Yavne) practicaba la carrera del saludo: ver primero, saludar primero, a cualquiera. La grandeza rabínica se mide aquí en milisegundos de cortesía. La perla de Abaye convierte el shalom en disciplina atlética: no basta responder la paz — hay que GANARLA por adelantado.'
+    },
+    'rava': {
+      titulo: 'Rava · el fin de la sabiduría es teshuvá y buenas acciones',
+      hebreo: 'תַּכְלִית חָכְמָה תְּשׁוּבָה וּמַעֲשִׂים טוֹבִים',
+      traduccion: '«El fin de la sabiduría es teshuvá y buenas acciones»',
+      explicacion: 'La perla de Rava es la más incómoda para un intelectual: la sabiduría NO es fin en sí misma. תַּכְלִית חָכְמָה — el propósito, el punto de llegada de toda la jojmá — es תְּשׁוּבָה וּמַעֲשִׂים טוֹבִים: retorno y buenas acciones. El conocimiento que no desemboca en conducta es un camino que no llega a ninguna parte.\n\nY Rava dibuja el retrato del fracaso: שֶׁלֹּא יְהֵא אָדָם קוֹרֵא וְשׁוֹנֶה וּבוֹעֵט — que no sea el hombre uno que LEE (mikrá) y ESTUDIA (mishná) — y PATEA a su padre, a su madre, a su maestro y a quien es más grande que él. El verbo es brutal: בּוֹעֵט, patear. Se puede acumular todo el corpus — Escritura y tradición oral — y usar esa estatura adquirida precisamente para despreciar a quienes te la dieron. La erudición como plataforma de la patada.\n\nLa fuente: «el principio de la sabiduría es el temor de Hashem — שֵׂכֶל טוֹב לְכָל עֹשֵׂיהֶם» (Tehilim 111:10) — buen entendimiento para los que las HACEN. No dice «para los que las estudian» (לְלוֹמְדֵיהֶם) sino para los que las hacen (לְעֹשֵׂיהֶם).\n\nY el cierre, severísimo: quien se ocupa de la Torá שֶׁלֹּא לִשְׁמָהּ — no por ella misma, sino por prestigio, por victoria, por carrera — נוֹחַ לוֹ שֶׁלֹּא נִבְרָא: mejor le hubiera sido no haber sido creado. En el perek de la kavaná, Rava aplica la regla al propio estudio: también la Torá puede leerse «sin dirigir el corazón» — y entonces no solo no vale: deforma.'
+    },
+    'rav-coronas': {
+      titulo: 'Rav · el olam habá · las coronas de los tzadikim',
+      hebreo: 'הָעוֹלָם הַבָּא אֵין בּוֹ לֹא אֲכִילָה וְלֹא שְׁתִיָּה … אֶלָּא צַדִּיקִים יוֹשְׁבִין וְעַטְרוֹתֵיהֶם בְּרָאשֵׁיהֶם וְנֶהֱנִים מִזִּיו הַשְּׁכִינָה',
+      traduccion: '«El mundo venidero no tiene comer ni beber… sino que los tzadikim están sentados, sus coronas en sus cabezas, gozando del resplandor de la Shejiná»',
+      explicacion: 'La perla de Rav es la descripción más citada del olam habá en toda la literatura rabínica.\n\nPrimero, la VÍA NEGATIVA — lo que el mundo venidero NO tiene: ni comer ni beber, ni procreación ni comercio, ni celos ni odio ni competencia (לֹא קִנְאָה וְלֹא שִׂנְאָה וְלֹא תַּחֲרוּת). La lista borra las dos economías que organizan esta vida: la del cuerpo (comida, sexo, negocio) y la del ego (envidia, odio, rivalidad). Lo que queda cuando ambas desaparecen no es un vacío — es la escena:\n\n  צַדִּיקִים יוֹשְׁבִין — los tzadikim SENTADOS. No sirviendo, no luchando, no ascendiendo: sentados, la postura del estudio y del descanso logrado.\n\n  וְעַטְרוֹתֵיהֶם בְּרָאשֵׁיהֶם — sus coronas EN SUS CABEZAS. La imagen que ilustra el diagrama. Los comentaristas leen: la corona de cada uno es lo que construyó en vida — su Torá, su kavaná, sus maasim — cristalizado como diadema propia. Nadie recibe la corona de otro; nadie puede quitártela: ya está EN tu cabeza.\n\n  וְנֶהֱנִים מִזִּיו הַשְּׁכִינָה — y GOZAN del resplandor de la Shejiná. El placer sobreviviente, cuando el cuerpo y el ego callaron, es la percepción directa de la Presencia.\n\n¿Por qué esta perla en la boca de RAV — el fundador de la academia de Sura, el maestro del rezo (suyo es el «que se endulce nuestro destino» de la galería anterior)? Porque define la meta que da sentido a todas las demás perlas: se estudia con todo el corazón (R. Meir), se iguala mucho y poco por la kavaná (Yavne), se multiplica la paz (Abaye), se convierte la sabiduría en actos (Rava) — para ESTO: para tejer, hilo a hilo, la corona que ya no se quita.'
+    },
+    'mujeres': {
+      titulo: 'La promesa a las mujeres · el mérito de hacer posible el estudio',
+      hebreo: 'גְּדוֹלָה הַבְטָחָה שֶׁהִבְטִיחָן הַקָּדוֹשׁ בָּרוּךְ הוּא לְנָשִׁים יוֹתֵר מִן הָאֲנָשִׁים',
+      traduccion: '«Mayor es la promesa que el Santo Bendito hizo a las mujeres que a los hombres»',
+      explicacion: 'Entre las perlas y las despedidas, la guemará inserta una declaración que invierte las expectativas de su propio mundo: la promesa divina a las MUJERES es MAYOR que la hecha a los hombres. La prueba, un versículo de Yeshayahu dirigido a las «mujeres confiadas» (נָשִׁים שַׁאֲנַנּוֹת).\n\nPero la pregunta operativa es la de Rav a R. Jiya: נָשִׁים בְּמַאי זָכְיָין — las mujeres, ¿CON QUÉ merecen? En un sistema donde el mérito supremo es el estudio de Torá y ellas están exentas de él, ¿de dónde les viene un mérito aún mayor?\n\nLa respuesta enumera tres actos:\n\n  · בְּאַקְרוֹיֵי בְּנַיְיהוּ — llevando a sus HIJOS a leer la Escritura en la sinagoga;\n  · בְּאַתְנוֹיֵי גַּבְרַיְיהוּ — enviando a sus MARIDOS a estudiar mishná en el beit midrash;\n  · וְנָטְרִין לְגַבְרַיְיהוּ — y ESPERANDO a sus maridos hasta que vuelven del beit rabanan.\n\nEl tercer verbo es el decisivo — y por eso va en mayúsculas en el diagrama. Llevar y enviar son actos de gestión; ESPERAR es el costo silencioso: las noches solas, la casa sostenida, los años en que el marido estudia en otra ciudad. La guemará lo cuenta como mérito ACTIVO, no como resignación.\n\nLa lógica es la del remate igualador aplicada una vez más: quien hace POSIBLE el estudio ajeno participa de él por entero — אֶחָד הַמַּרְבֶּה וְאֶחָד הַמַּמְעִיט. El mérito no se mide por las páginas leídas sino por el corazón dirigido al Cielo — y el corazón que espera está tan dirigido como el que estudia. Por eso el nodo comparte el violeta con Janina ben Dosa: los dos son figuras del sustento invisible — el mundo se alimenta de méritos que no se ven.'
+    },
+    'r-ami': {
+      titulo: 'La despedida de la casa de R. Ami · «que veas tu mundo en tu vida»',
+      hebreo: 'עוֹלָמְךָ תִּרְאֶה בְּחַיֶּיךָ וְאַחֲרִיתְךָ לְחַיֵּי הָעוֹלָם הַבָּא',
+      traduccion: '«Que veas tu mundo en tu vida, y que tu final sea para la vida del mundo venidero»',
+      explicacion: 'La guemará conserva las fórmulas con que los sabios se DESPEDÍAN unos de otros al salir del beit midrash — bendiciones de umbral, dichas en la puerta. Cuando los rabanan se despedían de la casa de R. Ami (algunos dicen: de R. Janina), le decían así:\n\n  עוֹלָמְךָ תִּרְאֶה בְּחַיֶּיךָ — «que veas TU MUNDO EN TU VIDA». La bendición más fina de la colección: no pospone toda la recompensa al olam habá — pide que algo del mundo propio (la obra, el fruto, el sentido) sea VISIBLE ya en vida. Después de la perla de Rav sobre las coronas del mundo venidero, la despedida equilibra: sí, las coronas allá — pero que también HAYA algo que ver acá.\n\n  וְאַחֲרִיתְךָ לְחַיֵּי הָעוֹלָם הַבָּא וְתִקְוָתְךָ לְדוֹר דּוֹרִים — y tu final para la vida del olam habá, y tu esperanza por generaciones y generaciones. Las tres dimensiones del tiempo bendecidas en orden: presente, muerte, posteridad.\n\nY sigue la cascada sobre el cuerpo del estudioso: que tu corazón medite entendimiento, tu boca hable sabiduría, tu lengua mueva canciones, tus párpados miren recto — y עֵינֶיךָ יָאִירוּ בִּמְאוֹר תּוֹרָה: que tus OJOS BRILLEN con la luz de la Torá.\n\nEl género mismo importa: el beit midrash tenía liturgia de salida. Entrar a estudiar requería kavaná; SALIR requería bendición. El estudio no termina cuando uno cruza la puerta — se sella con palabras, igual que las perlas sellaban el día de cada maestro.'
+    },
+    'alufeinu': {
+      titulo: 'La despedida de la casa de Rav Jisda · sin Ajitofel, sin Doeg, sin Guejazí',
+      hebreo: 'אַלּוּפֵינוּ מְסֻבָּלִים אֵין פֶּרֶץ וְאֵין יוֹצֵאת וְאֵין צְוָחָה בִּרְחֹבֹתֵינוּ',
+      traduccion: '«Nuestros líderes cargados; no hay brecha ni salida ni grito en nuestras plazas» (Tehilim 144:14)',
+      explicacion: 'La despedida de la casa de Rav Jisda (algunos dicen: de R. Shmuel bar Najmani) es un versículo de Tehilim convertido en plegaria del grupo: אַלּוּפֵינוּ מְסֻבָּלִים — «nuestros líderes, cargados» (de Torá y de mitzvot).\n\nPero la guemará lee la continuación del versículo — «no hay brecha, ni salida, ni grito» — como una lista de CATÁSTROFES POSIBLES del beit midrash, cada una con nombre y apellido:\n\n  · אֵין פֶּרֶץ — que no haya BRECHA: que nuestro grupo no produzca uno como AJITOFEL, el consejero de David cuya sabiduría era «como quien consulta la palabra de Dios» — y que la usó para asesorar la rebelión de Avshalom.\n\n  · וְאֵין יוֹצֵאת — que no haya quien SALGA mal: uno como DOEG el edomita, «el más fuerte de los pastores» en Torá según la tradición — y delator que provocó la masacre de los sacerdotes de Nov.\n\n  · וְאֵין צְוָחָה — que no haya GRITO: uno como GUEJAZÍ, el discípulo de Elisha que convirtió el milagro en negocio y salió leproso — el talmid que corrompe la herencia del maestro.\n\nLa lista es escalofriante por su premisa: los tres monstruos citados NO eran ignorantes. Eran GRANDES en Torá. Ajitofel, Doeg y Guejazí son la demostración histórica de la perla de Rava: se puede leer y estudiar — y patear. Por eso ESTA es la bendición de salida: el peligro del beit midrash no es que entre poca Torá, sino que salga Torá sin maasim tovim. El grupo entero se bendice para no engendrar a su propio traidor.'
+    },
+    'janina': {
+      titulo: 'La bat kol del Jorev · el mundo entero por Janina — y a Janina le basta un kav',
+      hebreo: 'כָּל הָעוֹלָם כּוּלּוֹ נִזּוֹנִין בִּשְׁבִיל חֲנִינָא בְּנִי וַחֲנִינָא בְּנִי דַּי לוֹ בְּקַב חָרוּבִין מֵעֶרֶב שַׁבָּת לְעֶרֶב שַׁבָּת',
+      traduccion: '«El mundo entero se sustenta por Janina Mi hijo — y a Janina Mi hijo le basta un kav de algarrobas de víspera de Shabat a víspera de Shabat»',
+      explicacion: 'Antes del hadran, la última imagen de la sugyá: בְּכָל יוֹם וָיוֹם — cada día — una bat kol sale del monte JOREV (el Sinaí, la montaña de la revelación, que sigue emitiendo) y proclama la paradoja de Janina ben Dosa.\n\nLa estructura de la proclamación es un quiasmo perfecto de la economía divina:\n\n  · כָּל הָעוֹלָם כּוּלּוֹ נִזּוֹנִין בִּשְׁבִיל חֲנִינָא בְּנִי — el MUNDO ENTERO se alimenta בִּשְׁבִיל («por el canal de», leen los jasidim; «por el mérito de», leen los rishonim) Janina Mi hijo. Un solo justo funciona como el conducto por el que baja el sustento de TODOS.\n\n  · וַחֲנִינָא בְּנִי דַּי לוֹ — y a ese mismo Janina LE BASTA un kav de algarrobas (la medida mínima, el alimento de los pobres y de las cabras) de víspera de Shabat a víspera de Shabat: una semana entera.\n\nEl canal por el que pasa la abundancia del mundo no retiene casi nada para sí. El que más da es el que menos consume. Y la voz lo llama בְּנִי — «Mi hijo» — dos veces: la pobreza de Janina no es abandono divino, es intimidad.\n\nNótese quién cierra la galería del perek: no un rosh yeshivá sino Janina ben Dosa — el hombre de los milagros y de la tefilá (el mismo que sabía por la fluidez de su rezo si el enfermo viviría), célebre por sus maasim más que por sus jidushim. Tras las perlas de los grandes académicos y las bendiciones de las grandes academias, la bat kol recuerda desde el Sinaí que el mundo no se sostiene por el volumen del estudio sino por la calidad de un corazón — אֶחָד הַמַּמְעִיט, uno que hace poco, con el corazón enteramente dirigido al Cielo.'
+    },
+    'hadran': {
+      titulo: 'Hadran alaj Hayá Koré · el cierre del perek 2',
+      hebreo: 'הֲדַרַן עֲלָךְ הָיָה קוֹרֵא',
+      traduccion: '«Volveremos a ti, El que estaba leyendo»',
+      explicacion: 'Con la bat kol del Jorev todavía resonando, el segundo perek de Berajot llega a su fin. La tradición lo sella con la fórmula del hadran: הֲדַרַן עֲלָךְ — «volveremos a ti» (también leído: «nuestra gloria está sobre ti») — seguida del nombre del perek, que es siempre su primera palabra: הָיָה קוֹרֵא, «el que estaba leyendo».\n\nEl nombre del perek es su tesis. הָיָה קוֹרֵא בַּתּוֹרָה וְהִגִּיעַ זְמַן הַמִּקְרָא — el que estaba leyendo la Torá y le llegó el momento del shemá: ¿cumplió? La respuesta de la mishná — אִם כִּיוֵּן לִבּוֹ, יָצָא: si dirigió su corazón, cumplió — instaló la kavaná como el eje de todo lo que siguió. El perek midió la kavaná mínima (seis palabras, el primer versículo); la negoció con la vida real (los obreros sobre el árbol, el novio en su noche, el doliente, Rabán Gamliel recitando la primera noche); la extendió al cuerpo entero (Eluli y Bevari, la escritura de una mezuzá); y la coronó con las dos galerías finales: las tefilot personales y las perlas de cada boca.\n\nY el círculo del perek es perfecto. Abrió con un hombre LEYENDO un texto fijo, sorprendido por el zman, sin saber si su lectura valió. Cierra con los sabios cuyas palabras fijas —repetidas cada día, מַרְגְּלָא בְּפוּמֵּיהּ— eran pura kavaná cristalizada: la diferencia entre recitar y decir de corazón, resuelta por una vida entera de repetición intencionada. Entre la kavaná mínima (seis palabras) y la máxima (toda una vida de dichos), el perek enseñó que la lectura vale lo que el corazón que la dirige.\n\nEl hadran no es despedida — es promesa de RETORNO, como las despedidas de R. Ami y Rav Jisda no eran adioses sino bendiciones de umbral. El estudio talmúdico es circular: todo perek concluido queda pendiente de ser re-estudiado.\n\nהֲדַרַן עֲלָךְ הָיָה קוֹרֵא — volveremos a ti, El que estaba leyendo.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.dichos-interactivo')
+    : document.querySelector('.dichos-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#dichos-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.dichos-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="dichos-panel-header">' +
+        '<p class="dichos-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="dichos-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="dichos-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="dichos-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.dichos-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.dichos-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="dichos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
