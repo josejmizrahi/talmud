@@ -1,0 +1,327 @@
+<div class="oirse-interactivo">
+<style>
+  .oirse-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .oirse-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .oirse-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .oirse-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .oirse-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .oirse-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .oirse-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .oirse-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .oirse-diagrama svg { width: 100%; height: auto; display: block; }
+  .oirse-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .oirse-nodo:hover rect { stroke-width: 2 !important; }
+  .oirse-nodo.activa rect { stroke-width: 2.5 !important; }
+  .oirse-nodo.dim { opacity: 0.32; }
+  .oirse-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .oirse-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .oirse-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .oirse-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .oirse-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .oirse-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .oirse-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="oirse-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch azul"></span>la audibilidad · ¿debe oírse?</span>
+  <span><span class="swatch verde"></span>el dikduk · letra por letra</span>
+  <span><span class="swatch dorado"></span>halajot · להקל</span>
+  <span><span class="swatch sepia"></span>la coda · vientre y tumba</span>
+  <span><span class="swatch rojo"></span>enfriar el Guehinom</span>
+</div>
+
+<div class="oirse-diagrama">
+<svg viewBox="0 0 720 1290" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 15a-15b: la mishná 2:3 — de la boca al oído: audibilidad, el sordo que habla, dikduk de las letras, la tumba que devuelve y el Guehinom que se enfría</title>
+
+<defs>
+  <marker id="flecha-oirse" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="26" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Oírse y pronunciar · la acústica del shema</text>
+<text x="360" y="46" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 15a–15b · mishná 2:3 · de la boca al propio oído</text>
+
+<!-- ============================================================ -->
+<!-- 1 · MISHNÁ 2:3 · LA BOCA Y EL OÍDO                           -->
+<!-- ============================================================ -->
+<text x="60" y="74" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MISHNÁ 2:3 · ¿DEBE OÍRSE? · LA BOCA Y EL OÍDO</text>
+
+<g class="oirse-nodo" data-id="mishna">
+  <rect x="60" y="84" width="600" height="204" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.6"/>
+
+  <!-- LA BOCA (izquierda) -->
+  <path d="M118,152 Q150,132 182,152 Q150,172 118,152 Z" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <path d="M126,152 Q150,159 174,152" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="150" y="192" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">פִּיךָ</text>
+  <text x="150" y="206" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la boca que pronuncia</text>
+
+  <!-- LA ONDA SONORA (centro) -->
+  <path d="M222,134 q18,18 0,36" fill="none" stroke="#1e3a5f" stroke-width="1.4" opacity="0.85"/>
+  <path d="M256,124 q26,28 0,56" fill="none" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"/>
+  <path d="M292,114 q34,38 0,76" fill="none" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+  <text x="330" y="106" font-size="10.5" direction="rtl" fill="#1e3a5f">שְׁמַע</text>
+  <line x1="330" y1="152" x2="500" y2="152" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2 4" opacity="0.5" marker-end="url(#flecha-oirse)"/>
+  <text x="415" y="172" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">¿la voz debe completar el circuito?</text>
+
+  <!-- EL OÍDO (derecha) -->
+  <path d="M542,130 q34,-14 40,20 q4,26 -20,38 q-14,7 -18,-4" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <path d="M552,142 q18,-6 20,12 q1,13 -10,19" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="565" y="205" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">אָזְנְךָ</text>
+  <text x="565" y="219" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el oído propio</text>
+
+  <!-- Texto de la mishná -->
+  <text x="360" y="238" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">הַקּוֹרֵא אֶת שְׁמַע וְלֹא הִשְׁמִיעַ לְאָזְנוֹ — יָצָא · רַבִּי יוֹסֵי אוֹמֵר לֹא יָצָא</text>
+  <text x="360" y="258" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">tana kama: no se oyó — cumplió · R. Yose: no cumplió — הַשְׁמַע לְאָזְנְךָ מַה שֶּׁאַתָּה מוֹצִיא מִפִּיךָ</text>
+  <text x="360" y="276" text-anchor="middle" font-size="9" fill="#1e3a5f" font-style="italic">תַּרְתֵּי שְׁמַע מִינַּהּ — para R. Yose la palabra שמע rinde doble: idioma Y audibilidad</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 2 · EL CARRUSEL DEL SORDO                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="288" x2="360" y2="306" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="318" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA GUEMARÁ · EL SORDO QUE HABLA Y NO OYE · EL CARRUSEL</text>
+
+<g class="oirse-nodo" data-id="carrusel-sordo">
+  <rect x="60" y="328" width="600" height="128" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="360" y="350" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">חֵרֵשׁ הַמְדַבֵּר וְאֵינוֹ שׁוֹמֵעַ — el caso límite que pone a prueba la mishná</text>
+  <rect x="82" y="364" width="180" height="58" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="172" y="384" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">תְּרוּמָה</text>
+  <text x="172" y="400" text-anchor="middle" font-size="8.5" fill="#3d2f23">no separe lejatjilá —</text>
+  <text x="172" y="413" text-anchor="middle" font-size="8.5" fill="#3d2f23">si separó, es terumá</text>
+  <rect x="270" y="364" width="180" height="58" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="360" y="384" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">בִּרְכַּת הַמָּזוֹן</text>
+  <text x="360" y="400" text-anchor="middle" font-size="8.5" fill="#3d2f23">¿puede eximir a otros</text>
+  <text x="360" y="413" text-anchor="middle" font-size="8.5" fill="#3d2f23">quien no se oye?</text>
+  <rect x="458" y="364" width="180" height="58" rx="4" fill="rgba(30,58,95,0.04)" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="548" y="384" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">מְגִילָּה</text>
+  <text x="548" y="400" text-anchor="middle" font-size="8.5" fill="#3d2f23">«no leerá el jeresh» —</text>
+  <text x="548" y="413" text-anchor="middle" font-size="8.5" fill="#3d2f23">¿lejatjilá o también bediavad?</text>
+  <text x="360" y="444" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">cada fuente se cita, se objeta y se reinterpreta — la dialéctica gira hasta exigir una síntesis</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 3 · SÍNTESIS · RAV JISDA BESHEM RAV SHEILA                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="456" x2="360" y2="474" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="486" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SÍNTESIS · RAV JISDA BESHEM RAV SHEILA · PRIMERA INDULGENCIA</text>
+
+<g class="oirse-nodo" data-id="sintesis">
+  <rect x="60" y="496" width="600" height="112" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="360" y="520" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">הֲלָכָה כְּרַבִּי יְהוּדָה שֶׁאָמַר מִשּׁוּם רַבִּי אֶלְעָזָר בֶּן עֲזַרְיָה</text>
+  <text x="360" y="542" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">lejatjilá DEBE oírse a sí mismo · bediavad — si no se oyó, CUMPLIÓ</text>
+  <text x="360" y="564" text-anchor="middle" font-size="9.5" fill="#3d2f23">las DOS citas eran necesarias: la primera sola habría dejado la ley demasiado laxa,</text>
+  <text x="360" y="580" text-anchor="middle" font-size="9.5" fill="#3d2f23">la segunda sola la habría dejado sin remedio para el que ya leyó en silencio</text>
+  <text x="360" y="598" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">el ideal se conserva (que la voz llegue al oído) sin invalidar al que no llegó</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 4 · SEGUNDA DISPUTA · DIKDUK + HALAJÁ DOBLE                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="608" x2="360" y2="626" stroke="#1e6b5a" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="638" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SEGUNDA DISPUTA · קרא ולא דקדק באותיותיה · Y LA HALAJÁ DOBLE</text>
+
+<g class="oirse-nodo" data-id="dikduk">
+  <rect x="60" y="648" width="600" height="152" rx="6" fill="rgba(30,107,90,0.07)" stroke="#1e6b5a" stroke-width="1.4"/>
+  <text x="360" y="670" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">קָרָא וְלֹא דִּקְדֵּק בְּאוֹתִיּוֹתֶיהָ</text>
+  <rect x="86" y="682" width="264" height="48" rx="4" fill="rgba(30,107,90,0.05)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="218" y="700" text-anchor="middle" font-size="10" fill="#1e6b5a" font-weight="600">R. Yose · יָצָא</text>
+  <text x="218" y="718" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">leyó sin precisar las letras — cumplió</text>
+  <rect x="370" y="682" width="264" height="48" rx="4" fill="rgba(30,107,90,0.05)" stroke="#1e6b5a" stroke-width="0.8"/>
+  <text x="502" y="700" text-anchor="middle" font-size="10" fill="#1e6b5a" font-weight="600">R. Yehuda · לֹא יָצָא</text>
+  <text x="502" y="718" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">sin dikduk no hay lectura válida</text>
+  <rect x="86" y="740" width="548" height="46" rx="4" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="360" y="758" text-anchor="middle" font-size="10.5" direction="rtl" fill="#b8860b" font-weight="700">רַבִּי טָבִי בְּשֵׁם רַבִּי יֹאשִׁיָּה: הֲלָכָה כְּדִבְרֵי שְׁנֵיהֶם לְהָקֵל</text>
+  <text x="360" y="776" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">como AMBOS para ser indulgente: no se oyó — cumplió · no precisó — cumplió · la ley elige dos veces la levedad</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 5 · LA CODA · EL VIENTRE Y LA TUMBA                           -->
+<!-- ============================================================ -->
+<line x1="360" y1="800" x2="360" y2="818" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="830" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CODA · EL MISMO R. TAVI · MISHLEI 30 · שאול ועוצר רחם</text>
+
+<g class="oirse-nodo" data-id="coda-tumba">
+  <rect x="60" y="840" width="600" height="126" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="862" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">שְׁאוֹל וְעֹצֶר רָחַם — מָה רֶחֶם מַכְנִיס וּמוֹצִיא, אַף שְׁאוֹל מַכְנִיס וּמוֹצִיא</text>
+  <text x="360" y="882" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">¿qué hace el sheol junto al vientre? — como el vientre mete y saca, la tumba mete y saca</text>
+  <text x="360" y="904" text-anchor="middle" font-size="9.5" fill="#3d2f23">kal vajomer: al vientre se entra en silencio y se sale con GRITOS de vida —</text>
+  <text x="360" y="920" text-anchor="middle" font-size="9.5" fill="#3d2f23">a la tumba se entra con gritos: ¡cuánto más se saldrá con voces!</text>
+  <text x="360" y="944" text-anchor="middle" font-size="10" direction="rtl" fill="#6b4423" font-weight="700">מִכָּאן תְּשׁוּבָה לָאוֹמְרִים אֵין תְּחִיַּית הַמֵּתִים מִן הַתּוֹרָה</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 6 · LOS PARES DE RAVA · LA PAUSA ENTRE PALABRAS               -->
+<!-- ============================================================ -->
+<line x1="360" y1="966" x2="360" y2="984" stroke="#1e6b5a" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="996" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL DIKDUK EN PRÁCTICA · RAVA · LOS PARES QUE EXIGEN PAUSA</text>
+
+<g class="oirse-nodo" data-id="pares-rava">
+  <rect x="60" y="1006" width="600" height="118" rx="6" fill="rgba(30,107,90,0.07)" stroke="#1e6b5a" stroke-width="1.4"/>
+  <text x="360" y="1028" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Rava: donde una palabra termina con la letra que abre la siguiente — hay que separar</text>
+  <text x="218" y="1054" text-anchor="middle" font-size="11" direction="rtl" fill="#1e6b5a">עַל־לְבָבֶךָ · בְּכָל־לְבַבְכֶם</text>
+  <text x="502" y="1054" text-anchor="middle" font-size="11" direction="rtl" fill="#1e6b5a">עֵשֶׂב בְּשָׂדְךָ · הַכָּנָף פְּתִיל</text>
+  <text x="218" y="1072" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">lamed contra lamed · lamed contra lamed</text>
+  <text x="502" y="1072" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">bet contra bet · fe contra pe</text>
+  <text x="360" y="1096" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">sin la pausa, las consonantes gemelas se funden y una palabra se traga a la otra</text>
+  <text x="360" y="1112" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el dikduk es artesanía de la boca: cada juntura pide un silencio mínimo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- 7 · R. JAMA BAR JANINA · ENFRIAR EL GUEHINOM                  -->
+<!-- ============================================================ -->
+<line x1="360" y1="1124" x2="360" y2="1142" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-oirse)"/>
+<text x="60" y="1154" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PREMIO · R. JAMA BAR JANINA · מצננין לו גיהנם</text>
+
+<g class="oirse-nodo" data-id="guehinom">
+  <rect x="60" y="1164" width="600" height="112" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="1188" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע וּמְדַקְדֵּק בְּאוֹתִיּוֹתֶיהָ — מְצַנְּנִין לוֹ גֵּיהִנָּם</text>
+  <text x="360" y="1210" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«a quien lee el shema y precisa sus letras — le enfrían el Guehinom»</text>
+  <text x="360" y="1232" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">בְּפָרֵשׂ → בְּפָרֵשׁ · בְּצַלְמוֹן → בְּצַלְמָוֶת</text>
+  <text x="360" y="1250" text-anchor="middle" font-size="9" fill="#3d2f23">Tehilim 68:15 releído: «hará nevar en tzalmón» — nieve en la sombra de la muerte</text>
+  <text x="360" y="1268" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la dicción como refrigeración escatológica: cada consonante separada, un grado menos de fuego</text>
+</g>
+
+</svg>
+</div>
+
+<div class="oirse-panel" id="oirse-panel">
+  <p class="oirse-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'mishna': {
+      titulo: 'La mishná 2:3 · ¿debe oírse el shema?',
+      hebreo: 'הַקּוֹרֵא אֶת שְׁמַע וְלֹא הִשְׁמִיעַ לְאָזְנוֹ — יָצָא · רַבִּי יוֹסֵי אוֹמֵר לֹא יָצָא',
+      traduccion: '«El que lee el shema y no lo hizo oír a su oído — cumplió; Rabí Yose dice: no cumplió»',
+      explicacion: 'Tras el orden de las parashiyot y el yugo completo, la mishná 2:3 baja al grano de la VOZ. El caso es preciso: alguien PRONUNCIA el shema — los labios se mueven, las palabras salen — pero tan bajo que su propio oído no las capta. ¿Hay lectura?\n\nEl diagrama lo dibuja como un circuito: la BOCA emite, la onda viaja, el OÍDO recibe. La pregunta de la mishná es si la mitzvá exige el circuito COMPLETO (boca → aire → oído) o solo la primera estación (que la boca articule).\n\nTANA KAMA: cumplió. Su fuente es la misma palabra שְׁמַע leída como en la disputa de Rebbi y los jajamim (13a): shema = «en cualquier lengua que ENTIENDAS» (בְּכָל לָשׁוֹן שֶׁאַתָּה שׁוֹמֵעַ). La palabra ya está gastada en el significado de comprensión — no queda de dónde derivar la audibilidad obligatoria.\n\nRABÍ YOSE: no cumplió. Su derivación: שְׁמַע — הַשְׁמַע לְאָזְנְךָ מַה שֶּׁאַתָּה מוֹצִיא מִפִּיךָ, «haz OÍR a tu oído lo que sacas de tu boca». El verbo shema no solo pide entender: pide que la voz VUELVA al emisor.\n\n¿Y cómo puede R. Yose derivar dos cosas de una palabra? La guemará responde: תַּרְתֵּי שְׁמַע מִינַּהּ — «deduce de ella las DOS cosas». Para R. Yose la palabra rinde doble: idioma Y audibilidad. La economía exegética del tana kama (una palabra, un significado) contra la generosidad de R. Yose (una palabra, dos leyes). La palabra שמע, una vez más, es el campo de batalla del perek.'
+    },
+    'carrusel-sordo': {
+      titulo: 'El carrusel del sordo que habla y no oye',
+      hebreo: 'חֵרֵשׁ הַמְדַבֵּר וְאֵינוֹ שׁוֹמֵעַ',
+      traduccion: 'El sordo que habla y no oye',
+      explicacion: 'La guemará pone a prueba la mishná con su caso límite estructural: el JERESH HAMEDABER — el sordo que puede hablar pero no oír. Para él, «no hacer oír a su oído» no es descuido: es CONDICIÓN PERMANENTE. Si la audibilidad es requisito absoluto, el sordo queda excluido de toda mitzvá verbal. Si no lo es, ¿por qué las fuentes lo tratan con reservas?\n\nEl carrusel gira por tres estaciones:\n\nTERUMÁ — la mishná (Terumot 1:2) dice que el sordo que habla NO debe separar terumá lejatjilá (porque no oye la berajá que él mismo recita), pero SI SEPARÓ, su terumá es terumá. Es decir: la audibilidad importa, pero solo como ideal — no invalida.\n\nBIRKAT HAMAZÓN — se objeta desde la bendición de los alimentos: ¿puede quien no se oye a sí mismo cumplir y hacer cumplir? Las fuentes se citan en un sentido, se reinterpretan en otro.\n\nMEGUILÁ — la mishná de Meguilá excluye al jeresh de la lectura. ¿Esa exclusión es solo lejatjilá (como terumá) o invalida incluso bediavad (como R. Yose)? La guemará prueba atribuirla a R. Yose, luego lo cuestiona, y el carrusel da otra vuelta.\n\nLa técnica es clásica del Talmud: un caso extremo (el sordo) funciona como REACTIVO QUÍMICO que revela la estructura interna de la ley — la diferencia entre lo que se exige de entrada y lo que se acepta después del hecho. Todo el mareo dialéctico está fabricando la distinción que la síntesis va a consagrar: lejatjilá / bediavad.'
+    },
+    'sintesis': {
+      titulo: 'La síntesis · Rav Jisda beshem Rav Sheila',
+      hebreo: 'הֲלָכָה כְּרַבִּי יְהוּדָה שֶׁאָמַר מִשּׁוּם רַבִּי אֶלְעָזָר בֶּן עֲזַרְיָה',
+      traduccion: 'La halajá es como R. Yehuda que dijo en nombre de R. Elazar ben Azaria',
+      explicacion: 'Rav Jisda, en nombre de Rav Sheila, detiene el carrusel con una síntesis: la halajá sigue a R. Yehuda que citó a R. Elazar ben Azaria — el que lee el shema DEBE hacerlo oír a su oído (lejatjilá), pero si no lo hizo, CUMPLIÓ (bediavad).\n\nLa posición es un tercer camino entre los polos de la mishná: ni el tana kama puro (la audibilidad no importa) ni R. Yose (sin audibilidad no hay nada). El ideal se CONSERVA sin convertirse en condición de validez.\n\nY la guemará pregunta lo obvio: ¿por qué hicieron falta las DOS citas — «halajá como R. Yehuda» Y «que dijo en nombre de R. Elazar ben Azaria»? La respuesta es una lección de precisión legislativa:\n\n  · Si hubiera dicho solo «halajá como R. Yehuda», se habría entendido que la audibilidad es totalmente opcional — INCLUSO lejatjilá no haría falta oírse. Demasiado laxo: el ideal se perdería.\n\n  · Si hubiera dicho solo «halajá como R. Elazar ben Azaria», se habría entendido que צָרִיךְ — «debe oírse» — es requisito absoluto: el que no se oyó NO cumplió y no tiene remedio. Demasiado duro: el que ya leyó en voz baja quedaría invalidado.\n\nSolo la CADENA completa de atribución fija el punto medio exacto: debe (lejatjilá) — pero cumplió (bediavad). La halajá aquí no es un contenido sino una CALIBRACIÓN, y la calibración vive en la sintaxis de la cita. Primera indulgencia de la sugyá: la ley protege al que no llegó al ideal.'
+    },
+    'dikduk': {
+      titulo: 'Segunda disputa · las letras · y la halajá doble להקל',
+      hebreo: 'קָרָא וְלֹא דִּקְדֵּק בְּאוֹתִיּוֹתֶיהָ · הֲלָכָה כְּדִבְרֵי שְׁנֵיהֶם לְהָקֵל',
+      traduccion: '«Leyó y no precisó sus letras» · «La halajá es como las palabras de ambos, para ser indulgente»',
+      explicacion: 'La mishná trae una segunda disputa, simétrica a la primera pero con los papeles cambiados: קָרָא וְלֹא דִּקְדֵּק בְּאוֹתִיּוֹתֶיהָ — leyó el shema sin PRECISAR sus letras: consonantes tragadas, junturas fundidas, dicción descuidada.\n\n  · R. YOSE: cumplió. El mismo R. Yose que era estricto con la audibilidad es indulgente con la dicción.\n  · R. YEHUDA: no cumplió. Sin dikduk, la lectura no es lectura.\n\nLos dos sabios se cruzan: cada uno es estricto en una disputa e indulgente en la otra. Y sobre ese cruce viene el dictamen de R. Tavi en nombre de R. Yoshiya:\n\n  הֲלָכָה כְּדִבְרֵי שְׁנֵיהֶם לְהָקֵל — «la halajá es como las palabras de AMBOS, para ser INDULGENTE».\n\nEs una fórmula extraordinaria: no elige a un sabio sino un CRITERIO. De cada disputa toma la opinión leve:\n\n  · Primera disputa: como el TANA KAMA — no se oyó a sí mismo, cumplió.\n  · Segunda disputa: como R. YOSE — no precisó las letras, cumplió.\n\nDos indulgencias encadenadas. La ley elige DOS VECES la levedad. El shema queda protegido en sus dos flancos acústicos: ni el volumen insuficiente ni la dicción imperfecta invalidan al lector.\n\nLa paradoja fecunda de la sugyá: la misma tradición que va a premiar el dikduk con el enfriamiento del Guehinom (último nodo) se niega a CASTIGAR su ausencia. La precisión es ideal y premio — nunca condición. La halajá custodia el piso; la agadá señala el techo.'
+    },
+    'coda-tumba': {
+      titulo: 'La coda del vientre y la tumba · tjiyat hametim',
+      hebreo: 'שְׁאוֹל וְעֹצֶר רָחַם — מָה רֶחֶם מַכְנִיס וּמוֹצִיא, אַף שְׁאוֹל מַכְנִיס וּמוֹצִיא',
+      traduccion: '«Sheol y el vientre cerrado — como el vientre mete y saca, también el sheol mete y saca»',
+      explicacion: 'El mismo R. Tavi, en nombre del mismo R. Yoshiya, en la misma respiración, trae una segunda enseñanza — esta vez no halájica sino escatológica. El disparador es Mishlei 30:15-16: la lista de las cosas insaciables — «el sheol y el vientre cerrado (עֹצֶר רָחַם), la tierra no saciada de agua, y el fuego».\n\n¿Qué hace la TUMBA junto al VIENTRE en la misma lista? La yuxtaposición no puede ser casual (la lógica de los smujin — la vecindad textual como argumento). Respuesta: לוֹמַר לָךְ — para decirte: מָה רֶחֶם מַכְנִיס וּמוֹצִיא — como el vientre METE Y SACA (recibe la semilla, devuelve un ser vivo), אַף שְׁאוֹל מַכְנִיס וּמוֹצִיא — también la tumba mete y saca. Lo que entra en el sheol VOLVERÁ a salir.\n\nY el kal vajomer amplifica con los gritos: al vientre se entra בַּחֲשַׁאי — en SILENCIO (la concepción es callada) — y se sale בְּקוֹלֵי קוֹלוֹת, con gritos de vida (el parto, el llanto del recién nacido). A la tumba se entra CON gritos (el duelo, las lamentaciones del entierro) — ¿no es lógico, cuánto más, que se salga con voces?\n\nLa conclusión se formula como polémica: מִכָּאן תְּשׁוּבָה לָאוֹמְרִים אֵין תְּחִיַּית הַמֵּתִים מִן הַתּוֹרָה — «de aquí, respuesta a los que dicen que la resurrección de los muertos no está en la Torá». La doctrina más audaz del judaísmo rabínico, deducida de una VECINDAD de palabras en Mishlei.\n\n¿Por qué aquí, en medio de la acústica del shema? Porque la sugyá entera trata de VOCES: la voz que debe volver al oído, la letra que no debe tragarse — y ahora la voz que saldrá de la tumba. La misma cadena de transmisión (R. Tavi beshem R. Yoshiya) enlaza la indulgencia halájica con la esperanza escatológica.'
+    },
+    'pares-rava': {
+      titulo: 'Los pares de Rava · la pausa entre palabras gemelas',
+      hebreo: 'עַל־לְבָבֶךָ · בְּכָל־לְבַבְכֶם · עֵשֶׂב בְּשָׂדְךָ · הַכָּנָף פְּתִיל',
+      traduccion: '«Sobre tu corazón» · «con todo vuestro corazón» · «hierba en tu campo» · «el ala... un cordón»',
+      explicacion: 'Del principio (dikduk) al manual práctico. Rava enseña DÓNDE exactamente se juega la precisión: en las junturas donde una palabra TERMINA con la misma letra con que EMPIEZA la siguiente.\n\nLos pares del shema:\n\n  · עַל לְבָבֶךָ — «sobre tu corazón»: la lamed final de עַל contra la lamed inicial de לְבָבֶךָ\n  · בְּכָל לְבַבְכֶם — «con todo vuestro corazón»: otra vez lamed contra lamed\n  · עֵשֶׂב בְּשָׂדְךָ — «hierba en tu campo»: bet contra bet\n  · הַכָּנָף פְּתִיל — «el ala... un cordón» (del pasaje de tzitzit): fe contra pe — la misma letra en sus dos pronunciaciones\n\nEl peligro es mecánico: si el lector no hace una PAUSA mínima entre las dos, las consonantes gemelas se FUNDEN — «al-levavja» se vuelve «alevavja» — y una palabra se traga a la otra. El texto recitado ya no es el texto escrito.\n\nLa enseñanza de Rava convierte el dikduk de virtud abstracta en ARTESANÍA de la boca: no basta la intención ni el volumen — hay que administrar los silencios. Cada juntura peligrosa pide un micro-silencio que mantenga a cada palabra entera, con sus fronteras intactas.\n\nHay algo conmovedor en el nivel de resolución: la halajá, que acaba de declarar (nodo anterior) que ni siquiera el dikduk completo es indispensable, se toma el trabajo de mapear las junturas letra por letra. El ideal no es obligatorio — pero se enseña con precisión de orfebre, porque hay premio (nodo siguiente).'
+    },
+    'guehinom': {
+      titulo: 'R. Jama bar Janina · le enfrían el Guehinom',
+      hebreo: 'כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע וּמְדַקְדֵּק בְּאוֹתִיּוֹתֶיהָ — מְצַנְּנִין לוֹ גֵּיהִנָּם',
+      traduccion: '«A todo el que lee el shema y precisa sus letras — le enfrían el Guehinom»',
+      explicacion: 'R. Jama bar Janina pone el premio en la cúspide de la sugyá: quien lee el shema con dikduk — precisando cada letra, separando cada juntura de Rava — recibe una recompensa térmica: מְצַנְּנִין לוֹ גֵּיהִנָּם, «le ENFRÍAN el Guehinom».\n\nLa prueba es un juego de dikduk sobre Tehilim 68:15: בְּפָרֵשׂ שַׁדַּי מְלָכִים בָּהּ תַּשְׁלֵג בְּצַלְמוֹן — «cuando Shadai disperse a los reyes, nevará en Tzalmón». La derashá opera por sustituciones de lectura:\n\n  · אַל תִּקְרֵי בְּפָרֵשׂ אֶלָּא בְּפָרֵשׁ — no leas «al dispersar» (con sin) sino «al ARTICULAR/SEPARAR» (con shin): el que SEPARA, el que pronuncia distinguiendo\n  · אַל תִּקְרֵי בְּצַלְמוֹן אֶלָּא בְּצַלְמָוֶת — no leas «en Tzalmón» (un monte) sino «en TZALMAVET» — en la sombra de la muerte, el Guehinom\n\nResultado: «para quien SEPARA (las letras) — NEVARÁ en la sombra de la muerte». La nieve en el Guehinom: la imagen más gráfica posible del enfriamiento escatológico.\n\nLa ironía perfecta: la derashá que premia el dikduk FUNCIONA por dikduk. Solo quien distingue sin de shin, quien no confunde tzalmón con tzalmavet — es decir, solo un lector minucioso de letras — puede extraer del versículo el premio de la minuciosidad. La prueba ejecuta lo que predica.\n\nY el cierre del arco completo de la sugyá: la halajá fue doblemente indulgente (no se oyó — cumplió; no precisó — cumplió), pero la agadá paga el ideal con moneda escatológica. Nadie queda invalidado por la dicción imperfecta — pero cada consonante separada es un grado menos de fuego. La precisión no se exige: se PREMIA. La boca que trabaja sus letras en este mundo se fabrica su refrigeración en el otro.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.oirse-interactivo')
+    : document.querySelector('.oirse-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#oirse-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.oirse-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="oirse-panel-header">' +
+        '<p class="oirse-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="oirse-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="oirse-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="oirse-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.oirse-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.oirse-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="oirse-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
