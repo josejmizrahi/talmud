@@ -1,0 +1,331 @@
+<div class="tefsab-interactivo">
+<style>
+  .tefsab-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .tefsab-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .tefsab-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .tefsab-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .tefsab-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .tefsab-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .tefsab-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .tefsab-diagrama svg { width: 100%; height: auto; display: block; }
+  .tefsab-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .tefsab-nodo:hover rect { stroke-width: 2 !important; }
+  .tefsab-nodo:hover circle { stroke-width: 2.5 !important; }
+  .tefsab-nodo.activa rect { stroke-width: 2.5 !important; }
+  .tefsab-nodo.activa circle { stroke-width: 3 !important; }
+  .tefsab-nodo.dim { opacity: 0.32; }
+  .tefsab-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .tefsab-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .tefsab-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .tefsab-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .tefsab-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .tefsab-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .tefsab-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="tefsab-leyenda">
+  <span style="font-weight: 500;">Click en cualquier medallón:</span>
+  <span><span class="swatch dorado"></span>entró al sidur · hasta hoy</span>
+  <span><span class="swatch azul"></span>paz · comunidad</span>
+  <span><span class="swatch verde"></span>Torá · avodá</span>
+  <span><span class="swatch rojo"></span>yetzer · enemigos</span>
+</div>
+
+<div class="tefsab-diagrama">
+<svg viewBox="0 0 720 505" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 16b-17a: la galería de las once tefilot personales — lo que cada sabio decía al terminar la amidá</title>
+
+<!-- TÍTULO -->
+<text x="360" y="26" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Las tefilot personales de los sabios · once voces después de la amidá</text>
+<text x="360" y="45" text-anchor="middle" font-size="11" fill="#6b4423">Berajot 16b–17a · donde termina el keva de las dieciocho berajot, empieza la firma espiritual de cada uno</text>
+
+<text x="60" y="72" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA GALERÍA · FILA UNA · 16B</text>
+
+<!-- 1 · R. Elazar · azul -->
+<g class="tefsab-nodo" data-id="elazar">
+  <circle cx="78" cy="168" r="46" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="78" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">1</text>
+  <text x="78" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">R. Elazar</text>
+  <text x="78" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#1e3a5f">אַהֲבָה וְאַחְוָה</text>
+  <text x="78" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">amor · hermandad</text>
+  <text x="78" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">paz · amistad</text>
+</g>
+
+<!-- 2 · R. Yojanan · azul -->
+<g class="tefsab-nodo" data-id="yojanan">
+  <circle cx="191" cy="168" r="46" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="191" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">2</text>
+  <text x="191" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">R. Yojanan</text>
+  <text x="191" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#1e3a5f">שֶׁתָּצִיץ בְּבָשְׁתֵּנוּ</text>
+  <text x="191" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">mira nuestra vergüenza</text>
+  <text x="191" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">vístete de misericordia</text>
+</g>
+
+<!-- 3 · R. Zeira · rojo -->
+<g class="tefsab-nodo" data-id="zeira">
+  <circle cx="304" cy="168" r="46" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.8"/>
+  <text x="304" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">3</text>
+  <text x="304" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">R. Zeira</text>
+  <text x="304" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#8b1a1a">שֶׁלֹּא נֶחֱטָא</text>
+  <text x="304" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">no pecar</text>
+  <text x="304" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">no avergonzarnos</text>
+</g>
+
+<!-- 4 · R. Jiya · verde -->
+<g class="tefsab-nodo" data-id="jiya">
+  <circle cx="417" cy="168" r="46" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.8"/>
+  <text x="417" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">4</text>
+  <text x="417" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">R. Jiya</text>
+  <text x="417" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#2d6b4e">תּוֹרָתְךָ אוּמָּנוּתֵנוּ</text>
+  <text x="417" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">que Tu Torá sea</text>
+  <text x="417" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">nuestro oficio</text>
+</g>
+
+<!-- 5 · Rav · dorado · sidur -->
+<g class="tefsab-nodo" data-id="rav">
+  <rect x="504" y="96" width="52" height="14" rx="7" fill="#b8860b"/>
+  <text x="530" y="106" text-anchor="middle" font-size="7.5" fill="#fdf3d8" letter-spacing="1">SIDUR</text>
+  <circle cx="530" cy="168" r="46" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="530" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">5</text>
+  <text x="530" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">Rav</text>
+  <text x="530" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#b8860b">חַיִּים שֶׁל שָׁלוֹם</text>
+  <text x="530" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la letanía de las vidas</text>
+  <text x="530" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">hoy: birkat hajodesh</text>
+</g>
+
+<!-- 6 · Rabbi · rojo -->
+<g class="tefsab-nodo" data-id="rabbi">
+  <circle cx="643" cy="168" r="46" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.8"/>
+  <text x="643" y="152" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">6</text>
+  <text x="643" y="169" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">Rabbi</text>
+  <text x="643" y="185" text-anchor="middle" font-size="8" direction="rtl" fill="#8b1a1a">מֵעַזֵּי פָנִים</text>
+  <text x="643" y="230" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">líbranos de los malos</text>
+  <text x="643" y="242" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">— con guardias y todo</text>
+</g>
+
+<text x="60" y="270" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">FILA DOS · 16B–17A</text>
+
+<!-- 7 · Rav Safra · azul -->
+<g class="tefsab-nodo" data-id="safra">
+  <circle cx="134" cy="350" r="46" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.8"/>
+  <text x="134" y="334" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">7</text>
+  <text x="134" y="351" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">Rav Safra</text>
+  <text x="134" y="367" text-anchor="middle" font-size="8" direction="rtl" fill="#1e3a5f">פָּמַלְיָא שֶׁל מַעְלָה</text>
+  <text x="134" y="412" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">paz arriba y abajo</text>
+  <text x="134" y="424" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">de shelo lishmá a lishmá</text>
+</g>
+
+<!-- 8 · R. Alexandri · rojo -->
+<g class="tefsab-nodo" data-id="alexandri">
+  <circle cx="247" cy="350" r="46" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.8"/>
+  <text x="247" y="334" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">8</text>
+  <text x="247" y="351" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">R. Alexandri</text>
+  <text x="247" y="367" text-anchor="middle" font-size="8" direction="rtl" fill="#8b1a1a">וּמִי מְעַכֵּב?</text>
+  <text x="247" y="412" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la esquina de luz ·</text>
+  <text x="247" y="424" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la levadura de la masa</text>
+</g>
+
+<!-- 9 · Rava · dorado · sidur -->
+<g class="tefsab-nodo" data-id="rava">
+  <rect x="334" y="278" width="52" height="14" rx="7" fill="#b8860b"/>
+  <text x="360" y="288" text-anchor="middle" font-size="7.5" fill="#fdf3d8" letter-spacing="1">SIDUR</text>
+  <circle cx="360" cy="350" r="46" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="334" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">9</text>
+  <text x="360" y="351" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">Rava</text>
+  <text x="360" y="367" text-anchor="middle" font-size="8" direction="rtl" fill="#b8860b">אֵינִי כְּדַאי</text>
+  <text x="360" y="412" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">vaso lleno de vergüenza</text>
+  <text x="360" y="424" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">hoy: vidui de Yom Kipur</text>
+</g>
+
+<!-- 10 · Mar bar Ravina · dorado · sidur -->
+<g class="tefsab-nodo" data-id="mar-bar-ravina">
+  <rect x="447" y="278" width="52" height="14" rx="7" fill="#b8860b"/>
+  <text x="473" y="288" text-anchor="middle" font-size="7.5" fill="#fdf3d8" letter-spacing="1">SIDUR</text>
+  <circle cx="473" cy="350" r="46" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="473" y="331" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">10</text>
+  <text x="473" y="347" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">Mar bar</text>
+  <text x="473" y="359" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">Ravina</text>
+  <text x="473" y="374" text-anchor="middle" font-size="8" direction="rtl" fill="#b8860b">נְצוֹר לְשׁוֹנִי מֵרָע</text>
+  <text x="473" y="412" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">guarda mi lengua ·</text>
+  <text x="473" y="424" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el final de toda amidá</text>
+</g>
+
+<!-- 11 · Rav Sheshet · verde -->
+<g class="tefsab-nodo" data-id="sheshet">
+  <circle cx="586" cy="350" r="46" fill="rgba(30,107,90,0.10)" stroke="#2d6b4e" stroke-width="1.8"/>
+  <text x="586" y="334" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">11</text>
+  <text x="586" y="351" text-anchor="middle" font-size="10" fill="#1a1410" font-weight="600">Rav Sheshet</text>
+  <text x="586" y="367" text-anchor="middle" font-size="8" direction="rtl" fill="#2d6b4e">חֶלְבִּי וְדָמִי</text>
+  <text x="586" y="412" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">en día de taanit:</text>
+  <text x="586" y="424" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el cuerpo como korbán</text>
+</g>
+
+<!-- CIERRE -->
+<line x1="60" y1="448" x2="660" y2="448" stroke="#b8860b" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.7"/>
+<text x="360" y="472" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">once firmas espirituales · tres de ellas — Rav, Rava, Mar bar Ravina — se volvieron el keva de todos:</text>
+<text x="360" y="488" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">birkat hajodesh · el vidui de Yom Kipur · el «Elohai netzor» que cierra toda amidá hasta hoy</text>
+
+</svg>
+</div>
+
+<div class="tefsab-panel" id="tefsab-panel">
+  <p class="tefsab-vacio">↑ Click en cualquier medallón de la galería para ver la tefilá completa y su explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'elazar': {
+      titulo: 'R. Elazar · amor, hermandad, paz y amistad',
+      hebreo: 'שֶׁתַּשְׁכֵּן בְּפוּרֵינוּ אַהֲבָה וְאַחְוָה וְשָׁלוֹם וְרֵיעוּת',
+      traduccion: '«Que hagas morar en nuestra suerte amor, hermandad, paz y amistad»',
+      explicacion: 'La galería abre con el mismo sabio que cerró la sugyá anterior: R. Elazar acaba de enseñar que כֵּן אֲבָרֶכְךָ בְחַיָּי es el shema y בְּשִׁמְךָ אֶשָּׂא כַפָּי es la tefilá — y ahora el editor muestra qué decía ÉL al terminar esa tefilá.\n\nSu pedido es enteramente RELACIONAL: amor (אַהֲבָה), hermandad (אַחְוָה), paz (שָׁלוֹם) y amistad (רֵיעוּת) «en nuestra suerte» — en el círculo concreto de personas que nos tocó. Y sigue: amplía nuestro territorio con DISCÍPULOS, haznos llegar a un buen fin, pon nuestra porción en el Gan Eden, y arréglanos con un BUEN COMPAÑERO y un BUEN YETZER.\n\nEl detalle más fino es el final: חָבֵר טוֹב וְיֵצֶר טוֹב en la misma frase. El compañero externo y la inclinación interna son tratados como el mismo tipo de necesidad — nadie llega a buen fin solo, ni por fuera ni por dentro. Después de dieciocho berajot dirigidas a HKBH, la tefilá personal de R. Elazar pide, en el fondo, una sola cosa: buena COMPAÑÍA en todas sus formas.'
+    },
+    'yojanan': {
+      titulo: 'R. Yojanan · mira nuestra vergüenza',
+      hebreo: 'שֶׁתָּצִיץ בְּבָשְׁתֵּנוּ וְתַבִּיט בְּרָעָתֵנוּ וְתִתְלַבֵּשׁ בְּרַחֲמֶיךָ',
+      traduccion: '«Que atisbes nuestra vergüenza y mires nuestra desgracia — y te vistas de Tu misericordia»',
+      explicacion: 'La tefilá de R. Yojanan tiene una estructura audaz: primero pide que HKBH MIRE — que atisbe (שֶׁתָּצִיץ) nuestra vergüenza, que observe nuestra desgracia — y después que se VISTA: de Su misericordia, que se cubra con Su fuerza, que se envuelva en Su benevolencia (חֲסִידוּת), que se ciña con Su gracia (חֲנִינוּת).\n\nLa imagen es la de alguien que se prepara para salir: la mirada sobre nuestra miseria provoca que HKBH se ponga, prenda por prenda, el ropaje de Sus atributos de compasión. El verbo תָּצִיץ (atisbar, espiar por una rendija — el mismo de Shir HaShirim 2:9, מֵצִיץ מִן הַחֲרַכִּים) sugiere una mirada íntima, no un juicio desde el trono.\n\nY que la vergüenza sea el ARGUMENTO — no el mérito, no la Torá estudiada, sino בָּשְׁתֵּנוּ — anticipa la lógica que culminará en Rava: presentarse como necesitado es, en la tefilá personal, la posición más fuerte.'
+    },
+    'zeira': {
+      titulo: 'R. Zeira · no pecar y no avergonzarnos',
+      hebreo: 'שֶׁלֹּא נֶחֱטָא וְלֹא נֵבוֹשׁ וְלֹא נִכָּלֵם מֵאֲבוֹתֵינוּ',
+      traduccion: '«Que no pequemos, y no nos avergoncemos ni nos abochornemos ante nuestros padres»',
+      explicacion: 'La más breve de las once — y por eso mismo la más nítida. R. Zeira pide dos cosas encadenadas: no pecar, y no pasar la vergüenza resultante ante אֲבוֹתֵינוּ — nuestros padres.\n\nLa vergüenza que teme no es la social sino la GENEALÓGICA: el momento en que las generaciones anteriores — los avot, los justos que nos precedieron — vean en qué quedó su descendencia. El pecado no es solo una falta ante HKBH; es una humillación ante la cadena que nos transmitió todo.\n\nNótese el eco con sus vecinos de galería: R. Yojanan pedía que HKBH mirara nuestra vergüenza con misericordia; R. Zeira pide directamente no llegar a tenerla. Y Rav, dos medallones después, incluirá en su letanía חַיִּים שֶׁאֵין בָּהֶם בּוּשָׁה וּכְלִימָּה — una vida sin vergüenza ni bochorno. La בּוּשָׁה es uno de los hilos secretos que cose la galería entera: estos sabios midieron su vida espiritual por la capacidad de sostener la mirada.'
+    },
+    'jiya': {
+      titulo: 'R. Jiya · que Tu Torá sea nuestro oficio',
+      hebreo: 'שֶׁתְּהֵא תוֹרָתְךָ אוּמָּנוּתֵנוּ וְאַל יִדְוֶה לִבֵּנוּ וְאַל יֶחְשְׁכוּ עֵינֵינוּ',
+      traduccion: '«Que Tu Torá sea nuestro oficio, y que no duela nuestro corazón ni se oscurezcan nuestros ojos»',
+      explicacion: 'R. Jiya pide que la Torá sea אוּמָּנוּת — OFICIO, profesión, el trabajo del que uno vive. No un adorno del tiempo libre ni una obligación cumplida: la ocupación central, lo que uno «es» cuando le preguntan a qué se dedica.\n\nLa palabra es exacta: el umán (artesano) tiene con su oficio una relación que el aficionado no conoce — herramientas propias, horas fijas, identidad pública, sustento. Pedir que la Torá sea el oficio es pedir esa totalidad.\n\nY la segunda mitad revela el precio que ese pedido conoce: וְאַל יִדְוֶה לִבֵּנוּ וְאַל יֶחְשְׁכוּ עֵינֵינוּ — que no duela el corazón ni se oscurezcan los ojos. El estudio total desgasta: corazones que se enferman de pena, ojos que se apagan sobre el texto. R. Jiya pide la vocación Y la salud para sostenerla — sabe que la una sin la otra no llega lejos. Es la tefilá del profesional de la Torá, consciente de los riesgos laborales de su gremio.'
+    },
+    'rav': {
+      titulo: 'Rav · la letanía de las vidas · hoy birkat hajodesh',
+      hebreo: 'חַיִּים אֲרוּכִּים · חַיִּים שֶׁל שָׁלוֹם · חַיִּים שֶׁל טוֹבָה · חַיִּים שֶׁל בְּרָכָה · חַיִּים שֶׁל פַּרְנָסָה...',
+      traduccion: '«Vida larga, vida de paz, vida de bien, vida de bendición, vida de sustento, vida de vigor de huesos, vida en la que haya temor del pecado, vida sin vergüenza ni bochorno, vida de riqueza y honor, vida en la que haya en nosotros amor de Torá y temor del Cielo, vida en la que llenes todos los deseos de nuestro corazón para bien»',
+      explicacion: 'La tefilá de Rav es una LETANÍA: once cláusulas que empiezan todas con la misma palabra — חַיִּים, vida. Vida larga; de paz; de bien; de bendición; de sustento; de חִלּוּץ עֲצָמוֹת (vigor de huesos — salud física concreta); con temor del pecado; sin vergüenza ni bochorno; de riqueza y honor; con amor de Torá y temor del Cielo; y la última, la que abarca todo: que llenes los deseos de nuestro corazón — לְטוֹבָה, para bien.\n\nLa lista es deliberadamente COMPLETA: material y espiritual alternan sin jerarquía. Parnasá y yirat shamaim, huesos firmes y amor de Torá — Rav no considera que pedir sustento sea menos digno que pedir santidad. La vida entera, en todas sus capas, es materia legítima de tefilá.\n\nY esta es la primera de las tres tefilot de la galería que ENTRARON AL SIDUR: la letanía de Rav se convirtió en BIRKAT HAJODESH — la bendición del mes nuevo que toda comunidad recita el shabat anterior a rosh jodesh, palabra por palabra. Lo que un sabio decía en privado al terminar su amidá, el pueblo entero lo canta hoy de pie ante el sefer Torá. La intimidad de uno se volvió el keva de todos.'
+    },
+    'rabbi': {
+      titulo: 'Rabbi · líbranos de los insolentes — con guardias y todo',
+      hebreo: 'שֶׁתַּצִּילֵנוּ מֵעַזֵּי פָנִים... מֵאָדָם רָע, מֵחָבֵר רָע, מִשָּׁכֵן רָע, וּמִשָּׂטָן הַמַּשְׁחִית',
+      traduccion: '«Que nos libres de los insolentes y de la insolencia, del hombre malo, del mal encuentro, del mal yetzer, del mal compañero, del mal vecino, y del satán destructor, y de un juicio duro y de un litigante duro — sea hijo del pacto o no lo sea»',
+      explicacion: 'Rabbi — R. Yehudá HaNasí, el príncipe, el hombre más poderoso del judaísmo de su generación — pedía cada día ser LIBRADO: de los insolentes, del hombre malo, del mal encuentro, del mal yetzer, del mal compañero, del mal vecino, del satán destructor, del juicio duro y del litigante duro — «sea בֶן בְּרִית o no lo sea»: el peligro no distingue judío de gentil.\n\nY la guemará agrega el detalle que convierte la tefilá en enseñanza: אַף עַל גַּב דְּקָיְימִי קְצוּצֵי עֲלֵיהּ דְּרַבִּי — lo decía AUNQUE tenía guardias imperiales apostados a su puerta. El hombre con la mejor seguridad del imperio rezaba como el más desprotegido.\n\nLa lección es doble. Primero: la protección visible no cancela la necesidad de la invisible — los guardias paran al asaltante, no al mal vecino, ni al mal yetzer, ni al satán. Segundo: la lista de Rabbi mezcla sin costura amenazas externas (adam ra, shajén ra) e internas (yetzer ra) — el catálogo del peligro humano es continuo, y la escolta romana solo cubre un tramo. Su tefilá sobrevive en la del amanecer de todo sidur: יְהִי רָצוֹן... שֶׁתַּצִּילֵנוּ... es de las primeras cosas que un judío dice cada mañana.'
+    },
+    'safra': {
+      titulo: 'Rav Safra · paz en la familia de arriba y en la de abajo',
+      hebreo: 'שֶׁתָּשִׂים שָׁלוֹם בְּפָמַלְיָא שֶׁל מַעְלָה וּבְפָמַלְיָא שֶׁל מַטָּה',
+      traduccion: '«Que pongas paz en la familia de arriba y en la familia de abajo, y entre los estudiantes que se ocupan de Tu Torá — sea lishmá o shelo lishmá; y los que se ocupan shelo lishmá, que lleguen a ocuparse lishmá»',
+      explicacion: 'Rav Safra pide paz en DOS familias: la פָּמַלְיָא שֶׁל מַעְלָה — la corte de arriba, los ángeles protectores de las naciones, cuyos conflictos celestes son la raíz de las guerras terrestres — y la פָּמַלְיָא שֶׁל מַטָּה — la de abajo, que la guemará entiende como los SABIOS: la corte terrestre cuyas disputas también necesitan paz. Que la beit midrash requiera la misma tefilá que la geopolítica cósmica es un diagnóstico honesto del mundo rabínico.\n\nLa segunda mitad es de una generosidad extraordinaria: paz también entre los estudiantes — TODOS, los que estudian lishmá (por la Torá misma) Y los que estudian shelo lishmá (por honor, por carrera, por costumbre). Y para estos últimos, no expulsión sino un pedido: שֶׁיְּהוּ עוֹסְקִין לִשְׁמָהּ — que LLEGUEN a lishmá.\n\nEs la doctrina de מִתּוֹךְ שֶׁלֹּא לִשְׁמָהּ בָּא לִשְׁמָהּ hecha oración: el motivo imperfecto no descalifica — es una estación en el camino. Rav Safra reza por los estudiantes imperfectos en vez de juzgarlos; su tefilá abraza el punto de partida real de casi todo el que abre un libro.'
+    },
+    'alexandri': {
+      titulo: 'R. Alexandri · la esquina de luz · ¿y quién lo impide?',
+      hebreo: 'שֶׁתַּעֲמִידֵנוּ בְּקֶרֶן אוֹרָה · רְצוֹנֵנוּ לַעֲשׂוֹת רְצוֹנֶךָ — וּמִי מְעַכֵּב? שְׂאוֹר שֶׁבָּעִיסָּה וְשִׁעְבּוּד מַלְכֻיוֹת',
+      traduccion: '«Que nos pongas de pie en la esquina iluminada y no en la esquina oscura» · «Es nuestra voluntad hacer Tu voluntad — ¿y quién lo impide? La levadura de la masa y el yugo de los imperios»',
+      explicacion: 'R. Alexandri tiene DOS tefilot en la galería. La primera es una imagen: שֶׁתַּעֲמִידֵנוּ בְּקֶרֶן אוֹרָה — ponnos de pie en la esquina de LUZ, no en la de oscuridad. No pide riqueza ni éxito: pide POSICIÓN — estar parado donde la luz cae, donde se ve y se es visto con claridad.\n\nLa segunda (algunos dicen que era de Rav Hamnuna) es quizá la frase más filosa del Talmud sobre la condición humana: «Señor de los mundos, revelado y sabido es ante Ti que NUESTRA VOLUNTAD ES HACER TU VOLUNTAD. ¿Y quién lo impide? שְׂאוֹר שֶׁבָּעִיסָּה — la levadura de la masa — y el yugo de los imperios».\n\nLa antropología es luminosa: el deseo profundo del ser humano ES hacer la voluntad divina — el pecado no es nuestra esencia sino nuestra INTERFERENCIA. Dos interferencias, exactamente: una interna — el yetzer como levadura, ese agente silencioso que infla y agria la masa desde adentro — y una externa — shibud maljuyot, la presión de los imperios que deforma la vida judía desde afuera. Ni culpa pura ni excusa pura: un diagnóstico. Y termina pidiendo: que sea Tu voluntad someterlos, «y volveremos a hacer las leyes de Tu voluntad con corazón entero».'
+    },
+    'rava': {
+      titulo: 'Rava · el vaso lleno de vergüenza · hoy el vidui de Yom Kipur',
+      hebreo: 'אֱלֹהַי, עַד שֶׁלֹּא נוֹצַרְתִּי אֵינִי כְּדַאי, וְעַכְשָׁיו שֶׁנּוֹצַרְתִּי כְּאִלּוּ לֹא נוֹצַרְתִּי... הֲרֵי אֲנִי לְפָנֶיךָ כִּכְלִי מָלֵא בוּשָׁה וּכְלִימָּה',
+      traduccion: '«Dios mío: antes de ser formado yo no valía, y ahora que fui formado es como si no hubiera sido formado. Polvo soy en mi vida — cuánto más en mi muerte. Heme ante Ti como un vaso lleno de vergüenza y bochorno. Sea Tu voluntad que no peque más; y lo que pequé ante Ti, púlelo con Tu abundante misericordia — pero no mediante sufrimientos ni enfermedades graves»',
+      explicacion: 'La más radical de las once. Rava (la guemará anota que era originalmente la confesión de RAV HAMNUNA ZUTI en Yom Kipur) se presenta ante HKBH desde la insuficiencia total: antes de ser creado, no era necesario — si lo hubiera sido, habría sido creado antes; y ahora que existe, es «como si no» — porque no llenó su propósito. Polvo en vida, cuánto más en muerte. כְּלִי מָלֵא בוּשָׁה וּכְלִימָּה — un VASO lleno de vergüenza y bochorno.\n\nY sin embargo la tefilá no termina en el abismo: pide no pecar más, y que lo ya pecado sea PULIDO (מָרֵק — el verbo de fregar un utensilio) con misericordia — con una condición valiente: אֲבָל לֹא עַל יְדֵי יִסּוּרִין — «pero NO mediante sufrimientos ni enfermedades graves». Rava acepta la limpieza y negocia el método. La humildad más extrema convive con la franqueza más extrema — eso ES la tefilá personal.\n\nSegundo medallón dorado: esta confesión se convirtió en el VIDUI DE YOM KIPUR — el אלהי עד שלא נוצרתי que todo el pueblo dice al final de cada amidá del día más santo del año. La voz más quebrada de la galería es la que más lejos llegó.'
+    },
+    'mar-bar-ravina': {
+      titulo: 'Mar bar Ravina · Elohai netzor · el final de toda amidá',
+      hebreo: 'אֱלֹהַי, נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה, וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם, וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה. פְּתַח לִבִּי בְּתוֹרָתֶךָ',
+      traduccion: '«Dios mío: guarda mi lengua del mal y mis labios de hablar engaño. Ante los que me maldicen, que mi alma calle; y que mi alma sea como polvo para todos. Abre mi corazón a Tu Torá, y que mi alma persiga Tus mitzvot. Y a todos los que traman mal contra mí — pronto anula su consejo y arruina su designio»',
+      explicacion: 'El tercer medallón dorado — y el de destino más asombroso: la tefilá de Mar bar Ravina es, palabra por palabra, el אֱלֹהַי נְצוֹר que CIERRA LA AMIDÁ EN TODO SIDUR DEL MUNDO hasta hoy. Tres veces al día, cada judío que reza termina sus dieciocho berajot con la oración personal de este sabio de Babilonia.\n\nSu tema es el HABLA — y la simetría es perfecta: la amidá es el ejercicio supremo de la palabra dirigida a HKBH, y su cierre pide por la palabra dirigida a los humanos. Guarda mi lengua del mal, mis labios del engaño; ante los que me maldicen — SILENCIO (נַפְשִׁי תִדּוֹם); que mi alma sea polvo para todos. El que acaba de hablar con Dios pide no herir con la misma boca.\n\nY el movimiento interno es de tres pasos: primero contención (lengua, labios, silencio), después apertura (פְּתַח לִבִּי בְּתוֹרָתֶךָ — abre mi corazón a Tu Torá), y al final protección (anula el consejo de los que traman mal). Que la galería entera haya quedado representada en el sidur precisamente por ESTA tefilá dice algo: de todas las peticiones posibles, la que el pueblo adoptó como cierre diario es la que pide dominar la propia boca.'
+    },
+    'sheshet': {
+      titulo: 'Rav Sheshet · la grasa y la sangre sobre el mizbeaj',
+      hebreo: 'יְהִי רָצוֹן מִלְּפָנֶיךָ שֶׁיְּהֵא חֶלְבִּי וְדָמִי שֶׁנִּתְמַעֵט כְּאִילּוּ הִקְרַבְתִּיו לְפָנֶיךָ עַל גַּבֵּי הַמִּזְבֵּחַ, וְתִרְצֵנִי',
+      traduccion: '«Señor de los mundos: cuando el Templo estaba en pie, el que pecaba traía un korbán — y no se ofrecía de él sino su grasa y su sangre, y se le expiaba. Ahora me senté en ayuno, y mi grasa y mi sangre disminuyeron. Sea Tu voluntad que mi grasa y mi sangre disminuidas sean como si las hubiera ofrecido ante Ti sobre el mizbeaj — y acéptame»',
+      explicacion: 'La galería cierra con la tefilá más corporal — la que Rav Sheshet decía cuando estaba en TAANIT, en día de ayuno. Su razonamiento es una halajá convertida en poesía: cuando existía el Templo, del animal ofrecido solo subían al fuego la GRASA y la SANGRE (חֵלֶב וְדָם) — eso era lo que expiaba. El Templo ya no está. Pero el que ayuna también pierde grasa y sangre — las suyas.\n\nEl pedido, entonces: que lo disminuido de MI cuerpo cuente כְּאִילּוּ הִקְרַבְתִּיו — COMO SI lo hubiera ofrecido sobre el mizbeaj. El ayuno deja de ser dieta penitencial y se vuelve AVODÁ sacrificial: el cuerpo propio como korbán, la mesa del ayuno como altar (la misma teología del cuerpo que ofrece que aparece en yisurim shel ahavá).\n\nY la última palabra es la clave de todo korbán: וְתִרְצֵנִי — «y ACÉPTAME». No «acepta mi ofrenda»: acéptame a mí. Porque en este sacrificio no hay animal intermediario — el oferente ES la ofrenda. Con Rav Sheshet la galería completa su arco: de las palabras después de la amidá (R. Elazar) al cuerpo mismo hecho tefilá.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.tefsab-interactivo')
+    : document.querySelector('.tefsab-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#tefsab-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.tefsab-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="tefsab-panel-header">' +
+        '<p class="tefsab-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="tefsab-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="tefsab-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="tefsab-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.tefsab-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.tefsab-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="tefsab-vacio">↑ Click en cualquier medallón de la galería para ver la tefilá completa y su explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
