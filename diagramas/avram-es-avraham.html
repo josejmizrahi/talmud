@@ -1,0 +1,333 @@
+<div class="avram-interactivo">
+<style>
+  .avram-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .avram-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .avram-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .avram-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .avram-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .avram-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .avram-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .avram-diagrama svg { width: 100%; height: auto; display: block; }
+  .avram-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .avram-nodo:hover rect { stroke-width: 2 !important; }
+  .avram-nodo:hover circle { stroke-width: 2.5 !important; }
+  .avram-nodo.activa rect { stroke-width: 2.5 !important; }
+  .avram-nodo.activa circle { stroke-width: 3 !important; }
+  .avram-nodo.dim { opacity: 0.32; }
+  .avram-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .avram-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .avram-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .avram-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .avram-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .avram-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .avram-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="avram-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>Avraham · el hadran</span>
+  <span><span class="swatch violeta"></span>Sara</span>
+  <span><span class="swatch azul"></span>Yaakov</span>
+  <span><span class="swatch rojo"></span>la objeción del navi</span>
+</div>
+
+<div class="avram-diagrama">
+<svg viewBox="0 0 720 870" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13a: tres renombrados, tres reglas — Avram/Avraham, Sarai/Sara, Yaakov/Israel — y el hadran del perek</title>
+
+<defs>
+  <marker id="flecha-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-av-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+  <marker id="flecha-av-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Tres renombrados · tres reglas · el hadran</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13a · qué pasa con un nombre cuando Dios lo agranda · el cierre del perek</text>
+
+<!-- ============================================================ -->
+<!-- FILA 1 · LAS TRES TRANSFORMACIONES                           -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">TRES RENOMBRADOS · EL NOMBRE CRECE CON EL ALCANCE</text>
+
+<!-- Avraham -->
+<g class="avram-nodo" data-id="avraham-nombre">
+  <rect x="60" y="86" width="184" height="140" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="152" y="106" text-anchor="middle" font-size="9" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">AVRAHAM</text>
+  <text x="152" y="134" text-anchor="middle" font-size="15" direction="rtl" fill="#3d2f23">אַבְרָם</text>
+  <line x1="152" y1="144" x2="152" y2="160" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-av-gold)"/>
+  <text x="152" y="186" text-anchor="middle" font-size="20" direction="rtl" fill="#b8860b" font-weight="700">אַבְרָהָם</text>
+  <text x="152" y="206" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">av de Aram →</text>
+  <text x="152" y="218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">av de todo el mundo</text>
+</g>
+
+<!-- Sara -->
+<g class="avram-nodo" data-id="sara-nombre">
+  <rect x="268" y="86" width="184" height="140" rx="6" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="1.6"/>
+  <text x="360" y="106" text-anchor="middle" font-size="9" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SARA</text>
+  <text x="360" y="134" text-anchor="middle" font-size="15" direction="rtl" fill="#3d2f23">שָׂרַי</text>
+  <line x1="360" y1="144" x2="360" y2="160" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-av)"/>
+  <text x="360" y="186" text-anchor="middle" font-size="20" direction="rtl" fill="#5a3a8a" font-weight="700">שָׂרָה</text>
+  <text x="360" y="206" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">princesa de su nación →</text>
+  <text x="360" y="218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">princesa de todo el mundo</text>
+</g>
+
+<!-- Yaakov -->
+<g class="avram-nodo" data-id="yaakov-nombre">
+  <rect x="476" y="86" width="184" height="140" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="568" y="106" text-anchor="middle" font-size="9" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">YAAKOV</text>
+  <text x="568" y="134" text-anchor="middle" font-size="15" direction="rtl" fill="#3d2f23">יַעֲקֹב</text>
+  <line x1="568" y1="144" x2="568" y2="160" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-av)"/>
+  <text x="568" y="186" text-anchor="middle" font-size="20" direction="rtl" fill="#1e3a5f" font-weight="700">יִשְׂרָאֵל</text>
+  <text x="568" y="206" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">Israel ikar ·</text>
+  <text x="568" y="218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">Yaakov tafel</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- FILA 2 · LAS TRES REGLAS HALÁJICAS                           -->
+<!-- ============================================================ -->
+<line x1="152" y1="226" x2="152" y2="244" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-av-gold)"/>
+<line x1="360" y1="226" x2="360" y2="244" stroke="#5a3a8a" stroke-width="1" marker-end="url(#flecha-av)"/>
+<line x1="568" y1="226" x2="568" y2="244" stroke="#1e3a5f" stroke-width="1" marker-end="url(#flecha-av)"/>
+
+<!-- Regla Avraham -->
+<g class="avram-nodo" data-id="avraham-regla">
+  <rect x="60" y="248" width="184" height="200" rx="6" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.3"/>
+  <text x="152" y="270" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">¿Quien dice «Avram»?</text>
+  <text x="152" y="290" text-anchor="middle" font-size="8.5" fill="#3d2f23">bar Kappara — transgrede un positivo</text>
+  <text x="152" y="306" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b">וְהָיָה שִׁמְךָ אַבְרָהָם</text>
+  <text x="152" y="326" text-anchor="middle" font-size="8.5" fill="#3d2f23">R. Eliezer — transgrede un negativo</text>
+  <text x="152" y="342" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b">וְלֹא יִקָּרֵא עוֹד</text>
+  <text x="152" y="356" text-anchor="middle" font-size="10" direction="rtl" fill="#b8860b">אֶת שִׁמְךָ אַבְרָם</text>
+  <rect x="97" y="372" width="110" height="26" rx="13" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="152" y="389" text-anchor="middle" font-size="10" fill="#b8860b" font-weight="700" letter-spacing="1">PROHIBIDO</text>
+  <text x="152" y="418" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">no se puede volver atrás:</text>
+  <text x="152" y="432" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">el nombre viejo quedó anulado</text>
+</g>
+
+<!-- Regla Sara -->
+<g class="avram-nodo" data-id="sara-regla">
+  <rect x="268" y="248" width="184" height="200" rx="6" fill="rgba(90,58,138,0.06)" stroke="#5a3a8a" stroke-width="1.3"/>
+  <text x="360" y="270" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">¿Y quien dice «Sarai»?</text>
+  <text x="360" y="296" text-anchor="middle" font-size="10.5" direction="rtl" fill="#5a3a8a">לֹא תִקְרָא אֶת שְׁמָהּ שָׂרָי</text>
+  <text x="360" y="316" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«no llamarás su nombre Sarai»</text>
+  <text x="360" y="338" text-anchor="middle" font-size="9" fill="#3d2f23">el mandato fue dicho</text>
+  <text x="360" y="352" text-anchor="middle" font-size="9" fill="#3d2f23" font-weight="600">SOLO a Avraham</text>
+  <rect x="285" y="372" width="150" height="26" rx="13" fill="rgba(90,58,138,0.10)" stroke="#5a3a8a" stroke-width="1.2"/>
+  <text x="360" y="389" text-anchor="middle" font-size="9" fill="#5a3a8a" font-weight="700" letter-spacing="0.5">NO RIGE PARA OTROS</text>
+  <text x="360" y="418" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">a nadie más se le ordenó nada</text>
+  <text x="360" y="432" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">sobre el nombre de Sara</text>
+</g>
+
+<!-- Regla Yaakov -->
+<g class="avram-nodo" data-id="yaakov-regla">
+  <rect x="476" y="248" width="184" height="200" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="568" y="270" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">¿Y quien dice «Yaakov»?</text>
+  <text x="568" y="290" text-anchor="middle" font-size="8.5" fill="#3d2f23">la Torá misma volvió a llamarlo así:</text>
+  <text x="568" y="308" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל</text>
+  <text x="568" y="322" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">בְּמַרְאוֹת הַלַּיְלָה</text>
+  <text x="568" y="340" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f" font-weight="700">וַיֹּאמֶר יַעֲקֹב יַעֲקֹב</text>
+  <text x="568" y="356" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">(Bereshit 46:2)</text>
+  <rect x="513" y="372" width="110" height="26" rx="13" fill="rgba(30,58,95,0.10)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="568" y="389" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="700" letter-spacing="1">PERMITIDO</text>
+  <text x="568" y="418" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">no se arranca el nombre —</text>
+  <text x="568" y="432" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">se re-jerarquiza (ikar / tafel)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA OBJECIÓN DEL NAVI                                         -->
+<!-- ============================================================ -->
+<line x1="152" y1="448" x2="152" y2="462" stroke="#8b1a1a" stroke-width="1"/>
+<line x1="360" y1="448" x2="360" y2="462" stroke="#8b1a1a" stroke-width="1"/>
+<line x1="568" y1="448" x2="568" y2="462" stroke="#8b1a1a" stroke-width="1"/>
+<line x1="152" y1="462" x2="568" y2="462" stroke="#8b1a1a" stroke-width="1"/>
+<line x1="360" y1="462" x2="360" y2="480" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-av-red)"/>
+
+<text x="60" y="494" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OBJECIÓN · R. YOSE BAR AVIN · NEJEMIÁ 9:7</text>
+
+<g class="avram-nodo" data-id="objecion">
+  <rect x="60" y="504" width="600" height="118" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.5"/>
+  <text x="360" y="530" text-anchor="middle" font-size="12.5" direction="rtl" fill="#8b1a1a">אַתָּה הוּא ה׳ הָאֱלֹהִים אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם</text>
+  <text x="360" y="550" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Tú eres Hashem, el Dios que elegiste a AVRAM» — ¡el propio navi usa el nombre viejo!</text>
+  <text x="360" y="576" text-anchor="middle" font-size="11" direction="rtl" fill="#8b1a1a" font-weight="700">מַאי דַּהֲוָה מֵעִיקָּרָא</text>
+  <text x="360" y="594" text-anchor="middle" font-size="9.5" fill="#3d2f23">respuesta: el profeta recuenta la alabanza desde el origen — lo elegiste cuando AÚN era Avram</text>
+  <text x="360" y="612" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la historia previa no se borra: se narra como pasado</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL HADRAN · CIERRE CEREMONIAL DEL PEREK                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="622" x2="360" y2="640" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-av-gold)"/>
+
+<text x="60" y="654" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL HADRAN · EL PRIMER PEREK DEL TALMUD LLEGA A SU FIN</text>
+
+<g class="avram-nodo" data-id="hadran">
+  <rect x="60" y="664" width="600" height="184" rx="8" fill="rgba(184,134,11,0.09)" stroke="#b8860b" stroke-width="2"/>
+  <rect x="70" y="674" width="580" height="164" rx="5" fill="none" stroke="#b8860b" stroke-width="0.7" stroke-dasharray="1,3"/>
+  <!-- viñeta ornamental superior -->
+  <line x1="230" y1="694" x2="330" y2="694" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="698" text-anchor="middle" font-size="12" fill="#b8860b">❦</text>
+  <line x1="390" y1="694" x2="490" y2="694" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="732" text-anchor="middle" font-size="23" direction="rtl" fill="#b8860b" font-weight="700">הֲדַרַן עֲלָךְ מֵאֵימָתַי</text>
+  <text x="360" y="754" text-anchor="middle" font-size="11" fill="#3d2f23" font-style="italic" font-family="'Cormorant Garamond', serif">«Volveremos a ti, ¿Desde cuándo?»</text>
+  <text x="360" y="782" text-anchor="middle" font-size="9.5" fill="#3d2f23">el perek abrió con מֵאֵימָתַי — midiendo la noche para el shema —</text>
+  <text x="360" y="798" text-anchor="middle" font-size="9.5" fill="#3d2f23">y cierra con los nombres de los avot agrandados y Egipto instalado en las noches</text>
+  <text x="360" y="818" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">el círculo es perfecto: empezó preguntando cuándo empieza la noche · termina enseñando qué se recuerda en ella</text>
+  <!-- viñeta ornamental inferior -->
+  <line x1="270" y1="832" x2="340" y2="832" stroke="#b8860b" stroke-width="0.6"/>
+  <text x="360" y="836" text-anchor="middle" font-size="10" fill="#b8860b">✦</text>
+  <line x1="380" y1="832" x2="450" y2="832" stroke="#b8860b" stroke-width="0.6"/>
+</g>
+
+</svg>
+</div>
+
+<div class="avram-panel" id="avram-panel">
+  <p class="avram-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'avraham-nombre': {
+      titulo: 'Avram → Avraham · de Aram al mundo entero',
+      hebreo: 'בַּתְּחִלָּה נַעֲשָׂה אָב לַאֲרָם וּלְבַסּוֹף נַעֲשָׂה אָב לְכָל הָעוֹלָם כּוּלּוֹ',
+      traduccion: '«Al principio fue hecho padre de Aram — y al final fue hecho padre de todo el mundo entero»',
+      explicacion: 'La última sugyá del perek arranca de un versículo aparentemente redundante: אַבְרָם הוּא אַבְרָהָם — «Avram es Avraham» (Divrei HaYamim I 1:27). ¿Para qué decir que son la misma persona? Todos lo saben.\n\nLa lectura rabínica: el versículo NO informa una identidad — enseña una TRAYECTORIA. Al principio, Avram: אָב לַאֲרָם, padre (figura fundadora) de su región, Aram. Al final, Avraham: אָב לְכָל הָעוֹלָם — av hamon goyim, padre de una multitud de naciones (Bereshit 17:5).\n\nLa letra añadida (la ה) NO decora: REGISTRA una expansión de alcance. El nombre crece cuando el alcance crece. Un nombre, en la teología rabínica, no es etiqueta arbitraria — es DESCRIPCIÓN COMPRIMIDA de la misión. Cuando la misión se agranda, el nombre debe agrandarse con ella.\n\nY nótese la dirección: no se le dio un nombre NUEVO — se le agrandó el que tenía. אַבְרָם está CONTENIDO dentro de אַבְרָהָם. La historia previa no se descarta: se incorpora dentro de una identidad mayor. Este principio — expansión sin borrado — es el que la sugyá va a examinar en sus tres variantes.'
+    },
+    'sara-nombre': {
+      titulo: 'Sarai → Sara · princesa de todo el mundo',
+      hebreo: 'שָׂרַי הִיא שָׂרָה',
+      traduccion: '«Sarai es Sara»',
+      explicacion: 'La misma lógica se despliega sobre Sara: בַּתְּחִלָּה — al principio — שָׂרַי: «MI princesa», con el sufijo posesivo de primera persona. Princesa de su nación, de su casa, de su gente. Un título REAL pero LOCAL.\n\nוּלְבַסּוֹף — al final — שָׂרָה: princesa a secas, sin posesivo. Cuando se quita el «mi», el título se universaliza: princesa דְּכוּלֵּי עָלְמָא — de todo el mundo.\n\nEl cambio gramatical es mínimo (una yud que se convierte en hei) pero el cambio semántico es total: el posesivo LIMITABA. «Mi princesa» pertenece a alguien, a un grupo, a un territorio. «Princesa» sin sufijo no pertenece a nadie — o pertenece a todos.\n\nLa simetría con Avraham es deliberada: en ambos casos el nombre viejo describía un alcance REGIONAL (Aram / su nación) y el nombre nuevo un alcance UNIVERSAL (todo el mundo). El pacto de Bereshit 17 no cambió a dos individuos — cambió el RADIO de su misión. Y los nombres, como instrumentos de precisión que son, se recalibraron para el radio nuevo.\n\nPero — como mostrará la regla halájica de abajo — la simetría de las transformaciones NO implica simetría de las reglas. A Sara la renombró Dios igual que a Avraham, y sin embargo su regla es distinta.'
+    },
+    'yaakov-nombre': {
+      titulo: 'Yaakov → Israel · ikar y tafel',
+      hebreo: 'לֹא שֶׁיֵּעָקֵר יַעֲקֹב מִמְּקוֹמוֹ אֶלָּא יִשְׂרָאֵל עִיקָּר וְיַעֲקֹב טָפֵל לוֹ',
+      traduccion: '«No que Yaakov sea arrancado de su lugar — sino que Israel es lo principal y Yaakov secundario a él»',
+      explicacion: 'El tercer renombrado es estructuralmente DISTINTO de los dos primeros — y esa diferencia es el corazón de la sugyá.\n\nCon Avram y Sarai, el nombre viejo quedó ANULADO: la Torá nunca vuelve a usarlos después del cambio. Con Yaakov, en cambio, la Torá misma sigue alternando: a veces Israel, a veces Yaakov — incluso en el mismo versículo.\n\nLa fórmula que los jajamim acuñaron (y que la sugyá anterior ya usó como modelo para Egipto en la era mesiánica): לֹא שֶׁיֵּעָקֵר — no se ARRANCA el nombre de su lugar. Se RE-JERARQUIZA: Israel pasa a ser עִיקָּר (ikar, lo principal) y Yaakov queda טָפֵל (tafel, secundario) — subordinado pero LEGÍTIMO.\n\nEl nombre Israel registra la victoria («porque luchaste con lo divino y con los hombres, y pudiste»); el nombre Yaakov registra el origen (el que nació agarrando el talón). La identidad madura NO borra el punto de partida — lo conserva en segundo plano.\n\nEsta es la tercera categoría del espectro: no «prohibido volver» (Avraham), no «mandato privado» (Sara), sino COEXISTENCIA JERARQUIZADA. Tres renombrados, tres gramáticas distintas de la transformación.'
+    },
+    'avraham-regla': {
+      titulo: 'La regla de Avraham · prohibido volver atrás',
+      hebreo: 'כׇּל הַקּוֹרֵא לְאַבְרָהָם אַבְרָם עוֹבֵר בַּעֲשֵׂה … רַבִּי אֱלִיעֶזֶר אוֹמֵר עוֹבֵר בְּלָאו',
+      traduccion: '«Todo el que llama Avram a Avraham transgrede un precepto positivo… R. Eliezer dice: transgrede una prohibición»',
+      explicacion: 'La sugyá convierte la teología en HALAJÁ: ¿qué pasa si alguien, hoy, llama «Avram» a Avraham?\n\nBar Kappara: transgrede un PRECEPTO POSITIVO (עֲשֵׂה). La fuente: ״וְהָיָה שִׁמְךָ אַבְרָהָם״ — «tu nombre SERÁ Avraham» (Bereshit 17:5). El futuro del versículo se lee como mandato permanente: su nombre DEBE ser Avraham, para siempre. Usar el nombre viejo es incumplir esa instrucción.\n\nR. Eliezer va más lejos: transgrede una PROHIBICIÓN (לָאו). La fuente: ״וְלֹא יִקָּרֵא עוֹד אֶת שִׁמְךָ אַבְרָם״ — «y NO se llamará más tu nombre Avram» (el mismo versículo, primera mitad). El «no se llamará» se lee como veto activo, no como mera predicción.\n\nLa dureza de la regla es notable: un solo versículo produce a la vez un aseh y un lav — y decir una palabra («Avram») viola potencialmente ambos. ¿Por qué tanta severidad con un nombre?\n\nPorque el nombre nuevo REGISTRA el pacto. Avraham fue renombrado en el momento exacto del brit milá y de la promesa de av hamon goyim. Volver al nombre viejo es, verbalmente, RETROCEDER el pacto — reducir al padre de todas las naciones a figura regional de Aram. La halajá protege la irreversibilidad de la expansión: hay transformaciones de las que NO se vuelve.'
+    },
+    'sara-regla': {
+      titulo: 'La regla de Sara · el mandato fue solo a Avraham',
+      hebreo: 'שָׂרַי אִשְׁתְּךָ לֹא תִקְרָא אֶת שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ',
+      traduccion: '«A Sarai tu mujer no llamarás su nombre Sarai, porque Sara es su nombre» (Bereshit 17:15)',
+      explicacion: 'La guemará objeta con lógica impecable: si decir «Avram» transgrede, entonces decir «Sarai» también debería — el versículo de Sara usa exactamente la misma estructura prohibitiva: לֹא תִקְרָא, «NO llamarás».\n\nLa respuesta es un análisis GRAMATICAL del destinatario: הָתָם קוּדְשָׁא בְּרִיךְ הוּא אָמַר לְאַבְרָהָם — allí el Santo Bendito le habló A AVRAHAM. El «no llamarás» (תִקְרָא, segunda persona SINGULAR) tiene un solo destinatario: el marido. A Avraham se le ordenó no llamar más Sarai a su mujer — y a NADIE MÁS se le ordenó nada.\n\nContrástese con el versículo de Avraham: ״וְלֹא יִקָּרֵא עוֹד״ — «no SE llamará», voz pasiva impersonal, sin destinatario limitado. Por eso ese veto rige para todo el mundo y para siempre, mientras que el de Sara fue un mandato PRIVADO entre Dios y un hombre concreto.\n\nLa halajá emerge de la MORFOLOGÍA: pasivo universal (יִקָּרֵא) versus activo singular (תִקְרָא). Una diferencia de conjugación produce dos regímenes jurídicos distintos.\n\nLa lección de método es pura guemará: nunca leas dos versículos «parecidos» como equivalentes. La Torá no tiene sinónimos descuidados — cada elección gramatical delimita con precisión quién está obligado, a qué, y hasta cuándo.'
+    },
+    'yaakov-regla': {
+      titulo: 'La regla de Yaakov · permitido, porque la Torá misma volvió',
+      hebreo: 'וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאוֹת הַלַּיְלָה וַיֹּאמֶר יַעֲקֹב יַעֲקֹב',
+      traduccion: '«Y dijo Dios a ISRAEL en visiones de la noche, y dijo: ¡YAAKOV, YAAKOV!» (Bereshit 46:2)',
+      explicacion: 'Tercera objeción de la guemará: entonces quien dice «Yaakov» en vez de «Israel» también debería transgredir — a Yaakov también lo renombró Dios, y con fórmula fuerte: ״לֹא יִקָּרֵא שִׁמְךָ עוֹד יַעֲקֹב״ (Bereshit 35:10), la MISMA voz pasiva universal que en Avraham.\n\nLa respuesta no es gramatical sino EMPÍRICA: שָׁאנֵי הָתָם דַּהֲדַר אַהְדְּרֵיהּ קְרָא — allí es distinto, porque el VERSÍCULO MISMO volvió a usarlo. La prueba es Bereshit 46:2, un versículo que contiene AMBOS nombres a centímetros de distancia: Dios habla «a Israel» — y lo llama «¡Yaakov, Yaakov!».\n\nSi el propio Autor del veto usa el nombre viejo DESPUÉS del cambio, el veto no puede ser absoluto. La conducta de la Torá interpreta a la Torá: el cambio de Yaakov nunca fue anulación — fue re-jerarquización. Israel ikar, Yaakov tafel: lo principal y lo secundario, conviviendo.\n\nEs la misma estructura que Ben Zoma y los jajamim acabaron de aplicar a la memoria de Egipto en la era mesiánica (la sugyá inmediatamente anterior — el puente editorial es explícito): la redención final será ikar y Egipto tafel, «no que se arranque Egipto de su lugar». El editor cierra el perek mostrando que esa fórmula no fue invento ad hoc: es la gramática bíblica de TODA transformación — los nombres de los avot ya funcionaban así.'
+    },
+    'objecion': {
+      titulo: 'La objeción del navi · «elegiste a Avram» (Nejemiá 9:7)',
+      hebreo: 'אַתָּה הוּא ה׳ הָאֱלֹהִים אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם',
+      traduccion: '«Tú eres Hashem, el Dios que elegiste a Avram» — ¿el profeta transgrede?',
+      explicacion: 'R. Yose bar Avin (algunos dicen R. Yose bar Zvida) lanza la objeción más incómoda: siglos DESPUÉS del cambio de nombre, el libro de Nejemiá — texto canónico, boca de los leviim en plena plegaria pública — dice ״אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם״: «que elegiste a AVRAM». ¡El nombre supuestamente prohibido, usado por el propio Tanaj!\n\nSi decir «Avram» viola un aseh (bar Kappara) y un lav (R. Eliezer), ¿cómo puede el texto sagrado violarlos?\n\nLa respuesta: הָתָם נָבִיא הוּא דְּקָא מְסַדֵּר לְשִׁבְחֵיהּ דְּרַחֲמָנָא מַאי דַּהֲוָה מֵעִיקָּרָא — allí el profeta está ORDENANDO la alabanza del Misericordioso según lo que fue DESDE EL ORIGEN. El versículo de Nejemiá es narración histórica: elegiste a Avram — cuando aún ERA Avram —, lo sacaste de Ur Kasdim, y ENTONCES ״וְשַׂמְתָּ שְּׁמוֹ אַבְרָהָם״, pusiste su nombre Avraham. El nombre viejo aparece en su posición cronológica correcta, ANTES del cambio, como parte del recuento de la trayectoria.\n\nLa distinción resultante es fina y profunda: está prohibido LLAMARLO Avram (usar el nombre viejo como nombre actual — eso retrocede el pacto), pero está permitido NARRAR que se llamó Avram (contar la historia — eso honra el pacto mostrando desde dónde creció).\n\nLa historia previa no se borra: se narra como pasado. Exactamente el principio de ikar/tafel aplicado al tiempo — el origen no se arranca de su lugar, se subordina al presente.'
+    },
+    'hadran': {
+      titulo: 'Hadran alaj Meeimatai · el cierre del primer perek',
+      hebreo: 'הֲדַרַן עֲלָךְ מֵאֵימָתַי',
+      traduccion: '«Volveremos a ti, ¿Desde cuándo?»',
+      explicacion: 'Con la respuesta sobre Nejemiá, el primer perek del Talmud llega a su fin. La tradición sella cada perek con la fórmula del hadran: הֲדַרַן עֲלָךְ — «volveremos a ti» (también leído: «nuestra gloria está sobre ti») — seguida del nombre del perek, que es siempre su primera palabra: מֵאֵימָתַי, «¿Desde cuándo?».\n\nEl hadran NO es una despedida — es una promesa de RETORNO. No se dice «terminamos contigo» sino «volveremos a ti»: el estudio talmúdico es circular, y todo perek concluido queda pendiente de ser re-estudiado. Coherente con todo lo que este perek enseñó sobre la memoria: nada se arranca de su lugar.\n\nY el círculo del perek es perfecto. Abrió (2a) con la pregunta מֵאֵימָתַי קוֹרִין אֶת שְׁמַע בְּעַרְבִית — ¿desde cuándo se recita el shema de la noche? — midiendo la frontera del anochecer con sacerdotes, guardias y columnas de aurora. Cierra (13a) con Ben Zoma y los jajamim instalando la memoria de Egipto EN LAS NOCHES, y con los nombres de los avot agrandados: Avram hecho Avraham, Sarai hecha Sara, Yaakov re-jerarquizado en Israel.\n\nEmpezó preguntando CUÁNDO empieza la noche; termina enseñando QUÉ se recuerda en ella. Entre las dos puntas, el perek construyó la arquitectura entera de la noche judía: el shema y sus horarios, la tefilá nocturna, los mazikin, el shema sobre la cama, la kavaná, y al final los nombres — que, como la noche misma, no se borran cuando amanece: se subordinan a una luz más grande.\n\nהֲדַרַן עֲלָךְ מֵאֵימָתַי — volveremos a ti, ¿Desde cuándo?'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.avram-interactivo')
+    : document.querySelector('.avram-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#avram-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.avram-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="avram-panel-header">' +
+        '<p class="avram-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="avram-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="avram-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="avram-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.avram-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.avram-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="avram-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
