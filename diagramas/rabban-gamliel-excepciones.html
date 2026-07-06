@@ -1,0 +1,382 @@
+<div class="gamliel-interactivo">
+<style>
+  .gamliel-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .gamliel-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .gamliel-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .gamliel-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .gamliel-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .gamliel-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .gamliel-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .gamliel-diagrama svg { width: 100%; height: auto; display: block; }
+  .gamliel-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .gamliel-nodo:hover rect { stroke-width: 2 !important; }
+  .gamliel-nodo:hover circle { stroke-width: 2.5 !important; }
+  .gamliel-nodo.activa rect { stroke-width: 2.5 !important; }
+  .gamliel-nodo.activa circle { stroke-width: 3 !important; }
+  .gamliel-nodo.dim { opacity: 0.32; }
+  .gamliel-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .gamliel-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .gamliel-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .gamliel-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .gamliel-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .gamliel-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .gamliel-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="gamliel-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>Rabban Gamliel</span>
+  <span><span class="swatch azul"></span>los alumnos · la regla general</span>
+  <span><span class="swatch rojo"></span>la excepción</span>
+  <span><span class="swatch verde"></span>Tavi · la dignidad</span>
+</div>
+
+<div class="gamliel-diagrama">
+<svg viewBox="0 0 720 1450" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 16a-16b y 17b: las tres excepciones de Rabban Gamliel · leyó, se bañó, aceptó consuelos · Tavi · no todo el que quiere tomarse el título</title>
+
+<defs>
+  <marker id="flecha-rg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-rg-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Las tres excepciones de Rabban Gamliel</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 16a–16b · 17b · «yo no soy como los demás»</text>
+
+<!-- ============================================================ -->
+<!-- EL MARCO · TRES MISHNAYOT · LA MISMA ESCENA                  -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL MARCO · MISHNÁ 2:5–2:7 · TRES VECES LA MISMA ESCENA</text>
+
+<g class="gamliel-nodo" data-id="marco">
+  <rect x="60" y="86" width="600" height="92" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">מַעֲשֶׂה בְּרַבָּן גַּמְלִיאֵל שֶׁנָּשָׂא אִשָּׁה וְקָרָא לַיְלָה הָרִאשׁוֹנָה</text>
+  <text x="360" y="132" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Sucedió que Rabban Gamliel se casó — y leyó el shema la primera noche»</text>
+  <text x="360" y="152" text-anchor="middle" font-size="10" fill="#b8860b" font-style="italic">tres mishnayot, la misma escena: los alumnos le citan su propia Torá — él responde «no soy como los demás»</text>
+  <text x="360" y="168" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el maestro desobedeciéndose a sí mismo — y explicándose · ¿cuándo la excepción es grandeza y cuándo soberbia?</text>
+</g>
+
+<line x1="360" y1="178" x2="360" y2="196" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-rg-gold)"/>
+
+<!-- ============================================================ -->
+<!-- ESCENA 1 · LEYÓ EL SHEMA                                     -->
+<!-- ============================================================ -->
+<text x="60" y="208" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 1 · LEYÓ EL SHEMA LA PRIMERA NOCHE DE BODAS · 16A</text>
+
+<g class="gamliel-nodo" data-id="escena-shema">
+  <rect x="60" y="218" width="600" height="152" rx="6" fill="rgba(184,134,11,0.04)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="240" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">1 · LEYÓ — el jatan exento que no quiso su exención</text>
+
+  <rect x="76" y="252" width="272" height="104" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="212" y="270" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">los alumnos · la regla</text>
+  <text x="212" y="290" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">לִמַּדְתָּנוּ רַבֵּינוּ</text>
+  <text x="212" y="306" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">שֶׁחָתָן פָּטוּר מִקְּרִיאַת שְׁמַע</text>
+  <text x="212" y="326" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«¡nos enseñaste que el jatan</text>
+  <text x="212" y="338" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">está exento del shema!»</text>
+
+  <line x1="348" y1="304" x2="368" y2="304" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+  <rect x="372" y="252" width="272" height="104" rx="4" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="508" y="270" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">él · la excepción</text>
+  <text x="508" y="290" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">אֵינִי שׁוֹמֵעַ לָכֶם לְבַטֵּל הֵימֶנִּי</text>
+  <text x="508" y="306" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">מַלְכוּת שָׁמַיִם אֲפִילּוּ שָׁעָה אַחַת</text>
+  <text x="508" y="326" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«no os escucho para anular de mí</text>
+  <text x="508" y="338" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">el Reino de los Cielos NI UNA HORA»</text>
+</g>
+
+<line x1="360" y1="370" x2="360" y2="388" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-rg-gold)"/>
+
+<!-- ============================================================ -->
+<!-- ESCENA 2 · SE BAÑÓ                                           -->
+<!-- ============================================================ -->
+<text x="60" y="400" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 2 · SE BAÑÓ LA PRIMERA NOCHE DEL DUELO · 16B</text>
+
+<g class="gamliel-nodo" data-id="escena-bano">
+  <rect x="60" y="410" width="600" height="152" rx="6" fill="rgba(184,134,11,0.04)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="432" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">2 · SE BAÑÓ — murió su esposa, y esa misma noche se bañó</text>
+
+  <rect x="76" y="444" width="272" height="104" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="212" y="462" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">los alumnos · la regla</text>
+  <text x="212" y="482" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">לִמַּדְתָּנוּ רַבֵּינוּ</text>
+  <text x="212" y="498" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">שֶׁאָבֵל אָסוּר לִרְחוֹץ</text>
+  <text x="212" y="518" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«¡nos enseñaste que el avel</text>
+  <text x="212" y="530" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">tiene prohibido bañarse!»</text>
+
+  <line x1="348" y1="496" x2="368" y2="496" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+  <rect x="372" y="444" width="272" height="104" rx="4" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="508" y="462" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">él · la excepción</text>
+  <text x="508" y="482" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">אֵינִי כִּשְׁאָר כָּל אָדָם</text>
+  <text x="508" y="498" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a" font-weight="700">אִסְטְנִיס אֲנִי</text>
+  <text x="508" y="518" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«no soy como los demás — soy delicado»</text>
+  <text x="508" y="532" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">la gemará: aninut nocturna es derabanan · וְאַחֲרִיתָהּ כְּיוֹם מָר</text>
+</g>
+
+<line x1="360" y1="562" x2="360" y2="580" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-rg-gold)"/>
+
+<!-- ============================================================ -->
+<!-- ESCENA 3 · ACEPTÓ CONSUELOS POR TAVI                         -->
+<!-- ============================================================ -->
+<text x="60" y="592" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ESCENA 3 · ACEPTÓ CONSUELOS POR TAVI SU ESCLAVO · 16B</text>
+
+<g class="gamliel-nodo" data-id="escena-tavi">
+  <rect x="60" y="602" width="600" height="152" rx="6" fill="rgba(184,134,11,0.04)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="624" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">3 · ACEPTÓ — murió Tavi su esclavo, y recibió condolencias</text>
+
+  <rect x="76" y="636" width="272" height="104" rx="4" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="212" y="654" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">los alumnos · la regla</text>
+  <text x="212" y="674" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">לִמַּדְתָּנוּ רַבֵּינוּ שֶׁאֵין מְקַבְּלִין</text>
+  <text x="212" y="690" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">תַּנְחוּמִין עַל הָעֲבָדִים</text>
+  <text x="212" y="710" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«¡nos enseñaste que no se aceptan</text>
+  <text x="212" y="722" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">consuelos por los esclavos!»</text>
+
+  <line x1="348" y1="688" x2="368" y2="688" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+  <rect x="372" y="636" width="272" height="104" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.2"/>
+  <text x="508" y="654" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">él · la excepción</text>
+  <text x="508" y="674" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">אֵין טָבִי עַבְדִּי כִּשְׁאָר כָּל הָעֲבָדִים</text>
+  <text x="508" y="690" text-anchor="middle" font-size="10.5" direction="rtl" fill="#2d6b4e" font-weight="700">כָּשֵׁר הָיָה</text>
+  <text x="508" y="710" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«Tavi mi esclavo no era como</text>
+  <text x="508" y="722" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">los demás esclavos — ERA KASHER»</text>
+</g>
+
+<line x1="212" y1="754" x2="212" y2="772" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-rg)"/>
+<line x1="508" y1="754" x2="508" y2="772" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-rg)"/>
+
+<!-- ============================================================ -->
+<!-- SATÉLITES · TAVI Y LA DIGNIDAD DE LOS ESCLAVOS               -->
+<!-- ============================================================ -->
+<text x="60" y="786" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ALREDEDOR DE TAVI · LA DIGNIDAD NO ERA GENÉRICA — ERA GANADA</text>
+
+<g class="gamliel-nodo" data-id="eliezer-contraste">
+  <rect x="60" y="796" width="290" height="140" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="818" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">El contraste · R. Eliezer huye</text>
+  <text x="205" y="838" text-anchor="middle" font-size="9.5" fill="#3d2f23">murió su sirvienta — sus alumnos entraron a consolarlo</text>
+  <text x="205" y="856" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">aliyá → anpilón → traklin</text>
+  <text x="205" y="872" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">huyó de cuarto en cuarto para NO recibirlos</text>
+  <text x="205" y="894" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1e3a5f">הַמָּקוֹם יְמַלֵּא לְךָ חֶסְרוֹנְךָ</text>
+  <text x="205" y="912" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«que el Omnipresente te reponga la pérdida»</text>
+  <text x="205" y="926" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">— lo mismo que se dice por un BUEY</text>
+</g>
+
+<g class="gamliel-nodo" data-id="yose-kasher">
+  <rect x="370" y="796" width="290" height="140" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="515" y="818" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">R. Yose · el esclavo kasher</text>
+  <text x="515" y="838" text-anchor="middle" font-size="9.5" fill="#3d2f23">si era un esclavo kasher, sí se le dice:</text>
+  <text x="515" y="860" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">הוֹי אִישׁ טוֹב וְנֶאֱמָן</text>
+  <text x="515" y="876" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">וְנֶהֱנֶה מִיגִיעוֹ</text>
+  <text x="515" y="896" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«¡ay, hombre bueno y fiel,</text>
+  <text x="515" y="910" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">que gozaba de su propio esfuerzo!»</text>
+  <text x="515" y="926" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la conducta abre la lamentación humana</text>
+</g>
+
+<line x1="205" y1="936" x2="205" y2="952" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-rg)"/>
+<line x1="515" y1="936" x2="515" y2="952" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-rg)"/>
+
+<g class="gamliel-nodo" data-id="aba-ima">
+  <rect x="60" y="956" width="600" height="96" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="978" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">En casa de Rabban Gamliel: los esclavos eran אַבָּא y אִמָּא</text>
+  <text x="360" y="998" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">אַבָּא טָבִי · אִמָּא טָבִיתָא — מִשּׁוּם דַּחֲשִׁיבִי</text>
+  <text x="360" y="1016" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">se les llamaba «padre» y «madre» — porque eran importantes · la dignidad era ganada, no genérica</text>
+  <text x="360" y="1036" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">y la baraita vecina delimita: אָבוֹת son solo TRES · אִמָּהוֹת son solo CUATRO — el título tiene frontera</text>
+</g>
+
+<line x1="360" y1="1052" x2="360" y2="1070" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+<!-- ============================================================ -->
+<!-- EL CIERRE · ¿QUIÉN MÁS PUEDE? · 17B                          -->
+<!-- ============================================================ -->
+<text x="60" y="1082" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL CIERRE · ¿QUIÉN MÁS PUEDE SER LA EXCEPCIÓN? · MISHNÁ + 17B</text>
+
+<g class="gamliel-nodo" data-id="rsbg">
+  <rect x="60" y="1092" width="600" height="88" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="360" y="1114" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rabban Shimon ben Gamliel · el freno</text>
+  <text x="360" y="1136" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f">לֹא כָּל הָרוֹצֶה לִיטּוֹל אֶת הַשֵּׁם — יִטּוֹל</text>
+  <text x="360" y="1156" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«NO todo el que quiere tomarse el título — que se lo tome»</text>
+  <text x="360" y="1170" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la mishná dice: el jatan que quiera leer, lee · RSBG lo frena</text>
+</g>
+
+<line x1="360" y1="1180" x2="360" y2="1198" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+<g class="gamliel-nodo" data-id="tisha-beav">
+  <rect x="60" y="1202" width="600" height="88" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4" stroke-dasharray="5,2"/>
+  <text x="360" y="1224" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La contradicción · 17b · Tishá beAv invertido</text>
+  <text x="360" y="1244" text-anchor="middle" font-size="9.5" fill="#3d2f23">aquí RSBG frena al que quiere y los sabios permiten · en Tishá beAv RSBG permite hacerse talmid jajam y no trabajar</text>
+  <text x="360" y="1260" text-anchor="middle" font-size="9.5" fill="#3d2f23">— y allí son los sabios quienes temen la ostentación · ¡las posiciones se INVIERTEN!</text>
+  <text x="360" y="1278" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">¿quién teme la יוּהֲרָא (arrogancia religiosa) — y cuándo?</text>
+</g>
+
+<line x1="360" y1="1290" x2="360" y2="1308" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-rg-gold)"/>
+
+<g class="gamliel-nodo" data-id="rav-shisha">
+  <rect x="60" y="1312" width="600" height="118" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="1334" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">La resolución de Rav Shisha · la kavaná decide</text>
+  <text x="360" y="1354" text-anchor="middle" font-size="9.5" fill="#3d2f23">en el shema TODOS recitan — recitar no se nota, no es yuhará · en Tishá beAv no trabajar SE NOTA — eso sí es yuhará</text>
+  <text x="360" y="1376" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b">אֲנַן סָהֲדֵי דְּלָא מָצֵי לְכַוּוֹנֵי דַּעְתֵּיהּ</text>
+  <text x="360" y="1394" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«todos somos testigos de que el jatan NO puede concentrarse» — leer entonces es pose</text>
+  <text x="360" y="1414" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">la excepción de Rabban Gamliel era real porque su kavaná era real · la grandeza no se declara — se tiene</text>
+</g>
+
+</svg>
+</div>
+
+<div class="gamliel-panel" id="gamliel-panel">
+  <p class="gamliel-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'marco': {
+      titulo: 'El marco · tres mishnayot, la misma escena',
+      hebreo: 'מַעֲשֶׂה בְּרַבָּן גַּמְלִיאֵל שֶׁנָּשָׂא אִשָּׁה וְקָרָא לַיְלָה הָרִאשׁוֹנָה',
+      traduccion: '«Sucedió que Rabban Gamliel se casó — y leyó el shema la primera noche»',
+      explicacion: 'La mishná 2:5 retoma al jatan del perek 1 — el novio exento del shema la primera noche por la tirdá (preocupación absorbente) de la mitzvá — y lo estrella contra un maestro: Rabban Gamliel, el Nasí, hace EXACTAMENTE lo que su propia enseñanza exime.\n\nY no una vez. Tres mishnayot seguidas (2:5, 2:6, 2:7) repiten la misma coreografía con precisión litúrgica:\n\n  1. Rabban Gamliel hace algo que contradice su propia Torá\n  2. Los alumnos le citan su enseñanza: לִמַּדְתָּנוּ רַבֵּינוּ — «nos enseñaste, maestro nuestro...»\n  3. Él responde con una variante de la misma frase: «yo no soy como los demás»\n\nLa estructura triple NO es casualidad editorial. Es una tesis en forma narrativa: la halajá legisla para el caso general, pero el caso general no agota la realidad. Hay personas para las que la regla — diseñada como protección o como permiso — no aplica, porque su situación interior es distinta.\n\nEl peligro es obvio: si cada uno puede declararse excepción, la halajá se disuelve. Por eso el perek no termina con las tres escenas — termina con el freno de Rabban Shimon ben Gamliel (לא כל הרוצה ליטול את השם יטול) y con el análisis de la gemará en 17b sobre cuándo la excepción es grandeza real y cuándo es pose. El diagrama entero examina esa frontera.'
+    },
+    'escena-shema': {
+      titulo: 'Escena 1 · leyó el shema la primera noche de bodas',
+      hebreo: 'אֵינִי שׁוֹמֵעַ לָכֶם לְבַטֵּל הֵימֶנִּי מַלְכוּת שָׁמַיִם אֲפִילּוּ שָׁעָה אַחַת',
+      traduccion: '«No os escucho para anular de mí el Reino de los Cielos ni una hora»',
+      explicacion: 'La regla que citan los alumnos es del propio Rabban Gamliel: el jatan está PATUR (exento) del shema la primera noche, porque la tirdá de la mitzvá — la preocupación legítima por la consumación del matrimonio — le impide la kavaná. Es la misma lógica del perek 1: la exención protege la honestidad del rezo.\n\nPero la respuesta de Rabban Gamliel revela la naturaleza exacta de esa exención: es un PERMISO, no una orden. La halajá dice «no estás obligado» — no dice «no puedes».\n\nSu formulación es extraordinaria: אֵינִי שׁוֹמֵעַ לָכֶם — «no os escucho». No discute la regla (él mismo la enseñó). Discute su APLICACIÓN a él: aceptar la exención sería לְבַטֵּל הֵימֶנִּי מַלְכוּת שָׁמַיִם — «anular DE MÍ el Reino de los Cielos». El shema no es para él una obligación que se descarga con alivio cuando hay excusa; es la aceptación del Reino, y renunciar a ella — אֲפִילּוּ שָׁעָה אַחַת, ni siquiera UNA HORA — es una pérdida, no un descanso.\n\nLa clave implícita (que la gemará hará explícita en 17b): Rabban Gamliel PODÍA leer con kavaná incluso esa noche. Su interioridad no estaba secuestrada por la tirdá. La exención existe para quien no puede concentrarse — y él sí podía. La regla no le aplicaba porque el hecho que la funda no se daba en él.'
+    },
+    'escena-bano': {
+      titulo: 'Escena 2 · se bañó la primera noche del duelo',
+      hebreo: 'אִסְטְנִיס אֲנִי',
+      traduccion: '«Soy delicado» — istenis, del griego asthenés',
+      explicacion: 'Murió su esposa — y Rabban Gamliel se bañó esa misma noche. Los alumnos, otra vez: ¿no nos enseñaste que el AVEL (el que está de duelo) tiene prohibido bañarse?\n\nLa respuesta repite la fórmula, ahora explícita: אֵינִי כִּשְׁאָר כָּל אָדָם — «no soy como el resto de los hombres» — אִסְטְנִיס אֲנִי, «soy un istenis», un delicado (la palabra es griega: asthenés, débil, sensible). Para él, no bañarse no es una incomodidad — es un sufrimiento físico real.\n\nLa gemará funda la excepción con precisión técnica en dos pasos:\n\n  1. La ANINUT NOCTURNA es derabanan. El duelo de la Torá se aprende de Amós 8:10 — וְאַחֲרִיתָהּ כְּיוֹם מָר, «y su final como DÍA amargo»: el día amargo, no la noche. La obligación de la primera noche es solo rabínica.\n\n  2. Y para el istenis, LOS SABIOS NO DECRETARON. Un decreto rabínico se dicta para el caso general; donde produce sufrimiento físico genuino, el decreto mismo tiene la excepción incorporada.\n\nNótese la diferencia con la escena 1: allí Rabban Gamliel era MÁS estricto que su regla (leyó cuando podía no leer); aquí es MÁS indulgente (se bañó cuando la regla lo prohíbe). La excepción no va siempre en la dirección del rigor — va en la dirección de la VERDAD del caso particular. El cuerpo también legisla: la delicadeza física real es un dato halájico, no una debilidad que disimular.'
+    },
+    'escena-tavi': {
+      titulo: 'Escena 3 · aceptó consuelos por Tavi',
+      hebreo: 'אֵין טָבִי עַבְדִּי כִּשְׁאָר כָּל הָעֲבָדִים — כָּשֵׁר הָיָה',
+      traduccion: '«Tavi mi esclavo no era como los demás esclavos — era kasher»',
+      explicacion: 'Murió Tavi, el esclavo de Rabban Gamliel — y él aceptó condolencias. Los alumnos, por tercera vez: ¿no nos enseñaste que NO se aceptan consuelos por los esclavos?\n\nLa regla general tiene su lógica: el ritual del duelo — con sus visitas, sus fórmulas de consuelo — está reservado a los vínculos de familia. Extenderlo a los esclavos borraría la distinción entre parentesco y propiedad, y (temían los sabios) degradaría el consuelo mismo.\n\nLa respuesta repite la fórmula por tercera vez — pero con una inversión decisiva: las dos primeras veces la excepción era ÉL («yo no soy como los demás»); ahora la excepción es OTRO: אֵין טָבִי עַבְדִּי כִּשְׁאָר כָּל הָעֲבָדִים — «TAVI no era como los demás esclavos». Y la razón cabe en dos palabras: כָּשֵׁר הָיָה — «era kasher», íntegro, recto.\n\nTavi es un personaje recurrente en la literatura rabínica: el esclavo de Rabban Gamliel del que su amo dijo que era digno de la semijá, que ponía los tefilín, del que se cuentan halajot (la sucá, en Sucá 20b). No era una posesión — era un talmid jajam en condición de esclavo.\n\nLa tercera escena eleva el principio de las dos primeras: la excepción no es un privilegio del poderoso para sí mismo. Es una CATEGORÍA DE VERDAD que también obliga hacia abajo: si la regla general no capta lo que Tavi era, Rabban Gamliel rompe la regla para honrar el hecho. La misma honestidad que lo hizo leer el shema lo hace llorar a su esclavo como a un hombre.'
+    },
+    'eliezer-contraste': {
+      titulo: 'El contraste · R. Eliezer huye de sus alumnos',
+      hebreo: 'כְּשֵׁם שֶׁאוֹמְרִים לוֹ עַל שׁוֹרוֹ — הַמָּקוֹם יְמַלֵּא לְךָ חֶסְרוֹנְךָ',
+      traduccion: '«Como se le dice por su buey: que el Omnipresente te reponga la pérdida»',
+      explicacion: 'La baraita de contraste muestra la regla general en su forma más severa. Cuando murió la sirvienta de R. Eliezer, sus alumnos entraron a consolarlo — y él HUYÓ:\n\n  · subió a la ALIYÁ (el piso alto) — subieron tras él\n  · entró al ANPILÓN (la antesala) — entraron tras él\n  · entró al TRAKLIN (el salón) — entraron tras él\n\nTres habitaciones, tres persecuciones. Al final los reprende: creí que os quemaríais con agua tibia y ni con agua hirviendo os quemáis — ¿no os he enseñado que por los esclavos NO se hace fila de consuelo, no se dice la bendición de los dolientes?\n\n¿Qué se dice entonces? Lo mismo que se le dice a un hombre cuando muere su BUEY o su asno: הַמָּקוֹם יְמַלֵּא לְךָ חֶסְרוֹנְךָ — «que el Omnipresente te reponga tu pérdida». La fórmula trata la muerte del esclavo como pérdida PATRIMONIAL, no como duelo humano.\n\nLa dureza de la escena es deliberada en la edición de la sugyá: R. Eliezer huyendo de cuarto en cuarto es el polo opuesto de Rabban Gamliel sentado recibiendo consuelos por Tavi. Entre los dos polos, la sugyá coloca la distinción de R. Yose (el esclavo kasher) — que explica por qué ambos tienen razón: la regla de R. Eliezer es para el caso general; la excepción de Rabban Gamliel es para el esclavo que era kasher. La dignidad ritual no se reparte por categoría social — se reconoce donde existe.'
+    },
+    'yose-kasher': {
+      titulo: 'R. Yose · qué se dice por un esclavo kasher',
+      hebreo: 'הוֹי אִישׁ טוֹב וְנֶאֱמָן וְנֶהֱנֶה מִיגִיעוֹ',
+      traduccion: '«¡Ay, hombre bueno y fiel, que gozaba de su propio esfuerzo!»',
+      explicacion: 'R. Yose introduce la distinción que reconcilia los dos polos: si el esclavo era KASHER — íntegro, recto — sí se dice sobre él una lamentación: הוֹי אִישׁ טוֹב וְנֶאֱמָן וְנֶהֱנֶה מִיגִיעוֹ — «¡ay, hombre BUENO y FIEL, que gozaba de su propio esfuerzo!»\n\nCada palabra de la fórmula está calibrada:\n\n  · אִישׁ — «hombre». La palabra decisiva. La fórmula del buey no llama «hombre» a nadie; esta empieza por ahí. El esclavo kasher muere como ISH, no como propiedad.\n  · טוֹב וְנֶאֱמָן — «bueno y fiel»: las virtudes que un esclavo puede tener y demostrar; la fidelidad es la forma que toma la integridad en su condición.\n  · וְנֶהֱנֶה מִיגִיעוֹ — «que gozaba de su propio esfuerzo»: el detalle más fino. Del esclavo — cuyo trabajo pertenece por definición a otro — se dice el elogio del Salmo 128 sobre el hombre libre (יְגִיעַ כַּפֶּיךָ כִּי תֹאכֵל). La lamentación le devuelve en la muerte la autonomía que la vida le negó.\n\nLa objeción de la gemará lo confirma: si por un esclavo kasher se dice todo esto — ¿qué dejaste para los hombres libres kasher? La respuesta implícita: nada distinto. Ante la muerte, la integridad iguala.\n\nR. Yose transforma así la excepción de Rabban Gamliel en CRITERIO general: no «Tavi era especial porque era de Rabban Gamliel», sino «todo esclavo kasher merece duelo humano». La excepción bien fundada se vuelve halajá.'
+    },
+    'aba-ima': {
+      titulo: 'Aba y Ima · la dignidad ganada · avot solo tres',
+      hebreo: 'אַבָּא טָבִי · אִמָּא טָבִיתָא — מִשּׁוּם דַּחֲשִׁיבִי',
+      traduccion: '«Padre Tavi · Madre Tavita — porque eran importantes»',
+      explicacion: 'La baraita enseña que a los esclavos y sirvientas NO se les llama «padre fulano» ni «madre fulana» — títulos de honor reservados. Y añade: en casa de Rabban Gamliel SÍ los llamaban así: אַבָּא טָבִי — «padre Tavi» — y אִמָּא טָבִיתָא — «madre Tavita».\n\n¿Contradicción? La gemará la disuelve en dos palabras: מִשּׁוּם דַּחֲשִׁיבִי — «porque eran importantes». Los esclavos de la casa de Rabban Gamliel habían GANADO el título. La regla general protege el honor de los títulos; la casa de Rabban Gamliel no violaba la regla — cumplía su propósito: dar el título a quien lo merece.\n\nEs la misma estructura de las tres escenas, aplicada a la vida doméstica: la dignidad no era genérica (todos los esclavos), ni negada por categoría (ningún esclavo) — era GANADA, caso por caso, por la jashivut real de la persona.\n\nY la baraita vecina pone la frontera del otro lado: אָבוֹT — «Patriarcas» — se llama SOLO a tres (Abraham, Itzjak, Yaakov); אִמָּהוֹת — «Matriarcas» — solo a cuatro (Sará, Rivká, Rajel, Leá). Ni siquiera las doce tribus reciben el título de AVOT. El sistema completo queda a la vista: los títulos tienen frontera rígida hacia arriba (nadie se agrega a los Avot) y frontera porosa hacia abajo (un esclavo puede llegar a ser «aba»). El honor no se hereda ni se inflaciona — se delimita y se gana.'
+    },
+    'rsbg': {
+      titulo: 'Rabban Shimon ben Gamliel · el freno',
+      hebreo: 'לֹא כָּל הָרוֹצֶה לִיטּוֹל אֶת הַשֵּׁם — יִטּוֹל',
+      traduccion: '«No todo el que quiere tomarse el título — que se lo tome»',
+      explicacion: 'La mishná cierra la serie con la generalización peligrosa: el jatan que QUIERA leer el shema la primera noche — lee. Rabban Gamliel abrió la puerta; la mishná parece dejarla abierta para todos.\n\nY entonces Rabban Shimon ben Gamliel — su descendiente, otro Nasí — la frena: לֹא כָּל הָרוֹצֶה לִיטּוֹל אֶת הַשֵּׁם יִטּוֹל — «NO todo el que quiere TOMARSE EL TÍTULO, que se lo tome».\n\nLa expresión es quirúrgica: לִיטּוֹל אֶת הַשֵּׁם — «tomarse el nombre», arrogarse la reputación. RSBG detecta el mecanismo psicológico exacto: después de la historia de Rabban Gamliel, leer el shema en la noche de bodas se ha vuelto una INSIGNIA. El que lee ya no dice «acepto el Reino» — dice «miradme: soy de los que pueden». El acto es idéntico; la intención lo ha invertido.\n\nLa paradoja es deliberada: la excepción de Rabban Gamliel era auténtica precisamente porque NO era una pose — y en cuanto se vuelve imitable, imitarla es pose. La grandeza real es inimitable por definición: lo que se puede copiar de ella es solo la apariencia.\n\nRSBG no niega que existan otros como Rabban Gamliel. Niega que QUERER serlo sea serlo. El deseo del título es evidencia contra el título. Queda planteada la pregunta que 17b tendrá que resolver: ¿cómo distingue la halajá — desde fuera — la excepción real de la fingida?'
+    },
+    'tisha-beav': {
+      titulo: 'La contradicción · Tishá beAv invertido',
+      hebreo: 'יוּהֲרָא',
+      traduccion: 'Yuhará — ostentación, arrogancia religiosa',
+      explicacion: 'La gemará (17b) descubre que las posiciones se INVIERTEN en otra mishná. Respecto a Tishá beAv, se enseña: donde se acostumbra trabajar, se trabaja — pero el que quiera hacerse el TALMID JAJAM y abstenerse del trabajo (como los sabios, que no trabajan ese día), puede. Allí Rabban Shimon ben Gamliel dice: que cualquiera se haga talmid jajam — לְעוֹלָם יַעֲשֶׂה אָדָם עַצְמוֹ תַּלְמִיד חָכָם.\n\nEl cruce es exacto y desconcertante:\n\n  · En el SHEMA del jatan: los sabios permiten al que quiere leer — y RSBG frena («no todo el que quiere el título...»)\n  · En TISHÁ BEAV: RSBG permite a cualquiera hacerse el talmid jajam — y los sabios frenan\n\n¿RSBG teme la yuhará o no la teme? ¿Los sabios la temen o no?\n\nיוּהֲרָא es la palabra técnica del problema: la ostentación religiosa, la arrogancia del que adopta en público un rigor que no le corresponde para que se le atribuya un nivel que no tiene. Es el pecado específico de la piedad visible — no un exceso de observancia sino un DESVÍO de su destinatario: el acto ya no se dirige al Cielo sino a los espectadores.\n\nLa contradicción cruzada exige una teoría de CUÁNDO un acto piadoso constituye ostentación — no basta decir «la humildad es buena». Esa teoría es la resolución de Rav Shisha, hijo de Rav Idi.'
+    },
+    'rav-shisha': {
+      titulo: 'La resolución de Rav Shisha · la kavaná decide',
+      hebreo: 'אֲנַן סָהֲדֵי דְּלָא מָצֵי לְכַוּוֹנֵי דַּעְתֵּיהּ',
+      traduccion: '«Todos somos testigos de que no puede concentrar su mente»',
+      explicacion: 'Rav Shisha, hijo de Rav Idi, resuelve la contradicción con un criterio de VISIBILIDAD:\n\n  · En el SHEMA, todos recitan cada día. El jatan que recita hace lo que hace todo el mundo — su acto no destaca, no exhibe nada: לָא מִיחֲזֵי כְּיוּהֲרָא, no parece ostentación. Por eso los sabios lo permiten.\n  · En TISHÁ BEAV, donde la costumbre es trabajar, el que se abstiene SE NOTA. Su ociosidad es visible, distintiva, legible como declaración («soy de los sabios»). Eso sí es yuhará — por eso allí los sabios frenan.\n\nPero entonces, ¿por qué RSBG frena justamente en el shema? Por el segundo filo del criterio: אֲנַן סָהֲדֵי דְּלָא מָצֵי לְכַוּוֹנֵי דַּעְתֵּיהּ — «todos somos TESTIGOS de que no puede concentrar su mente». Del jatan promedio, la primera noche, todo el mundo SABE que la kavaná es imposible. Si recita de todos modos, su recitación es públicamente falsa — no acepta el Reino (no puede), solo EXHIBE que «acepta el Reino». El acto invisible se vuelve visible por su imposibilidad notoria: esa es la yuhará que RSBG detecta.\n\nEl criterio completo: la yuhará no está en el acto sino en la BRECHA LEGIBLE entre el acto y su verdad interior. Acto común + kavaná posible = permitido. Acto distintivo = ostentación. Acto común + kavaná públicamente imposible = ostentación también.\n\nY con esto queda explicada la excepción original: Rabban Gamliel PODÍA concentrarse — su excepción era real porque su kavaná era real. De él, אֲנַן סָהֲדֵי funcionaba al revés: todos eran testigos de que sí podía. La grandeza no se declara — se tiene; y cuando se tiene, hasta los testigos lo saben.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.gamliel-interactivo')
+    : document.querySelector('.gamliel-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#gamliel-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.gamliel-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="gamliel-panel-header">' +
+        '<p class="gamliel-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="gamliel-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="gamliel-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="gamliel-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.gamliel-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.gamliel-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="gamliel-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
