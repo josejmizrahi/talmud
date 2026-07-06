@@ -1,0 +1,320 @@
+<div class="regresos-interactivo">
+<style>
+  .regresos-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .regresos-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .regresos-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .regresos-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .regresos-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .regresos-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .regresos-leyenda .violeta { background: rgba(93,58,126,0.12);  border-color: #5d3a7e; }
+  .regresos-diagrama svg { width: 100%; height: auto; display: block; }
+  .regresos-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .regresos-nodo:hover rect { stroke-width: 2 !important; }
+  .regresos-nodo:hover circle { stroke-width: 2.5 !important; }
+  .regresos-nodo.activa rect { stroke-width: 2.5 !important; }
+  .regresos-nodo.activa circle { stroke-width: 3 !important; }
+  .regresos-nodo.dim { opacity: 0.32; }
+  .regresos-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .regresos-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .regresos-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .regresos-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .regresos-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .regresos-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .regresos-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="regresos-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la integridad · raíz תם</span>
+  <span><span class="swatch verde"></span>tiendas y arroyos</span>
+  <span><span class="swatch azul"></span>el protocolo del error</span>
+  <span><span class="swatch violeta"></span>la jupá de R. Elazar</span>
+</div>
+
+<div class="regresos-diagrama">
+<svg viewBox="0 0 720 1200" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 15b-16a: escritura íntegra · las tiendas y los arroyos · a dónde vuelve el que se equivoca · la jupá de R. Elazar</title>
+
+<defs>
+  <marker id="flecha-rg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-rg-azul" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1e3a5f"/>
+  </marker>
+  <marker id="flecha-rg-verde" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d6b4e"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El que se equivoca, vuelve · la raíz תם</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 15b-16a · escritura íntegra · a dónde regresar · la jupá de R. Elazar</text>
+
+<!-- ============================================================ -->
+<!-- LA RAÍZ TAM · DOS DERASHOT GEMELAS                           -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RAÍZ תם · DOS DERASHOT GEMELAS · 15B</text>
+
+<!-- Ktav tam -->
+<g class="regresos-nodo" data-id="ktav-tam">
+  <rect x="60" y="86" width="290" height="150" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="205" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Ktav tam · Rav Oshaya</text>
+  <text x="205" y="132" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">וּכְתַבְתָּם — וּכְתָב תָּם</text>
+  <text x="205" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«y las escribirás» — escritura ÍNTEGRA</text>
+  <text x="205" y="172" text-anchor="middle" font-size="9.5" fill="#3d2f23">todo por escrito en mezuzá y tefilín</text>
+  <text x="205" y="188" text-anchor="middle" font-size="9.5" fill="#3d2f23">— HASTA los mandatos (tzavaot)</text>
+  <text x="205" y="210" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">a diferencia del rollo de la sotá:</text>
+  <text x="205" y="225" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">allí solo maldiciones · aquí el texto entero</text>
+</g>
+
+<!-- Limud tam -->
+<g class="regresos-nodo" data-id="limud-tam">
+  <rect x="370" y="86" width="290" height="150" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="515" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Limud tam · Rav Ovadia</text>
+  <text x="515" y="132" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">וְלִמַּדְתֶּם — שֶׁיְּהֵא לִמּוּדְךָ תָּם</text>
+  <text x="515" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«y las enseñarás» — que tu enseñar sea íntegro</text>
+  <text x="515" y="170" text-anchor="middle" font-size="9.5" fill="#3d2f23">espacio entre las palabras pegadas —</text>
+  <text x="515" y="192" text-anchor="middle" font-size="9.5" direction="rtl" fill="#b8860b">עַל לְבָבֶךָ · עֵשֶׂב בְּשָׂדְךָ</text>
+  <text x="515" y="210" text-anchor="middle" font-size="9.5" direction="rtl" fill="#b8860b">וַאֲבַדְתֶּם מְהֵרָה · הַכָּנָף פְּתִיל</text>
+  <text x="515" y="227" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">los pares de Rava · la letra final = la inicial</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS TIENDAS Y LOS ARROYOS                                    -->
+<!-- ============================================================ -->
+<line x1="205" y1="236" x2="205" y2="254" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-rg-verde)"/>
+<line x1="515" y1="236" x2="515" y2="254" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-rg-verde)"/>
+
+<text x="60" y="270" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LAS TIENDAS Y LOS ARROYOS · R. JAMA BAR JANINA · BAMIDBAR 24:6</text>
+
+<g class="regresos-nodo" data-id="tiendas-arroyos">
+  <rect x="60" y="280" width="600" height="130" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="304" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">כִּנְחָלִים נִטָּיוּ... כַּאֲהָלִים נָטַע ה׳</text>
+  <text x="360" y="322" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«como arroyos que se extienden... como tiendas que plantó HaShem» — ¿por qué se yuxtaponen?</text>
+  <!-- arroyo: de impureza a pureza -->
+  <path d="M 100,362 C 160,350 220,374 280,362" fill="none" stroke="#2d6b4e" stroke-width="1.6" marker-end="url(#flecha-rg-verde)"/>
+  <text x="100" y="382" font-size="9" fill="#6b4423">de la impureza</text>
+  <text x="236" y="382" font-size="9" fill="#2d6b4e" font-weight="600">a la pureza</text>
+  <text x="190" y="348" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">el arroyo · mikvé</text>
+  <!-- tienda: de culpa a mérito -->
+  <path d="M 440,362 C 500,350 560,374 620,362" fill="none" stroke="#2d6b4e" stroke-width="1.6" marker-end="url(#flecha-rg-verde)"/>
+  <text x="440" y="382" font-size="9" fill="#6b4423">de la culpa</text>
+  <text x="576" y="382" font-size="9" fill="#2d6b4e" font-weight="600">al mérito</text>
+  <text x="530" y="348" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">la tienda de Torá</text>
+  <text x="360" y="400" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el beit midrash como mikvé · dos aguas que suben al hombre</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PROTOCOLO DEL ERROR · MAPA DE REGRESO                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="410" x2="360" y2="428" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-rg-azul)"/>
+
+<text x="60" y="444" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PROTOCOLO DEL ERROR · LA TOSEFTA · ¿A DÓNDE VUELVE EL QUE SE PERDIÓ?</text>
+
+<g class="regresos-nodo" data-id="protocolo">
+  <rect x="60" y="454" width="600" height="300" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="360" y="478" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">קָרָא וְטָעָה — leyó y se equivocó: el mapa de regreso sobre la banda del shema</text>
+
+  <!-- flechas de regreso (hacia atrás, sobre la banda) -->
+  <path d="M 300,556 C 260,522 190,522 150,552" fill="none" stroke="#1e3a5f" stroke-width="1.6" marker-end="url(#flecha-rg-azul)"/>
+  <text x="225" y="516" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">① en medio del párrafo → a su inicio</text>
+  <path d="M 448,560 C 380,496 210,496 132,548" fill="none" stroke="#1e3a5f" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#flecha-rg-azul)"/>
+  <text x="300" y="493" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">② entre párrafo y párrafo → al primer párrafo</text>
+
+  <!-- banda del shema -->
+  <rect x="90" y="566" width="170" height="52" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="175" y="588" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">שְׁמַע</text>
+  <text x="175" y="606" text-anchor="middle" font-size="8" fill="#6b4423">párrafo 1 · con וכתבתם</text>
+  <rect x="280" y="566" width="170" height="52" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="365" y="588" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְהָיָה אִם שָׁמֹעַ</text>
+  <text x="365" y="606" text-anchor="middle" font-size="8" fill="#6b4423">párrafo 2 · con וכתבתם</text>
+  <rect x="470" y="566" width="160" height="52" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.2"/>
+  <text x="550" y="588" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וַיֹּאמֶר</text>
+  <text x="550" y="606" text-anchor="middle" font-size="8" fill="#6b4423">párrafo 3 · tzitzit</text>
+
+  <!-- los dos uctavtam -->
+  <circle cx="238" cy="592" r="5" fill="rgba(30,58,95,0.15)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <circle cx="428" cy="592" r="5" fill="rgba(30,58,95,0.15)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <path d="M 424,634 C 380,662 286,662 242,636" fill="none" stroke="#1e3a5f" stroke-width="1.6" marker-end="url(#flecha-rg-azul)"/>
+  <text x="333" y="670" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">③ entre וכתבתם y וכתבתם → al primero</text>
+
+  <!-- tabla resumen -->
+  <text x="90" y="700" font-size="9.5" fill="#3d2f23">· se perdió EN MEDIO de un párrafo — vuelve al INICIO del párrafo</text>
+  <text x="90" y="717" font-size="9.5" fill="#3d2f23">· se perdió ENTRE párrafo y párrafo — vuelve al PRIMER párrafo</text>
+  <text x="90" y="734" font-size="9.5" fill="#3d2f23">· se perdió entre וכתבתם y וכתבתם — vuelve al PRIMER וכתבתם</text>
+  <text x="360" y="748" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">regla común: en la duda, siempre HACIA ATRÁS — el texto se recupera retrocediendo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL REFINAMIENTO DE R. YOJANAN                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="754" x2="360" y2="772" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-rg-azul)"/>
+
+<text x="60" y="788" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL LÍMITE DEL PROTOCOLO · R. YOJANAN · LA RUTINA COMO TESTIGO</text>
+
+<g class="regresos-nodo" data-id="yojanan">
+  <rect x="60" y="798" width="600" height="104" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4" stroke-dasharray="6,3"/>
+  <text x="360" y="824" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">לְמַעַן יִרְבּוּ יְמֵיכֶם — סִרְכֵיהּ נָקֵט וְאָתֵי</text>
+  <text x="360" y="846" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">si ya empezó «para que se multipliquen sus días» — «su rutina lo llevó»: se asume que siguió bien</text>
+  <text x="360" y="868" text-anchor="middle" font-size="9.5" fill="#3d2f23">pasado ese punto, NO vuelve — la halajá confía en el piloto automático del que recita cada día</text>
+  <text x="360" y="888" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el hábito diario es evidencia halájica · la lengua entrenada no se detiene a mitad de camino</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA ESCENA MARCO · LA JUPÁ DE R. ELAZAR                       -->
+<!-- ============================================================ -->
+<line x1="360" y1="902" x2="360" y2="920" stroke="#5d3a7e" stroke-width="1.2" marker-end="url(#flecha-rg)"/>
+
+<text x="60" y="936" font-size="9.5" fill="#5d3a7e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCENA MARCO · R. AMI Y R. ASI ATAN LA JUPÁ DE R. ELAZAR · 16A</text>
+
+<g class="regresos-nodo" data-id="jupa">
+  <rect x="60" y="946" width="600" height="176" rx="6" fill="rgba(93,58,126,0.08)" stroke="#5d3a7e" stroke-width="1.6"/>
+  <text x="360" y="970" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5d3a7e" font-weight="700">El novio que fue al beit midrash</text>
+  <text x="90" y="994" font-size="9.5" fill="#3d2f23">1 · R. Ami y R. Asi ATAN la jupá de R. Elazar — los sabios como decoradores de boda</text>
+  <text x="90" y="1011" font-size="9.5" fill="#3d2f23">2 · el novio les dice: «mientras tanto, iré a oír algo al beit midrash»</text>
+  <text x="90" y="1028" font-size="9.5" fill="#3d2f23">3 · vuelve con la TOSEFTA del protocolo del error — la trae en la mano como regalo de boda</text>
+  <text x="360" y="1056" text-anchor="middle" font-size="12" direction="rtl" fill="#5d3a7e">אִלּוּ לֹא בָּאנוּ אֶלָּא לִשְׁמוֹעַ דָּבָר זֶה — דַּיֵּינוּ</text>
+  <text x="360" y="1076" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Si solo hubiéramos venido a oír esto — nos bastaba»</text>
+  <text x="360" y="1096" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el dayeinu del beit midrash · una halajá sobre errores vale el viaje</text>
+  <text x="360" y="1112" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la tienda de la Torá y la tienda de la boda — el mismo día, el mismo hombre</text>
+</g>
+
+<!-- Nota final -->
+<text x="360" y="1156" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">La raíz תם ata la sugyá: escribir completo, enseñar separado, y para el que se pierde — un mapa para volver íntegro.</text>
+<text x="360" y="1176" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">El que se equivoca no queda fuera: la halajá le señala exactamente a dónde regresar.</text>
+
+</svg>
+</div>
+
+<div class="regresos-panel" id="regresos-panel">
+  <p class="regresos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'ktav-tam': {
+      titulo: 'Ktav tam · escritura íntegra · Rav Oshaya',
+      hebreo: 'וּכְתַבְתָּם — וּכְתָב תָּם',
+      traduccion: '«Y las escribirás» — que sea una escritura íntegra',
+      explicacion: 'Rav Oshaya, ante Rava, lee la palabra וּכְתַבְתָּם («y las escribirás», Devarim 6:9) partiéndola en dos: וּכְתָב תָּם — «una escritura ÍNTEGRA». La derashá extrae de la ortografía misma del verbo una halajá sobre qué debe contener el pergamino.\n\nLa consecuencia práctica: en la mezuzá y en los tefilín se escribe TODO el pasaje — hasta los mandatos (las tzavaot, las órdenes mismas de escribir y atar). No se copia solo la parte «declarativa» del texto (HaShem es Uno, amarás); se copia también la parte operativa (y las atarás, y las escribirás). El texto que ordena escribirse queda él mismo escrito.\n\nEl contraste que la sugyá tiene en mente es el rollo de la SOTÁ (la mujer sospechada de adulterio, Bamidbar 5): allí el kohen escribe en el rollo SOLO las maldiciones — se extrae del pasaje la parte amarga y se omite el resto. Es el ejemplo canónico de escritura SELECTIVA: el texto se recorta según su función.\n\nLa mezuzá es exactamente lo contrario: la casa lleva en su puerta el pasaje ENTERO, órdenes incluidas. No un extracto, no un resumen, no la parte «útil» — el texto completo tal como está en la Torá.\n\nLa raíz תם (íntegro, completo, sin falta) es el hilo de toda la sugyá. Después del dikduk — la celebración de la palabra bien PRONUNCIADA — el editor encadena con la letra bien ESCRITA. La integridad pasa de la boca a la mano: quien recita debe recitar completo, quien escribe debe escribir completo. Y en seguida, el tercer eslabón: qué hace el que NO logró recitar completo — el que se equivocó a mitad de camino.'
+    },
+    'limud-tam': {
+      titulo: 'Limud tam · enseñanza íntegra · Rav Ovadia',
+      hebreo: 'וְלִמַּדְתֶּם — שֶׁיְּהֵא לִמּוּדְךָ תָּם',
+      traduccion: '«Y las enseñarás» — que tu enseñar sea íntegro',
+      explicacion: 'La derashá gemela: Rav Ovadia lee וְלִמַּדְתֶּם («y las enseñarás», Devarim 11:19) como לִמּוּד תָּם — «que tu enseñar sea ÍNTEGRO». Misma raíz, mismo método (partir la palabra), otro órgano: si ktav tam legisla sobre la mano que escribe, limud tam legisla sobre la boca que enseña.\n\n¿Y qué es un enseñar íntegro? Dar ESPACIO entre las palabras pegadas — las parejas donde la última letra de una palabra es igual a la primera de la siguiente, y la recitación rápida las funde en una sola:\n\n  · עַל לְבָבֶךָ — al levavja: la lamed final y la lamed inicial\n  · עֵשֶׂב בְּשָׂדְךָ — esev besadja: la bet contra la bet\n  · וַאֲבַדְתֶּם מְהֵרָה — vaavadtem meherá: la mem contra la mem\n  · הַכָּנָף פְּתִיל — hakanaf petil: la pe contra la pe\n\nSon los pares de RAVA, el inventario del dikduk que la sugyá anterior celebró. La palabra mal separada es una palabra PERDIDA: quien dice «allevavja» ha pronunciado un texto que no existe. La integridad no es solo decir todas las palabras — es que cada palabra conserve sus FRONTERAS.\n\nJuntas, las dos derashot forman un pequeño tratado sobre la integridad del texto sagrado en sus dos soportes: el pergamino (escribir entero, hasta los mandatos) y el aire (pronunciar separado, hasta las consonantes gemelas). La Torá debe estar completa tanto en la puerta de la casa como en la boca del que la recita.\n\nY el detalle editorial exquisito: las dos palabras diseccionadas — וכתבתם y ולמדתם — son palabras DEL PROPIO SHEMA. La sugyá enseña integridad usando como material los mismos versos cuya recitación regula. El shema se comenta a sí mismo.'
+    },
+    'tiendas-arroyos': {
+      titulo: 'Las tiendas y los arroyos · R. Jama bar Janina',
+      hebreo: 'כִּנְחָלִים נִטָּיוּ... כַּאֲהָלִים נָטַע ה׳',
+      traduccion: '«Como arroyos que se extienden... como tiendas que plantó HaShem» (Bamidbar 24:6)',
+      explicacion: 'R. Jama bar Janina se detiene en una yuxtaposición del verso de Bilam: ¿por qué las TIENDAS aparecen junto a los ARROYOS? (כִּנְחָלִים נִטָּיוּ — «como arroyos que se extienden»... כַּאֲהָלִים — «como tiendas»). En la bendición de Bilam las imágenes se suceden sin explicación; la derashá exige que la vecindad signifique algo.\n\nLa respuesta es una analogía de dos movimientos ASCENDENTES:\n\n  · Los ARROYOS suben al hombre de la IMPUREZA a la PUREZA — el najal es agua viva, agua de mikvé: quien se sumerge sale con otro estatus ritual. El agua no lava suciedad física; opera una transición de estado.\n\n  · Las TIENDAS de Torá suben al hombre de la CULPA al MÉRITO — quien entra al beit midrash cargando jov (deuda, culpa) sale con zjut (mérito). El estudio opera la misma transición, en el registro moral.\n\nEl beit midrash como MIKVÉ: la ecuación es audaz. La inmersión en el texto hace lo que la inmersión en el agua — no informa, TRANSFORMA. Uno no sale del estudio sabiendo más; sale siendo otro, con otro estatus.\n\nLa colocación de esta derashá en medio de la sugyá de los errores no es azar. Acaba de establecerse que el texto debe ser ÍNTEGRO — escrito completo, pronunciado separado — y está por establecerse qué hace el que FALLÓ. Entre ambas, el editor planta esta imagen: el lugar donde se estudia es un lugar donde la falla se convierte en mérito. El que se equivocó no está condenado — está a un chapuzón de distancia de la pureza.\n\nY nótese la fuente: el verso es de BILAM — otra vez la boca del profeta gentil pronunciando la verdad más alta sobre las tiendas de Israel (como מה טובו, que abre cada mañana de sinagoga). La escena final de la sugyá — R. Elazar yendo del beit midrash a su jupá — va a poner en acción exactamente esta imagen: un hombre que entra a la tienda de Torá y sale con un mérito en la mano.'
+    },
+    'protocolo': {
+      titulo: 'El protocolo del error · la Tosefta · a dónde volver',
+      hebreo: 'קָרָא וְטָעָה — יַחֲזוֹר',
+      traduccion: 'Leyó y se equivocó — vuelve',
+      explicacion: 'El corazón práctico de la sugyá: קָרָא וְטָעָה — el que estaba recitando el shema y SE PERDIÓ. No sabe dónde está. Las tres parashiyot se parecen, las fórmulas se repiten, la lengua corre en automático — y de pronto la conciencia despierta y no encuentra el punto en el mapa. ¿Qué hace?\n\nLa Tosefta responde con un protocolo de tres casos, ordenados por el tipo de pérdida:\n\n  ① SE PERDIÓ EN MEDIO DE UN PÁRRAFO — sabe en qué párrafo está, pero no en qué punto. Vuelve al INICIO del párrafo (לְרֹאשׁ הַפֶּרֶק). La unidad dañada se recomienza entera; no se intenta reparar por adentro.\n\n  ② SE PERDIÓ ENTRE PÁRRAFO Y PÁRRAFO — sabe que terminó un párrafo, pero no CUÁL. Vuelve al PRIMER párrafo (לְפֶרֶק רִאשׁוֹן): a la primera frontera de ese tipo. Como no puede fechar su posición, retrocede hasta el primer punto del que está seguro.\n\n  ③ SE PERDIÓ ENTRE וכתבתם Y וכתבתם — el caso más fino. La palabra «y las escribirás» aparece DOS veces: al final del primer párrafo (Devarim 6:9) y cerca del final del segundo (11:20). El recitante sabe que acaba de decir וכתבתם — ¿pero cuál de los dos? Vuelve al PRIMERO. La repetición interna del texto crea una ambigüedad posicional, y la halajá la resuelve siempre igual: en la duda, HACIA ATRÁS.\n\nLa lógica común de los tres casos es la INTEGRIDAD — otra vez la raíz tam. El objetivo no es «haber dicho todas las palabras alguna vez» sino haber recitado un texto CONTINUO, sin agujeros posibles. Por eso la duda se paga retrocediendo: mejor repetir lo seguro que arriesgar un hueco. El shema con una laguna probable no es un shema más corto — es un shema roto.\n\nHay algo consolador en la existencia misma del protocolo: la halajá ASUME que la gente se pierde. El error no es escándalo ni excepción — es un caso previsto, con su tabla y sus reglas, igual que cualquier otro. El título de la sugyá es su lección: el que se equivoca, VUELVE. No abandona, no improvisa, no se castiga — vuelve, porque hay un camino de regreso señalizado.'
+    },
+    'yojanan': {
+      titulo: 'El refinamiento de R. Yojanan · la rutina como testigo',
+      hebreo: 'לְמַעַן יִרְבּוּ יְמֵיכֶם — סִרְכֵיהּ נָקֵט וְאָתֵי',
+      traduccion: 'Si ya empezó «para que se multipliquen sus días» — su rutina lo llevó',
+      explicacion: 'R. Yojanan añade el límite del caso ③. El que duda entre los dos וכתבתם debe volver al primero — PERO si ya se encuentra diciendo לְמַעַן יִרְבּוּ יְמֵיכֶם («para que se multipliquen sus días», Devarim 11:21, el verso que sigue al SEGUNDO וכתבתם), ya no vuelve.\n\nLa razón cabe en tres palabras arameas: סִרְכֵיהּ נָקֵט וְאָתֵי — «tomó su rutina y vino»: su HÁBITO lo llevó. Si la boca ya está en lemaan yirbu, lo más probable es que llegó ahí por el camino normal — pasando correctamente por el segundo párrafo. La lengua entrenada por años de recitación diaria no salta de un párrafo a otro: fluye por el surco de siempre.\n\nLa palabra סירכא es literalmente eso — el surco, la adherencia, la inercia del recorrido habitual. Lo que en la sugyá del dikduk era el ENEMIGO (la rutina que pega las palabras, que apura las consonantes) aparece aquí como ALIADO: el mismo piloto automático que amenaza la pronunciación GARANTIZA la continuidad. La halajá conoce las dos caras del hábito y las usa a ambas.\n\nEpistemológicamente el refinamiento es notable: la halajá acepta una PRESUNCIÓN ESTADÍSTICA como resolución de una duda ritual. No hay certeza de que pasó por el segundo párrafo — hay probabilidad, fundada en cómo funciona la memoria motriz de quien recita cada día. La jazaká (presunción) del cuerpo entrenado tiene fuerza legal.\n\nY hay un matiz pastoral: sin este límite, el escrupuloso viviría retrocediendo — cada duda tardía lo mandaría al principio, y el shema se volvería un laberinto de regresos infinitos. R. Yojanan cierra la puerta a la duda retroactiva: pasado cierto punto, se confía. El protocolo del error tiene un final; la sospecha no es infinita. También eso es integridad — un texto que se puede TERMINAR.'
+    },
+    'jupa': {
+      titulo: 'La escena marco · la jupá de R. Elazar · el dayeinu',
+      hebreo: 'אִלּוּ לֹא בָּאנוּ אֶלָּא לִשְׁמוֹעַ דָּבָר זֶה — דַּיֵּינוּ',
+      traduccion: '«Si solo hubiéramos venido a oír esto — nos bastaba»',
+      explicacion: 'La Tosefta del protocolo no llega a la guemará como cita seca — llega envuelta en una ESCENA, una de las más entrañables del tratado.\n\nR. Ami y R. Asi — los grandes amoraím de Tiberia — están ATANDO la jupá de R. Elazar: armando con sus manos el palio nupcial de su colega. Ya la imagen inicial es enseñanza: los sabios más importantes de la generación trabajando de decoradores de boda, porque el jésed con el novio es Torá práctica.\n\nEl novio, mientras tanto, les dice: iré a oír algo al BEIT MIDRASH. El día de su boda, entre los preparativos, R. Elazar se escapa a la casa de estudio — y vuelve con un botín: la Tosefta del que se equivoca recitando el shema. Tanya: se perdió en medio del párrafo — vuelve al inicio; entre párrafo y párrafo — al primero; entre וכתבתם y וכתבתם — al primero.\n\nY la respuesta de R. Ami y R. Asi es el verso emocional de la sugyá: אִלּוּ לֹא בָּאנוּ אֶלָּא לִשְׁמוֹעַ דָּבָר זֶה — דַּיֵּינוּ. «Si solo hubiéramos venido a oír ESTO, nos bastaba». El dayeinu del beit midrash: la fórmula de la Hagadá — donde cada regalo de la redención habría bastado solo — aplicada a UNA halajá sobre errores de recitación.\n\n¿Por qué TANTO entusiasmo por un detalle técnico? Porque la escena y la halajá se espejan. La derashá de R. Jama bar Janina acaba de decir que las TIENDAS de Torá suben al hombre de la culpa al mérito — y aquí hay un hombre que va de la tienda del estudio a la tienda de la boda, la ohel y la jupá, el mismo día. Y lo que trae de una tienda a la otra es precisamente la halajá del REGRESO: la noticia de que el que se pierde tiene siempre un camino de vuelta señalizado.\n\nQue esa sea la halajá que vale el viaje es la moraleja silenciosa de la sugyá: el conocimiento más precioso no es el del recitador perfecto — es el mapa para el que se equivoca. Una tradición que dedica su entusiasmo («¡nos bastaba!») a la técnica del error asumido enseña algo sobre sí misma: aquí nadie espera que no te pierdas; se espera que sepas VOLVER. Y quizás por eso la escena es una boda: también el matrimonio es un pacto recitado a diario, donde el arte no es no equivocarse nunca — es saber a dónde regresar cuando uno se pierde en medio del párrafo.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.regresos-interactivo')
+    : document.querySelector('.regresos-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#regresos-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.regresos-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="regresos-panel-header">' +
+        '<p class="regresos-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="regresos-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="regresos-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="regresos-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.regresos-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.regresos-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="regresos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
