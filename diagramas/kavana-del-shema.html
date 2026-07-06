@@ -1,0 +1,311 @@
+<div class="kavana-interactivo">
+<style>
+  .kavana-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .kavana-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .kavana-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .kavana-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .kavana-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .kavana-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .kavana-leyenda .verde   { background: rgba(45,107,78,0.12);  border-color: var(--verde); }
+  .kavana-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .kavana-diagrama svg { width: 100%; height: auto; display: block; }
+  .kavana-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .kavana-nodo:hover rect { stroke-width: 2 !important; }
+  .kavana-nodo.activa rect { stroke-width: 2.5 !important; }
+  .kavana-nodo.dim { opacity: 0.32; }
+  .kavana-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .kavana-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .kavana-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .kavana-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .kavana-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .kavana-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .kavana-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="kavana-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la mishná 2:1</span>
+  <span><span class="swatch rojo"></span>la deducción y su rechazo</span>
+  <span><span class="swatch azul"></span>R. Eliezer · R. Akiva</span>
+  <span><span class="swatch verde"></span>la halajá</span>
+  <span><span class="swatch violeta"></span>las escaleras invertidas</span>
+</div>
+
+<div class="kavana-diagrama">
+<svg viewBox="0 0 720 965" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13a-13b: la kavaná del shema · mishná 2:1 · ¿las mitzvot necesitan kavaná? · hasta dónde · las dos escaleras invertidas</title>
+
+<defs>
+  <marker id="flecha-kavana" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Si dirigió su corazón · la kavaná del shema</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13a-13b · mishná 2:1 · la apertura del perek de la interioridad</text>
+
+<!-- ============================================================ -->
+<!-- LA MISHNÁ 2:1                                                -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MISHNÁ · 2:1 · 13A</text>
+
+<g class="kavana-nodo" data-id="mishna">
+  <rect x="60" y="86" width="600" height="104" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">הָיָה קוֹרֵא בַּתּוֹרָה וְהִגִּיעַ זְמַן הַמִּקְרָא</text>
+  <text x="360" y="134" text-anchor="middle" font-size="13" direction="rtl" fill="#b8860b" font-weight="700">אִם כִּוֵּון לִבּוֹ — יָצָא</text>
+  <text x="360" y="156" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Uno leía la Torá y llegó el momento de la lectura: si dirigió su corazón — cumplió»</text>
+  <text x="360" y="176" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">el perek 1 preguntó CUÁNDO se lee · el perek 2 pregunta QUÉ hace que una lectura sea lectura</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA DEDUCCIÓN TENTADA Y SU RECHAZO                            -->
+<!-- ============================================================ -->
+<line x1="360" y1="190" x2="360" y2="208" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-kavana)"/>
+
+<text x="60" y="220" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA DEDUCCIÓN TENTADA · Y SU RECHAZO</text>
+
+<g class="kavana-nodo" data-id="deduccion">
+  <rect x="60" y="230" width="600" height="124" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4" stroke-dasharray="5,2"/>
+  <text x="360" y="254" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a">שְׁמַע מִינַּהּ — מִצְוֹת צְרִיכוֹת כַּוָּונָה</text>
+  <text x="360" y="273" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«¡dedúcelo de aquí: las mitzvot requieren intención!»</text>
+  <line x1="150" y1="284" x2="570" y2="284" stroke="#8b1a1a" stroke-width="0.6" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="360" y="306" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a" font-weight="700">בְּקוֹרֵא לְהַגִּיהַּ</text>
+  <text x="360" y="325" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">el rechazo: quizás el caso es un CORRECTOR de textos — pronuncia palabras sin leerlas</text>
+  <text x="360" y="343" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">la pregunta grande queda abierta · la escena queda: se puede pronunciar toda la Torá sin decir nada</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA BARAITA · ¿HASTA DÓNDE?                                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="354" x2="360" y2="372" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-kavana)"/>
+
+<text x="60" y="384" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA BARAITA · ¿HASTA DÓNDE LLEGA LA KAVANÁ?</text>
+
+<!-- R. Eliezer -->
+<g class="kavana-nodo" data-id="eliezer">
+  <rect x="60" y="394" width="290" height="132" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="416" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Eliezer</text>
+  <text x="205" y="440" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">עַד כָּאן צְרִיכָה כַּוָּונָה</text>
+  <text x="205" y="459" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«hasta aquí se necesita kavaná»</text>
+  <text x="205" y="482" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">הָאֵלֶּה</text>
+  <text x="205" y="500" text-anchor="middle" font-size="9" fill="#3d2f23">los primeros versos · hasta «estas palabras»</text>
+  <text x="205" y="515" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">de ahí en adelante — no hace falta</text>
+</g>
+
+<!-- R. Akiva -->
+<g class="kavana-nodo" data-id="akiva">
+  <rect x="370" y="394" width="290" height="132" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="515" y="416" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Akiva</text>
+  <text x="515" y="440" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ</text>
+  <text x="515" y="459" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«que yo te ordeno hoy — SOBRE TU CORAZÓN»</text>
+  <text x="515" y="480" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="600">toda la parashá necesita kavaná</text>
+  <text x="515" y="501" text-anchor="middle" font-size="9" fill="#2d6b4e" font-weight="600">halajá: Rabba bar bar Jana en nombre de R. Yojanan</text>
+  <text x="515" y="515" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">la halajá sigue a R. Akiva</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA OTRA VERSIÓN DE LA HALAJÁ                                 -->
+<!-- ============================================================ -->
+<line x1="205" y1="526" x2="205" y2="540" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-kavana)"/>
+<line x1="515" y1="526" x2="515" y2="540" stroke="#2d6b4e" stroke-width="1" marker-end="url(#flecha-kavana)"/>
+
+<text x="60" y="556" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OTRA VERSIÓN · R. AJA EN NOMBRE DE R. YEHUDA</text>
+
+<g class="kavana-nodo" data-id="aja">
+  <rect x="60" y="566" width="600" height="86" rx="6" fill="rgba(45,107,78,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="590" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Halajá como R. Aja en nombre de R. Yehuda</text>
+  <text x="360" y="612" text-anchor="middle" font-size="10.5" fill="#1a1410">kavaná en el PRIMER PÁRRAFO basta — cumplió aunque el resto vaya sin corazón</text>
+  <text x="360" y="636" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">las dos versiones de la halajá conviven en la sugyá · el mínimo se negocia — el primer párrafo es innegociable</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LAS DOS ESCALERAS INVERTIDAS · 13B                           -->
+<!-- ============================================================ -->
+<line x1="360" y1="652" x2="360" y2="670" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-kavana)"/>
+
+<text x="60" y="682" font-size="9.5" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LAS DOS ESCALERAS INVERTIDAS · RAV ZUTRA Y R. YOSHIYA · 13B</text>
+
+<!-- Rav Zutra: escalera que baja de izquierda a derecha -->
+<g class="kavana-nodo" data-id="zutra">
+  <rect x="60" y="692" width="290" height="216" rx="6" fill="rgba(90,58,138,0.06)" stroke="#5a3a8a" stroke-width="1.3"/>
+  <text x="205" y="714" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">Rav Zutra</text>
+  <text x="205" y="734" text-anchor="middle" font-size="10" direction="rtl" fill="#5a3a8a">עַד כָּאן מִצְוַת כַּוָּנָה · מִכָּאן וְאֵילָךְ מִצְוַת קְרִיאָה</text>
+  <!-- párrafo 1: kavaná + kriá -->
+  <rect x="82" y="752" width="122" height="38" rx="3" fill="rgba(90,58,138,0.18)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="143" y="775" text-anchor="middle" font-size="9.5" fill="#5a3a8a" font-weight="600">כַּוָּנָה · corazón</text>
+  <rect x="82" y="790" width="122" height="38" rx="3" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="143" y="813" text-anchor="middle" font-size="9.5" fill="#3d2f23">קְרִיאָה · voz</text>
+  <!-- párrafo 2: kriá sin kavaná -->
+  <rect x="210" y="790" width="118" height="38" rx="3" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="269" y="813" text-anchor="middle" font-size="9.5" fill="#3d2f23">קְרִיאָה · voz</text>
+  <line x1="204" y1="752" x2="204" y2="790" stroke="#5a3a8a" stroke-width="1.2"/>
+  <line x1="204" y1="790" x2="210" y2="790" stroke="#5a3a8a" stroke-width="1.2"/>
+  <text x="143" y="846" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">párrafo 1</text>
+  <text x="269" y="846" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">párrafo 2</text>
+  <text x="205" y="870" text-anchor="middle" font-size="9" fill="#3d2f23">primero kavaná + kriá · después kriá sin kavaná</text>
+  <text x="205" y="890" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la escalera baja hacia la VOZ sola</text>
+</g>
+
+<!-- R. Yoshiya: escalera espejo, baja de derecha a izquierda -->
+<g class="kavana-nodo" data-id="yoshiya">
+  <rect x="370" y="692" width="290" height="216" rx="6" fill="rgba(90,58,138,0.06)" stroke="#5a3a8a" stroke-width="1.3"/>
+  <text x="515" y="714" text-anchor="middle" font-size="12" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">R. Yoshiya</text>
+  <text x="515" y="734" text-anchor="middle" font-size="10" direction="rtl" fill="#5a3a8a">עַד כָּאן מִצְוַת קְרִיאָה · מִכָּאן וְאֵילָךְ מִצְוַת כַּוָּנָה</text>
+  <!-- párrafo 1 (a la derecha): kriá + kavaná -->
+  <rect x="516" y="752" width="122" height="38" rx="3" fill="rgba(90,58,138,0.18)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="577" y="775" text-anchor="middle" font-size="9.5" fill="#5a3a8a" font-weight="600">קְרִיאָה · voz</text>
+  <rect x="516" y="790" width="122" height="38" rx="3" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="577" y="813" text-anchor="middle" font-size="9.5" fill="#3d2f23">כַּוָּנָה · corazón</text>
+  <!-- párrafo 2 (a la izquierda): kavaná sin kriá -->
+  <rect x="392" y="790" width="118" height="38" rx="3" fill="rgba(90,58,138,0.08)" stroke="#5a3a8a" stroke-width="0.9"/>
+  <text x="451" y="813" text-anchor="middle" font-size="9.5" fill="#3d2f23">כַּוָּנָה · corazón</text>
+  <line x1="516" y1="752" x2="516" y2="790" stroke="#5a3a8a" stroke-width="1.2"/>
+  <line x1="516" y1="790" x2="510" y2="790" stroke="#5a3a8a" stroke-width="1.2"/>
+  <text x="577" y="846" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">párrafo 1</text>
+  <text x="451" y="846" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">párrafo 2</text>
+  <text x="515" y="870" text-anchor="middle" font-size="9" fill="#3d2f23">primero kriá + kavaná · después kavaná sin kriá</text>
+  <text x="515" y="890" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la escalera espejo baja hacia el CORAZÓN solo</text>
+</g>
+
+<text x="360" y="938" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">la primera parashá es el núcleo denso — donde el corazón y la voz deben coincidir · después, o la voz sola, o el corazón solo</text>
+</svg>
+</div>
+
+<div class="kavana-panel" id="kavana-panel">
+  <p class="kavana-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'mishna': {
+      titulo: 'La mishná 2:1 · si dirigió su corazón',
+      hebreo: 'הָיָה קוֹרֵא בַּתּוֹרָה וְהִגִּיעַ זְמַן הַמִּקְרָא · אִם כִּוֵּון לִבּוֹ — יָצָא',
+      traduccion: '«Uno leía la Torá y llegó el momento de la lectura: si dirigió su corazón — cumplió»',
+      explicacion: 'El hadran cerró Meeimatai con los nombres agrandados de los avot; el perek 2 abre con una escena nueva: alguien YA está leyendo la Torá cuando el zman del shema lo alcanza. Está pronunciando exactamente las palabras correctas, en el momento correcto. ¿Cumplió?\n\nLa mishná responde con tres palabras que abren el perek de la INTERIORIDAD: אִם כִּוֵּון לִבּוֹ — יָצָא, «si dirigió su corazón — cumplió». El acto exterior estaba completo; lo que decide es algo invisible, adentro.\n\nSi el perek 1 preguntó CUÁNDO se lee el shema, el perek 2 pregunta QUÉ HACE que una lectura sea lectura. De esas tres palabras — כִּוֵּון לִבּוֹ — sale la pregunta que recorre todo el Shas: ¿las mitzvot necesitan kavaná?'
+    },
+    'deduccion': {
+      titulo: 'La deducción tentada · y su rechazo: el corrector',
+      hebreo: 'שְׁמַע מִינַּהּ מִצְוֹת צְרִיכוֹת כַּוָּונָה · בְּקוֹרֵא לְהַגִּיהַּ',
+      traduccion: '«Dedúcelo: ¡las mitzvot requieren intención! — (No:) se trata de quien lee para corregir»',
+      explicacion: 'La guemará quiere extraer de la mishná el principio general: שְׁמַע מִינַּהּ מִצְוֹת צְרִיכוֹת כַּוָּונָה — ¡las mitzvot requieren intención! Si la mishná condiciona el cumplimiento a «dirigir el corazón», el principio parece probado.\n\nY se defiende: quizás «dirigió su corazón» solo significa la intención DE LEER, no la intención de cumplir la mitzvá. Pero — ¿leer? ¡Ya está leyendo! Aquí entra la respuesta magistral: בְּקוֹרֵא לְהַגִּיהַּ — el caso es un CORRECTOR de textos, que revisa un rollo y pronuncia las palabras sin leerlas como lectura.\n\nLa pregunta grande (¿mitzvot tzrijot kavaná?) queda abierta. Pero la escena queda grabada: se puede pronunciar toda la Torá sin decir nada. La voz sin el corazón no es todavía lectura.'
+    },
+    'eliezer': {
+      titulo: 'R. Eliezer · kavaná hasta «estas palabras»',
+      hebreo: 'עַד כָּאן צְרִיכָה כַּוָּונָה',
+      traduccion: '«Hasta aquí se necesita kavaná» — hasta הָאֵלֶּה',
+      explicacion: 'La baraita pregunta hasta dónde llega la exigencia de kavaná dentro del shema. R. Eliezer marca la frontera más temprana: עַד כָּאן צְרִיכָה כַּוָּונָה — la kavaná es obligatoria solo hasta הָאֵלֶּה, «estas (palabras)», los primeros versos del primer párrafo.\n\nDe ahí en adelante, no hace falta: la lectura puede continuar en piloto automático y aun así cumple. R. Eliezer concentra toda la exigencia de interioridad en el núcleo inicial — la proclamación misma — y libera el resto.\n\nEs la posición minimalista de la baraita, el polo contra el que R. Akiva va a argumentar desde el propio versículo.'
+    },
+    'akiva': {
+      titulo: 'R. Akiva · «sobre tu corazón» — toda la parashá',
+      hebreo: 'אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ',
+      traduccion: '«Que yo te ordeno hoy — sobre tu corazón» (Devarim 6:6)',
+      explicacion: 'R. Akiva responde a R. Eliezer desde el texto mismo del shema: el versículo dice אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ — «estas palabras que yo te ordeno hoy estarán SOBRE TU CORAZÓN». El corazón no aparece solo al principio: gobierna todas «estas palabras».\n\nConclusión: TODA LA PARASHÁ necesita kavaná. No hay tramo del primer párrafo que pueda recitarse sin el corazón puesto.\n\nY la sugyá registra el veredicto: Rabba bar bar Jana en nombre de R. Yojanan — la halajá sigue a R. Akiva. La lectura maximalista de la interioridad gana, al menos en esta versión de la tradición.'
+    },
+    'aja': {
+      titulo: 'La otra versión · R. Aja en nombre de R. Yehuda',
+      hebreo: 'כֵּיוָן שֶׁכִּוֵּון לִבּוֹ בְּפֶרֶק רִאשׁוֹן — יָצָא',
+      traduccion: 'Si dirigió su corazón en el primer párrafo — cumplió',
+      explicacion: 'La sugyá conserva una segunda versión del veredicto: la halajá es como R. Aja en nombre de R. Yehuda — KAVANÁ EN EL PRIMER PÁRRAFO BASTA. Quien dirigió su corazón en la primera parashá cumplió, aunque el resto de la lectura vaya sin corazón.\n\nLas dos versiones conviven en la página: una hace halajá a R. Akiva (toda la parashá), la otra fija el mínimo en el primer párrafo completo. En ambas, lo innegociable es lo mismo: el primer párrafo es el núcleo donde la interioridad no puede faltar.\n\nEsta gradación — un centro denso de exigencia y una periferia negociable — es la que Rav Zutra y R. Yoshiya van a convertir en arquitectura con sus dos escaleras invertidas.'
+    },
+    'zutra': {
+      titulo: 'Rav Zutra · la escalera que baja hacia la voz',
+      hebreo: 'עַד כָּאן מִצְוַת כַּוָּנָה · מִכָּאן וְאֵילָךְ מִצְוַת קְרִיאָה',
+      traduccion: '«Hasta aquí, mitzvá de kavaná · de aquí en adelante, mitzvá de lectura»',
+      explicacion: 'Rav Zutra parte el shema en dos mitades. En el PRIMER PÁRRAFO se exige todo: kavaná + kriá — el corazón y la voz deben coincidir. En el SEGUNDO PÁRRAFO baja un escalón: basta la kriá sin kavaná — la voz sola, la pronunciación correcta, aunque el corazón esté en otra parte.\n\nEl dibujo es una escalera descendente: el primer peldaño tiene dos capas (corazón sobre voz); el segundo conserva solo la capa de abajo — la VOZ.\n\nPara Rav Zutra, lo que la Torá sigue exigiendo hasta el final es el ACTO EXTERIOR: las palabras deben sonar. La interioridad es el lujo del núcleo; la disciplina de la boca acompaña hasta el final.'
+    },
+    'yoshiya': {
+      titulo: 'R. Yoshiya · la escalera espejo, hacia el corazón',
+      hebreo: 'עַד כָּאן מִצְוַת קְרִיאָה · מִכָּאן וְאֵילָךְ מִצְוַת כַּוָּנָה',
+      traduccion: '«Hasta aquí, mitzvá de lectura · de aquí en adelante, mitzvá de kavaná»',
+      explicacion: 'R. Yoshiya construye la escalera EXACTAMENTE INVERTIDA. En el PRIMER PÁRRAFO, igual que Rav Zutra: kriá + kavaná, la voz y el corazón juntos. Pero en el SEGUNDO PÁRRAFO conserva la otra mitad: kavaná sin kriá — el CORAZÓN solo, la meditación del contenido aunque la boca calle.\n\nLas dos escaleras comparten el mismo primer peldaño — el núcleo denso donde voz y corazón coinciden — y se separan en espejo: Zutra suelta el corazón y retiene la voz; Yoshiya suelta la voz y retiene el corazón.\n\nJuntas dibujan la tensión fundadora del perek (ver keva-y-kavaná): ¿qué es lo esencial de la mitzvá — el acto pronunciado o la intención vivida? El Talmud no la resuelve: la deja abierta, en dos escaleras que bajan en direcciones opuestas desde la misma cima.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.kavana-interactivo')
+    : document.querySelector('.kavana-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#kavana-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.kavana-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="kavana-panel-header">' +
+        '<p class="kavana-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="kavana-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="kavana-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="kavana-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.kavana-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.kavana-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="kavana-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
