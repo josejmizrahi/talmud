@@ -1,0 +1,349 @@
+<div class="obreros-interactivo">
+<style>
+  .obreros-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .obreros-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .obreros-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .obreros-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .obreros-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .obreros-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .obreros-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .obreros-diagrama svg { width: 100%; height: auto; display: block; }
+  .obreros-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .obreros-nodo:hover rect { stroke-width: 2 !important; }
+  .obreros-nodo.activa rect { stroke-width: 2.5 !important; }
+  .obreros-nodo.dim { opacity: 0.32; }
+  .obreros-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .obreros-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .obreros-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .obreros-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .obreros-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .obreros-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .obreros-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="obreros-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch verde"></span>el árbol · los obreros</span>
+  <span><span class="swatch dorado"></span>el shema · sube con ellos</span>
+  <span><span class="swatch azul"></span>la tefilá · liturgia del jornalero</span>
+  <span><span class="swatch rojo"></span>restricciones · lo que no se hace</span>
+</div>
+
+<div class="obreros-diagrama">
+<svg viewBox="0 0 720 1190" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 16a · mishná 2:4: los obreros recitan el shema en la copa del árbol y en el muro en construcción · la tefilá los baja al suelo</title>
+
+<defs>
+  <marker id="flecha-ob" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <!-- patrón de ladrillos del nidbaj -->
+  <pattern id="patron-ladrillo" patternUnits="userSpaceOnUse" width="28" height="16">
+    <rect width="28" height="16" fill="rgba(107,68,35,0.10)"/>
+    <path d="M 0,8 L 28,8 M 14,0 L 14,8 M 0,8 L 0,16 M 28,8 L 28,16" stroke="#6b4423" stroke-width="0.7" opacity="0.5"/>
+  </pattern>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El shema en la copa del árbol · los obreros rezan donde trabajan</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 16a · mishná 2:4 · הָאוּמָּנִין קוֹרִין בְּרֹאשׁ הָאִילָן</text>
+
+<!-- ============================================================ -->
+<!-- LA MISHNÁ · ESCENA: ÁRBOL Y MURO CON OBREROS                 -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MISHNÁ · ARRIBA SÍ (SHEMA) · ARRIBA NO (TEFILÁ)</text>
+
+<g class="obreros-nodo" data-id="mishna">
+  <rect x="60" y="86" width="600" height="234" rx="6" fill="rgba(30,107,90,0.06)" stroke="#2d6b4e" stroke-width="1.6"/>
+
+  <!-- suelo -->
+  <line x1="90" y1="252" x2="630" y2="252" stroke="#6b4423" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- EL ÁRBOL -->
+  <path d="M 185,252 C 183,220 187,200 185,182 M 185,206 C 172,196 164,188 158,176 M 185,196 C 198,188 206,180 212,170" stroke="#6b4423" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="185" cy="150" rx="62" ry="34" fill="rgba(30,107,90,0.18)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <ellipse cx="148" cy="168" rx="34" ry="22" fill="rgba(30,107,90,0.16)" stroke="#2d6b4e" stroke-width="1"/>
+  <ellipse cx="224" cy="166" rx="34" ry="22" fill="rgba(30,107,90,0.16)" stroke="#2d6b4e" stroke-width="1"/>
+  <!-- obrero en la copa -->
+  <circle cx="185" cy="122" r="6" fill="none" stroke="#2d6b4e" stroke-width="1.6"/>
+  <path d="M 185,128 L 185,144 M 185,132 L 176,140 M 185,132 L 194,138 M 185,144 L 179,152 M 185,144 L 191,152" stroke="#2d6b4e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="185" y="108" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="700">שְׁמַע ✓</text>
+  <text x="185" y="272" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">בְּרֹאשׁ הָאִילָן</text>
+  <text x="185" y="286" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">en la copa del árbol</text>
+
+  <!-- EL MURO (nidbaj) -->
+  <rect x="440" y="164" width="150" height="88" fill="url(#patron-ladrillo)" stroke="#6b4423" stroke-width="1.2"/>
+  <rect x="454" y="148" width="122" height="16" fill="rgba(107,68,35,0.14)" stroke="#6b4423" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- obrero sobre la hilera -->
+  <circle cx="515" cy="122" r="6" fill="none" stroke="#2d6b4e" stroke-width="1.6"/>
+  <path d="M 515,128 L 515,144 M 515,132 L 505,138 M 515,132 L 525,136 M 515,144 L 509,148 M 515,144 L 521,148" stroke="#2d6b4e" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="515" y="108" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="700">שְׁמַע ✓</text>
+  <text x="515" y="272" text-anchor="middle" font-size="9.5" direction="rtl" fill="#2d6b4e">בְּרֹאשׁ הַנִּדְבָּךְ</text>
+  <text x="515" y="286" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">en la hilera del muro en construcción</text>
+
+  <!-- tefilá: flecha al suelo -->
+  <line x1="350" y1="150" x2="350" y2="240" stroke="#8b1a1a" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#flecha-ob)"/>
+  <text x="350" y="140" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="700">תְּפִלָּה ✗ baja</text>
+
+  <text x="360" y="308" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">הָאוּמָּנִין קוֹרִין בְּרֹאשׁ הָאִילָן וּבְרֹאשׁ הַנִּדְבָּךְ — מַה שֶּׁאֵינָן רַשָּׁאִין לַעֲשׂוֹת כֵּן בַּתְּפִלָּה</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- TOSEFTA · QUÉ ÁRBOLES · EL BAAL HABAYIT                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="320" x2="360" y2="338" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-ob)"/>
+
+<text x="60" y="350" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA TOSEFTA · ¿SOBRE QUÉ ÁRBOLES SE PUEDE REZAR?</text>
+
+<g class="obreros-nodo" data-id="tosefta-arboles">
+  <rect x="60" y="360" width="600" height="146" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="382" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La tefilá solo se permite arriba en dos árboles — y al patrón, en ninguno</text>
+
+  <rect x="80" y="396" width="176" height="70" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="168" y="414" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">olivo · higuera</text>
+  <text x="168" y="430" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">זַיִת וּתְאֵנָה</text>
+  <text x="168" y="446" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">ramas densas · se está firme</text>
+  <text x="168" y="459" text-anchor="middle" font-size="8.5" fill="#2d6b4e">tefilá arriba ✓</text>
+
+  <rect x="272" y="396" width="176" height="70" rx="4" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="360" y="414" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">los demás árboles</text>
+  <text x="360" y="430" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">שְׁאָר כָּל הָאִילָנוֹת</text>
+  <text x="360" y="446" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">inestables · el miedo distrae</text>
+  <text x="360" y="459" text-anchor="middle" font-size="8.5" fill="#8b1a1a">hay que bajar ✗</text>
+
+  <rect x="464" y="396" width="176" height="70" rx="4" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.3"/>
+  <text x="552" y="414" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="700">el baal habayit</text>
+  <text x="552" y="430" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">בַּעַל הַבַּיִת</text>
+  <text x="552" y="446" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">baja SIEMPRE · de todo árbol</text>
+  <text x="552" y="459" text-anchor="middle" font-size="8.5" fill="#8b1a1a">sin excepción ✗✗</text>
+
+  <text x="360" y="490" text-anchor="middle" font-size="10" direction="rtl" fill="#8b1a1a">לְפִי שֶׁאֵין דַּעְתּוֹ מְיוּשֶּׁבֶת עָלָיו</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- KAVANÁ · RAV MARI CONTRADICE · RAV SHESHET RESUELVE          -->
+<!-- ============================================================ -->
+<line x1="360" y1="506" x2="360" y2="524" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-ob)"/>
+
+<text x="60" y="536" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA CONTRADICCIÓN · RAV MARI ⟷ RAVA · RAV SHESHET RESUELVE</text>
+
+<g class="obreros-nodo" data-id="kavana">
+  <rect x="60" y="546" width="600" height="152" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="78" y="568" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="600">Rav Mari: ¿la baraita exige kavaná (הַסְכֵּת וּשְׁמַע) y la mishná deja leer trepado a un árbol?</text>
+
+  <text x="360" y="592" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">בְּטֵלִין מִמְּלַאכְתָּן וְקוֹרִין</text>
+  <text x="360" y="608" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">Rav Sheshet: leen PAUSANDO su trabajo — arriba, pero con el martillo quieto</text>
+
+  <rect x="80" y="620" width="272" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="216" y="638" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="700">primer párrafo · שְׁמַע</text>
+  <text x="216" y="654" text-anchor="middle" font-size="9" fill="#3d2f23">exige PAUSA total del trabajo</text>
+  <text x="216" y="670" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">kavaná plena · seis palabras quietas</text>
+
+  <rect x="368" y="620" width="272" height="62" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="504" y="638" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="700">segundo párrafo · וְהָיָה אִם שָׁמֹעַ</text>
+  <text x="504" y="654" text-anchor="middle" font-size="9" direction="rtl" fill="#1a1410">עוֹסְקִים בִּמְלַאכְתָּן וְקוֹרִין</text>
+  <text x="504" y="670" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Beit Hillel: trabajando y leyendo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA LITURGIA DEL JORNALERO                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="698" x2="360" y2="716" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-ob)"/>
+
+<text x="60" y="728" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA TOSEFTA · EL PAQUETE LITÚRGICO DEL JORNALERO</text>
+
+<g class="obreros-nodo" data-id="liturgia">
+  <rect x="60" y="738" width="600" height="140" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="78" y="760" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Lo que el obrero SÍ reza y lo que NO hace — el tiempo del patrón no se toca</text>
+
+  <text x="90" y="784" font-size="10" fill="#b8860b" font-weight="700">✓</text>
+  <text x="108" y="784" font-size="10" fill="#3d2f23">shema con sus berajot</text>
+  <text x="90" y="802" font-size="10" fill="#b8860b" font-weight="700">✓</text>
+  <text x="108" y="802" font-size="10" fill="#3d2f23">pan con sus berajot (birkat hamazón abreviada)</text>
+  <text x="90" y="820" font-size="10" fill="#1e3a5f" font-weight="700">◐</text>
+  <text x="108" y="820" font-size="10" fill="#3d2f23">amidá abreviada · מֵעֵין שְׁמוֹנֶה עֶשְׂרֵה</text>
+
+  <text x="390" y="784" font-size="10" fill="#8b1a1a" font-weight="700">✗</text>
+  <text x="408" y="784" font-size="10" fill="#3d2f23">no bajan al arca (shalíaj tsibur)</text>
+  <text x="390" y="802" font-size="10" fill="#8b1a1a" font-weight="700">✗</text>
+  <text x="408" y="802" font-size="10" fill="#3d2f23">no alzan las manos (birkat kohanim)</text>
+  <text x="390" y="820" font-size="9" fill="#6b4423" font-style="italic">lo público y expandible queda fuera</text>
+
+  <text x="360" y="852" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-style="italic">la mitzvá se adapta al contrato: obligación plena, formato comprimido</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- BIRKAT HAMAZÓN ABREVIADA                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="878" x2="360" y2="896" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-ob)"/>
+
+<text x="60" y="908" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">CÓMO SE ABREVIA · BIRKAT HAMAZÓN DEL OBRERO</text>
+
+<g class="obreros-nodo" data-id="birkat">
+  <rect x="60" y="918" width="600" height="102" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.5"/>
+  <rect x="80" y="936" width="130" height="42" rx="3" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="0.8"/>
+  <text x="145" y="953" text-anchor="middle" font-size="9" fill="#3d2f23">1 · הַזָּן</text>
+  <text x="145" y="968" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">completa</text>
+  <rect x="226" y="936" width="268" height="42" rx="3" fill="rgba(184,134,11,0.14)" stroke="#b8860b" stroke-width="1.3"/>
+  <text x="360" y="953" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">2 · בִּרְכַּת הָאָרֶץ + בּוֹנֵה יְרוּשָׁלָיִם</text>
+  <text x="360" y="968" text-anchor="middle" font-size="8" fill="#b8860b" font-style="italic">DOS berajot fundidas en UNA</text>
+  <rect x="510" y="936" width="130" height="42" rx="3" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="575" y="953" text-anchor="middle" font-size="9" fill="#3d2f23">(3 · absorbida)</text>
+  <text x="575" y="968" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">no se dice aparte</text>
+  <text x="360" y="1002" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">la segunda berajá incluye «el que construye Jerusalén» dentro de la berajá de la tierra</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA DISTINCIÓN FINAL · EL CONTRATO DEFINE EL SIDUR            -->
+<!-- ============================================================ -->
+<line x1="360" y1="1020" x2="360" y2="1038" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-ob)"/>
+
+<text x="60" y="1050" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RESOLUCIÓN · EL CONTRATO DEFINE EL SIDUR</text>
+
+<g class="obreros-nodo" data-id="contrato">
+  <rect x="60" y="1060" width="600" height="112" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <rect x="80" y="1078" width="272" height="72" rx="4" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="216" y="1098" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">עוֹשִׂין בִּשְׂכָרָן</text>
+  <text x="216" y="1114" text-anchor="middle" font-size="9" fill="#3d2f23">trabajan por salario</text>
+  <text x="216" y="1132" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">→ liturgia abreviada</text>
+
+  <rect x="368" y="1078" width="272" height="72" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1"/>
+  <text x="504" y="1098" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">עוֹשִׂין בִּסְעוּדָּתָן · אוֹ שֶׁאוֹכֵל עִמָּהֶן</text>
+  <text x="504" y="1114" text-anchor="middle" font-size="9" fill="#3d2f23">solo por la comida · o el patrón come con ellos</text>
+  <text x="504" y="1132" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">→ liturgia completa</text>
+</g>
+
+</svg>
+</div>
+
+<div class="obreros-panel" id="obreros-panel">
+  <p class="obreros-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'mishna': {
+      titulo: 'La mishná: arriba sí (shema), arriba no (tefilá)',
+      hebreo: 'הָאוּמָּנִין קוֹרִין בְּרֹאשׁ הָאִילָן וּבְרֹאשׁ הַנִּדְבָּךְ — מַה שֶּׁאֵינָן רַשָּׁאִין לַעֲשׂוֹת כֵּן בַּתְּפִלָּה',
+      traduccion: '«Los obreros recitan en la copa del árbol y en la hilera del muro — lo que no pueden hacer con la tefilá»',
+      explicacion: 'La mishná más obrera del tratado saca el shema del beit midrash y lo sube a un andamio. Los אוּמָּנִין — artesanos, jornaleros — están donde el trabajo los pone: podando en la copa del árbol, colocando piedras en el נִדְבָּךְ (la hilera del muro en construcción). Y ahí mismo, a esa altura, recitan el shema.\n\nLa distinción es quirúrgica:\n\n  · SHEMA — se recita ARRIBA, donde el cuerpo está. El shema es aceptación del yugo del cielo: acompaña al trabajador a su altura, no exige postura, ni lugar, ni descenso. Beit Hillel ya había establecido que se lee «cada uno en su camino» (Devarim 6:7 — וּבְלֶכְתְּךָ בַדֶּרֶךְ).\n\n  · TEFILÁ — NO se reza arriba. La amidá es audiencia ante el Rey: exige los pies juntos, la mente asentada, el cuerpo entero disponible. Un hombre agarrado a una rama no puede estar «de pie ante HKBH». La tefilá lo BAJA al suelo.\n\nLa mishná mide la kavaná recién legislada en el perek contra el mundo real del trabajo. El resultado es un mapa de exigencias: el shema pide atención (posible arriba, pausando); la amidá pide PRESENCIA total (imposible trepado).\n\nEl detalle económico ya está implícito: los obreros trabajan en tiempo ajeno. Bajar del árbol para el shema costaría minutos del patrón; la halajá no lo exige. Para la tefilá sí — porque ahí no hay sustituto posible de la compostura.'
+    },
+    'tosefta-arboles': {
+      titulo: 'La Tosefta: olivo e higuera sí, los demás no — el patrón baja siempre',
+      hebreo: 'לְפִי שֶׁאֵין דַּעְתּוֹ מְיוּשֶּׁבֶת עָלָיו',
+      traduccion: '«Porque su mente no está asentada sobre él»',
+      explicacion: 'La Tosefta refina la regla de la tefilá arriba con criterio de INGENIERÍA:\n\n  · OLIVO E HIGUERA (זַיִת וּתְאֵנָה) — sus ramas son densas, gruesas, entrelazadas. El que está arriba está FIRME, como parado en un pequeño piso. Ahí la tefilá se permite incluso en lo alto: la estabilidad física habilita la estabilidad mental.\n\n  · LOS DEMÁS ÁRBOLES — ramas finas, el cuerpo ocupado en no caer. De esos hay que BAJAR para rezar. El criterio no es la altura en sí — es el MIEDO. Una mente que monitorea el equilibrio no puede estar delante del Rey.\n\n  · EL BAAL HABAYIT — baja SIEMPRE, de cualquier árbol, incluso del olivo. La razón es la frase clave: לְפִי שֶׁאֵין דַּעְתּוֹ מְיוּשֶּׁבֶת עָלָיו — «su mente no está asentada».\n\n¿Por qué el patrón es MÁS estricto que el obrero? La lógica es económica y psicológica a la vez:\n\n  1. El obrero trabaja en tiempo AJENO. La halajá le permite rezar arriba (en árbol firme) para no robarle minutos al patrón. La dispensa nace del contrato.\n\n  2. El patrón decide su PROPIO tiempo. No tiene la excusa del jornal — puede bajar sin robarle a nadie. Si no baja, es porque no quiere.\n\n  3. Y más profundo: el dueño está pensando en su hacienda, sus cuentas, su cosecha. Su mente está estructuralmente inquieta. El jornalero, paradójicamente, tiene la cabeza más libre: el árbol no es suyo.\n\nLa halajá lee la psicología de la propiedad: poseer distrae. El que no tiene nada que perder arriba del árbol reza mejor que el dueño del árbol.'
+    },
+    'kavana': {
+      titulo: 'Rav Mari contradice · Rav Sheshet resuelve: pausando el trabajo',
+      hebreo: 'בְּטֵלִין מִמְּלַאכְתָּן וְקוֹרִין',
+      traduccion: '«Pausan su trabajo y recitan»',
+      explicacion: 'Rav Mari (hijo de la hija de Shmuel) le plantea a Rava la contradicción frontal:\n\n  · La BARAITA exige kavaná: הַסְכֵּת וּשְׁמַע יִשְׂרָאֵל — «atiende y escucha» (Devarim 27:9). El shema requiere atención real.\n  · La MISHNÁ deja recitar trepado a un árbol, en plena faena. ¿Qué kavaná puede haber colgado de una rama con el martillo en la mano?\n\nRava calla — y Rav Sheshet resuelve con dos palabras: בְּטֵלִין מִמְּלַאכְתָּן — los obreros recitan PAUSANDO el trabajo. La mishná nunca dijo que leen mientras martillan: leen ARRIBA (no bajan — eso el contrato no lo exige), pero DETIENEN las manos (eso la kavaná sí lo exige).\n\nLa objeción siguiente: ¿no dice Beit Hillel עוֹסְקִים בִּמְלַאכְתָּן וְקוֹרִין — «siguen en su trabajo y recitan»? ¿Trabajando Y leyendo a la vez?\n\nLa resolución final divide el shema en dos niveles — la misma escala de kavaná que el perek ya construyó:\n\n  · PRIMER PÁRRAFO (שְׁמַע) — exige pausa TOTAL. Ahí está קבלת עול מלכות שמים, la aceptación del yugo. Las manos se detienen. Según la halajá final, el mínimo absoluto de kavaná es el primer verso: seis palabras de quietud.\n\n  · SEGUNDO PÁRRAFO (וְהָיָה אִם שָׁמֹעַ) — ahí aplica Beit Hillel: se puede seguir trabajando mientras se recita. La boca dice, las manos hacen.\n\nLa escala de kavaná se traduce así a derecho laboral: seis palabras de pausa total le pertenecen al Cielo; después, el martillo puede volver. Ni el patrón pierde su jornada, ni HKBH pierde su verso.'
+    },
+    'liturgia': {
+      titulo: 'La liturgia del jornalero: el paquete completo de la Tosefta',
+      hebreo: 'מֵעֵין שְׁמוֹנֶה עֶשְׂרֵה',
+      traduccion: 'La amidá «esencia de las dieciocho» — la versión abreviada',
+      explicacion: 'La Tosefta arma el sidur completo del obrero — qué reza, en qué formato, y qué no hace:\n\n  ✓ SHEMA CON SUS BERAJOT — completo. La aceptación del yugo del cielo no se abrevia: es el núcleo no negociable del día, y sus berajot lo acompañan enteras.\n\n  ✓ PAN CON SUS BERAJOT — el obrero come su pan con la berajá previa y con birkat hamazón — pero en versión abreviada (ver el nodo siguiente).\n\n  ◐ AMIDÁ — la versión מֵעֵין שְׁמוֹנֶה עֶשְׂרֵה, «esencia de las dieciocho»: las trece berajot intermedias comprimidas en una sola (הֲבִינֵנוּ), entre las tres primeras y las tres últimas. La obligación de tefilá permanece; el FORMATO se comprime al tamaño de la pausa laboral.\n\n  ✗ NO BAJAN AL ARCA — no ofician como shalíaj tsibur. Liderar la repetición pública consume tiempo comunitario extenso.\n\n  ✗ NO ALZAN LAS MANOS — el obrero-kohén no sube a dar birkat kohanim.\n\nEl principio que organiza la lista: la obligación PERSONAL se mantiene siempre (shema, tefilá, birkat hamazón), pero todo lo EXPANDIBLE se comprime y todo lo PÚBLICO se suspende. El tiempo del patrón no se toca.\n\nEs una de las páginas más materialistas del tratado: la halajá reconoce que el jornalero vendió sus horas, y diseña una liturgia que cabe exactamente en los intersticios del contrato — sin eximirlo de nada esencial y sin robarle nada al empleador. La santidad se pliega al tamaño del descanso, pero no desaparece.'
+    },
+    'birkat': {
+      titulo: 'Birkat hamazón abreviada: dos berajot fundidas en una',
+      hebreo: 'כּוֹלֵל בּוֹנֵה יְרוּשָׁלָיִם בְּבִרְכַּת הָאָרֶץ',
+      traduccion: 'Incluye «el que construye Jerusalén» dentro de la berajá de la tierra',
+      explicacion: 'La técnica exacta de la abreviación:\n\nBirkat hamazón normal tiene tres berajot de origen (más la cuarta, rabínica posterior):\n\n  1. הַזָּן אֶת הַכֹּל — «el que alimenta a todos» (atribuida a Moshé)\n  2. בִּרְכַּת הָאָרֶץ — la berajá de la tierra (atribuida a Yehoshúa)\n  3. בּוֹנֵה יְרוּשָׁלָיִם — «el que construye Jerusalén» (atribuida a David y Shlomó)\n\nEl obrero dice la PRIMERA completa — el agradecimiento básico por el alimento no se toca. Después FUNDE la segunda y la tercera: dice la berajá de la tierra e INCLUYE dentro de ella la mención de Jerusalén, cerrando con una sola firma. Dos berajot → una.\n\nLa elegancia del mecanismo: no se ELIMINA contenido — se elimina ESTRUCTURA. Todos los temas obligatorios se mencionan (alimento, tierra, pacto, Torá, Jerusalén); lo que se ahorra es la arquitectura formal de aperturas y cierres. El agradecimiento queda íntegro en sustancia y comprimido en forma.\n\nHay aquí una ironía hermosa que el Talmud deja a la vista: el obrero que está construyendo un muro (בְּרֹאשׁ הַנִּדְבָּךְ) abrevia justamente la berajá del que CONSTRUYE Jerusalén (בּוֹנֵה יְרוּשָׁלָיִם). El constructor de abajo comprime al Constructor de arriba — porque el andamio no espera.\n\nLa cuarta berajá (הַטּוֹב וְהַמֵּטִיב, rabínica) directamente no se dice: si el formato de la Torá se comprime por el trabajo, el agregado rabínico cede primero.'
+    },
+    'contrato': {
+      titulo: 'La distinción final: el contrato define el sidur',
+      hebreo: 'עוֹשִׂין בִּשְׂכָרָן ⟷ עוֹשִׂין בִּסְעוּדָּתָן',
+      traduccion: 'Trabajan por salario ⟷ trabajan por su comida',
+      explicacion: 'La resolución final de la sugyá aterriza todo en una cláusula contractual:\n\n  · עוֹשִׂין בִּשְׂכָרָן — si trabajan POR SALARIO: liturgia ABREVIADA. Las horas están vendidas; cada minuto de rezo extendido es dinero del patrón. La halajá protege al empleador: amidá de esencia, birkat hamazón fundida.\n\n  · עוֹשִׂין בִּסְעוּדָּתָן — si trabajan SOLO POR LA COMIDA, o si el patrón COME CON ELLOS: liturgia COMPLETA. Cuando no hay jornal que corra — o cuando el mismo dueño está sentado a la mesa compartiendo el tiempo — desaparece la presión, y con ella la dispensa.\n\nLa lógica es de una honestidad brutal: la abreviación NUNCA fue un privilegio del obrero ni una rebaja de su dignidad religiosa. Fue una protección del BOLSILLO DEL PATRÓN. Quitada esa variable, el obrero reza igual que cualquiera.\n\nY el detalle del patrón que come con ellos es el más fino: si el baal habayit se sienta a la mesa, él mismo está declarando que ese tiempo no es tiempo facturable. Su presencia convierte la comida en mesa compartida — y la mesa compartida recupera la liturgia entera.\n\nEl contrato define el sidur. Es una de las páginas más materialistas y humanas del tratado: la halajá no finge que la vida espiritual flota sobre la economía — la teje DENTRO de ella. El mismo perek que legisló la kavaná del corazón (הַסְכֵּת וּשְׁמַע) legisla ahora los minutos del jornal. Cielo y salario, en la misma página.\n\nEco del principio de Beit Hillel (postura del shema): la Torá se cumple «cada uno en su camino» — también cuando el camino es un andamio alquilado por horas.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.obreros-interactivo')
+    : document.querySelector('.obreros-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#obreros-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.obreros-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="obreros-panel-header">' +
+        '<p class="obreros-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="obreros-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="obreros-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="obreros-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.obreros-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.obreros-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="obreros-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
