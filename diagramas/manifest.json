@@ -1,6 +1,6 @@
 {
-  "perek": "Berajot · perek 1 · מאימתי",
-  "descripcion": "Diagramas temáticos del primer perek de Berajot (dapim 2a–12a). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
+  "perek": "Berajot · perek 1 · מאימתי · completo",
+  "descripcion": "Diagramas temáticos del primer perek de Berajot (dapim 2a–13a · perek completo). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
   "diagramas": [
     {
       "slug": "zman-shema-arvit",
@@ -1446,6 +1446,208 @@
         "texto": "La gemará vuelve a la última cláusula de la mishná 1:4:\nמָקוֹם שֶׁאָמְרוּ לְהַאֲרִיךְ אֵינוֹ רַשַּׁאי לְקַצֵּר. ¿Qué\ndefine a una berajá — su apertura o su cierre? El caso de\nprueba usa las berajot recién estudiadas: el que abrió con\nyotzer or y cerró con maariv aravim. El perek cierra su\ntramo litúrgico preguntando dónde vive la esencia de una\nbendición.\n"
       },
       "nota": true
+    },
+    {
+      "slug": "hamelej-hakadosh",
+      "orden": 39,
+      "titulo": "HaMelej haKadosh · los diez días",
+      "subtitulo": "la caña y la serpiente · cuando Dios se corona",
+      "dapim": [
+        "12b"
+      ],
+      "grupo": "La técnica litúrgica",
+      "estado": "listo",
+      "diagrama": "diagramas/hamelej-hakadosh.html",
+      "sabios": [
+        "rav-sheshet",
+        "rabba-bar-jinnana-sava",
+        "rav",
+        "r-elazar",
+        "rav-yosef",
+        "rabba"
+      ],
+      "pesukim": [
+        "yeshayahu-5-16"
+      ],
+      "conceptos": [
+        "hamelej-hakadosh",
+        "aseret-yemei-teshuva",
+        "korea-zokef",
+        "maljut-shamayim"
+      ],
+      "puente_desde": {
+        "tipo": "mismo-orador",
+        "texto": "El diagrama #38 cerró con Rabba bar Jinnana Sava en nombre de\nRav: emet veyatziv, y el cuerpo que se inclina en baruj y se\nyergue en el Nombre. El editor sigue con el MISMO ORADOR —\nוְאָמַר רַבָּה בַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב — para\nla siguiente enseñanza litúrgica: cuándo el haEl haKadosh se\nconvierte en haMelej haKadosh. Antes, una miniatura sobre la\nreverencia: Rav Sheshet, la caña y la serpiente.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "verguenza-de-shaul",
+      "orden": 40,
+      "titulo": "La vergüenza de Shaúl",
+      "subtitulo": "quien no pide por el otro peca · la vergüenza que perdona",
+      "dapim": [
+        "12b"
+      ],
+      "grupo": "Tefilá contra el decreto",
+      "estado": "listo",
+      "diagrama": "diagramas/verguenza-de-shaul.html",
+      "sabios": [
+        "rabba-bar-jinnana-sava",
+        "rav",
+        "rava",
+        "r-yojanan"
+      ],
+      "sabios_biblicos": [
+        "shaul",
+        "shmuel-hanavi",
+        "david"
+      ],
+      "pesukim": [
+        "shmuel-i-12-23",
+        "tehilim-35-13",
+        "yejezkel-16-63",
+        "shmuel-i-28-15",
+        "shmuel-i-28-19",
+        "shmuel-ii-21-6"
+      ],
+      "conceptos": [
+        "tefila",
+        "rajamim-por-el-otro",
+        "vergueza-halajica",
+        "teshuva",
+        "urim-vetumim",
+        "bat-kol",
+        "mejitzá"
+      ],
+      "puente_desde": {
+        "tipo": "mismo-orador",
+        "texto": "Tercera y cuarta enseñanza de la misma cadena: וְאָמַר רַבָּה\nבַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב. Tras las fórmulas\nlitúrgicas (emet veyatziv, haMelej hakadosh) vienen las dos\nenseñanzas morales del mismo orador: quien pudiendo pedir\nmisericordia por su compañero no pide — se llama pecador; y\nquien se avergüenza de su transgresión — le perdonan todo.\nLas dos convergen en la figura de Shaúl.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "balak-y-tzitzit",
+      "orden": 41,
+      "titulo": "Balak y tzitzit · qué entra en el shema",
+      "subtitulo": "el león que casi entra · las cinco cosas de la tercera parashá",
+      "dapim": [
+        "12b"
+      ],
+      "grupo": "La técnica litúrgica",
+      "estado": "listo",
+      "diagrama": "diagramas/balak-y-tzitzit.html",
+      "sabios": [
+        "r-abahu-ben-zutarti",
+        "r-yehuda-bar-zvida",
+        "r-yose-bar-avin",
+        "r-yehuda-bar-javiva"
+      ],
+      "sabios_biblicos": [
+        "moshe",
+        "shimshon"
+      ],
+      "pesukim": [
+        "bamidbar-24-9",
+        "bamidbar-15-39",
+        "bamidbar-15-41",
+        "tehilim-14-1",
+        "shoftim-14-3"
+      ],
+      "conceptos": [
+        "shema",
+        "toraj-tzibur",
+        "parashat-tzitzit",
+        "yetziat-mitzrayim",
+        "ol-mitzvot",
+        "minim",
+        "hirhur-aveira",
+        "avoda-zara"
+      ],
+      "puente_desde": {
+        "tipo": "continuacion-halajica",
+        "texto": "Cerrada la digresión de Shaúl, el editor vuelve al eje del\nperek — la composición del shema mismo: בִּקְּשׁוּ לִקְבּוֹעַ\nפָּרָשַׁת בָּלָק בִּקְרִיאַת שְׁמַע. ¿Qué parashiyot merecen\nentrar en la recitación diaria y por qué? La sugyá revela el\ncriterio editorial de la liturgia: qué se incluye, qué se\nexcluye, y qué precio pagó la comodidad de la comunidad.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "ben-zoma-noches",
+      "orden": 42,
+      "titulo": "Ben Zoma · Egipto en las noches",
+      "subtitulo": "como de setenta años · el lobo, el león y la serpiente",
+      "dapim": [
+        "12b",
+        "13a"
+      ],
+      "grupo": "La gran sugyá del shema",
+      "estado": "listo",
+      "diagrama": "diagramas/ben-zoma-noches.html",
+      "sabios": [
+        "r-elazar-ben-azaria",
+        "ben-zoma",
+        "jajamim",
+        "rav-yosef"
+      ],
+      "pesukim": [
+        "devarim-16-3",
+        "yirmiyahu-23-7",
+        "bereshit-35-10",
+        "yeshayahu-43-18",
+        "yeshayahu-43-19"
+      ],
+      "conceptos": [
+        "yetziat-mitzrayim",
+        "yemot-hamashiaj",
+        "ikar-tafel",
+        "gog-umagog",
+        "shibud-maljuyot",
+        "zman-shema-arvit"
+      ],
+      "puente_desde": {
+        "tipo": "palabra-puente",
+        "texto": "La parashá de tzitzit entró al shema POR yetziat mitzrayim —\npero tzitzit es mitzvá de día. ¿Entonces por qué se recita de\nnoche? La última mishná del perek responde exactamente eso:\nמַזְכִּירִין יְצִיאַת מִצְרַיִם בַּלֵּילוֹת. La palabra-puente\nyetziat mitzrayim une la sugyá del canon con la mishná final\n— y el perek que abrió preguntando por la noche cierra\nmetiendo a Egipto en ella.\n"
+      },
+      "nota": true
+    },
+    {
+      "slug": "avram-es-avraham",
+      "orden": 43,
+      "titulo": "Avram es Avraham · el hadran",
+      "subtitulo": "nombres que se re-jerarquizan · el cierre del perek",
+      "dapim": [
+        "13a"
+      ],
+      "grupo": "Teología refinada",
+      "estado": "listo",
+      "diagrama": "diagramas/avram-es-avraham.html",
+      "sabios": [
+        "bar-kappara",
+        "r-eliezer",
+        "r-yose-bar-avin"
+      ],
+      "sabios_biblicos": [
+        "avraham",
+        "sara",
+        "yaakov-avinu"
+      ],
+      "pesukim": [
+        "bereshit-17-5",
+        "bereshit-17-15",
+        "bereshit-46-2",
+        "nejemia-9-7",
+        "divrei-hayamim-i-1-27"
+      ],
+      "conceptos": [
+        "ikar-tafel",
+        "cambio-de-nombre",
+        "av-hamon-goyim",
+        "hadran"
+      ],
+      "puente_desde": {
+        "tipo": "cadena-formula",
+        "texto": "Los jajamim acaban de usar el cambio de nombre de Yaakov como\nmodelo del ikar/tafel: \"no se arranca el nombre — se\nre-jerarquiza\". El editor cierra el perek desplegando esa\nmisma lógica sobre los otros dos renombrados: אַבְרָם הוּא\nאַבְרָהָם, שָׂרַי הִיא שָׂרָה. La fórmula del ikar/tafel es\nel hilo — y con los nombres de los avot, el primer perek del\nTalmud llega a su hadran.\n"
+      },
+      "nota": true
     }
   ],
   "sabios": [
@@ -1512,6 +1714,26 @@
       "nombre": "Rav Najman Bar Yitzjak"
     },
     {
+      "slug": "bar-kappara",
+      "nombre": "Bar Kappara"
+    },
+    {
+      "slug": "r-yose-bar-avin",
+      "nombre": "R Yose Bar Avin"
+    },
+    {
+      "slug": "r-abahu-ben-zutarti",
+      "nombre": "R Abahu Ben Zutarti"
+    },
+    {
+      "slug": "r-yehuda-bar-zvida",
+      "nombre": "R Yehuda Bar Zvida"
+    },
+    {
+      "slug": "r-yehuda-bar-javiva",
+      "nombre": "R Yehuda Bar Javiva"
+    },
+    {
       "slug": "rav",
       "nombre": "Rav"
     },
@@ -1534,6 +1756,22 @@
     {
       "slug": "abaye",
       "nombre": "Abaye"
+    },
+    {
+      "slug": "r-elazar-ben-azaria",
+      "nombre": "R Elazar Ben Azaria"
+    },
+    {
+      "slug": "ben-zoma",
+      "nombre": "Ben Zoma"
+    },
+    {
+      "slug": "jajamim",
+      "nombre": "Jajamim"
+    },
+    {
+      "slug": "rav-yosef",
+      "nombre": "Rav Yosef"
     },
     {
       "slug": "r-meir",
@@ -1620,12 +1858,16 @@
       "nombre": "Rav Yitzjak Bar Adda"
     },
     {
-      "slug": "rav-yosef",
-      "nombre": "Rav Yosef"
-    },
-    {
       "slug": "r-yitzjak-bar-shmuel-bar-marta",
       "nombre": "R Yitzjak Bar Shmuel Bar Marta"
+    },
+    {
+      "slug": "rav-sheshet",
+      "nombre": "Rav Sheshet"
+    },
+    {
+      "slug": "rabba",
+      "nombre": "Rabba"
     },
     {
       "slug": "r-yose-baraita",
@@ -1682,10 +1924,6 @@
     {
       "slug": "r-shimon-jasida",
       "nombre": "R Shimon Jasida"
-    },
-    {
-      "slug": "r-elazar-ben-azaria",
-      "nombre": "R Elazar Ben Azaria"
     },
     {
       "slug": "r-tarfon",
@@ -1780,10 +2018,6 @@
       "nombre": "R Ajai"
     },
     {
-      "slug": "jajamim",
-      "nombre": "Jajamim"
-    },
-    {
       "slug": "r-gamliel",
       "nombre": "R Gamliel"
     },
@@ -1842,6 +2076,46 @@
       "nombre": "Amos 5 2"
     },
     {
+      "slug": "bereshit-17-5",
+      "nombre": "Bereshit 17 5"
+    },
+    {
+      "slug": "bereshit-17-15",
+      "nombre": "Bereshit 17 15"
+    },
+    {
+      "slug": "bereshit-46-2",
+      "nombre": "Bereshit 46 2"
+    },
+    {
+      "slug": "nejemia-9-7",
+      "nombre": "Nejemia 9 7"
+    },
+    {
+      "slug": "divrei-hayamim-i-1-27",
+      "nombre": "Divrei Hayamim I 1 27"
+    },
+    {
+      "slug": "bamidbar-24-9",
+      "nombre": "Bamidbar 24 9"
+    },
+    {
+      "slug": "bamidbar-15-39",
+      "nombre": "Bamidbar 15 39"
+    },
+    {
+      "slug": "bamidbar-15-41",
+      "nombre": "Bamidbar 15 41"
+    },
+    {
+      "slug": "tehilim-14-1",
+      "nombre": "Tehilim 14 1"
+    },
+    {
+      "slug": "shoftim-14-3",
+      "nombre": "Shoftim 14 3"
+    },
+    {
       "slug": "bereshit-19-27",
       "nombre": "Bereshit 19 27"
     },
@@ -1852,6 +2126,26 @@
     {
       "slug": "tehilim-69-14",
       "nombre": "Tehilim 69 14"
+    },
+    {
+      "slug": "devarim-16-3",
+      "nombre": "Devarim 16 3"
+    },
+    {
+      "slug": "yirmiyahu-23-7",
+      "nombre": "Yirmiyahu 23 7"
+    },
+    {
+      "slug": "bereshit-35-10",
+      "nombre": "Bereshit 35 10"
+    },
+    {
+      "slug": "yeshayahu-43-18",
+      "nombre": "Yeshayahu 43 18"
+    },
+    {
+      "slug": "yeshayahu-43-19",
+      "nombre": "Yeshayahu 43 19"
     },
     {
       "slug": "tehilim-104-35",
@@ -1936,6 +2230,10 @@
     {
       "slug": "tehilim-57-9",
       "nombre": "Tehilim 57 9"
+    },
+    {
+      "slug": "yeshayahu-5-16",
+      "nombre": "Yeshayahu 5 16"
     },
     {
       "slug": "yeshayahu-56-7",
@@ -2138,6 +2436,30 @@
       "nombre": "Tehilim 51 17"
     },
     {
+      "slug": "shmuel-i-12-23",
+      "nombre": "Shmuel I 12 23"
+    },
+    {
+      "slug": "tehilim-35-13",
+      "nombre": "Tehilim 35 13"
+    },
+    {
+      "slug": "yejezkel-16-63",
+      "nombre": "Yejezkel 16 63"
+    },
+    {
+      "slug": "shmuel-i-28-15",
+      "nombre": "Shmuel I 28 15"
+    },
+    {
+      "slug": "shmuel-i-28-19",
+      "nombre": "Shmuel I 28 19"
+    },
+    {
+      "slug": "shmuel-ii-21-6",
+      "nombre": "Shmuel Ii 21 6"
+    },
+    {
       "slug": "shoftim-7-19",
       "nombre": "Shoftim 7 19"
     },
@@ -2219,6 +2541,54 @@
       "nombre": "Mafolet Pueblo"
     },
     {
+      "slug": "ikar-tafel",
+      "nombre": "Ikar Tafel"
+    },
+    {
+      "slug": "cambio-de-nombre",
+      "nombre": "Cambio De Nombre"
+    },
+    {
+      "slug": "av-hamon-goyim",
+      "nombre": "Av Hamon Goyim"
+    },
+    {
+      "slug": "hadran",
+      "nombre": "Hadran"
+    },
+    {
+      "slug": "shema",
+      "nombre": "Shema"
+    },
+    {
+      "slug": "toraj-tzibur",
+      "nombre": "Toraj Tzibur"
+    },
+    {
+      "slug": "parashat-tzitzit",
+      "nombre": "Parashat Tzitzit"
+    },
+    {
+      "slug": "yetziat-mitzrayim",
+      "nombre": "Yetziat Mitzrayim"
+    },
+    {
+      "slug": "ol-mitzvot",
+      "nombre": "Ol Mitzvot"
+    },
+    {
+      "slug": "minim",
+      "nombre": "Minim"
+    },
+    {
+      "slug": "hirhur-aveira",
+      "nombre": "Hirhur Aveira"
+    },
+    {
+      "slug": "avoda-zara",
+      "nombre": "Avoda Zara"
+    },
+    {
       "slug": "beit-knesset",
       "nombre": "Beit Knesset"
     },
@@ -2247,12 +2617,24 @@
       "nombre": "Tefila Be Tzibur"
     },
     {
-      "slug": "teshuva",
-      "nombre": "Teshuva"
+      "slug": "yemot-hamashiaj",
+      "nombre": "Yemot Hamashiaj"
     },
     {
-      "slug": "minim",
-      "nombre": "Minim"
+      "slug": "gog-umagog",
+      "nombre": "Gog Umagog"
+    },
+    {
+      "slug": "shibud-maljuyot",
+      "nombre": "Shibud Maljuyot"
+    },
+    {
+      "slug": "zman-shema-arvit",
+      "nombre": "Zman Shema Arvit"
+    },
+    {
+      "slug": "teshuva",
+      "nombre": "Teshuva"
     },
     {
       "slug": "smujin",
@@ -2261,10 +2643,6 @@
     {
       "slug": "rebelion-filial",
       "nombre": "Rebelion Filial"
-    },
-    {
-      "slug": "gog-umagog",
-      "nombre": "Gog Umagog"
     },
     {
       "slug": "shpil-leseifei-dikra",
@@ -2297,10 +2675,6 @@
     {
       "slug": "chatzot",
       "nombre": "Chatzot"
-    },
-    {
-      "slug": "zman-shema-arvit",
-      "nombre": "Zman Shema Arvit"
     },
     {
       "slug": "takana",
@@ -2425,6 +2799,18 @@
     {
       "slug": "consejo-tripartito",
       "nombre": "Consejo Tripartito"
+    },
+    {
+      "slug": "hamelej-hakadosh",
+      "nombre": "Hamelej Hakadosh"
+    },
+    {
+      "slug": "aseret-yemei-teshuva",
+      "nombre": "Aseret Yemei Teshuva"
+    },
+    {
+      "slug": "maljut-shamayim",
+      "nombre": "Maljut Shamayim"
     },
     {
       "slug": "tefilin-shel-hkbh",
@@ -2603,10 +2989,6 @@
       "nombre": "Tefilá Ketzará"
     },
     {
-      "slug": "yetziat-mitzrayim",
-      "nombre": "Yetziat Mitzrayim"
-    },
-    {
       "slug": "rejush-gadol",
       "nombre": "Rejush Gadol"
     },
@@ -2629,10 +3011,6 @@
     {
       "slug": "hefsek",
       "nombre": "Hefsek"
-    },
-    {
-      "slug": "shema",
-      "nombre": "Shema"
     },
     {
       "slug": "boundary-times",
@@ -2729,6 +3107,10 @@
     {
       "slug": "semijat-geula-tefila",
       "nombre": "Semijat Geula Tefila"
+    },
+    {
+      "slug": "rajamim-por-el-otro",
+      "nombre": "Rajamim Por El Otro"
     },
     {
       "slug": "vigilias",
@@ -3093,6 +3475,46 @@
       "peso": 3
     },
     {
+      "from": "emet-veyatziv-jitum",
+      "to": "hamelej-hakadosh",
+      "categoria": "editorial",
+      "tipo": "mismo-orador",
+      "texto": "El diagrama #38 cerró con Rabba bar Jinnana Sava en nombre de\nRav: emet veyatziv, y el cuerpo que se inclina en baruj y se\nyergue en el Nombre. El editor sigue con el MISMO ORADOR —\nוְאָמַר רַבָּה בַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב — para\nla siguiente enseñanza litúrgica: cuándo el haEl haKadosh se\nconvierte en haMelej haKadosh. Antes, una miniatura sobre la\nreverencia: Rav Sheshet, la caña y la serpiente.\n",
+      "peso": 3
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "verguenza-de-shaul",
+      "categoria": "editorial",
+      "tipo": "mismo-orador",
+      "texto": "Tercera y cuarta enseñanza de la misma cadena: וְאָמַר רַבָּה\nבַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב. Tras las fórmulas\nlitúrgicas (emet veyatziv, haMelej hakadosh) vienen las dos\nenseñanzas morales del mismo orador: quien pudiendo pedir\nmisericordia por su compañero no pide — se llama pecador; y\nquien se avergüenza de su transgresión — le perdonan todo.\nLas dos convergen en la figura de Shaúl.\n",
+      "peso": 3
+    },
+    {
+      "from": "verguenza-de-shaul",
+      "to": "balak-y-tzitzit",
+      "categoria": "editorial",
+      "tipo": "continuacion-halajica",
+      "texto": "Cerrada la digresión de Shaúl, el editor vuelve al eje del\nperek — la composición del shema mismo: בִּקְּשׁוּ לִקְבּוֹעַ\nפָּרָשַׁת בָּלָק בִּקְרִיאַת שְׁמַע. ¿Qué parashiyot merecen\nentrar en la recitación diaria y por qué? La sugyá revela el\ncriterio editorial de la liturgia: qué se incluye, qué se\nexcluye, y qué precio pagó la comodidad de la comunidad.\n",
+      "peso": 3
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "ben-zoma-noches",
+      "categoria": "editorial",
+      "tipo": "palabra-puente",
+      "texto": "La parashá de tzitzit entró al shema POR yetziat mitzrayim —\npero tzitzit es mitzvá de día. ¿Entonces por qué se recita de\nnoche? La última mishná del perek responde exactamente eso:\nמַזְכִּירִין יְצִיאַת מִצְרַיִם בַּלֵּילוֹת. La palabra-puente\nyetziat mitzrayim une la sugyá del canon con la mishná final\n— y el perek que abrió preguntando por la noche cierra\nmetiendo a Egipto en ella.\n",
+      "peso": 3
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "avram-es-avraham",
+      "categoria": "editorial",
+      "tipo": "cadena-formula",
+      "texto": "Los jajamim acaban de usar el cambio de nombre de Yaakov como\nmodelo del ikar/tafel: \"no se arranca el nombre — se\nre-jerarquiza\". El editor cierra el perek desplegando esa\nmisma lógica sobre los otros dos renombrados: אַבְרָם הוּא\nאַבְרָהָם, שָׂרַי הִיא שָׂרָה. La fórmula del ikar/tafel es\nel hilo — y con los nombres de los avot, el primer perek del\nTalmud llega a su hadran.\n",
+      "peso": 3
+    },
+    {
       "from": "zman-shema-arvit",
       "to": "vigilias-noche",
       "categoria": "co-referencia",
@@ -3213,6 +3635,22 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-arvit",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "jajamim",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-arvit",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
       "from": "vigilias-noche",
       "to": "r-yose-ruina",
       "categoria": "co-referencia",
@@ -3317,6 +3755,14 @@
       "peso": 1
     },
     {
+      "from": "vigilias-noche",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
       "from": "r-yose-ruina",
       "to": "tres-razones-ruina",
       "categoria": "co-referencia",
@@ -3330,6 +3776,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yose",
+      "peso": 1
+    },
+    {
+      "from": "r-yose-ruina",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "bat-kol",
       "peso": 1
     },
     {
@@ -3461,6 +3915,14 @@
       "peso": 1
     },
     {
+      "from": "noche-de-david",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
       "from": "gobierno-tripartito",
       "to": "david-chasid",
       "categoria": "co-referencia",
@@ -3471,6 +3933,30 @@
     {
       "from": "gobierno-tripartito",
       "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "urim-vetumim",
+      "peso": 1
+    },
+    {
+      "from": "gobierno-tripartito",
+      "to": "ben-zoma-noches",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rav-yosef",
@@ -3498,6 +3984,14 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yehoshua-ben-levi",
+      "peso": 1
+    },
+    {
+      "from": "david-chasid",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "vergueza-halajica",
       "peso": 1
     },
     {
@@ -3693,6 +4187,14 @@
       "peso": 1
     },
     {
+      "from": "miedo-al-pecado",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "cerca-y-trabajador",
       "to": "akiva-medos-gamliel-persas",
       "categoria": "co-referencia",
@@ -3778,6 +4280,22 @@
       "categoria": "co-referencia",
       "tipo": "co-pasuk",
       "via": "devarim-6-7",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "zman-shema-arvit",
+      "peso": 1
+    },
+    {
+      "from": "cerca-y-trabajador",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
       "peso": 1
     },
     {
@@ -4029,6 +4547,22 @@
       "peso": 1
     },
     {
+      "from": "semijat-geula-tefila",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "semijat-geula-tefila",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
       "from": "ashrei-olam-haba",
       "to": "yisurim-shel-ahava",
       "categoria": "co-referencia",
@@ -4167,6 +4701,14 @@
     {
       "from": "ashrei-olam-haba",
       "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "ashrei-olam-haba",
+      "to": "verguenza-de-shaul",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -4525,6 +5067,30 @@
       "peso": 1
     },
     {
+      "from": "yisurim-shel-ahava",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "yisurim-shel-ahava",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tres-regalos",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -4613,6 +5179,22 @@
       "peso": 1
     },
     {
+      "from": "tefila-y-cama",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "tefila-y-cama",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "mejitzá",
+      "peso": 1
+    },
+    {
       "from": "mazikin-invisibles",
       "to": "beit-knesset",
       "categoria": "co-referencia",
@@ -4679,6 +5261,14 @@
     {
       "from": "mazikin-invisibles",
       "to": "birkat-hatora",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "mazikin-invisibles",
+      "to": "verguenza-de-shaul",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "rava",
@@ -4981,6 +5571,30 @@
       "peso": 1
     },
     {
+      "from": "beit-knesset",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "beit-knesset",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "hkbh-reza-tefilin",
       "to": "moshe-tres-cosas",
       "categoria": "co-referencia",
@@ -5149,6 +5763,30 @@
       "peso": 1
     },
     {
+      "from": "hkbh-reza-tefilin",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hkbh-reza-tefilin",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "moshe-tres-cosas",
       "to": "david-y-avshalom",
       "categoria": "co-referencia",
@@ -5247,6 +5885,14 @@
     {
       "from": "moshe-tres-cosas",
       "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "moshe-tres-cosas",
+      "to": "verguenza-de-shaul",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -5405,6 +6051,38 @@
       "peso": 1
     },
     {
+      "from": "david-y-avshalom",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "david-y-avshalom",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "gog-umagog",
+      "peso": 1
+    },
+    {
       "from": "provocar-rashaim",
       "to": "zman-shema-shajarit",
       "categoria": "co-referencia",
@@ -5517,6 +6195,30 @@
       "peso": 1
     },
     {
+      "from": "provocar-rashaim",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "provocar-rashaim",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "akiva-medos-gamliel-persas",
       "to": "shema-dos-veces",
       "categoria": "co-referencia",
@@ -5597,6 +6299,14 @@
       "peso": 1
     },
     {
+      "from": "shema-dos-veces",
+      "to": "balak-y-tzitzit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "shema",
+      "peso": 1
+    },
+    {
       "from": "pesaj-y-zman-shema",
       "to": "zman-shema-shajarit",
       "categoria": "co-referencia",
@@ -5615,6 +6325,14 @@
     {
       "from": "pesaj-y-zman-shema",
       "to": "postura-shema-hillel-shammai",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "pesaj-y-zman-shema",
+      "to": "ben-zoma-noches",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-elazar-ben-azaria",
@@ -5650,6 +6368,22 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "reish-lakish",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "balak-y-tzitzit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "rejush-gadol-doble-aneni",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
       "peso": 1
     },
     {
@@ -5861,6 +6595,22 @@
       "peso": 1
     },
     {
+      "from": "zman-shema-shajarit",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "zman-shema-shajarit",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
       "from": "vatikin-hanetz",
       "to": "beruria-biryonim-minim",
       "categoria": "co-referencia",
@@ -5965,6 +6715,30 @@
       "peso": 1
     },
     {
+      "from": "vatikin-hanetz",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "vatikin-hanetz",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
       "from": "beruria-biryonim-minim",
       "to": "cinco-mundos-david",
       "categoria": "co-referencia",
@@ -6034,6 +6808,38 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "teshuva",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "balak-y-tzitzit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "minim",
+      "peso": 1
+    },
+    {
+      "from": "beruria-biryonim-minim",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "gog-umagog",
       "peso": 1
     },
     {
@@ -6111,6 +6917,14 @@
     {
       "from": "cinco-mundos-david",
       "to": "emet-veyatziv-jitum",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "cinco-mundos-david",
+      "to": "verguenza-de-shaul",
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
@@ -6221,6 +7035,46 @@
       "peso": 1
     },
     {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "jizkiyahu-espada-cuello",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-eliezer",
+      "peso": 1
+    },
+    {
       "from": "shunamit-huesped",
       "to": "tefila-desde-lo-bajo",
       "categoria": "co-referencia",
@@ -6325,6 +7179,30 @@
       "peso": 1
     },
     {
+      "from": "shunamit-huesped",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "shunamit-huesped",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tefila-desde-lo-bajo",
       "to": "birkat-hatora",
       "categoria": "co-referencia",
@@ -6338,6 +7216,46 @@
       "categoria": "co-referencia",
       "tipo": "co-sabio",
       "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "tefila-desde-lo-bajo",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "tefila",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar-ben-azaria",
+      "peso": 1
+    },
+    {
+      "from": "postura-shema-hillel-shammai",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
       "peso": 1
     },
     {
@@ -6429,6 +7347,22 @@
       "peso": 1
     },
     {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "yotzer-or-ahava-rabba",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
       "from": "birkat-hatora",
       "to": "tamid-aseret-hadibrot",
       "categoria": "co-referencia",
@@ -6477,6 +7411,46 @@
       "peso": 1
     },
     {
+      "from": "birkat-hatora",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-elazar",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rava",
+      "peso": 1
+    },
+    {
+      "from": "birkat-hatora",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
       "from": "tamid-aseret-hadibrot",
       "to": "emet-veyatziv-jitum",
       "categoria": "co-referencia",
@@ -6490,6 +7464,110 @@
       "categoria": "co-referencia",
       "tipo": "co-concepto",
       "via": "berajot-shema",
+      "peso": 1
+    },
+    {
+      "from": "tamid-aseret-hadibrot",
+      "to": "balak-y-tzitzit",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "minim",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba-bar-jinnana-sava",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "hamelej-hakadosh",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "korea-zokef",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba-bar-jinnana-sava",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "emet-veyatziv-jitum",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yojanan",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rabba-bar-jinnana-sava",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "verguenza-de-shaul",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav",
+      "peso": 1
+    },
+    {
+      "from": "hamelej-hakadosh",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "rav-yosef",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "ben-zoma-noches",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "yetziat-mitzrayim",
+      "peso": 1
+    },
+    {
+      "from": "balak-y-tzitzit",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-sabio",
+      "via": "r-yose-bar-avin",
+      "peso": 1
+    },
+    {
+      "from": "ben-zoma-noches",
+      "to": "avram-es-avraham",
+      "categoria": "co-referencia",
+      "tipo": "co-concepto",
+      "via": "ikar-tafel",
       "peso": 1
     }
   ]
