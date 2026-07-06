@@ -1,0 +1,314 @@
+<div class="idioma-interactivo">
+<style>
+  .idioma-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .idioma-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .idioma-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .idioma-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .idioma-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .idioma-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .idioma-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .idioma-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .idioma-diagrama svg { width: 100%; height: auto; display: block; }
+  .idioma-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .idioma-nodo:hover rect { stroke-width: 2.2 !important; }
+  .idioma-nodo.activa rect { stroke-width: 2.8 !important; }
+  .idioma-nodo.dim { opacity: 0.32; }
+  .idioma-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .idioma-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .idioma-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .idioma-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .idioma-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .idioma-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .idioma-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="idioma-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>las dos palabras del pasuk</span>
+  <span><span class="swatch azul"></span>Rabbi · solo en hebreo</span>
+  <span><span class="swatch verde"></span>los jajamim · en cualquier lengua</span>
+  <span><span class="swatch violeta"></span>lemapre&#39;a · el orden</span>
+  <span><span class="swatch rojo"></span>la pregunta global disuelta</span>
+</div>
+
+<div class="idioma-diagrama">
+<svg viewBox="0 0 720 1010" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13a: ¿el shema en cualquier idioma? · Rabbi vs los jajamim · dos palabras del primer verso, cuatro derivaciones cruzadas · la pregunta global que se disuelve</title>
+
+<defs>
+  <marker id="flecha-idi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-idi-azul" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1e3a5f"/>
+  </marker>
+  <marker id="flecha-idi-verde" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1e6b5a"/>
+  </marker>
+  <marker id="flecha-idi-violeta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5a3a8a"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El shema en cualquier idioma · el duelo de dos palabras</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13a · Rabbi vs los jajamim · cada tana usa el arma del otro para otra halajá</text>
+
+<!-- ============================================================ -->
+<!-- LOS DOS PILARES · LAS PALABRAS DEL PRIMER VERSO              -->
+<!-- ============================================================ -->
+<text x="360" y="76" text-anchor="middle" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LAS DOS PALABRAS DEL PRIMER VERSO · DEVARIM 6:4 · 6:6</text>
+
+<g class="idioma-nodo" data-id="shema">
+  <rect x="95" y="88" width="250" height="106" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="220" y="126" text-anchor="middle" font-size="22" direction="rtl" fill="#1a1410" font-weight="600">שְׁמַע</text>
+  <text x="220" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«escucha» · Devarim 6:4</text>
+  <text x="220" y="172" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">¿oír con los oídos o entender?</text>
+</g>
+
+<g class="idioma-nodo" data-id="vehayu">
+  <rect x="375" y="88" width="250" height="106" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="500" y="126" text-anchor="middle" font-size="22" direction="rtl" fill="#1a1410" font-weight="600">וְהָיוּ</text>
+  <text x="500" y="150" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«y serán» (las palabras) · Devarim 6:6</text>
+  <text x="500" y="172" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">¿ser inmutables o guardar el orden?</text>
+</g>
+
+<!-- EL CRUCE · las derivaciones principales (X visible) -->
+<line x1="480" y1="194" x2="215" y2="248" stroke="#1e3a5f" stroke-width="1.6" marker-end="url(#flecha-idi-azul)"/>
+<line x1="240" y1="194" x2="505" y2="248" stroke="#1e6b5a" stroke-width="1.6" marker-end="url(#flecha-idi-verde)"/>
+<!-- las derivaciones secundarias, por los bordes exteriores -->
+<path d="M 95 150 C 22 176, 22 400, 90 452" fill="none" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#flecha-idi-azul)"/>
+<path d="M 625 150 C 698 176, 698 400, 630 452" fill="none" stroke="#1e6b5a" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#flecha-idi-verde)"/>
+
+<!-- ============================================================ -->
+<!-- FILA 1 · LA HALAJÁ DEL IDIOMA · CADA UNO CON SU FUENTE       -->
+<!-- ============================================================ -->
+<text x="40" y="240" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RABBI · CON וְהָיוּ</text>
+<text x="680" y="240" text-anchor="end" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">JAJAMIM · CON שְׁמַע</text>
+
+<g class="idioma-nodo" data-id="rabbi-kiktava">
+  <rect x="40" y="250" width="310" height="136" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="195" y="272" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rabbi · como está escrita</text>
+  <text x="195" y="296" text-anchor="middle" font-size="12" direction="rtl" fill="#1e3a5f">קְרִיאַת שְׁמַע כִּכְתָבָהּ</text>
+  <text x="195" y="314" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">el shema se lee COMO ESTÁ ESCRITA — en hebreo</text>
+  <text x="195" y="340" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">״וְהָיוּ״ — בַּהֲוָיָיתָן יְהוּ</text>
+  <text x="195" y="358" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«que SEAN como son» — inmutables, en su lengua</text>
+  <text x="195" y="376" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">su arma: la palabra וְהָיוּ — el pilar del rival</text>
+</g>
+
+<g class="idioma-nodo" data-id="jajamim-lashon">
+  <rect x="370" y="250" width="310" height="136" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.4"/>
+  <text x="525" y="272" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">Los jajamim · en cualquier lengua</text>
+  <text x="525" y="296" text-anchor="middle" font-size="12" direction="rtl" fill="#1e6b5a">בְּכָל לָשׁוֹן</text>
+  <text x="525" y="314" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">el shema se dice EN CUALQUIER IDIOMA</text>
+  <text x="525" y="340" text-anchor="middle" font-size="11" direction="rtl" fill="#1e6b5a">״שְׁמַע״ — בְּכָל לָשׁוֹן שֶׁאַתָּה שׁוֹמֵעַ</text>
+  <text x="525" y="358" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«en cualquier lengua que ESCUCHES» — que entiendas</text>
+  <text x="525" y="376" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">su arma: la palabra שְׁמַע — oír es comprender</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- FILA 2 · EL INTERCAMBIO DE ARMAS                             -->
+<!-- ============================================================ -->
+<text x="360" y="432" text-anchor="middle" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL INTERCAMBIO DE ARMAS · ¿QUÉ HACE CADA UNO CON EL PASUK DEL RIVAL?</text>
+
+<g class="idioma-nodo" data-id="rabbi-audibilidad">
+  <rect x="40" y="444" width="310" height="128" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.3" stroke-dasharray="5,2"/>
+  <text x="195" y="466" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">¿Y qué hace Rabbi con שְׁמַע?</text>
+  <text x="195" y="492" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">הַשְׁמַע לְאָזְנֶיךָ</text>
+  <text x="195" y="512" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e3a5f">מַה שֶּׁאַתָּה מוֹצִיא מִפִּיךָ</text>
+  <text x="195" y="532" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«haz oír a TUS OÍDOS lo que sale de tu boca»</text>
+  <text x="195" y="552" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la AUDIBILIDAD — que volverá en la mishná 2:3</text>
+</g>
+
+<g class="idioma-nodo" data-id="jajamim-lemaprea">
+  <rect x="370" y="444" width="310" height="128" rx="6" fill="rgba(30,107,90,0.06)" stroke="#1e6b5a" stroke-width="1.3" stroke-dasharray="5,2"/>
+  <text x="525" y="466" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">¿Y los jajamim con וְהָיוּ?</text>
+  <text x="525" y="492" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1e6b5a">שֶׁלֹּא יִקְרָא לְמַפְרֵעַ</text>
+  <text x="525" y="512" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«que no lea en DESORDEN» — hacia atrás</text>
+  <text x="525" y="532" text-anchor="middle" font-size="9.5" fill="#3d2f23">las palabras «serán» — como son: en su ORDEN</text>
+  <text x="525" y="552" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la lengua es libre; la SECUENCIA es sagrada</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL NODO LEMAPRE'A · ¿DE DÓNDE LO SACA RABBI?                 -->
+<!-- ============================================================ -->
+<line x1="525" y1="572" x2="430" y2="612" stroke="#5a3a8a" stroke-width="1.2" marker-end="url(#flecha-idi-violeta)"/>
+<line x1="195" y1="572" x2="290" y2="612" stroke="#5a3a8a" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#flecha-idi-violeta)"/>
+
+<text x="360" y="604" text-anchor="middle" font-size="9.5" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">Y ENTONCES ¿DE DÓNDE SACA RABBI EL LEMAPRE&#39;A?</text>
+
+<g class="idioma-nodo" data-id="lemaprea-fuentes">
+  <rect x="150" y="616" width="420" height="120" rx="6" fill="rgba(90,58,138,0.07)" stroke="#5a3a8a" stroke-width="1.4"/>
+  <text x="360" y="638" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#5a3a8a" font-weight="700">El orden de lectura · dos fuentes distintas</text>
+  <text x="360" y="662" text-anchor="middle" font-size="10.5" direction="rtl" fill="#5a3a8a">רַבִּי: ״דְּבָרִים״ ״הַדְּבָרִים״</text>
+  <text x="360" y="680" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">Rabbi lo saca del artículo extra: «LAS palabras» — tal como son</text>
+  <text x="360" y="700" text-anchor="middle" font-size="10.5" direction="rtl" fill="#5a3a8a">וְרַבָּנַן — ״דְּבָרִים״ ״הַדְּבָרִים״ לָא מַשְׁמַע לְהוּ</text>
+  <text x="360" y="718" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">los jajamim NO interpretan esa letra — su lemapre&#39;a ya salió de וְהָיוּ</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA PREGUNTA GLOBAL · SE DISUELVE                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="736" x2="360" y2="756" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-idi)"/>
+
+<text x="360" y="770" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PREGUNTA GLOBAL · ¿TODA LA TORÁ EN CUALQUIER LENGUA? · SE DISUELVE</text>
+
+<g class="idioma-nodo" data-id="pregunta-global">
+  <rect x="60" y="782" width="600" height="150" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="360" y="806" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La gemará intenta globalizar — y fracasa dos veces</text>
+  <text x="360" y="830" text-anchor="middle" font-size="9.5" fill="#3d2f23">¿Rabbi piensa que TODA la Torá se dice en cualquier lengua — y por eso necesitó וְהָיוּ para el shema?</text>
+  <text x="360" y="850" text-anchor="middle" font-size="9.5" fill="#3d2f23">¿Los jajamim piensan que toda la Torá es SOLO en hebreo — y por eso necesitaron שְׁמַע?</text>
+  <text x="360" y="878" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">אִיצְטְרִיךְ — cada término era NECESARIO por el otro</text>
+  <text x="360" y="898" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">ambos intentos se disuelven: los versos se necesitan mutuamente y no prueban nada global</text>
+  <text x="360" y="918" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">la pregunta mayor queda SUSPENDIDA · la halajá del shema queda: se entiende, vale</text>
+</g>
+
+<text x="360" y="972" text-anchor="middle" font-size="10" fill="#6b4423" font-style="italic">Cada palabra del primer verso es un yacimiento halájico · nada se desperdicia — ni siquiera el pasuk del rival</text>
+<text x="360" y="992" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">La halajá quedó como los jajamim: בְּכָל לָשׁוֹן — entender es la mitad de la kavaná</text>
+
+</svg>
+</div>
+
+<div class="idioma-panel" id="idioma-panel">
+  <p class="idioma-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'shema': {
+      titulo: 'La palabra שְׁמַע · Devarim 6:4',
+      hebreo: 'שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד',
+      traduccion: '«Escucha, Israel...» — la primera palabra del primer verso',
+      explicacion: 'La primera palabra del shema es también su nombre — y en Berajot 13a se convierte en la primera de las dos armas hermenéuticas de la sugyá.\n\nEl verbo שמע es deliciosamente ambiguo en hebreo bíblico. Puede significar:\n\n  · OÍR físicamente — percibir sonido con los oídos\n  · ENTENDER — comprender el significado (como en «no entendían su lengua», לא ישמעו)\n  · OBEDECER — aceptar y cumplir\n\nDe esta ambigüedad viven las dos escuelas:\n\n  · Los JAJAMIM explotan el sentido de ENTENDER: בְּכָל לָשׁוֹן שֶׁאַתָּה שׁוֹמֵעַ — «en cualquier lengua que escuches», es decir, que ENTIENDAS. La Torá misma, al elegir el verbo שמע, habría autorizado cualquier idioma comprensible.\n\n  · RABBI explota el sentido de OÍR físicamente: הַשְׁמַע לְאָזְנֶיךָ — «haz oír a tus oídos». La palabra exige AUDIBILIDAD: que el lector pronuncie y se escuche a sí mismo.\n\nLa misma palabra rinde dos halajot completamente distintas — el idioma para unos, la audibilidad para el otro. Ninguna lectura «sobra»: en el sistema del midrash halájico, cada palabra debe rendir, y esta rinde doble.\n\nEl diseño del diagrama muestra las dos flechas que salen de este pilar: la continua (verde) hacia la halajá principal de los jajamim, y la punteada (azul) hacia el uso secundario de Rabbi — el cruce de armas.'
+    },
+    'vehayu': {
+      titulo: 'La palabra וְהָיוּ · Devarim 6:6',
+      hebreo: 'וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ',
+      traduccion: '«Y SERÁN estas palabras que yo te ordeno hoy sobre tu corazón»',
+      explicacion: 'La segunda arma de la sugyá es el verbo וְהָיוּ — «y serán». Dos versos después del שמע, la Torá dice que «estas palabras SERÁN sobre tu corazón». ¿Qué añade ese «serán»?\n\nPara el midrash halájico, un verbo de existencia aplicado a palabras es una invitación exegética: las palabras deben SER — permanecer, mantenerse, conservarse. Pero ¿conservarse en qué sentido?\n\n  · RABBI lee: בַּהֲוָיָיתָן יְהוּ — «que sean EN SU SER», tal como son. Y su «ser» incluye la LENGUA: las palabras del shema son palabras hebreas; dichas en griego ya no son ESTAS palabras, son otras. De ahí: קריאת שמע ככתבה — el shema solo en hebreo.\n\n  · Los JAJAMIM leen el mismo בהווייתן en clave de ORDEN: que las palabras se mantengan en su SECUENCIA — שלא יקרא למפרע, que no se lean en desorden. Lo inmutable no es la lengua sino la estructura.\n\nEs la misma palabra y casi el mismo midrash (בהווייתן) — pero aplicado a dimensiones distintas del texto: la lengua para Rabbi, el orden para los jajamim.\n\nEl pilar dorado emite dos flechas: la continua (azul) hacia la halajá principal de Rabbi — su arma central — y la punteada (verde) hacia el uso de los jajamim. Junto con las flechas de שמע, forman el quiasmo completo: cada tana funda su halajá principal en una palabra y reasigna la otra.'
+    },
+    'rabbi-kiktava': {
+      titulo: 'Rabbi · el shema como está escrita',
+      hebreo: 'רַבִּי אוֹמֵר: קְרִיאַת שְׁמַע כִּכְתָבָהּ · ״וְהָיוּ״ — בַּהֲוָיָיתָן יְהוּ',
+      traduccion: '«El shema, como está escrita» · «y serán» — que sean como son',
+      explicacion: 'Rabbi Yehuda HaNasi — el redactor de la Mishná, el hombre que fijó el texto de la Torá oral — sostiene que el shema se lee כִּכְתָבָהּ: COMO ESTÁ ESCRITA. Solo en hebreo, en lashon hakodesh.\n\nSu fuente es וְהָיוּ: בַּהֲוָיָיתָן יְהוּ — «que sean en su ser», que las palabras permanezcan COMO SON. Y para Rabbi, el ser de las palabras incluye su lengua. El shema no es un contenido traducible: es una FÓRMULA. «Escucha Israel» en español transmite la idea, pero no ES el verso — es un comentario del verso.\n\nHay una coherencia biográfica notable: Rabbi es el gran FIJADOR de textos de la historia rabínica. Quien dedicó su vida a fijar la formulación exacta de la Mishná lee וְהָיוּ como mandato de inmutabilidad textual. Para él, la santidad habita en la FORMA — en estas palabras, en este orden, en esta lengua.\n\nSu posición también protege algo real: la traducción siempre pierde. אחד no es exactamente «uno»; ה׳ no es exactamente «el Eterno». Decir el shema en otra lengua es decir una interpretación. Rabbi prefiere que el judío pronuncie el original — aunque no lo entienda del todo — antes que una versión.\n\nLa flecha que llega a este nodo cruza el diagrama desde el pilar וְהָיוּ: la halajá principal de Rabbi se funda en la palabra que uno esperaría en manos de los jajamim (que la usan para el orden). Es la mitad azul del quiasmo.\n\nLa halajá final NO quedó como Rabbi — pero su lectura dejó huella: la práctica universal es decir el shema en hebreo, y la opción de otra lengua quedó como concesión para quien no entiende.'
+    },
+    'jajamim-lashon': {
+      titulo: 'Los jajamim · en cualquier lengua que escuches',
+      hebreo: 'וַחֲכָמִים אוֹמְרִים: בְּכָל לָשׁוֹן · ״שְׁמַע״ — בְּכָל לָשׁוֹן שֶׁאַתָּה שׁוֹמֵעַ',
+      traduccion: '«En cualquier lengua» · «shemá» — en cualquier lengua que escuches (= entiendas)',
+      explicacion: 'Los jajamim responden con la primera palabra del propio verso: שְׁמַע. La Torá no dijo «recita» ni «pronuncia» — dijo ESCUCHA. Y en hebreo, escuchar es entender: בְּכָל לָשׁוֹן שֶׁאַתָּה שׁוֹמֵעַ — «en cualquier lengua que escuches», es decir, que COMPRENDAS.\n\nLa lógica es profunda: el shema no es un conjuro sino una DECLARACIÓN DE FE. Su contenido — la unidad de HKBH, la aceptación del yugo del Cielo — debe pasar por la conciencia del que lo dice. Una declaración que no se entiende no declara nada: es ruido sagrado.\n\nDe ahí que la lengua sea LIBRE: el judío de Alejandría puede decirlo en griego, el de Bagdad en arameo, el de México en español — con tal de que ENTIENDA lo que dice. La comprensión no es un adorno de la mitzvá: es su condición.\n\nEsta posición conecta directamente con la sugyá anterior de la kavaná (ver kavana-del-shema): si el primer verso exige kavaná — atención al significado — entonces el significado debe ser accesible. La lectura de los jajamim hace del shema un acto INTELIGIBLE por definición: entender es la mitad de la kavaná.\n\nLa flecha verde que llega a este nodo cruza desde el pilar שְׁמַע — la palabra que Rabbi reutilizará para la audibilidad. Es la mitad verde del quiasmo.\n\nLa halajá quedó como los jajamim: el shema puede decirse en cualquier lengua que se entienda. Se entiende, vale.'
+    },
+    'rabbi-audibilidad': {
+      titulo: 'El arma reutilizada de Rabbi · la audibilidad',
+      hebreo: 'וְרַבִּי — ״שְׁמַע״: הַשְׁמַע לְאָזְנֶיךָ מַה שֶּׁאַתָּה מוֹצִיא מִפִּיךָ',
+      traduccion: '«Haz oír a tus oídos lo que sale de tu boca»',
+      explicacion: 'La gemará pregunta lo inevitable: si Rabbi funda su halajá en וְהָיוּ, ¿qué hace con שְׁמַע — la palabra que los jajamim usaron contra él? En el midrash halájico ninguna palabra puede quedar ociosa.\n\nRespuesta: Rabbi la lee en su sentido FÍSICO. שמע no habla de entender sino de OÍR: הַשְׁמַע לְאָזְנֶיךָ מַה שֶּׁאַתָּה מוֹצִיא מִפִּיךָ — «haz oír a tus oídos lo que sale de tu boca». El shema debe pronunciarse de modo AUDIBLE: no basta pensarlo, no basta mover los labios — el propio lector debe escucharse.\n\nLa imagen es un circuito: la boca emite, el oído recibe, y la declaración de fe recorre el cuerpo entero del que la dice. Uno no solo dice el shema — se lo dice A SÍ MISMO.\n\nEsta derivación no es un descarte: es una halajá real que volverá en la mishná 2:3 (הקורא את שמע ולא השמיע לאזנו — el que lee el shema sin hacerlo oír a su oído), donde la disputa sobre la audibilidad se despliega por derecho propio.\n\nEl nodo está punteado y la flecha azul llega por el borde exterior del diagrama: es el uso SECUNDARIO de Rabbi — la palabra del rival, reasignada a otra halajá. Nada se desperdicia: donde los jajamim leyeron «en cualquier lengua que entiendas», Rabbi lee «que tus oídos lo oigan». La misma palabra, dos halajot — y el quiasmo se cierra por la izquierda.'
+    },
+    'jajamim-lemaprea': {
+      titulo: 'El arma reutilizada de los jajamim · el orden',
+      hebreo: 'וְרַבָּנַן — ״וְהָיוּ״: שֶׁלֹּא יִקְרָא לְמַפְרֵעַ',
+      traduccion: '«Y serán» — que no lea lemapre\'a, en desorden',
+      explicacion: 'La pregunta simétrica: si los jajamim fundan la libertad de lengua en שְׁמַע, ¿qué hacen con וְהָיוּ — el arma de Rabbi?\n\nRespuesta: la aplican al ORDEN. וְהָיוּ — que las palabras SEAN como son: en su secuencia. De ahí: שֶׁלֹּא יִקְרָא לְמַפְרֵעַ — que no se lea el shema hacia atrás, en desorden, saltando versos o invirtiéndolos.\n\nLa combinación de las dos derivaciones de los jajamim produce una halajá de perfil precioso:\n\n  · La LENGUA es libre — griego, arameo, español: cualquier idioma que se entienda (de שמע)\n  · La SECUENCIA es sagrada — el orden de las palabras no se toca (de והיו)\n\nEs decir: puede cambiarse la SUSTANCIA VERBAL entera del shema (traducirlo todo), pero no puede alterarse su ESTRUCTURA. Para los jajamim, la identidad del shema no vive en sus fonemas hebreos sino en su arquitectura: este contenido, en este orden. La traducción conserva la arquitectura; la lectura desordenada la destruye — aun en hebreo perfecto.\n\nPara Rabbi es exactamente al revés: la identidad vive en la letra hebrea (kijtava), y el orden lo deriva de otra fuente (ver el nodo violeta).\n\nEl nodo está punteado y su flecha verde llega por el borde exterior derecho: es el uso secundario de los jajamim — el arma del rival, reasignada. El quiasmo se cierra por la derecha: cada tana usó las DOS palabras, y ninguna quedó ociosa.'
+    },
+    'lemaprea-fuentes': {
+      titulo: 'El rastro de lemapre\'a · dos fuentes para el orden',
+      hebreo: 'וְרַבִּי — ״דְּבָרִים״ ״הַדְּבָרִים״ · וְרַבָּנַן — ״דְּבָרִים״ ״הַדְּבָרִים״ לָא מַשְׁמַע לְהוּ',
+      traduccion: 'Rabbi: de «devarim» / «HAdevarim» · los jajamim: esa diferencia no les dice nada',
+      explicacion: 'Queda un cabo suelto: TODOS están de acuerdo en que el shema no se lee לְמַפְרֵעַ — en desorden. Los jajamim lo sacaron de וְהָיוּ. Pero Rabbi ya gastó וְהָיוּ en el hebreo obligatorio. ¿De dónde saca ÉL la prohibición del desorden?\n\nLa gemará responde: del ARTÍCULO. El verso pudo decir דְּבָרִים — «palabras» — y dijo הַדְּבָרִים — «LAS palabras». Esa ה extra, en la lupa del midrash, significa: LAS palabras tal como son, en su orden exacto. De una sola letra, Rabbi extrae la halajá entera del orden.\n\n¿Y los jajamim, qué hacen con esa ה? Nada: דְּבָרִים הַדְּבָרִים לָא מַשְׁמַע לְהוּ — «devarim / hadevarim no les dice nada». No toda diferencia textual es significativa para toda escuela: los jajamim no interpretan el artículo, porque su halajá del orden ya salió de והיו y no necesitan otra fuente.\n\nEste pequeño nodo enseña dos cosas sobre el método talmúdico:\n\n  1. LA CONTABILIDAD ES EXACTA. La gemará audita a cada tana: cada halajá debe tener fuente, y cada fuente debe estar libre. Si Rabbi usó והיו para el hebreo, su lemapre\'a necesita OTRA percha — y la gemará se la encuentra, hasta en una letra.\n\n  2. LAS ESCUELAS DIFIEREN HASTA EN QUÉ CUENTA COMO SEÑAL. Para Rabbi, una ה extra es un yacimiento. Para los jajamim, es estilo del texto. La disputa no es solo sobre halajot — es sobre la SENSIBILIDAD exegética misma: cuánto debe rendir cada trazo de la Torá.\n\nLas dos flechas violetas convergen en este nodo desde ambas columnas: el mismo lemapre\'a, dos genealogías.'
+    },
+    'pregunta-global': {
+      titulo: 'La pregunta global · ¿toda la Torá en cualquier lengua?',
+      hebreo: 'לְמֵימְרָא דְּסָבַר רַבִּי כׇּל הַתּוֹרָה כּוּלָּהּ בְּכָל לָשׁוֹן נֶאֶמְרָה... אִיצְטְרִיךְ',
+      traduccion: '«¿Diremos que Rabbi sostiene que TODA la Torá se dice en cualquier lengua?... Era necesario»',
+      explicacion: 'La gemará intenta el movimiento clásico: GLOBALIZAR la disputa local. Si cada tana necesitó un verso especial para el shema, quizá eso revela lo que piensa del resto de la Torá. El intento se hace dos veces — y fracasa dos veces.\n\nINTENTO 1 — contra Rabbi: si Rabbi necesitó וְהָיוּ para exigir hebreo EN EL SHEMA, será que para el RESTO de la Torá (su recitación, su estudio) sostiene בְּכָל לָשׁוֹן — cualquier lengua. Si toda la Torá fuera solo en hebreo, el shema no necesitaría verso propio.\n\n  Respuesta: אִיצְטְרִיךְ — el verso era NECESARIO de todos modos. Aunque Rabbi pensara que toda la Torá es solo en hebreo, וְהָיוּ hace falta: porque שְׁמַע está ahí escrito, y alguien podría leerlo como los jajamim («en cualquier lengua que entiendas»). El והיו viene a BLOQUEAR esa lectura. El verso no revela una doctrina global — neutraliza al verso vecino.\n\nINTENTO 2 — contra los jajamim: si los jajamim necesitaron שְׁמַע para permitir cualquier lengua EN EL SHEMA, será que para el resto de la Torá sostienen que es SOLO en hebreo.\n\n  Respuesta simétrica: אִיצְטְרִיךְ — el שמע era necesario de todos modos: porque וְהָיוּ está ahí escrito, y alguien podría leerlo como Rabbi (בהווייתן — solo en hebreo). El שמע viene a bloquear ESA lectura.\n\nEl resultado es de una elegancia lógica perfecta: CADA TÉRMINO ERA NECESARIO POR EL OTRO. Los dos versos se neutralizan mutuamente como evidencia global: cada uno existe (también) para impedir que el otro se lea al revés. El sistema es autocontenido — un equilibrio de dos piezas que se sostienen entre sí — y por eso NO se puede extraer de él ninguna conclusión sobre el resto de la Torá.\n\nLa pregunta mayor (¿toda la Torá en cualquier lengua?) queda SUSPENDIDA — se resolverá en otras sugyot (Sotá 32-33, sobre qué textos exigen hebreo). Lo que queda firme es la halajá local: el shema, como los jajamim — en cualquier lengua que se entienda.\n\nPor eso el nodo es rojo y punteado: no es una estación del argumento sino su LÍMITE — el lugar donde la gemará midió hasta dónde llegaba la disputa, y encontró que llegaba exactamente hasta el shema.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.idioma-interactivo')
+    : document.querySelector('.idioma-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#idioma-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.idioma-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="idioma-panel-header">' +
+        '<p class="idioma-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="idioma-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="idioma-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="idioma-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.idioma-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.idioma-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="idioma-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
