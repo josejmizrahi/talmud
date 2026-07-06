@@ -1,6 +1,20 @@
 {
-  "perek": "Berajot · perek 1 · מאימתי · completo",
-  "descripcion": "Diagramas temáticos del primer perek de Berajot (dapim 2a–13a · perek completo). Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
+  "perek": "Berajot · perakim 1–2",
+  "descripcion": "Diagramas temáticos de Berajot. Cada tema captura una sugyá completa, incluso si vuelve a aparecer en daf posteriores. Orden cronológico de primera aparición.",
+  "perakim": {
+    "1": {
+      "nombre": "מאימתי",
+      "titulo": "perek 1 · Meeimatai",
+      "dapim": "2a–13a",
+      "estado": "completo"
+    },
+    "2": {
+      "nombre": "היה קורא",
+      "titulo": "perek 2 · Hayá Koré",
+      "dapim": "13a–17b",
+      "estado": "en curso"
+    }
+  },
   "diagramas": [
     {
       "slug": "zman-shema-arvit",
@@ -37,6 +51,7 @@
         "tipo": "apertura",
         "texto": "Apertura del Talmud Bavli — primera mishná, primera palabra: מאימתי\n(\"¿desde cuándo?\"). El editor no encontró un puente porque no hay\ntema previo.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -75,6 +90,7 @@
         "tipo": "continuacion-halajica",
         "texto": "La mishná dice que R. Eliezer marca el fin del zman shema en\n\"סוֹף הָאַשְׁמוּרָה הָרִאשׁוֹנָה\" (el fin de la PRIMERA VIGILIA).\nLa guemará inmediatamente pregunta: ¿qué piensa R. Eliezer sobre\ncuántas vigilias tiene la noche en total? Se necesita esa\naritmética para saber a qué hora termina exactamente el zman.\nLa palabra אשמורה de la mishná dispara la sugyá entera.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -105,6 +121,7 @@
         "tipo": "cadena-formula",
         "texto": "La sección anterior de vigilias cita a Rav Yitzjak bar Shmuel:\n\"sobre cada vigilia HKBH se sienta y ruge como león y dice:\nאוֹי שֶׁהֶחֱרַבְתִּי אֶת בֵּיתִי וְשָׂרַפְתִּי אֶת הֵיכָלִי\nוְהִגְלֵיתִי אֶת בָּנַי...\". El editor inmediatamente coloca\ndespués \"תַּנְיָא אָמַר רַבִּי יוֹסֵי\" — porque la BAT KOL que\nR. Yose oye en la ruina dice EXACTAMENTE LAS MISMAS PALABRAS.\nLas dos piezas se unen por el texto compartido del lamento.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -135,6 +152,7 @@
         "tipo": "continuacion-halajica",
         "texto": "R. Yose en la narrativa anterior dice que aprendió tres cosas, y la\nPRIMERA es \"אֵין נִכְנָסִין לְחוּרְבָּה\" — no se entra a una ruina.\nLa guemará inmediatamente pregunta: ¿pero POR QUÉ exactamente?\nEsa pregunta lanza la sugyá completa de las tres razones\n(chashad, mafolet, mazikin). El editor une las dos piezas por la\nAGENDA HALÁJICA que la narrativa abre pero no cierra: R. Yose dio\nla conclusión halájica; el stam haShas la fundamenta dialécticamente\ncon la baraita tanu rabanan que viene a continuación.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -176,6 +194,7 @@
         "tipo": "palabra-puente",
         "texto": "La sugyá anterior estableció que R. Eliezer fija el inicio del zman shema\nen \"tzeit hakojavim\" y el límite máximo en \"ad chatzot\" (hasta la medianoche).\nLa palabra חֲצוֹת (medianoche) dispara la guemará: ¿cómo sabía el rey David\nexactamente a qué hora era la medianoche? La pregunta conecta la halajá\npráctica del zman shema con la vida nocturna del rey-poeta.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -218,6 +237,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama anterior estableció que David se despertaba a medianoche\ncon el kinor y estudiaba Torah hasta el alba. La sugyá inmediatamente\npregunta: ¿y qué hacía después? Tan pronto como amanecía, los sabios\nde Israel entraban a verle. Esta es la transición narrativa exacta —\nde la noche íntima de Torah a la gestión pública del reino.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -254,6 +274,7 @@
         "tipo": "cadena-formula",
         "texto": "Los diagramas #5 y #6 establecieron a David como el rey-tzadik:\ndespertando a medianoche, consultando tres instituciones antes de\ncada guerra. Pero el siguiente verso de Tehilim 86:2 le pone título\npropio — חָסִיד אָנִי, «soy un chasid». La guemará pregunta: ¿cómo\nosa un REY llamarse chasid? La fórmula apologética «¿no soy chasid?»\nabre dos justificaciones — una nocturna (el madrugador) y otra\ndiurna (las manos manchadas). Misma fórmula, dos pruebas distintas.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -295,6 +316,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama anterior estableció que David se llamó חָסִיד apoyándose\nen su ministerio halájico. La guemará continúa explorando la\nPSICOLOGÍA INTERIOR del chasid davídico: a pesar de todos sus\nméritos (madrugar, examinar niddah, consultar a Mefivoshet), David\nSEGUÍA TEMIENDO no merecer el olam ha-ba. La fórmula לוּלֵא\n(«si no fuera que…») expresa ese pavor radical. La sugyá se\nextiende a Yaakov y a Ezra como paralelos del mismo principio.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -328,6 +350,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #5-8 exploraron la dimensión INTERIOR de la noche\ndavídica (kinor · gobierno · chesed · temor al pecado). Ahora la\nsugyá vuelve al pshat de la mishná inicial: «¿hasta cuándo se\nrecita el shema de arvit?». El maestro nos lleva de la psicología\na la ESTRUCTURA halájica — ¿por qué los chajamim dijeron «ad\nchatzot» si la Torah permite «hasta amud hashachar»? La respuesta\nrevela el mecanismo de la SAYAG (cerca rabínica) y se ilustra con\nla baraita de los hijos de Rabban Gamliel.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -365,6 +388,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #9 trató la ESTRUCTURA EXTERNA de la noche litúrgica\n(cuándo recitar shema — la cerca de chatzot). Ahora la sugyá se\nmueve a la ESTRUCTURA INTERNA del rezo: el orden y la conexión\nentre brachot. La pregunta es ya no «¿hasta cuándo?» sino «¿en\nqué orden?». La fórmula R. Yojanan «¿quién es ben olam ha-ba?» se\nconvierte en clave: pegar la bracha de geulá con la amidá tiene\nvalor cósmico. Y esta enseñanza VUELVE en 6b y en 9b — es uno de\nlos temas que el editor recorre tres veces.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -403,6 +427,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #10 estableció la fórmula de R. Yojanan: «¿quién es\nben olam ha-ba? — el que junta geulá a tefilá». Inmediatamente\ndespués, la guemará trae OTRA fórmula con la misma estructura, de\notro amora: R. Eliezer ben Avina dice «todo el que recita Tehilá\nle-David tres veces al día está seguro de ser ben olam ha-ba».\nMisma fórmula, otra técnica litúrgica. El editor agrupa por\ncadena-fórmula — el lector descubre que ASHREI es una segunda vía\nparalela a la semijá.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -440,6 +465,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #10 y #11 dieron dos vías «públicas» al olam ha-ba\n(semijá y Ashrei). Ahora la sugyá vuelve al espacio íntimo — la\ncama, el momento del sueño, la vulnerabilidad nocturna que el\nrezo institucional no cubre. R. Yehoshua ben Levi establece una\nTERCERA práctica: kriat shema AL HA-MITÁ (sobre la cama),\nprivada, después de la sinagoga. La sugyá despliega la mitología\nangélica que protege ese espacio.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -472,6 +498,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #12 estableció el ritual del shema sobre la cama y la\ninvocación de los ángeles cardinales. Pero hay un peligro que los\nángeles no neutralizan: el yetzer hará INTERIOR. La sugyá continúa\ninmediatamente con la enseñanza de Reish Lakish (citada por R. Levi\nbar Jama) — una ESCALERA progresiva de cuatro escalones para\nvencer la mala inclinación. La conexión es exacta: el shema sobre\nla cama es UNO de los escalones, pero hay otros tres más arriba y\nuno más abajo. El editor expande el inventario de técnicas íntimas.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -516,6 +543,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #13 estableció la escalera contra el yetzer hará — la\nlucha INTERIOR contra el deseo. Pero hay un sufrimiento que NO\nproviene del propio yetzer: el dolor que HKBH envía. La sugyá\npasa de la auto-disciplina al sufrimiento RECIBIDO. Reish Lakish\ncerró con «recordar el día de la muerte»; ahora la guemará explora\nel más difícil de los temas — ¿por qué sufren los justos? La\ntransición es de la muerte como recurso espiritual al sufrimiento\ncomo enigma teológico.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -552,6 +580,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #14 incluyó la baraita de Rashbi sobre los tres regalos\ncomo UN elemento entre varios en la sugyá amplia del sufrimiento.\nPero la baraita merece una exposición independiente: cada uno de\nlos tres regalos se prueba con una técnica exegética DISTINTA, y\nel orden Torá → Tierra → Olam Ha-Ba revela la jerarquía rabínica\nde los bienes supremos. La sugyá previa explora la TENSIÓN del\nsufrimiento; esta enseñanza expone su PRODUCTIVIDAD.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -584,6 +613,7 @@
         "tipo": "agav-orcheih",
         "texto": "Los diagramas #13-15 trataron la lucha contra el yetzer y la\ndoctrina del sufrimiento — temas de gran envergadura espiritual.\nAhora la sugyá baja a lo MÁS pequeño: la dirección de la cama y la\nposición exacta del orador en tefilá. La transición es agav-orcheih\n(«de paso»): la mención del shema sobre la cama en diagramas\nprevios dispara la cita de Aba Binyamin sobre las dos preocupaciones\nde su vida. El editor demuestra que la grandeza espiritual NO está\nsolo en las grandes doctrinas sino también en la atención metódica\nal detalle minúsculo.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -617,6 +647,7 @@
         "tipo": "mismo-orador",
         "texto": "El diagrama #16 trajo dos enseñanzas de Aba Binyamin sobre la\nposición física de la tefilá y la cama. La sugyá continúa con\nOTRA enseñanza del mismo Aba Binyamin — sobre los seres\ninvisibles que pueblan el espacio del rezo y del sueño. El editor\nagrupa por MISMO ORADOR: tres enseñanzas de Aba Binyamin\nconsecutivas, todas sobre la geografía espiritual del cuerpo y su\nentorno. Las dos primeras eran sobre dirección y posición; la\ntercera revela QUIÉN MÁS habita ese espacio.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -664,6 +695,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Los diagramas #16-17 establecieron la sensibilidad del espacio\nsagrado: dirección de la cama, mazikin invisibles, la geometría\ncosmológica. Si el ESPACIO importa así de minuciosamente, ¿cuál\nes entonces EL ESPACIO POR EXCELENCIA del servicio a HKBH? La\nsugyá responde con un tema MAYOR que recorre cinco daf (6a, 6b,\n7b, 8a, 8b): el BEIT KNESSET es el lugar privilegiado donde la\nShejiná se concentra, donde la tefilá se hace eficaz, donde la\ncomunidad transforma la oración individual en evento cósmico.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -705,6 +737,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #18 estableció la doctrina del beit knesset: el lugar\ndonde la Shejiná se concentra y recibe la tefilá del hombre. La\nsugyá inmediatamente pega una doctrina especular: si el hombre\nreza A HKBH, ¿qué hace HKBH? La sorprendente respuesta del editor:\nHKBH TAMBIÉN reza. Y se enoja. Y usa tefilín. El editor agrupa por\ncadena-fórmula — la enseñanza sobre el lugar privilegiado del rezo\nhumano dispara la reflexión sobre el espejo divino. La teología\nrabínica refinada del antropomorfismo.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -742,6 +775,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #19 reveló que HKBH mismo reza para que su rajamim\nvenza a su din. Si HKBH prefiere la misericordia, ¿por qué\nentonces el justo sufre y el malvado prospera? La sugyá continúa\ninmediatamente con la enseñanza más famosa sobre la TEODICEA: las\ntres peticiones de Moshé. La conexión es exacta — desde la\nteología del default divino misericordioso a la pregunta más\nintratable: si así son las cosas, ¿por qué el mundo no lo refleja?\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -780,6 +814,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #20 dejó la tensión irresuelta sobre la teodicea —\nR. Meir sostiene que las vías de HKBH son MISTERIOSAS, no\nsistematizables. La sugyá inmediatamente trae UN CASO concreto\ndonde la teodicea opera de manera ENIGMÁTICA: David, al huir de\nAvshalom su hijo, escribe «MIZMOR» (cántico) en lugar de «KINÁ»\n(lamento). ¿Cómo se canta en medio de la tragedia? El editor pega\nel caso por cadena-fórmula: la tercera petición de Moshé (la\nteodicea) se ilustra con la respuesta DAVÍDICA al sufrimiento.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -817,6 +852,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #21 mostró a David enfrentando la tragedia de\nAvshalom — un rasha tarbut ra'á dentro de su propia casa. Surge\nnaturalmente la pregunta práctica: ¿puede el justo PROVOCAR\nactivamente a los rashaim? ¿Confrontar el mal? ¿O debe siempre\nhuir y refugiarse en mizmorim? La sugyá responde con una halajá\nmatizada: SÍ se puede, pero con discernimiento del momento.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -846,6 +882,7 @@
         "tipo": "cadena-formula",
         "texto": "El diagrama #22 estableció que se PERMITE provocar a los rashaim\n— la dimensión confrontacional del judaísmo. Ahora la sugyá ofrece\nel COMPLEMENTO necesario: cuando hay VIRTUD entre las naciones,\nel judaísmo la RECONOCE Y APRENDE. R. Akiva y R. Gamliel — dos de\nlas figuras más grandes del tanaitismo — declaran abiertamente\n«amo» (אוהב אני) ciertas costumbres de los Medos y los Persas.\nLa dialéctica completa: confrontación cuando hay mal, aprendizaje\ncuando hay bien.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -879,6 +916,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #23 mostró el judaísmo aprendiendo de las naciones —\nsu dimensión cultural más abierta. Ahora la sugyá VUELVE al\ncentro halájico del perek: la mishná del שמע. El editor cierra\nel perek con un retorno al tema inicial — pero ahora desde una\nperspectiva refinada por todo lo aprendido. R. Shimon bar Yojai\npropone una halajá audaz: hay momentos en que el judío recita\nshema DOS VECES dentro de una misma «noche» — una para cumplir\nla obligación nocturna, otra para cumplir la diurna. La frontera\nentre noche y día se vuelve halájicamente FLEXIBLE.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -917,6 +955,7 @@
         "tipo": "continuacion-halajica",
         "texto": "El diagrama #24 mostró la halajá flexible de R. Shimon bar Yojai\nsobre el zman shema — dos recitaciones en una noche. El perek\nAHORA cierra con una sugyá que TRANSFORMA la pregunta inicial.\nEl zman shema arvit (#1) tenía como horizonte estructural el zman\nde COMER EL KORBAN PESAJ. ¿Hasta cuándo se puede comer? Esta es\nla disputa entre R. Elazar ben Azaria y R. Akiva. El perek\ncompleta su trayectoria desde la mishná inicial sobre el shema\nhasta el korban paradigmático. La estructura es PERFECTA — el\ncierre retorna al inicio, pero ampliado a su forma más universal.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -957,6 +996,7 @@
         "tipo": "palabra-puente",
         "texto": "El diagrama #25 cerró la sugyá del zman con el korban pesaj y\nmakat bechorot — la noche misma de YETZIAT MITZRAYIM. El editor\nno suelta esa noche: la guemará sigue con las agadot del éxodo.\n¿Por qué HKBH insistió en que Israel pidiera los objetos de\nEgipto? Para que \"aquel tzadik\" (Avraham) no dijera: la promesa\nde esclavitud se cumplió, la de riqueza no. La salida de Egipto\nes la palabra-puente que arrastra al editor de la halajá del\npesaj a la teología de las promesas.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -999,6 +1039,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Todo el perek hasta aquí giró sobre la mishná 1:1 — el shema\nde ARVIT. La segunda mishná es su espejo exacto: מֵאֵימָתַי\nקוֹרִין אֶת שְׁמַע בְּשַׁחֲרִית — ¿desde cuándo se lee el shema\nde la MAÑANA? La misma pregunta (¿desde cuándo?), el mismo\nproblema (señales naturales para marcar tiempo halájico),\npero ahora con la luz creciente en lugar de la oscuridad.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1040,6 +1081,7 @@
         "tipo": "cadena-formula",
         "texto": "Abaye acaba de decir en la sugyá del zman: \"para kriat shema,\ncomo los VATIKIN\" — y cita a R. Yojanan: וָתִיקִין הָיוּ\nגּוֹמְרִין אוֹתָהּ עִם הָנֵץ הַחַמָּה. El editor toma esa\nfórmula y despliega la sugyá entera de los vatikin: quiénes\nson, qué pasuk los sostiene, y qué recompensa tiene quien\nlogra su proeza — pegar la geulá a la tefilá con el sol\nsaliendo.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1081,6 +1123,7 @@
         "tipo": "cadena-formula",
         "texto": "La sugyá anterior terminó citando el pasuk exacto: David no\ndijo Halleluyá hasta ver la caída de los reshaim — יִתַּמּוּ\nחַטָּאִים מִן הָאָרֶץ וּרְשָׁעִים עוֹד אֵינָם. El editor\ninmediatamente cuenta la historia donde ESE MISMO PASUK es\nreleído: R. Meir reza por la muerte de los biryonim apoyándose\nen él, y Beruria lo corrige desde la gramática. La fórmula\ncompartida encadena las dos piezas.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1126,6 +1169,7 @@
         "tipo": "cadena-formula",
         "texto": "Beruria corrigió la lectura de יִתַּמּוּ חַטָּאִים. El editor\nahora revela dónde vive ese pasuk en la biografía espiritual\nde David: es el CUARTO de los cinco בָּרְכִי נַפְשִׁי — la\nshirá que David dijo al ver la caída de los reshaim. La misma\nfórmula, por tercera vez consecutiva, teje la cadena: cita,\ncorrección, y ahora contexto vital.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1182,6 +1226,7 @@
         "tipo": "palabra-puente",
         "texto": "David abrió su boca בְחָכְמָה — y el editor salta a Kohelet:\nמִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר. ¿Quién es sabio\ncomo HKBH, que sabe hacer PESHARÁ (compromiso) entre dos\ntzadikim — entre Jizkiyahu e Yeshayahu? La palabra jojmá\nengancha el elogio de David con la historia del rey que venció\na la profecía rezando.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1224,6 +1269,7 @@
         "tipo": "palabra-puente",
         "texto": "Jizkiyahu rezó girado אֶל הַקִּיר, y R. Levi explicó que\ninvocaba el KIR de la Shunamit: \"ella hizo una sola pared\npequeña y le reviviste al hijo\". El editor ahora abre ese\nepisodio completo: נַעֲשֶׂה נָא עֲלִיַּת קִיר קְטַנָּה. La\npalabra קיר es el gozne — del muro del rey moribundo a la\npared de la mujer hospitalaria.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1261,6 +1307,7 @@
         "tipo": "mismo-orador",
         "texto": "La enseñanza de la hospitalidad venía de R. Yosei bar Janina\nen nombre de R. Eliezer ben Yaakov. El editor encadena TRES\nenseñanzas más con exactamente la misma cadena de transmisión\n— וְאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא מִשּׁוּם רַבִּי\nאֱלִיעֶזֶר בֶּן יַעֲקֹב — todas sobre la postura del cuerpo\nante la tefilá. El mismo orador agrupa la unidad, como Aba\nBinyamin en 5b-6a.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1299,6 +1346,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Cerrada la pregunta del CUÁNDO (halajá como R. Yehoshua, hasta\ntres horas), la mishná 1:3 pregunta el CÓMO: ¿en qué postura\nse lee el shema? Beit Shammai lee ובשכבך ובקומך literalmente\n— acostado de noche, de pie de mañana. Beit Hillel lo lee como\nmarcador de TIEMPO — cada uno lee כדרכו, como está. Es la\nmisma frase de la Torá que fundó el perek entero, ahora\ndisputada en su sentido corporal.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1336,6 +1384,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Resuelto el CUÁNDO (mishná 1:2) y el CÓMO (mishná 1:3), la\nmishná 1:4 pregunta por el MARCO: ¿qué berajot rodean al\nshema? בַּשַּׁחַר מְבָרֵךְ שְׁתַּיִם לְפָנֶיהָ וְאַחַת\nלְאַחֲרֶיהָ, וּבָעֶרֶב שְׁתַּיִם לְפָנֶיהָ וּשְׁתַּיִם\nלְאַחֲרֶיהָ. La secuencia de las tres mishnayot construye la\nliturgia completa: tiempo → postura → bendiciones.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1371,6 +1420,7 @@
         "tipo": "cadena-formula",
         "texto": "La segunda berajá del shema es AHAVA RABBA — y Shmuel deduce\nde ahí una halajá enorme: quien ya dijo ahava rabba quedó\nexento de birkat haTorá, porque esa berajá YA habla del regalo\nde la Torá. La misma fórmula que cerró la sugyá anterior abre\nesta: ¿qué es \"estudiar Torá\" a efectos de bendecir?\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1408,6 +1458,7 @@
         "tipo": "cadena-formula",
         "texto": "¿Cuál era la בְּרָכָה אַחַת que el encargado pedía a los\nkohanim en el Mikdash? Rav Yehuda en nombre de Shmuel: AHAVA\nRABBA — otra vez la misma berajá. La fórmula que exime de\nbirkat haTorá y precede al shema resulta ser también la\nberajá matinal de los kohanim del Tamid. Tres sugyot\nconsecutivas colgadas de la misma frase.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1445,6 +1496,7 @@
         "tipo": "continuacion-halajica",
         "texto": "La gemará vuelve a la última cláusula de la mishná 1:4:\nמָקוֹם שֶׁאָמְרוּ לְהַאֲרִיךְ אֵינוֹ רַשַּׁאי לְקַצֵּר. ¿Qué\ndefine a una berajá — su apertura o su cierre? El caso de\nprueba usa las berajot recién estudiadas: el que abrió con\nyotzer or y cerró con maariv aravim. El perek cierra su\ntramo litúrgico preguntando dónde vive la esencia de una\nbendición.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1479,6 +1531,7 @@
         "tipo": "mismo-orador",
         "texto": "El diagrama #38 cerró con Rabba bar Jinnana Sava en nombre de\nRav: emet veyatziv, y el cuerpo que se inclina en baruj y se\nyergue en el Nombre. El editor sigue con el MISMO ORADOR —\nוְאָמַר רַבָּה בַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב — para\nla siguiente enseñanza litúrgica: cuándo el haEl haKadosh se\nconvierte en haMelej haKadosh. Antes, una miniatura sobre la\nreverencia: Rav Sheshet, la caña y la serpiente.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1524,6 +1577,7 @@
         "tipo": "mismo-orador",
         "texto": "Tercera y cuarta enseñanza de la misma cadena: וְאָמַר רַבָּה\nבַּר חִינָּנָא סָבָא מִשְּׁמֵיהּ דְּרַב. Tras las fórmulas\nlitúrgicas (emet veyatziv, haMelej hakadosh) vienen las dos\nenseñanzas morales del mismo orador: quien pudiendo pedir\nmisericordia por su compañero no pide — se llama pecador; y\nquien se avergüenza de su transgresión — le perdonan todo.\nLas dos convergen en la figura de Shaúl.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1568,6 +1622,7 @@
         "tipo": "continuacion-halajica",
         "texto": "Cerrada la digresión de Shaúl, el editor vuelve al eje del\nperek — la composición del shema mismo: בִּקְּשׁוּ לִקְבּוֹעַ\nפָּרָשַׁת בָּלָק בִּקְרִיאַת שְׁמַע. ¿Qué parashiyot merecen\nentrar en la recitación diaria y por qué? La sugyá revela el\ncriterio editorial de la liturgia: qué se incluye, qué se\nexcluye, y qué precio pagó la comodidad de la comunidad.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1607,6 +1662,7 @@
         "tipo": "palabra-puente",
         "texto": "La parashá de tzitzit entró al shema POR yetziat mitzrayim —\npero tzitzit es mitzvá de día. ¿Entonces por qué se recita de\nnoche? La última mishná del perek responde exactamente eso:\nמַזְכִּירִין יְצִיאַת מִצְרַיִם בַּלֵּילוֹת. La palabra-puente\nyetziat mitzrayim une la sugyá del canon con la mishná final\n— y el perek que abrió preguntando por la noche cierra\nmetiendo a Egipto en ella.\n"
       },
+      "perek": 1,
       "nota": true
     },
     {
@@ -1647,6 +1703,7 @@
         "tipo": "cadena-formula",
         "texto": "Los jajamim acaban de usar el cambio de nombre de Yaakov como\nmodelo del ikar/tafel: \"no se arranca el nombre — se\nre-jerarquiza\". El editor cierra el perek desplegando esa\nmisma lógica sobre los otros dos renombrados: אַבְרָם הוּא\nאַבְרָהָם, שָׂרַי הִיא שָׂרָה. La fórmula del ikar/tafel es\nel hilo — y con los nombres de los avot, el primer perek del\nTalmud llega a su hadran.\n"
       },
+      "perek": 1,
       "nota": true
     }
   ],

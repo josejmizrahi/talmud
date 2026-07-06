@@ -646,6 +646,13 @@
     </div>
 
     <div class="grupo-control">
+      <label>Perek</label>
+      <select id="filtro-perek">
+        <option value="">— todos —</option>
+      </select>
+    </div>
+
+    <div class="grupo-control">
       <label>Grupo</label>
       <select id="filtro-grupo">
         <option value="">— todos —</option>
@@ -830,8 +837,17 @@
   const selGrupo = document.getElementById('filtro-grupo');
   const selSabio = document.getElementById('filtro-sabio');
   const selConcepto = document.getElementById('filtro-concepto');
+  const selPerek = document.getElementById('filtro-perek');
 
   grupos.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; selGrupo.appendChild(o); });
+
+  const perakim = manifest.perakim || {};
+  [...new Set(temaNodes.map(t => t.perek || 1))].sort().forEach(p => {
+    const o = document.createElement('option');
+    o.value = String(p);
+    o.textContent = (perakim[p] && perakim[p].titulo) || ('perek ' + p);
+    selPerek.appendChild(o);
+  });
 
   const sabiosSet = new Set(), conceptosSet = new Set();
   temaNodes.forEach(n => {
@@ -1048,6 +1064,8 @@
     const grupo = selGrupo.value;
     const sabio = selSabio.value;
     const concepto = selConcepto.value;
+    const perek = selPerek.value;
+    if (perek && String(d.perek || 1) !== perek) return false;
     if (grupo && d.grupo !== grupo) return false;
     if (sabio && !(d.sabios || []).includes(sabio)) return false;
     if (concepto && !(d.conceptos || []).includes(concepto)) return false;
@@ -1144,8 +1162,9 @@
   selGrupo.addEventListener('change', actualizar);
   selSabio.addEventListener('change', actualizar);
   selConcepto.addEventListener('change', actualizar);
+  selPerek.addEventListener('change', actualizar);
   document.getElementById('reset-filtros').addEventListener('click', () => {
-    selGrupo.value = ''; selSabio.value = ''; selConcepto.value = '';
+    selGrupo.value = ''; selSabio.value = ''; selConcepto.value = ''; selPerek.value = '';
     inputBusqueda.value = '';
     limpiarPanel();
     svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);

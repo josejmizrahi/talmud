@@ -115,6 +115,57 @@
     opacity: 0.55;
     font-style: italic;
   }
+  .codex-toc .toc-perek {
+    grid-column: 1 / -1;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    padding-top: 0.5rem;
+    border-bottom: 1px dashed var(--pergamino-sombra);
+    margin-bottom: 0.25rem;
+  }
+  .codex-toc .toc-perek .heb {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--sepia);
+    margin-left: 0.5rem;
+  }
+
+  /* Divisor de perek en el scroll */
+  .perek-divisor {
+    margin-top: 4.5rem;
+    padding: 2.25rem 1.5rem;
+    text-align: center;
+    background: rgba(184,134,11,0.05);
+    border-top: 3px double var(--dorado);
+    border-bottom: 3px double var(--dorado);
+  }
+  .perek-divisor .pd-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 0.5rem;
+  }
+  .perek-divisor h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--tinta);
+    margin: 0 0 0.3rem;
+    direction: rtl;
+  }
+  .perek-divisor .pd-sub {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 1rem;
+  }
 
   .diagrama-bloque {
     margin-top: 3.5rem;
@@ -442,21 +493,43 @@
     `;
   }
 
-  // Render TOC
+  // Render TOC (con divisores de perek)
+  const perakim = manifest.perakim || {};
   const toc = document.getElementById('codex-toc-lista');
+  let tocPerek = null;
   toc.innerHTML = manifest.diagramas.map(d => {
     const dap = d.dapim.join(' · ');
-    if (d.estado === 'listo') {
-      return `<li><span class="orden">${d.orden}.</span><a href="#${d.slug}">${d.titulo}</a><span class="dap">${dap}</span></li>`;
+    let divisor = '';
+    if (d.perek !== tocPerek) {
+      tocPerek = d.perek;
+      const p = perakim[d.perek] || {};
+      divisor = `<li class="toc-perek">${p.titulo || 'perek ' + d.perek}<span class="heb">${p.nombre || ''}</span></li>`;
     }
-    return `<li><span class="orden">${d.orden}.</span><span class="pendiente">${d.titulo}</span><span class="dap">${dap}</span></li>`;
+    if (d.estado === 'listo') {
+      return `${divisor}<li><span class="orden">${d.orden}.</span><a href="#${d.slug}">${d.titulo}</a><span class="dap">${dap}</span></li>`;
+    }
+    return `${divisor}<li><span class="orden">${d.orden}.</span><span class="pendiente">${d.titulo}</span><span class="dap">${dap}</span></li>`;
   }).join('');
 
-  // Render bloques listos
+  // Render bloques listos (con divisores de perek)
   const main = document.getElementById('codex-bloques');
   const listos = manifest.diagramas.filter(d => d.estado === 'listo');
+  let perekActual = null;
   for (let i = 0; i < listos.length; i++) {
     const d = listos[i];
+    if (d.perek !== perekActual) {
+      perekActual = d.perek;
+      const p = perakim[d.perek] || {};
+      const div = document.createElement('section');
+      div.className = 'perek-divisor';
+      div.id = 'perek-' + d.perek;
+      div.innerHTML = `
+        <div class="pd-eyebrow">${p.titulo || 'perek ' + d.perek} · ${p.dapim || ''}</div>
+        <h2>${p.nombre || ''}</h2>
+        <div class="pd-sub">${d.perek === 1 ? 'el zman del shema · la noche y sus criaturas · la tefilá contra el decreto' : 'la kavaná · el idioma del shema · las interrupciones y sus jerarquías'}</div>
+      `;
+      main.appendChild(div);
+    }
     const prev = i > 0 ? listos[i - 1] : null;
     const next = i < listos.length - 1 ? listos[i + 1] : null;
     const dapim = d.dapim.map(x => 'Berajot ' + x).join(' · ');

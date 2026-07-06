@@ -25,11 +25,17 @@ const VAULT = path.join(ROOT, 'vault');
 const OUT = path.join(ROOT, 'diagramas', 'manifest.json');
 const NOTAS = path.join(ROOT, 'notas');
 
-const PEREK = 'Berajot · perek 1 · מאימתי · completo';
+const PEREK = 'Berajot · perakim 1–2';
 const DESCRIPCION =
-  'Diagramas temáticos del primer perek de Berajot (dapim 2a–13a · perek completo). ' +
+  'Diagramas temáticos de Berajot. ' +
   'Cada tema captura una sugyá completa, incluso si vuelve a aparecer ' +
   'en daf posteriores. Orden cronológico de primera aparición.';
+
+// Metadatos por perek (los temas declaran `perek:` en su frontmatter; default 1)
+const PERAKIM = {
+  1: { nombre: 'מאימתי', titulo: 'perek 1 · Meeimatai', dapim: '2a–13a', estado: 'completo' },
+  2: { nombre: 'היה קורא', titulo: 'perek 2 · Hayá Koré', dapim: '13a–17b', estado: 'en curso' },
+};
 
 /* ---------- Lectura del vault ---------- */
 
@@ -233,7 +239,8 @@ function main() {
     process.exit(1);
   }
 
-  // Sortear cronológicamente
+  // Perek por defecto y orden cronológico
+  temas.forEach(t => { t.perek = t.perek || 1; });
   temas.sort((a, b) => a.orden - b.orden);
 
   // Construir conexiones
@@ -269,6 +276,7 @@ function main() {
   const manifest = {
     perek: PEREK,
     descripcion: DESCRIPCION,
+    perakim: PERAKIM,
     diagramas: clean(temas),
     sabios: clean(sabios),
     pesukim: clean(pesukim),
