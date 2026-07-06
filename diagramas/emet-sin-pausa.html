@@ -1,0 +1,366 @@
+<div class="emetsp-interactivo">
+<style>
+  .emetsp-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .emetsp-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .emetsp-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .emetsp-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .emetsp-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .emetsp-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .emetsp-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .emetsp-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .emetsp-diagrama svg { width: 100%; height: auto; display: block; }
+  .emetsp-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .emetsp-nodo:hover rect { stroke-width: 2 !important; }
+  .emetsp-nodo:hover circle { stroke-width: 2.5 !important; }
+  .emetsp-nodo.activa rect { stroke-width: 2.5 !important; }
+  .emetsp-nodo.activa circle { stroke-width: 3 !important; }
+  .emetsp-nodo.dim { opacity: 0.32; }
+  .emetsp-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .emetsp-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .emetsp-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .emetsp-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .emetsp-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .emetsp-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .emetsp-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="emetsp-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>la costura · la halajá</span>
+  <span><span class="swatch azul"></span>¿se repite emet?</span>
+  <span><span class="swatch verde"></span>maarava · Eretz Yisrael</span>
+  <span><span class="swatch rojo"></span>la objeción de Abaye</span>
+  <span><span class="swatch sepia"></span>la fórmula breve nocturna</span>
+</div>
+
+<div class="emetsp-diagrama">
+<svg viewBox="0 0 720 1420" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 14a-14b: la costura Eloheijem—emet · ¿se repite emet? · el tzitzit abreviado de Eretz Yisrael · la fórmula breve nocturna</title>
+
+<defs>
+  <marker id="flecha-esp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-esp-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Emet sin pausa · la costura אלהיכם—אמת</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 14a-14b · la boca no puede desarmar lo que el pasuk unió</text>
+
+<!-- ============================================================ -->
+<!-- LA COSTURA · LA HALAJÁ Y SU PASUK                            -->
+<!-- ============================================================ -->
+<text x="60" y="78" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA COSTURA · R. ABAHU BESHEM R. YOJANAN · HALAJÁ COMO R. YEHUDA</text>
+
+<g class="emetsp-nodo" data-id="costura">
+  <!-- dos telas: final del shema y arranque de la berajá -->
+  <rect x="70" y="92" width="270" height="88" rx="8" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="205" y="116" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">final del shema</text>
+  <text x="205" y="140" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">אֲנִי ה׳ אֱלֹהֵיכֶם</text>
+  <text x="205" y="164" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«Yo soy Hashem, vuestro Dios»</text>
+
+  <rect x="380" y="92" width="270" height="88" rx="8" fill="rgba(107,68,35,0.06)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="515" y="116" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">arranque de la berajá</text>
+  <text x="515" y="140" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">אֱמֶת וְיַצִּיב</text>
+  <text x="515" y="164" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«verdad y firme»</text>
+
+  <!-- la sutura dorada: puntadas en zigzag entre las dos telas -->
+  <path d="M 340 108 L 380 120 L 340 132 L 380 144 L 340 156 L 380 168" fill="none" stroke="#b8860b" stroke-width="2"/>
+  <circle cx="340" cy="108" r="2.2" fill="#b8860b"/>
+  <circle cx="380" cy="120" r="2.2" fill="#b8860b"/>
+  <circle cx="340" cy="132" r="2.2" fill="#b8860b"/>
+  <circle cx="380" cy="144" r="2.2" fill="#b8860b"/>
+  <circle cx="340" cy="156" r="2.2" fill="#b8860b"/>
+  <circle cx="380" cy="168" r="2.2" fill="#b8860b"/>
+
+  <rect x="120" y="196" width="480" height="60" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="220" text-anchor="middle" font-size="12" direction="rtl" fill="#b8860b" font-weight="700">בֵּין ״אֱלֹהֵיכֶם״ לֶ״אֱמֶת וְיַצִּיב״ לֹא יַפְסִיק</text>
+  <text x="360" y="242" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«entre Eloheijem y emet veyatziv NO se interrumpe» — la sutura no se corta</text>
+</g>
+
+<line x1="360" y1="256" x2="360" y2="276" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-esp-gold)"/>
+<text x="378" y="270" font-size="8.5" fill="#6b4423" font-style="italic">¿la razón?</text>
+
+<!-- el pasuk -->
+<g class="emetsp-nodo" data-id="pasuk">
+  <rect x="150" y="282" width="420" height="76" rx="6" fill="rgba(184,134,11,0.08)" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="360" y="310" text-anchor="middle" font-size="14" direction="rtl" fill="#1a1410">וַה׳ אֱלֹהִים אֱמֶת</text>
+  <text x="360" y="330" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Y Hashem, Dios, es VERDAD» (Yirmiyahu 10:10)</text>
+  <text x="360" y="348" text-anchor="middle" font-size="8.5" fill="#b8860b" font-style="italic">la secuencia Dios→verdad ya está escrita · el pasuk mismo soldó las palabras</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- ¿SE REPITE EMET? · LA DISPUTA                                -->
+<!-- ============================================================ -->
+<line x1="360" y1="358" x2="360" y2="378" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-esp)"/>
+
+<text x="60" y="390" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA DISPUTA · SI EMET CIERRA EL SHEMA — ¿LA BERAJÁ LO VUELVE A DECIR?</text>
+
+<g class="emetsp-nodo" data-id="disputa">
+  <rect x="60" y="400" width="600" height="130" rx="6" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="422" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿se repite «emet» al empezar la berajá?</text>
+
+  <rect x="80" y="436" width="280" height="74" rx="4" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="0.9"/>
+  <text x="220" y="456" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">R. Abahu beshem R. Yojanan</text>
+  <text x="220" y="478" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">חוֹזֵר וְאוֹמֵר אֱמֶת</text>
+  <text x="220" y="498" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">vuelve y dice emet — sí se repite</text>
+
+  <rect x="370" y="436" width="280" height="74" rx="4" fill="rgba(30,58,95,0.06)" stroke="#1e3a5f" stroke-width="0.9" stroke-dasharray="5,2"/>
+  <text x="510" y="456" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Rabba</text>
+  <text x="510" y="478" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f" font-weight="700">אֵינוֹ חוֹזֵר וְאוֹמֵר אֱמֶת</text>
+  <text x="510" y="498" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">no vuelve a decirlo — un solo emet</text>
+</g>
+
+<line x1="510" y1="530" x2="440" y2="556" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-esp)"/>
+
+<!-- la escena cómica -->
+<g class="emetsp-nodo" data-id="escena">
+  <rect x="110" y="562" width="500" height="92" rx="6" fill="rgba(30,58,95,0.09)" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="360" y="584" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">La escena: uno bajó a rezar ante Rabba y dijo «emet, emet»</text>
+  <text x="360" y="610" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">כֹּל ״אֱמֶת אֱמֶת״ תַּפְסֵיהּ לְהַאי</text>
+  <text x="360" y="632" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«a este lo atrapó todo el emet-emet» — la burla de Rabba</text>
+  <text x="360" y="648" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">hasta la verdad, dicha dos veces, suena a pose</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MAARAVA · EL TZITZIT ABREVIADO                               -->
+<!-- ============================================================ -->
+<line x1="360" y1="654" x2="360" y2="674" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-esp)"/>
+
+<text x="60" y="686" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MAARAVA · ERETZ YISRAEL DE NOCHE · EL TZITZIT ABREVIADO · RAV YOSEF CELEBRA</text>
+
+<g class="emetsp-nodo" data-id="maarava">
+  <rect x="60" y="696" width="600" height="188" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.5"/>
+  <text x="360" y="720" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">De noche no recitaban toda la parashá de tzitzit (mitzvá diurna) — sino un collage</text>
+
+  <!-- inicio -->
+  <rect x="85" y="736" width="240" height="60" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="205" y="756" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el inicio</text>
+  <text x="205" y="778" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵיהֶם</text>
+
+  <!-- lo saltado -->
+  <text x="360" y="762" text-anchor="middle" font-size="14" fill="#2d6b4e" letter-spacing="3">· · ·</text>
+  <text x="360" y="780" text-anchor="middle" font-size="7.5" fill="#6b4423" font-style="italic">saltando los flecos</text>
+
+  <!-- fin -->
+  <rect x="395" y="736" width="240" height="60" rx="4" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="515" y="756" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">el final</text>
+  <text x="515" y="778" text-anchor="middle" font-size="10" direction="rtl" fill="#1a1410">אֲנִי ה׳ אֱלֹהֵיכֶם אֱמֶת</text>
+
+  <line x1="205" y1="796" x2="205" y2="816" stroke="#2d6b4e" stroke-width="0.9" marker-end="url(#flecha-esp)"/>
+  <line x1="515" y1="796" x2="515" y2="816" stroke="#2d6b4e" stroke-width="0.9" marker-end="url(#flecha-esp)"/>
+  <text x="205" y="834" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">queda la apertura — el mandato de hablar</text>
+  <text x="515" y="834" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">y queda la costura — Eloheijem pegado a emet</text>
+
+  <text x="360" y="866" text-anchor="middle" font-size="9" fill="#2d6b4e" font-style="italic">Rav Yosef celebra la tradición occidental: la abreviación conserva exactamente lo esencial</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA OBJECIÓN DE ABAYE                                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="884" x2="360" y2="904" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-esp)"/>
+
+<text x="60" y="916" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA OBJECIÓN · ABAYE CON RAV KAHANA BESHEM RAV</text>
+
+<g class="emetsp-nodo" data-id="objecion">
+  <rect x="60" y="926" width="600" height="112" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4" stroke-dasharray="5,2"/>
+  <text x="360" y="950" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Abaye objeta con la regla de Rav Kahana beshem Rav</text>
+  <text x="360" y="976" text-anchor="middle" font-size="12" direction="rtl" fill="#8b1a1a" font-weight="700">לֹא יַתְחִיל · וְאִם הִתְחִיל — גּוֹמֵר</text>
+  <text x="360" y="996" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«no debe empezarla — pero si empezó, la termina»</text>
+  <text x="360" y="1020" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">¿y ״וְאָמַרְתָּ אֲלֵיהֶם״ no es ya EMPEZAR? — entonces deberían terminar toda la parashá</text>
+</g>
+
+<line x1="220" y1="1038" x2="200" y2="1062" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-esp)"/>
+<line x1="500" y1="1038" x2="520" y2="1062" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-esp)"/>
+
+<!-- Rav Papa -->
+<g class="emetsp-nodo" data-id="rav-papa">
+  <rect x="50" y="1070" width="300" height="120" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="200" y="1092" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Rav Papa · el comienzo real</text>
+  <text x="200" y="1116" text-anchor="middle" font-size="11" direction="rtl" fill="#2d6b4e" font-weight="700">וְעָשׂוּ לָהֶם צִיצִית</text>
+  <text x="200" y="1136" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">en maarava sostienen que la parashá</text>
+  <text x="200" y="1150" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">empieza recién en «y harán tzitzit»</text>
+  <text x="200" y="1172" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">el mandato de hablar aún no es la parashá</text>
+</g>
+
+<!-- conclusión de Abaye -->
+<g class="emetsp-nodo" data-id="conclusion">
+  <rect x="370" y="1070" width="300" height="120" rx="6" fill="rgba(139,26,26,0.06)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="520" y="1092" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Abaye concluye · Bavel</text>
+  <text x="520" y="1114" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">nosotros empezamos como ellos</text>
+  <text x="520" y="1130" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">— con «daber el benei Yisrael» —</text>
+  <text x="520" y="1152" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="600" font-style="italic">y como empezamos, terminamos</text>
+  <text x="520" y="1174" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">quien empieza la parashá entera, la completa</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA FÓRMULA BREVE NOCTURNA · JIYA BAR RAV                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="1190" x2="360" y2="1210" stroke="#6b4423" stroke-width="1.2" marker-end="url(#flecha-esp)"/>
+
+<text x="60" y="1222" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA FÓRMULA BREVE NOCTURNA · JIYA BAR RAV · YETZIAT MITZRAYIM</text>
+
+<g class="emetsp-nodo" data-id="formula-breve">
+  <rect x="60" y="1234" width="600" height="140" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="1258" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">¿Y la mención nocturna de la salida de Egipto? · si no dijo ״אֲנִי ה׳ אֱלֹהֵיכֶם״</text>
+  <text x="360" y="1278" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">no necesita emet veemuná — basta la fórmula breve:</text>
+  <text x="360" y="1308" text-anchor="middle" font-size="13" direction="rtl" fill="#6b4423" font-weight="700">מוֹדִים אֲנַחְנוּ לָךְ... שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם</text>
+  <text x="360" y="1332" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«Te agradecemos... que nos sacaste de la tierra de Egipto»</text>
+  <text x="360" y="1356" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">la memoria de Egipto es irrenunciable · su envoltorio, negociable</text>
+</g>
+
+</svg>
+</div>
+
+<div class="emetsp-panel" id="emetsp-panel">
+  <p class="emetsp-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'costura': {
+      titulo: 'La costura · entre Eloheijem y emet no se interrumpe',
+      hebreo: 'בֵּין ״אֱלֹהֵיכֶם״ לֶ״אֱמֶת וְיַצִּיב״ לֹא יַפְסִיק',
+      traduccion: '«Entre Eloheijem y emet veyatziv no interrumpirá»',
+      explicacion: 'La gemará vuelve a la última cláusula de la mishná 2:2 — R. Yehuda había marcado UNA excepción a los saludos permitidos entre los perakim: entre וַיֹּאמֶר (el final del shema) y אֱמֶת וְיַצִּיב (el arranque de la berajá) NO se interrumpe.\n\nR. Abahu, en nombre de R. Yojanan, fija la halajá exactamente como él: הֲלָכָה כְּרַבִּי יְהוּדָה.\n\nEl punto exacto de la prohibición es una COSTURA de dos palabras:\n\n  · La última palabra del shema: אֱלֹהֵיכֶם — «vuestro Dios»\n  · La primera palabra de la berajá: אֱמֶת — «verdad»\n\nEntre esas dos palabras la boca no puede detenerse: ni para saludar a un rey, ni para responder a un temido. אֱמֶת debe quedar PEGADA a אֱלֹהֵיכֶם — pronunciadas como si fueran una sola frase: «Ani Hashem Eloheijem — EMET».\n\nEl diagrama la representa como sutura porque eso ES: dos telas litúrgicas distintas — el texto bíblico del shema y la berajá rabínica que le sigue — cosidas en un punto único. En ese punto el orante hace algo asombroso: convierte el final de la cita bíblica en el sujeto de su propia declaración. Dios dijo «Yo soy Hashem vuestro Dios» — y el orante responde, sin respirar: «VERDAD».\n\nEs la gemela en miniatura de la gran costura del perek 1: somej geulá litfilá, pegar la redención a la tefilá. Allá se suturaban dos berajot; aquí, dos palabras. La liturgia entera está hecha de estas junturas que no se pueden abrir — y la razón, como siempre, está en un pasuk.'
+    },
+    'pasuk': {
+      titulo: 'El pasuk que soldó las palabras · Yirmiyahu 10:10',
+      hebreo: 'וַה׳ אֱלֹהִים אֱמֶת',
+      traduccion: '«Y Hashem, Dios, es verdad» (Yirmiyahu 10:10)',
+      explicacion: '¿Por qué justamente ESTA juntura es inviolable? La gemará da la razón con un versículo: וַה׳ אֱלֹהִים אֱמֶת — «Y Hashem, Dios, es VERDAD» (Yirmiyahu 10:10).\n\nEl versículo aparece en la gran polémica de Yirmiyahu contra los ídolos: ellos son vapor, obra de manos, mentira decorada — וַה׳ אֱלֹהִים אֱמֶת, pero Hashem Dios es verdad, Dios vivo y Rey eterno.\n\nLo decisivo para la halajá es la SECUENCIA: en el pasuk, la palabra אֱמֶת viene inmediatamente después del nombre de Dios. La estructura Dios→verdad ya está escrita en el Tanaj como una unidad sin pausa.\n\nDe ahí la regla: si la Escritura misma soldó «Elohim» con «emet», la boca del orante no puede desarmar esa soldadura. Cuando el shema termina en אֱלֹהֵיכֶם y la berajá empieza en אֱמֶת, el orante está REPRODUCIENDO el versículo de Yirmiyahu con su propia voz — y cortar ahí sería cortar un pasuk por la mitad.\n\nLa lógica es profundamente característica del Talmud: una regla de decoro litúrgico (dónde se puede saludar) se funda en una metafísica comprimida (Dios ES verdad) vehiculada por una observación gramatical (las palabras vienen juntas). La halajá, la teología y la filología son la misma cosa: el orden de las palabras es el orden de la verdad.\n\nY hay algo más: אֱמֶת funciona como BISAGRA de doble cara. Mirada hacia atrás, sella el shema («vuestro Dios — verdad»); mirada hacia adelante, abre la berajá («verdad y firme...»). Una sola palabra que pertenece a dos oraciones a la vez — por eso la pregunta siguiente será inevitable: ¿y se puede decir dos veces?'
+    },
+    'disputa': {
+      titulo: '¿Se repite emet? · R. Abahu contra Rabba',
+      hebreo: 'חוֹזֵר וְאוֹמֵר אֱמֶת · אֵינוֹ חוֹזֵר וְאוֹמֵר אֱמֶת',
+      traduccion: '«Vuelve y dice emet» · «no vuelve a decir emet»',
+      explicacion: 'La costura genera un problema técnico delicioso. Si אֱמֶת debe quedar pegada a אֱלֹהֵיכֶם — y a la vez אֱמֶת וְיַצִּיב es el arranque de la berajá — ¿cuántas veces se dice la palabra?\n\n  · R. ABAHU beshem R. Yojanan: חוֹזֵר וְאוֹמֵר אֱמֶת — VUELVE y dice emet. Primero cierra el shema: «Ani Hashem Eloheijem — emet». Y luego abre la berajá desde el principio: «Emet veyatziv...». La palabra suena DOS veces: una como sello del shema, otra como apertura de la berajá.\n  · RABBA: אֵינוֹ חוֹזֵר — NO vuelve. Se dice UNA sola vez: «...Eloheijem emet veyatziv...». La palabra única sirve a los dos amos a la vez — sella el shema Y abre la berajá en el mismo aliento.\n\nLa disputa es un examen de la naturaleza de la bisagra. Para R. Abahu, cada unidad litúrgica tiene derecho a su palabra completa: el shema merece su «emet» final y la berajá merece su «emet» inicial — la duplicación es fidelidad a ambas. Para Rabba, la duplicación traiciona precisamente lo que la costura enseña: si el pasuk soldó Dios→verdad en UNA secuencia, repetir la palabra es descoser y volver a coser — la elegancia está en la economía.\n\nNótese la ironía en el reparto de opiniones: R. Abahu, el mismo que transmitió la halajá de NO interrumpir, es el que duplica; Rabba, el que exige un solo emet, va a burlarse en la escena siguiente del que dijo dos.\n\nLa halajá posterior siguió a Rabba: un solo emet, sin repetición — y así rezamos hasta hoy: «...Eloheijem emet — veyatziv venajón...». La palabra bisagra quedó única, compartida, indivisible.'
+    },
+    'escena': {
+      titulo: 'La escena cómica · «a este lo atrapó todo el emet-emet»',
+      hebreo: 'כֹּל ״אֱמֶת אֱמֶת״ תַּפְסֵיהּ לְהַאי',
+      traduccion: '«Todo el emet-emet atrapó a este»',
+      explicacion: 'La disputa abstracta aterriza en una escena de sinagoga. Un hombre baja a rezar ante Rabba (הַהוּא דִּנְחֵית קַמֵּיהּ דְּרַבָּה) — y al llegar a la costura dice: ״אֱמֶת אֱמֶת״ — «emet, emet», dos veces.\n\nRabba lo escucha y suelta la burla: כֹּל ״אֱמֶת אֱמֶת״ תַּפְסֵיהּ לְהַאי — «a este lo atrapó TODO el emet-emet». Como si la verdad-verdad fuera una fiebre que se apoderó del hombre; como si dijera: mírenlo, poseído por el exceso de sinceridad.\n\nLa escena hace tres trabajos a la vez:\n\n  1. FIJA LA HALAJÁ EN CARNE. Rabba sostiene que no se repite emet — y aquí lo vemos aplicando su opinión en vivo, no contra R. Abahu en abstracto sino contra un orante real que duplicó. El sarcasmo es su psak en acción.\n  2. RETRATA UN TIPO HUMANO ETERNO: el devoto que cree que MÁS es más — que si una vez es verdad, dos veces es más verdad. La duplicación devota como exceso teatral. Rabba detecta la pose: la verdad enfática empieza a sonar a lo contrario de la verdad.\n  3. ENSEÑA UNA ESTÉTICA LITÚRGICA. La tefilá tiene una economía exacta: cada palabra en su lugar, ninguna de más. El que agrega — aun agregando «verdad» — desafina. Hasta la verdad, dicha dos veces, suena a mentira.\n\nHay aquí un eco de una sensibilidad más amplia de Jazal: la sospecha ante la efusividad religiosa no regulada (comparar con quien multiplica los elogios de Dios más allá de la fórmula fijada). El énfasis no autorizado no intensifica — infla. Y lo inflado, en el beit midrash de Rabba, se pincha con una carcajada.'
+    },
+    'maarava': {
+      titulo: 'El tzitzit abreviado de maarava · inicio y fin, saltando los flecos',
+      hebreo: 'דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵיהֶם... אֲנִי ה׳ אֱלֹהֵיכֶם אֱמֶת',
+      traduccion: '«Habla a los hijos de Israel y diles... Yo soy Hashem vuestro Dios — verdad»',
+      explicacion: 'La sugyá gira hacia una tradición que Rav Yosef celebra: la costumbre de מַעֲרָבָא — «Occidente», Eretz Yisrael — para el shema de la NOCHE.\n\nEl trasfondo: la tercera parashá del shema (Bamidbar 15:37-41) trata del TZITZIT — y el tzitzit es mitzvá DIURNA («lo veréis»: de día, cuando se ve). De noche, recitar toda la parashá de los flecos es litúrgicamente redundante: la mitzvá no aplica. Pero la parashá termina con la mención de yetziat mitzrayim y con אֲנִי ה׳ אֱלֹהֵיכֶם — que sí son irrenunciables de noche.\n\nLa solución occidental: un COLLAGE. De noche decían solo el inicio y el fin de la parashá:\n\n  · El inicio: דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵיהֶם — «habla a los hijos de Israel y diles»\n  · [salto: todos los versículos de los flecos, el hilo de tejélet, el no explorar tras el corazón y los ojos]\n  · El fin: אֲנִי ה׳ אֱלֹהֵיכֶם אֱמֶת — «Yo soy Hashem vuestro Dios — verdad»\n\nLa abreviación es quirúrgica: conserva EXACTAMENTE lo esencial. Queda el marco del mandato divino de hablar, queda la mención de la salida de Egipto implícita en el cierre, y queda — intacta — LA COSTURA: Eloheijem pegado a emet. Lo que se recorta es solo el contenido diurno (los flecos).\n\nRav Yosef exclama: כַּמָּה מְעַלְּיָא הָא שְׁמַעְתָּא — «¡qué excelente es esta tradición!». Un sabio de Babilonia celebrando el minhag de Eretz Yisrael: la halajá comparada como admiración, no solo como polémica.\n\nLa lección estructural es enorme: la liturgia rabínica no es un bloque monolítico — es un tejido con partes esenciales y partes contextuales, y los sabios de maarava sabían distinguirlas con precisión de sastre. Pero la tijera occidental va a recibir una objeción babilónica inmediata — el nodo rojo.'
+    },
+    'objecion': {
+      titulo: 'La objeción de Abaye · «si empezó, termina»',
+      hebreo: 'לֹא יַתְחִיל · וְאִם הִתְחִיל — גּוֹמֵר',
+      traduccion: '«No debe empezarla — pero si empezó, la termina»',
+      explicacion: 'Abaye objeta contra el collage occidental con una regla que Rav Kahana transmitió en nombre de RAV: לֹא יַתְחִיל, וְאִם הִתְחִיל גּוֹמֵר — de noche, uno NO debe EMPEZAR la parashá de tzitzit; pero si la empezó — la TERMINA completa.\n\nLa regla de Rav tiene su propia lógica de integridad: una parashá de la Torá no se recita a medias. Se puede decidir no entrar en ella (no aplica de noche) — pero una vez adentro, no hay salida por la ventana: se sale por la puerta del final. Empezar y cortar sería tratar al texto bíblico como cantera de frases sueltas.\n\nY aquí muerde la objeción contra maarava: los occidentales DICEN ״וְאָמַרְתָּ אֲלֵיהֶם״ — «y les dirás». ¿Acaso eso no es ya EMPEZAR la parashá? Y si empezaron — por la regla de Rav — deberían estar obligados a TERMINARLA entera, flecos incluidos. El collage occidental parece violar la regla: empieza y no termina.\n\nLa objeción es elegante porque enfrenta dos principios sanos entre sí:\n\n  · La ECONOMÍA litúrgica de maarava: no recitar de noche lo que solo rige de día\n  · La INTEGRIDAD textual de Rav: las parashiyot no se fragmentan\n\n¿Puede la liturgia recortar la Escritura, o la Escritura impone su unidad a la liturgia? La respuesta va a llegar por boca de Rav Papa — y va a consistir, como tantas veces, en redefinir dónde está la frontera: ¿qué cuenta exactamente como «empezar»?'
+    },
+    'rav-papa': {
+      titulo: 'Rav Papa · el comienzo real es «veasú lahem tzitzit»',
+      hebreo: 'קָסָבְרִי בְּמַעֲרָבָא: ״וְעָשׂוּ לָהֶם צִיצִית״ — הַתְחָלָה',
+      traduccion: 'En Occidente sostienen: «y harán tzitzit» — ese es el comienzo',
+      explicacion: 'Rav Papa disuelve la objeción redefiniendo la frontera: en maarava sostienen que la parashá NO empieza donde parece empezar.\n\n״דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵיהֶם״ — «habla a los hijos de Israel y diles» — no es todavía el CONTENIDO de la parashá: es el PREÁMBULO, la fórmula de transmisión con que decenas de parashiyot arrancan. Es Dios instruyendo a Moshé sobre el acto de hablar — no el mensaje mismo.\n\nEl comienzo REAL — sostienen los occidentales — es וְעָשׂוּ לָהֶם צִיצִית: «y HARÁN tzitzit». Ahí empieza la sustancia: el mandato, los flecos, el contenido diurno.\n\nCon esa frontera, el collage occidental queda impecable ante la regla de Rav:\n\n  · Recitar «daber... veamarta aleihem» NO es empezar la parashá — es citar su marco\n  · Como nunca EMPEZARON, nunca quedaron obligados a TERMINAR\n  · Y el salto directo al final («Ani Hashem Eloheijem emet») no fragmenta nada — une dos piezas del marco\n\nLa jugada de Rav Papa es un clásico del método talmúdico: no se rechaza la regla (Rav sigue en pie: si empezó, termina) ni se condena la práctica (maarava sigue en pie: su collage es válido) — se afina la DEFINICIÓN del término en disputa («empezar») hasta que ambas convivan.\n\nHay además una sensibilidad literaria real en la distinción: la Torá misma diferencia entre las fórmulas de encuadre y el cuerpo legislado. Los occidentales leían la parashá con conciencia de su arquitectura interna — el sastre sabe dónde termina el dobladillo y dónde empieza la tela.'
+    },
+    'conclusion': {
+      titulo: 'La conclusión de Abaye · como empezamos, terminamos',
+      hebreo: 'אֲנַן — כֵּיוָן דְּאַתְחֲלִינַן, מִגְמָר נָמֵי גָּמְרִינַן',
+      traduccion: 'Nosotros — puesto que empezamos, también terminamos',
+      explicacion: 'Abaye acepta la respuesta de Rav Papa y extrae de ella la conclusión para BAVEL — y esa conclusión es la halajá que quedó para la práctica.\n\nEl razonamiento: nosotros, en Babilonia, EMPEZAMOS como ellos — nuestro shema nocturno también arranca la tercera sección con «daber el benei Yisrael veamarta aleihem». Pero nosotros no compartimos la definición occidental del comienzo: para nosotros, decir esas palabras YA ES empezar la parashá.\n\nY entonces la regla de Rav se activa con todo su peso: וְאִם הִתְחִיל — גּוֹמֵר. Como empezamos — TERMINAMOS. La parashá entera, flecos incluidos, también de noche: כֵּיוָן דְּאַתְחֲלִינַן — מִגְמָר נָמֵי גָּמְרִינַן.\n\nEl resultado es un mapa de dos costumbres coherentes:\n\n  · MAARAVA: no empieza de verdad (el preámbulo no cuenta) → puede saltar al final → collage breve con la costura intacta\n  · BAVEL: empieza de verdad (el preámbulo cuenta) → debe completar → parashá entera de noche\n\nAmbas obedecen la MISMA regla de integridad textual — difieren solo en la definición de la frontera. Es un ejemplo de manual de cómo el Talmud entiende la divergencia de costumbres: no como error de una de las partes sino como dos definiciones defendibles del mismo término.\n\nLa práctica universal siguió a Bavel: hasta hoy, el shema de arvit incluye la parashá de tzitzit COMPLETA — aunque la mitzvá de los flecos no rija de noche. Cada noche, al recitar los flecos que no vemos, repetimos la decisión de Abaye: como empezamos, terminamos. La integridad del texto venció a la economía de la liturgia.'
+    },
+    'formula-breve': {
+      titulo: 'La fórmula breve nocturna · Jiya bar Rav',
+      hebreo: 'מוֹדִים אֲנַחְנוּ לָךְ... שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם',
+      traduccion: '«Te agradecemos... que nos sacaste de la tierra de Egipto»',
+      explicacion: 'Queda un cabo suelto: la mención NOCTURNA de yetziat mitzrayim. Desde Ben Zoma sabemos que la salida de Egipto se menciona también de noche («todos los días de tu vida» — las noches incluidas). ¿Qué pasa entonces con quien siguió el minhag breve y no llegó a decir ״אֲנִי ה׳ אֱלֹהֵיכֶם״ con su cierre?\n\nJIYA BAR RAV — el hijo de Rav, el mismo a quien Shmuel le regaló la enseñanza de su padre en 12a — transmite la solución: si no dijo «Ani Hashem Eloheijem», NO necesita decir emet veemuná entera. Basta una fórmula mínima:\n\n  מוֹדִים אֲנַחְנוּ לָךְ ה׳ אֱלֹהֵינוּ שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם וּפְדִיתָנוּ מִבֵּית עֲבָדִים וְעָשִׂיתָ לָנוּ נִסִּים וּגְבוּרוֹת עַל הַיָּם וְשַׁרְנוּ לָךְ\n\n  «Te agradecemos, Hashem nuestro Dios, que nos sacaste de la tierra de Egipto y nos redimiste de la casa de esclavos, e hiciste por nosotros milagros y portentos junto al mar, y te cantamos»\n\nLa miniatura contiene TODO el esqueleto de la geulá: salida de Egipto, redención de la esclavitud, milagros del mar, el canto de respuesta. Es emet veemuná destilada a su núcleo narrativo.\n\nLa lección con que cierra la sugyá — y el tema — es una jerarquía nítida entre lo irrenunciable y lo negociable:\n\n  · IRRENUNCIABLE: la memoria de Egipto. Ninguna abreviación, ningún minhag, ninguna hora de la noche exime de mencionar la salida. Es el contenido.\n  · NEGOCIABLE: el envoltorio. ¿La parashá entera o el collage? ¿Emet veemuná completa o la fórmula de Jiya bar Rav? Todo eso admite variantes según el minhag y las circunstancias.\n\nLa sugyá que empezó con la costura más rígida de la liturgia (entre Eloheijem y emet NADIE interrumpe) termina mostrando su flexibilidad más generosa (hasta la berajá entera puede comprimirse en una frase). No es contradicción — es el mismo principio visto de ambos lados: la halajá sabe exactamente QUÉ está cosido con hilo de oro y qué es tela que se puede cortar.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.emetsp-interactivo')
+    : document.querySelector('.emetsp-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#emetsp-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.emetsp-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="emetsp-panel-header">' +
+        '<p class="emetsp-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="emetsp-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="emetsp-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="emetsp-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.emetsp-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.emetsp-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="emetsp-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
