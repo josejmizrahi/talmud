@@ -1,0 +1,337 @@
+<div class="shaul-interactivo">
+<style>
+  .shaul-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .shaul-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .shaul-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .shaul-leyenda .azul    { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .shaul-leyenda .verde   { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .shaul-leyenda .violeta { background: rgba(90,58,138,0.12);  border-color: var(--violeta); }
+  .shaul-leyenda .rojo    { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .shaul-leyenda .dorado  { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .shaul-diagrama svg { width: 100%; height: auto; display: block; }
+  .shaul-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .shaul-nodo:hover rect { stroke-width: 2 !important; }
+  .shaul-nodo:hover circle { stroke-width: 2.5 !important; }
+  .shaul-nodo.activa rect { stroke-width: 2.5 !important; }
+  .shaul-nodo.activa circle { stroke-width: 3 !important; }
+  .shaul-nodo.dim { opacity: 0.32; }
+  .shaul-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .shaul-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .shaul-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .shaul-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .shaul-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .shaul-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .shaul-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="shaul-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch azul"></span>quien no pide por el otro, peca</span>
+  <span><span class="swatch verde"></span>la vergüenza que perdona</span>
+  <span><span class="swatch violeta"></span>la noche de Shaúl</span>
+  <span><span class="swatch rojo"></span>la vergüenza · Nov</span>
+  <span><span class="swatch dorado"></span>el perdón · bat kol</span>
+</div>
+
+<div class="shaul-diagrama">
+<svg viewBox="0 0 720 1100" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 12b: quien no pide por el otro peca · la vergüenza que perdona · Shaúl ante la nigromante · el perdón doble</title>
+
+<defs>
+  <marker id="flecha-sh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-sh-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">La vergüenza de Shaúl</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 12b · Rabba bar Jinnana Sava beshem Rav · dos enseñanzas que convergen en el rey caído</text>
+
+<!-- ============================================================ -->
+<!-- COLUMNA IZQUIERDA · ENSEÑANZA 1                              -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ENSEÑANZA 1 · LA TEFILÁ POR EL OTRO</text>
+
+<g class="shaul-nodo" data-id="ensenanza-1">
+  <rect x="60" y="86" width="290" height="150" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="205" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Quien no pide por el otro, peca</text>
+  <text x="205" y="130" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">כֹּל שֶׁאֶפְשָׁר לוֹ לְבַקֵּשׁ רַחֲמִים</text>
+  <text x="205" y="147" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">עַל חֲבֵירוֹ וְאֵינוֹ מְבַקֵּשׁ — נִקְרָא חוֹטֵא</text>
+  <text x="205" y="167" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«quien puede pedir misericordia por su</text>
+  <text x="205" y="180" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">compañero y no pide — se llama pecador»</text>
+  <text x="205" y="200" text-anchor="middle" font-size="9.5" direction="rtl" fill="#3d2f23">חָלִילָה לִּי מֵחֲטֹא לַה׳ מֵחֲדֹל לְהִתְפַּלֵּל</text>
+  <text x="205" y="218" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Shmuel haNavi · Shmuel I 12:23</text>
+</g>
+
+<line x1="205" y1="236" x2="205" y2="256" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+<text x="60" y="268" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA ESCALADA DE RAVA</text>
+
+<g class="shaul-nodo" data-id="rava-david">
+  <rect x="60" y="278" width="290" height="124" rx="6" fill="rgba(30,58,95,0.05)" stroke="#1e3a5f" stroke-width="1.3"/>
+  <text x="205" y="300" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">Si es talmid jajam · enfermarse por él</text>
+  <text x="205" y="322" text-anchor="middle" font-size="10" direction="rtl" fill="#1e3a5f">צָרִיךְ שֶׁיַּחֲלֶה עַצְמוֹ עָלָיו</text>
+  <text x="205" y="340" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«debe enfermarse él mismo por él»</text>
+  <text x="205" y="360" text-anchor="middle" font-size="9.5" direction="rtl" fill="#3d2f23">וַאֲנִי בַּחֲלוֹתָם לְבוּשִׁי שָׂק</text>
+  <text x="205" y="378" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">David · cilicio y ayuno por sus enemigos</text>
+  <text x="205" y="391" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Tehilim 35:13</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- COLUMNA DERECHA · ENSEÑANZA 2                                -->
+<!-- ============================================================ -->
+<text x="370" y="76" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">ENSEÑANZA 2 · LA VERGÜENZA QUE PERDONA</text>
+
+<g class="shaul-nodo" data-id="ensenanza-2">
+  <rect x="370" y="86" width="290" height="150" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="515" y="108" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Quien se avergüenza — le perdonan todo</text>
+  <text x="515" y="130" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">כָּל הָעוֹשֶׂה דְּבַר עֲבֵירָה וּמִתְבַּיֵּישׁ בּוֹ</text>
+  <text x="515" y="147" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">— מוֹחֲלִין לוֹ עַל כָּל עֲוֹנוֹתָיו</text>
+  <text x="515" y="167" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«quien comete una transgresión y se</text>
+  <text x="515" y="180" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">avergüenza — le perdonan TODOS sus pecados»</text>
+  <text x="515" y="200" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la vergüenza no es castigo del pecado:</text>
+  <text x="515" y="216" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">es su disolvente</text>
+</g>
+
+<line x1="515" y1="236" x2="515" y2="256" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+<text x="370" y="268" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PASUK · YEJEZKEL 16:63</text>
+
+<g class="shaul-nodo" data-id="yejezkel">
+  <rect x="370" y="278" width="290" height="124" rx="6" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="1.3"/>
+  <text x="515" y="300" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#2d6b4e" font-weight="700">Recordar · avergonzarse · ser expiado</text>
+  <text x="515" y="324" text-anchor="middle" font-size="10.5" direction="rtl" fill="#2d6b4e">לְמַעַן תִּזְכְּרִי וָבֹשְׁתְּ... בְּכַפְּרִי לָךְ</text>
+  <text x="515" y="344" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«para que recuerdes y te avergüences...</text>
+  <text x="515" y="357" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">cuando Yo te expíe»</text>
+  <text x="515" y="378" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la secuencia del versículo: la vergüenza</text>
+  <text x="515" y="391" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">precede a la kapará — y la habilita</text>
+</g>
+
+<!-- CONVERGENCIA -->
+<line x1="205" y1="402" x2="205" y2="426" stroke="#3d2f23" stroke-width="1"/>
+<line x1="515" y1="402" x2="515" y2="426" stroke="#3d2f23" stroke-width="1"/>
+<line x1="205" y1="426" x2="515" y2="426" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="426" x2="360" y2="444" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+
+<!-- ============================================================ -->
+<!-- LA ESCENA DE SHAÚL · NODO CENTRAL                            -->
+<!-- ============================================================ -->
+<text x="60" y="458" font-size="9.5" fill="#5a3a8a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA PRUEBA · SHAÚL ANTE LA NIGROMANTE · SHMUEL I 28 · NÚCLEO</text>
+
+<g class="shaul-nodo" data-id="escena-shaul">
+  <rect x="60" y="468" width="600" height="190" rx="6" fill="rgba(90,58,138,0.10)" stroke="#5a3a8a" stroke-width="2.2"/>
+  <!-- luna decorativa: la noche antes de morir -->
+  <circle cx="108" cy="502" r="13" fill="none" stroke="#5a3a8a" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="113" cy="499" r="11" fill="rgba(90,58,138,0.10)" stroke="none"/>
+  <text x="360" y="496" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">La noche antes de morir · el rey invoca a Shmuel por la baalat ov</text>
+  <text x="360" y="522" text-anchor="middle" font-size="12" direction="rtl" fill="#5a3a8a">וַה׳ סָר מֵעָלַי וְלֹא עָנָנִי עוֹד</text>
+  <text x="360" y="544" text-anchor="middle" font-size="12.5" direction="rtl" fill="#5a3a8a">גַּם בְּיַד הַנְּבִיאִים גַּם בַּחֲלֹמוֹת</text>
+  <text x="360" y="566" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Hashem se apartó de mí y ya no me responde — ni por mano de los profetas ni por sueños»</text>
+  <line x1="80" y1="580" x2="640" y2="580" stroke="#5a3a8a" stroke-width="0.5" opacity="0.4"/>
+  <text x="78" y="602" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#5a3a8a">enumera</tspan> · profetas ✓ · sueños ✓ · urim vetumim — SILENCIO</text>
+  <text x="78" y="620" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#5a3a8a">la guemará escucha la omisión</tspan> · el canal que NO nombra es la confesión</text>
+  <text x="360" y="644" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">no menciona los urim vetumim — ¿por qué calla justo ese canal?</text>
+</g>
+
+<line x1="360" y1="658" x2="360" y2="678" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-sh)"/>
+
+<!-- ============================================================ -->
+<!-- LA VERGÜENZA · NOV                                           -->
+<!-- ============================================================ -->
+<text x="60" y="690" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESPUESTA · NOV, LA CIUDAD DE LOS KOHANIM</text>
+
+<g class="shaul-nodo" data-id="verguenza-nov">
+  <rect x="60" y="700" width="600" height="116" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+  <text x="360" y="724" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">La vergüenza del rey</text>
+  <text x="78" y="748" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">el crimen</tspan> · Shaúl había masacrado a Nov, la ciudad de los kohanim</text>
+  <text x="78" y="766" font-size="9.5" fill="#3d2f23"><tspan font-weight="600" fill="#8b1a1a">la omisión</tspan> · le daba vergüenza consultar el instrumento de los sacerdotes que mató</text>
+  <text x="360" y="792" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">y esa vergüenza — según la enseñanza 2 — es exactamente lo que borra los pecados</text>
+</g>
+
+<!-- BIFURCACIÓN AL PERDÓN -->
+<line x1="360" y1="816" x2="360" y2="836" stroke="#b8860b" stroke-width="1.5"/>
+<line x1="205" y1="836" x2="515" y2="836" stroke="#b8860b" stroke-width="1.5"/>
+<line x1="205" y1="836" x2="205" y2="856" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-sh-gold)"/>
+<line x1="515" y1="836" x2="515" y2="856" stroke="#b8860b" stroke-width="1.5" marker-end="url(#flecha-sh-gold)"/>
+
+<text x="60" y="870" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PERDÓN DOBLE · ¿CÓMO SABEMOS QUE FUE PERDONADO?</text>
+
+<!-- ============================================================ -->
+<!-- PERDÓN 1 · R. YOJANAN · BIMJITZATI                           -->
+<!-- ============================================================ -->
+<g class="shaul-nodo" data-id="perdon-mejitza">
+  <rect x="60" y="880" width="290" height="180" rx="6" fill="rgba(184,134,11,0.13)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="205" y="904" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">R. Yojanan · «conmigo, en mi recinto»</text>
+  <text x="205" y="928" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">מָחָר אַתָּה וּבָנֶיךָ עִמִּי</text>
+  <text x="205" y="948" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«mañana tú y tus hijos — CONMIGO»</text>
+  <text x="205" y="974" text-anchor="middle" font-size="11" direction="rtl" fill="#b8860b">עִמִּי — בִּמְחִיצָתִי</text>
+  <text x="205" y="994" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">imí = en mi mejitzá, mi recinto celestial</text>
+  <text x="205" y="1016" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Shmuel mismo le anuncia que morirá</text>
+  <text x="205" y="1029" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">perdonado — junto al profeta que lo ungió</text>
+  <text x="205" y="1046" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">Shmuel I 28:19</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- PERDÓN 2 · RABANAN · BAT KOL                                 -->
+<!-- ============================================================ -->
+<g class="shaul-nodo" data-id="perdon-batkol">
+  <rect x="370" y="880" width="290" height="180" rx="6" fill="rgba(184,134,11,0.13)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="515" y="904" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#b8860b" font-weight="700">Los rabanan · la bat kol en el versículo</text>
+  <text x="515" y="928" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">בְּגִבְעַת שָׁאוּל בְּחִיר ה׳</text>
+  <text x="515" y="948" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«en Guivat Shaúl, EL ELEGIDO de Hashem»</text>
+  <text x="515" y="968" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">¿los guivonim — sus enemigos — llamándolo</text>
+  <text x="515" y="981" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«elegido de Hashem»? (Shmuel II 21:6)</text>
+  <text x="515" y="1007" text-anchor="middle" font-size="10.5" direction="rtl" fill="#b8860b">יָצְתָה בַּת קוֹל וְאָמְרָה: בְּחִיר ה׳</text>
+  <text x="515" y="1027" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">salió una bat kol y dijo: «elegido de Hashem»</text>
+  <text x="515" y="1046" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">una voz celestial firmó el perdón dentro del pasuk</text>
+</g>
+
+<text x="360" y="1086" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el midrash más compasivo del perek: el rey caído muere perdonado — porque se avergonzó</text>
+
+</svg>
+</div>
+
+<div class="shaul-panel" id="shaul-panel">
+  <p class="shaul-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'ensenanza-1': {
+      titulo: 'Quien no pide por el otro, peca',
+      hebreo: 'כֹּל שֶׁאֶפְשָׁר לוֹ לְבַקֵּשׁ רַחֲמִים עַל חֲבֵירוֹ וְאֵינוֹ מְבַקֵּשׁ — נִקְרָא חוֹטֵא',
+      traduccion: '«Todo aquel que puede pedir misericordia por su compañero y no pide — se llama pecador»',
+      explicacion: 'Tercera enseñanza de la cadena de Rabba bar Jinnana Sava en nombre de Rav. Después de las fórmulas litúrgicas (emet veyatziv, haMelej hakadosh) llega una enseñanza MORAL — y es de las más exigentes del perek.\n\nLa formulación es jurídica, no exhortativa. NO dice «es bueno rezar por el otro» ni «quien reza por su compañero será recompensado». Dice: quien PUEDE pedir y NO pide — נִקְרָא חוֹטֵא, «se llama pecador». La omisión tiene NOMBRE HALÁJICO.\n\nEsto invierte la intuición común. Solemos pensar la tefilá por el otro como generosidad opcional — un extra piadoso, encomiable pero no obligatorio. Rav enseña lo contrario: si está en tu poder pedir misericordia por tu compañero, esa capacidad te OBLIGA. No usarla no es neutralidad — es pecado.\n\nLa prueba es devastadora porque viene de Shmuel haNavi en persona. En su discurso de despedida, cuando el pueblo le pide que rece por ellos (después de haberlo desplazado pidiendo un rey), Shmuel responde: חָלִילָה לִּי מֵחֲטֹא לַה׳ מֵחֲדֹל לְהִתְפַּלֵּל בַּעַדְכֶם — «lejos de mí PECAR contra Hashem cesando de rezar por ustedes» (Shmuel I 12:23).\n\nNótese la elección de palabras del profeta: dejar de rezar por el pueblo — el pueblo que acababa de rechazarlo — sería para él מֵחֲטֹא, un PECADO. Shmuel no dice «sería descortés» o «sería mezquino». Usa la palabra exacta que Rav necesita: la omisión de tefilá por el otro es jet.\n\nY el detalle biográfico importa para lo que viene: el que enseña esto con su propia boca es SHMUEL — el mismo profeta que aparecerá en el nodo central de este diagrama, invocado desde la muerte por el rey al que ungió y al que anunciará el perdón. La sugyá elige a su testigo con precisión.'
+    },
+    'rava-david': {
+      titulo: 'La escalada de Rava · enfermarse por el talmid jajam',
+      hebreo: 'אִם תַּלְמִיד חָכָם הוּא — צָרִיךְ שֶׁיַּחֲלֶה עַצְמוֹ עָלָיו',
+      traduccion: 'Si es un talmid jajam — debe enfermarse él mismo por él',
+      explicacion: 'Rava sube la vara de la enseñanza de Rav. Si el que necesita misericordia es un TALMID JAJAM — un sabio de Torá — entonces no basta con pedir: צָרִיךְ שֶׁיַּחֲלֶה עַצְמוֹ עָלָיו, «debe ENFERMARSE él mismo por él».\n\nLa palabra es física, no metafórica. No dice «debe rezar con más kavaná» ni «debe rezar más tiempo». Dice que el cuerpo del que reza debe REGISTRAR el sufrimiento del otro — la tefilá por un sabio enfermo debe costar salud propia.\n\nLa prueba es David: וַאֲנִי בַּחֲלוֹתָם לְבוּשִׁי שָׂק, עִנֵּיתִי בַצּוֹם נַפְשִׁי — «y yo, cuando ellos enfermaban, mi vestido era cilicio; afligía con ayuno mi alma» (Tehilim 35:13).\n\nEl contexto del salmo hace la prueba aún más fuerte: los enfermos por los que David viste cilicio y ayuna son SUS ENEMIGOS — los mismos que en el versículo siguiente se alegrarán de su caída. David no se enferma por sus aliados: se enferma por quienes lo persiguen. Si eso hizo David por sus perseguidores, cuánto más se exige por un talmid jajam.\n\n¿Por qué la escalada aplica precisamente al talmid jajam? Porque su enfermedad no es una desgracia privada: la Torá que porta enferma con él. La comunidad entera pierde mientras él sufre. La respuesta proporcional a una pérdida pública es un duelo que se inscribe en el cuerpo.\n\nLa estructura de las dos exigencias dibuja una escalera de solidaridad: por cualquier compañero — pedir es obligatorio (omitirlo es pecado); por un talmid jajam — pedir no alcanza (hay que enfermarse). La tefilá por el otro deja de ser un gesto y se vuelve una escala de responsabilidad medible.'
+    },
+    'ensenanza-2': {
+      titulo: 'La vergüenza que perdona',
+      hebreo: 'כָּל הָעוֹשֶׂה דְּבַר עֲבֵירָה וּמִתְבַּיֵּישׁ בּוֹ — מוֹחֲלִין לוֹ עַל כָּל עֲוֹנוֹתָיו',
+      traduccion: '«Todo aquel que comete una transgresión y se avergüenza de ella — le perdonan TODOS sus pecados»',
+      explicacion: 'Cuarta y última enseñanza de la cadena de Rabba bar Jinnana Sava beshem Rav — y una de las declaraciones más generosas de todo el perek.\n\nLa aritmética es desproporcionada a propósito: quien comete UNA transgresión (דְּבַר עֲבֵירָה, singular) y se avergüenza DE ELLA — le perdonan עַל כָּל עֲוֹנוֹתָיו, TODOS sus pecados, en plural. Una sola vergüenza genuina borra el expediente entero.\n\n¿Cómo puede una emoción valer tanto? Porque la vergüenza no es un sentimiento cualquiera — es la prueba de que el pecador NO se identifica con su pecado. El que se avergüenza está diciendo, sin palabras: eso que hice no es lo que soy; no puedo mirarlo de frente. La distancia entre el yo y el acto — eso es exactamente lo que la teshuvá busca producir con sus etapas formales (reconocimiento, confesión, abandono). La vergüenza lo produce de golpe, sin procedimiento.\n\nPor eso la vergüenza no es CASTIGO del pecado — es su DISOLVENTE. No es el precio que se paga por haber pecado: es el solvente que deshace el pecado mismo. El perek viene construyendo esta categoría (la vergüenza como bien halájico) y aquí la lleva al máximo.\n\nObsérvese también la dirección del verbo: מוֹחֲלִין לוֹ — «LE PERDONAN», en plural impersonal, desde el Cielo. El avergonzado no se perdona a sí mismo ni gestiona su perdón: la vergüenza sube y el perdón baja. El único trabajo del pecador es no anestesiarse — dejar que la transgresión le duela en la cara.\n\nLa enseñanza necesita una prueba bíblica (el nodo siguiente: Yejezkel 16:63) y después una prueba DRAMÁTICA — un caso individual donde la vergüenza haya sido contada como expiación. Ese caso será Shaúl.'
+    },
+    'yejezkel': {
+      titulo: 'El pasuk · recordar, avergonzarse, ser expiado',
+      hebreo: 'לְמַעַן תִּזְכְּרִי וָבֹשְׁתְּ וְלֹא יִהְיֶה לָּךְ עוֹד פִּתְחוֹן פֶּה מִפְּנֵי כְּלִמָּתֵךְ — בְּכַפְּרִי לָךְ',
+      traduccion: '«Para que recuerdes y te avergüences... cuando Yo te expíe» (Yejezkel 16:63)',
+      explicacion: 'La prueba de la enseñanza viene de Yejezkel 16 — el capítulo más duro del profeta, la alegoría de Yerushalaim como mujer infiel. Después de decenas de versículos de acusación, el capítulo termina en reconciliación, y el último versículo encadena tres momentos: לְמַעַן תִּזְכְּרִי — «para que RECUERDES»; וָבֹשְׁתְּ — «y te AVERGÜENCES»; בְּכַפְּרִי לָךְ — «cuando Yo te EXPÍE».\n\nLa lectura de la guemará se apoya en la secuencia: la vergüenza aparece DENTRO del versículo de la expiación. No dice «te avergonzarás y ADEMÁS te expiaré», como dos hechos paralelos — la vergüenza es la condición en la que la kapará ocurre. Recordar el pecado, avergonzarse de él, y en ese estado — ser expiado.\n\nHay un detalle notable: la vergüenza del versículo llega DESPUÉS del perdón anunciado, no antes. Cuando HKBH restaure a Yerushalaim, ENTONCES ella recordará y se avergonzará. La vergüenza más honda no es la del acusado que teme el castigo — es la del perdonado que recibe un bien que sabe inmerecido. La bondad recibida quema más que el reproche.\n\nPero esta prueba tiene un límite, y la sugyá lo sabe: Yejezkel habla de la COMUNIDAD — Yerushalaim entera, el pueblo como colectivo. Y a la comunidad se la perdona con más facilidad: el mérito de muchos se agrega, la alianza colectiva es indestructible.\n\n¿Vale la ecuación vergüenza = perdón también para un INDIVIDUO — un hombre solo, con nombre y expediente propio? Para eso la guemará necesita otro caso. Y elige el más extremo disponible: no un tzadik con un desliz, sino el rey caído en su peor noche — Shaúl ante la nigromante.'
+    },
+    'escena-shaul': {
+      titulo: 'Shaúl ante la nigromante · la omisión que habla',
+      hebreo: 'וַה׳ סָר מֵעָלַי וְלֹא עָנָנִי עוֹד, גַּם בְּיַד הַנְּבִיאִים גַּם בַּחֲלֹמוֹת',
+      traduccion: '«Hashem se apartó de mí y ya no me responde — ni por mano de los profetas ni por sueños» (Shmuel I 28:15)',
+      explicacion: 'La escena más oscura del primer libro de Shmuel. La noche antes de la batalla de Guilboa — la noche antes de morir — Shaúl está aterrado ante el ejército filisteo. Consulta a HKBH y no recibe respuesta por ningún canal. Desesperado, hace lo que él mismo había prohibido bajo pena de muerte: busca una BAALAT OV, una nigromante, y le pide que suba a Shmuel de entre los muertos.\n\nCuando el profeta muerto se alza y pregunta por qué lo perturban, Shaúl explica su desesperación: וַה׳ סָר מֵעָלַי וְלֹא עָנָנִי עוֹד — «Hashem se apartó de mí y ya no me responde» — גַּם בְּיַד הַנְּבִיאִים גַּם בַּחֲלֹמוֹת — «ni por mano de los PROFETAS ni por SUEÑOS».\n\nY aquí la guemará escucha lo que el versículo NO dice. En el relato bíblico (28:6), los canales que Shaúl consultó fueron TRES: sueños, URIM y profetas. Pero en su confesión ante Shmuel, el rey enumera solo dos: profetas y sueños. Los urim vetumim — el oráculo del pectoral del kohén gadol — desaparecen de la lista.\n\nLa omisión no es descuido: es CONFESIÓN. En el momento más desesperado de su vida, hablando con un muerto, sin nada que perder — hay un canal que Shaúl no se atreve a nombrar. El silencio es la grieta por donde la guemará ve el interior del rey.\n\n¿Por qué calla justo ese canal? La respuesta está en el nodo siguiente — y es la razón por la que este midrash, y no otro, prueba la enseñanza de la vergüenza. La prueba no viene de la comunidad (que se perdona fácil, como Yerushalaim en Yejezkel) sino de un INDIVIDUO — y no de un individuo cualquiera, sino del rey rechazado, en la escena de su transgresión más flagrante. Si la vergüenza perdona AHÍ, perdona en cualquier parte.'
+    },
+    'verguenza-nov': {
+      titulo: 'La vergüenza del rey · Nov, la ciudad de los kohanim',
+      hebreo: 'מִפְּנֵי שֶׁהָרַג נוֹב עִיר הַכֹּהֲנִים',
+      traduccion: 'Porque había matado a Nov, la ciudad de los kohanim',
+      explicacion: '¿Por qué Shaúl no menciona los urim vetumim? La guemará responde con el episodio más negro de su reinado: Nov.\n\nCuando David huía de Shaúl, el kohén Ajimelej le dio pan y la espada de Goliat en la ciudad sacerdotal de Nov — sin saber que David era fugitivo. Cuando Shaúl se enteró, ordenó la masacre: ochenta y cinco kohanim portadores del efod, y la ciudad entera pasada a espada (Shmuel I 22). Fue la orden que ningún siervo del rey quiso ejecutar — solo Doeg el edomita la cumplió.\n\nLos urim vetumim se consultan a través del pectoral del KOHÉN GADOL. Es el canal sacerdotal por excelencia — el oráculo vive en el pecho de los kohanim. Y Shaúl había EXTERMINADO a los kohanim.\n\nPor eso el canal no aparece en su boca: le daba VERGÜENZA consultar el instrumento de los sacerdotes que mató. ¿Con qué cara pregunta por los urim quien masacró a sus portadores? El rey no puede pronunciar la palabra sin escuchar, dentro de ella, su propio crimen.\n\nObsérvese qué clase de vergüenza es esta. Nadie se la reprocha en la escena — ni la nigromante ni Shmuel mencionan Nov. Es vergüenza SIN TESTIGOS, en plena noche, ante un muerto. Vergüenza pura, sin cálculo social, sin gestión de imagen. El pecado le pesa por sí mismo.\n\nY aquí las dos enseñanzas del diagrama se tocan: según la segunda enseñanza de Rav, quien comete una transgresión y se avergüenza — le perdonan TODOS sus pecados. Shaúl cometió la transgresión más grave de su reinado, y su vergüenza quedó grabada en la sintaxis de un versículo: en la lista donde falta una palabra.\n\n¿Y cómo sabemos que esa vergüenza le fue CONTADA en el Cielo? Los dos nodos dorados responden — por dos caminos independientes.'
+    },
+    'perdon-mejitza': {
+      titulo: 'R. Yojanan · «conmigo» = en mi recinto celestial',
+      hebreo: 'מָחָר אַתָּה וּבָנֶיךָ עִמִּי — עִמִּי: בִּמְחִיצָתִי',
+      traduccion: '«Mañana tú y tus hijos — conmigo»; «conmigo»: en mi mejitzá (Shmuel I 28:19)',
+      explicacion: 'La primera prueba del perdón está en la propia escena de la nigromante. Shmuel, antes de volver a su descanso, le anuncia a Shaúl su destino: מָחָר אַתָּה וּבָנֶיךָ עִמִּי — «mañana tú y tus hijos, CONMIGO».\n\nEn la superficie es solo el anuncio de la muerte: mañana caerás en Guilboa y estarás donde estoy yo — entre los muertos. Pero R. Yojanan escucha la palabra עִמִּי con precisión: no dice «muertos», no dice «en la tumba». Dice CONMIGO. Y «conmigo», en boca de Shmuel, significa בִּמְחִיצָתִי — «en MI MEJITZÁ», en mi propio recinto del mundo venidero.\n\nLa mejitzá es la división que separa los recintos celestiales: cada tzadik tiene la suya, según su nivel. La mejitzá de SHMUEL — el profeta comparado con Moshé y Aharón, el juez incorruptible — es de las más altas del Cielo.\n\nMedido contra la sentencia de la mañana siguiente, el anuncio es asombroso. Shaúl muere en desgracia visible: derrotado, suicidado sobre su espada, decapitado por los filisteos. Y esa misma noche se le anuncia que amanecerá EN EL RECINTO DE SHMUEL — perdonado, junto al profeta que lo ungió rey y que anunció su rechazo. El círculo se cierra donde empezó: Shmuel lo ungió, Shmuel lo destituyó, Shmuel lo recibe.\n\n¿Qué borró la distancia entre la desgracia pública y el recinto más alto? La vergüenza. La palabra que Shaúl no pudo pronunciar — urim — le fue contada como expiación. El perdón viaja DENTRO del anuncio de muerte: la frase más terrible que puede oír un hombre («mañana mueres, y tus hijos contigo») lleva escondida la absolución más completa.\n\nY nótese quién la pronuncia: el mismo Shmuel que en la enseñanza 1 de este diagrama enseñó que dejar de rezar por el otro es pecado. El profeta que nunca dejó de rezar por Shaúl es el que le abre su propia mejitzá.'
+    },
+    'perdon-batkol': {
+      titulo: 'Los rabanan · la bat kol dentro del versículo',
+      hebreo: 'בְּגִבְעַת שָׁאוּל בְּחִיר ה׳ — יָצְתָה בַּת קוֹל וְאָמְרָה: בְּחִיר ה׳',
+      traduccion: '«En Guivat Shaúl, el elegido de Hashem» — salió una bat kol y dijo: «elegido de Hashem» (Shmuel II 21:6)',
+      explicacion: 'Los rabanan aprenden el perdón de Shaúl de otro lugar — un versículo posterior a su muerte, con una anomalía imposible.\n\nEl contexto: años después, en tiempos de David, los GUIVONIM exigen justicia por lo que Shaúl les hizo. Piden que se les entreguen siete descendientes de Shaúl, y dicen dónde los ejecutarán: בְּגִבְעַת שָׁאוּל בְּחִיר ה׳ — «en Guivat Shaúl, EL ELEGIDO DE HASHEM» (Shmuel II 21:6).\n\nLa anomalía salta a la vista: ¿los guivonim — los enemigos de Shaúl, los que reclaman venganza contra su casa, los que están pidiendo colgar a sus hijos — llamándolo «bejir Hashem», ELEGIDO de Hashem? Nadie honra así al hombre cuya sangre reclama. El título no puede estar en boca de ellos.\n\nLa respuesta de los rabanan: no lo dijeron los guivonim. יָצְתָה בַּת קוֹל וְאָמְרָה: בְּחִיר ה׳ — «salió una BAT KOL y dijo: elegido de Hashem». La voz celestial interrumpió el discurso de los enemigos e insertó, dentro del versículo mismo, la calificación divina de Shaúl. El texto registra dos voces: la de los guivonim pidiendo venganza, y la del Cielo firmando el perdón.\n\nLa elección de la palabra es exacta: בְּחִיר — «elegido» — es lo que Shaúl había DEJADO de ser. Fue elegido rey y luego rechazado: «me pesa haberlo hecho rey» (Shmuel I 15:11). Que la bat kol lo llame «elegido de Hashem» DESPUÉS de su muerte significa que el rechazo fue cancelado — la vergüenza restauró la elección.\n\nLas dos pruebas del perdón se complementan: la de R. Yojanan es PRIVADA (dicha a Shaúl solo, la noche antes de morir, por boca de Shmuel); la de los rabanan es PÚBLICA (inscrita en el texto eterno, por voz celestial, ante las generaciones). El Cielo perdonó a Shaúl dos veces: una al oído, otra por escrito.\n\nEs el midrash más compasivo del perek: el rey caído — el que consultó a la nigromante, el que masacró Nov — muere perdonado y restaurado. No por sus victorias ni por sus méritos: por una palabra que no pudo pronunciar de vergüenza.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.shaul-interactivo')
+    : document.querySelector('.shaul-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#shaul-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.shaul-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="shaul-panel-header">' +
+        '<p class="shaul-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="shaul-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="shaul-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="shaul-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.shaul-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.shaul-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="shaul-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
