@@ -1,0 +1,401 @@
+<div class="balak-interactivo">
+<style>
+  .balak-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .balak-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .balak-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .balak-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .balak-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .balak-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .balak-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .balak-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .balak-diagrama svg { width: 100%; height: auto; display: block; }
+  .balak-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .balak-nodo:hover rect { stroke-width: 2 !important; }
+  .balak-nodo:hover circle { stroke-width: 2.5 !important; }
+  .balak-nodo.activa rect { stroke-width: 2.5 !important; }
+  .balak-nodo.activa circle { stroke-width: 3 !important; }
+  .balak-nodo.dim { opacity: 0.32; }
+  .balak-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .balak-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .balak-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .balak-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .balak-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .balak-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .balak-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="balak-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch rojo"></span>lo excluido · Balak</span>
+  <span><span class="swatch azul"></span>los pesukim</span>
+  <span><span class="swatch sepia"></span>la regla · el criterio</span>
+  <span><span class="swatch dorado"></span>lo incluido · tzitzit</span>
+  <span><span class="swatch verde"></span>las cinco cosas</span>
+</div>
+
+<div class="balak-diagrama">
+<svg viewBox="0 0 720 1140" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 12b: el canon del shema · Balak, el león que casi entra · las cinco cosas de parashat tzitzit</title>
+
+<defs>
+  <marker id="flecha-bk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-bk-rojo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8b1a1a"/>
+  </marker>
+  <marker id="flecha-bk-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El canon del shema · qué entra y qué queda fuera</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 12b · el león que casi entra · las cinco cosas de la tercera parashá</text>
+
+<!-- ============================================================ -->
+<!-- MITAD 1 · BALAK · EL LEÓN QUE CASI ENTRA                     -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MITAD 1 · BALAK · EL LEÓN QUE CASI ENTRA · 12B</text>
+
+<!-- La propuesta -->
+<g class="balak-nodo" data-id="bikshu">
+  <rect x="60" y="86" width="600" height="94" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.8"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">בִּקְּשׁוּ לִקְבּוֹעַ פָּרָשַׁת בָּלָק בִּקְרִיאַת שְׁמַע</text>
+  <text x="360" y="134" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Quisieron fijar la parashá de Balak en la recitación del shema»</text>
+  <text x="360" y="154" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">R. Abahu ben Zutarti en nombre de R. Yehuda bar Zvida · el canon estuvo ABIERTO</text>
+  <text x="360" y="170" text-anchor="middle" font-size="9" fill="#8b1a1a" font-style="italic">¿por qué las bendiciones de Bilam junto al shema? — dos hipótesis ↓</text>
+</g>
+
+<line x1="205" y1="180" x2="205" y2="200" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-bk-rojo)"/>
+<line x1="515" y1="180" x2="515" y2="200" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-bk)"/>
+
+<!-- Hipótesis descartada -->
+<g class="balak-nodo" data-id="no-yetziat">
+  <rect x="60" y="204" width="290" height="132" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.3"/>
+  <text x="205" y="226" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="700">NO por la salida de Egipto</text>
+  <text x="205" y="248" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">אֵל מוֹצִיאָם מִמִּצְרַיִם</text>
+  <text x="205" y="266" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«Dios que los saca de Egipto»</text>
+  <text x="205" y="288" text-anchor="middle" font-size="9.5" fill="#3d2f23">si fuera por eso, hay parashiyot</text>
+  <text x="205" y="304" text-anchor="middle" font-size="9.5" fill="#3d2f23">MÁS CORTAS que la mencionan:</text>
+  <text x="205" y="322" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la usura (ribit) · los pesos (mishkalot)</text>
+</g>
+
+<!-- El pasuk del león -->
+<g class="balak-nodo" data-id="pasuk-leon">
+  <rect x="370" y="204" width="290" height="132" rx="6" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.6"/>
+  <text x="515" y="226" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e3a5f" font-weight="700">SÍ por el pasuk del león</text>
+  <text x="515" y="250" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">כָּרַע שָׁכַב כַּאֲרִי וּכְלָבִיא</text>
+  <text x="515" y="270" text-anchor="middle" font-size="11" direction="rtl" fill="#1e3a5f">מִי יְקִימֶנּוּ</text>
+  <text x="515" y="290" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«se agacha, se acuesta como león… ¿quién lo levantará?»</text>
+  <text x="515" y="308" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">R. Yosei bar Avin · acostarse y levantarse —</text>
+  <text x="515" y="324" text-anchor="middle" font-size="9.5" direction="rtl" fill="#b8860b">eco de וּבְשָׁכְבְּךָ וּבְקוּמֶךָ</text>
+</g>
+
+<!-- Convergencia hacia la regla -->
+<line x1="205" y1="336" x2="205" y2="354" stroke="#3d2f23" stroke-width="1"/>
+<line x1="515" y1="336" x2="515" y2="354" stroke="#3d2f23" stroke-width="1"/>
+<line x1="205" y1="354" x2="515" y2="354" stroke="#3d2f23" stroke-width="1"/>
+<line x1="360" y1="354" x2="360" y2="370" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="386" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">¿Y DECIR SOLO ESE VERSO? · LA REGLA DE MOSHÉ</text>
+
+<!-- La regla de Moshé -->
+<g class="balak-nodo" data-id="regla-moshe">
+  <rect x="60" y="396" width="600" height="94" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.6"/>
+  <text x="360" y="422" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">כֹּל פָּרָשָׁה דְּפַסְקַהּ מֹשֶׁה רַבֵּינוּ — פָּסְקִינַן</text>
+  <text x="360" y="444" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">דְּלָא פַּסְקַהּ מֹשֶׁה רַבֵּינוּ — לָא פָּסְקִינַן</text>
+  <text x="360" y="464" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Toda parashá que Moshé Rabeinu cortó — cortamos; la que no cortó — no cortamos»</text>
+  <text x="360" y="480" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el verso solo es INEXTRAÍBLE · o la parashá entera, o nada</text>
+</g>
+
+<line x1="360" y1="490" x2="360" y2="510" stroke="#8b1a1a" stroke-width="1.4" marker-end="url(#flecha-bk-rojo)"/>
+
+<!-- Veredicto -->
+<g class="balak-nodo" data-id="veredicto">
+  <rect x="60" y="514" width="600" height="88" rx="6" fill="rgba(139,26,26,0.09)" stroke="#8b1a1a" stroke-width="1.8" stroke-dasharray="6,3"/>
+  <text x="360" y="540" text-anchor="middle" font-size="12.5" direction="rtl" fill="#8b1a1a">וּמִפְּנֵי מָה לֹא קְבָעוּהָ — מִשּׁוּם טוֹרַח צִבּוּר</text>
+  <text x="360" y="562" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¿Y por qué no la fijaron? — Por la fatiga de la comunidad»</text>
+  <text x="360" y="582" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">BALAK QUEDA FUERA · la comodidad del tzibur es un criterio halájico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MITAD 2 · TZITZIT · LAS CINCO COSAS                          -->
+<!-- ============================================================ -->
+<line x1="360" y1="602" x2="360" y2="622" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-bk-gold)"/>
+
+<text x="60" y="638" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MITAD 2 · TZITZIT · POR QUÉ SÍ · R. YEHUDA BAR JAVIVA · LAS CINCO COSAS</text>
+
+<!-- La pregunta inversa -->
+<g class="balak-nodo" data-id="pregunta-tzitzit">
+  <rect x="60" y="648" width="600" height="82" rx="6" fill="rgba(184,134,11,0.12)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="674" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">פָּרָשַׁת צִיצִית מִפְּנֵי מָה קְבָעוּהָ?</text>
+  <text x="360" y="696" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«¿Y la parashá de tzitzit, por qué SÍ la fijaron?»</text>
+  <text x="360" y="716" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">R. Yehuda bar Javiva: porque contiene CINCO COSAS ↓</text>
+</g>
+
+<!-- El talit esquemático -->
+<line x1="360" y1="730" x2="360" y2="746" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-bk-gold)"/>
+<g>
+  <rect x="60" y="750" width="600" height="60" rx="4" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.5"/>
+  <line x1="60" y1="764" x2="660" y2="764" stroke="#1e3a5f" stroke-width="4" opacity="0.55"/>
+  <line x1="60" y1="774" x2="660" y2="774" stroke="#1e3a5f" stroke-width="2" opacity="0.4"/>
+  <line x1="60" y1="792" x2="660" y2="792" stroke="#1e3a5f" stroke-width="2" opacity="0.4"/>
+  <text x="360" y="785" text-anchor="middle" font-size="10.5" direction="rtl" fill="#6b4423">וְעָשׂוּ לָהֶם צִיצִית עַל כַּנְפֵי בִגְדֵיהֶם</text>
+</g>
+
+<!-- Los cinco flecos -->
+<line x1="118" y1="810" x2="118" y2="826" stroke="#b8860b" stroke-width="1.2"/>
+<circle cx="118" cy="828" r="3" fill="#b8860b"/>
+<line x1="240" y1="810" x2="240" y2="826" stroke="#b8860b" stroke-width="1.2"/>
+<circle cx="240" cy="828" r="3" fill="#b8860b"/>
+<line x1="362" y1="810" x2="362" y2="826" stroke="#b8860b" stroke-width="1.2"/>
+<circle cx="362" cy="828" r="3" fill="#b8860b"/>
+<line x1="484" y1="810" x2="484" y2="826" stroke="#b8860b" stroke-width="1.2"/>
+<circle cx="484" cy="828" r="3" fill="#b8860b"/>
+<line x1="606" y1="810" x2="606" y2="826" stroke="#b8860b" stroke-width="1.2"/>
+<circle cx="606" cy="828" r="3" fill="#b8860b"/>
+
+<!-- Fleco 1 -->
+<g class="balak-nodo" data-id="cosa-1">
+  <rect x="62" y="834" width="112" height="128" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="118" y="856" text-anchor="middle" font-size="13" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">1</text>
+  <text x="118" y="876" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">la mitzvá</text>
+  <text x="118" y="890" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">de tzitzit</text>
+  <text x="118" y="912" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">וְעָשׂוּ לָהֶם</text>
+  <text x="118" y="927" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">צִיצִית</text>
+  <text x="118" y="948" text-anchor="middle" font-size="7.5" fill="#6b4423" font-style="italic">el precepto mismo</text>
+</g>
+
+<!-- Fleco 2 -->
+<g class="balak-nodo" data-id="cosa-2">
+  <rect x="184" y="834" width="112" height="128" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="240" y="856" text-anchor="middle" font-size="13" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">2</text>
+  <text x="240" y="876" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">yetziat</text>
+  <text x="240" y="890" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">mitzrayim</text>
+  <text x="240" y="912" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">אֲשֶׁר הוֹצֵאתִי</text>
+  <text x="240" y="927" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">אֶתְכֶם</text>
+  <text x="240" y="948" text-anchor="middle" font-size="7.5" fill="#b8860b" font-style="italic">la razón central</text>
+</g>
+
+<!-- Fleco 3 -->
+<g class="balak-nodo" data-id="cosa-3">
+  <rect x="306" y="834" width="112" height="128" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="362" y="856" text-anchor="middle" font-size="13" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">3</text>
+  <text x="362" y="876" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">el yugo de</text>
+  <text x="362" y="890" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">las mitzvot</text>
+  <text x="362" y="912" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">וּזְכַרְתֶּם אֶת</text>
+  <text x="362" y="927" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">כָּל מִצְוֹת ה׳</text>
+  <text x="362" y="948" text-anchor="middle" font-size="7.5" fill="#6b4423" font-style="italic">recordar TODAS</text>
+</g>
+
+<!-- Fleco 4 -->
+<g class="balak-nodo" data-id="cosa-4">
+  <rect x="428" y="834" width="112" height="128" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="484" y="856" text-anchor="middle" font-size="13" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">4</text>
+  <text x="484" y="876" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">contra</text>
+  <text x="484" y="890" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">la herejía</text>
+  <text x="484" y="912" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">אַחֲרֵי לְבַבְכֶם</text>
+  <text x="484" y="927" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">זוֹ מִינוּת</text>
+  <text x="484" y="948" text-anchor="middle" font-size="7.5" fill="#6b4423" font-style="italic">el corazón · Tehilim 14:1</text>
+</g>
+
+<!-- Fleco 5 -->
+<g class="balak-nodo" data-id="cosa-5">
+  <rect x="550" y="834" width="112" height="128" rx="5" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="606" y="856" text-anchor="middle" font-size="13" fill="#2d6b4e" font-weight="700" font-family="'Cormorant Garamond', serif">5</text>
+  <text x="606" y="876" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">contra</text>
+  <text x="606" y="890" text-anchor="middle" font-size="9.5" fill="#1a1410" font-weight="600">el hirhur</text>
+  <text x="606" y="912" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">אַחֲרֵי עֵינֵיכֶם</text>
+  <text x="606" y="927" text-anchor="middle" font-size="9" direction="rtl" fill="#2d6b4e">אַתֶּם זוֹנִים</text>
+  <text x="606" y="948" text-anchor="middle" font-size="7.5" fill="#6b4423" font-style="italic">los ojos · Shimshon</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MORALEJA · EL CRITERIO DEL CANON                             -->
+<!-- ============================================================ -->
+<line x1="362" y1="962" x2="362" y2="982" stroke="#3d2f23" stroke-width="1" marker-end="url(#flecha-bk)"/>
+
+<text x="60" y="998" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MORALEJA · EL CRITERIO EDITORIAL DE LA LITURGIA</text>
+
+<g class="balak-nodo" data-id="moraleja">
+  <rect x="60" y="1008" width="600" height="94" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="1032" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">Contenido sí — pero sin cargar al tzibur</text>
+  <text x="78" y="1054" font-size="9.5" fill="#3d2f23">· Balak tenía UN verso perfecto — pero venía atado a una parashá larga: fuera por toraj tzibur</text>
+  <text x="78" y="1070" font-size="9.5" fill="#3d2f23">· Tzitzit trae CINCO cosas en una parashá breve — densidad máxima: dentro</text>
+  <text x="360" y="1090" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">el corazón y los ojos, los dos espías del cuerpo · la tercera parashá es un tratado en miniatura sobre el deseo</text>
+</g>
+
+<!-- Nota final -->
+<text x="360" y="1126" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">El canon del shema no se decidió solo por santidad del texto: se decidió por densidad de contenido y respeto al tiempo de la comunidad.</text>
+
+</svg>
+</div>
+
+<div class="balak-panel" id="balak-panel">
+  <p class="balak-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'bikshu': {
+      titulo: 'La propuesta · quisieron fijar parashat Balak en el shema',
+      hebreo: 'בִּקְּשׁוּ לִקְבּוֹעַ פָּרָשַׁת בָּלָק בִּקְרִיאַת שְׁמַע',
+      traduccion: '«Quisieron fijar la parashá de Balak en la recitación del shema»',
+      explicacion: 'R. Abahu ben Zutarti, en nombre de R. Yehuda bar Zvida, transmite un dato asombroso: hubo un momento en que el CANON DEL SHEMA estuvo ABIERTO. Los sabios consideraron seriamente agregar una cuarta parashá a las tres que conocemos — y la candidata era la parashá de BALAK: el relato de Bamidbar donde el rey de Moav contrata al profeta Bilam para maldecir a Israel, y las maldiciones salen convertidas en bendiciones.\n\nLa sola noticia reordena cómo entendemos la liturgia. El shema NO cayó del cielo con su forma actual — fue COMPUESTO. Alguien decidió qué parashiyot entran y cuáles quedan fuera, con criterios discutibles y discutidos. Esta sugyá es la única ventana del Talmud a esa deliberación editorial: el momento en que el rezo diario todavía era un borrador.\n\nY la candidata es sorprendente por partida doble. Balak es un texto NARRATIVO (no legal), protagonizado por un profeta GENTIL (Bilam), en un episodio donde Israel ni siquiera aparece como actor — el pueblo acampa abajo, ignorante de todo, mientras arriba se decide su bendición. ¿Qué hace un texto así a las puertas del shema, la declaración de fe más concentrada del judaísmo?\n\nLa guemará se hace exactamente esa pregunta — מִפְּנֵי מָה, ¿por qué? — y va a examinar dos hipótesis: la salida de Egipto (descartada) y el pasuk del león (la verdadera razón). El resto de la mitad primera del diagrama sigue ese examen hasta el veredicto final: por qué el león, al final, se quedó afuera.'
+    },
+    'no-yetziat': {
+      titulo: 'Hipótesis descartada · no fue por la salida de Egipto',
+      hebreo: 'אִילֵּימָא מִשּׁוּם דִּכְתִיב בָּהּ ״אֵל מוֹצִיאָם מִמִּצְרַיִם״',
+      traduccion: '«Si dijeras: porque está escrito en ella "Dios que los saca de Egipto"…»',
+      explicacion: 'La primera hipótesis de la guemará es la más natural: la parashá de Balak contiene el verso אֵל מוֹצִיאָם מִמִּצְרַיִם — «Dios que los saca de Egipto» (Bamidbar 23:22). Y mencionar la salida de Egipto es precisamente el requisito que justifica la tercera parashá del shema (vayomer se recita POR su mención de yetziat mitzrayim). ¿Quisieron Balak por la misma razón?\n\nLa guemará la descarta con un argumento de ECONOMÍA LITÚRGICA: si lo que se busca es una mención de la salida de Egipto, hay parashiyot MÁS CORTAS que la contienen. La guemará nombra dos:\n\n  · La parashá de la USURA (ribit, Vayikrá 25:35-38) — que termina: «Yo soy HaShem su Dios que los saqué de la tierra de Egipto»\n  · La parashá de los PESOS (mishkalot, Vayikrá 19:35-37) — balanzas justas, pesas justas, «Yo soy HaShem su Dios que los saqué de la tierra de Egipto»\n\nEl argumento revela un principio: en la liturgia, el CONTENIDO no basta — cuenta el COSTO. Si dos textos aportan lo mismo, se prefiere el breve. La parashá de Balak es larguísima (tres capítulos); usar semejante extensión para obtener una mención de Egipto que cabe en tres versos sería un despilfarro litúrgico.\n\nHay además una ironía deliciosa en los ejemplos elegidos: la salida de Egipto aparece en la Torá anclada a la usura y a los pesos — los contextos más prosaicos imaginables, el comercio cotidiano. La redención nacional como fundamento de la honestidad en la balanza. Si el canon quisiera solo «mencionar Egipto», le bastaba el texto de los comerciantes.\n\nDescartada la hipótesis fácil, la guemará necesita otra razón — y la que encuentra es mucho más precisa.'
+    },
+    'pasuk-leon': {
+      titulo: 'La verdadera razón · el pasuk del león · R. Yosei bar Avin',
+      hebreo: 'כָּרַע שָׁכַב כַּאֲרִי וּכְלָבִיא מִי יְקִימֶנּוּ',
+      traduccion: '«Se agacha, se acuesta como león y como leona — ¿quién lo levantará?» (Bamidbar 24:9)',
+      explicacion: 'R. Yosei bar Avin da la razón real: quisieron la parashá de Balak por ESTE verso — כָּרַע שָׁכַב כַּאֲרִי וּכְלָבִיא מִי יְקִימֶנּוּ, «se agacha, se acuesta como león y como leona: ¿quién lo levantará?».\n\n¿Qué tiene de especial? Los VERBOS. El verso habla de ACOSTARSE (שָׁכַב) y LEVANTARSE (יְקִימֶנּוּ) — exactamente el par de verbos que define la obligación del shema: וּבְשָׁכְבְּךָ וּבְקוּמֶךָ, «al acostarte y al levantarte» (Devarim 6:7). La disputa entre Beit Shamai y Beit Hilel que abre todo el tratado gira sobre esas dos palabras.\n\nEl eco es perfecto y doble:\n\n  1. TEMÁTICO — el verso de Bilam describe a Israel como un león que se acuesta y nadie puede levantar. Recitarlo al acostarse y al levantarse convertiría cada shema en la actualización de la bendición: el judío que se acuesta como león bajo protección divina y se levanta cuando quiere, invulnerable.\n\n  2. ESTRUCTURAL — el shema se recita בְּשָׁכְבְּךָ וּבְקוּמֶךָ; el verso HABLA de shajav y kum. La liturgia habría contenido un texto que se describe a sí mismo: recitar sobre acostarse y levantarse precisamente al acostarse y levantarse.\n\nHay algo más profundo: la imagen del león acostado es la imagen misma de la CONFIANZA del shema nocturno. El león puede permitirse dormir a la vista de todos porque nadie osa despertarlo. Israel recitando el shema antes de dormir declara exactamente eso — me acuesto sin miedo, custodiado. El verso de Bilam era, en ese sentido, el comentario perfecto al shema de la cama.\n\nY nótese QUIÉN lo dijo: Bilam, el profeta gentil contratado para maldecir. La liturgia judía estuvo a un paso de incluir en su texto más íntimo las palabras de su enemigo — porque cuando la maldición se vuelve bendición, la boca del adversario pronuncia la verdad más alta sobre Israel. (De hecho, otra frase de Bilam SÍ entró al rezo: מַה טֹּבוּ אֹהָלֶיךָ — la primera frase que se dice al entrar a la sinagoga cada mañana.)\n\nPero el verso venía con un problema fatal: estaba ATADO a su parashá. El siguiente nodo explica por qué no se podía extraer.'
+    },
+    'regla-moshe': {
+      titulo: 'La regla de Moshé · lo que él no cortó, no cortamos',
+      hebreo: 'כֹּל פָּרָשָׁה דְּפַסְקַהּ מֹשֶׁה רַבֵּינוּ — פָּסְקִינַן, דְּלָא פַּסְקַהּ מֹשֶׁה רַבֵּינוּ — לָא פָּסְקִינַן',
+      traduccion: '«Toda parashá que Moshé Rabeinu cortó — cortamos; la que no cortó — no cortamos»',
+      explicacion: 'Si el problema era la longitud, la solución parecía obvia: recitar SOLO el verso del león. Un verso, dos segundos, eco perfecto de ubshojbeja uvkumeja. ¿Por qué no?\n\nLa guemará responde con un principio de INTEGRIDAD TEXTUAL: כֹּל פָּרָשָׁה דְּפַסְקַהּ מֹשֶׁה רַבֵּינוּ פָּסְקִינַן — toda parashá que Moshé Rabeinu cortó, cortamos; דְּלָא פַּסְקַהּ לָא פָּסְקִינַן — la que él no cortó, no cortamos.\n\nEl principio se refiere a las DIVISIONES de la Torá: las parashiyot — los cortes marcados en el texto mismo (espacios abiertos y cerrados del rollo) — vienen de Moshé, es decir, del Sinaí. Esos cortes son fronteras LEGÍTIMAS: la liturgia puede tomar una unidad completa delimitada por ellos. Pero crear un corte NUEVO — extraer un verso del interior de una parashá para uso litúrgico — es fabricar una frontera que la Torá no tiene.\n\nLa lógica es profunda: un verso aislado de su contexto es un texto DISTINTO. El «león que se acuesta» dentro de la bendición de Bilam significa una cosa; recitado solo, flotante, podría significar cualquier otra. Las unidades de sentido de la Torá las fijó quien la recibió — y la liturgia no tiene autoridad para re-editarlas. El rezo puede SELECCIONAR entre las unidades existentes; no puede CREAR unidades nuevas.\n\nResultado: el verso del león era litúrgicamente perfecto pero halájicamente INEXTRAÍBLE. Venía soldado a su parashá como el fleco al talit — tirar del hilo obligaba a llevarse la prenda entera. Y la prenda entera era demasiado pesada.\n\nEl dilema quedó así planteado con precisión: o la parashá completa de Balak (demasiado larga), o nada. La respuesta es el nodo siguiente — y es la palabra más humana de toda la sugyá.'
+    },
+    'veredicto': {
+      titulo: 'El veredicto · toraj tzibur · la fatiga de la comunidad',
+      hebreo: 'וּמִפְּנֵי מָה לֹא קְבָעוּהָ — מִשּׁוּם טוֹרַח צִבּוּר',
+      traduccion: '«¿Y por qué no la fijaron? — Por la fatiga de la comunidad»',
+      explicacion: 'La resolución del caso Balak cabe en dos palabras: טוֹרַח צִבּוּר — la fatiga del tzibur, la carga sobre la comunidad. La parashá entera era demasiado larga para el rezo diario; el verso solo, inextraíble por la regla de Moshé. Conclusión: Balak queda FUERA del shema. Para siempre.\n\nLo revolucionario no es la exclusión — es el CRITERIO. La guemará no dice que la parashá de Balak fuera menos sagrada, menos verdadera o menos apta. Dice que recitarla CANSARÍA a la gente. El tiempo y la energía de la comunidad son un valor halájico REAL, capaz de vetar un texto perfecto.\n\nPiénsese lo que esto significa en la jerarquía de valores:\n\n  · De un lado: un verso profético con eco exacto de ubshojbeja uvkumeja, la imagen del león protector, la bendición dicha por boca del enemigo — todos los méritos litúrgicos imaginables.\n  · Del otro: los minutos de más que costaría cada día a cada judío.\n\nY GANA la comodidad de la comunidad. La halajá decide que un rezo diario sostenible vale más que un rezo diario perfecto.\n\nEl principio de toraj tzibur reaparece por todo el Talmud: se abrevian bendiciones por él, se limitan lecturas públicas por él, se regula cuánto puede alargarse un jazán por él. La liturgia judía está DISEÑADA para ser cargable — como el talit: suficientemente digna para vestir la fe, suficientemente liviana para llevarla puesta toda la vida, todos los días.\n\nHay aquí una teología implícita del rezo cotidiano: lo que se hace CADA día debe poder hacerse cada día. Un ideal insostenible no es un ideal — es una futura deserción. Los sabios que excluyeron a Balak no protegían la pereza; protegían la PERSEVERANCIA. El shema sobrevivió dos mil años de recitación diaria precisamente porque alguien tuvo el rigor de mantenerlo corto.'
+    },
+    'pregunta-tzitzit': {
+      titulo: 'La pregunta inversa · ¿por qué SÍ la parashá de tzitzit?',
+      hebreo: 'פָּרָשַׁת צִיצִית מִפְּנֵי מָה קְבָעוּהָ?',
+      traduccion: '«¿La parashá de tzitzit, por qué la fijaron?»',
+      explicacion: 'Excluida Balak, la guemará gira la pregunta 180 grados: ¿y la parashá de TZITZIT (Bamidbar 15:37-41), por qué SÍ está en el shema? La pregunta es más filosa de lo que parece: las dos primeras parashiyot del shema se auto-justifican — hablan de amar a HaShem, de aceptar las mitzvot, y ORDENAN recitar «estas palabras» al acostarse y levantarse. Pero la tercera habla de… flecos en la ropa. ¿Qué hace un precepto de indumentaria en la declaración de fe central del judaísmo?\n\nSi el criterio fuera solo la mención de la salida de Egipto (que la parashá contiene al final), volvería la objeción de Balak: hay parashiyot más cortas con yetziat mitzrayim — la usura, los pesos. ¿Por qué cargar al tzibur con nueve versos de tzitzit cuando tres versos de balanzas cumplirían?\n\nLa respuesta de R. YEHUDA BAR JAVIVA desactiva la objeción con un inventario: la parashá de tzitzit no está en el shema por UNA razón sino por CINCO. Contiene cinco cosas — חֲמִשָּׁה דְּבָרִים: la mitzvá de tzitzit, la salida de Egipto, el yugo de las mitzvot, la advertencia contra la herejía, y la advertencia contra el pensamiento de transgresión y de idolatría.\n\nLa lógica del canon queda así completa y simétrica: Balak ofrecía UN verso valioso al precio de una parashá entera — densidad mínima, fuera. Tzitzit ofrece CINCO contenidos en nueve versos — densidad máxima, dentro. El criterio de toraj tzibur no es enemigo del contenido: es una TASA DE CAMBIO. Cada segundo de rezo comunitario debe pagarse con sustancia.\n\nEl diagrama dibuja las cinco cosas como los flecos del talit: cinco hilos colgando de una sola prenda. Click en cada fleco para ver qué cuelga de él.'
+    },
+    'cosa-1': {
+      titulo: 'Primera cosa · la mitzvá de tzitzit',
+      hebreo: 'וְעָשׂוּ לָהֶם צִיצִית עַל כַּנְפֵי בִגְדֵיהֶם',
+      traduccion: '«Y se harán tzitzit sobre las esquinas de sus vestidos» (Bamidbar 15:38)',
+      explicacion: 'La primera cosa es la más obvia: la parashá contiene la MITZVÁ DE TZITZIT misma — la orden de anudar flecos en las cuatro esquinas de la vestimenta, con un hilo de tejélet (azul celeste) entre ellos.\n\nPero su inclusión en la lista de R. Yehuda bar Javiva no es trivial. Significa que recitar la parashá cada día es en sí un ACTO DE MEMORIA del precepto: aunque uno no vista talit en ese momento, aunque sea de noche (cuando la mitzvá de tzitzit no aplica — por eso la mención nocturna de esta parashá generó su propia sugyá), el precepto se RENUEVA verbalmente dos veces al día.\n\nY el tzitzit no es una mitzvá cualquiera — es la mitzvá RECORDATORIO, el nudo en el pañuelo de todo el sistema: וּרְאִיתֶם אֹתוֹ וּזְכַרְתֶּם — «lo verán y recordarán». Es la única mitzvá cuya función declarada es hacer presente a todas las demás. El fleco en la esquina de la ropa es la interfaz visible del pacto: cuelga del borde de lo cotidiano (la ropa, lo más externo y banal) y tira hacia el centro (las mitzvot, el pacto, la salida de Egipto).\n\nHay una lógica en que el shema — la declaración verbal del Reino — termine en el tzitzit — la declaración TEXTIL del Reino. Lo que la boca proclama por la mañana, la ropa lo sigue proclamando el resto del día. La tercera parashá cose el rezo al cuerpo: cuando el shema termina, el talit sigue puesto.'
+    },
+    'cosa-2': {
+      titulo: 'Segunda cosa · yetziat mitzrayim · la razón central',
+      hebreo: 'אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרַיִם לִהְיוֹת לָכֶם לֵאלֹהִים',
+      traduccion: '«…que los saqué de la tierra de Egipto para ser su Dios» (Bamidbar 15:41)',
+      explicacion: 'La segunda cosa es la razón CENTRAL de la inclusión: la parashá de tzitzit termina con la mención de YETZIAT MITZRAYIM — la salida de Egipto. Y la halajá exige mencionar la salida de Egipto cada día Y cada noche (la mishná de Berajot 12b lo deriva, con la exégesis de Ben Zoma sobre כֹּל יְמֵי חַיֶּיךָ). La tercera parashá del shema es el VEHÍCULO de esa obligación diaria.\n\nEsta es la respuesta directa al problema que hundió a Balak: allí, la mención de Egipto no justificaba el costo de la parashá larga; aquí, la mención de Egipto viene EMPAQUETADA con otras cuatro cosas en un texto breve. El mismo requisito, mejor precio.\n\nPero nótese la formulación del verso: אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרַיִם לִהְיוֹת לָכֶם לֵאלֹהִים — «que los saqué de Egipto PARA SER SU DIOS». La salida de Egipto no se menciona como dato histórico sino como FUNDAMENTO JURÍDICO: te saqué, POR TANTO soy tu Dios y tú aceptas mis mitzvot. Es la cláusula de consideración del contrato: la redención fue el pago; la obediencia es la contraprestación.\n\nPor eso la tercera parashá cierra el shema con perfección arquitectónica: la primera parashá declara el Reino (shemá — HaShem es Uno), la segunda declara la ley (vehayá — las mitzvot y su retribución), y la tercera declara el TÍTULO — por qué este Rey y esta ley me obligan A MÍ: porque me sacó de Egipto. El shema sin yetziat mitzrayim sería teología; con ella, es historia personal. No acepto el yugo de un Dios abstracto — acepto el yugo del que me liberó.'
+    },
+    'cosa-3': {
+      titulo: 'Tercera cosa · el yugo de las mitzvot',
+      hebreo: 'וּזְכַרְתֶּם אֶת כָּל מִצְוֹת ה׳ וַעֲשִׂיתֶם אֹתָם',
+      traduccion: '«Y recordarán TODAS las mitzvot de HaShem y las harán» (Bamidbar 15:39)',
+      explicacion: 'La tercera cosa es el OL MITZVOT — el yugo de los preceptos: וּזְכַרְתֶּם אֶת כָּל מִצְוֹת ה׳, «recordarán TODAS las mitzvot de HaShem y las harán».\n\nLa palabra operativa es כָּל — TODAS. El tzitzit no recuerda una mitzvá ni algunas: recuerda el sistema COMPLETO. La tradición exegética lo subraya con la guematria célebre: ציצית suma 600; más los 8 hilos y los 5 nudos del fleco — 613, el total de las mitzvot. El fleco es la Torá entera en miniatura, colgada de la esquina de la ropa.\n\nEsto conecta la tercera parashá con la arquitectura del shema que la mishná de Berajot 13a formula explícitamente: la primera parashá es KABALAT OL MALJUT SHAMAYIM (aceptar el yugo del Reino de los Cielos) y la segunda es KABALAT OL MITZVOT (aceptar el yugo de las mitzvot) — primero el Rey, después sus decretos. La tercera parashá REFUERZA ese segundo yugo con su mecanismo de recordación: no basta aceptar las mitzvot por la mañana en abstracto; hace falta un dispositivo que las mantenga presentes durante el día. El tzitzit es ese dispositivo.\n\nLa secuencia interna del verso es un pequeño tratado de psicología conductual: וּרְאִיתֶם (verán) → וּזְכַרְתֶּם (recordarán) → וַעֲשִׂיתֶם (harán). La vista dispara la memoria, la memoria dispara la acción. La Torá no confía en la buena voluntad flotante — instala un GATILLO SENSORIAL en el campo visual permanente del judío. Cada vez que el ojo cae sobre el fleco, el sistema entero de los 613 se recarga. Y esa cadena virtuosa del ojo es exactamente la INVERSA de la cadena viciosa que la quinta cosa viene a bloquear: el ojo que ve, desea y hace. El mismo órgano, dos direcciones.'
+    },
+    'cosa-4': {
+      titulo: 'Cuarta cosa · contra la herejía · el corazón',
+      hebreo: '״אַחֲרֵי לְבַבְכֶם״ — זוֹ מִינוּת · שֶׁנֶּאֱמַר ״אָמַר נָבָל בְּלִבּוֹ אֵין אֱלֹהִים״',
+      traduccion: '«"Tras su corazón" — esto es la herejía, como está dicho: "Dijo el vil en su corazón: no hay Dios"» (Tehilim 14:1)',
+      explicacion: 'La cuarta cosa es una exégesis quirúrgica del verso central de la parashá: וְלֹא תָתוּרוּ אַחֲרֵי לְבַבְכֶם וְאַחֲרֵי עֵינֵיכֶם — «no explorarán tras su corazón ni tras sus ojos». La baraita disecciona la frase en sus órganos: אַחֲרֵי לְבַבְכֶם — «tras su corazón» — זוֹ מִינוּת: esto es la MINUT, la herejía.\n\nLa prueba textual es Tehilim 14:1: אָמַר נָבָל בְּלִבּוֹ אֵין אֱלֹהִים — «dijo el vil EN SU CORAZÓN: no hay Dios». La conexión es la palabra לב, corazón: el lugar donde el verso de tzitzit prohíbe explorar es exactamente el lugar donde el salmo ubica la negación de Dios. La herejía, enseña la equivalencia, no es una doctrina que se predica en la plaza — es un movimiento que ocurre EN el corazón, en silencio, antes de cualquier palabra.\n\nEsto convierte a la tercera parashá del shema en el ANTÍDOTO diario contra la erosión interior de la fe. Obsérvese la precisión: el verso no prohíbe «concluir» que no hay Dios — prohíbe תָתוּרוּ, EXPLORAR, vagar tras el corazón. El verbo es el mismo de los espías (וְיָתֻרוּ אֶת אֶרֶץ כְּנַעַן, Bamidbar 13 — apenas dos capítulos antes): el corazón explora el territorio de la increencia como los meraglim exploraron la tierra, y como ellos, vuelve con un informe desmoralizador. La parashá de tzitzit está colocada en la Torá inmediatamente después del desastre de los espías — y usa su verbo: hay espionaje EXTERNO que perdió una generación, y hay espionaje INTERNO que puede perder cualquier alma.\n\nQue esta advertencia esté en el shema tiene su ironía histórica: fue precisamente la querella con los MINIM la que expulsó a los Diez Mandamientos del rezo diario (Berajot 12a, el diagrama hermano). La liturgia perdió el Sinaí por culpa de los herejes — pero conservó, dos veces al día, la advertencia contra el mecanismo íntimo que FABRICA herejes: el corazón que explora solo.'
+    },
+    'cosa-5': {
+      titulo: 'Quinta cosa · contra el hirhur · los ojos y la deriva',
+      hebreo: '״אַחֲרֵי עֵינֵיכֶם״ — זֶה הִרְהוּר עֲבֵירָה · ״אַתֶּם זוֹנִים״ — זֶה הִרְהוּר עֲבוֹדָה זָרָה',
+      traduccion: '«"Tras sus ojos" — el pensamiento de transgresión; "ustedes se desvían" — el pensamiento de idolatría»',
+      explicacion: 'La quinta cosa completa la disección del verso — y es doble, porque el verso tiene dos frases más:\n\n  · אַחֲרֵי עֵינֵיכֶם — «tras sus ojos» — זֶה הִרְהוּר עֲבֵירָה: el HIRHUR AVEIRÁ, el pensamiento de transgresión (sexual). La prueba es SHIMSHON: כִּי הִיא יָשְׁרָה בְעֵינָי — «tómala para mí, porque ella es recta EN MIS OJOS» (Shoftim 14:3). El héroe más fuerte de Israel cayó por el canal de los ojos: vio a la mujer de Timná, y el ojo decidió antes que la ley. Sus ojos, dice la guemará en otro lugar, fueron también su castigo — los pelishtim se los arrancaron. El órgano de la caída fue el órgano de la cuenta.\n\n  · אַתֶּם זוֹנִים — «ustedes se desvían/prostituyen» — זֶה הִרְהוּר עֲבוֹדָה זָרָה: el pensamiento de IDOLATRÍA. La prueba: וַיִּזְנוּ אַחֲרֵי הַבְּעָלִים — «se prostituyeron tras los baales» (Shoftim 8:33). El verbo זנה, común a ambos versos, revela que la idolatría es en su raíz una infidelidad — no un error intelectual sino una traición conyugal contra el Dios del pacto.\n\nLo radical de esta quinta cosa es su OBJETO: no castiga actos — vigila PENSAMIENTOS. El hirhur es la transgresión en estado embrionario: la fantasía que precede al acto, la curiosidad que precede al culto ajeno. La Torá legisla aquí sobre el territorio que ningún tribunal puede alcanzar — el interior de la imaginación — y coloca su guardia en la puerta de entrada: los ojos.\n\nJunto con la cuarta cosa, el verso queda cartografiado como un mapa del deseo: el CORAZÓN deriva hacia la herejía, los OJOS hacia la carne, y la deriva misma (zonim) hacia los dioses ajenos. Corazón y ojos — dice el midrash — son los dos ESPÍAS del cuerpo: el ojo ve, el corazón desea, y el cuerpo ejecuta. La parashá de tzitzit interrumpe la cadena en su primer eslabón — y por eso el fleco se lleva puesto A LA VISTA: para que el ojo, el espía infiel, encuentre en su propio campo visual al agente doble que trabaja para el Reino. La tercera parashá del shema es un tratado en miniatura sobre el deseo — y por eso ganó su lugar en la recitación diaria.'
+    },
+    'moraleja': {
+      titulo: 'Moraleja · el criterio editorial del canon',
+      hebreo: 'טוֹרַח צִבּוּר · חֲמִשָּׁה דְּבָרִים',
+      traduccion: 'La fatiga de la comunidad · las cinco cosas',
+      explicacion: 'Leídas juntas, las dos mitades de la sugyá revelan el CRITERIO EDITORIAL con que se compuso el shema — el rezo más recitado de la historia judía:\n\n  1. EL CONTENIDO ES NECESARIO PERO NO SUFICIENTE. Balak tenía un verso litúrgicamente perfecto — el león que se acuesta y se levanta, eco exacto de ubshojbeja uvkumeja — y quedó fuera. La santidad del texto no compra sola su lugar en el rezo.\n\n  2. LA INTEGRIDAD TEXTUAL ES INNEGOCIABLE. Lo que Moshé no cortó, no se corta. La liturgia selecciona unidades completas de la Torá; no fabrica antologías de versos sueltos. Antes que un rezo óptimo, un texto íntegro.\n\n  3. EL TIEMPO DEL TZIBUR ES UN VALOR HALÁJICO. Toraj tzibur — la fatiga de la comunidad — vetó a Balak. No es concesión a la pereza: es la comprensión de que un rezo diario debe ser SOSTENIBLE para sobrevivir siglos de cotidianidad. Lo insostenible no se reza mal — deja de rezarse.\n\n  4. GANA LA DENSIDAD. Tzitzit entró porque paga su tiempo con cinco contenidos: la mitzvá recordatorio, la salida de Egipto, el yugo de todas las mitzvot, el dique contra la herejía del corazón y el dique contra el hirhur de los ojos. Nueve versos, cinco cosas — la mejor tasa de cambio de la Torá.\n\nEl resultado es el canon que rezamos hoy: tres parashiyot, ni una más. Y la última — la de los flecos — resulta ser la más psicológica de todas: un mapa del deseo humano (corazón que deriva, ojos que exploran) con su contramedida portátil cosida a la ropa.\n\nLa sugyá enseña, en el fondo, una lección de diseño institucional: las cosas que deben durar para siempre se diseñan livianas. El shema sobrevivió a templos, exilios e imperios en parte porque sus editores tuvieron la disciplina de decir NO a un texto hermoso — y la lucidez de decir SÍ al texto denso. Qué entra y qué queda fuera: ese es el oficio invisible detrás de toda liturgia que sigue viva.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.balak-interactivo')
+    : document.querySelector('.balak-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#balak-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.balak-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="balak-panel-header">' +
+        '<p class="balak-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="balak-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="balak-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="balak-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.balak-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.balak-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="balak-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
