@@ -1,0 +1,362 @@
+<div class="benzoma-interactivo">
+<style>
+  .benzoma-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .benzoma-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .benzoma-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .benzoma-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .benzoma-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .benzoma-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .benzoma-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .benzoma-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .benzoma-diagrama svg { width: 100%; height: auto; display: block; }
+  .benzoma-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .benzoma-nodo:hover rect { stroke-width: 2 !important; }
+  .benzoma-nodo:hover circle { stroke-width: 2.5 !important; }
+  .benzoma-nodo.activa rect { stroke-width: 2.5 !important; }
+  .benzoma-nodo.activa circle { stroke-width: 3 !important; }
+  .benzoma-nodo.dim { opacity: 0.32; }
+  .benzoma-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .benzoma-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .benzoma-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .benzoma-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .benzoma-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .benzoma-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .benzoma-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="benzoma-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>la mishná · confesión de REbA</span>
+  <span><span class="swatch dorado"></span>drashá de Ben Zoma · כֹּל</span>
+  <span><span class="swatch azul"></span>lectura de los jajamim</span>
+  <span><span class="swatch verde"></span>ikar / tafel</span>
+  <span><span class="swatch rojo"></span>Gog uMagog · el mashal de las tzarot</span>
+</div>
+
+<div class="benzoma-diagrama">
+<svg viewBox="0 0 720 1330" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 12b-13a: Ben Zoma y las noches · la drashá del kol · jajamim y los días del Mashíaj · ikar y tafel · el lobo, el león y la serpiente</title>
+
+<defs>
+  <marker id="flecha-bz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-bz-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Ben Zoma · Egipto en las noches</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 12b-13a · mishná 1:5 — la última del perek · la drashá que viaja a la Hagadá</text>
+
+<!-- ============================================================ -->
+<!-- LA MISHNÁ · CONFESIÓN DE R. ELAZAR BEN AZARIA               -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MISHNÁ 1:5 · LA CONFESIÓN · COMO DE SETENTA AÑOS</text>
+
+<g class="benzoma-nodo" data-id="confesion">
+  <rect x="60" y="86" width="600" height="112" rx="6" fill="rgba(107,68,35,0.08)" stroke="#6b4423" stroke-width="1.5"/>
+  <text x="360" y="112" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">הֲרֵי אֲנִי כְּבֶן שִׁבְעִים שָׁנָה, וְלֹא זָכִיתִי שֶׁתֵּאָמֵר</text>
+  <text x="360" y="132" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">יְצִיאַת מִצְרַיִם בַּלֵּילוֹת — עַד שֶׁדְּרָשָׁהּ בֶּן זוֹמָא</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«He aquí que soy COMO de setenta años, y no merecí que se dijera la salida de Egipto</text>
+  <text x="360" y="170" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">en las noches — hasta que la expuso Ben Zoma»</text>
+  <text x="360" y="188" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">כְּבֶן — «como»: era joven · la tradición cuenta que encaneció de golpe</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA DRASHÁ CENTRAL · BEN ZOMA · LA PALABRA KOL               -->
+<!-- ============================================================ -->
+<line x1="360" y1="198" x2="360" y2="216" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-bz-gold)"/>
+
+<text x="60" y="228" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA DRASHÁ CENTRAL · DEVARIM 16:3 · UNA SOLA PALABRA</text>
+
+<g class="benzoma-nodo" data-id="drasha">
+  <rect x="60" y="238" width="600" height="158" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1.8"/>
+  <text x="360" y="266" text-anchor="middle" font-size="13" direction="rtl" fill="#1a1410">לְמַעַן תִּזְכֹּר אֶת יוֹם צֵאתְךָ מֵאֶרֶץ מִצְרַיִם <tspan font-size="17" font-weight="700" fill="#b8860b">כֹּל</tspan> יְמֵי חַיֶּיךָ</text>
+  <text x="360" y="286" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Para que recuerdes el día de tu salida de Egipto TODOS los días de tu vida» (Devarim 16:3)</text>
+
+  <line x1="80" y1="298" x2="640" y2="298" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- las dos mitades de la drashá -->
+  <text x="205" y="322" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">יְמֵי חַיֶּיךָ — הַיָּמִים</text>
+  <text x="205" y="340" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«los días de tu vida» — los DÍAS</text>
+
+  <text x="515" y="322" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410"><tspan font-weight="700" fill="#b8860b">כֹּל</tspan> יְמֵי חַיֶּיךָ — הַלֵּילוֹת</text>
+  <text x="515" y="340" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«TODOS los días de tu vida» — las NOCHES</text>
+
+  <line x1="360" y1="308" x2="360" y2="346" stroke="#b8860b" stroke-width="0.6" opacity="0.4" stroke-dasharray="3,2"/>
+
+  <text x="360" y="366" text-anchor="middle" font-size="10.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">una sola palabra — כֹּל — mete las noches en la memoria de Egipto</text>
+  <text x="360" y="384" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">el ribui: la palabra «todos» amplía · si dice DÍAS, el «todos» añade lo que falta — las noches</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA LECTURA RIVAL · LOS JAJAMIM                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="396" x2="360" y2="414" stroke="#1e3a5f" stroke-width="1.2" marker-end="url(#flecha-bz)"/>
+
+<text x="60" y="426" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA LECTURA RIVAL · LOS JAJAMIM LEEN OTRO «TODO»</text>
+
+<g class="benzoma-nodo" data-id="jajamim">
+  <rect x="60" y="436" width="600" height="112" rx="6" fill="rgba(30,58,95,0.07)" stroke="#1e3a5f" stroke-width="1.4"/>
+  <text x="360" y="462" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">יְמֵי חַיֶּיךָ — הָעוֹלָם הַזֶּה; כֹּל — לְהָבִיא לִימוֹת הַמָּשִׁיחַ</text>
+  <text x="360" y="484" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Los días de tu vida — ESTE MUNDO; "todos" — para incluir los DÍAS DEL MASHÍAJ»</text>
+  <line x1="80" y1="496" x2="640" y2="496" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <text x="360" y="516" text-anchor="middle" font-size="9.5" fill="#3d2f23">el mismo כֹּל, otra dirección: no amplía hacia la NOCHE sino hacia el FUTURO mesiánico</text>
+  <text x="360" y="534" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la memoria de Egipto no cesará ni siquiera en la era del Mashíaj</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RÉPLICA DE BEN ZOMA · YIRMIYAHU 23:7                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="548" x2="360" y2="566" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-bz-gold)"/>
+
+<text x="60" y="578" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RÉPLICA DE BEN ZOMA · ¿SE MENCIONA EGIPTO EN LA ERA MESIÁNICA?</text>
+
+<g class="benzoma-nodo" data-id="replica">
+  <rect x="60" y="588" width="600" height="112" rx="6" fill="rgba(184,134,11,0.07)" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="6,3"/>
+  <text x="360" y="612" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">וְלֹא יֹאמְרוּ עוֹד חַי ה׳ אֲשֶׁר הֶעֱלָה אֶת בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם...</text>
+  <text x="360" y="632" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«Ya no dirán: vive HaShem que hizo subir a los hijos de Israel de la tierra de Egipto…» (Yirmiyahu 23:7)</text>
+  <line x1="80" y1="644" x2="640" y2="644" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+  <text x="360" y="664" text-anchor="middle" font-size="9.5" fill="#3d2f23">…sino por el RETORNO desde la tierra del norte — el nuevo éxodo reemplaza al viejo en el juramento</text>
+  <text x="360" y="684" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">objeción de Ben Zoma a los jajamim: si en la era mesiánica ya no se jura por Egipto, ¿cómo va a incluirla el כֹּל?</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA RESPUESTA QUE FUNDA UNA CATEGORÍA · IKAR / TAFEL         -->
+<!-- ============================================================ -->
+<line x1="360" y1="700" x2="360" y2="718" stroke="#2d6b4e" stroke-width="1.4" marker-end="url(#flecha-bz)"/>
+
+<text x="60" y="730" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA RESPUESTA QUE FUNDA UNA CATEGORÍA · IKAR / TAFEL</text>
+
+<g class="benzoma-nodo" data-id="ikar-tafel">
+  <rect x="60" y="740" width="600" height="200" rx="6" fill="rgba(30,107,90,0.08)" stroke="#2d6b4e" stroke-width="1.8"/>
+  <text x="360" y="766" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">לֹא שֶׁתֵּעָקֵר יְצִיאַת מִצְרַיִם מִמְּקוֹמָהּ, אֶלָּא שֶׁתְּהֵא</text>
+  <text x="360" y="786" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">שִׁעְבּוּד מַלְכֻיוֹת <tspan font-weight="700" fill="#2d6b4e">עִיקָּר</tspan> וִיצִיאַת מִצְרַיִם <tspan font-weight="700" fill="#2d6b4e">טָפֵל</tspan> לוֹ</text>
+  <text x="360" y="806" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«No que la salida de Egipto sea ARRANCADA de su lugar, sino que el fin del yugo</text>
+  <text x="360" y="820" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">de los imperios será lo PRINCIPAL (ikar) y la salida de Egipto SECUNDARIA (tafel)»</text>
+
+  <line x1="80" y1="832" x2="640" y2="832" stroke="#2d6b4e" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- paralelo Yaakov / Israel -->
+  <text x="205" y="854" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">Paralelo · Bereshit 35:10</text>
+  <text x="205" y="872" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">לֹא יִקָּרֵא שִׁמְךָ עוֹד יַעֲקֹב כִּי אִם יִשְׂרָאֵל</text>
+  <text x="205" y="888" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">Israel = ikar · Yaakov = tafel</text>
+  <text x="205" y="901" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">— y la Torá siguió diciéndole Yaakov</text>
+
+  <line x1="360" y1="842" x2="360" y2="906" stroke="#2d6b4e" stroke-width="0.6" opacity="0.4" stroke-dasharray="3,2"/>
+
+  <!-- paralelo Yeshayahu -->
+  <text x="515" y="854" text-anchor="middle" font-size="9.5" fill="#2d6b4e" font-weight="600">Paralelo · Yeshayahu 43:18</text>
+  <text x="515" y="872" text-anchor="middle" font-size="10" direction="rtl" fill="#2d6b4e">אַל תִּזְכְּרוּ רִאשֹׁנוֹת וְקַדְמֹנִיּוֹת אַל תִּתְבֹּנָנוּ</text>
+  <text x="515" y="888" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">רִאשֹׁנוֹת = shibud maljuyot</text>
+  <text x="515" y="901" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">קַדְמֹנִיּוֹת = yetziat mitzrayim</text>
+
+  <text x="360" y="926" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="600">no se BORRA la memoria: se RE-JERARQUIZA · lo nuevo ikar, lo viejo tafel pero vigente</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- RAV YOSEF · LA COSA NUEVA = GOG UMAGOG                      -->
+<!-- ============================================================ -->
+<line x1="360" y1="940" x2="360" y2="958" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-bz)"/>
+
+<text x="60" y="970" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">RAV YOSEF · ¿QUÉ ES «LA COSA NUEVA»? · GOG UMAGOG</text>
+
+<g class="benzoma-nodo" data-id="rav-yosef">
+  <rect x="60" y="980" width="600" height="92" rx="6" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="360" y="1006" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">הִנְנִי עֹשֶׂה חֲדָשָׁה עַתָּה תִצְמָח — זוֹ מִלְחֶמֶת גּוֹג וּמָגוֹג</text>
+  <text x="360" y="1028" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">«He aquí que hago algo NUEVO, ahora brota» (Yeshayahu 43:19) — es la guerra de Gog uMagog</text>
+  <text x="360" y="1050" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">Rav Yosef identifica la «jadashá» del versículo: la última tzará, la que re-jerarquizará todas las anteriores</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL MASHAL · EL LOBO, EL LEÓN Y LA SERPIENTE                 -->
+<!-- ============================================================ -->
+<line x1="360" y1="1072" x2="360" y2="1090" stroke="#8b1a1a" stroke-width="1.4" marker-end="url(#flecha-bz)"/>
+
+<text x="60" y="1102" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL MASHAL · EL CAMINANTE Y LAS TRES BESTIAS</text>
+
+<g class="benzoma-nodo" data-id="mashal">
+  <rect x="60" y="1112" width="600" height="200" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.6"/>
+
+  <!-- el lobo (olvidado) -->
+  <g opacity="0.45">
+    <circle cx="180" cy="1160" r="26" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.2"/>
+    <path d="M168,1168 L172,1152 L167,1145 L176,1152 L184,1152 L193,1145 L188,1152 L192,1168 L180,1173 Z" fill="#8b1a1a"/>
+  </g>
+  <text x="180" y="1204" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">1 · EL LOBO</text>
+  <text x="180" y="1218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">se salvó — y lo contaba</text>
+  <line x1="150" y1="1207" x2="210" y2="1201" stroke="#8b1a1a" stroke-width="1.2" opacity="0.7"/>
+  <text x="180" y="1232" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">olvidado</text>
+
+  <line x1="216" y1="1160" x2="314" y2="1160" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#flecha-bz)"/>
+
+  <!-- el león (olvidado) -->
+  <g opacity="0.45">
+    <circle cx="360" cy="1160" r="26" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1.2"/>
+    <circle cx="360" cy="1160" r="17" fill="none" stroke="#8b1a1a" stroke-width="3" stroke-dasharray="2.5,3"/>
+    <circle cx="360" cy="1160" r="10" fill="#8b1a1a"/>
+  </g>
+  <text x="360" y="1204" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">2 · EL LEÓN</text>
+  <text x="360" y="1218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">se salvó — y lo contaba</text>
+  <line x1="330" y1="1207" x2="390" y2="1201" stroke="#8b1a1a" stroke-width="1.2" opacity="0.7"/>
+  <text x="360" y="1232" text-anchor="middle" font-size="8" fill="#6b4423" font-style="italic">olvidado</text>
+
+  <line x1="396" y1="1160" x2="494" y2="1160" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#flecha-bz)"/>
+
+  <!-- la serpiente (la que se cuenta) -->
+  <circle cx="540" cy="1160" r="26" fill="rgba(139,26,26,0.14)" stroke="#8b1a1a" stroke-width="2"/>
+  <path d="M522,1166 C530,1150 538,1174 546,1158 C551,1148 556,1156 559,1150" fill="none" stroke="#8b1a1a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="559" cy="1150" r="2.6" fill="#8b1a1a"/>
+  <text x="540" y="1204" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="700">3 · LA SERPIENTE</text>
+  <text x="540" y="1218" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">olvidó a los dos —</text>
+  <text x="540" y="1231" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">y contaba lo de la serpiente</text>
+
+  <line x1="80" y1="1246" x2="640" y2="1246" stroke="#8b1a1a" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="360" y="1270" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">אַף כָּךְ יִשְׂרָאֵל — צָרוֹת אַחֲרוֹנוֹת מְשַׁכְּחוֹת אֶת הָרִאשׁוֹנוֹת</text>
+  <text x="360" y="1290" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«Así también Israel — las angustias últimas hacen olvidar las primeras»</text>
+  <text x="360" y="1305" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la memoria de la redención es un archivo vivo: cada milagro nuevo re-jerarquiza a los anteriores sin borrarlos</text>
+</g>
+
+</svg>
+</div>
+
+<div class="benzoma-panel" id="benzoma-panel">
+  <p class="benzoma-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'confesion': {
+      titulo: 'La confesión de R. Elazar ben Azaria · como de setenta años',
+      hebreo: 'הֲרֵי אֲנִי כְּבֶן שִׁבְעִים שָׁנָה, וְלֹא זָכִיתִי שֶׁתֵּאָמֵר יְצִיאַת מִצְרַיִם בַּלֵּילוֹת עַד שֶׁדְּרָשָׁהּ בֶּן זוֹמָא',
+      traduccion: '«He aquí que soy como de setenta años, y no merecí que se dijera la salida de Egipto en las noches — hasta que la expuso Ben Zoma»',
+      explicacion: 'La ÚLTIMA MISHNÁ del perek (1:5) abre con una confesión extraordinaria. R. Elazar ben Azaria — nasí, descendiente de Ezra, una de las máximas autoridades de su generación — admite públicamente un FRACASO exegético: nunca logró demostrar que la salida de Egipto deba mencionarse también DE NOCHE.\n\nLa palabra decisiva es כְּבֶן — «COMO de setenta años». No dice «tengo setenta años» sino «soy como de setenta». La tradición explica: era JOVEN (según algunas versiones, dieciocho años) cuando fue nombrado nasí, y encaneció de golpe — de la noche a la mañana su barba se volvió blanca, dándole la apariencia de anciano que su cargo requería.\n\nLa estructura de la confesión es notable:\n\n  · Un sabio de máxima autoridad ADMITE no haber podido probar algo\n  · El mérito se lo lleva BEN ZOMA — que ni siquiera era rabino ordenado (por eso se lo llama por su nombre, sin título)\n  · La mishná CANONIZA esta honestidad: la drashá vale por su fuerza, no por el rango de quien la dice\n\nEl contexto estructural: el perek ABRIÓ preguntando desde cuándo se recita el shema DE NOCHE. Y cierra con la mishná que mete a Egipto EN LA NOCHE. La parashá de tzitzit entró al shema por yetziat mitzrayim — pero tzitzit es mitzvá de día. ¿Por qué entonces se recita de noche? Esta mishná responde exactamente eso: מַזְכִּירִין יְצִיאַת מִצְרַיִם בַּלֵּילוֹת.\n\nEsta mishná viaja después hasta la HAGADÁ DE PESAJ — se recita cada año en el seder, convirtiendo la confesión de REbA y la drashá de Ben Zoma en patrimonio de todo Israel.'
+    },
+    'drasha': {
+      titulo: 'La drashá de Ben Zoma · una sola palabra: כֹּל',
+      hebreo: 'יְמֵי חַיֶּיךָ — הַיָּמִים. כֹּל יְמֵי חַיֶּיךָ — הַלֵּילוֹת',
+      traduccion: '«Los días de tu vida — los días. TODOS los días de tu vida — las noches» (sobre Devarim 16:3)',
+      explicacion: 'La drashá de Ben Zoma opera sobre Devarim 16:3: לְמַעַן תִּזְכֹּר אֶת יוֹם צֵאתְךָ מֵאֶרֶץ מִצְרַיִם כֹּל יְמֵי חַיֶּיךָ — «para que recuerdes el día de tu salida de Egipto todos los días de tu vida».\n\nEl razonamiento es un RIBUI (amplificación) clásico:\n\n  · Si el versículo dijera solo יְמֵי חַיֶּיךָ («los días de tu vida»), la obligación cubriría los DÍAS\n  · Pero el versículo añade כֹּל («TODOS»)\n  · En la hermenéutica rabínica, ninguna palabra de la Torá es redundante\n  · El «todos» tiene que AÑADIR algo que «los días» no cubría\n  · ¿Qué le falta a los días? LAS NOCHES\n\nUna sola palabra — כֹּל — mete las noches en la memoria de Egipto. Esta es la fuerza que R. Elazar ben Azaria no había encontrado: una BASE TEXTUAL para la práctica de mencionar yetziat mitzrayim en el shema de arvit (la tercera parashá, la de tzitzit, que culmina con «Yo soy HaShem tu Dios que te saqué de la tierra de Egipto»).\n\nLa elegancia de la drashá está en su ECONOMÍA: no necesita traer otros versículos, ni gezerot shavot, ni razonamientos largos. Lee UNA palabra con atención total y extrae de ella una obligación diaria — mejor dicho, NOCTURNA — para todas las generaciones.\n\nNótese el paralelo con las disputas del perek (ver el diagrama de Pesaj y el zman del shema): allí también todo giraba en torno a cómo leer una frase temporal. El perek entero es un taller de lectura del TIEMPO: cuándo empieza la noche, cuándo termina, y ahora — qué entra en ella.'
+    },
+    'jajamim': {
+      titulo: 'Los jajamim leen otro «todo» · los días del Mashíaj',
+      hebreo: 'יְמֵי חַיֶּיךָ — הָעוֹלָם הַזֶּה; כֹּל — לְהָבִיא לִימוֹת הַמָּשִׁיחַ',
+      traduccion: '«Los días de tu vida — este mundo; "todos" — para incluir los días del Mashíaj»',
+      explicacion: 'Los jajamim aceptan la premisa hermenéutica de Ben Zoma — el כֹּל tiene que amplificar ALGO — pero le dan otra dirección.\n\nPara Ben Zoma, el eje de amplificación es el CICLO DIARIO: días → añadir las noches. Para los jajamim, el eje es la HISTORIA: יְמֵי חַיֶּיךָ es ESTE MUNDO (העולם הזה), y el כֹּל viene לְהָבִיא לִימוֹת הַמָּשִׁיחַ — a incluir los días del Mashíaj.\n\nLa diferencia no es técnica sino CONCEPTUAL:\n\n  · Ben Zoma amplía en el eje VERTICAL del día: la memoria de Egipto debe llenar las veinticuatro horas\n  · Los jajamim amplían en el eje HORIZONTAL del tiempo histórico: la memoria de Egipto debe sobrevivir incluso a la redención final\n\nLa lectura de los jajamim hace una afirmación teológica fuerte: NI SIQUIERA EL MASHÍAJ cancela la memoria del éxodo. La redención futura no borra la fundacional. Egipto seguirá mencionándose cuando todos los exilios hayan terminado.\n\nPero esta lectura tiene un flanco débil — y Ben Zoma lo va a atacar con un versículo de Yirmiyahu (el nodo siguiente): ¿acaso el profeta no dice explícitamente que en la era futura YA NO se jurará por el que sacó a Israel de Egipto?\n\nLa misma disputa estructural aparece en otras drashot del perek: dos maestros de acuerdo en el MÉTODO (el ribui del kol) y en desacuerdo total sobre QUÉ amplía. La hermenéutica rabínica no es mecánica — la misma palabra sostiene lecturas rivales, y la guemará las conserva a ambas.'
+    },
+    'replica': {
+      titulo: 'La réplica de Ben Zoma · Yirmiyahu 23:7',
+      hebreo: 'וְלֹא יֹאמְרוּ עוֹד חַי ה׳ אֲשֶׁר הֶעֱלָה אֶת בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם',
+      traduccion: '«Ya no dirán: vive HaShem que hizo subir a los hijos de Israel de la tierra de Egipto» (Yirmiyahu 23:7)',
+      explicacion: 'En la baraita, Ben Zoma contraataca: ¿acaso se menciona la salida de Egipto en la era mesiánica? El profeta parece decir que NO.\n\nYirmiyahu 23:7-8 describe la era futura: «He aquí que vienen días — declara HaShem — en que YA NO dirán: vive HaShem que hizo subir a los hijos de Israel de la tierra de Egipto, SINO: vive HaShem que hizo subir y trajo a la descendencia de la casa de Israel de la tierra del norte y de todas las tierras adonde los expulsé».\n\nLa fórmula de juramento — el modo en que Israel INVOCA a su Dios — va a cambiar. Hoy se jura por el Dios del éxodo; en el futuro se jurará por el Dios del RETORNO desde el norte y desde todos los exilios. El nuevo éxodo desplaza al viejo en el lenguaje mismo de la fe.\n\nEl argumento de Ben Zoma contra los jajamim:\n\n  · Ustedes dicen que el כֹּל incluye los días del Mashíaj\n  · Pero Yirmiyahu dice que en esos días YA NO se mencionará Egipto\n  · ¿Cómo va a obligar la Torá a mencionar algo que el profeta dice que no se mencionará?\n  · Por lo tanto el כֹּל no puede referirse a la era mesiánica — debe referirse a las noches\n\nEs una réplica poderosa porque usa al PROFETA contra la DRASHÁ: la exégesis de la Torá no puede contradecir lo que la profecía afirma explícitamente sobre el futuro.\n\nPero los jajamim tienen una respuesta — y es una de las distinciones conceptuales más fecundas del Talmud: el ikar y el tafel (nodo siguiente). Yirmiyahu no dice que Egipto se OLVIDE. Dice que deja de ser lo principal.'
+    },
+    'ikar-tafel': {
+      titulo: 'La respuesta que funda una categoría · ikar y tafel',
+      hebreo: 'לֹא שֶׁתֵּעָקֵר יְצִיאַת מִצְרַיִם מִמְּקוֹמָהּ, אֶלָּא שֶׁתְּהֵא שִׁעְבּוּד מַלְכֻיוֹת עִיקָּר וִיצִיאַת מִצְרַיִם טָפֵל לוֹ',
+      traduccion: '«No que la salida de Egipto sea arrancada de su lugar, sino que el fin del yugo de los imperios será lo principal (ikar) y la salida de Egipto secundaria (tafel) a él»',
+      explicacion: 'La respuesta de los jajamim a la réplica de Ben Zoma FUNDA UNA CATEGORÍA que recorre todo el pensamiento rabínico: la distinción entre עִיקָּר (ikar, lo principal) y טָפֵל (tafel, lo secundario).\n\nYirmiyahu no dice que la memoria de Egipto se ARRANQUE (שֶׁתֵּעָקֵר) de su lugar. Dice que se RE-JERARQUIZA: la liberación del shibud maljuyot — el yugo de los imperios — será el ikar, lo que encabeza el juramento; y yetziat mitzrayim quedará como tafel — subordinada, pero PRESENTE.\n\nLa memoria no se borra: cambia de rango. Esa es toda la diferencia entre olvido y re-jerarquización.\n\nEL PARALELO DE YAAKOV — Bereshit 35:10: לֹא יִקָּרֵא שִׁמְךָ עוֹד יַעֲקֹב כִּי אִם יִשְׂרָאֵל — «no se llamará más tu nombre Yaakov sino Israel». Suena a sustitución total. Y sin embargo la Torá SIGUE llamándolo Yaakov — incontables veces, incluso después de este versículo. La solución: Israel quedó como ikar y Yaakov como tafel — subordinado pero vigente. El «no se llamará más» significa «no será lo principal», no «desaparecerá».\n\nEL PARALELO DE YESHAYAHU — 43:18: אַל תִּזְכְּרוּ רִאשֹׁנוֹת וְקַדְמֹנִיּוֹת אַל תִּתְבֹּנָנוּ — «no recordéis las cosas primeras, ni consideréis las antiguas». La guemará descompone el versículo:\n\n  · רִאשֹׁנוֹת («las primeras») = el shibud maljuyot, el yugo de los imperios\n  · קַדְמֹנִיּוֹת («las antiguas») = yetziat mitzrayim\n\nDos capas de pasado, dos niveles de memoria. El versículo mismo distingue entre lo reciente-principal y lo antiguo-subordinado.\n\nLa categoría ikar/tafel migra desde aquí a toda la halajá — por ejemplo, a las berajot sobre alimentos: cuando hay un alimento principal y uno secundario, se bendice sobre el ikar y el tafel queda cubierto. Una distinción nacida en un debate sobre la memoria mesiánica termina organizando la mesa de todos los días.'
+    },
+    'rav-yosef': {
+      titulo: 'Rav Yosef · la cosa nueva es la guerra de Gog uMagog',
+      hebreo: 'הִנְנִי עֹשֶׂה חֲדָשָׁה עַתָּה תִצְמָח — זוֹ מִלְחֶמֶת גּוֹג וּמָגוֹג',
+      traduccion: '«He aquí que hago algo nuevo, ahora brota» (Yeshayahu 43:19) — esta es la guerra de Gog uMagog',
+      explicacion: 'El versículo de Yeshayahu continúa: después de «no recordéis las cosas primeras» viene הִנְנִי עֹשֶׂה חֲדָשָׁה עַתָּה תִצְמָח — «he aquí que hago algo NUEVO, ahora brota». ¿Qué es esa jadashá, esa cosa nueva?\n\nRav Yosef la identifica: זוֹ מִלְחֶמֶת גּוֹג וּמָגוֹג — la GUERRA DE GOG UMAGOG, la confrontación escatológica final descrita por Yejezkel (caps. 38-39), la última gran tzará antes de la redención completa.\n\nLa lógica de la identificación dentro de la sugyá:\n\n  · El versículo ordena degradar a tafel las memorias anteriores (shibud maljuyot y yetziat mitzrayim)\n  · ¿Qué las degrada? Algo NUEVO y más grande\n  · Lo nuevo tiene que ser la última liberación — y la última liberación presupone la última guerra\n  · Gog uMagog será la tzará final, y la salvación de ella será el milagro que re-jerarquice todos los anteriores\n\nRav Yosef (amora de Babilonia, tercera generación, llamado «Sinaí» por su dominio enciclopédico de las fuentes) hace aquí lo que hace siempre: anclar la especulación en una identificación textual concreta.\n\nY para explicar POR QUÉ las tzarot nuevas hacen olvidar a las viejas — por qué la memoria funciona así, por jerarquías móviles y no por acumulación pareja — trae el mashal del caminante y las tres bestias (nodo siguiente). El mecanismo psicológico del individuo ilumina el mecanismo histórico del pueblo.'
+    },
+    'mashal': {
+      titulo: 'El mashal · el lobo, el león y la serpiente',
+      hebreo: 'אַף כָּךְ יִשְׂרָאֵל — צָרוֹת אַחֲרוֹנוֹת מְשַׁכְּחוֹת אֶת הָרִאשׁוֹנוֹת',
+      traduccion: '«Así también Israel — las angustias últimas hacen olvidar las primeras»',
+      explicacion: 'El mashal de Rav Yosef es una miniatura narrativa perfecta en tres actos:\n\n  ACTO 1 — EL LOBO. Un caminante se topó con un lobo y se salvó. Y andaba contando lo del lobo: era SU historia, el milagro de su vida.\n\n  ACTO 2 — EL LEÓN. Se topó con un león y se salvó. El león es peor que el lobo. Ahora contaba lo del león — el lobo quedó atrás, degradado en el relato.\n\n  ACTO 3 — LA SERPIENTE. Se topó con una serpiente y se salvó. Y OLVIDÓ A LOS DOS — y andaba contando lo de la serpiente.\n\nLa progresión importa: lobo → león → serpiente. No es solo una escalada de peligro; es una escalada de INSIDIA. Al lobo y al león se los ve venir; la serpiente ataca desde lo oculto. Cada peligro nuevo redefine qué significa «salvarse».\n\nY el nimshal: אַף כָּךְ יִשְׂרָאֵל — así también Israel. צָרוֹת אַחֲרוֹנוֹת מְשַׁכְּחוֹת אֶת הָרִאשׁוֹנוֹת — las angustias últimas hacen olvidar las primeras.\n\nEl mashal explica el MECANISMO de todo lo anterior en la sugyá:\n\n  · Por qué Yirmiyahu dice que ya no se jurará por Egipto: porque las tzarot del exilio (y la salvación de ellas) ocuparán el primer plano del relato\n  · Por qué es re-jerarquización y no borrado: el caminante no NIEGA lo del lobo — simplemente ya no es lo que cuenta primero\n  · Por qué la memoria de la redención es un ARCHIVO VIVO: cada milagro nuevo reordena a los anteriores sin destruirlos\n\nHay algo profundamente realista — casi psicológico — en este cierre de perek: el Talmud no idealiza la memoria como un depósito inmutable. La memoria es narrativa, y la narrativa se reorganiza alrededor de lo último vivido. La halajá de mencionar Egipto CADA noche y CADA día trabaja precisamente CONTRA esa entropía natural del olvido: institucionaliza el recuerdo fundacional para que ninguna tzará posterior lo arranque de su lugar — tafel quizás, pero nunca borrado.\n\nAsí cierra el primer perek de Berajot: el que abrió preguntando por la noche del shema termina metiendo a Egipto en todas las noches de la historia.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.benzoma-interactivo')
+    : document.querySelector('.benzoma-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#benzoma-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.benzoma-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="benzoma-panel-header">' +
+        '<p class="benzoma-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="benzoma-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="benzoma-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="benzoma-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.benzoma-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.benzoma-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="benzoma-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
