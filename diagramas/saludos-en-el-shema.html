@@ -1,0 +1,378 @@
+<div class="saludos-interactivo">
+<style>
+  .saludos-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .saludos-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .saludos-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .saludos-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .saludos-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .saludos-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .saludos-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .saludos-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .saludos-diagrama svg { width: 100%; height: auto; display: block; }
+  .saludos-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .saludos-nodo:hover rect { stroke-width: 2 !important; }
+  .saludos-nodo.activa rect { stroke-width: 2.5 !important; }
+  .saludos-nodo.dim { opacity: 0.32; }
+  .saludos-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .saludos-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .saludos-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .saludos-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .saludos-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .saludos-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .saludos-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="saludos-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch dorado"></span>las puertas · bein haperakim</span>
+  <span><span class="swatch azul"></span>kavod · respeto</span>
+  <span><span class="swatch rojo"></span>yirá · miedo</span>
+  <span><span class="swatch verde"></span>hallel · meguilá · taanit</span>
+  <span><span class="swatch sepia"></span>mishná · análisis de la gemará</span>
+</div>
+
+<div class="saludos-diagrama">
+<svg viewBox="0 0 720 1064" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 13b-14a: saludar en medio del shema · el mapa de permeabilidad · R. Meir vs R. Yehuda · hallel, meguilá y el que ayuna</title>
+
+<defs>
+  <marker id="flecha-sal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">Saludar en medio del shema · el mapa de permeabilidad</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 13b-14a · ¿quién puede entrar en la declaración de fe, y por qué puerta?</text>
+
+<!-- ============================================================ -->
+<!-- LA BANDA DEL SHEMA · SECCIONES Y PUERTAS                     -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL MAPA · LA BANDA DEL SHEMA Y SUS PUERTAS DORADAS</text>
+
+<g class="saludos-nodo" data-id="banda">
+  <rect x="60" y="86" width="600" height="148" rx="6" fill="rgba(184,134,11,0.06)" stroke="#b8860b" stroke-width="1.6"/>
+  <text x="360" y="108" text-anchor="middle" font-size="10.5" fill="#3d2f23" font-style="italic">el shema como territorio: seis secciones · cinco puertas «bein haperakim» entre ellas</text>
+
+  <!-- secciones (interior = «el medio», rojo) -->
+  <rect x="76" y="122" width="86" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <rect x="180" y="122" width="86" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <rect x="284" y="122" width="86" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <rect x="388" y="122" width="86" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <rect x="492" y="122" width="86" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+  <rect x="596" y="122" width="48" height="56" rx="3" fill="rgba(139,26,26,0.07)" stroke="#8b1a1a" stroke-width="0.9"/>
+
+  <!-- puertas (bein haperakim, dorado, más altas que la banda) -->
+  <rect x="164" y="116" width="14" height="68" rx="2" fill="rgba(184,134,11,0.38)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="268" y="116" width="14" height="68" rx="2" fill="rgba(184,134,11,0.38)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="372" y="116" width="14" height="68" rx="2" fill="rgba(184,134,11,0.38)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="476" y="116" width="14" height="68" rx="2" fill="rgba(184,134,11,0.38)" stroke="#b8860b" stroke-width="1.2"/>
+  <rect x="580" y="116" width="14" height="68" rx="2" fill="rgba(184,134,11,0.38)" stroke="#b8860b" stroke-width="1.2"/>
+
+  <!-- etiquetas de sección -->
+  <text x="119" y="146" text-anchor="middle" font-size="8.5" fill="#1a1410" direction="rtl">ברכה א׳</text>
+  <text x="223" y="146" text-anchor="middle" font-size="8.5" fill="#1a1410" direction="rtl">ברכה ב׳</text>
+  <text x="327" y="146" text-anchor="middle" font-size="9.5" fill="#1a1410" direction="rtl" font-weight="600">שמע</text>
+  <text x="431" y="146" text-anchor="middle" font-size="8" fill="#1a1410" direction="rtl">והיה אם שמוע</text>
+  <text x="535" y="146" text-anchor="middle" font-size="9" fill="#1a1410" direction="rtl">ויאמר</text>
+  <text x="620" y="142" text-anchor="middle" font-size="7.5" fill="#1a1410" direction="rtl">אמת</text>
+  <text x="620" y="154" text-anchor="middle" font-size="7.5" fill="#1a1410" direction="rtl">ויציב</text>
+  <text x="119" y="166" text-anchor="middle" font-size="7.5" fill="#8b1a1a" font-style="italic">medio</text>
+  <text x="327" y="166" text-anchor="middle" font-size="7.5" fill="#8b1a1a" font-style="italic">medio</text>
+  <text x="535" y="166" text-anchor="middle" font-size="7.5" fill="#8b1a1a" font-style="italic">medio</text>
+
+  <text x="360" y="204" text-anchor="middle" font-size="9.5" fill="#b8860b" font-style="italic">puertas doradas = bein haperakim: ahí el shema se abre por KAVOD (respeto)</text>
+  <text x="360" y="222" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-style="italic">interior rojo = «el medio»: ahí solo abre la YIRÁ (miedo a quien puede dañar)</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA MISHNÁ                                                    -->
+<!-- ============================================================ -->
+<line x1="360" y1="234" x2="360" y2="252" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-sal)"/>
+
+<text x="60" y="264" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MISHNÁ 2:1 · LAS DOS MONEDAS</text>
+
+<g class="saludos-nodo" data-id="mishna">
+  <rect x="60" y="274" width="600" height="112" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="300" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">בַּפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד וּמֵשִׁיב · וּבָאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה</text>
+  <text x="360" y="320" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«En los pérek saluda por el kavod y responde · y en el medio saluda por la yirá»</text>
+  <rect x="90" y="334" width="255" height="38" rx="4" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="217" y="350" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-weight="600">EN LOS PÉREK → por kavod</text>
+  <text x="217" y="365" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">respeto: al maestro, al mayor</text>
+  <rect x="375" y="334" width="255" height="38" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1"/>
+  <text x="502" y="350" text-anchor="middle" font-size="9.5" fill="#8b1a1a" font-weight="600">EN EL MEDIO → solo por yirá</text>
+  <text x="502" y="365" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">miedo: a quien puede dañarte</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL ANÁLISIS DE LA GEMARÁ · JASUREI MEJASRA                   -->
+<!-- ============================================================ -->
+<line x1="360" y1="386" x2="360" y2="404" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-sal)"/>
+
+<text x="60" y="416" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA GEMARÁ AFILA · JASUREI MEJASRA</text>
+
+<g class="saludos-nodo" data-id="gemara">
+  <rect x="60" y="426" width="600" height="98" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="78" y="450" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="700">La kushyá y la herramienta</text>
+  <text x="642" y="450" text-anchor="end" font-size="11" direction="rtl" fill="#6b4423">מֵשִׁיב מַחֲמַת מַאי</text>
+  <text x="78" y="470" font-size="10" fill="#3d2f23">La mishná dice «y responde» sin decir POR QUÉ responde — ¿por kavod? ¿por yirá?</text>
+  <text x="78" y="492" font-size="10.5" direction="rtl" text-anchor="start" fill="#1a1410">חַסּוֹרֵי מְחַסְּרָא וְהָכִי קָתָנֵי</text>
+  <text x="78" y="512" font-size="9.5" fill="#6b4423" font-style="italic">«le falta un pedazo, y así enseña» — la mishná está incompleta: la versión completa es la tabla de abajo</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- LA TABLA · R. MEIR VS R. YEHUDA                              -->
+<!-- ============================================================ -->
+<line x1="360" y1="524" x2="360" y2="542" stroke="#3d2f23" stroke-width="1.2" marker-end="url(#flecha-sal)"/>
+
+<text x="60" y="554" font-size="9.5" fill="#1e3a5f" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA VERSIÓN COMPLETA · R. MEIR VS R. YEHUDA</text>
+
+<text x="295" y="574" text-anchor="middle" font-size="10" fill="#1e3a5f" font-weight="600">EN LOS PÉREK (puertas)</text>
+<text x="540" y="574" text-anchor="middle" font-size="10" fill="#8b1a1a" font-weight="600">EN EL MEDIO</text>
+
+<text x="115" y="618" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">R. Meir</text>
+<text x="115" y="700" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410" font-weight="700">R. Yehuda</text>
+
+<g class="saludos-nodo" data-id="meir-perek">
+  <rect x="180" y="582" width="230" height="70" rx="5" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="295" y="604" text-anchor="middle" font-size="9.5" fill="#1e3a5f">saluda → por kavod</text>
+  <text x="295" y="622" text-anchor="middle" font-size="9.5" fill="#1e3a5f">responde → por kavod</text>
+  <text x="295" y="640" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">simétrico: la misma moneda</text>
+</g>
+
+<g class="saludos-nodo" data-id="meir-medio">
+  <rect x="425" y="582" width="230" height="70" rx="5" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="540" y="604" text-anchor="middle" font-size="9.5" fill="#8b1a1a">saluda → por yirá</text>
+  <text x="540" y="622" text-anchor="middle" font-size="9.5" fill="#8b1a1a">responde → por yirá</text>
+  <text x="540" y="640" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">simétrico: solo el miedo abre</text>
+</g>
+
+<g class="saludos-nodo" data-id="yehuda-perek">
+  <rect x="180" y="664" width="230" height="70" rx="5" fill="rgba(30,58,95,0.08)" stroke="#1e3a5f" stroke-width="1.2"/>
+  <text x="295" y="686" text-anchor="middle" font-size="9.5" fill="#1e3a5f">saluda → por kavod</text>
+  <text x="295" y="704" text-anchor="middle" font-size="9.5" fill="#b8860b" font-weight="600">responde → shalom A CUALQUIERA</text>
+  <text x="295" y="722" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la puerta más abierta de la tabla</text>
+</g>
+
+<g class="saludos-nodo" data-id="yehuda-medio">
+  <rect x="425" y="664" width="230" height="70" rx="5" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.2"/>
+  <text x="540" y="686" text-anchor="middle" font-size="9.5" fill="#8b1a1a">saluda → por yirá</text>
+  <text x="540" y="704" text-anchor="middle" font-size="9.5" fill="#1e3a5f">responde → por kavod</text>
+  <text x="540" y="722" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">responder es más leve que iniciar</text>
+</g>
+
+<text x="360" y="756" text-anchor="middle" font-size="9.5" fill="#6b4423" font-style="italic">R. Yehuda abre cada casilla un grado más · la halajá práctica sigue su escala</text>
+
+<!-- ============================================================ -->
+<!-- HALLEL Y MEGUILÁ                                             -->
+<!-- ============================================================ -->
+<line x1="360" y1="766" x2="360" y2="784" stroke="#1e6b5a" stroke-width="1.2" marker-end="url(#flecha-sal)"/>
+
+<text x="60" y="796" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">¿Y EL HALLEL? ¿Y LA MEGUILÁ? · 14A</text>
+
+<g class="saludos-nodo" data-id="hallel">
+  <rect x="60" y="806" width="192" height="112" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="156" y="828" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">Ajai pregunta a R. Jiya</text>
+  <text x="156" y="850" text-anchor="middle" font-size="10" direction="rtl" fill="#1e6b5a">פּוֹסֵק וְאֵין בְּכָךְ כְּלוּם</text>
+  <text x="156" y="868" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«se interrumpe y no pasa nada»</text>
+  <text x="156" y="888" text-anchor="middle" font-size="8.5" fill="#3d2f23">¿pesa más el pirsumei nisá</text>
+  <text x="156" y="902" text-anchor="middle" font-size="8.5" fill="#3d2f23">que el shema deoraita? — no</text>
+</g>
+
+<g class="saludos-nodo" data-id="rabba">
+  <rect x="264" y="806" width="192" height="112" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="360" y="828" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">Rabba gradúa</text>
+  <text x="360" y="850" text-anchor="middle" font-size="8.5" fill="#3d2f23">días de hallel COMPLETO →</text>
+  <text x="360" y="864" text-anchor="middle" font-size="8.5" fill="#1e3a5f" font-style="italic">solo entre pérek y pérek</text>
+  <text x="360" y="884" text-anchor="middle" font-size="8.5" fill="#3d2f23">días de hallel PARCIAL →</text>
+  <text x="360" y="898" text-anchor="middle" font-size="8.5" fill="#8b1a1a" font-style="italic">hasta en el medio</text>
+</g>
+
+<g class="saludos-nodo" data-id="ravina">
+  <rect x="468" y="806" width="192" height="112" rx="6" fill="rgba(30,107,90,0.08)" stroke="#1e6b5a" stroke-width="1.2"/>
+  <text x="564" y="828" text-anchor="middle" font-size="10" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1e6b5a" font-weight="700">Ravina no interrumpió</text>
+  <text x="564" y="850" text-anchor="middle" font-size="10" direction="rtl" fill="#1e6b5a">דְּלָא חֲשִׁיב עֲלֵיהּ</text>
+  <text x="564" y="868" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">«no le parecía importante»</text>
+  <text x="564" y="888" text-anchor="middle" font-size="8.5" fill="#3d2f23">no saludó a Rav bar Shaba:</text>
+  <text x="564" y="902" text-anchor="middle" font-size="8.5" fill="#3d2f23">el kavod, cada uno lo acuña</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- MINIATURA · EL QUE AYUNA                                     -->
+<!-- ============================================================ -->
+<line x1="360" y1="918" x2="360" y2="936" stroke="#1e6b5a" stroke-width="1.2" marker-end="url(#flecha-sal)"/>
+
+<text x="60" y="948" font-size="9.5" fill="#1e6b5a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">MINIATURA · EL QUE AYUNA PRUEBA EL GUISO</text>
+
+<g class="saludos-nodo" data-id="taanit">
+  <rect x="60" y="958" width="600" height="94" rx="6" fill="rgba(30,107,90,0.07)" stroke="#1e6b5a" stroke-width="1.3" stroke-dasharray="5,2"/>
+  <text x="360" y="982" text-anchor="middle" font-size="11" direction="rtl" fill="#1a1410">הַשָּׁרוּי בְּתַעֲנִית מַהוּ שֶׁיִּטְעוֹם — טוֹעֵם וְאֵין בְּכָךְ כְּלוּם</text>
+  <text x="360" y="1002" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«El que está en ayuno, ¿puede probar? — prueba y no pasa nada»</text>
+  <text x="360" y="1022" text-anchor="middle" font-size="9" fill="#3d2f23">aceptó no comer ni beber — no aceptó «no saborear» · R. Ami y R. Asi probaban hasta un reviit</text>
+  <text x="360" y="1040" text-anchor="middle" font-size="8.5" fill="#1e6b5a" font-style="italic">el ayuno, como el shema, tiene bordes más porosos de lo que parece</text>
+</g>
+
+</svg>
+</div>
+
+<div class="saludos-panel" id="saludos-panel">
+  <p class="saludos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'banda': {
+      titulo: 'La banda del shema · el mapa de permeabilidad',
+      hebreo: 'בֵּין הַפְּרָקִים',
+      traduccion: 'Entre los pérek — las junturas del shema',
+      explicacion: 'El shema no es un bloque monolítico: es una BANDA de seis secciones — las dos berajot previas, los tres párrafos bíblicos (שמע, והיה אם שמוע, ויאמר) y la berajá de cierre (אמת ויציב). Entre sección y sección hay JUNTURAS: los bein haperakim, dibujados aquí como puertas doradas.\n\nLa mishná legisla el shema como espacio SOCIAL. Mientras uno recita, la vida sigue pasando alrededor: pasa el maestro, pasa el poderoso, pasa cualquiera. ¿Se puede abrir la declaración de fe para saludar? La respuesta no es sí o no — es un MAPA: depende de DÓNDE estás parado (en una puerta o en el medio de una sección) y de QUIÉN pasa (alguien que merece kavod o alguien que inspira yirá).\n\nLa metáfora de la permeabilidad captura la lógica: las puertas doradas son los puntos DÉBILES de la banda, donde la continuidad ya está naturalmente interrumpida — ahí basta el respeto para abrir. El interior de cada sección es territorio SELLADO — ahí solo el miedo real justifica romper.\n\nEsta arquitectura convierte al recitador en guardián de fronteras: recitar el shema es también saber dónde están sus puertas.'
+    },
+    'mishna': {
+      titulo: 'La mishná · las dos monedas',
+      hebreo: 'בַּפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד וּמֵשִׁיב · וּבָאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה',
+      traduccion: '«En los pérek saluda por el kavod y responde · y en el medio saluda por la yirá»',
+      explicacion: 'La mishná 2:1 cruza dos variables: la POSICIÓN (en los pérek / en el medio) y el MOTIVO (kavod / yirá). El resultado son dos monedas de distinto valor:\n\n  · KAVOD (כָּבוֹד) — el respeto debido al maestro, al mayor, al digno. Es la moneda social ORDINARIA: vale en las puertas, no en el interior.\n\n  · YIRÁ (יִרְאָה) — el miedo a quien puede dañarte (el poderoso, el violento). Es la moneda de EMERGENCIA: vale en todas partes, incluso en el medio de una sección.\n\nLa jerarquía es elegante: cuanto más adentro del shema estás, más cara es la entrada. En las junturas, el tejido social común (saludar al maestro) ya justifica abrir. En el corazón de un párrafo, solo el peligro real.\n\nY nótese lo que la mishná NO dice: no dice que el shema sea impermeable. El saludo — la moneda mínima de la vida comunitaria — SÍ pesa frente a la declaración de fe. La halajá no encierra al recitador en una burbuja: lo hace negociar, verso a verso, entre el Cielo y la calle.'
+    },
+    'gemara': {
+      titulo: 'La gemará afila · jasurei mejasra',
+      hebreo: 'מֵשִׁיב מַחֲמַת מַאי · חַסּוֹרֵי מְחַסְּרָא וְהָכִי קָתָנֵי',
+      traduccion: '«¿Responde por qué motivo? · Le falta un pedazo, y así enseña»',
+      explicacion: 'La gemará lee la mishná con lupa y encuentra un hueco: la mishná dice que en los pérek uno «saluda por el kavod Y RESPONDE» — pero ¿responde POR QUÉ? (מֵשִׁיב מַחֲמַת מַאי). ¿Por kavod? Entonces es redundante: si puede INICIAR un saludo por kavod, obvio que puede responderlo. ¿La mishná gasta palabras en obviedades?\n\nLa solución es una de las herramientas más características (y más audaces) del Bavlí: חַסּוֹרֵי מְחַסְּרָא וְהָכִי קָתָנֵי — «le falta un pedazo, y así es como enseña». La mishná que tenemos es una versión COMPRIMIDA de una enseñanza más completa. La gemará reconstruye el texto pleno: una tabla de cuatro casillas (saludar/responder × pérek/medio) con una disputa entre R. Meir y R. Yehuda adentro.\n\nLa audacia del método merece pausa: la gemará prefiere declarar INCOMPLETO el texto canónico antes que aceptarle una redundancia. El supuesto de fondo es el mismo que rige todo el Talmud: los tanaím no gastan palabras. Si la superficie parece trivial, el texto está comprimido — y descomprimirlo es el trabajo del estudio.'
+    },
+    'meir-perek': {
+      titulo: 'R. Meir · en los pérek',
+      hebreo: 'בַּפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד וּמֵשִׁיב מִפְּנֵי הַכָּבוֹד',
+      traduccion: 'En los pérek: saluda por kavod y responde por kavod',
+      explicacion: 'La primera casilla de la tabla reconstruida. Para R. Meir, en las puertas del shema rige UNA sola moneda: el kavod. Se saluda por respeto y se responde por respeto — la misma vara para iniciar y para devolver.\n\nEl sistema de R. Meir es SIMÉTRICO: el motivo que permite entrar al shema no depende de si uno inicia o responde. Lo que importa es la posición (puerta vs. medio) y el rango del que pasa. La gemará señala que la segunda mitad es casi obvia — si puedes iniciar por kavod, puedes responder por kavod — y justamente esa obviedad es lo que empujó a leer la mishná como incompleta: la mishná solo se molesta en decirlo para CONTRASTAR con R. Yehuda, que en esta misma casilla abre mucho más la puerta.'
+    },
+    'meir-medio': {
+      titulo: 'R. Meir · en el medio',
+      hebreo: 'וּבָאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה וּמֵשִׁיב מִפְּנֵי הַיִּרְאָה',
+      traduccion: 'En el medio: saluda por yirá y responde por yirá',
+      explicacion: 'La casilla más CERRADA de toda la tabla. En el interior de una sección, para R. Meir, solo funciona la moneda de emergencia: la yirá. Se saluda al que inspira miedo y se responde al que inspira miedo — y a nadie más. Ni el maestro más venerado abre el medio del shema.\n\nDe nuevo la simetría meirista: iniciar y responder cuestan lo mismo. El shema en su interior es casi inviolable — solo el peligro físico real lo perfora.\n\nLa lógica de fondo: el medio de un párrafo es una unidad de sentido en curso. Cortarla por cortesía sería subordinar la declaración de fe a la etiqueta social. Cortarla por peligro, en cambio, no es subordinación — es supervivencia, y la Torá misma ordena vivir por sus mandamientos, no morir por un saludo no respondido.'
+    },
+    'yehuda-medio': {
+      titulo: 'R. Yehuda · en el medio',
+      hebreo: 'בָּאֶמְצַע שׁוֹאֵל מִפְּנֵי הַיִּרְאָה וּמֵשִׁיב מִפְּנֵי הַכָּבוֹד',
+      traduccion: 'En el medio: saluda por yirá y responde por kavod',
+      explicacion: 'Aquí aparece la innovación de R. Yehuda: la ASIMETRÍA entre iniciar y responder. En el medio de una sección, para INICIAR un saludo hace falta yirá (igual que R. Meir). Pero para RESPONDER basta el kavod.\n\nEl principio: responder siempre es más leve que iniciar. Quien inicia un saludo ROMPE activamente su recitación — elige interrumpir. Quien responde ya fue interrumpido por otro: el saludo llegó de afuera, y devolverlo es el mínimo decoro que la convivencia exige. Dejar a un maestro con el saludo en el aire es una herida al kavod que ni el shema justifica.\n\nR. Yehuda abre así la puerta un grado más en cada posición, y la halajá práctica sigue SU escala: en el medio se responde al que merece respeto, aunque no se le saludaría primero.'
+    },
+    'yehuda-perek': {
+      titulo: 'R. Yehuda · en los pérek · shalom a cualquiera',
+      hebreo: 'וּבַפְּרָקִים שׁוֹאֵל מִפְּנֵי הַכָּבוֹד וּמֵשִׁיב שָׁלוֹם לְכׇל אָדָם',
+      traduccion: 'En los pérek: saluda por kavod y responde shalom a cualquier persona',
+      explicacion: 'La casilla más ABIERTA de la tabla — y la joya del sistema de R. Yehuda. En las puertas del shema, se inicia el saludo por kavod (como R. Meir), pero se responde שָׁלוֹם לְכׇל אָדָם — a CUALQUIERA. No hace falta que el que saluda sea maestro, mayor o poderoso: si un ser humano cualquiera te dirige el saludo en una juntura del shema, se le devuelve.\n\nLa combinación de las dos variables de R. Yehuda produce una escala de cuatro peldaños: iniciar en el medio (solo yirá) → responder en el medio (kavod) → iniciar en el pérek (kavod) → responder en el pérek (cualquiera). Cada paso hacia afuera y hacia la pasividad abarata la entrada.\n\nEn el peldaño más bajo, el shema toca su borde más humano: en sus puertas, la declaración de fe no está por encima de devolverle el shalom al más anónimo de los transeúntes. El shalom — que es también un nombre de HKBH — nunca queda sin respuesta.'
+    },
+    'hallel': {
+      titulo: 'Ajai pregunta a R. Jiya · ¿se interrumpe el hallel?',
+      hebreo: 'פּוֹסֵק וְאֵין בְּכָךְ כְּלוּם',
+      traduccion: '«Se interrumpe y no pasa nada»',
+      explicacion: 'En 14a la sugyá extiende el mapa de permeabilidad a otros textos litúrgicos. Ajai le pregunta a R. Jiya: ¿se puede interrumpir el HALLEL para saludar?\n\nLa pregunta tiene dos direcciones posibles: (1) KAL VAJOMER desde el shema — si el shema, que es deoraita (obligación de la Torá), se interrumpe por kavod, el hallel (derrabanán) con más razón. (2) O al revés: quizás el hallel pesa MÁS, porque es פִּרְסוּמֵי נִיסָּא — publicación del milagro — y ese acto público de proclamación no tolera cortes.\n\nR. Jiya responde sin dramatismo: פּוֹסֵק וְאֵין בְּכָךְ כְּלוּם — «se interrumpe y no pasa nada». El pirsumei nisá no blinda al hallel por encima del shema. La misma respuesta vale para la meguilá, que comparte la lógica del milagro publicado.\n\nLa fórmula «y no pasa nada» es casi displicente — y esa displicencia es el mensaje: la interrupción legislada no es una catástrofe ritual. El mapa de puertas no protege una fragilidad; administra una convivencia.'
+    },
+    'rabba': {
+      titulo: 'Rabba gradúa · hallel completo vs hallel parcial',
+      hebreo: 'יָמִים שֶׁהַיָּחִיד גּוֹמֵר בָּהֶן אֶת הַהַלֵּל',
+      traduccion: 'Los días en que el individuo completa el hallel',
+      explicacion: 'Rabba refina la respuesta de R. Jiya con una distinción que el calendario ya conocía: no todos los hallel son iguales.\n\n  · Los días en que el individuo COMPLETA el hallel (los primeros días de Pésaj, Shavuot, Sucot, Janucá): el hallel funciona como el shema — solo se interrumpe ENTRE pérek y pérek, en las puertas.\n\n  · Los días en que NO se completa (el hallel «saltado» de Rosh Jodesh y los últimos días de Pésaj): se puede interrumpir HASTA EN EL MEDIO.\n\nLa lógica es hermosa: un hallel que el propio rito ya recita con saltos — con párrafos omitidos — es un texto de permeabilidad TOTAL: sus paredes ya vienen perforadas de fábrica, y una interrupción más no cambia su naturaleza. El hallel completo, en cambio, es una unidad íntegra como el shema, y hereda su mapa de puertas.\n\nEl principio general que emerge: la rigidez de un texto litúrgico frente a las interrupciones es proporcional a la OBLIGATORIEDAD Y COMPLETITUD con que se recita. La estructura interna del rito dicta su frontera externa.'
+    },
+    'ravina': {
+      titulo: 'Ravina y Rav bar Shaba · el kavod es una moneda que cada uno acuña',
+      hebreo: 'דְּלָא חֲשִׁיב עֲלֵיהּ',
+      traduccion: '«Porque no era importante para él»',
+      explicacion: 'La sugyá cierra la sección con una anécdota reveladora. Ravina estaba recitando (en los días de hallel parcial, cuando incluso el medio es permeable) y Rav bar Shaba pasó frente a él. Ravina NO lo saludó.\n\nLa gemará explica: דְּלָא חֲשִׁיב עֲלֵיהּ — Rav bar Shaba «no era importante para él»; a los ojos de Ravina no alcanzaba el rango que activa la obligación de kavod.\n\nEl detalle parece un chisme académico, pero encierra una tesis: el KAVOD NO ES OBJETIVO. La tabla de R. Meir y R. Yehuda define cuándo la moneda del respeto abre las puertas del shema — pero quién MERECE esa moneda lo decide, en cada caso, el que recita. El kavod es una moneda que cada uno acuña.\n\nLa halajá dibuja el mapa; la evaluación del transeúnte queda en manos del recitador. Entre la norma general y el saludo concreto siempre media un juicio personal — y el Talmud, al registrar la no-reverencia de Ravina sin censurarla, valida ese espacio de discreción.'
+    },
+    'taanit': {
+      titulo: 'Miniatura · el que ayuna prueba el guiso',
+      hebreo: 'הַשָּׁרוּי בְּתַעֲנִית מַהוּ שֶׁיִּטְעוֹם — טוֹעֵם וְאֵין בְּכָךְ כְּלוּם',
+      traduccion: '«El que está en ayuno, ¿puede probar? — Prueba y no pasa nada»',
+      explicacion: 'En la misma serie de preguntas dirigidas a los tanaím recitadores aparece esta miniatura, aparentemente fuera de tema: ¿el que está en TAANIT (ayuno) puede PROBAR el guiso que cocina — saborear sin tragar?\n\nLa respuesta repite la fórmula exacta del hallel: טוֹעֵם וְאֵין בְּכָךְ כְּלוּם — «prueba y no pasa nada». El razonamiento: el que aceptó un ayuno aceptó NO COMER NI BEBER — es decir, no ingerir, no obtener el sustento y el placer de la ingestión. No aceptó «no saborear». Probar y escupir no viola el voto porque el voto nunca cubrió el sabor.\n\nY no es teoría de laboratorio: R. Ami y R. Asi — amoraím de primera línea — probaban hasta un REVIIT (un cuarto de log) en sus ayunos.\n\nLa miniatura no está fuera de tema: es el mismo teorema con otras variables. El ayuno, como el shema y como el hallel, parece un bloque absoluto — y el análisis rabínico le encuentra los BORDES POROSOS: los puntos exactos donde la obligación termina y la vida vuelve a pasar. Definir una obligación es, siempre, trazar su mapa de permeabilidad.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.saludos-interactivo')
+    : document.querySelector('.saludos-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#saludos-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.saludos-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="saludos-panel-header">' +
+        '<p class="saludos-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="saludos-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="saludos-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="saludos-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.saludos-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.saludos-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="saludos-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
