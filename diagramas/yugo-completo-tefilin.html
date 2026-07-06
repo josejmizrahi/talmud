@@ -1,0 +1,306 @@
+<div class="yugo-interactivo">
+<style>
+  .yugo-interactivo {
+    font-family: 'Frank Ruhl Libre', Georgia, serif;
+  }
+  .yugo-leyenda {
+    display: flex;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--sepia);
+  }
+  .yugo-leyenda .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 6px;
+    vertical-align: -2px;
+    border: 1px solid;
+  }
+  .yugo-leyenda .dorado { background: rgba(184,134,11,0.16); border-color: var(--dorado); }
+  .yugo-leyenda .rojo   { background: rgba(139,26,26,0.12);  border-color: var(--rojo); }
+  .yugo-leyenda .azul   { background: rgba(30,58,95,0.12);   border-color: var(--azul); }
+  .yugo-leyenda .verde  { background: rgba(30,107,90,0.12);  border-color: var(--verde); }
+  .yugo-leyenda .sepia  { background: rgba(107,68,35,0.10);  border-color: var(--sepia); }
+  .yugo-diagrama svg { width: 100%; height: auto; display: block; }
+  .yugo-nodo { cursor: pointer; transition: opacity 0.2s; }
+  .yugo-nodo:hover rect { stroke-width: 2 !important; }
+  .yugo-nodo.activa rect { stroke-width: 2.5 !important; }
+  .yugo-nodo.dim { opacity: 0.32; }
+  .yugo-panel {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--pergamino-sombra);
+    border-left: 3px solid var(--dorado);
+    min-height: 130px;
+  }
+  .yugo-panel-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem;
+  }
+  .yugo-panel-titulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 1.3rem;
+    color: var(--tinta); margin: 0;
+  }
+  .yugo-panel-hebreo {
+    direction: rtl; font-size: 1.05rem; color: var(--sepia);
+  }
+  .yugo-panel-traduccion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; color: var(--tinta-suave);
+    font-size: 0.95rem; margin-bottom: 0.75rem;
+  }
+  .yugo-panel-explicacion {
+    font-size: 0.98rem; line-height: 1.65;
+    color: var(--tinta); margin-bottom: 0;
+  }
+  .yugo-vacio {
+    color: var(--sepia); font-style: italic;
+    font-size: 0.95rem; margin: 0;
+  }
+</style>
+
+<div class="yugo-leyenda">
+  <span style="font-weight: 500;">Click en cualquier nodo:</span>
+  <span><span class="swatch sepia"></span>el orden de Rav · el mensajero</span>
+  <span><span class="swatch rojo"></span>testimonio falso · korban mutilado</span>
+  <span><span class="swatch dorado"></span>la secuencia completa · maljut shamayim shlemá</span>
+  <span><span class="swatch azul"></span>los pesukim</span>
+  <span><span class="swatch verde"></span>agua · tierra · piedra</span>
+</div>
+
+<div class="yugo-diagrama">
+<svg viewBox="0 0 720 960" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Berajot 14b-15a: la secuencia de la mañana · shema sin tefilín es testimonio falso · la maljut shamayim shlemá · el mizbeaj doméstico</title>
+
+<defs>
+  <marker id="flecha-yu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3d2f23"/>
+  </marker>
+  <marker id="flecha-yu-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+  </marker>
+</defs>
+
+<!-- TÍTULO -->
+<text x="360" y="28" text-anchor="middle" font-size="17" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#1a1410">El yugo completo · la secuencia de la mañana</text>
+<text x="360" y="48" text-anchor="middle" font-size="11.5" fill="#6b4423">Berajot 14b-15a · shema sin tefilín es testimonio falso — y la mañana entera como servicio del mizbeaj</text>
+
+<!-- ============================================================ -->
+<!-- EL ORDEN DE RAV · LA BARAITA · EL MENSAJERO                  -->
+<!-- ============================================================ -->
+<text x="60" y="76" font-size="9.5" fill="#6b4423" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL ORDEN DE RAV · 14B · LA BARAITA DEL QUE CAVA LA TUMBA</text>
+
+<g class="yugo-nodo" data-id="orden-rav">
+  <rect x="60" y="86" width="600" height="136" rx="6" fill="rgba(107,68,35,0.07)" stroke="#6b4423" stroke-width="1.4"/>
+  <text x="360" y="110" text-anchor="middle" font-size="11.5" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#6b4423" font-weight="700">Rav · ¿shema antes que tefilín?</text>
+  <text x="360" y="130" text-anchor="middle" font-size="10" fill="#3d2f23">se lavó las manos → leyó el <tspan font-weight="600">shema</tspan> → se puso <tspan font-weight="600">tefilín</tspan> → rezó</text>
+  <text x="360" y="148" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">pero la baraita del que cava una tumba ordena al revés: sube, se lava, se pone TEFILÍN, lee el shema</text>
+  <text x="360" y="172" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">שְׁלוּחָא הוּא דְּעַוֵּית</text>
+  <text x="360" y="192" text-anchor="middle" font-size="10" fill="#3d2f23" font-style="italic">«fue el mensajero el que falló» — se retrasó con los tefilín de Rav; el zman no espera</text>
+  <text x="360" y="210" text-anchor="middle" font-size="9" fill="#6b4423" font-style="italic">la halajá ideal cede ante la logística — pero deja registrada la jerarquía: primero tefilín, después shema</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- EL PRECIO DE LA OMISIÓN · ULA Y R. JIYA BAR ABA              -->
+<!-- ============================================================ -->
+<line x1="360" y1="222" x2="360" y2="240" stroke="#8b1a1a" stroke-width="1.2" marker-end="url(#flecha-yu)"/>
+
+<text x="60" y="252" font-size="9.5" fill="#8b1a1a" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">EL PRECIO DE LA OMISIÓN · DOS VEREDICTOS</text>
+
+<!-- Ula -->
+<g class="yugo-nodo" data-id="testimonio-falso">
+  <rect x="60" y="262" width="290" height="140" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="205" y="284" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">Ula · testimonio falso</text>
+  <text x="205" y="306" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע בְּלֹא תְּפִילִּין</text>
+  <text x="205" y="324" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">כְּאִילּוּ מֵעִיד עֵדוּת שֶׁקֶר בְּעַצְמוֹ</text>
+  <text x="205" y="344" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«quien lee el shema sin tefilín —</text>
+  <text x="205" y="358" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">como si diera testimonio falso contra sí mismo»</text>
+  <text x="205" y="378" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">la boca dice «y los atarás» · el brazo está desnudo</text>
+</g>
+
+<!-- R. Jiya bar Aba -->
+<g class="yugo-nodo" data-id="korban-mutilado">
+  <rect x="370" y="262" width="290" height="140" rx="6" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.4"/>
+  <text x="515" y="284" text-anchor="middle" font-size="11" font-family="'Cormorant Garamond', serif" font-style="italic" fill="#8b1a1a" font-weight="700">R. Jiya bar Aba · korban mutilado</text>
+  <text x="515" y="306" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">כְּאִילּוּ הִקְרִיב עוֹלָה בְּלֹא מִנְחָה</text>
+  <text x="515" y="324" text-anchor="middle" font-size="10.5" direction="rtl" fill="#8b1a1a">וְזֶבַח בְּלֹא נְסָכִים</text>
+  <text x="515" y="344" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">«como si ofreciera una olá sin minjá</text>
+  <text x="515" y="358" text-anchor="middle" font-size="9" fill="#3d2f23" font-style="italic">y un zevaj sin nesajim»</text>
+  <text x="515" y="378" text-anchor="middle" font-size="8.5" fill="#6b4423" font-style="italic">beshem R. Yojanan · válido pero mutilado</text>
+</g>
+
+<!-- convergencia hacia el nodo central -->
+<line x1="205" y1="402" x2="205" y2="420" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-yu-gold)"/>
+<line x1="515" y1="402" x2="515" y2="420" stroke="#b8860b" stroke-width="1" marker-end="url(#flecha-yu-gold)"/>
+<line x1="205" y1="420" x2="515" y2="420" stroke="#b8860b" stroke-width="1"/>
+<line x1="360" y1="420" x2="360" y2="434" stroke="#b8860b" stroke-width="1.4" marker-end="url(#flecha-yu-gold)"/>
+
+<!-- ============================================================ -->
+<!-- EL NODO CENTRAL · LA SECUENCIA DE 5 PASOS                    -->
+<!-- ============================================================ -->
+<text x="60" y="448" font-size="9.5" fill="#b8860b" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">LA MALJUT SHAMAYIM SHLEMÁ · R. YOJANAN · LA SECUENCIA DE 5 PASOS</text>
+
+<g class="yugo-nodo" data-id="secuencia">
+  <rect x="60" y="458" width="600" height="280" rx="6" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="2"/>
+  <text x="360" y="484" text-anchor="middle" font-size="12.5" direction="rtl" fill="#1a1410">הָרוֹצֶה שֶׁיְּקַבֵּל עָלָיו עוֹל מַלְכוּת שָׁמַיִם שְׁלֵמָה</text>
+  <text x="360" y="502" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«el que quiera aceptar sobre sí el yugo del Reino de los Cielos COMPLETO»</text>
+
+  <!-- la cadena de 5 pasos -->
+  <rect x="70" y="516" width="100" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="120" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423">1</text>
+  <text x="120" y="551" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">יִפָּנֶה</text>
+  <text x="120" y="568" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">evacuar</text>
+  <line x1="170" y1="547" x2="190" y2="547" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yu-gold)"/>
+
+  <rect x="190" y="516" width="100" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="240" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423">2</text>
+  <text x="240" y="551" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְיִטּוֹל יָדָיו</text>
+  <text x="240" y="568" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">lavarse las manos</text>
+  <line x1="290" y1="547" x2="310" y2="547" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yu-gold)"/>
+
+  <rect x="310" y="516" width="100" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="360" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423">3</text>
+  <text x="360" y="551" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְיַנִּיחַ תְּפִילִּין</text>
+  <text x="360" y="568" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">ponerse tefilín</text>
+  <line x1="410" y1="547" x2="430" y2="547" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yu-gold)"/>
+
+  <rect x="430" y="516" width="100" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="480" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423">4</text>
+  <text x="480" y="551" text-anchor="middle" font-size="9.5" direction="rtl" fill="#1a1410">וְיִקְרָא קְרִיאַת שְׁמַע</text>
+  <text x="480" y="568" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">leer el shema</text>
+  <line x1="530" y1="547" x2="550" y2="547" stroke="#b8860b" stroke-width="1.2" marker-end="url(#flecha-yu-gold)"/>
+
+  <rect x="550" y="516" width="100" height="62" rx="4" fill="rgba(184,134,11,0.10)" stroke="#b8860b" stroke-width="1"/>
+  <text x="600" y="534" text-anchor="middle" font-size="8.5" fill="#6b4423">5</text>
+  <text x="600" y="551" text-anchor="middle" font-size="10.5" direction="rtl" fill="#1a1410">וְיִתְפַּלֵּל</text>
+  <text x="600" y="568" text-anchor="middle" font-size="8.5" fill="#3d2f23" font-style="italic">rezar la tefilá</text>
+
+  <text x="360" y="600" text-anchor="middle" font-size="12" direction="rtl" fill="#b8860b" font-weight="600">= מַלְכוּת שָׁמַיִם שְׁלֵמָה</text>
+
+  <!-- el premio -->
+  <text x="360" y="626" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1a1410">כְּאִילּוּ בָּנָה מִזְבֵּחַ וְהִקְרִיב עָלָיו קָרְבָּן</text>
+  <text x="360" y="644" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«la Escritura se lo cuenta como si construyera un mizbeaj y ofrendara sobre él un korban»</text>
+
+  <!-- el pasuk (azul) -->
+  <text x="360" y="668" text-anchor="middle" font-size="11.5" direction="rtl" fill="#1e3a5f">אֶרְחַץ בְּנִקָּיוֹן כַּפָּי וַאֲסוֹבְבָה אֶת מִזְבַּחֲךָ ה׳</text>
+  <text x="360" y="686" text-anchor="middle" font-size="9.5" fill="#1e3a5f" font-style="italic">«lavaré en pureza mis manos y rodearé Tu mizbeaj, HaShem» (Tehilim 26:6)</text>
+
+  <text x="360" y="708" text-anchor="middle" font-size="9.5" fill="#3d2f23">Rava: como si <tspan font-weight="600">se sumergiera entero</tspan> — dice אֶרְחַץ (me lavaré), no אַרְחִיץ כַּפָּי (lavaré mis manos)</text>
+  <text x="360" y="726" text-anchor="middle" font-size="9" fill="#b8860b" font-style="italic">la mañana entera como servicio del Templo · el cuerpo como instrumento litúrgico</text>
+</g>
+
+<!-- ============================================================ -->
+<!-- SIN AGUA · TIERRA, PIEDRA, ASTILLA · RAV JISDA               -->
+<!-- ============================================================ -->
+<line x1="360" y1="738" x2="360" y2="756" stroke="#2d6b4e" stroke-width="1.2" marker-end="url(#flecha-yu)"/>
+
+<text x="60" y="768" font-size="9.5" fill="#2d6b4e" font-family="'JetBrains Mono', monospace" letter-spacing="1.5">SIN AGUA · RAVINA Y RAV JISDA · 15A</text>
+
+<g class="yugo-nodo" data-id="sin-agua">
+  <rect x="60" y="778" width="600" height="164" rx="6" fill="rgba(30,107,90,0.07)" stroke="#2d6b4e" stroke-width="1.4"/>
+  <text x="360" y="802" text-anchor="middle" font-size="12" direction="rtl" fill="#1a1410">מְקַנֵּחַ יָדָיו בְּעָפָר וּבִצְרוֹר וּבְקִסְמִית</text>
+  <text x="360" y="820" text-anchor="middle" font-size="9.5" fill="#3d2f23" font-style="italic">«limpia sus manos con tierra, con piedra o con astilla» — la enseñanza de Occidente (Ravina)</text>
+  <text x="360" y="840" text-anchor="middle" font-size="9.5" fill="#3d2f23">Rava: ¿acaso dice «me lavaré <tspan font-weight="600">con agua</tspan>»? — בְּנִקָּיוֹן: <tspan font-weight="600">con todo lo que limpie</tspan></text>
+
+  <rect x="80" y="854" width="270" height="70" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="215" y="874" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">para el shema</text>
+  <text x="215" y="892" text-anchor="middle" font-size="9" fill="#3d2f23">no se sale a buscar agua —</text>
+  <text x="215" y="906" text-anchor="middle" font-size="9" fill="#3d2f23">el zman corre; limpia con lo que haya</text>
+
+  <rect x="370" y="854" width="270" height="70" rx="4" fill="rgba(30,107,90,0.05)" stroke="#2d6b4e" stroke-width="0.9"/>
+  <text x="505" y="874" text-anchor="middle" font-size="10" fill="#2d6b4e" font-weight="600">para la tefilá</text>
+  <text x="505" y="892" text-anchor="middle" font-size="9" fill="#3d2f23">se busca hasta una parsá adelante,</text>
+  <text x="505" y="906" text-anchor="middle" font-size="9" fill="#3d2f23">un mil atrás — pero Rav Jisda maldecía al que se retrasaba</text>
+</g>
+
+</svg>
+</div>
+
+<div class="yugo-panel" id="yugo-panel">
+  <p class="yugo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>
+</div>
+
+<script>
+(function() {
+  var datos = {
+    'orden-rav': {
+      titulo: 'El orden de Rav · el mensajero que se retrasó',
+      hebreo: 'שְׁלוּחָא הוּא דְּעַוֵּית',
+      traduccion: '«Fue el mensajero el que falló» — se retrasó con los tefilín de Rav',
+      explicacion: 'El testimonio sobre Rav parece inocente: se lavó las manos, LEYÓ EL SHEMA, se puso TEFILÍN y rezó. Pero el orden choca con una baraita — la del que cava una tumba para un muerto y llega el momento del shema: SUBE del pozo, se lava las manos, se pone TEFILÍN, y recién entonces lee el shema y reza. La baraita pone los tefilín ANTES del shema; Rav los puso después. ¿Contradicción con el gran amora?\n\nLa resolución de la guemará es de una humildad deliciosa: שְׁלוּחָא הוּא דְּעַוֵּית — «fue el mensajero el que falló». Los tefilín de Rav no estaban en su mano a la hora del shema: el mensajero que se los traía se retrasó. Y como el zman del shema NO espera (la ventana de las tres horas corre), Rav leyó el shema sin tefilín y se los puso apenas llegaron.\n\nLa anécdota enseña en dos direcciones:\n\n  1. LA JERARQUÍA IDEAL QUEDA REGISTRADA. El orden correcto es tefilín ANTES del shema — para que la boca que dice «y los atarás como señal» hable con el brazo ya atado (ver el nodo de Ula). Rav no disputa ese ideal; lo padece.\n\n  2. LA HALAJÁ IDEAL CEDE ANTE LA LOGÍSTICA — PERO SOLO ANTE ELLA. Rav no eligió postergar los tefilín; la circunstancia lo forzó. El zman fijo (shema) desplaza al orden preferible (tefilín primero) cuando no se pueden tener ambos. La halajá es un sistema de prioridades, no de absolutos.\n\nEl detalle del que cava la tumba tampoco es decorativo: incluso el ocupado en el jésed más urgente — enterrar a un muerto — INTERRUMPE, sube, se lava y se ordena para el shema con tefilín. Si él puede, el orden importa.'
+    },
+    'testimonio-falso': {
+      titulo: 'Ula · shema sin tefilín es testimonio falso',
+      hebreo: 'כָּל הַקּוֹרֵא קְרִיאַת שְׁמַע בְּלֹא תְּפִילִּין — כְּאִילּוּ מֵעִיד עֵדוּת שֶׁקֶר בְּעַצְמוֹ',
+      traduccion: '«Todo el que lee el shema sin tefilín — como si diera testimonio falso contra sí mismo»',
+      explicacion: 'El veredicto de Ula es de una dureza quirúrgica. El shema NO es solo una plegaria — es una DECLARACIÓN, un testimonio. Y dentro del texto que la boca recita está la frase: וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ — «y los atarás como señal sobre tu mano».\n\nAhora la escena: un hombre recita esa frase con el brazo DESNUDO. Su boca declara «los ato sobre mi mano» y su mano exhibe que no ató nada. El testigo se contradice a sí mismo EN EL ACTO de testificar. Eso es עֵדוּת שֶׁקֶר — testimonio falso.\n\nLa precisión de la frase בְּעַצְמוֹ («contra sí mismo») admite dos lecturas complementarias:\n\n  · SOBRE sí mismo: el contenido falso del testimonio es su propio cuerpo — declara atado lo que está suelto. El perjurio no es sobre un tercero sino sobre el propio brazo visible.\n\n  · CONTRA sí mismo: el testimonio falso lo perjudica a él. Nadie más resulta dañado; el que pierde es el declarante, cuya aceptación del yugo queda desmentida por su propia piel.\n\nLa lógica profunda conecta con toda la sugyá: el shema es la aceptación del עוֹל מַלְכוּת שָׁמַיִם, y una aceptación es un acto PERFORMATIVO — no basta decirla, hay que ejecutarla. Los tefilín son la ejecución física de la frase que la boca pronuncia. Sin ellos, la declaración queda en enunciado sin cuerpo: técnicamente recitada, existencialmente desmentida.\n\nNótese lo que Ula NO dice: no dice que el shema sin tefilín sea inválido ni que haya que repetirlo. El testimonio falso es una categoría MORAL, no una invalidación halájica. El shema cumple; el testigo queda en evidencia.'
+    },
+    'korban-mutilado': {
+      titulo: 'R. Jiya bar Aba · como olá sin minjá, zevaj sin nesajim',
+      hebreo: 'כְּאִילּוּ הִקְרִיב עוֹלָה בְּלֹא מִנְחָה וְזֶבַח בְּלֹא נְסָכִים',
+      traduccion: '«Como si ofreciera una olá sin su minjá y un zevaj sin sus nesajim» — R. Jiya bar Aba beshem R. Yojanan',
+      explicacion: 'R. Jiya bar Aba, en nombre de R. Yojanan, da el segundo veredicto sobre el que lee el shema sin tefilín — y el registro cambia por completo. Donde Ula usó el lenguaje del TRIBUNAL (testimonio, perjurio), R. Yojanan usa el lenguaje del TEMPLO.\n\nLa olá (ofrenda de ascensión) venía acompañada de su minjá — la oblación de harina y aceite que la Torá le asigna. El zevaj (sacrificio animal) venía con sus nesajim — las libaciones de vino. Un korban ofrecido sin sus acompañamientos es un korban REAL pero MUTILADO: sube al mizbeaj, cumple, pero le falta la mitad que la Torá le diseñó.\n\nEsa es exactamente la anatomía del shema sin tefilín:\n\n  · NO es nulo — como la olá sin minjá no es nula. El shema recitado cumple la mitzvá de recitarlo.\n  · PERO está incompleto — le falta el acompañamiento corporal que su propio texto exige.\n  · Y la falta NO es accesoria: minjá y nesajim no son adorno del korban, son parte de su definición completa. Los tefilín no son adorno del shema — son su mitad ejecutada.\n\nLa elección de la metáfora prepara el nodo central: si el shema mutilado es un KORBAN defectuoso, entonces el shema completo — con sus cinco pasos — es un korban ENTERO. R. Yojanan está construyendo el vocabulario sacrificial que culminará en «como si construyera un mizbeaj y ofrendara sobre él» (Tehilim 26:6).\n\nLos dos veredictos — el forense de Ula y el litúrgico de R. Yojanan — dicen lo mismo con imágenes distintas: la omisión del tefilín no anula el acto, lo DESFIGURA. La mitzvá a medias no es media mitzvá — es una mitzvá entera con una herida visible.'
+    },
+    'secuencia': {
+      titulo: 'La secuencia de 5 pasos · la maljut shamayim shlemá',
+      hebreo: 'יִפָּנֶה, וְיִטּוֹל יָדָיו, וְיַנִּיחַ תְּפִילִּין, וְיִקְרָא קְרִיאַת שְׁמַע, וְיִתְפַּלֵּל — וְזוֹ הִיא מַלְכוּת שָׁמַיִם שְׁלֵמָה',
+      traduccion: '«Que evacúe, se lave las manos, se ponga tefilín, lea el shema y rece — y esa es la maljut shamayim COMPLETA»',
+      explicacion: 'El nodo central de la sugyá. R. Yojanan responde la pregunta que toda la discusión venía preparando: ¿qué hace falta para que la aceptación del Reino sea ENTERA — שְׁלֵמָה?\n\nLa respuesta es una COREOGRAFÍA de cinco pasos:\n\n  1 · יִפָּנֶה — evacuar: el cuerpo limpio por dentro\n  2 · וְיִטּוֹל יָדָיו — lavarse las manos: limpio por fuera\n  3 · וְיַנִּיחַ תְּפִילִּין — atarse los tefilín: el cuerpo marcado con la señal\n  4 · וְיִקְרָא קְרִיאַת שְׁמַע — leer el shema: la boca declara lo que el brazo ya cumple\n  5 · וְיִתְפַּלֵּל — rezar: la tefilá corona la secuencia\n\nEl orden NO es intercambiable — cada paso habilita al siguiente. La preparación corporal (1-2) precede a la señal (3); la señal precede a la declaración (4), para que no haya testimonio falso (ver Ula); y la declaración precede a la petición (5): primero se acepta al Rey, después se le pide.\n\nY EL PREMIO (R. Jiya bar Aba beshem R. Yojanan): la Escritura se lo cuenta כְּאִילּוּ בָּנָה מִזְבֵּחַ וְהִקְרִיב עָלָיו קָרְבָּן — «como si construyera un mizbeaj y ofrendara sobre él un korban». La fuente es Tehilim 26:6: אֶרְחַץ בְּנִקָּיוֹן כַּפָּי וַאֲסוֹבְבָה אֶת מִזְבַּחֲךָ ה׳ — «lavaré en pureza mis manos y RODEARÉ TU MIZBEAJ». David une en un solo versículo el lavado de manos y el altar: el que se lava para el servicio YA está circulando alrededor del mizbeaj.\n\nRava sube la apuesta con una lectura de precisión gramatical: el versículo dice אֶרְחַץ — «me lavaré» (el verbo sin objeto, sobre todo el cuerpo) — y no אַרְחִיץ כַּפָּי, «lavaré mis manos». Entonces el que completa la secuencia es como si SE SUMERGIERA ENTERO — no netilat yadayim sino tevilá total. La mañana bien ordenada no limpia una parte: transforma el estado del cuerpo completo.\n\nDicho por amoraim SIN Templo, el premio es también una respuesta a la destrucción: ¿dónde se construye hoy un mizbeaj? En la secuencia de la mañana. Cada judío que evacúa, se lava, se ata los tefilín, declara y reza — construye el altar y ofrenda sobre él. La liturgia doméstica y corporal sustituye al servicio interrumpido.'
+    },
+    'sin-agua': {
+      titulo: 'Sin agua · tierra, piedra, astilla — y la maldición de Rav Jisda',
+      hebreo: 'מְקַנֵּחַ יָדָיו בְּעָפָר וּבִצְרוֹר וּבְקִסְמִית',
+      traduccion: '«Limpia sus manos con tierra, con piedra o con astilla»',
+      explicacion: 'Si el paso 2 de la secuencia — lavarse las manos — exige agua, ¿qué pasa cuando NO la hay? Ravina trae la enseñanza de Occidente (Eretz Israel): מְקַנֵּחַ יָדָיו בְּעָפָר וּבִצְרוֹר וּבְקִסְמִית — se limpia las manos con TIERRA, con PIEDRA o con ASTILLA.\n\nRava la aprueba con la misma lupa gramatical que usó sobre אֶרְחַץ: el versículo ¿acaso dice «me lavaré CON AGUA»? Dice בְּנִקָּיוֹן — «en LIMPIEZA». El criterio del pasuk no es la sustancia sino el RESULTADO: בְּכָל מִידֵּי דִּמְנַקֵּי — con todo lo que limpie. El agua es el medio habitual, no la esencia del requisito. La tierra que friega, la piedra que raspa, la astilla que rasca — todas cumplen נִקָּיוֹן.\n\nLa flexibilidad tiene una consecuencia halájica afilada, y Rav Jisda la defiende con violencia verbal: MALDECÍA (לייט) a quien retrasaba la tefilá dando vueltas en busca de agua. Si la limpieza se logra con lo que hay a mano, salir a buscar agua es un lujo — y el lujo que hace pasar el zman es un pecado disfrazado de piedad.\n\nLa guemará calibra la balanza con precisión geográfica:\n\n  · PARA EL SHEMA: no se sale a buscar agua en absoluto. El zman del shema es corto y fijo; se limpia con tierra, piedra o astilla y se recita a tiempo.\n\n  · PARA LA TEFILÁ: hay más margen — se busca agua hasta una PARSÁ hacia adelante (en la dirección del camino) y un MIL hacia atrás (desandar). Más allá de esas medidas, tampoco: se limpia con lo que haya y se reza.\n\nLa asimetría (cuatro milin adelante, uno atrás) es de sentido práctico: avanzar hacia el agua es seguir viaje; retroceder es perder camino dos veces.\n\nEl cierre conceptual de la sugyá está en esta jerarquía: la PUREZA es criterio real — por eso el paso 2 existe y por eso se admiten sustitutos. Pero la PUNTUALIDAD pesa más — por eso Rav Jisda maldice al buscador de agua. El mizbeaj de la mañana (ver el nodo dorado) no exige materiales perfectos: exige llegar a tiempo con lo que limpia. בְּנִקָּיוֹן — la limpieza es una función, no una sustancia.'
+    }
+  };
+
+  var contenedor = document.currentScript
+    ? document.currentScript.closest('.yugo-interactivo')
+    : document.querySelector('.yugo-interactivo');
+
+  if (!contenedor) return;
+  var panel = contenedor.querySelector('#yugo-panel');
+
+  function mostrar(id) {
+    var d = datos[id];
+    if (!d) return;
+    var nodos = contenedor.querySelectorAll('.yugo-nodo');
+    nodos.forEach(function(n) {
+      n.classList.remove('activa', 'dim');
+      if (n.dataset.id !== id) n.classList.add('dim');
+      else n.classList.add('activa');
+    });
+    var expHtml = d.explicacion
+      ? d.explicacion.replace(/\n/g, '<br>')
+      : '';
+    panel.innerHTML =
+      '<div class="yugo-panel-header">' +
+        '<p class="yugo-panel-titulo">' + d.titulo + '</p>' +
+        (d.hebreo ? '<span class="yugo-panel-hebreo">' + d.hebreo + '</span>' : '') +
+      '</div>' +
+      (d.traduccion ? '<p class="yugo-panel-traduccion">' + d.traduccion + '</p>' : '') +
+      (expHtml ? '<p class="yugo-panel-explicacion">' + expHtml + '</p>' : '');
+  }
+
+  contenedor.querySelectorAll('.yugo-nodo').forEach(function(nodo) {
+    nodo.addEventListener('click', function() {
+      var id = this.dataset.id;
+      if (this.classList.contains('activa')) {
+        contenedor.querySelectorAll('.yugo-nodo').forEach(function(n) {
+          n.classList.remove('activa', 'dim');
+        });
+        panel.innerHTML = '<p class="yugo-vacio">↑ Click en cualquier nodo del diagrama para ver el texto y la explicación.</p>';
+      } else {
+        mostrar(id);
+      }
+    });
+  });
+})();
+</script>
+</div>
